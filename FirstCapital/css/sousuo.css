@@ -1,0 +1,155 @@
+body{
+	background: #FFFFFF;
+}
+.containerp{
+	width: 100%;
+	margin-top: 76px;
+	background: #FFFFFF;
+	margin-bottom: 100px;
+}
+.dao{
+	width: 1200px;
+	margin:0 auto;
+	display: flex;
+	align-items: center;
+	background: #FFFFFF;
+	height:50px;
+	padding-left: 10px;
+}
+.dao .p1{
+	margin-right: 5px;
+}
+.dao .p2{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.tuijian{
+	border: 1px solid #ececec;
+	height: 650px;
+}
+.biaoti{
+	width: 208px;
+	height: 36px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 36px;
+	background: #E8E8E8;
+}
+.goods{
+	width: 208px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.goods .goods_name{
+	font-size: 14px;
+	color: #333333;
+	font-weight: 700;
+	margin-top: 14px;
+}
+.goods .cank{
+	font-size: 14px;
+	color: #929292;
+}
+.goods .cank .price{
+	font-size: 14px;
+	color: #e00909;
+	font-weight: 700;
+}
+.geli{
+	height: 1px;
+	width: 200px;
+	background: #E8E8E8;
+	margin:30px auto;
+}
+
+.conentya{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	margin-top: 16px;
+}
+.right{
+	width: 1000px;
+	/* background: pink; */
+	margin-left: 36px;
+}
+.saixua{
+	border: 1px solid #E8E8E8;
+	height: 40px;
+	line-height: 40px;
+}
+.saixua	.l1{
+	font-size: 14px;
+	color: #a7a7a7;
+	padding-left: 12px;
+	margin-left: 0px;
+}
+.saixua span{
+	padding:12px 20px;
+}
+.active{
+	color: #E00909;
+}
+.productlist{
+	width: 1000px;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+	/* border: 1px solid #E8E8E8; */
+	margin-top:22px;
+	/* background: #000000; */
+}
+.productlist li{
+	width: 240px;
+	height: 352px;
+	background: #FFFFFF;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #E8E8E8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.productlist .p1{
+	width: 100%;
+	padding-left:20px ;
+}
+.productlist .goods_name{
+	padding-top: 20px;
+	padding-left: 20px;
+	/* border-top: 1px solid #f8f8f8; */
+	padding-right: 20px;
+	font-size: 14px;
+	color: #333333;
+	width: 240px;
+	height: 70px;
+	overflow: hidden;
+}
+.productlist .goods_name:hover{
+	color: #E00909;
+}
+.productlist .price{
+	font-size: 18px;
+	color: #E00909;
+	font-weight: 700;
+}
+.containerB{
+	position: fixed;
+	bottom: 0px;
+}
+/* 搜索无结果 */
+.noproduct{
+	width: 100%;
+	text-align: center;
+}
+.noproduct img{
+	margin-top: 84px;
+	margin-bottom: 18px;
+}
+.noproduct p{
+	color: gray;
+	font-size: 14px;
+}

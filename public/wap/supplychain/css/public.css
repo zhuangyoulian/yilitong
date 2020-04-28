@@ -1,0 +1,518 @@
+/*font-family:"Microsoft Yahei",Verdana,Arial,Helvetica,sans-serif*/
+html,
+body {
+	height: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*App中需要设置*/
+body {
+	font: 14px/1.0 "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+}
+
+/**, *:before, *:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word}*/
+body,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+	margin: 0
+}
+
+button {
+	border: none;
+	background: transparent;
+}
+
+/*padding:6px 15px*/
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+
+i,
+em {
+	font-style: normal
+}
+
+a {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: none
+}
+
+input,
+select,
+textarea {
+	vertical-align: middle;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/*line-height:inherit;*/
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset
+}
+
+/*input聚焦后黄色背景清除*/
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+textarea {
+	-webkit-appearance: none;
+	outline: none
+}
+
+textarea {
+	resize: none
+}
+
+/*去掉苹果默认样式*/
+input,
+button,
+select {
+	outline: none
+}
+
+/*清除默认样式*/
+select {
+	border: solid 1px #000;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	/*很关键：将默认的select选择框样式清除*/
+	background: url("../image/default/arrow.png") no-repeat scroll right center transparent;
+	padding-right: 23px !important;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand {
+	display: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.ttf {
+	font-family: "Microsoft YaHei";
+}
+
+.w {
+	width: 100%
+}
+.w120{
+	width: 120px;
+}
+
+.h {
+	height: 100%
+}
+.h22{
+	height: 22px;
+}
+
+.h3em{
+	height: 3em;
+}
+.lh3em{
+	line-height: 3em;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+.dib {
+	display: inline-block;
+}
+
+.dn {
+	display: none;
+}
+
+.db {
+	display: block;
+}
+
+/* 按钮样式 */
+.btn{
+	border-radius: 2em;
+	margin: 1em 4em;
+	height: 3em;
+	line-height: 3em;
+	text-align: center;
+}
+
+/*对齐*/
+.l {
+	text-align: left;
+}
+
+.c {
+	text-align: center;
+}
+
+.r {
+	text-align: right;
+}
+
+/*滚动*/
+.oa {
+	overflow: auto;
+}
+
+.oh {
+	overflow: hidden;
+}
+
+/*旋转*/
+.rotate90 {
+	transform: rotate(90deg);
+}
+
+/*圆角*/
+.rds2 {
+	border-radius: 2px
+}
+.rds5 {
+	border-radius: 5px
+}
+
+.blrds5 {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.brrds5 {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*font-size*/
+.em1 {
+	font-size: 1em
+}
+
+.em12 {
+	font-size: 1.2em
+}
+
+.em13 {
+	font-size: 1.3em
+}
+
+.em14 {
+	font-size: 1.4em
+}
+
+.em16 {
+	font-size: 1.6em
+}
+
+.em18 {
+	font-size: 1.8em
+}
+
+.em2 {
+	font-size: 2em
+}
+
+.em3 {
+	font-size: 3em
+}
+
+.em4 {
+	font-size: 4em
+}
+
+/*定位*/
+.part {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/*边框*/
+.bn{
+	border: none;
+}
+.bmain {
+	border: 1px solid #e4012c;
+}
+
+.bbc {
+	border-bottom: 1px solid #ccc
+}
+
+.bbe {
+	border-bottom: 1px solid #eee
+}
+
+.bbf4 {
+	border-bottom: 1px solid #f4f4f4
+}
+
+.brf4 {
+	border-right: 1px solid #f4f4f4
+}
+.bb0{
+	border-bottom: 1px solid #000;
+}
+.bte{
+	border-top: 1px solid #eee;
+}
+/*背景颜色*/
+
+.bgmain {
+	background-color: #e4012c;
+}
+
+.bgf {
+	background-color: white;
+}
+
+.bggrey {
+	background-color: #f4f4f4;
+}
+
+.bggrey2 {
+	background-color: #bbb;
+}
+
+.icon {
+	color: #F7B84E
+}
+
+.icon1 {
+	color: #455FF4;
+}
+
+/*颜色*/
+.cmain {
+	color: #e4012c;
+}
+.cw{
+	color:white;
+}
+.red {
+	color: red;
+}
+
+.grey {
+	color: grey;
+}
+
+.grey2 {
+	color: #d9d9d9;
+}
+.c6{
+	color: #666;
+}
+
+.cf {
+	color: #fff;
+}
+.cf4{
+	color: #f4f4f4
+}
+
+.c7 {
+	color: #7f7f7f;
+}
+
+.c9 {
+	color: #c9c9c9;
+}
+.cb{color: #bbb}
+
+/*flex*/
+.flexr {
+	display: flex;
+	flex-direction: row;
+}
+
+.flexc {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex1 {
+	flex: 1
+}
+
+/*字体*/
+.fwb {
+	font-weight: bold;
+}
+
+.f10 {
+	font-size: 10px;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.f13 {
+	font-size: 13px;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f18 {
+	font-size: 18px;
+}
+
+.f20 {
+	font-size: 20px;
+}
+
+/*距离*/
+.pt1 {
+	padding-top: 1px;
+}
+
+.pt2 {
+	padding-top: 2px;
+}
+.pt3{padding-top: 3px;}
+.pt4{
+	padding-top: 4px;
+}
+
+.pt5 {
+	padding-top: 5px;
+}
+
+.pl5 {
+	padding-left: 5px;
+}
+
+.pb5 {
+	padding-bottom: 5px;
+}
+.pt64{padding-top: 64px}
+
+.p10 {
+	padding: 10px;
+}
+
+.m5{
+	margin: 5px;
+}
+
+.mr5{
+	margin-right: 5px;
+}
+
+.m010{
+	margin: 0 10px;
+}
+.m10{
+	margin: 10px;
+}
+
+.mr_10 {
+	margin-right: -10px;
+}
+
+.mb10{
+	margin-bottom: 10px;
+}
+
+.pt10 {
+	padding-top: 10px;
+}
+
+.pt20 {
+	padding-top: 20px;
+}
+.pr5{
+	padding-right: 5px;
+}
+.pr10 {
+	padding-right: 10px;
+}
+
+.pr44 {
+	padding-right: 44px;
+}
+
+.pr20 {
+	padding-right: 20px;
+}
+
+.pb10 {
+	padding-bottom: 10px;
+}
+
+.pb18 {
+	padding-bottom: 18px;
+}
+
+.pb20 {
+	padding-bottom: 20px;
+}
+
+.pl10 {
+	padding-left: 10px;
+}
+.pl20{
+	padding-left: 20px;
+}
+
+.pt15 {
+	padding-top: 15px;
+}
+
+.pt18 {
+	padding-top: 18px;
+}
+.mt5{
+	margin-top: 5px;
+}
+
+.mt_18 {
+	margin-top: -18px;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt20 {
+	margin-top: 20px
+}
+.ml10{
+	margin-left: 10px
+}
+.mr10{
+	margin-right: 10px
+}
+
+/*浮动*/
+.fr {
+	float: right;
+}

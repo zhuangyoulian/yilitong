@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+		<title>端午专区</title>
+        <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+		<link rel="stylesheet" href="/public/yilitong/css/festival.css">
+	</head>
+	<body>
+		<include file="public/header" />
+		<include file="public/service" />
+		<div class="banner_pc"><img src="/public/yilitong/images2/banner_pc.png" alt=""></div>
+		<!-- <div class="date_pc"><img src="/public/yilitong/images2/icon_date_pc.png" alt=""></div> -->
+		<div class="giftBagBox">
+			<div class="giftBag">
+				<div class="giftBagTitle"><img src="/public/yilitong/images2/icon_168_pc.png" alt=""></div>
+				<div class="giftBagCommodity">
+					<div class="commodityLeft">
+						<div class="tilteTop">真情端午</div>
+						<div class="tilteBottom">粽享佳节</div>
+					</div>
+					<div class="commodityCenter">
+        			<volist name="goods_d" id="value">
+						<!-- <a href="{:Url('goodsInfo',array('id'=>$value[goods_id]))}"> -->
+						<a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610">
+						<div class="commodity">
+							<div class="commodityImg"><img src="{$value[original_img]}" alt=""></div>
+							<div class="commodityName">{$value[goods_name]}</div>
+							<div class="commodityPrice">￥ {$value[shop_price]}<span>￥{$value[market_price]}</span></div>
+						</div>
+						</a>
+					</volist>
+					</div>
+					<div class="commodityRight">
+						<div class="intro">礼至礼品精挑国民贴心品牌五芳斋的鲜粽和咸鸭蛋，让端午佳节享受明星美食。</div>
+					</div>
+				</div>
+			</div>
+			<div class="giftBag">
+				<div class="giftBagTitle"><img src="/public/yilitong/images2/icon_268_pc.png" alt=""></div>
+				<div class="giftBagCommodity">
+					<div class="commodityLeft">
+						<div class="tilteTop">食尚生活</div>
+						<div class="tilteBottom">天天油米</div>
+					</div>
+					<div class="commodityCenter">
+        			<volist name="goods_s_d" id="value">
+						<!-- <a href="{:Url('goodsInfo',array('id'=>$value[goods_id]))}"> -->
+						<a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610">
+						<div class="commodity">
+							<div class="commodityImg"><img src="{$value[original_img]}" alt=""></div>
+							<div class="commodityName">{$value[goods_name]}</div>
+							<div class="commodityPrice">￥ {$value[shop_price]}<span>￥{$value[market_price]}</span></div>
+						</div>
+						</a>
+					</volist>
+					</div>
+					<div class="commodityRight">
+						<div class="intro">精致的外包装足以展示它的与众不同，小单品独特的黄金色，银色更显尊贵。</div>
+					</div>
+				</div>
+			</div>
+			<div class="giftBag">
+				<div class="giftBagTitle"><img src="/public/yilitong/images2/icon_368_pc.png" alt=""></div>
+				<div class="giftBagCommodity">
+					<div class="commodityLeft">
+						<div class="tilteTop">一杯好酒</div>
+						<div class="tilteBottom">祝您安康</div>
+					</div>
+					<div class="commodityCenter">
+        			<volist name="goods_ss_d" id="value">
+						<!-- <a href="{:Url('goodsInfo',array('id'=>$value[goods_id]))}"> -->
+						<a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610">
+						<div class="commodity">
+							<div class="commodityImg"><img src="{$value[original_img]}" alt=""></div>
+							<div class="commodityName">{$value[goods_name]}</div>
+							<div class="commodityPrice">￥ {$value[shop_price]}<span>￥{$value[market_price]}</span></div>
+						</div>
+						</a>
+					</volist>
+					</div>
+					<div class="commodityRight">
+						<div class="intro">夏日的虾肥美营养定让你爱不释口。礼盒搭配了颜值爆棚的保温杯和小金筷。</div>
+					</div>
+				</div>
+			</div>
+			<div class="giftBag">
+				<div class="giftBagTitle"><img src="/public/yilitong/images2/icon_568_pc.png" alt=""></div>
+				<div class="giftBagCommodity">
+					<div class="commodityLeft">
+						<div class="tilteTop">一花一茶</div>
+						<div class="tilteBottom">一蜜一旅</div>
+					</div>
+					<div class="commodityCenter">
+        			<volist name="goods_sss_d" id="value">
+						<!-- <a href="{:Url('goodsInfo',array('id'=>$value[goods_id]))}"> -->
+						<a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610">
+						<div class="commodity">
+							<div class="commodityImg"><img src="{$value[original_img]}" alt=""></div>
+							<div class="commodityName">{$value[goods_name]}</div>
+							<div class="commodityPrice">￥ {$value[shop_price]}<span>￥{$value[market_price]}</span></div>
+						</div>
+						</a>
+					</volist>
+					</div>
+					<div class="commodityRight">
+						<div class="intro">选取了高档法国黑马酒庄白葡萄酒，让您在享受美食的同时满酌一杯情怀。</div>
+					</div>
+				</div>
+			</div>
+			<div class="giftBag">
+				<div class="giftBagTitle"><img src="/public/yilitong/images2/card.png" alt=""></div>
+				<div class="giftCard_Box">
+        			<volist name="goods_get" id="value">
+						<!-- <a href="{:Url('goodsInfo',array('id'=>$value[goods_id]))}"> -->
+						<a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610">
+						<div class="giftCard">
+							<div class="giftCardImg"><img src="{$value[original_img]}"></div>
+							<div class="giftCardIntro">{$value[goods_name]}</div>
+							<div class="giftCardMoney">￥{$value[shop_price]}</div>
+						</div>
+						</a>
+					</volist>
+				</div>								
+			</div>
+
+		</div>
+		<include file="public/footer" />
+      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<script>
+				$(function(){			
+			   $('.commodityName').each(function(i, obj){
+			        var lineHeight = parseInt($(this).css("line-height"));
+			        var height = parseInt($(this).height());
+			        if((height / lineHeight) >2 ){
+			            $(this).addClass("commodityName-after")
+			            $(this).css("height","42px");
+			        }else{
+			            $(this).removeClass("commodityName-after");
+			        }
+			    });
+				$('.giftCardIntro').each(function(i, obj){
+				     var lineHeight = parseInt($(this).css("line-height"));
+				     var height = parseInt($(this).height());
+				     if((height / lineHeight) >2 ){
+				         $(this).addClass("giftCardIntro-after")
+				         $(this).css("height","42px");
+				     }else{
+				         $(this).removeClass("giftCardIntro-after");
+				     }
+				 });
+			})
+		</script>
+	</body>
+</html>

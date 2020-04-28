@@ -1,0 +1,226 @@
+th{font-size: 14px;color: #656565;}
+input{width: 340px;height: 38px;}
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type="number"]{
+        -moz-appearance: textfield;
+    }
+.main table.all {
+	line-height: 40px;
+	color: #555;
+	width: 790px;
+
+	margin-top: 20px;
+	/*border-bottom: dashed 1px #CBDDE6;*/
+}
+.main table.all thead th {
+	font: 600 14px/22px "microsoft yahei";
+	/*color: #333;*/
+	height: 22px;
+	padding: 8px 4px;
+}
+.main table.all thead th em {
+	color: #F00;
+	margin-left: 5px;
+}
+.main table.all tbody th {
+	vertical-align: top;
+	text-align: right;
+	width: 180px;
+	height: 22px;
+	padding: 8px 4px;
+}
+.main table.all tbody th em{
+	color: #F00;
+    margin-left: 5px
+}
+.main table.all tbody th i {
+	line-height: -999px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	margin-right: 6px;
+	overflow: hidden;
+}
+.main table.all tbody th i {
+*display: inline/*IE7*/;
+}
+.main table.all tbody td {
+	vertical-align: top;
+	text-align: left;
+	height: 20px;
+	padding: 8px 4px
+}
+.main table.all tbody td span {
+*display: none/*IE7*/;
+	color: #777;
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+.main table.all tbody td span.block {
+	display: block;
+	width: 600px
+}
+.main table.all tbody td p.emphasis {
+	color: #F30;
+}
+.main tabel.all tfoot td {
+	line-height: 20px;
+	height: 20px;
+	padding: 0;
+}
+.main table.type {
+	width: 600px;
+	margin: 0 auto;
+	border: solid 1px #DDD;
+}
+.main table.type thead th {
+	color: #777;
+	text-align: center;
+	background-color: #F7F7F7;
+	width: 25%;
+}
+.main table.type tbody td {
+	text-align: center;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #DDD #DDD transparent transparent;
+}
+.main table.type tbody td a {
+	color: #F30;
+}
+.main .bottom, .apply-agreement .bottom, .joinin-pay .bottom {
+	text-align: center;
+	height: 30px;
+	margin: 30px 0 10px 0;
+}
+.main .btn, .apply-agreement .btn, .joinin-pay .btn {
+	font: 600 14px/20px "microsoft yahei";
+	text-decoration: none;
+	color: #555;
+	display: inline-block;
+	height: 40px;
+	padding: 4px 12px;
+	margin-right: 10px;
+	border: 1px solid;
+	border-color: #DBE9EB #BCD7DA #BCD7DA #DBE9EB;
+	cursor: pointer;
+	box-shadow: 1px 1px 0 rgba(153,153,153,0.15);
+}
+.main .btn:hover, .apply-agreement .btn:hover, .joinin-pay .btn:hover {
+	color: #333;
+	background-position: 0 -240px;
+	box-shadow: none;
+}
+.main .explain {
+	font: 16px/32px "microsoft yahei";
+	color: #777;
+	text-align: center;
+	margin: 120px 0 100px 0
+}
+.main .explain i {
+	vertical-align: middle;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}
+.main .explain1 {
+	font: 16px/32px "microsoft yahei";
+	color: #777;
+	text-align: left;
+	margin: 10px 0 20px 0
+}
+.main .explain1 i {
+	vertical-align: middle;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}
+.ip{
+	width:45px;
+	height: 15px; 
+}
+
+
+
+/*wrp add css*/
+.inner{width:1200px; margin: 0 auto;}
+.centrol-controller-800{width:800px;margin:0 auto;}
+
+.customer-header{width: 1200px;margin: 0 auto; /*padding-top: 40px;*/}
+.customer-header .x1{width:2px;height: 68px;background: #e7e7e7;float: left;margin: 0 20px;}
+.customer-header h3{margin-top:15px;font-size:24px;}
+
+.logo-businessCenter{
+	overflow: hidden;
+	float: left;
+	margin-top:24px;
+}
+.logo-businessCenter li{float: left;}
+.logo-businessCenter li.logo-businessCenter-li1{padding-right: 20px;}
+.logo-businessCenter li.logo-businessCenter-li2{height: 60px; line-height: 60px; background:url(../images/businessOn.png) no-repeat 50px center; padding-left: 60px; border-left: 1px solid deepskyblue;}
+.logo-businessCenter li.logo-businessCenter-li2 a{font-size: 20px; padding-left: 50px;}
+.logo-businessCenter li.logo-businessCenter-li2 a:hover{
+	color: #059ce1;
+}
+.regs-info{ overflow: hidden; float: right;  font-size: 12px;}
+.regs-info li{ float: left; padding: 0 10px; font-weight:bold;line-height:100px;}
+.regs-info li a{ font-weight: normal; padding-left: 20px; border-left:1px solid #888;}
+.regs-info li a:hover{ color: #059ce1;}
+
+/*商户账号与退出*/
+.seller{text-align:right; margin-top: 50px; font-size:14px;overflow:hidden;}
+.seller p{float:right;}
+.seller p>span{color:#ff0000; padding:0 8px;}
+.seller p>a{color:#059ce1;}
+
+.aptitude tr{}
+.aptitude tr td{margin-top: 20px; content:"";display:table;}
+.aptitude label.aptitude-title{text-align:right;width:200px;display:block;float:left;line-height:40px; font-size:14px; color:#777;}
+.aptitude .upload-aptitude-pic{float:left; padding-top:14px;}
+.aptitude-title span{color:#ff0000;padding-right:3px;}
+.marginTop10{margin-top:10px;display:block;}
+
+.tab{display:none;}
+.tab tr{margin-top:20px; _margin-top:20px; content:"";display:block;}
+.tab tr td{ content:"";display:table;}
+.tab label.aptitude-title{text-align:right;width:200px;display:block;float:left;line-height:40px; font-size:14px; color:#777;}
+.tab .upload-aptitude-pic{float:left; padding-top:14px;}
+
+.prove-3 .prove-col{margin-bottom:30px;overflow:hidden;}
+.get-prove-pic,.upload-prove-pic{background:#059ce1;color:#fff;border-radius:2px;border:0;outline:none;cursor:pointer;}
+.get-prove-pic{width:80px;height:30px;}
+.upload-prove-pic{width:50px;height:30px;}
+.shop-info-tips{color:#888;padding-left:10px;}
+.shows{display:block;}
+
+.rules2{padding-left:5px;color:#888;position:relative;cursor:pointer;}
+.rules2 span:hover{color:#059ce1;}
+
+.pre2-next2-btn{content: "";display:table;width:200px;margin:50px auto 0 auto;}
+.pre-2,.next-2{width: 80px; height: 32px; line-height:32px; text-align:center;background:#059ce1; float:left; margin-right:10px; border-radius:2px;}
+.pre-2 a,.next-2 a{color:#fff;width:100%;display:block;}
+
+.progress-bar{content: "";display:table;margin:80px 0 100px 100px;}
+.progress-bar li{float:left;width:200px;height:10px;background:#059ce1;position:relative;}
+.progress-bar li>span{display:block;width:30px;height:30px;border-radius:50%;color:#fff;position:absolute;left:-15px;top:-10px;background:#059ce1;text-align:center;line-height:30px;}
+.progress-bar .progress-bar-noBody{width:0; height:0;}
+.progress-bar li>p.progress-bar-info{position:absolute; width:100px;left:-50px;top:30px;color:#888;text-align:center;}
+.progress-bar .gray-bg{background:#ccc;}
+
+
+
+.inputW400H32{width:330px;height:32px;padding:0 4px;}
+
+
+/*协议内容*/
+.rules-content-box{width:700px;height:650px;padding:30px 20px;border:1px solid #efefef;overflow-y:auto;background:#fff;position:absolute;left:-220px;top:-710px;z-index:999;color:#555;display:none;}
+.rules-content-box h3{font-size:20px;text-align:center;margin-bottom:20px;}
+.rules-content-box .rules-content{font-size:14px;line-height:26px; color:#666;}
+.rules-content-box .rules-content p{color:#555;font-weight:bold; font-size:16px;line-height:50px;}

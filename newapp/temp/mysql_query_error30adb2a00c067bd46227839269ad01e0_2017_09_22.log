@@ -1,0 +1,200 @@
+2017-09-22 10:51:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select B.goods_num,B.goods_id,B.goods_name,B.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id = 5304 and O.goods_id = 3191',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_num\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-22 11:01:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id,addtime as add_time,order_id,goods_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 355 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-22 11:04:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id =  and O.goods_id = ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and O.goods_id =\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-22 11:15:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id = i and O.goods_id = 3191',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'i\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-22 17:15:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT back_id from `ylt_tp`.`ylt_back_good` where  rec_id=106',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_back_good\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2017-09-22 17:20:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT back_id from `ylt_tp`.`ylt_back_good` where  rec_id=106',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_back_good\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2017-09-22 17:21:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT back_id from `ylt_tp`.`ylt_back_good` where  rec_id=106',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_back_good\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2017-09-22 17:23:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 123213, retund_shipping_time=1506072189 where id=',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

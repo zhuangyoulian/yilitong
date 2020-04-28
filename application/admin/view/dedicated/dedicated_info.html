@@ -1,0 +1,210 @@
+<include file="public/layout" />
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>活动专区管理 - 编辑活动专区</h3>
+                <h5>网站系统活动专区管理</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="handleposition" method="post">
+        <input type="hidden" name="id" value="{$Dedicated.id}"/>
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>活动专区名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="name" placeholder="小于等于10个字，不能为空" name="name" value="{$Dedicated.name}" class="input-txt">
+                    <span class="err" id="err_name"></span>
+                    <p class="notic">请填写活动专区名称</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>自营商品范围</label>
+                </dt>
+                <dd class="opt">
+                    <input name="Dedicated_type" type="radio" value="0" id="Dedicated_type1" <if condition="$Dedicated['Dedicated_type'] eq 0">checked</if>>
+                    <label class="notic" for="Dedicated_type1">
+                        <a onclick="selectGoods()" class="ncap-btn"><i class="fa fa-search"></i>选择一礼通部分商品</a>
+                    </label>              
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>是否显示</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <div class="onoff">
+                            <label for="sustomized1" class="cb-enable <if condition="$Dedicated[is_show] eq 1">selected</if>">是</label>
+                            <label for="sustomized0" class="cb-disable <if condition="$Dedicated[is_show] eq 0">selected</if>">否</label>
+                            <input id="sustomized1" name="is_show" value="1" type="radio" <if condition="$Dedicated[is_show] eq 1"> checked="checked"</if>>
+                            <input id="sustomized0" name="is_show" value="0" type="radio" <if condition="$Dedicated[is_show] eq 0"> checked="checked"</if>>
+                        </div>
+                    </div>
+                    <p class="notic">是否在bannr区显示</p>
+                </dd>
+            </dl>
+            <dl class="row"> 
+                <dt class="tit">
+                    <label>已选择的活动商品</label>
+                </dt>
+                <dd class="opt">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="display:none">选择</th>
+                            <th class="text-left">商品名称</th>
+                            <th class="text-left">价格</th>
+                            <th class="text-left">库存</th>
+                            <th class="text-left">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="goods_list">
+                        <foreach name="prom_goods" item="vo">
+                            <tr>
+                                <td style="display:none"><input type="checkbox" name="goods_id[]" checked="checked" value="{$vo.goods_id}"/></td>
+                                <td class="text-left">{$vo.goods_name}</td>
+                                <td class="text-left">{$vo.shop_price}</td>
+                                <td class="text-left">{$vo.store_count}</td>
+                                <td class="text-left"><a href="javascript:void(0)" onclick="javascript:$(this).parent().parent().remove();">删除</a></td>
+                            </tr>
+                        </foreach>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl> 
+
+            <dl class="row">
+                <dt class="tit"><em>*</em>活动logo:</dt>
+                <dd class="opt">
+                  <div class="input-file-show" id="divComUploadContainer">
+                     <span class="show">
+                      <a id="img_a" class="nyroModal" rel="gal" href="{$Dedicated.logo}">
+                        <i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$Dedicated.logo}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                      </a>
+                    </span>
+                    <span class="type-file-box">            
+                    <input type="text" id="logo" name="logo" value="{$Dedicated.logo}" class="type-file-text">            
+                    <input type="button" name="button" class="type-file-button" onClick="GetUploadify(1,'','logo','img_call_back')" size="30" hidefocus="true" nc_type="change_site_logo" value="上传图片"/>           
+                    </span>
+                  </div>
+                  <div id="thumbnails" class="ncap-thumb-list">
+                    <h5><i class="fa fa-exclamation-circle"></i> 请上传图片格式文件。</h5>
+                    <ul>
+                    </ul>
+                  </div>
+                </dd>
+            </dl> 
+
+            <dl class="row">
+                <dt class="tit"><em>*</em>广告brand图片：</dt>
+                <dd class="opt">
+                  <div class="input-file-show" id="divComUploadContainer">
+                    <span class="show">
+                      <a id="img_a_s" class="nyroModal" rel="gal" href="{$Dedicated.brand}">
+                        <i id="img_i_s" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$Dedicated.brand}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                      </a>
+                    </span>
+                    <span class="type-file-box">            
+                    <input type="text" id="brand" name="brand" value="{$Dedicated.brand}" class="type-file-text">            
+                    <input type="button" name="button" //onClick="GetUploadify(1,'brand','ad','')" value="上传图片" class="type-file-button"> 
+                     <input class="type-file-file" onClick="GetUploadify(1,'','ad','img_call_back_s')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+                    </span>
+                  </div>
+                  <div id="thumbnails" class="ncap-thumb-list">
+                    <h5><i class="fa fa-exclamation-circle"></i> 请上传图片格式文件。请压缩图片大小，请勿上传超过2M的图片</h5>
+                    <ul>
+                    </ul>
+                  </div>
+                </dd>
+            </dl>    
+
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>备注</label>
+                </dt>
+                <dd class="opt">
+                    <textarea  id="remark" name="remark"  cols="40" rows="10" style="height: 80px;">{$Dedicated.remark}</textarea>
+                    <p class="notic">选填,小于等于500字</p>
+                </dd>    
+            </dl>
+            <div class="bot"><a onclick="verifyForm();" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+    function call_back(table_html)
+    {
+        layer.closeAll('iframe');
+        $('#goods_list').append(table_html);
+    }
+    function selectGoods(){
+        var goods_id = [];
+        //过滤选择重复商品
+        $('input[name*="goods_id"]').each(function(i,o){
+            goods_id.push($(o).val());
+        });
+        var url = '/index.php?m=Admin&c=Dedicated&a=search_goods&goods_id='+goods_id+'&t='+Math.random();
+        layer.open({
+            type: 2,
+            title: '选择商品',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['70%', '80%'],
+            content: url,
+        });
+    }
+
+    $('input[type="radio"]').click(function(){
+        $('.timed').show();
+    })
+
+    function verifyForm(){
+        $('span.err').show();
+        console.log($('#handleposition').serialize());
+        $.ajax({
+            type: "POST",
+            url: "{:Url('Admin/Dedicated/dedicated_info')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    layer.msg(data.msg, {icon: 1});
+                    location.href = "{:Url('Admin/Dedicated/index')}";
+                }else{
+                    layer.msg(data.msg, {icon: 2});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+    function img_call_back(fileurl_tmp)
+    {
+        $("#logo").val(fileurl_tmp);
+        $("#img_a").attr('href', fileurl_tmp);
+        $("#img_i").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+    function img_call_back_s(fileurl_tmp)
+    {
+        $("#brand").val(fileurl_tmp);
+        $("#img_a_s").attr('href', fileurl_tmp);
+        $("#img_i_s").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+</script>
+</body>
+</html>

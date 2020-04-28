@@ -1,0 +1,133 @@
+body{
+            font-family: "Microsoft YaHei";
+        }
+        .my{
+            color: red;font-weight: bold;padding-right: 2px;font-size:16px;
+        }
+        .yesorno{
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            right: 10px;
+            top:50%;
+            margin-top: -15px;      /*负高度的一半*/
+            /*border: 1px solid #999;*/
+            background-color: #f4f4f4;
+        }
+        .btn-switch{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -15px;
+        }
+        .mui-switch:before{top: -13px}
+        /*覆盖mui中input边框的样式*/
+        input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{
+            border:none;
+            vertical-align: baseline;
+        }
+        .active{
+            font-size: 1.2em;
+            color:red;
+        }
+        .areatip{
+            position: absolute;
+            right: 0.3em;
+            bottom: 0.3em;
+            color: #d9d9d9;
+            font-size: 0.5em;
+        }
+        .circle{
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
+            line-height: 1.2em;
+            font-size: 0.8em;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            vertical-align: top;
+        }
+        input{
+            text-align: right;
+            padding-bottom: 6px;
+            border: none;
+             }
+        .placeholder::-webkit-input-placeholder{
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+        .placeholder::-moz-placeholder{ 
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+        .placeholder:-moz-placeholder{ 
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+        .placeholder:-ms-input-placeholder{
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+
+        .title {
+        font-size: 16px;
+    }
+    .head .nav {
+        height: 4em;
+        line-height: 4em;
+    }
+    .nav {
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    .main .box{
+        height: 4em;
+        line-height: 4em;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    .left{
+        width: 0.7em;
+        color: red;
+        line-height: inherit;
+        font-size: 1.2em;
+        padding-top: 4px;
+        font-weight: bold;
+    }
+
+    .buybox{
+        padding-top: 1.2em;
+        padding-bottom: 1em;
+    }
+
+    .buycon{
+        width: 100%;
+        border: none;
+        background-color: #f4f4f4;
+        padding: 0.8em 1.2em;
+    }
+    .describe
+    {
+        height: 104px;
+    }
+    .explain{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+  
+    .next{
+        border-radius: 2em;
+        margin: 1em 4em;
+        height: 3em;
+        line-height: 3em;
+        text-align: center;
+    }

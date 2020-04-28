@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-我的账户-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+	<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/static/js/layer/layer.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+  
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+	<link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+
+<body style="background:#f7f7f7;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<div class="user-home" style="background:#2e2e2e;">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <a href="{:Url('Home/User/index')}" class="exit">退出设计师后台</a>
+    </div>
+</div>
+
+
+<div class="inner clearfix m-top-20">
+    <!-- design-left  start -->
+    <include file="public/designerLeftNav" />
+    <!-- designer-left end -->
+
+    <!-- design-right  start -->
+    <div class="design-authentication-index">
+        <div class="design-authentication-index-col">
+            <p class="trade-title">我的收支<span style="font-size:12px;color:#ccc;font-weight:normal;padding-left:10px;">--当前收支</span><a href="javascript:history.go(-1);">返回上级</a></p>
+        </div>
+
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <ul class="income-pay-container">
+                <li>
+                    <h4>{$user['user_money']}</h4>
+                    <p class="moneyTips-1">累计收益</p>
+                </li>
+                <li>
+                    <h4>0.00</h4>
+                    <p class="moneyTips-2">待收收益</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <p class="income-pay-title">当前收支明细</p>
+        </div>
+
+        <div class="design-authentication-index-col" style="margin-top:2px;">
+            <ul class="income-pay-details-title">
+                <li class="w170">创建时间</li>
+                <li class="w350">订单商品</li>
+                <li class="w150">订单编号</li>
+                <li class="w130">收入金额</li>
+                <li class="w100" style="text-align: center;">操作状态</li>
+            </ul>
+            <div class="income-pay-details-container">
+			 <foreach name="account_log" item="vo">
+                 <ul class="income-pay-col">
+                     <li class="w170">
+                         <p><span>{$vo.change_time|date='Y-m-d H:i',###}</span></p>
+                         
+                     </li>
+                     <li class="w350">&nbsp;{$vo.desc}</li>
+                     <li class="w150"><a href="{:url('/Home/Designer/OrderInfos',array('id'=>$vo.order_id))}">&nbsp;{$vo.order_sn}</a></li>
+                     <li class="w130">&nbsp;<if $vo.user_money eq 0>{$vo.frozen_money}<else>{$vo.user_money}</if></li>
+                     <li class="w100"><if $vo.status eq 0><a href="javascript:void(0);" onclick="extract_frozen_money('{$vo[log_id]}')" class="canCash-3">未提现<else><a href="#" class="canCash-2">已提现</if></a></li>
+                 </ul>
+			 </foreach>
+
+            </div>
+
+            <!-- 分页 -->
+			  <div class="fn-page-css-1 pagintion fix" style="display: block;">
+				<div class="pagenavi text12">{$page->show()}</div>
+			  </div>
+
+            <!-- 分页 -->
+        </div>
+    </div>
+    <!-- designer-right end -->
+</div>
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+
+<script type="text/javascript">
+
+    $(function(){
+        $('.works-type-list dd,.works-states dd').each(function () {
+            $(this).on('click',function () {
+                $(this).addClass('type-cur').siblings('dd').removeClass('type-cur');
+            })
+        })
+    })
+	
+		function extract_frozen_money(log_id)
+			{
+				$.ajax({
+						type:'POST',
+						url:"{:Url('Designer/extract_frozen_money')}",
+						data:{log_id:log_id},
+						dataType:'json',
+						success:function(data){
+							if(data.status == 1){
+								alert(data.msg);	
+								location.href = data.url;
+							}else{
+								layer.alert(data.msg);	
+							}
+														 
+						}
+				});
+			}
+
+
+</script>
+</body>
+</html>

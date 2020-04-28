@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/yilitong/css/normalize.css">
+    <link rel="stylesheet" href="/public/yilitong/css/pcindex.css">
+    <script src="/public/yilitong/js/jquery-3.4.1.min.js"></script>
+    <script src="/public/yilitong/js/pcindex.js"></script>
+    <title>端午安康</title>
+</head>
+
+<body>
+    <div class="hz_content">
+        <div class="section section1">
+            <img src="/public/yilitong/images/title_1@2x.png" alt="" class="title_1">
+            <div class="zhuanqu">
+                <div class="zhuanqu_left">
+                    <ul class="three_productlist">
+                    <volist name="$goods_a" id="val">
+                        <li class="prod">
+                            <a href="{:Url('goodsInfo',array('id'=>$val[goods_id]))}">
+                                <div class="prod_left">
+                                    <p class="productname">{$val[goods_name]}</p>
+                                    <p class="futitle">{$val[goods_remark]}</p>
+                                    <p class="price">￥{$val[shop_price]}<span class="err">￥{$val[market_price]}</span></p>
+                                    <div class="gobuy">抢购</div>
+                                </div>
+                                <img src="{$val[original_img]}" alt="" class="three_prod_img">
+                            </a>
+                        </li>
+                    </volist>    
+                    </ul>
+                    <ul class="select_li">
+                    <volist name="$goods_a" id="val">
+                        <li class="seleckkuai active">
+                            <img src="{$val[original_img]}" alt="">
+                        </li>
+                    </volist>    
+                    </ul>
+                </div>
+                <div class="zhuan_right">
+                    <img src="/public/yilitong/images/prod1.png" alt="" class="one_prod_img">
+                    <div class="hengxian"></div>
+                    <p class="p1">端午礼品专区</p>
+                    <p class="p2">多种商品，自由选购</p>
+                    <a href="{:Url('/Home/Goods/scenarioList/id/1082')}" class="tomore">查看全部</a>
+                </div>
+            </div>
+            <div class="productlist">
+            <volist name="$goods_b" id="val">
+                <a href="{:Url('goodsInfo',array('id'=>$val[goods_id]))}" class="productya">
+                    <img src="{$val[original_img]}" alt="">
+                    <p class="t1">{$val[goods_name]}</p>
+                    <div class="price_buy">
+                        <p class="price">￥{$val[shop_price]}<span class="gray">￥{$val[market_price]}</span></p>
+                        <div class="btnred">抢购</div>
+                    </div>
+                </a>
+            </volist>    
+            </div>
+        </div>
+        <div class="section section2">
+            <img src="/public/yilitong/images/title_2@2x.png" alt="" class="title_1">
+            <div class="zhuanqu">
+                <div class="zhuanqu_left">
+                    <ul class="three_productlist">
+                    <volist name="$goods_c" id="val">
+                        <li class="prod">
+                            <a href="{:Url('goodsInfo',array('id'=>$val[goods_id]))}">
+                                <div class="prod_left">
+                                    <p class="productname">{$val[goods_name]}</p>
+                                    <p class="futitle">{$val[goods_remark]}</p>
+                                    <p class="price">￥{$val[shop_price]}<span class="err">￥{$val[market_price]}</span></p>
+                                    <div class="gobuy">抢购</div>
+                                </div>
+                                <img src="{$val[original_img]}" alt="" class="three_prod_img">
+                            </a>
+                        </li>
+                    </volist>    
+                    </ul>
+                    <ul class="select_li">
+                    <volist name="$goods_c" id="val">
+                        <li class="seleckkuai active">
+                            <img src="{$val[original_img]}" alt="">
+                        </li>
+                    </volist>    
+                    </ul>
+                </div>
+                <div class="zhuan_right">
+                    <img src="/public/yilitong/images/prod2.png" alt="" class="one_prod_img">
+                    <div class="hengxian"></div>
+                    <p class="p1">端午礼品专区</p>
+                    <p class="p2">多种商品，自由选购</p>
+                    <a href="{:Url('/Home/Goods/scenarioList/id/1082')}" class="tomore">查看全部</a>
+                </div>
+            </div>
+            <div class="productlist">
+            <volist name="$goods_d" id="val">
+                <a href="{:Url('goodsInfo',array('id'=>$val[goods_id]))}" class="productya">
+                    <img src="{$val[original_img]}" alt="">
+                    <p class="t1">{$val[goods_name]}</p>
+                    <div class="price_buy">
+                        <p class="price">￥{$val[shop_price]}<span class="gray">￥{$val[market_price]}</span></p>
+                        <div class="btnred">抢购</div>
+                    </div>
+                </a>
+            </volist>    
+            </div>
+        </div>
+        <div class="section section3">
+            <img src="/public/yilitong/images/title_3@2x.png" alt="" class="title_1">
+            <div class="zhuanqu">
+                <div class="zhuanqu_left">
+                    <ul class="three_productlist">
+                    <volist name="$goods_e" id="val">
+                        <li class="prod">
+                            <a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610">
+                                <div class="prod_left">
+                                    <p class="productname">{$val[goods_name]}</p>
+                                    <p class="futitle">{$val[goods_remark]}</p>
+                                    <p class="price">￥{$val[shop_price]}<span class="err">￥{$val[market_price]}</span></p>
+                                    <div class="gobuy">咨询</div>
+                                </div>
+                                <img src="{$val[original_img]}" alt="" class="three_prod_img">
+                            </a>
+                        </li>
+                    </volist>    
+                    </ul>  
+                    <ul class="select_li">
+                    <volist name="$goods_e" id="val">
+                        <li class="seleckkuai active">
+                            <img src="{$val[original_img]}" alt="">
+                        </li>
+                    </volist>    
+                    </ul>
+                </div>
+                <div class="zhuan_right">
+                    <!-- <img src="/public/yilitong/images/prod2.png" alt="" class="one_prod_img"> -->
+                    <div class="hengxian2"></div>
+                    <p class="p3">自由搭配套装</p>
+                    <p class="p4">为满足客户送礼的定制化需求，可将粽子、咸鸭蛋或其他类型礼品搭配成新的套装。</p>
+                    <a href="/Home/Goods/goodsFestival" class="watch_more">查看全部搭配</a>
+                    <a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610" class="to_consult">我要立即咨询</a>
+                </div>
+            </div>
+            <div class="productlist">
+                <volist name="$goods_f" id="val">
+                <a href="http://p.qiao.baidu.com/cps/chat?siteId=13709944&userId=28548610" class="productya">
+                    <img src="{$val[original_img]}" alt="">
+                    <p class="t1">{$val[goods_name]}</p>
+                    <div class="price_buy">
+                        <p class="price">￥{$val[shop_price]}<span class="gray">￥{$val[market_price]}</span></p>
+                        <div class="btnred">咨询</div>
+                    </div>
+                </a>
+                </volist> 
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

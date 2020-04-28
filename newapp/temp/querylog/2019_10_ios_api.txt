@@ -1,0 +1,990 @@
+执行日期：20191001122552
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122552
+array (
+  'act' => 'boot_page',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122622
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122622
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191001122622
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122622
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122623
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122623
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122646
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191001122646
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122646
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122646
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122647
+array (
+  'act' => 'supplier_list',
+  'page' => '0',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122707
+array (
+  'act' => 'index',
+  'supplier_id' => '843',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001122707
+array (
+  'act' => 'serach_goods',
+  'page' => '0',
+  'supplier_id' => '843',
+  'token' => 'Ul1TV0FTW1xbSh9ZUFhBWllUX01RFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191001153913
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001153913
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1TV0FSXVBbSx9ZUFhBWlpXWU1QFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191001185830
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001185830
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FRX1BfSB9ZUFhBWltRWUlTFBwCDDwBCh0',
+)
+执行日期：20191001212945
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FQXlBWTB9ZUFhBWlxWWUBXFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191001212946
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FQXlBWTR9ZUFhBWlxWWUBWFBwCDDwBCh0',
+)
+执行日期：20191001212946
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1TV0FQXlBWTR9ZUFhBWlxWWUBWFBwCDDwBCh0',
+)
+执行日期：20191001212946
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FQXlBWTR9ZUFhBWlxWWUBWFBwCDDwBCh0',
+)
+执行日期：20191001212946
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FQXlBWTR9ZUFhBWlxWWUBWFBwCDDwBCh0',
+)
+执行日期：20191002102142
+array (
+  'act' => 'boot_page',
+  'token' => 'Ul1TV0FbWlxeSh9ZUFhBWlFVX0hRFBwCDDwBCh0',
+)
+执行日期：20191002102142
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FbWlxeSh9ZUFhBWlFVX0hRFBwCDDwBCh0',
+)
+执行日期：20191002102210
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102210
+array (
+  'act' => 'boot_page',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102238
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102238
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191002102238
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102238
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102238
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102238
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191002102356
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002102356
+array (
+  'act' => 'index',
+  'token' => 'Ul1TV0FbWlxdSB9ZUFhBWlFVX0tTFBwCDDwBCh0',
+)
+执行日期：20191002175542
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175542
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175542
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191002175542
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175543
+array (
+  'act' => 'supplier_list',
+  'page' => '0',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175545
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175545
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175546
+array (
+  'act' => 'index',
+  'supplier_id' => '41',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002175546
+array (
+  'act' => 'serach_goods',
+  'page' => '0',
+  'supplier_id' => '41',
+  'token' => 'Ul1SXkhSWFRaSh9ZUFlIU1lSXUxRFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXkhSWVVdTx9ZUFlIU1ldXEtUFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191002181038
+array (
+  'act' => 'check_login_status',
+  'ticket' => 'UlBcXE5UXlVXSlIUUVoEUl1UWEBUXVNWSB8BCh1IB1hXXU8FWwcIQVBYUlhNVA5dWxlXXFNXTlFRA1dLAA',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UlBcXE5UXlVXSlIUUVoEUl1UWEBUXVNWSB8BCh1IB1hXXU8FWwcIQVBYUlhNVA5dWxlXXFNXTlFRA1dLAA',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'ticket' => 'UlBcXE5UXlVXSlIUUVoEUl1UWEBUXVNWSB8BCh1IB1hXXU8FWwcIQVBYUlhNVA5dWxlXXFNXTlFRA1dLAA',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181038
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181045
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191002181045
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkhSWVVdQB9ZUFlIU1ldXEtbFBwCDDwBCh0',
+)
+执行日期：20191006170648
+array (
+  'act' => 'boot_page',
+  'token' => 'Ul1SXktWWl1eTx9ZUFlIUF5VXkhUFBwCDDwBCh0',
+)
+执行日期：20191006170648
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1SXktWWl1eTx9ZUFlIUF5VXkhUFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191007072247
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007072247
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkxTXFRYTh9ZUFlIV1lUXU5VFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191007204853
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191007204853
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXkxWWlBdSx9ZUFlIV11cWUtQFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191008102737
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102737
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008102743
+array (
+  'act' => 'search_keywords',
+  'token' => 'Ul1SXk1TWVNbTx9ZUFlIVlhdVk1UFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'ticket' => 'UlBcXE5UXlVXSlIUUVoEUl1UWEBUXVNWSB8BCh1IB1hXXU8FWwcIQVBYUlhNVA5dWxlXXFNXTlFRA1dLAA',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191008160502
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'check_login_status',
+  'ticket' => 'UlBcXE5UXlVXSlIUUVoEUl1UWEBUXVNWSB8BCh1IB1hXXU8FWwcIQVBYUlhNVA5dWxlXXFNXTlFRA1dLAA',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UlBcXE5UXlVXSlIUUVoEUl1UWEBUXVNWSB8BCh1IB1hXXU8FWwcIQVBYUlhNVA5dWxlXXFNXTlFRA1dLAA',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008160502
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXk1RWVxeSh9ZUFlIVlpcX0hRFBwCDDwBCh0',
+)
+执行日期：20191008213402
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191008213402
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213402
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213402
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213402
+array (
+  'act' => 'check_login_status',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213403
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213403
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213403
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213403
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSh9ZUFlIVlxdVkxRFBwCDDwBCh0',
+)
+执行日期：20191008213407
+array (
+  'act' => 'cart_list',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213409
+array (
+  'act' => 'user_status',
+  'app_name' => 'ylt_ios',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213409
+array (
+  'act' => 'goods_collect_list',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213409
+array (
+  'act' => 'get_user_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213409
+array (
+  'act' => 'user_balance',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213409
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213409
+array (
+  'act' => 'examine',
+  'app_name' => 'ylt_ios',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213409
+array (
+  'act' => 'ettled_status',
+  'agent_rank' => '5',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213409
+array (
+  'act' => 'is_designer',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213411
+array (
+  'act' => 'gift_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'type' => '1',
+)
+执行日期：20191008213412
+array (
+  'act' => 'gift_list',
+  'page' => '0',
+  'status' => '0',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'type' => '1',
+)
+执行日期：20191008213412
+array (
+  'act' => 'gift_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'type' => '1',
+)
+执行日期：20191008213412
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'user_status',
+  'app_name' => 'ylt_ios',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213414
+array (
+  'act' => 'user_balance',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'examine',
+  'app_name' => 'ylt_ios',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213414
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'get_user_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'is_designer',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'ettled_status',
+  'agent_rank' => '5',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'goods_collect_list',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213414
+array (
+  'act' => 'gift_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'type' => '1',
+)
+执行日期：20191008213414
+array (
+  'act' => 'gift_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'type' => '1',
+)
+执行日期：20191008213415
+array (
+  'act' => 'gift_list',
+  'page' => '0',
+  'status' => '0',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'type' => '1',
+)
+执行日期：20191008213420
+array (
+  'act' => 'user_status',
+  'app_name' => 'ylt_ios',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213420
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213420
+array (
+  'act' => 'get_user_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213420
+array (
+  'act' => 'goods_collect_list',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213420
+array (
+  'act' => 'is_designer',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213420
+array (
+  'act' => 'user_balance',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213420
+array (
+  'act' => 'ettled_status',
+  'agent_rank' => '5',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213420
+array (
+  'act' => 'examine',
+  'app_name' => 'ylt_ios',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213422
+array (
+  'act' => 'user_status',
+  'app_name' => 'ylt_ios',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213422
+array (
+  'act' => 'is_designer',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213422
+array (
+  'act' => 'ettled_status',
+  'agent_rank' => '5',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213422
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213422
+array (
+  'act' => 'user_balance',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213422
+array (
+  'act' => 'get_user_info',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213422
+array (
+  'act' => 'examine',
+  'app_name' => 'ylt_ios',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+  'version_number' => '3.3.1',
+)
+执行日期：20191008213422
+array (
+  'act' => 'goods_collect_list',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213456
+array (
+  'act' => 'good_detail',
+  'goods_id' => '4621',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213457
+array (
+  'act' => 'remark_count',
+  'ticket' => 'UltdXEFRWF1eTlMUVFhLV1BXEklWW1dZSFFdVVwECgcWDBwBCVcPTloNB1kaAQtVDElUWAENHVteU1hLUFxQDRw',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191008213502
+array (
+  'act' => 'supplier_list',
+  'page' => '0',
+  'token' => 'Ul1SXk1XWVNaSx9ZUFlIVlxdVkxQFBwCDDwBCh0',
+)
+执行日期：20191009164216
+array (
+  'act' => 'advertisement',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+)
+执行日期：20191009164216
+array (
+  'act' => 'index_goods',
+  'page' => '0',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+)
+执行日期：20191009164216
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+)
+执行日期：20191009164216
+array (
+  'act' => 'index',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+)
+执行日期：20191009164216
+array (
+  'act' => 'check_ver',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+  'ver' => '3.3.1',
+)
+执行日期：20191009164216
+array (
+  'act' => 'cate_list',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+)
+执行日期：20191009164216
+array (
+  'act' => 'gifts_category',
+  'token' => 'Ul1SXk5SWFBdTh9ZUFlIVVlSWUtVFBwCDDwBCh0',
+)
+执行日期：20191009164217
+array (
+  'act' => 'login_log',
+  'source' => 'IOS',
+  'token' => 'Ul1SXk5SWFBdTx9ZUFlIVVlSWUtUFBwCDDwBCh0',
+)

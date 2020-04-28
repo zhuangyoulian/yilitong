@@ -1,0 +1,25 @@
+2018-08-02 13:14:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT commission_price,supplier_id,goods_id,goods_name,shop_price,original_img from `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer = 0 AND 1=1 AND (  goods_name like \'%热水袋%\' OR keywords like \'%热水袋%\'  )  order by sales_sum ASC  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'File \'./ylt_tp/ylt_goods.MYD\' not found (Errcode: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 29,
+  ),
+)
+

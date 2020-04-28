@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.9,minimum-scale=0.9,user-scalable=no" />
+		<title>一礼通优惠券</title>
+		<link rel="stylesheet" href="__MOBILE__/css/coupons.css">
+	</head>
+	<body>
+		<div class="couponsBox">
+			<header><a href="/">
+            <img src="__STATIC__/images/return.png" alt="返回" style="width: 16px;float: left;margin: 5px 10px;">
+            </a>一礼通优惠券</header>
+			<nav id="curNav">
+				<span><a href="/mobile/Coupon/coupon_list.html">单品优惠券</a></span>
+				<span class="curSpan"><a href="/mobile/Coupon/coupon_list_more.html">多品优惠券</a></span>
+				<span><a href="/mobile/Coupon/coupon_list_supplier.html">店铺优惠券</a></span>
+			</nav>
+			<section id="curSection">
+                <volist name="goods_l" id="value">
+                    <if condition="$value[ling_num] !='0％' and $value[use_end_time] GT time() ">
+						<div class="category">
+							<div class="categoryImg"><img src="{$value.goods_thumb}"></div>
+							<div class="categoryMoney">
+								<div class="moneyBox">
+									<div class="moneyNum">￥<span class="num">{$value.money}</span></div>
+									<div class="condition">满<span>{$value.condition}</span>元<br>可使用</div>
+								</div>						
+								<div class="categoryCoupons">多品类优惠券</div>
+							</div>
+							<div class="clickGet list" data-cid="{$value['id']}" data-id="{$value['goods_id']}" >
+								<div class="get ">立即<br>领取</div>
+								<div class="surplus">剩余<span>{$value.ling_num}</span></div>
+							</div>
+						</div>
+					</if>
+				</volist>
+                <volist name="goods_l" id="valu">
+                    <if condition="$valu[ling_num] eq '0％' || $valu[use_end_time] LT time()">
+						<div class="category" >
+							<div class="categoryImg"><img src="{$valu.goods_thumb}"></div>
+							<div class="categoryMoney">
+								<div class="moneyBox">
+									<div class="moneyNum1">￥<span class="num1">{$valu.money}</span></div>
+									<div class="condition1">满<span>{$valu.condition}</span>元<br>可使用</div>
+								</div>						
+								<div class="categoryCoupons1">{$valu.goods_name}</div>
+							</div>
+							<div class="clickGet1">							
+								<div class="takeUp">已结束</div>
+							</div>
+							</div>
+					</if>
+				</volist>
+			</section>
+		</div>
+		<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#curNav span").click(function(){	
+					var curIndex = $(this).index();
+				$(this).addClass("curSpan").siblings().removeClass("curSpan");
+				// $("#curSection .coupons").hide("").eq($('#curNav span').index(this)).show();$(this).index();
+				$("#curSection .coupons").eq(curIndex).css('display','block').siblings('.coupons').css('display','none');
+				})
+			})		
+		</script>
+		<script>
+	$(document).ready(function(){
+	$(".clickGet").click(function(){
+	  var id=$(this).data('id');
+	  var cid=$(this).data('cid');
+	  // console.log(id);
+	  $.ajax({
+	    // url:"/index.php?m=Mobile&c=User&a=coupon_link&id="+id,
+	    url:"/index.php?m=Mobile&c=Coupon&a=coupon_list_more",
+	    dataType:"json",
+	    type:"POST",
+	    data:{"id":id,"cid":cid},
+	    success:function(data){
+	    	// alert(123);
+	      if (data.code==1) {
+	        alert(data.msg);
+	        window.location.href = data.url;
+	      }else{
+	      	alert(data.msg);
+	        window.location.href = data.url;
+	      }
+	    }
+	  })
+	})
+})
+		</script>
+	</body>
+</html>

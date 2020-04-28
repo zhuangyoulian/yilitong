@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>退换货详情-{$config['shop_info_store_title']}</title>
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$config['shop_info_store_desc']}"/>
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/outhu.css" type="text/css">
+	<style>
+		textarea{border:outline !important;}
+	</style>
+</head>
+
+<body>
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<!--------用户中心 顶菜单-------------->
+<include file="public/userTopbar" />
+<!--------用户中心 顶菜单--------------->
+
+
+<style>
+    .good-info-col{
+        width: 900px;
+        height: 50px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+    .good-info-col li{
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 50px;
+    }
+    .good-info-col li img{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+    .good-info-col li a{
+        color: #333;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -ms-transition: 0.3s;
+    }
+    .good-info-col li a:hover{
+        color: #555;
+        text-decoration: underline;
+    }
+    .good-info-col li span{
+        padding-left: 2px;
+    }
+
+
+
+
+    .deal-order-col{
+        width: 900px;
+        margin: 50px auto 0 auto;
+        overflow: hidden;
+    }
+    .deal-order-col label{
+        width: 100px;
+        display: block;
+        float: left;
+        text-align: right;
+        font-size: 12px;
+        font-weight: bold;
+        color: #555;
+        margin-right: 10px;
+    }
+    .deal-order-col .deal-description{
+        float: left;
+        border: 1px solid #f9f9f9;
+        border-radius: 4px;
+        min-width: 500px;
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 700px;
+        padding: 5px;
+        overflow-y: auto;
+    }
+    .deal-order-col .deal-description-img{
+        width: 790px;
+        float: left;
+    }
+    .deal-order-col .deal-description-img img{
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+    .buyer{
+        margin-top: 10px;
+        margin-left: 40px;
+		text-align: right;
+    }
+    .buyer dt{
+        font-size: 14px;
+        color: #333;
+    }
+    .buyer dd{
+        font-size: 12px;
+        color: #888;
+        padding-left: 20px;
+        margin-top: 10px;
+        line-height: 18px;
+    }
+    .seller{
+        margin-top: 10px;
+        margin-left: 40px;
+    }
+    .seller dt{
+        text-align: left;
+        font-size: 14px;
+        color: orange;
+    }
+    .seller dd{
+        font-size: 12px;
+        color: orange;
+        padding-left: 20px;
+        margin-top: 10px;
+        line-height: 18px;
+    }
+    .seller dd a{
+        color: orange;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .seller dd .reply{
+        width: 80px;
+        height: 30px;
+        border: 1px solid orange;
+        color: #fff;
+        background: orange;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 30px;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+    }
+    /*.seller dd .reply:hover{*/
+        /*background: #fff;*/
+        /*color: orange;*/
+        /*border-color: orange;*/
+    /*}*/
+    .seller dd .retract{
+        display: none;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+    .remark,.submit-remark{
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+    }
+    .remark{
+        display: block;
+        width: 840px;
+        max-width: 840px;
+        min-height: 80px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+    }
+    .remark:hover{
+        border-color: orange;
+    }
+    .remark:focus{
+        border-color: orange;
+    }
+    .submit-remark{
+        display: block;
+        width: 60px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        border: 1px solid orange;
+        border-radius: 4px;
+        color: orange;
+        background: #fff;
+        margin-top: 5px;
+        cursor: pointer;
+        outline: none;
+    }
+    .submit-remark:hover{
+        background: orange;
+        color: #fff;
+    }
+    .remarkForm{
+        /*display: none;*/
+    }
+</style>
+<div class="layout pa-to-10 fo-fa-ar">
+    <!--菜单-->
+    <include file="user/menu"/>
+    <!--菜单-->
+    <div class="fr wi940">
+        <div id="main">
+            <div class="mod-main mod-comm">
+                <div class="mt">
+                    <h3>申请服务详情</h3>
+                </div>
+                <div class="mc">
+                    <ul class="good-info-col">
+                        <li style="width:150px;">
+                            <img src="{$goods.goods_thumb}" alt="">
+                        </li>
+                        <li style="width:400px;"><a href="#">{$return_goods.goods_name}</a></li>
+                        <li style="width:100px;">¥<span>{$return_goods.back_price}</span></li>
+                        <li style="width:50px;">x <span>{$return_goods.send_number}</span></li>
+                        <li style="width:200px;">店铺：<span>{$goods.supplier_name}</span></li>
+                    </ul>
+ 
+                </div>
+                <div class="mc" id="vendorTel"></div>
+            </div>
+
+            <div class="mod-main mod-comm">
+                <div class="mt">
+                    <h3>申请进度</h3>
+                </div>
+                <div class="mc">
+                    <!--进度条代码开始begin-->
+                    <div class="mod-main mod-comm" id="air06">
+                        <div class="mc">
+                            <div id="processDivId" class="qa-progress-new qa-new-w4">
+							  <if condition="$return_order[status] eq -1">
+							   <div class="node ready">
+                                    
+                                        <div class="info pro-1-4"><span class="con">商家拒绝了售后申请</span></div>
+                                 
+                                    <i class="icon-node"></i>
+                                    <span class="txt">商家拒绝了售后申请</span>
+                                </div>
+							  
+							  <else>
+								
+                                <div class="node ready">
+                                    <if condition="$return_order[status] eq 0">
+                                        <div class="info pro-1-4"><span class="con">申请</span></div>
+                                    </if>
+                                    <i class="icon-node"></i>
+                                    <span class="txt">提交申请</span>
+                                </div>
+                                <div class="proce ready"><i class="icon-proce"></i></div>
+                                <div class="node ready">
+                                    <if condition="$return_order[status] eq 1">
+                                        <div class="info pro-1-4"><span class="con">回复</span></div>
+                                    </if>
+                                    <i class="icon-node"></i>
+                                    <span class="txt">客服处理</span>
+                                </div>
+								<div class="proce ready"><i class="icon-proce"></i></div>
+                                <div class="node ready">
+                                    <if condition="$return_order[status] eq 2">
+                                        <div class="info pro-1-4"><span class="con">寄回商品</span></div>
+                                    </if>
+                                    <i class="icon-node"></i>
+                                    <span class="txt">寄回商品</span>
+                                </div>
+								<div class="proce ready"><i class="icon-proce"></i></div>
+                                <div class="node ready">
+                                    <if condition="$return_order[status] eq 4 || $return_order[status] eq 3">
+                                        <div class="info pro-1-4"><span class="con">商家收到商品</span></div>
+                                    </if>
+                                    <i class="icon-node"></i>
+                                    <span class="txt">商家收货</span>
+                                </div>
+								<if condition="$return_order[type] eq 2">
+								<div class="proce ready"><i class="icon-proce"></i></div>
+                                <div class="node ready">
+                                    <if condition="$return_order[status] eq 5">
+                                        <div class="info pro-1-4"><span class="con">商家寄回售后商品</span></div>
+                                    </if>
+                                    <i class="icon-node"></i>
+                                    <span class="txt">商家寄回</span>
+                                </div>
+								<else>
+                                <div class="proce ready"><i class="icon-proce"></i></div>
+                                <div class="node ready">
+                                    <if condition="$return_order[status] eq 6">
+                                        <div class="info pro-1-4"><span class="con">已完成</span><b></b></div>
+                                    </if>
+                                    <i class="icon-node"></i>
+                                    <span class="txt">完成</span>
+                                </div>
+								</if>
+							  </if>
+                            </div>
+                        </div>
+                        <div id="processTipDiv" class="mt20" style="display: none;"></div>
+                        <div class="op-btns mt20" id="ProTipDiv" style="display: none;">
+                            <div id="divOpSatis">
+                            </div>
+                        </div>
+                    </div>
+                    <!--进度条代码开始end-->
+
+
+				<if condition="$return_order[status] neq 0">
+					<div class="deal-cont">
+                        <div class="deal-item ">
+                            <div class="deal-txt">运单信息</div>
+                            <div class="deal-opers">
+                                <strong>寄回快递单号:</strong>
+                                 <input type="text" name="shipping_no" value="{$return_order.refund_shipping_no}" style="border:1px solid #efefef; padding:4px;"/>
+                                 <if condition="$return_order[status] eq 1">
+                                 <input type="button" value="提交" id="" onclick="ajaxGetshipping({$return_order.id})" style="display:inline-block;padding:4px 10px;cursor:pointer;"/>
+                                 </if>
+                            </div>
+                        </div>
+                    </div>
+					</if>
+                </div>
+            </div>
+
+
+            <div class="mod-main mod-comm">
+                <div class="mt">
+                    <h3>处理环节</h3>
+                </div>
+                <div class="mc">
+                    <div class="deal-order-col">
+                        <label>问题描述：</label>
+                        <div class="deal-description">
+                            问题描述问题
+                        </div>
+                    </div>
+                    <div class="deal-order-col">
+                        <label>问题图片：</label>
+                        <div class="deal-description-img" id="deal-description-img">
+                            <volist name="return_order[imgs]" id="item">
+                                <a href="{$item}" target="_blank"><img src="{$item}" alt=""></a>
+                            </volist>
+                        </div>
+                    </div>
+   
+                    <div class="deal-order-col" id="comments" style="">
+					  <foreach name="msg" key="k" item="v">
+					  <if $v.supplier_id eq 0> 
+						<dl class="buyer" >
+                            <dt>：我</dt>
+                            <dd>{$v.content}</dd>
+                        </dl>
+					  
+					  <else>
+					    <dl class="seller" >
+                            <dt>{$return_order.supplier_name}：</dt>
+                            <dd>{$v.content}</dd>
+                        </dl>
+					  
+					  </if>
+                       
+					  </foreach>
+                        <dl class="seller" style="margin-top:50px;">
+                            <dd class="replyDom">
+                                <a href="javascript:void(0);" class="reply">回复</a>
+                                <a href="javascript:void(0);" class="retract">收起</a>
+                            </dd>
+                            <dd class="remarkForm">
+                                <form action="" class="replyForm">
+                                    <textarea name="content" id="content" class="remark" placeholder="请输入您的留言..." style="padding:5px;"></textarea>
+                                    <input type="button" value="提交" class="submit-remark" onclick="submit_comment()">
+                                </form>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/public/static/js/layer/layer.js"></script>
+<script>
+/**
+* 提交订单号
+*/
+function ajaxGetshipping(id)
+{		
+
+	var shipping_no = $("input[name='shipping_no']").val();
+	$.ajax({
+			type:'POST',
+			data:{'id':id,'shipping_no':shipping_no},
+			url:"/index.php/Home/User/back_goods_info",
+			success:function(data){
+					if(data == 1){
+					layer.alert('提交成功', {icon: 1});
+					}
+			}
+	});
+}
+</script>
+<div class="he80"></div>
+<!--------footer-开始-------------->
+<include file="public/footer"/>
+<!--------footer-结束-------------->
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+    function submit_comment(){
+        $.ajax({
+            type: 'POST',
+            url: '/index.php/Home/User/back_goods_info',
+            dataType: 'json',
+            data: {
+				id:{$return_order.id},
+                content: $('#content').val()
+            },
+            success: function(data){
+			if(data == 1){
+					
+					layer.confirm('提交成功', {
+					  btn: ['确认'] //可以无限个按钮
+					  
+					}, function(index, layero){
+						
+					  location.reload() 
+					  window.scrollTo(0,0);
+					});
+					
+					}
+                
+            },
+            error: function (data) {
+                layer.alert(data, {icon: 1})
+            }
+        })
+    }
+
+    $(function () {
+        //回复
+//        $('#comments .seller').each(function () {
+//            $(this).find('.reply').click(function () {
+//                $(this).parent().siblings('.remarkForm').slideDown();
+//                $(this).siblings('.retract').show();
+//            });
+//            $(this).find('.retract').click(function () {
+//                $(this).parent().siblings('.remarkForm').slideUp();
+//                $(this).hide();
+//            });
+//        });
+    })
+</script>
+
+</body>
+</html>

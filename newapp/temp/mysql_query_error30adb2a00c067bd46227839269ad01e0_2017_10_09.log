@@ -1,0 +1,25 @@
+2017-10-09 11:53:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.order_id,O.order_sn,O.user_id,O.order_status,O.shipping_status,O.pay_status,O.consignee,O.province,O.city,O.district,O.address,O.mobile,O.shipping_code,O.goods_price,O.shipping_price,O.order_amount,O.add_time from `ylt_tp`.`ylt_order` as O where O.order_id= AND user_id=',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND user_id=\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

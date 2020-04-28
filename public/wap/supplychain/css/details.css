@@ -1,0 +1,65 @@
+﻿body{
+            font-family: "Microsoft YaHei";
+        }
+/* 采购产品 */
+.tabpro {
+        border-collapse: collapse;
+        background-color: #fff;
+        margin-top: 10px;
+        border: 1px solid #f5f2f2;
+        text-align: center;
+    }
+
+    .tabpro th,
+    td {
+        border: none;
+        border-bottom: 1px solid #f5f2f2;
+        min-width: 100px;
+        border-right: 1px solid#f5f2f2;
+    }
+
+    .tabpro th {
+        background-color: #F1F8D8;
+		height: 30px;
+		line-height: 30px;
+       
+    }
+
+    .tabpro tbody tr {
+        height: 3em;
+
+    }
+
+    /* 询价要求 */
+    .labbox {
+        height: 3em;
+        line-height: 3em;
+        padding: 0 10px;
+        border-bottom: 1px solid #f5f2f2;
+
+    }
+
+    .labname {
+        width: 120px;
+        border-right: 1px solid #f5f2f2;
+    }
+
+    .ctx {
+        padding-left: 10px;
+        color: #BBBBBB;
+    }
+
+
+    .call{
+            
+            color: #666;
+            padding: 2px 10px;
+            border-radius: 25px;
+			border: 1px solid #D9D9D9;
+            }
+.site{
+    height: 4em;
+    line-height: 4em;
+    padding: 0 10px;
+    border-bottom: 1px solid #f5f2f2;
+}

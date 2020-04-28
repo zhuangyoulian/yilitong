@@ -1,0 +1,103 @@
+body{
+	background: rgb(232,232,232);
+}
+.containerCart{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 92px;
+	background: #FFFFFF;
+	margin-bottom: 76px;
+}
+.carttab_title{
+	margin:36px 48px 24px 48px;
+	height: 50px;
+	background:rgb(232,232,232);
+	display: flex;
+	align-items: center;
+}
+.carttab_title .quanxuan{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.carttab_title .quanxuan input{
+	margin-top: 0px;
+	margin-right: 5px;
+}
+.carttab_goods{
+	margin:0px 48px 24px 48px;
+	border: 1px solid #E0E0E0;
+}
+.goods{
+	height: 148px;
+	display: flex;
+	align-items: center;
+}
+.goods:hover{
+	background: #fafdff;
+}
+.goods .danxuan{
+	display: flex;
+	align-items: center;
+}
+.goods_name{
+	/* margin-left: 16px; */
+}
+.goods .danxuan img{
+	border:1px solid #E0E0E0;
+	margin-left: 5px;
+}
+.cart_del:hover{
+	color: #EB0909;
+}
+.containerB{
+	position: fixed;
+	bottom: 0px;
+	z-index: 3;
+}
+/* 暂无商品 */
+.noCart{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 90px;
+}
+.noCart img{
+	margin-top: 56px;
+}
+.noCart .nobiaot{
+    color: #555555;
+	margin-top: 18px;
+}
+.noCart .nobtn{
+	background: #E00909;
+	width: 114px;
+	height: 40px;
+	border-radius:4px ;
+	margin-top: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffff;
+}
+.noCart .nobtn:hover{
+	background: #EB0909;
+}
+.xiadan{
+	width: 120px;
+	height: 44px;
+	color: #FFFFFF;
+	background: #E00909;
+	font-size: 16px;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.xiadan:hover{
+	background: #EB0909;
+}

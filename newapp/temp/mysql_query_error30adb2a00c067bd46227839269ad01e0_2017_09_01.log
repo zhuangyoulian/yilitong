@@ -1,0 +1,139 @@
+2017-09-01 10:39:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_supplier` (contacts_name,email,guimo,qq,company_name,province,city,area,address,
+			company_type,introduction,organization_code_electronic,general_taxpayer,reading_protocol,
+			bank_licence_electronic,proxy,is_designer,is_complete,add_time) values (蓝家鑫,
+	440582199411013333,wx13410872872,357099568,广东省-深圳市-龙岗区,个人简介,
+	28240,28558,28604,丹竹头岭背西3巷1号,高级设计师,
+	id_card_positive.jpg,id_card_opposite.jpg,education.jpg,
+	material1.jpg,material2.jpg,
+	1,1,1504233555)',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE8\\x93\\x9D\\xE5\\xAE\\xB6\\xE9\\x91\\xAB,\\x0D\\x0A\\x09440582199411013333,wx1341087287\' at line 3',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-01 10:39:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_supplier` (contacts_name,email,guimo,qq,company_name,province,city,area,address,
+			company_type,introduction,organization_code_electronic,general_taxpayer,reading_protocol,
+			bank_licence_electronic,proxy,is_designer,is_complete,add_time) values (蓝家鑫,
+	440582199411013333,wx13410872872,357099568,广东省-深圳市-龙岗区,个人简介,
+	28240,28558,28604,丹竹头岭背西3巷1号,高级设计师,
+	id_card_positive.jpg,id_card_opposite.jpg,education.jpg,
+	material1.jpg,material2.jpg,
+	1,1,1504233556)',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE8\\x93\\x9D\\xE5\\xAE\\xB6\\xE9\\x91\\xAB,\\x0D\\x0A\\x09440582199411013333,wx1341087287\' at line 3',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-01 11:54:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select supplier_id from `ylt_tp`.`ylt_supplier` where user_id= and is_designer= 1 ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_designer= 1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-01 15:17:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'UPDATE `ylt_tp`.`ylt_supplier` set qq = 23 user_id=156552',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'user_id=156552\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-01 15:51:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'UPDATE `ylt_tp`.`ylt_supplier` set company_name = \'广东省-深圳市-龙岗区\', province = 广东省 , city = 深圳市 , area = 龙岗区 where user_id=156552',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\xB9\\xBF\\xE4\\xB8\\x9C\\xE7\\x9C\\x81 , city = \\xE6\\xB7\\xB1\\xE5\\x9C\\xB3\\xE5\\xB8\\x\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

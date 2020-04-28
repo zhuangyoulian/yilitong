@@ -1,0 +1,63 @@
+<div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+    <table>
+        <tbody>
+        <volist name="bonus_list" id="list">
+            <tr data-id="{$list['id']}">
+                <td class="sign">
+                    <div style="width: 24px;"><i class="ico-check"></i></div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 120px;">{$list.id}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 120px;">{$list.shop_id}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 130px;">{$list.shop_name}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 120px;">{$list.this_bonus}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 150px;">{$list.time|date='Y-m-d',###}</div>
+                </td>
+                <td align="" class="" style="width: 100%;">
+                    <div>&nbsp;</div>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+</div>
+<!--分页位置-->
+{$page}
+<script>
+    $(".pagination  a").click(function(){
+        var page = $(this).data('p');
+        ajax_get_table('search-form2',page);
+    });
+    $(document).ready(function(){
+        // 表格行点击选中切换
+        $('#flexigrid >table>tbody>tr').click(function(){
+            $(this).toggleClass('trSelected');
+        });
+        $('#user_count').empty().html("{$pager->totalRows}");
+    });
+
+    function finish(id){
+        if(!confirm('确定提现完成了吗?'))
+        return false;
+
+        $.ajax({
+        type : "POST",
+        url:"{:Url('Admin/sales/finish')}",//+tab,
+        data :{id:id}, 
+        success: function(data){
+           if(data.status == 1){
+            alert(data.msg);
+            location.reload();
+          }
+        }
+      });
+    }
+</script>

@@ -1,0 +1,94 @@
+body{
+        font-family: "Microsoft YaHei";
+    }
+	        .circle{
+	            display: inline-block;
+	            width: 1.2em;
+	            height: 1.2em;
+	            line-height: 1.2em;
+	            font-size: 0.8em;
+	            border-radius: 50%;
+	            color: #fff;
+	            text-align: center;
+	            vertical-align: top;
+	        }
+	        input{
+	        	text-align: right;
+	        	padding-bottom: 6px;
+	        	padding-right: 10px;
+	        	border: none;
+	        }
+	        .placeholder::-webkit-input-placeholder{
+	            color:#d9d9d9;
+	            font-size: 0.9em;
+	        }
+	        .placeholder::-moz-placeholder{ 
+	            color:#d9d9d9;
+	            font-size: 0.9em;
+	        }
+	        .placeholder:-moz-placeholder{ 
+	            color:#d9d9d9;
+	            font-size: 0.9em;
+	        }
+	        .placeholder:-ms-input-placeholder{
+	            color:#d9d9d9;
+	            font-size: 0.9em;
+	        }
+
+	        .title {
+	        font-size: 16px;
+	    }
+	    .head .nav {
+	        height: 4em;
+	        line-height: 4em;
+	    }
+	    .nav {
+	        justify-content: space-around;
+            overflow: hidden;
+	    }
+	   
+
+	    .main .box{
+	    	padding: 0 10px;
+	        height: 4em;
+	        line-height: 4em;
+	        border-bottom: 1px solid #eee;
+	        position: relative;
+	        background-color: #fff; 
+	    }
+	    .left{
+	        width: 0.7em;
+	        color: red;
+	        line-height: inherit;
+	        font-size: 1.5em;
+	        font-weight: bold;
+	        padding-top: 4px;
+	    }
+	    .set{
+	    	text-align: right;margin-right: 10px;
+	    	padding-top: 10px;
+	    }
+        .annotation{
+            text-align: right;color: #BEBEBE;margin-right: 5px;padding-top: 10px;
+        }
+
+	
+
+	    .next{
+	        border-radius: 2em;
+	        margin: 1em 4em;
+	        height: 3em;
+	        line-height: 3em;
+	        text-align: center;
+	    }
+
+	    .imp{font-size: 14px;!important}
+ 
+		.check input{ 
+			width: 16px;
+		height: 16px;
+		position: absolute;
+		left: 8px;
+
+
+		 }

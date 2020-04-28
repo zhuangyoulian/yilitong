@@ -1,0 +1,600 @@
+2019-03-05 17:03:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:03:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:03:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:04:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:04:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:05:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:05:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:05:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:05:39
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:06:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:06:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:08:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:08:39
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:09:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:09:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:11:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=/mobile/Goods/goodsInfo/id/4898.ht',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'/mobile/Goods/goodsInfo/id/4898.ht\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:11:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=/mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'/mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:14:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/Mobile/Goods/goodsInfo/id/4898.ht',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/Mobile/Goods/goodsInfo/id/4898.ht\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:15:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/Mobile/Goods/goodsInfo/id/4898.ht',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/Mobile/Goods/goodsInfo/id/4898.ht\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:15:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com//Mobile/Goods/goodsInfo/id/4854.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com//Mobile/Goods/goodsInfo/id/4854.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:17:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Activity/discount/id/4.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Activity/discount/id/4.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:17:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Activity/discount/id/4.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Activity/discount/id/4.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:21:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2019-03-05 17:24:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=https://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.htm',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Goods/goodsInfo/id/4898.htm\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

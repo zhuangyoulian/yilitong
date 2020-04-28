@@ -1,0 +1,50 @@
+2019-09-17 04:30:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select collect_count,click_count,designer_name,works_img,works_name,cat_name,user_id,works_content,supplier_id from `ylt_tp`.`ylt_works` where works_id=__ChadronAlwaysEqualString',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'__ChadronAlwaysEqualString\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2019-09-17 12:43:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,prom_id,commission_price,is_designer,prom_type,cat_id,goods_sn,goods_name,brand_id,store_count,market_price,shop_price,supplier_id,add_time,goods_type,spec_type,goods_content,goods_remark,attribute,original_img,examine,is_on_sale,sales_sum,prom_id from `ylt_tp`.`ylt_goods` where goods_id=http://www.yilitong.com/mobile/Activity/discount/id/4.html',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'://www.yilitong.com/mobile/Activity/discount/id/4.html\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

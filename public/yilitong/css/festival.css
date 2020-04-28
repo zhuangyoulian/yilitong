@@ -1,0 +1,200 @@
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+.banner_pc{
+	width: 100%;
+	height: 600px;
+}
+.banner_pc img{
+	width: 100%;
+	height: 600px;
+}
+.date_pc{
+	width: 100%;
+	height: 144px;
+}
+.date_pc img{
+	width: 100%;
+	height: 144px;
+}
+.giftBagBox{
+	width: 100%;
+	height: 2822px;
+	background-image: url(/public/yilitong/images2/bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.giftBag{
+	width: 1200px;
+	margin: 0 auto;
+}
+.giftBagTitle{
+	text-align: center;
+	padding-top: 72px;
+	padding-bottom: 56px;
+}
+.giftBagTitle img{
+	width: 380px;
+	height: 80px;	
+}
+.giftBagCommodity{
+width: 1200px;
+height: 348px;
+}
+.commodityLeft{
+	width: 160px;
+	height: 348px;
+	background-image: url(/public/yilitong/images2/left.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color:white;
+	
+	float: left;
+	position: relative;
+}
+.tilteTop{
+	position: absolute;
+	width: 26px;
+	left: 40px;
+	top: 14px;
+	font-size: 24px;
+}
+.tilteBottom{
+	position: absolute;
+	width: 26px;
+	right: 35px;
+	bottom: 14px;
+	font-size: 24px;
+}
+.commodityCenter{
+	overflow: hidden;
+	float: left;
+}
+.commodity{
+	width: 256px;
+	height: 348px;
+	margin-left: 28px;
+	float: left;
+	background-color: white;
+}
+.commodityImg{
+	width: 256px;
+	height: 256px;
+	text-align: center;
+}
+.commodityImg img{
+	width: 256px;
+	height: 256px;	
+}
+
+.commodityName{
+	margin: 0 20px;
+	position: relative;
+	 width: 216px;
+	 font-size: 16px;
+	 color: #333;
+	 line-height: 21px;
+	 text-align: left;
+	 overflow: hidden;
+}
+.commodityName-after:after{
+    content: "..."; 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    padding-left: 30px;
+    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -moz-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(left, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+}
+.commodityPrice{
+	font-size: 20px;
+	color: #f23057;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.commodityPrice span{
+	font-size: 13px;
+	color: #999;
+  padding-left:10px;
+}
+.commodityRight{
+	width: 160px;
+	height: 348px;
+	background-image: url(/public/yilitong/images2/right.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: white;
+	
+	float: left;
+	margin-left: 28px;
+	position: relative;
+}
+.intro{
+	position: absolute;
+	margin-left: 26px;
+	margin-right: 26px;
+	top: 140px;
+	line-height: 22px;	
+	overflow: hidden;
+	text-align: center;
+  font-size: 14px;
+}
+.giftCard_Box{
+	width: 1200px;
+	height: 328px;
+}
+.giftCard{
+	width: 220px;
+	height: 328px;
+	background-color: white;
+	margin: 0 10px;
+	float: left;
+}
+
+.giftCardImg{
+	width: 220px;
+	height: 220px;
+	text-align: center;
+}
+.giftCardImg img{
+	width: 220px;
+	height: 220px;
+}
+
+.giftCardIntro{
+	padding-top: 16px;
+	margin: 0 20px;
+	position: relative;
+	 width: 180px;
+	 font-size: 16px;
+	 color: #333;
+	 line-height: 21px;
+	 text-align: left;
+	 overflow: hidden;
+}
+.giftCardIntro-after:after{
+    content: "..."; 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    padding-left: 30px;
+    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -moz-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(left, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+}
+.giftCardMoney{
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+	padding: 0 20px;
+	margin-top: 12px;
+}

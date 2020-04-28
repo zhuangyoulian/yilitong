@@ -1,0 +1,301 @@
+2018-03-12 11:31:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(, "","", "223.104.63.196","1520825484","IOS")',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \' "","", "223.104.63.196","1520825484","IOS")\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-03-12 18:05:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_busines_manager`( FUid, mobile, recommend_code, agent_rank, province, city,district,operating_name,operating_id,address,identity_positive,identity_opposite,reg_time,bond_number,parent_id) values(\'163466\', \'17876859453\', \'us163466\', \'4\', \'28240\', \'28558\',\'28604\',\'段炼\',\'429004198510074279\',\'湖北省仙桃\',\'/public/upload/common/image/2018/03/1520849105231.jpg\',\'/public/upload/common/image/2018/03/1520849124112.jpg\',\'1520849145\',\'10000.00\',\'\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'163466\' for key \'PRIMARY\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:05:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_busines_manager`( FUid, mobile, recommend_code, agent_rank, province, city,district,operating_name,operating_id,address,identity_positive,identity_opposite,reg_time,bond_number,parent_id) values(\'163466\', \'17876859453\', \'us163466\', \'4\', \'28240\', \'28558\',\'28604\',\'段炼\',\'429004198510074279\',\'湖北省仙桃\',\'/public/upload/common/image/2018/03/1520849132288.jpg\',\'/public/upload/common/image/2018/03/1520849132826.jpg\',\'1520849148\',\'10000.00\',\'\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'163466\' for key \'PRIMARY\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:05:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_busines_manager`( FUid, mobile, recommend_code, agent_rank, province, city,district,operating_name,operating_id,address,identity_positive,identity_opposite,reg_time,bond_number,parent_id) values(\'163466\', \'17876859453\', \'us163466\', \'4\', \'28240\', \'28558\',\'28604\',\'段炼\',\'429004198510074279\',\'湖北省仙桃\',\'/public/upload/common/image/2018/03/1520849140849.jpg\',\'/public/upload/common/image/2018/03/1520849140543.jpg\',\'1520849157\',\'10000.00\',\'\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'163466\' for key \'PRIMARY\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_entry_order`( order_sn, user_id, mobile, total_amount,order_amount, add_time, agent_rank) values(\'us15208491619453\',\'163466\',\'\',\'10000.00\',\'10000.00\',\'1520849161\',\'4\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'us15208491619453\' for key \'order_sn\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_busines_manager`( FUid, mobile, recommend_code, agent_rank, province, city,district,operating_name,operating_id,address,identity_positive,identity_opposite,reg_time,bond_number,parent_id) values(\'163466\', \'17876859453\', \'us163466\', \'4\', \'28240\', \'28558\',\'28604\',\'段炼\',\'429004198510074279\',\'湖北省仙桃\',\'/public/upload/common/image/2018/03/1520849159580.jpg\',\'/public/upload/common/image/2018/03/1520849158822.jpg\',\'1520849165\',\'10000.00\',\'\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'163466\' for key \'PRIMARY\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_busines_manager`( FUid, mobile, recommend_code, agent_rank, province, city,district,operating_name,operating_id,address,identity_positive,identity_opposite,reg_time,bond_number,parent_id) values(\'163466\', \'17876859453\', \'us163466\', \'4\', \'28240\', \'28558\',\'28604\',\'段炼\',\'429004198510074279\',\'湖北省仙桃\',\'/public/upload/common/image/2018/03/1520849154758.jpg\',\'/public/upload/common/image/2018/03/1520849163205.jpg\',\'1520849171\',\'10000.00\',\'\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'163466\' for key \'PRIMARY\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_entry_order`( order_sn, user_id, mobile, total_amount,order_amount, add_time, agent_rank) values(\'us15208491769453\',\'163466\',\'\',\'10000.00\',\'10000.00\',\'1520849176\',\'4\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'us15208491769453\' for key \'order_sn\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_entry_order`( order_sn, user_id, mobile, total_amount,order_amount, add_time, agent_rank) values(\'us15208491769453\',\'163466\',\'\',\'10000.00\',\'10000.00\',\'1520849176\',\'4\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'us15208491769453\' for key \'order_sn\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_busines_manager`( FUid, mobile, recommend_code, agent_rank, province, city,district,operating_name,operating_id,address,identity_positive,identity_opposite,reg_time,bond_number,parent_id) values(\'163466\', \'17876859453\', \'us163466\', \'4\', \'28240\', \'28558\',\'28604\',\'段炼\',\'429004198510074279\',\'湖北省仙桃\',\'/public/upload/common/image/2018/03/1520849170140.jpg\',\'/public/upload/common/image/2018/03/1520849170170.jpg\',\'1520849176\',\'10000.00\',\'\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'163466\' for key \'PRIMARY\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_entry_order`( order_sn, user_id, mobile, total_amount,order_amount, add_time, agent_rank) values(\'us15208491779453\',\'163466\',\'\',\'10000.00\',\'10000.00\',\'1520849177\',\'4\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'us15208491779453\' for key \'order_sn\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+
+2018-03-12 18:06:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_entry_order`( order_sn, user_id, mobile, total_amount,order_amount, add_time, agent_rank) values(\'us15208491779453\',\'163466\',\'\',\'10000.00\',\'10000.00\',\'1520849177\',\'4\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Duplicate entry \'us15208491779453\' for key \'order_sn\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1062,
+  ),
+)
+

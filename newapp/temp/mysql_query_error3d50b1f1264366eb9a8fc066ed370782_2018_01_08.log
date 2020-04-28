@@ -1,0 +1,625 @@
+2018-01-08 19:57:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6453\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6454\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6455\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6456\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6457\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6458\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6459\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6460\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6461\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6462\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6463\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6464\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6465\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6466\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6467\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6468\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6469\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:54
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6470\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:57:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6471\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:58:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6472\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:58:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6473\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:58:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6474\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:58:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6475\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:58:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6476\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-08 19:58:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6477\', 1517, \'厂家直销创意大象台灯 卡通迷你床头灯 阅读小台灯批发定制logo\', \'TP0001517\', 1, 0.00,36.00,\'2112_2177\',\'颜色:粉色 尺寸:34*15*10cm\',\'\',\'\',\'36.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

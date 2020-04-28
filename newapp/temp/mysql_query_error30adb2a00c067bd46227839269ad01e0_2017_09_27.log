@@ -1,0 +1,4625 @@
+2017-09-27 09:34:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 09:43:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 410,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 09:43:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 410,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 09:43:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 580,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 09:44:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 09:44:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1380,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 10:07:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 10:09:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1380,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 10:42:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 10:42:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 10:43:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 10:46:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:08:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id =  and O.goods_id = ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and O.goods_id =\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 11:10:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:10:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:12:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:13:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:14:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:14:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:15:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:15:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:15:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:16:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:21:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:25:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:26:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:37:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:37:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:37:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:38:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1000,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:38:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:38:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:41:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:42:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:57:04
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:57:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1670,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 11:57:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:38:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:40:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1670,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:40:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:40:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:42:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:42:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:42:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:49:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1670,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:50:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1710,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:50:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:52:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 410,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:52:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 460,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:52:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 460,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:53:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:53:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:54:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 13:58:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:00:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:03:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1790,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:03:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:19:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:19:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1610,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:19:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:20:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1310,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:20:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:20:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1310,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:21:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:21:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1310,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:21:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:22:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:22:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1000,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:23:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:26:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:37:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:38:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:38:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:38:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:38:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:44:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:47:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:53:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1000,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:53:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1000,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 14:53:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1000,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:24:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:24:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:25:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:26:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:26:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:27:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:42:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:43:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 15:43:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1000,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:04:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:19:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 490,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:33:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1540,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:33:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1190,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:34:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1050,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:37:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1380,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 16:48:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 18:06:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:06:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:07:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:07:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:07:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:07:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:09:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:10:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:11:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:13:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:16:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:17:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:18:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:18:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:18:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:18:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:18:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:20:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 18:24:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1540,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 18:24:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1400,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 18:24:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 18:28:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 1300,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 19:58:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 410,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 20:40:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE1SXVFdSg and parent_id = 26 order by add_time desc  LIMIT 1550,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE1SXVFdSg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 22:35:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE1RWV1bTg and parent_id = 26 order by add_time desc  LIMIT 1500,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE1RWV1bTg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-27 23:00:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id =  and O.goods_id = ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and O.goods_id =\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524794 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524794 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524795 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524795 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524797 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524797 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524797 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524797 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524798 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524798 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524798 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524798 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524798 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524798 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524804 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524804 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524805 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524805 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524805 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524805 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524806 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524806 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524806 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524806 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524807 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524807 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524809 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524809 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524810 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524810 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524810 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524810 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524810 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524810 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524811 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524811 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524811 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524811 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524812 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524812 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524812 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524812 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:54
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524814 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524814 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524819 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524819 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:06:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524819 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524819 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524820 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524820 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524820 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524820 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524821 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524821 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524821 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524821 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524821 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524821 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524825 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524825 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524825 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524825 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524825 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524825 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524825 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524825 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524826 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524826 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 陈v吧v, retund_shipping_time=1506524826 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\x99\\x88v\\xE5\\x90\\xA7v, retund_shipping_time=1506524826 where id=199\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524839 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524839 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524839 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524839 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524839 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524839 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524840 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524840 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524840 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524840 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524840 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524840 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524843 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524843 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524843 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524843 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524843 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524843 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524844 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524844 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524844 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524844 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524845 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524845 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524845 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524845 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524845 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524845 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524846 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524846 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524846 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524846 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524846 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524846 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-27 23:07:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 呼呼呼, retund_shipping_time=1506524847 where id=199',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE5\\x91\\xBC\\xE5\\x91\\xBC\\xE5\\x91\\xBC, retund_shipping_time=1506524847 where id=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

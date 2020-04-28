@@ -1,0 +1,102 @@
+<volist name="lists" id="list">
+    <div class="mypackeg ma-to-20 getmore">
+        <div class="packeg p">
+            <div class="maleri30">
+                <div class="fl">
+                    <h1><span></span><span class="bgnum"></span></h1>
+                    <p class="bgnum"><span><a href="{:Url('Supplier/index',array('id'=>$list['supplier_id']))}">{$list.supplier_name}</a></span></p>
+                </div>
+                <div class="fr">
+                     <!-- 拼单开始 -->
+                     <if condition="$list.is_share neq 0 and $list.pay_status neq 0">
+                         <div style="display: inline-block; font-size:0.55rem; color: #F23030; line-height: 1.5;position: absolute; right: 2.3rem; ">
+                            <a href="{:Url('Goods/goodsGroup',array('goods_id'=>$list['goods_list'][0][goods_id],group_id=>$list.is_share,prom_id=>$list['goods_list'][0][prom_id]))}" style="color: #f23030; ">拼团详情</a><span style="margin:0px 0.41rem ">|</span>
+                        </div>
+                    </if>
+                     <!-- 拼单结束 -->
+                    <span>{$list['order_status_desc']}</span>
+                </div>
+            </div>
+        </div>
+        <div class="shop-mfive p" style="background:#fafafa;">
+            <div class="maleri30">
+                <if condition="$list.is_topup eq 1">
+                    <div class="sc_list se_sclist paycloseto">
+                        <a  href="{:Url('User/order_detail',array('id'=>$list['order_id']))}">
+                        <div class="shopimg fl">
+                            <img src="{$list[card_img]}">
+                        </div>
+                        <div class="deleshow fr">
+                            <div class="deletes">
+                                <span class="similar-product-text">{$list[card_name_t]|getSubstr=0,20}</span>
+                            </div>
+                            <div class="prices  wiconfine">
+                                <p class="sc_pri"><span>￥</span><span>{$list[card_name]}</span></p>
+                            </div>
+                            <div class="qxatten  wiconfine">
+                                <p class="weight"><span>数量</span>&nbsp;<span>1</span></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </if>
+                    <foreach  name="list.goods_list" item="good">
+                        <div class="sc_list se_sclist paycloseto">
+                            <a <if condition="$list.receive_btn eq 1">href="{:Url('User/order_detail',array('id'=>$list['order_id']))}" <else/> href="{:Url('User/order_detail',array('id'=>$list['order_id']))}"</if>>
+                            <div class="shopimg fl">
+                                <img src="{$good[goods_thumb]}">
+                            </div>
+                            <div class="deleshow fr">
+                                <div class="deletes">
+                                    <span class="similar-product-text">{$good[goods_name]|getSubstr=0,20}</span>
+                                </div>
+                                <div class="prices  wiconfine">
+                                    <p class="sc_pri"><span>￥</span><span>{$good[goods_price]}</span></p>
+                                </div>
+                                <div class="qxatten  wiconfine">
+                                    <p class="weight"><span>数量</span>&nbsp;<span>{$good[goods_num]}</span></p>
+                                </div>
+                                <div class="buttondde">
+                                    <!--if condition="($list[return_btn] eq 1) and ($good[is_send] lt 2)">
+                                        <a href="{:Url('User/return_goods',array('order_id'=>$list[order_id],'order_sn'=>$list[order_sn],'goods_id'=>$good[goods_id],'spec_key'=>$good['spec_key']))}">申请售后</a>
+                                    </if-->
+                                    <if condition="$good[is_send] gt 1">
+                                        <a class="applyafts">已申请售后</a>
+                                    </if>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </foreach>
+            </div>
+        </div>
+        <div class="shop-rebuy-price p">
+            <div class="maleri30">
+                <span class="price-alln" style="overflow:hidden;display:block;width:100%;">
+                    <span style="float:right;margin-left:.5rem;">合计:￥{$list['order_amount']}</span>
+                    <span class="threel" id="goodsnum" style="float:right;">共{$list.count_goods_num|default=1}件商品</span>
+                </span>
+                <br>
+
+
+            </div>
+        </div>
+        <div class="pay-state">
+            <if condition="$list.pay_btn eq 1">
+                <a class="shop-rebuy paysoon" href="{:Url('Cart/payment',array('order_id'=>$list['order_id']))}">立即付款</a>
+            </if>
+            <if condition="$list.cancel_btn eq 1">
+                <a class="shop-rebuy " onClick="cancel_order({$list.order_id})">取消订单</a>
+            </if>
+            <if condition="$list.receive_btn eq 1">
+                <a class="shop-rebuy paysoon" onclick="orderConfirm({$list.order_id})" style="margin-left:.2rem;">确认收货</a>
+            </if>
+            <if condition="$list.comment_btn eq 1">
+                <a class="shop-rebuy" href="{:Url('/Mobile/User/comment')}">评价</a>
+            </if>
+            <if condition="$list.shipping_btn eq 1">
+                <a class="shop-rebuy" href="{:Url('User/expres',array('order_id'=>$list['order_id']))}">查看物流</a>
+            </if>
+        </div>
+    </div>
+</volist>

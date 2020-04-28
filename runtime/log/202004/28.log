@@ -1,0 +1,488 @@
+[ 2020-04-28T09:12:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Index/index.html
+[ log ] tp.cn/index.php/Admin/Index/index.html [运行时间：0.279016s][吞吐率：3.58req/s] [内存消耗：2,021.70kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:43+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Index/index.html
+[ log ] tp.cn/index.php/Admin/Index/index.html [运行时间：0.156009s][吞吐率：6.41req/s] [内存消耗：2,021.70kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:43+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Index/index.html
+[ log ] tp.cn/index.php/Admin/Index/index.html [运行时间：0.163009s][吞吐率：6.13req/s] [内存消耗：2,021.70kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:44+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Admin/login
+[ log ] tp.cn/Admin/Admin/login [运行时间：1.097062s][吞吐率：0.91req/s] [内存消耗：3,096.84kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->login[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] ./application/admin/view/admin\login.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:45+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Admin/vertify.html
+[ log ] tp.cn/admin/Admin/vertify.html [运行时间：0.154008s][吞吐率：6.49req/s] [内存消耗：2,898.21kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Admin',
+    2 => 'vertify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->vertify[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:46+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：2.907166s][吞吐率：0.34req/s] [内存消耗：29,720.23kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\home\controller\Index->index[ E:\phpStudy\WWW\tp510\application\home\controller\Index.php ]
+[ info ] [ VIEW ] ./application/home/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'controller',
+  4 => 'search_url',
+  5 => 'brand_list',
+  6 => 'config',
+  7 => 'arrry',
+  8 => 'arr',
+  9 => 'supplier',
+  10 => 'images',
+  11 => 'map_list',
+  12 => 'purchase_count',
+  13 => 'is_hot',
+  14 => 'brands',
+  15 => 'suppliers',
+  16 => 'supplier_lists',
+  17 => 'gifts',
+  18 => 'supplier_id',
+  19 => 'region_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Admin&c=Admin&a=vertify&r=97
+[ log ] tp.cn/index.php?m=Admin&c=Admin&a=vertify&r=97 [运行时间：0.111006s][吞吐率：9.01req/s] [内存消耗：2,895.92kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'vertify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Admin',
+  'c' => 'Admin',
+  'a' => 'vertify',
+  'r' => '97',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->vertify[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:52+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/Admin/Admin/login/0.9380242572831021
+[ log ] tp.cn/index.php/Admin/Admin/login/0.9380242572831021 [运行时间：0.201011s][吞吐率：4.97req/s] [内存消耗：2,962.00kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '57',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://tp.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhuangyoulian',
+  'password' => 'zhuang123456',
+  'vertify' => 'ywwn',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->login[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Index/index.html
+[ log ] tp.cn/index.php/Admin/Index/index.html [运行时间：0.179010s][吞吐率：5.59req/s] [内存消耗：3,210.70kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Index->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] ./application/admin/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'menu_list',
+  4 => 'order_amount',
+  5 => 'admin_info',
+  6 => 'menu',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:52+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/Admin/System/login_task.html
+[ log ] tp.cn/index.php/Admin/System/login_task.html [运行时间：0.354020s][吞吐率：2.82req/s] [内存消耗：3,107.83kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'System',
+    2 => 'login_task',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '23',
+  'accept' => '*/*',
+  'origin' => 'http://tp.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1',
+)
+[ info ] [ PARAM ] array (
+  'timestamp' => '1588036372000',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->login_task[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T09:12:53+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Goods/categoryList
+[ log ] tp.cn/Admin/Goods/categoryList [运行时间：0.619035s][吞吐率：1.62req/s] [内存消耗：7,463.81kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'cat_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T10:01:31+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/RiteHome/inquire_index
+[ log ] tp.cn/Admin/RiteHome/inquire_index [运行时间：0.810046s][吞吐率：1.23req/s] [内存消耗：3,095.74kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'RiteHome',
+    2 => 'inquire_index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1; workspaceParam=inquire_index%7CRiteHome',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\RiteHome->inquire_index[ E:\phpStudy\WWW\tp510\application\admin\controller\RiteHome.php ]
+[ info ] [ VIEW ] ./application/admin/view/rite_home\inquire_index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'palte_list',
+  3 => 'order_url',
+  4 => 'navigate_admin',
+  5 => 'timegap',
+  6 => 'keywords',
+  7 => 'order_status',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-28T10:01:32+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/Admin/RiteHome/inquire_ajax_index/p/1
+[ log ] tp.cn/index.php/Admin/RiteHome/inquire_ajax_index/p/1 [运行时间：0.337019s][吞吐率：2.97req/s] [内存消耗：3,311.91kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'RiteHome',
+    2 => 'inquire_ajax_index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '178',
+  'accept' => '*/*',
+  'origin' => 'http://tp.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp.cn/Admin/RiteHome/inquire_index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154; PHPSESSID=tl2uiqv3mgc537m81cm7oeu9n4; admin_type=1; workspaceParam=inquire_index%7CRiteHome',
+)
+[ info ] [ PARAM ] array (
+  'order_by' => 'order_id',
+  'sort' => 'desc',
+  'user_id' => '',
+  'order_statis_id' => '',
+  'add_time_begin' => '',
+  'add_time_end' => '',
+  'items_source' => '',
+  'pay_status' => '',
+  'pay_code' => '',
+  'shipping_status' => '',
+  'order_status' => '',
+  'keytype' => 'consignee',
+  'keywords' => '',
+  'p' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\RiteHome->inquire_ajax_index[ E:\phpStudy\WWW\tp510\application\admin\controller\RiteHome.php ]
+[ info ] [ VIEW ] ./application/admin/view/rite_home\inquire_ajax_index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'palte_list',
+  3 => 'order_url',
+  4 => 'navigate_admin',
+  5 => 'money',
+  6 => 'orderList',
+  7 => 'page',
+  8 => 'pager',
+  9 => 'order_status',
+  10 => 'pay_status',
+  11 => 'shipping_status',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,2475 @@
+2018-07-24 00:59:04
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 00:59:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=38 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 00:59:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 00:59:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532365189 AND A.end_time>=1532365189 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 00:59:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 00:59:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532365199 AND A.end_time>=1532365199 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 01:00:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 01:00:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532365210 AND A.end_time>=1532365210 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 01:00:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 01:00:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532365220 AND A.end_time>=1532365220 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 08:45:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 08:45:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532393136 AND A.end_time>=1532393136 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 10:45:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532400349 AND A.end_time>=1532400349 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 10:45:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 10:45:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532400350 AND A.end_time>=1532400350 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 10:55:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 10:55:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=38 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 11:05:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 11:37:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 11:37:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=38 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 13:38:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532410690 AND A.end_time>=1532410690 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 13:38:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 13:38:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532410691 AND A.end_time>=1532410691 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 14:54:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 14:54:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 14:54:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532415269 AND A.end_time>=1532415269 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:33:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532424801 AND A.end_time>=1532424801 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:33:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:33:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532424802 AND A.end_time>=1532424802 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:34:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532424869 AND A.end_time>=1532424869 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:34:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:34:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532424871 AND A.end_time>=1532424871 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 17:34:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532424876 AND A.end_time>=1532424876 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:23:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435027 AND A.end_time>=1532435027 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:23:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:23:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435029 AND A.end_time>=1532435029 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:23:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435029 AND A.end_time>=1532435029 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:23:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435030 AND A.end_time>=1532435030 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:25:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435117 AND A.end_time>=1532435117 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:35:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435718 AND A.end_time>=1532435718 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:35:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:35:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435719 AND A.end_time>=1532435719 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:35:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532435724 AND A.end_time>=1532435724 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436754 AND A.end_time>=1532436754 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436755 AND A.end_time>=1532436755 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436760 AND A.end_time>=1532436760 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436761 AND A.end_time>=1532436761 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436766 AND A.end_time>=1532436766 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:52:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436770 AND A.end_time>=1532436770 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:54:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:54:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=38 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:54:54
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:54:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436898 AND A.end_time>=1532436898 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436907 AND A.end_time>=1532436907 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436916 AND A.end_time>=1532436916 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436925 AND A.end_time>=1532436925 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436934 AND A.end_time>=1532436934 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436948 AND A.end_time>=1532436948 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:55:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532436956 AND A.end_time>=1532436956 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:56:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:56:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437001 AND A.end_time>=1532437001 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:56:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:56:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437019 AND A.end_time>=1532437019 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437026 AND A.end_time>=1532437026 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437035 AND A.end_time>=1532437035 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437044 AND A.end_time>=1532437044 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:57:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437057 AND A.end_time>=1532437057 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:58:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 20:58:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532437099 AND A.end_time>=1532437099 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:16:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:16:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438196 AND A.end_time>=1532438196 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:16:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438196 AND A.end_time>=1532438196 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:16:39
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438199 AND A.end_time>=1532438199 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:22:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:22:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438543 AND A.end_time>=1532438543 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:22:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:22:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438554 AND A.end_time>=1532438554 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438712 AND A.end_time>=1532438712 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438722 AND A.end_time>=1532438722 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438732 AND A.end_time>=1532438732 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438744 AND A.end_time>=1532438744 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.switch_time,A.ad_name,A.ad_link,A.ad_code,A.act_id,A.cate_id FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=37 AND P.is_open=1 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2018-07-24 21:25:54
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.media_type,A.switch_time,A.ad_name,A.ad_link,A.ad_code as image FROM `ylt_tp`.`ylt_ad_position` as P left join `ylt_tp`.`ylt_ad` as A ON P.position_id=A.pid where A.enabled=1 AND P.position_id=12 AND P.is_open=1  AND A.start_time<= 1532438754 AND A.end_time>=1532438754 order by A.orderby DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_ad\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+

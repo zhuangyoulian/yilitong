@@ -1,0 +1,112 @@
+	<style>
+        .iconfont {
+          font-family:"iconfont" !important;
+          font-size:16px;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .icon-shouye:before { content: "\e637"; }
+        .icon-fenlei:before { content: "\e666"; }
+        .icon-gouwuche:before { content: "\e726"; }
+        .icon-wode:before { content: "\e618";}
+        .icon-paixing:before { content: "\e610"; }
+
+
+        .icon i.icon-home{
+            background:url(__MOBILE__/images/btn_under_home@2x.png) no-repeat;
+        }
+        .icon i.icon-classify{
+            background:url(__MOBILE__/images/btn_under_classification@2x.png) no-repeat;
+        }
+        /*.icon i.icon-gift{*/
+            /*background:url(__MOBILE__/images/li_n@2x.png) no-repeat;*/
+        /*}*/
+        .icon i.icon-shoppingCar{
+            background:url(__MOBILE__/images/btn_under_shopping@2x.png) no-repeat;
+        }
+        .icon i.icon-my{
+            background:url(__MOBILE__/images/btn_under_mime@2x.png) no-repeat;
+        }
+        .icon i.icon-home,.icon i.icon-classify,.icon i.icon-gift,.icon i.icon-shoppingCar,.icon i.icon-my{
+            display:block;
+            width:4rem;
+            height:4rem;
+            background-size:100% auto;
+            -webkit-background-size:100% auto;
+            -moz-background-size:100% auto;
+            -o-background-size:100% auto;
+            margin:0 auto;
+        }
+        .foohi .footer ul li{
+            width:25%;
+        }
+        .foohi .footer ul li .icon p{
+            font-size: 1.8rem;
+        }
+    </style>
+
+
+<div class="foohi">
+    <div class="footer">
+        <ul>
+            <li>
+                <a <if condition="CONTROLLER_NAME eq 'Index'">class="yello" </if>  href="{:Url('Index/index')}">
+                <div class="icon">
+                    <i class="icon-home"></i>
+                    <p>首页</p>
+                </div>
+                </a>
+            </li>
+            <!--<li>
+                <a href="{:Url('Goods/giftStrategy')}">
+                    <div class="icon">
+                        <i class="icon-gift"></i>
+                        <p>送礼攻略</p>
+                    </div>
+                </a>
+            </li>-->
+            <li>
+                <a href="{:Url('Goods/categoryList')}">
+                    <div class="icon">
+                        <i class="icon-classify"></i>
+                        <p>分类</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:Url('Cart/cart')}">
+                    <div class="icon">
+                        <i class="icon-shoppingCar"></i>
+                        <p>购物车</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a <if condition="CONTROLLER_NAME eq 'User'">class="yello" </if> href="{:Url('User/index')}">
+                <div class="icon">
+                    <i class="icon-my"></i>
+                    <p>我的</p>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	  var cart_cn = getCookie('cn');
+	  if(cart_cn == ''){
+		$.ajax({
+			type : "GET",
+			url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+			success: function(data){								 
+				cart_cn = getCookie('cn');
+				$('#cart_quantity').html(cart_cn);						
+			}
+		});	
+	  }
+	  $('#cart_quantity').html(cart_cn);
+});
+</script>

@@ -1,0 +1,50 @@
+2017-11-07 19:32:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_good_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_back_good_msg\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+
+2017-11-07 19:33:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_good_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Table \'ylt_tp.ylt_back_good_msg\' doesn\'t exist',
+  ),
+  3 => 
+  array (
+    'errno' => 1146,
+  ),
+)
+

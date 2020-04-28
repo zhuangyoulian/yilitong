@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>设计作品-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+	<meta name="description" content="{$config['shop_info_store_desc']}" />
+	<link rel="stylesheet" href="__MOBILE__/css/mobile_designer.css">
+    <style>
+
+    </style>
+</head>
+<body>
+	<div class="topSearch">
+		<a href="javascript:history.go(-1);" class="back" style="left:2rem;"></a>
+		<input type="text" class="searchInput">
+	</div>
+	<ul class="page-tab">
+		<li><a href="{:url('Mobile/Works/WorksList')}">设计作品</a></li>
+		<li><a href="{:url('Mobile/Works/GoodsList')}" class="tabCur">在售作品</a></li>
+	</ul>
+	<div class="page-container">
+		<div class="designer-works-sell page-tab-col pageCur" style="padding:0;" id="ajaxAppend">
+		<foreach name="goods_list" item="v" key="k">
+			<div class="works-sell-col-1">
+			    <a href="{:Url('/Mobile/Works/GoodsInfo',array('id'=>$v[goods_id]))}" class="designs-works-imgs">
+
+					<div class="works-sell-img-1">
+					    <img src="{$v.goods_thumb|default='public/static/images/tou2.png'}" alt="">
+					</div>
+					<div class="works-sell-name-price-1">
+						<p class="works-sell-name-1">{$v.goods_name}</p>
+						<p class="works-price-1">¥<span>{$v.shop_price}</span></p>
+					</div>
+				</a>
+			</div>
+		</foreach>
+		</div>
+	</div>
+
+
+	<!--底部-start-->
+	<include file="public/designerFooter"/>
+	<!--底部-end-->
+
+	<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__MOBILE__/js/sourch_submit.js"></script>
+	<script>
+		$(function () {
+			//搜索跳转搜索页面
+			$('.searchInput').click(function () {
+				location.href = 'Search';
+			})
+		})
+
+
+		var  page = 2;
+	    /**
+	     * ajax加载更多作品
+	     */
+	    function ajax_sourch_submit()
+	    {
+	        if(page > 15){
+			   return;
+			   }
+	        $.ajax({
+	            //type : "POST",
+	            type : "get",
+	            url:"{:Url('Mobile/Works/GoodsList')}",//+tab,
+	            //url:"/index.php?m=Mobile&c=Works&a=ajax_works_list&p="+page,
+
+	            data:{id:'{$Request.param.id}',sort:'{$Request.param.sort}',sort_asc:'{$Request.param.sort_asc}',sel:'{$Request.param.sel}',is_ajax:1,p:page},
+	            success: function(data)
+	            {
+
+	            	if(data){
+                        $("#ajaxAppend").append(data);
+              		}
+
+	            }
+	        });
+	        page++;
+	    }
+	</script>
+</body>
+</html>

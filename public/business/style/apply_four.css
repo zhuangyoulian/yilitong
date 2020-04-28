@@ -1,0 +1,174 @@
+p{text-align: center;color: #6b6b6b;color: 18px;}
+.c{clear: both;}
+.l{float: left;}
+.r{float: right;}
+/*审核结果*/
+.content{width:1200px;margin: 10px auto;}
+.list1{width: 550px;height: 305px;background: #e7e7e7;margin: 0 auto;margin-top: 200px;border-radius: 10px;}
+.list_p1{padding-top: 65px;}
+.list_p2{padding: 30px 0;}
+.list_p3{padding-top: 20px;}
+.list_p3 a{color: red;}
+
+
+/*手机绑定*/
+.cont-cd{width: 400px; margin: 100px auto;}
+.cont-cd .con_top{height: 80px;background: #e6e6e6;}
+.cont-cd .con_top img{display: inline-block;margin-top: 10px;margin-left: 15px;}
+.cont-cd .con_top p{font-size: 12px;margin-top: 30px;}
+
+.form-item {
+	position: relative;
+	border: solid 1px #ddd;
+	width: 398px;
+	height: 52px;
+	z-index: 0
+}
+
+.form-item label {
+	float: left;
+	width: 90px;
+	height: 52px;
+	line-height: 52px;
+	padding-left: 10px
+}
+
+.form-item txt {
+	margin-top: 2px!important
+}
+
+.form-item .field {
+	border: 0 none;
+	font-size: 14px;
+	width: 190px;
+	height: 19px;
+	padding-bottom: 11px;
+	/*padding-left: 20px;*/
+	padding-top: 16px
+}
+
+.form-item .field span {
+	display: none
+}
+
+.form-item .form-authcode,.form-item .phonecode {
+	width: 150px
+}
+
+.form-item .error {
+	display: block
+}
+
+.form-item .i-status {
+	position: absolute;
+	display: none;
+	width: 16px;
+	height: 16px;
+	top: 20px;
+	right: 20px
+}
+
+.form-item .img-code {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	font-size: 24px;
+	color: #000000;
+	background: url(../images/bgj.png) no-repeat;
+	width: 110px;
+	height: 46px;
+	cursor: pointer;
+	border: 0 none;
+	outline: none;
+}
+.form-item-account {
+	z-index: 13
+}
+.input-tip {
+	color: #c5c5c5;
+	height: 27px;
+	font-size: 12px;
+	padding-top: 5px
+}
+
+.input-tip span i {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: text-top;
+	margin-right: 8px
+}
+
+.input-tip .error {
+	color: #e22
+}
+
+.input-tip .orange,.phone-bind-tip {
+	color: #f91
+}
+.btn-phonecode {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	width: 110px;
+	height: 46px;
+	border: none;
+	background: #e6002d;
+	color: #FFFFFF;
+	padding: 0
+}
+.btn-register {
+	width: 100%;
+	height: 54px;
+	color: #fff;
+	background: #e22;
+	border: 0;
+	font-size: 16px;
+	font-family: "Microsoft YaHei","Hiragino Sans GB"
+}
+
+
+/*wrp add css*/
+.inner{width:1200px; margin: 0 auto;}
+.centrol-controller-800{width:800px;margin:0 auto; text-align:left;}
+
+.customer-header{width: 1200px;margin: 0 auto; /*padding-top: 40px;*/}
+.customer-header .x1{width:2px;height: 68px;background: #e7e7e7;float: left;margin: 0 20px;}
+.customer-header h3{margin-top:15px;font-size:24px;}
+
+.logo-businessCenter{
+	overflow: hidden;
+	float: left;
+	margin-top:24px;
+}
+.logo-businessCenter li{float: left;}
+.logo-businessCenter li.logo-businessCenter-li1{padding-right: 20px;}
+.logo-businessCenter li.logo-businessCenter-li2{height: 60px; line-height: 60px; background:url(../images/businessOn.png) no-repeat 50px center; padding-left: 60px; border-left: 1px solid deepskyblue;}
+.logo-businessCenter li.logo-businessCenter-li2 a{font-size: 20px; padding-left: 50px; color:#555;}
+.logo-businessCenter li.logo-businessCenter-li2 a:hover{
+	color: #059ce1;
+}
+.regs-info{ overflow: hidden; float: right;  font-size: 12px;}
+.regs-info li{ float: left; padding: 0 10px; font-weight: bold;line-height:100px;}
+.regs-info li a{ font-weight: normal; padding-left:20px; border-left:1px solid #888;}
+.regs-info li a:hover{ color: #059ce1;}
+
+/*商户账号与退出*/
+.seller{text-align:right; margin-top: 50px; font-size:14px;overflow:hidden;}
+.seller p{float:right;}
+.seller p>span{color:#ff0000; padding:0 8px;}
+.seller p>a{ color:#059ce1;}
+
+.info-verify{}
+.dear-shop{font-size:16px;color:#777;margin-top:30px;}
+.verify-result-pic{width:106px;height:106px;margin:70px auto 30px auto;}
+.verifying-tips{margin-top:20px; font-size:14px;color:#888;}
+.info-verify-tips{color:#ff0000;height:32px;line-height:32px;font-size:16px;background:url(__BUSINESS__/images/clock.png) no-repeat 190px center; font-weight:bold;}
+
+
+/*进度条*/
+.progress-bar{content: "";display:table;margin:80px 0 100px 100px;}
+.progress-bar li{float:left;width:200px;height:10px;background:#059ce1;position:relative;}
+.progress-bar li>span{display:block;width:30px;height:30px;border-radius:50%;color:#fff;position:absolute;left:-15px;top:-10px;background:#059ce1;text-align:center;line-height:30px;}
+.progress-bar .progress-bar-noBody{width:0; height:0;}
+.progress-bar li>p.progress-bar-info{position:absolute; width:100px;left:-50px;top:30px;color:#888;text-align:center;}

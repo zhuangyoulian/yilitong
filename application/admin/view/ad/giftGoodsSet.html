@@ -1,0 +1,249 @@
+<include file="public/layout" />
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>送礼攻略商品设置</h3>
+        <h5>送礼攻略商品设置添加与管理</h5>
+      </div>
+    </div>
+  </div>
+  <!-- 操作说明 -->
+  <div id="explanation" class="explanation" style="color: rgb(44, 188, 163); background-color: rgb(237, 251, 248); width: 99%; height: 100%;">
+    <div id="checkZoom" class="title"><i class="fa fa-lightbulb-o"></i>
+      <h4 title="提示相关设置操作时应注意的要点">操作提示</h4>
+      <span title="收起提示" id="explanationZoom" style="display: block;"></span>
+    </div>
+    <ul>
+      <li>送礼攻略商品设置</li>
+      <li>送礼攻略商品设置必须选择二级分类时才可进行查询，添加和删除</li>
+    </ul>
+  </div>
+    <div class="flexigrid">
+        <div class="mDiv">
+            <div class="ftitle">
+                <h3>商品列表</h3>
+                <h5>(共{$pager->totalRows}条记录)</h5>
+            </div>
+            <div title="刷新数据" class="pReload"><i class="fa fa-refresh"></i></div>
+            <form class="navbar-form form-inline" id="search-form2" action="{:Url('Ad/giftGoodsSet')}" method="get" onsubmit="return toVaild()">
+                <div class="sDiv">
+                    <div class="sDiv2" style="margin-right: 10px;border:none;">
+                        <select name="parent_id_1" id="parent_id_1" onChange="get_gift_category(this.value,'parent_id_2','0');" class="class-select valid">
+                            <option value="0">顶级分类</option>
+                            <foreach name="cat_list" item="v" >                                            
+                                <option value="{$v[id]}">{$v[name]}</option>
+                            </foreach>                                            
+                        </select>
+                    </div>
+                    <div class="sDiv2" style="margin-right: 10px;border:none;">
+                        <select name="parent_id_2" id="parent_id_2"  class="class-select valid">
+                            <option value="0">请选择商品分类</option>
+                        </select>
+                    </div>
+                    
+                    <div class="sDiv2">
+                        <input size="30" name="keywords" value="{$keywords}"class="qsbox" placeholder="商品名称或者关键词" type="text">
+                        <input class="btn" value="搜索" type="submit">
+                    </div>
+                    
+                        
+                    <div class="fbutton">
+                        <a onclick="selectGoods()">
+                            <div class="add" title="添加商品"><span><i class="fa fa-plus"></i>添加商品</span></div>
+                        </a>
+                    </div>
+                        
+                </div>
+            </form>
+        </div>
+        <div class="hDiv">
+            <div class="hDivBox">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th abbr="article_title" axis="col3" class="" align="left">
+                            <div style="text-align: left; width: 50px;" class=""><input type="checkbox" onclick="$('input[name*=\'goods_id\']').prop('checked', this.checked);"></div>
+                        </th>
+                        <th abbr="ac_id" axis="col4" class="" align="left">
+                            <div style="text-align: center; width: 80px;" class="">SPU</div>
+                        </th>
+                        <th abbr="ac_id" axis="col4" class="" align="left">
+                            <div style="text-align: center; width: 100px;" class="">商品图片</div>
+                        </th>
+                        <th abbr="article_time" axis="col6" class="" align="left">
+                            <div style="text-align: left; width: 600px;" class="">商品名称</div>
+                        </th>
+                        <th abbr="ac_id" axis="col4" class="" align="left">
+                            <div style="text-align: center; width: 80px;" class="">价格</div>
+                        </th>
+                        <th abbr="article_show" axis="col5" class="" align="center">
+                            <div style="text-align: center; width: 80px;" class="">库存</div>
+                        </th>
+                        <th axis="col1" class=""  align="center">
+                            <div style="text-align: center; width: 80px;">销量</div>
+                        </th>
+                        <th style="width:100%" axis="col7">
+                            <div style="text-align: center; width: 80px;">操作</div>
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bDiv" style="height: auto;">
+            <div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+                <table>
+                    <tbody id="goos_table">
+                    <volist name="goodsList" id="list">
+                        <tr>
+                            <td class="" align="left">
+                                <div style="text-align: left; width: 50px;">
+                                    <input type="checkbox" name="goods_id[]" value="{$list.goods_id}"/>
+                                </div>
+                            </td>
+                            <td class="" align="left">
+                                <div style="text-align: center; width: 80px;">{$list.goods_sn}</div>
+                            </td>
+                            <td class="" align="left">
+                                <div style="text-align: center; width: 100px;"><img src="{$list.goods_thumb}" width="80px" height="45px"></div>
+                            </td>
+                            <td class="" align="left">
+                                <div style="text-align: left; width: 600px;">{$list.goods_name}</div>
+                            </td>
+                            <td class="" align="left">
+                                <div style="text-align: center; width: 80px;">{$list.shop_price}</div>
+                            </td>
+                            <td class="" align="left">
+                                <div style="text-align: center; width: 80px;">{$list.store_count}</div>
+                            </td>
+                            <td class="" align="center">
+                                <div style="text-align: center; width: 80px; ">{$list.sales_sum}</div>
+                            </td>
+                            <td class="" style="width: 100%;" align="">
+                                <div><a class="btn red" onclick="del_gift_goods({$list.goods_id},{$cat_id});" ><i class="fa fa-trash-o"></i>删除</a></div>
+                            </td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="iDiv" style="display: none;"></div>
+        </div>
+        <!--分页位置-->
+        <div class="te_le">
+            <div class="bot"><a onclick="del_gift_goods(0,{$cat_id});" class="ncap-btn-big ncap-btn-green">删除</a></div>
+            {$page}
+        </div>
+        
+    </div>
+</div>
+<script>
+    /** 以下是编辑时默认选中某个商品分类*/
+    $(document).ready(function(){ 
+
+        <if condition="$level_cat['1']">
+             // 如果当前是
+             $("#parent_id_1").val('{$level_cat[1]}');    
+             get_gift_category('{$level_cat[1]}','parent_id_2','0');        
+        </if>   
+        <if condition="$level_cat['2']">
+             // 如果当前是三级分类就一级和二级父id默认 都选中
+             $("#parent_id_1").val('{$level_cat[1]}');          
+             get_gift_category('{$level_cat[1]}','parent_id_2','{$level_cat[2]}');   
+        </if> 
+
+        // 点击刷新数据
+        $('.fa-refresh').click(function(){
+            location.href = location.href;
+        });  
+    });
+    function del_gift_goods(one_good,gift_cat_id)
+    {
+        var goods_id = [];
+        if (one_good>0) {
+            goods_id.push(one_good); 
+        }else{
+            $('input[type="checkbox"]:checked').each(function(){ 
+                goods_id.push($(this).val()); 
+            });
+        }
+         
+        if(goods_id.length == 0)
+        {
+            layer.alert('请选择商品', {icon: 2}); //alert('请选择商品');
+            return false;
+        }
+        $.ajax({
+            type : 'post',
+            url : "{:Url('Ad/DelGiftGoods')}",
+            data : {goods_id:goods_id,gift_cat_id:gift_cat_id},
+            dataType : 'json',
+            success : function(data){
+                if(data.code==1){
+                    layer.msg('操作成功', {icon: 1,time:1000});
+                    location.href = location.href;
+                }else{
+                    layer.msg(data.msg, {icon: 2,time: 2000});
+                }
+            }
+        });
+    }
+
+    function selectGoods(){
+        var gift_cat_id = $("#parent_id_2").val();
+        if (gift_cat_id.length==0||gift_cat_id==0) {
+            layer.msg("请选择送礼二级分类", {icon: 2,time: 2000});
+            return;
+        };
+        var url = '/index.php?m=Admin&c=Ad&a=search_gift_goods&gift_cat_id='+gift_cat_id+'&t='+Math.random();
+        layer.open({
+            type: 2,
+            title: '选择商品',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['70%', '80%'],
+            content: url,
+        });
+    }
+
+    function call_back()
+    {
+        layer.closeAll('iframe');
+        location.href = location.href;
+    }
+
+    function toVaild(){
+        var gift_cat_id = $("#parent_id_2").val();
+        if (gift_cat_id.length==0||gift_cat_id==0) {
+            layer.msg("请选择送礼二级分类", {icon: 2,time: 2000});
+            return false;
+        };
+    }
+    /**
+     * 获取多级联动的商品分类
+     */
+    function get_gift_category(id,next,select_id){
+        var url = '/index.php?m=Admin&c=Ad&a=get_gift_category&parent_id='+ id;
+        $.ajax({
+            type : "GET",
+            url  : url,
+            error: function(request) {
+                alert("服务器繁忙, 请联系管理员!");
+                return;
+            },
+            success: function(v) {
+                v = "<option value='0'>请选择送礼二级分类</option>" + v;
+                $('#'+next).empty().html(v);
+                (select_id > 0) && $('#'+next).val(select_id);//默认选中
+            }
+        });
+    }
+</script>
+</body>
+</html>

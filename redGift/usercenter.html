@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+   <title>用户中心</title>
+   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+   <link rel="stylesheet" type="text/css" href="css/index.css"/>
+   <link rel="stylesheet" type="text/css" href="css/usercenter.css"/>
+   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen"/>
+   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="js/distpicker.data.js"></script>
+   <script src="js/distpicker.js"></script>
+   <script src="js/main.js"></script>
+</head>
+<body>
+<div id="vue_product">
+	<div class="containerT container2">
+		<div class="top">
+			<a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
+			<a href="index.html" class="shouye">首页</a>
+			<div class="input-group search">
+				<input type="text" class="form-control form-searchbox" placeholder="搜索品牌名称"  v-model="keyword" @keyup.enter="sousuo(keyword)">
+				<span class="input-group-btn">
+					<button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
+						搜索
+					</button>
+				</span>
+			</div>
+			<!-- <div class="shopcart2">
+				<img src="img/icon_cart.png">
+				<a class="text">购物车</a>
+			</div> -->
+			<!-- <div class="header">
+				<img src="img/hz_header.png" width="40px" height="40px" class="headicon2">
+			</div> -->
+			<img src="img/hz_header.png" width="50px" height="50px" class="headicon" @click="onUsercenter">
+			<div class="userlist" v-show="userc">
+				<!-- <p class="username">杭州西湖国际中心的</p> -->
+				<p @click="UserCenter">用户中心</p>
+				<p @click="Lagout">退出登录</p>
+			</div>
+			</div>
+		</div>
+	<div class="containerCenter">
+		<div class="left">
+			<div class="touxiang">
+				<img :src="headicon?headicon:head_pic" alt="" width="80px" height="80px">
+				<p>{{user_name}}</p>
+			</div>
+			<div class="gongneng">
+				<ul>
+					<li class="head">账号设置</li>
+					<li @click="gonn=1" :class="gonn==1?'active':''">账号与安全</li>
+					<li @click="gonn=2" :class="gonn==2?'active':''">收货地址</li>
+					<!-- <li @click="nav" :class="gonn==2?'active':''">收货地址</li> -->
+				</ul>
+				<div class="fenge"></div>
+				<ul>
+					<li class="head">我的订单</li>
+					<li  :class="gonn==3?'active':''" @click="chooseorder(1,3)">全部订单</li>
+					<li  :class="gonn==4?'active':''" @click="chooseorder(2,4)">审核中</li>
+					<li  :class="gonn==5?'active':''" @click="chooseorder(3,5)">待确认</li>
+					<li  :class="gonn==6?'active':''" @click="chooseorder(4,6)">待收货</li>
+					<li  :class="gonn==7?'active':''" @click="chooseorder(5,7)">已完成</li>
+					<li  :class="gonn==8?'active':''" @click="chooseorder(6,8)">已取消</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right" v-if="gonn==1">
+			<div class="zhanghao">
+				<p @click="zhanghao=1" :class="zhanghao==1?'active2':''">账号信息<span></span></p>
+				<p @click="zhanghao=2" :class="zhanghao==2?'active2':''">修改密码<span></span></p>
+			</div>
+			<div class="userdetail" v-if="zhanghao==1">
+				<div class="touxiang">
+					<p>用户头像：</p>
+					<div class="touimg">
+						<!-- <img src="img/ing_head.png" alt="" width="84px" height="84px"> -->
+						<img :src="headicon?headicon:head_pic" alt="" width="84px" height="84px" style="border-radius:50px;">
+						<input type="file" @change="onFileChange($event)" style="display: none;" accept="image/png,image/gif,image/jpeg" id="imgup">
+						<div class="upimg" @click.stop="addPic">上传头像</div>
+					</div>
+				</div>
+				<div class="userid">
+					<p>用户ID：</p>
+					<p>{{admin_id}}</p>
+				</div>
+				<div class="username">
+					<p>用户名：</p>
+					<p>{{user_name}}</p>
+				</div>
+				<!-- <div class="tel">
+					<p>手机号：</p>
+					<div class="bindtel">
+						<div class="tit">绑定手机号
+						<img src="img/icon_pack.png" alt="" class="qi" v-if="qi" @click="qiehuan">
+						<img src="img/icon_open.png" alt="" class="qi" v-if="!qi" @click="qiehuan">
+						</div>
+						<div class="bindbox" v-if="!qi">
+							<input type="text" placeholder="请输入手机号" class="form-control">
+							<br>
+							 <div class="input-group">
+								<input type="text" class="form-control" placeholder="请输入验证码">
+								<span class="input-group-addon">获取验证码</span>
+							</div>
+							<div class="tijiao">
+								<p class="btn-l">绑定</p>
+								<p class="btn-r">取消</p>
+							</div>
+						</div>
+						
+					</div>
+				</div> -->
+				<div class="btn2" @click="saveUserinfo">
+					保存
+				</div>
+			</div>
+			<div class="editpass" v-if="zhanghao==2">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="firstmima" class="col-sm-3 control-label">原密码：</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="firstmima" v-model="o_password"
+								   placeholder="请输入原密码">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastname" class="col-sm-3 control-label">新密码：</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="lastname" v-model="password"
+								   placeholder="请输入新密码">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastname" class="col-sm-3 control-label">确认密码：</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="lastname" v-model="password_s"
+								   placeholder="请输入确认密码">
+						</div>
+					</div>
+					<div class="btn2" @click="editPassword">
+						保存
+					</div>
+				</form>
+				
+			</div>
+		</div>
+		<div class="right" v-if="gonn==2">
+			<div class="editaddress">
+				<div class="ssq">
+					<p><span style="color: red; padding-right: 5px; white-space: nowrap;">*</span>所在地区</p>
+					<input type="text" class="form-control form-shouhuor diqu"
+						   placeholder="请输入省" v-model="shen">
+				   <input type="text" class="form-control form-shouhuor diqu"
+					   placeholder="请输入市" v-model="shi">
+				   <input type="text" class="form-control form-shouhuor diqu"
+					   placeholder="请输入区" v-model="qu">
+					<!-- <div class="docs-methods">
+					  <form class="form-inline">
+						<div id="distpicker">
+						  <div class="form-group">
+							<label class="sr-only" for="province">{{shen}}</label>
+							<select class="form-control" id="province" v-model="shen">
+							</select>
+						  </div>
+						  <div class="form-group">
+							<label class="sr-only" for="city">{{shi}}</label>
+							<select class="form-control" id="city" v-model="shi"></select>
+						  </div>
+						  <div class="form-group">
+							<label class="sr-only" for="district">{{qu}}</label>
+							<select class="form-control" id="district" v-model="qu" ></select>
+						  </div>
+						</div>
+					  </form>
+					</div> -->
+				</div>
+				<div class="detail">
+					<p><span style="color: red; padding-right: 5px;">*</span>详细地址</p>
+					<textarea rows="" cols="" placeholder="详细地址,街道,门牌号等" class="form-control" v-model="address">
+						
+					</textarea>
+				</div>
+				<div class="person">
+					<p><span style="color: red; padding-right: 5px;">*</span>收货人</p>
+					<input type="text" class="form-control form-shouhuor"
+						   placeholder="请输入收货人姓名" v-model="consignee">
+				</div>
+				<div class="tel2">
+					<p><span style="color: red; padding-right: 5px;">*</span>手机号码</p>
+					<input type="text" class="form-control form-shouhuor"
+						   placeholder="请输入手机号码" v-model="mobile">
+				</div>
+				<div class="btn2" @click="saveAddress">
+					保存
+				</div>
+						
+			</div>
+		</div>
+		<div class="right" v-if="gonn==3|gonn==4|gonn==5|gonn==6|gonn==7|gonn==8">
+			<div class="zhanghao">
+				<p @click="chooseorder(1,3)" :class="gonn==3?'active2':''" >全部订单<span></span></p>
+				<p @click="chooseorder(2,4)" :class="gonn==4?'active2':''">审核中<span></span></p>
+				<p @click="chooseorder(3,5)" :class="gonn==5?'active2':''">待确认<span></span></p>
+				<p @click="chooseorder(4,6)" :class="gonn==6?'active2':''">待收货<span></span></p>
+				<p @click="chooseorder(5,7)" :class="gonn==7?'active2':''">已完成<span></span></p>
+				<p @click="chooseorder(6,8)" :class="gonn==8?'active2':''">已取消<span></span></p>
+			</div>
+			
+			<div class="dingdan">
+				<div class="row orderdate">
+					<span style="color: #1B5DB8;padding-right: 10px;" class="">所有时间订单</span>
+					<span style="color: #dadada">|</span>
+					<span style="color: #7b7b7b; padding-left: 10px;">按时间筛选：</span>
+					<input type="text" id="startdate" class="form-control start_date" placeholder="请选择开始时间" v-model="startdate" @click="orderdate">
+					<span style="color: #dadada">-</span>
+					<input type="text" id="enddate" class="form-control end_date" placeholder="请选择结束时间" v-model="enddate" @click="orderdate">
+					<div class="noquerybtn" v-show="!querybtn">查询</div>
+					<div class="querybtn" @click="queryDate" v-show="querybtn">查询</div>
+				</div>
+				<div class="row ordertab_title">
+					<div class="col-md-2 " style="text-align: center;">
+						<!-- <input type="checkbox" name="" id="" value="" class="quanxuan" :checked="followSelectedList.length===arrData.length" @change="handleCheckAllChange"/>全选 -->
+						<span>商品名称</span>
+					</div>
+					<div class="col-md-1" style="text-align: center;">参考价</div>
+					<div class="col-md-1" style="text-align: center;">数量</div>
+					<div class="col-md-2" style="text-align: center;">订单金额</div>
+                  	<div class="col-md-2" style="text-align: center;">总金额</div>
+					<div class="col-md-2" style="text-align: center;">状态</div>
+					<div class="col-md-2" style="text-align: center;">操作</div>
+				</div>
+				<div class="noorder" v-if="orderlist.length==0">
+					<img src="img/icon_order_blank.png" width="104px" height="104px">
+					<p class="nodd">暂无相关订单</p>
+				</div>
+				<div class="row orderlist"  v-for="list in orderlist">
+					<div class="ordlist_tou">
+						<!-- <input type="checkbox" name="" id="" value="" class="danxuan"/> -->
+						{{list.add_time}} <span class="ordnumber">订单编号：{{list.order_sn}}</span></div>
+					<div class="row ord_goods">
+						<div class="col-md-4 order_henx2">
+							<ul>
+								<li v-for="item in list.goods_list">
+									<div class="row h76">
+										<div class="col-md-6 t1" style="text-align: center;">
+											<a :href="['productDetail.html?goods_id='+item.goods_id]">
+												<span v-if="item.is_logos==1" style="font-weight: 700; color: red;">[定制]</span>{{item.goods_name}}
+												<p style="font-weight: 700; color: red;">{{item.spec_key_name}}</p>
+											</a>
+										</div>
+										<div class="col-md-3 t1" style="text-align: center;">￥{{item.member_goods_price}}</div>
+										<div class="col-md-3 t1" style="text-align: center;">{{item.goods_num}}</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+                        <div class="col-md-2 order_henx">￥{{list.total_amount}}</div>
+						<div class="col-md-2 order_henx">￥{{list.order_amount}}</div>
+						<div class="col-md-2 order_henx" v-if="list.order_status==0"><p>订单提交成功</p> <p>审核中</p></div>
+						<div class="col-md-2 order_henx" v-if="list.order_status==1"><p>订单审核成功</p> <p>待确认</p></div>
+						<div class="col-md-2 order_henx" v-if="list.order_status==2"><p>物流运输中</p> <p>{{list.shipping_name}}</p><p>{{list.shipping_code}}</p></div>
+						<div class="col-md-2 order_henx" v-if="list.order_status==3"><p>订单已完成</p></div>
+						<div class="col-md-2 order_henx" v-if="list.order_status==4"><p>订单已取消</p></div>
+						<div class="col-md-2 order_henx quxiaoorder" @click="quxiaoOrder(list.order_id)" v-if="list.order_status==0">取消订单</div>
+						<div class="col-md-2 order_henx quxiaoorder" v-if="list.order_status==1" @click="confimOrder(list.order_id)">确认订单</div>
+						<div class="col-md-2 order_henx quxiaoorder" v-if="list.order_status==2" @click="confimShouhuo(list.order_id)">确认收货</div>
+						<div class="col-md-2 order_henx quxiaoorder" v-if="list.order_status==3"></div>
+						<div class="col-md-2 order_henx quxiaoorder" v-if="list.order_status==4" @click="delOrder(list.order_id)">删除订单</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- 分页实现 -->
+					<div class="page-bar" v-show="all>1">
+						<ul>
+							<li v-if="curpage>1"><a v-on:click="curpage--,pageClick()">上一页</a></li>
+							<li v-if="curpage==1"><a class="banclick">上一页</a></li>
+							<li v-for="index in indexs"  v-bind:class="{ 'active': curpage == index}">
+								<a v-on:click="btnClick(index)">{{ index }}</a>
+							</li>
+							<li v-if="curpage!=all"><a v-on:click="curpage++,pageClick()">下一页</a></li>
+							<li v-if="curpage == all"><a class="banclick">下一页</a></li>
+							<li><a>共<i>{{all}}</i>页</a></li>
+						</ul>
+					</div>
+				<!-- 	<div class='dataTables_paginate paging_simple_numbers'>
+						<ul class='pagination'> 
+							<li class="paginate_button next"><a class="next" @click="LastPage">上一页</a>
+							<li class="paginate_button"><a class="num">{{currentPage-1}}</a></li>
+							<li class="paginate_button active"><a class="num">{{currentPage==1?2:currentPage}}</a></li>
+							<li class="paginate_button"><a class="num" >{{currentPage==1?3:currentPage+1}}</a></li> 
+							<li class="paginate_button next"><a class="next" @click="NextPage">下一页</a></li>
+						</ul>
+					</div> -->
+					<!-- <div v-html="page">
+						
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="containerB" style="z-index: 3;">
+		<p>红礼供应链管理有限公司</p>
+	</div>
+	<div class="dialog-bg" id="dialog-bg">
+		<div class="img-box" id="img-box">
+    <img src="">
+	</div>
+</div>
+</body>
+
+<script src="js/laydate/laydate.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/distpicker.data.js"></script>
+<script src="js/distpicker.js"></script>
+<script src="js/main.js"></script>
+<script src="js/qs.min.js"></script>
+  <!-- import JavaScript -->
+  <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+ <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+<script>
+// laydate.render({
+//   elem: '#startdate',
+//   theme: 'grid'
+// });
+// laydate.render({
+//   elem: '#enddate',
+//   theme: 'grid'
+// });
+// </script>
+<script type="text/javascript">
+	 // Vue.component('v-distpicker', Distpicker);
+	var vm = new Vue({
+		el: '#vue_product',
+		data: {
+			// baseUrl:'http://192.168.1.17/tp510',
+			baseUrl:'http://www.yilitong.com',
+			userc:false,
+			keyword:'',
+			select:{province:'广东省',city:'广州市',area:'海珠区'},
+			gonn:2,
+			zhanghao:1,
+			qi:1,
+			dingdan:1,
+			// 省市区
+			shen:'',
+			shi:'',
+			qu:'',
+			ceshi:2,
+			date:'2019-09-07 09:00:00',
+			dingdandata:[{
+				numberId:20190902,total:1797,status:'审核中',goods:[
+					'时尚'
+				]
+			}],
+			ordershow:2,
+			orderlist:[],
+			users_address:'',
+			address:'',
+			consignee:'',
+			mobile:'',
+			admin_id:'',
+			user_name:'',
+			page:'',//这种方法不用了
+			head_pic:'',
+			houz2:'',
+			headicon:'',
+			o_password:'',
+			password:'',
+			password_s:'',
+			// 分页实现
+			all: 20, //总页数
+			curpage: 1,//当前页码
+			startdate:'',
+			enddate:'',
+			querybtn:false,
+		},
+		computed: {
+			indexs: function(){
+			  var left = 1;
+			  var right = this.all;
+			  var ar = [];
+			  if(this.all>= 5){
+				if(this.curpage > 3 && this.curpage < this.all-2){
+						left = this.curpage - 2
+						right = this.curpage + 2
+				}else{
+					if(this.curpage<=3){
+						left = 1
+						right = 5
+					}else{
+						right = this.all
+						left = this.all -4
+					}
+				}
+			 }
+			while (left <= right){
+				ar.push(left)
+				left ++
+			}
+			return ar
+		   }
+		},
+		updated() {
+			var start=this.startdate;
+			var enddate=this.enddate;
+			console.log(this.startdate,this.enddate);
+			if(start==''&enddate==''){
+				this.querybtn=false;
+			}else{
+				this.querybtn=true;
+			}
+			laydate.render({
+			  elem: '#startdate',
+			  theme: 'grid'
+			});
+			laydate.render({
+			  elem: '#enddate',
+			  theme: 'grid'
+			});
+			// if(this.gonn==3|this.gonn==4|this.gonn==5|this.gonn==6|this.gonn==7|this.gonn==8){
+			// 	window.location.href='usercenter.html?ed=3';
+			// };
+		},
+		watch:{
+			curpage(val,oldVal){
+				var gonn=this.gonn;
+				console.log(val);
+				if(gonn=3){
+					this.QunabuOrder();
+				}else if(gonn=4){
+					this.getdingdan(0);
+				}else if(gonn=5){
+					this.getdingdan(1);
+				}else if(gonn=6){
+					this.getdingdan(2);
+				}else if(gonn=7){
+					this.getdingdan(3);
+				}else if(gonn=8){
+					this.getdingdan(4);
+				}
+			},
+			
+			
+		},
+		created() {
+			if(!localStorage.admin_id){
+				window.location.href='login.html';
+			}else{
+				this.admin_id=localStorage.admin_id;
+				this.user_name=localStorage.user_name;
+			}
+			this.getUserinfo();
+			this.gettiao();
+		},
+		mounted () {
+			this.gettiao();
+			this.getUserinfo();
+			// this.getDetailaddress();
+			if(this.dingdan==1){
+				this.QunabuOrder();
+			}else if(this.dingdan==2){
+				this.getdingdan(0);
+			}else if(this.dingdan==3){
+				this.getdingdan(1);
+			}else if(this.dingdan==4){
+				this.getdingdan(2);
+			}else if(this.dingdan==5){
+				this.getdingdan(3);
+			}else if(this.dingdan==6){
+				this.getdingdan(4);
+			}
+			laydate.render({
+				elem:'#test',
+				type:'datetime',
+				done:(value)=>{
+					this.date=value
+				}
+			});
+	  },
+		methods: {
+			orderdate:function(){
+				var start=$('#startdate').val();
+				this.startdate=start;
+				var end=$('#enddate').val();
+				this.enddate=end;
+			},
+			// 按时间查询
+			queryDate:function(){
+				var start=$('#startdate').val();
+				this.startdate=start;
+				var end=$('#enddate').val();
+				this.enddate=end;
+				// console.log(this.startdate,this.enddate);
+				var a=this.gonn;
+				var that=this;
+				if(a==3){
+					that.QunabuOrder();
+						}else if(a==4){
+						that.getdingdan(0);
+					}else if(a==5){
+						that.getdingdan(1);
+					}else if(a==6){
+						that.getdingdan(2);
+					}else if(a==7){
+						that.getdingdan(3);
+					}else if(a==8){
+						that.getdingdan(4);
+					}
+			},
+			// 页码
+			btnClick: function(data){//页码点击事件
+				if(data != this.curpage){
+					this.curpage = data 
+				}
+			},
+			pageClick: function(){
+				console.log('现在在'+this.curpage+'页');
+			},
+			//修改密码
+			editPassword:function(){
+				var baseurl=this.baseUrl;
+				var that=this;
+				var list={
+					o_password:that.o_password,
+					password:that.password,
+					password_s:that.password_s,
+					admin_id:that.admin_id
+				};
+				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+				axios.get(baseurl+'/index.php/home/RedGift/user_paw',{
+						params: list
+				}).then(function(res){
+					console.log(res.data);
+					alert(res.data.info);
+				});
+			},
+			addPic:function(e){
+				e.preventDefault();
+				$('#imgup').trigger('click');
+			    return false;
+			},
+			onFileChange(e) {
+			    var files = e.target.files || e.dataTransfer.files;
+			    if (!files.length)return; 
+			    this.createImage(files);
+				// console.log(e.target.files);
+			},
+			createImage(file) {
+			    if(typeof FileReader==='undefined'){
+			        alert('您的浏览器不支持图片上传，请升级您的浏览器');
+			        return false;
+			    }
+				var filename=file[0].name;
+				var houz2=filename.substr(filename.lastIndexOf('.'));
+				this.houz2=houz2;
+				console.log(file);
+			    var image = new Image();         
+			    var that = this;
+				var base64img='';
+				var reader = new FileReader();
+				reader.readAsDataURL(file[0]);
+				reader.onloadend =function(e){
+					base64img=e.target.result.substr(e.target.result.indexOf(',') + 1);
+					that.head_pic=base64img;
+					that.headicon=e.target.result;
+				}
+			},
+			saveUserinfo:function(){
+				var baseurl=this.baseUrl;
+				var that=this;
+				// console.log(that.houz);
+				axios.post(baseurl+'/index.php/home/RedGift/head_pic',Qs.stringify({
+						admin_id:that.admin_id,
+						head_pic_type:that.houz2,
+						head_pic:that.head_pic,
+				})).then(function(res){
+					console.log(res.data);
+					if(res.data.result==1){
+						// that.getUserInfo();
+						alert(res.data.info);
+					}
+					
+				});
+				
+			},
+			LastPage:function(){
+				var current=this.currentPage;
+				if(current==1){
+					this.currentPage=current;
+				}else{
+					this.currentPage=current-1;
+				}
+			},
+			NextPage:function(){
+				var current=this.currentPage;
+				var total=this.totalPage;
+				if(current=totalPage){
+					this.current=totalPage;
+				}else{
+					this.currentPage=current+1;
+				}
+			},
+			confimOrder:function(e){
+				if(confirm('你确定要完成该订单吗？')){
+					var baseurl=this.baseUrl;
+					var that=this;
+					var list={
+						order_id:e,
+						admin_id:that.admin_id
+					};
+					axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+					axios.get(baseurl+'/index.php/home/RedGift/confirm_order',{
+							params: list
+					}).then(function(res){
+						console.log(res);
+						that.QunabuOrder();
+					});
+				}else{
+					return false;
+				}
+				
+			},
+			confimShouhuo:function(e){
+				if(confirm('你确定要收货吗？')){
+					var baseurl=this.baseUrl;
+					var that=this;
+					var list={
+						order_id:e,
+						admin_id:that.admin_id
+					};
+					axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+					axios.get(baseurl+'/index.php/home/RedGift/take_order',{
+							params: list
+					}).then(function(res){
+						console.log(res);
+						that.QunabuOrder();
+					});
+				}else{
+					return false;
+				}
+			},
+			getUserinfo:function(){
+				var baseurl=this.baseUrl;
+				var that=this;
+				var list={
+					admin_id:that.admin_id,
+					head_pic:that.head_pic,
+					head_pic_type:that.houz2
+				};
+				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+				axios.get(baseurl+'/home/RedGift/user_index',{
+						params: list
+				}).then(function(res){
+					console.log(res.data.users);
+					that.head_pic=baseurl+'/'+res.data.users.head_pic;
+					var users_address=res.data.users;
+					that.shen=users_address.province;
+					that.shi=users_address.city;
+					that.qu=users_address.district;
+					that.address=users_address.address;
+					that.consignee=users_address.consignee;
+					that.mobile=users_address.mobile;
+				});
+			},
+			delOrder:function(e){
+				if(confirm('你确定要删除该订单吗？')){
+					var baseurl=this.baseUrl;
+					var that=this;
+					var list={
+						order_id:e,
+						admin_id:that.admin_id
+					};
+					axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+					axios.get(baseurl+'/index.php/home/RedGift/delete_order',{
+							params: list
+					}).then(function(res){
+						console.log(res);
+						that.QunabuOrder();
+					});
+				}else{
+					return false;
+				}
+				
+			},
+			nav:function(){
+				this.gonn=2;
+				window.location.href='usercenter.html'
+			},
+			gettiao:function(){
+				var url=window.location.href;
+				var i=url.indexOf('?');
+				var querystr=url.substr(i+1);
+				var arr1=querystr.split('&');
+				var arr2=new Object();
+				for  (i in arr1){
+					var ta=arr1[i].split('=');
+					arr2[ta[0]]=ta[1];
+				}
+				if(arr2.ed==3){
+					this.gonn=3;
+				}else if(arr2.ed==2){
+					this.gonn=1;
+				};
+			},
+			// getDetailaddress:function(){
+			// 	// this.gonn=2;
+			// 	var baseurl=this.baseUrl;
+			// 	var that=this;
+			// 	var goods_id={
+			// 		goods_id:5288,
+			// 		admin_id:that.admin_id
+			// 	};
+			// 	axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+			// 	axios.get(baseurl+'/index.php/home/RedGift/goodsInfo',{
+			// 			params: goods_id
+			// 	}).then(function(res){
+			// 		var users_address=res.data.users_address;
+			// 		console.log(that.users_address);
+			// 		that.shen=users_address.province;
+			// 		that.shi=users_address.city;
+			// 		that.qu=users_address.district;
+			// 		that.address=users_address.address;
+			// 		that.consignee=users_address.consignee;
+			// 		that.mobile=users_address.mobile;
+			// 	});
+			// },
+			saveAddress:function(){
+				var baseurl=this.baseUrl;
+				var that=this;
+				var list={
+					province:that.shen,
+					city:that.shi,
+					district:that.qu,
+					address:that.address,
+					consignee:that.consignee,
+					mobile:that.mobile,
+					admin_id:that.admin_id
+				};
+				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+				axios.post(baseurl+'/home/RedGift/user_address',{
+						province:that.shen,
+						city:that.shi,
+						district:that.qu,
+						address:that.address,
+						consignee:that.consignee,
+						mobile:that.mobile,
+						admin_id:that.admin_id
+				}).then(function(res){
+					alert(res.data.info);
+				});
+			},
+			chooseorder:function(a,b){
+				this.gonn=b;
+				var that=this;
+				that.dingdan=a;
+				if(a==1){
+					that.QunabuOrder();
+						}else if(a==2){
+						that.getdingdan(0);
+					}else if(a==3){
+						that.getdingdan(1);
+					}else if(a==4){
+						that.getdingdan(2);
+					}else if(a==5){
+						that.getdingdan(3);
+					}else if(a==6){
+						that.getdingdan(4);
+					}
+			},
+			QunabuOrder:function(){
+				var baseurl=this.baseUrl;
+				var that=this;
+				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+				axios.get(baseurl+'/index.php/home/RedGift/order_list',{
+					params:{admin_id:that.admin_id,
+						page_html:that.curpage,
+						add_time_begin:that.startdate,
+						add_time_end:that.enddate,
+					}
+				}
+				).then(function(res){
+					that.orderlist=res.data.lists;
+					var geshu=res.data.count;
+					that.all=Math.ceil(geshu/5);
+					console.log(that.all);
+					// console.log(that.orderlist.length);
+				});
+			},
+			quxiaoOrder:function(e){
+				 var txt='';
+				  if (confirm("您确定要取消订单!")) {
+					var that=this;
+					var baseurl=this.baseUrl;
+					var that=this;
+					var list={
+						// add_time_begin:add_time_begin,
+						// add_time_end:add_time_end,
+						order_id:e,
+						admin_id:that.admin_id
+					};
+					axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+					axios.get(baseurl+'/home/RedGift/cancel_order',{
+						params:list
+					}).then(function(res){
+						alert('取消订单成功！');
+						that.orderlist=res.data.lists;
+						that.QunabuOrder();
+						// console.log(that.orderlist.length);
+					});
+				  } else {
+					return false;
+				  }
+			},
+			getdingdan:function(e){
+				var baseurl=this.baseUrl;
+					var that=this;
+					var list={
+						add_time_begin:that.startdate,
+						add_time_end:that.enddate,
+						order_status:e,
+						admin_id:that.admin_id,
+						page_html:that.curpage
+					};
+					axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+					axios.get(baseurl+'/index.php/home/RedGift/order_list',{
+						params:list
+					}).then(function(res){
+						that.orderlist=res.data.lists;
+						that.page=res.data.page;
+						var geshu=res.data.count;
+						that.all=Math.ceil(geshu/5);
+						console.log(that.all);
+					});
+			},
+			changeProvince(data) {
+                this.select.province = data.value;
+            },
+            changeCity(data) {
+                this.select.city = data.value;
+            },
+            changeArea(data) {
+                this.select.area = data.value;
+            },
+			xuanze:function(){
+				console.log(this);
+			},
+			uploadimg:function(){
+				this.addhover=!this.addhover;
+				console.log(this.addhover);
+			},
+			tabAdvice:function(){
+				console.log('aaa');
+			},
+			ontext:function(){
+				if(this.advice_text==''){
+					this.placeh=1;
+				}else{
+					this.placeh=0
+				}
+			},
+			add:function(count){
+			  this.count++;
+		   },
+			subtract:function(count){
+			  if (this.count<=1){
+				this.count=1;
+			  }else {
+				this.count-=1;
+			  }
+			},
+			qiehuan:function(){
+				this.qi=!this.qi;
+			},
+			getIndex:function(e){
+				this.BigUrl=e;
+			},
+			ceshi:function(e){
+				if(e==1){
+					console.log(this);
+					this.ceshi=1;
+				};
+			},
+			sousuo:function(e){
+				window.location.href="sousuo.html?keyword="+e;
+			},
+			onUsercenter:function(){
+				this.userc=!this.userc;
+			},
+			Lagout:function(){
+				localStorage.clear();
+				window.location.href='index.html';
+			},
+			UserCenter:function(){
+				window.location.href='usercenter.html?ed=2';
+			},
+		details: function() {
+			return  this.site + " - 学的不仅是技术，更是梦想！";
+		}
+		},
+		
+	})
+
+</script>
+
+
+</html>

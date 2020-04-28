@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设计作品详情-{$config['shop_info_store_title']}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+
+    <link rel="stylesheet" href="__MOBILE__/css/mobile_designer.css">
+</head>
+<body style="background:#efefef;">
+    <div class="works-details-container">
+        <h1 class="works-details-title">作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子</h1>
+        <p class="works-details-type">作品类型：<span>平面设计</span></p>
+        <div class="designer-details-infos">
+            <a href="#">
+                <div class="designer-details-headImg">
+                    <img src="images/big.jpg" alt="头像">
+                </div>
+                <p class="designer-name">天高任鸟飞</p>
+            </a>
+        </div>
+        <section class="works-details-content">
+            <img src="images/big.jpg" alt="">
+            乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子
+        </section>
+
+        <div class="designer-details-infos-1">
+            <a href="#">
+                <div class="designer-details-headImg-1">
+                    <img src="__STATIC__/images/tou2.jpg" alt="头像">
+                </div>
+                <p class="designer-name-1">天高任鸟飞</p>
+            </a>
+            <dl class="designer-infos-1 clearfix">
+                <dt>平面设计师</dt>
+                <dd>广东深圳</dd>
+            </dl>
+        </div>
+        <p class="designer-personal-introdution">个人简介：乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子</p>
+    </div>
+    <p class="details-more-works">更多他的作品</p>
+    <div class="works-details-container" style="padding:0 2rem;">
+        <div class="more-his-works-col">
+            <div class="more-his-works-img"></div>
+            <div class="more-his-works-infos">
+                <p>乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。</p>
+                <dl>
+                    <dt>平面设计</dt>
+                    <dd>浏览<span>0</span></dd>
+                    <dd>收藏<span>0</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="more-his-works-col">
+            <div class="more-his-works-img"></div>
+            <div class="more-his-works-infos">
+                <p>乡愁是一份沉重的爱。离开故土的游子</p>
+                <dl>
+                    <dt>平面设计</dt>
+                    <dd>浏览<span>0</span></dd>
+                    <dd>收藏<span>0</span></dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+
+    <ul class="works-details-navBar">
+        <li><a href="#">
+            <i class="link_out"></i>
+            <span>转发</span>
+        </a></li>
+        <li><a href="#" onclick="collect_works(works_id)">
+            <i class="m_collect_icon"></i>
+            <span>收藏</span>
+        </a></li>
+        <li><a href="#">
+            <i class="designs_works_comment"></i>
+            <span>评论</span>
+        </a></li>
+    </ul>
+
+
+    <script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+    <script>
+        // 点击收藏商品
+        function collect_works(works_id){
+            $.ajax({
+                type : "GET",
+                dataType: "json",
+                url:"/index.php?m=Home&c=goods&a=collect_works&works_id="+works_id,//+tab,
+                success: function(data){
+                    layer.msg(data.msg, {icon: 1});
+                    //alert(data.msg);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

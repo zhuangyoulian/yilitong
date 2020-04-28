@@ -1,0 +1,3 @@
+<?php
+//000000604800a:1:{i:0;a:16:{s:5:"ad_id";i:180;s:3:"pid";i:2;s:10:"media_type";i:0;s:7:"ad_name";s:25:"平台首页热门广告3";s:7:"ad_link";s:53:"http://www.yilitong.com/index.php/goodsInfo/4876.html";s:7:"ad_code";s:65:"/public/upload/ad/2018/11-13/9369025189a7cec62a7b55733f6f6ced.jpg";s:10:"start_time";i:1514736000;s:8:"end_time";i:1609430400;s:11:"click_count";i:0;s:7:"enabled";i:1;s:7:"orderby";i:0;s:6:"target";i:0;s:7:"bgcolor";N;s:7:"cate_id";i:0;s:6:"act_id";i:0;s:11:"switch_time";N;}}
+?>

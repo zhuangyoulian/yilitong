@@ -1,0 +1,301 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>合同模板 - 添加合同模板</h3>
+        <h5>添加或编辑合同模板</h5>
+      </div>
+    </div>
+  </div>
+  <div class="explanation" id="explanation">
+    <div class="title" id="checkZoom"><i class="fa fa-lightbulb-o"></i>
+      <h4 title="提示相关设置操作时应注意的要点">操作提示</h4>
+      <span id="explanationZoom" title="收起提示"></span>
+    </div>
+    <ul>
+      <li>公司及类型不联动，请谨慎选择。</li>
+      <li>未修改编辑请点返回。</li>
+    </ul>
+  </div>
+  <form action="{:Url('System/add_contract_form')}" method="post" class="form-horizontal" id="category_form">
+    <div class="ncap-form-default">
+
+      <dl class="row">
+        <dt class="tit">
+          <label for="t_mane"><em>*</em>合同项目名称</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" placeholder="名称" class="input-txt" name="contract_name" value="{$form_find.contract_name}">
+          <span class="err" id="err_name" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>项目描述</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.describe}" name="describe" class="input-txt"/>
+              <span class="err" id="err_keywords" style="color:#F00; display:none;"></span>
+          </dd>
+      </dl> 
+      <dl class="row">
+        <dt class="tit">
+          <label for="t_mane"><em>*</em>是否显示</label>
+        </dt>
+        <dd class="opt">
+          <div class="onoff">
+            <label for="goods_category1" class="cb-enable <if condition="$form_find[is_show] eq 1">selected</if>">是</label>
+            <label for="goods_category0" class="cb-disable <if condition="$form_find[is_show] eq 0">selected</if>">否</label>
+            <input id="goods_category1" name="is_show" value="1" type="radio" <if condition="$form_find[is_show] eq 1"> checked="checked"</if>>
+            <input id="goods_category0" name="is_show" value="0" type="radio" <if condition="$form_find[is_show] eq 0"> checked="checked"</if>>
+          </div>
+          <p class="notic">是否在合同首页中显示</p>
+        </dd>        
+      </dl>  
+      <dl class="row">
+        <dt class="tit"><em>*</em>合同列表展示头像</dt>
+        <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_a" class="nyroModal" rel="gal" href="{$form_find.image}">
+                  <i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$form_find.image}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>           
+            <span class="type-file-box">            
+            <input type="text" id="imagetext" name="image" value="{$form_find.image}" class="type-file-text">            
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetext','category','img_call_back')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/> 
+            </span>
+          </div>
+          <div id="thumbnails" class="ncap-thumb-list">
+            <h5><i class="fa fa-exclamation-circle"></i> 请上传图片格式文件。</h5>
+            <ul>
+            </ul>
+          </div>
+        </dd>
+      </dl>          
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no">合同分类</label>
+          </dt>
+          <dd class="opt">
+                <select name="d_id" id="company" onChange="get_classify(this.value,'p_id','0');" class="small form-control">
+                  <option value="0">选择公司</option>                                      
+                       <foreach name="cat_list" item="v" key="k" >                
+                         <option value="{$v['id']}" <if condition="$v['id'] eq $form_find['d_id']">selected="selected"</if>  >
+                              {$v['name']}
+                         </option>
+                       </foreach>
+                </select>
+                <select name="p_id" id="p_id" class="small form-control">
+                  <option value="0" >请选择合同类型</option>
+                </select>            
+              <span class="err" id="err_cat_id" style="color:#F00; display:none;"></span>
+              <input type="hidden" id="pp_id" value="{$form_find.p_id}">
+          </dd>
+      </dl>
+      <!-- 合同模板预约图片-->        
+      <dl class="row">
+        <dt class="tit">
+            <label for="record_no"><em>*</em>合同模板预约图片</label>
+        </dt>
+        <dd class="opt">
+        <div class="tab-pane" id="tab_goods_images">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>                                    
+              <td>                                    
+              <foreach name="$form_find['preview_images']" item="vo" key="k" >
+                <div style="width:100px; text-align:center; margin: 5px; display:inline-block;" class="goods_xc">
+                  <input type="hidden" value="{$vo}" name="preview_images[]">
+                  <a onClick="" href="{$vo}" target="_blank"><img width="100" height="100" src="{$vo}"></a>
+                  <br>
+                  <a href="javascript:void(0)" onClick="ClearPicArr2(this,'{$vo}')">删除</a>
+                </div>
+              </foreach>
+                <div class="goods_xc" style="width:100px; text-align:center; margin: 5px; display:inline-block;">
+                  <input type="hidden" name="preview_images[]" value="" />
+                  <a href="javascript:void(0);" onClick="GetUploadify(10,'','goods','call_back2');"><img src="/public/images/add-button.jpg" width="100" height="100" /></a>
+                  <br/>
+                  <a href="javascript:void(0)">&nbsp;&nbsp;</a>
+                </div>                                        
+              </td>
+            </tr>                                              
+            </tbody>
+          </table>
+        </div>
+        <p class="notic">预览图片分割为多张图片，为保证预览顺序，图片按顺序选择单张上传</p>
+        </dd>
+      </dl>
+      <!-- 合同模板预约图片--> 
+      <input type="hidden" name="id" value="{$form_find.id}">
+      <input type="hidden" name="handlers" value="{$admic_user.user_name}">
+      <dl class="row">
+      </dl>
+      <!--ajax 返回 合同公司信息分配 --> 
+      <div id="ajax_company" cellpadding="0" cellspacing="0" border="0"></div>
+      <!--ajax 返回 合同类型内容分配 --> 
+      <div id="ajax_type" cellpadding="0" cellspacing="0" border="0"></div>
+    
+<script>  
+
+    // 上传商品相册回调函数
+    function call_back2(paths){
+        var  last_div = $(".goods_xc:last").prop("outerHTML");  
+        for (i=0;i<paths.length ;i++ )
+        {                    
+            $(".goods_xc:eq(0)").before(last_div);  // 插入一个 新图片
+                $(".goods_xc:eq(0)").find('a:eq(0)').attr('href',paths[i]).attr('onclick','').attr('target', "_blank");// 修改他的链接地址
+            $(".goods_xc:eq(0)").find('img').attr('src',paths[i]);// 修改他的图片路径
+                $(".goods_xc:eq(0)").find('a:eq(1)').attr('onclick',"ClearPicArr2(this,'"+paths[i]+"')").text('删除');
+            $(".goods_xc:eq(0)").find('input').val(paths[i]); // 设置隐藏域 要提交的值
+        }              
+    }
+    /*
+     * 上传之后删除组图input     
+     * @access   public
+     * @val      string  删除的图片input
+     */
+    function ClearPicArr2(obj,path)
+    {
+        $.ajax({
+          type:'GET',
+          url:"{:Url('Admin/Uploadify/delupload')}",
+          data:{action:"del", filename:path},
+          success:function(){
+                 $(obj).parent().remove(); // 删除完服务器的, 再删除 html上的图片                
+          }
+        });
+        // 删除数据库记录
+        $.ajax({
+          type:'GET',
+          url:"{:Url('Admin/Goods/del_goods_images')}",
+          data:{filename:path},
+          success:function(){
+                //         
+          }
+        });     
+    }
+
+    var typeScroll = 0;
+    function spec_scroll(o){
+    	var id = $(o).val();	
+    	$('#ajax_brandList').scrollTop(-typeScroll);
+    	var sp_top = $('#type_id_'+id).offset().top; // 标题自身往上的 top
+    	var div_top = $('#ajax_brandList').offset().top; // div 自身往上的top
+    	$('#ajax_brandList').scrollTop(sp_top-div_top); // div 移动
+    	typeScroll = sp_top-div_top;
+    } 
+
+    function img_call_back(fileurl_tmp)
+    {
+        $("#imagetext").val(fileurl_tmp);
+        $("#img_a").attr('href', fileurl_tmp);
+        $("#img_i").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+    function verifyForm(){
+        var formData  = new FormData($("#handleposition")[0]);
+         console.log(formData);
+        $('span.err').hide();
+        $.ajax({
+            type: "POST",
+            url: "{:Url('Admin/Excel/daorucs')}",
+            data: formData,
+            processData: false,   // jQuery不要去处理发送的数据
+            contentType: false,   // jQuery不要去设置Content-Type请求头
+            error: function (data) {
+                // console.log(data);
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                console.log(data);
+                $('#11k').val(data.url);
+                layer.alert(data.msg);
+            }
+        });
+    }
+
+    function get_classify(id,next,select_id){
+        var url = '/index.php?m=Home&c=api&a=get_classify&parent_id='+ id;
+        $.ajax({
+            type : "GET",
+            url  : url,
+            error: function(request) {
+                alert("服务器繁忙, 请联系管理员!");
+                return;
+            },
+            success: function(v) {
+                v = "<option value='0'>请选择合同类型</option>" + v;
+                $('#'+next).empty().html(v);
+                (select_id > 0) && $('#'+next).val(select_id);//默认选中
+            } 
+        });
+    }
+
+
+    $("#p_id").change(function (data) {
+        var p_id = $("#p_id option:selected").attr("value");
+        var id = $("input[name='id']").val();
+        $.ajax({
+            type: 'post',
+            url:"/index.php?m=Admin&c=System&a=ajax_add_contract_form_1&p_id="+p_id+"&id="+id,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $("#ajax_type").html('');
+                $("#ajax_type").append(data);
+            }
+        })
+    });
+    $("#company").change(function (data) {
+        var id = $("input[name='id']").val();
+        var d_id = $("#company option:selected").attr("value");
+        $.ajax({
+            type: 'post',
+            url:"/index.php?m=Admin&c=System&a=ajax_add_contract_form_2&d_id="+d_id+"&id="+id,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $("#ajax_company").html('');
+                $("#ajax_company").append(data);
+            }
+        })
+    });
+
+    
+    $(document).ready(function(){
+        var d_id = $("#company option:selected").attr("value");
+        var id = $("input[name='id']").val();
+        var p_id = $("#pp_id").val();
+        $.ajax({
+            type: 'post',
+            url:"/index.php?m=Admin&c=System&a=ajax_add_contract_form_1&p_id="+p_id+"&id="+id,
+            dataType: 'json',
+            success: function (data) {
+                $("#ajax_type").html('');
+                $("#ajax_type").append(data);
+            }
+        })
+        $.ajax({
+            type: 'post',
+            url:"/index.php?m=Admin&c=System&a=ajax_add_contract_form_2&d_id="+d_id+"&id="+id,
+            dataType: 'json',
+            success: function (data) {
+                $("#ajax_company").html('');
+                $("#ajax_company").append(data);
+            }
+        })
+        /** 以下是编辑时默认选中某个分类*/
+        <if condition="$form_find['p_id'] gt 0">
+             // 商品分类第二个下拉菜单
+             get_classify('{$form_find[d_id]}','p_id','{$form_find[p_id]}');  
+        </if>
+
+    });
+</script>
+</body>
+</html>

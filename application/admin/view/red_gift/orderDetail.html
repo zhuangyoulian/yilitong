@@ -1,0 +1,389 @@
+<include file="public/layout" />
+<style>
+.ncm-goods-gift {
+	text-align: left;
+}
+.ncm-goods-gift ul {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+}
+.ncm-goods-gift li {
+    display: inline-block;
+    letter-spacing: normal;
+    margin-right: 4px;
+    vertical-align: top;
+    word-spacing: normal;
+}
+.ncm-goods-gift li a {
+    background-color: #fff;
+    display: table-cell;
+    height: 30px;
+    line-height: 0;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+.ncm-goods-gift li a img {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+a.green{
+	
+	background: #fff none repeat scroll 0 0;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    color: #999;
+    cursor: pointer !important;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    height: 20px;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin: 0 5px 0 0;
+    padding: 1px 6px;
+    vertical-align: top;
+}
+
+a.green:hover { color: #FFF; background-color: #1BBC9D; border-color: #16A086; }
+
+.ncap-order-style .ncap-order-details{
+	margin:20px auto;
+}
+.contact-info h3,.contact-info .form_class{
+  display: inline-block;
+  vertical-align: middle;
+}
+.form_class i.fa{
+  vertical-align: text-bottom;
+}
+</style>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.go(-1)" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>商品订单</h3>
+        <h5>商城实物商品交易订单查询及管理</h5>
+      </div>
+      <div class="subject" style="width:62%">
+      	 <a href="{:Url('RedGift/order_print',array('order_id'=>$order['order_id']))}" target="_blank" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="打印订单">
+      	 <a href="{:Url('RedGift/order_print',array('order_id'=>$order['order_id']))}" style="float:right;margin-right:10px" class="ncap-btn-big ncap-btn-green" ><i class="fa fa-print"></i>打印订单</a>
+      	 </a>	
+      </div>
+    </div>
+      
+  </div>
+  <div class="ncap-order-style">
+    <div class="titile">
+      <h3></h3>
+    </div>
+ 
+    <div class="ncap-order-details">
+      <form id="order-action">
+        <div class="tabs-panels">
+        <div class="misc-info">
+           <h3>基本信息</h3>
+           		<dl>
+		            <dt>订&nbsp; 单&nbsp;ID:</dt>
+		            <dd>{$order.order_id}</dd>
+		            <dt>订&nbsp; 单&nbsp;号:</dt>
+		            <dd>{$order.order_sn}</dd>
+		            <dt>会&emsp;&emsp;员:</dt>
+		            <dd>{$order.consignee}</dd>
+		          </dl>
+	              <dl>
+		            <dt>电&emsp;&emsp;话:</dt>
+		            <dd>{$order.mobile}</dd>
+		            <dt>应付金额:</dt>
+		            <dd>{$order.order_amount}</dd>
+					<dt>下单时间:</dt>
+		            <dd>{$order.add_time|date='Y-m-d H:i',###}</dd>
+			       </dl>
+			       <dl>
+	              <dt>订单状态:</dt>
+                <if condition="$order[source] eq '一礼通' ">
+                  <dd>{$order_status[$order[order_status]]} / {$pay_status[$order[pay_status]]} / {$shipping_status[$order[shipping_status]]}</dd>
+                <else/>
+		              <dd>{$red_order_status[$order[order_status]]} / {$pay_status[$order[pay_status]]} / {$shipping_status[$order[shipping_status]]}</dd>
+                </if>
+		            <dt>支付时间:</dt>
+		            <dd><if condition="$order.pay_time neq 0">{$order.pay_time|date='Y-m-d H:i',###}<else/>N</if></dd>
+					<dt>收货时间:</dt>
+		            <dd><if condition="$order.confirm_time neq 0">{$order.confirm_time|date='Y-m-d H:i',###}<else/>未确认收货</if></dd>
+			       </dl>
+          <dl>
+            <dt>店铺名称:</dt>
+                  <dd>{$order.supplier_name}</dd>
+                    <dt>支付方式:</dt>
+                  <dd>{$order.pay_name|default='其他方式'}</dd>
+            <dt>支付流水号:</dt>
+                  <dd>{$order.transaction_id}</dd>
+          </dl>
+          <dl>
+            <dt>上&nbsp; 级&nbsp;ID:</dt>
+                  <dd>{$order.recommend_code}({$recommend_code})</dd>
+            <dt>订单推荐ID:</dt>
+                  <dd>{$order.source_id}({$source_id})</dd>
+          </dl>
+        	</div>
+        
+        <div class="addr-note">
+          <h4>收货信息</h4>
+          <dl>
+            <dt>收&nbsp; 货&nbsp;人：</dt>
+            <dd>{$order.consignee}</dd>
+            <dt>联系方式：</dt>
+            <dd>{$order.mobile}</dd>
+          </dl>
+          <dl>
+            <dt>收货地址：</dt>
+            <dd>{$order.address2}</dd>
+			<dt>买家留言：</dt>
+			<dd>{$order.user_note}</dd>
+          </dl>
+          <dl>
+            <dt>邮&emsp;&emsp;编：</dt>
+            	<dd><if condition="$order.zipcode neq ''"> {$order.zipcode}<else/>N</if></dd>
+          </dl>
+          <dl>
+           		<dt>配送方式：</dt>
+            	<dd>{$order.shipping_name}</dd>
+          	</dl>
+        </div>
+  
+         
+        <div class="goods-info">
+        <if condition="$order.custom_id neq '0'">
+          <div>
+          <a style="float: right;color: red"  href="{:Url('Admin/RedGift/detail_custom',array('order_id'=>$order['order_id']))}"><i class="fa fa-list-alt"></i>有定制需求，点击查看</a>
+          </div>
+        </if>
+          <h4>商品信息</h4>
+          
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">商品</th>
+                <th>规格属性</th>
+                <th>数量</th>
+                <th>单品价格</th>
+                <th>会员折扣价</th>
+                <th>单品小计</th>
+              </tr>
+            </thead>
+            <tbody>
+            <if condition="$order[source] eq '一礼通' ">
+              <volist name="orderGoods_yi" id="good">
+              <tr>
+                  <td class="w30"><div class="goods-thumb"><a  <if condition="$good['is_goods_id'] neq 2 "> href="{:Url('Home/Goods/goodsInfo',array('id'=>$good['goods_id']))}" target="_blank" <else/> onClick="alert('该商品未在一礼通上架，无详情页')" </if>><img alt="" src="{$good['goods_thumb']}" /> </a></div></td>
+                  <td style="text-align: left;">
+                    <if $good.is_service gt 0>
+                      <a href="{:Url('Admin/RedGift/back_order_list',array('order_sn'=>$order['order_sn']))}" ><span style="color:red;">(售后服务申请)</span></a>
+                    </if>
+                    <if $good.is_logos eq 1>
+                      <span style="color:red;" >(定制)</span>
+                    </if>
+                      <a <if condition="$good['is_goods_id'] neq 2 "> href="{:Url('Home/Goods/goodsInfo',array('id'=>$good['goods_id']))}" target="_blank" <else/> onClick="alert('该商品未在一礼通上架，无详情页')" </if>>{$good.goods_name}</a>
+                      <br/>
+                    </td>
+                  <td class="w80">{$good.spec_key_name}</td>
+                  <td class="w60">{$good.goods_num}</td>
+                  <td class="w100">{$good.shop_price}</td>
+                  <td class="w60">{$good.member_goods_price}</td>
+                  <td class="w80">{$good.goods_total}</td>
+              </tr>
+              </volist>
+            <else/>
+              <volist name="orderGoods" id="good">
+              <tr>
+                  <td class="w30"><div class="goods-thumb"><a href="/redGift/productDetail.html?goods_id={$good['goods_id']}" target="_blank"><img alt="" src="{$good['goods_thumb']}" /> </a></div></td>
+                  <td style="text-align: left;">
+                    <if $good.is_service gt 0>
+                      <a href="{:Url('Admin/RedGift/back_order_list',array('order_sn'=>$order['order_sn']))}" ><span style="color:red;">(售后服务申请)</span></a>
+                    </if>
+                    <if $good.is_logos eq 1>
+                      <span style="color:red;">(定制)</span>
+                    </if>
+                      <a href="/redGift/productDetail.html?goods_id={$good['goods_id']}" target="_blank">{$good.goods_name}</a><br/></td>
+                  <td class="w80">{$good.spec_key_name}</td>
+                  <td class="w60">{$good.goods_num}</td>
+                  <td class="w100">{$good.goods_price}</td>
+                  <td class="w60">{$good.member_goods_price}</td>
+                  <td class="w80">{$good.goods_total}</td>
+              </tr>
+              </volist>
+            </if>
+          </table>
+        </div>
+        <div class="total-amount contact-info">
+          <h3>订单总额：￥{$order.goods_price}</h3>
+        </div>
+        <div class="contact-info">
+          <h3>费用信息 </h3>
+          <div class="form_class">
+          		<a class="btn green" href="{:Url('Admin/RedGift/editprice',array('order_id'=>$order['order_id']))}"><i class="fa fa-pencil-square-o"></i>修改费用</a >
+          </div>   
+          <dl>
+            <dt>小计：</dt>
+            <dd>{$order.goods_price}</dd>
+            <dt>税率 : </dt>
+            <dd>x{$order.order_tax}</dd>
+            <dt>运费：</dt>
+            <dd>+{$order.shipping_price}</dd>
+            <!-- <dt>积分 (-{$order.integral}):</dt> -->
+            <!-- <dd>-{$order.integral_money}</dd> -->
+          </dl>
+          <dl>
+            <!-- <dt>优惠券抵扣：</dt>
+            <dd>-{$order.coupon_price}</dd> -->
+            <dt>价格调整: </dt>
+            <dd>减:{$order.discount}</dd>
+          </dl>
+          <dl>
+            <dt>应付 : </dt>
+            <dd><strong class="red_common">{$order.order_amount}</strong></dd>
+           </dl>
+          <dl>
+          <if condition="$order[source] neq '一礼通' ">
+            <if condition="$order.order_status eq 0">
+              <dt><input type="button" value="完成修改" onclick="update_pr({$order['order_id']})"></dt>
+              <dd><strong class="red_common">点击完成修改改变订单状态后请联系客户确认订单</strong></dd>
+            <else/>
+              <dt><input type="button" value="已修改"></dt>
+            </if>
+          </if>
+          </dl>
+        </div>
+        <div class="contact-info">
+          <h3>操作信息</h3>
+          <dl class="row">
+	        <dt class="tit">
+	          <label for="note">操作备注</label>
+	        </dt>
+	        <dd class="opt" style="margin-left:10px">
+	         <textarea id="note" name="note" style="width:600px" rows="6"  placeholder="请输入操作备注" class="tarea">{$keyword.text}</textarea>
+	        </dd>
+	      </dl> 
+	      <dl class="row">
+	        <dt class="tit">
+	          <label for="note">可执行操作</label>
+	        </dt>
+	        <dd class="opt" style="margin-left:10px">
+          <if condition="$order[source] eq '一礼通' ">
+            <foreach name="button_yi" item="vo" key="k">
+                  <if condition="$k eq 'pay_cancel'">
+                    <a class="ncap-btn-big ncap-btn-green" href="javascript:void(0)" data-url="{:Url('RedGift/pay_cancel',array('order_id'=>$order['order_id']))}" onclick="pay_cancel(this)">{$vo}</a>
+                  <elseif condition="$k eq 'delivery'"/>                                                 
+                    <a class="ncap-btn-big ncap-btn-green" href="{:Url('RedGift/delivery_info',array('order_id'=>$order['order_id']))}">{$vo}</a>
+                  <elseif condition="$k eq 'refund'"/>
+                  <else/>
+                  <a class="ncap-btn-big ncap-btn-green" onclick="ajax_submit_form('order-action','{:Url('Admin/RedGift/order_action',array('order_id'=>$order['order_id'],'type'=>$k,'is_yilitong'=>1))}');" >
+                  {$vo}</a>
+                  </if>
+            </foreach>
+          <else/>
+            <foreach name="button" item="vo" key="k">
+                  <if condition="$k eq 'pay_cancel'">
+                    <a class="ncap-btn-big ncap-btn-green" href="javascript:void(0)" data-url="{:Url('RedGift/pay_cancel',array('order_id'=>$order['order_id']))}" onclick="pay_cancel(this)">{$vo}</a>
+                  <elseif condition="$k eq 'delivery'"/>                                                 
+                    <a class="ncap-btn-big ncap-btn-green" href="{:Url('RedGift/delivery_info',array('order_id'=>$order['order_id']))}">{$vo}</a>
+                  <elseif condition="$k eq 'refund'"/>
+                  <else/>
+                  <a class="ncap-btn-big ncap-btn-green" onclick="ajax_submit_form('order-action','{:Url('Admin/RedGift/order_action',array('order_id'=>$order['order_id'],'type'=>$k))}');" >
+                  {$vo}</a>
+                  </if>
+            </foreach>
+          </if>
+	        </dd>
+	      </dl> 
+        </div>
+        <div class="goods-info">
+          <h4>操作记录</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>操作者</th>
+                <th>操作时间</th>
+                <th>订单状态</th>
+                <th>付款状态</th>
+                <th>发货状态</th>
+                <th>描述</th>
+                <th>备注</th>
+              </tr>
+            </thead>
+            <tbody>
+            <volist name="action_log" id="log">
+	           	<tr>
+	                 <td class="text-center"><if condition="$log.action_user eq 0">管理员<else/>{$users[1]}</if></td>
+	                 <td class="text-center">{$log.log_time|date='Y-m-d H:i:s',###}</td>
+                <if condition="$order[source] eq '一礼通' ">
+	                 <td class="text-center">{$order_status[$log[order_status]]}</td>
+                <else/>
+                   <td class="text-center">{$red_order_status[$log[order_status]]}</td>
+                </if>
+	                 <td class="text-center">{$pay_status[$log[pay_status]]}<if condition="$order['pay_code'] eq 'code'"><span style="color: red">(货到付款)</span></if></td>
+	                 <td class="text-center">{$shipping_status[$log[shipping_status]]}</td>
+	                 <td class="text-center">{$log.status_desc}</td>
+	                 <td class="text-center">{$log.action_note}</td>
+	             </tr>
+              </volist>
+          </table>
+        </div>
+		  <div class="goods-info">
+          <h4>物流消息</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>信息</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            <volist name="shipping" id="list">
+	           	<tr>
+	                 <td class="text-center">{$list.shipping_name}</td>
+	                 <td class="text-center">{$list.invoice_no}</td>
+					 <td class="text-center">重新查询</td>
+
+	             </tr>
+				 <volist name="list.exp.lastResult.data" id="exp">
+				  	<tr>
+	                 <td class="text-center">{$exp.time}</td>
+	                 <td class="text-center">{$exp.context}</td>
+					</tr>
+				   </volist>
+              </volist>
+          </table>
+        </div>
+      </div>
+      </form>
+  	</div>
+  </div>
+</div>
+<script type="text/javascript">
+
+
+
+function update_pr($order_id){
+  $.ajax({
+      type : "POST",
+      url:"/index.php/Admin/RedGift/update_pr/order_id/"+$order_id,//+tab,
+      data : '',
+      success: function(data){
+        if (data.code == 1) {
+          alert("修改成功");
+          window.location.reload();
+        }else{
+          alert("修改失败");
+        }
+      }
+  });
+}
+ 
+</script>
+</body>
+</html>

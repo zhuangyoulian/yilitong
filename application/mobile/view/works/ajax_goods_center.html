@@ -1,0 +1,15 @@
+<foreach name="goodsList" item="v" key="k">
+	<div class="works-sell-col-1">
+	    
+	    <a href="{:Url('/Mobile/Works/GoodsInfo',array('id'=>$v[goods_id]))}">
+
+			<div class="works-sell-img-1">
+			    <img src="{$v.goods_thumb|default='public/static/images/tou2.png'}" alt="">
+			</div>
+			<div class="works-sell-name-price-1">
+				<p class="works-sell-name-1">{$v.goods_name}</p>
+				<p class="works-price-1">¥<span>{$v.shop_price}</span></p>
+			</div>
+		</a>
+	</div>
+</foreach>

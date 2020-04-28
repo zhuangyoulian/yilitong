@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>家电预约</title>
+	<link rel="stylesheet" type="text/css" href="__MOBILE__/css/normalize.css"/>
+	<style type="text/css">
+		a:link{
+			text-decoration: none;
+		}
+		.container{
+			box-sizing:border-box;
+			width: 100%;
+			padding-left:20px ;
+			padding-right: 20px;
+		}
+		.upcontain{
+			width: 100%;
+			position: relative;
+			margin-top: 30px;
+			/* margin-bottom: 60px; */
+		}
+		.upcontain img{
+			width: 100%;
+		}
+		.upcontain > .contentya{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+		}
+		.upcontain > .contentya >p{
+			font-size: 18px;
+			color: #FFFFFF;
+			margin-bottom: 32px;
+			margin-top:0px;
+		}
+		.peis{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 120px;
+			height: 36px;
+			background: #FFFFFF;
+			border-radius:36px ;
+			color:#e50012 ;
+			font-size: 14px;
+			font-weight: 700;
+		}
+		.peis .img{
+			width: 20px;
+			height: 20px;
+			margin-right: 8px;
+		}
+		.pips{
+			display: flex;
+		}
+		.pips .rig{
+			margin-left:28px ;
+		}
+		.pips .rig > p{
+			color: #333333;
+		}
+		.hidden{
+			display: none;
+		}
+		.zaw{
+			width:86px;
+			height:32px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 3;
+			background:rgba(0,0,0,1);
+			opacity:0.9;
+			border-radius:10px;
+			font-size:14px;
+			color: #FFFFFF;
+			text-align: center;
+			line-height: 32px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="zaw dredge hidden">
+		暂未开通
+	</div>
+	<div class="zaw finish hidden">
+		预约已结束
+	</div>
+	<div class="container">
+		<div class="upcontain">
+			<img src="__MOBILE__/images/img_yujing@2x.png" >
+			<div class="contentya">
+				<p>恒大御景半岛</p>
+				<div class="pips">
+				<a href="hdaccount">
+					<div class="peis">
+						<img src="__MOBILE__/images/icon_appionment@2x.png" class="img">
+						<p>预约配送</p>
+					</div>
+				</a>
+				<div class="peis rig buque">
+					<img src="__MOBILE__/images/icon_apply@2x(1).png" class="img">
+					<p>申请补缺</p>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="upcontain">
+			<img src="__MOBILE__/images/img_lihucheng@2x.png" >
+			<div class="contentya">
+				<p>恒大山水郡</p>
+				<div class="pips">
+					<a href="/Mobile/Hengda/hengda">
+					<div class="peis">
+						<img src="__MOBILE__/images/icon_appionment@2x.png" class="img">
+						<p>预约配送</p>
+					</div>
+					</a>
+					<a href="/Mobile/Hengda/account">
+					<div class="peis rig ">
+						<img src="__MOBILE__/images/icon_apply@2x.png" class="img">
+						<p>申请补缺</p>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script src="__MOBILE__/js/jquery-3.4.1.min.js"></script>
+	<script>
+		$('.peis.buque').click(function(){
+			$('.dredge').removeClass('hidden');
+			setTimeout(function(){
+				$('.dredge').addClass('hidden');
+			},1000);
+		})
+		$('.peis.buques').click(function(){
+			$('.finish').removeClass('hidden');
+			setTimeout(function(){
+				$('.finish').addClass('hidden');
+			},1000);
+		})
+		
+		
+	</script>
+</body>
+</html>

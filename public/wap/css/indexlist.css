@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.alldiv{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #e7e7e7;
+
+}
+.foot{
+    display: flex;
+    position: fixed;
+    height: 10rem;
+    background: #eee;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #f8f8f8;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+
+}
+ul li{
+    list-style-type:none;
+}
+.footul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+
+}
+.lookup{
+    width: 100%;
+    height: 6rem;
+    background: red;
+    margin: 0;
+    padding:0;
+}
+.lookupimg{
+    width: 20%;
+    height: 5.9rem;
+    background: #fff;
+    float: left;
+}
+.inputdiv{
+    width: 60%;
+    margin: 0.3rem;
+    height:5.4rem;
+    background: aqua;
+    float: left;
+}
+.inputdiv div{
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.inputdiv input{
+    width: 70%;
+    height: 5.2rem;
+    float: left;
+}
+.titlediv{
+    background: #ffffff;
+    height: 4rem;
+    width: 100%;
+}
+.titlediv span{
+    height: 4rem;
+    line-height: 4rem;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    display: block;
+}
+.lupodiv{
+    height: 20rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #eeeeee;
+}
+.navdiv{
+    margin-right: 1%;
+    width: 98%;
+    margin-left: 1%;
+    position: relative;
+    height: 20rem;
+}
+.navdiv div{
+    width: 20%;
+    height: 10rem;
+    float: left;
+    text-align: center;
+
+}
+.newdiv{
+    width: 100%;
+    height: 12rem;
+    padding: 2%;
+    background: #ffffff;
+    position: relative;
+}
+.newimg{
+    width: 18%;
+    height: 100%;
+    background: #eeeeee;
+    float: left;
+}
+.newfont {
+    width: 70%;
+    padding-left: 5%;
+    float: left;
+    text-align: left;
+}
+.titlenav{
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 1rem;
+    height: 4rem;
+    line-height: 4rem;
+    width: 25%;
+    border-top-right-radius:2rem;
+    border-bottom-right-radius:2rem;
+    background: #ff0000;
+    color: #fff;
+    z-index: 10;
+}
+.navnav{
+    width: 100%;
+    background: #eeeeee;
+    height: 2rem;
+}
+.chanpin{
+    height: 25rem;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background:#fff;
+
+
+}
+.spantitle{
+
+}
+.lititle{
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+.lititle li{
+    height: 6rem;
+    width: 50%;
+    float: left;
+}
+.danchanpin{
+    margin-top: 2.5rem;
+
+    background: #eeeeee;
+    width: 48%;
+    height:20rem;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+.chanpinlist{
+    width:100%;
+    height: 15rem;
+    background: #fff;
+}
+.listdan{
+    width:20%;
+    height: 70%;
+    float: left;
+    background: #f8f8f8;
+}
+.listfont{
+    width: 80%;
+    height: 70%;
+    float: left;
+}
+.newfont p{
+    height: 5rem;
+    line-height: 5rem;
+}
+.footul li{
+
+    float: left;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+
+}
+.footul li div {
+    width: 100%;
+    height:8rem ;
+}
+.footul li span{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size:2rem ;
+}

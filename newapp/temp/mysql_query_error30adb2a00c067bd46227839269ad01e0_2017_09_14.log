@@ -1,0 +1,131 @@
+2017-09-14 14:12:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'UPDATE `ylt_tp`.`ylt_supplier`
+				 set guimo = \'\', province = \'28240\' , city = \'28558\' , area = \'28604\'
+				 qq = \'\', company_name = \'广东省-深圳市-龙岗区\' , address = \'\' , company_type = \'\'
+		 where user_id=156552',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'qq = \'\', company_name = \'\\xE5\\xB9\\xBF\\xE4\\xB8\\x9C\\xE7\\x9C\\x81-\\xE6\\xB7\\xB1\\xE5\\x\' at line 3',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-14 14:13:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'UPDATE `ylt_tp`.`ylt_supplier`
+				 set guimo = \'\', province = \'28240\' , city = \'28558\' , area = \'28604\'
+				 qq = \'\', company_name = \'广东省-深圳市-龙岗区\' , address = \'\' , company_type = \'\'
+		 where user_id=156552',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'qq = \'\', company_name = \'\\xE5\\xB9\\xBF\\xE4\\xB8\\x9C\\xE7\\x9C\\x81-\\xE6\\xB7\\xB1\\xE5\\x\' at line 3',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-14 17:30:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT works_id,cat_name,works_name,works_img	FROM `ylt_tp`.`ylt_works` where examine=1 and user_id = 156552 and works_id !=  order by add_time desc limit 5 ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'order by add_time desc limit 5\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-14 18:03:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT id	FROM `ylt_tp`.`ylt_works_collect` where user_id =  and works_id =  1',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and works_id =  1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-14 18:04:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT id	FROM `ylt_tp`.`ylt_works_collect` where user_id =  and works_id =  1',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and works_id =  1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

@@ -1,0 +1,2200 @@
+2018-09-26 14:07:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:07:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:07:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:07:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:07:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:07:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:08:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:12:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:04
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6884',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6907',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6911',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6911',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:13:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT commission_price,supplier_id,goods_id,goods_name,shop_price,original_img from `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer = 0 AND 1=1 AND (  goods_name like \'%%\' OR keywords like \'%%\'  )  AND cat_id in(934,936) order by sort ASC  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:15:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:15:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:15:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:15:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:15:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:16:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT commission_price,supplier_id,goods_id,goods_name,shop_price,original_img from `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer = 0 AND 1=1 AND (  goods_name like \'%%\' OR keywords like \'%%\'  )  AND cat_id in(7,49,50,51,52,963,876,877,878,436,437,438,439,440,441) order by sort ASC  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6911',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6884',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6911',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.goods_id,A.goods_name,A.goods_sn,A.goods_num,A.market_price,A.goods_price,A.spec_key,A.spec_key_name,A.is_send,A.delivery_id,A.send_number,B.supplier_id,B.original_img from `ylt_tp`.`ylt_order_goods` AS A left join `ylt_tp`.`ylt_goods` as B ON A.goods_id=B.goods_id where A.order_id=6907',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:17:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:18:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:18:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:18:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:04
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:19:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:20:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:20:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:20:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:22:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:22:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 30,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:22:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:22:39
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:26:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164199 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:26:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164199 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:26:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164199 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:26:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164199 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:26:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164199 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:26:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164199 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:50:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 0,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:50:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:53:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,g.goods_thumb FROM `ylt_tp`.`ylt_goods` AS g  WHERE g.is_on_sale = 1 AND g.is_designer = 0  AND g.examine = 1 AND g.is_recommend = 1 order by g.sort asc ,add_time desc  LIMIT 30,30',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:56:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:56:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 14:57:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 15:02:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 15:02:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 15:03:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 15:03:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 15:03:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+
+2018-09-26 15:03:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=164211 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'Can\'t find file: \'./ylt_tp/ylt_goods.frm\' (errno: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 1017,
+  ),
+)
+

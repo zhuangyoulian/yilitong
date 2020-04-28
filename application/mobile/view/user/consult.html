@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <link rel="stylesheet" href="__MOBILE__/css/normalize.css">
+    <link rel="stylesheet" href="__MOBILE__/css/consult.css">
+    <script src="__MOBILE__/js/jquery-3.4.1.min.js"></script>
+    <script src="__MOBILE__/js/consult.js"></script>
+    <title>端午定制咨询</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="form_biaodan">
+            <p class="form_title">公司名称<span class="red">*</span></p>
+            <input type="text" class="form_txt company_name" placeholder="请输入公司名称">
+        </div>
+        <div class="form_biaodan">
+            <p class="form_title">联系人<span class="red">*</span></p>
+            <input type="text" class="form_txt username" placeholder="请输入联系人姓名">
+        </div>
+        <div class="form_biaodan">
+            <p class="form_title">手机号<span class="red">*</span></p>
+            <input type="text" class="form_txt tel" placeholder="请输入您的手机号">
+        </div>
+        <div class="form_biaodan">
+            <p class="form_title">所需份数<span class="red">*</span></p>
+            <input type="number" class="form_txt need_num" placeholder="请输入所需份数" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            <span class="txt_right">份</span>
+        </div>
+        <div class="form_biaodan">
+            <p class="form_title">预算<span class="red">*</span></p>
+            <input type="number" class="form_txt budget" placeholder="请输入您的预算 " min="0" οnkeyup="this.value=this.value.match(/\d+(\.\d{0,2})?/) ? this.value.match(/\d+(\.\d{0,2})?/)[0] : '' ">
+            <span class="txt_right">元</span>
+        </div>
+        <div class=" form_area ">
+            <p>其他要求</p>
+            <textarea name=" " id=" " placeholder="请输入您的要求 " class="other_requirements "></textarea>
+
+        </div>
+        <div class="submit_biaodan ">提交表单</div>
+        <a href="tel:{$phone} ">
+            <div class="toconsolut "><img src="__MOBILE__/images/icon_phone@2x.png " alt=" "><span>电话咨询</span></div>
+        </a>
+    </div>
+    <div class="notice hidden ">提示内容</div>
+    <div class="wrap hidden"></div>
+    <div class="successBox hidden">
+        <div class="p1" style="font-size: 15px;">提交成功，即将返回首页</div>
+        <div class="btton_an"><a href="/">好的</a>
+        </div>
+    </div>
+</body>
+</html>

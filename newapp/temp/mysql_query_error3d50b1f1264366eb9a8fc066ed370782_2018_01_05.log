@@ -1,0 +1,1100 @@
+2018-01-05 14:01:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6404\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6405\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6406\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6407\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6408\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6409\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6410\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6411\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6412\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6413\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6414\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6415\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6416\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6417\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6418\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6419\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6420\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6421\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6422\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6423\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6424\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6425\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6426\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6427\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6428\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6429\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6430\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6431\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6432\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6433\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6434\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6435\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6436\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6437\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6438\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6439\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6440\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6441\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6442\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6443\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6444\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6445\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6446\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-05 14:01:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6447\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

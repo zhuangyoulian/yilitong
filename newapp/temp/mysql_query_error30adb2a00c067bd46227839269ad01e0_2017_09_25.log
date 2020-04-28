@@ -1,0 +1,575 @@
+2017-09-25 10:04:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select shipping_code form `ylt_tp`.`ylt_order` where order_id = 5302',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'`ylt_tp`.`ylt_order` where order_id = 5302\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 10:07:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id =  and O.goods_id = ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and O.goods_id =\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310628 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310630 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310631 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310632 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310633 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310633 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310633 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 11:37:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set refund_shipping_no = 飞鸿花海吧, retund_shipping_time=1506310634 where id=154',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE9\\xA3\\x9E\\xE9\\xB8\\xBF\\xE8\\x8A\\xB1\\xE6\\xB5\\xB7\\xE5\\x90\\xA7, retund_shipping_ti\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 14:36:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 14:37:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 14:37:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select order_id from `ylt_tp`.`ylt_back_order`  where id =  ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 15:03:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select id  from `ylt_tp`.`ylt_works_comment_collect` where user_id = 156552 and comment_id =',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 15:03:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select id  from `ylt_tp`.`ylt_works_comment_collect` where user_id = 156552 and comment_id =',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 20:55:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id =  and O.goods_id = ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and O.goods_id =\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 20:56:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select O.goods_num,O.goods_id,O.goods_name,O.goods_price,G.original_img from  `ylt_tp`.`ylt_order_goods` as O left join `ylt_tp`.`ylt_goods` as G on O.goods_id = G.goods_id where O.order_id =  and O.goods_id = ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and O.goods_id =\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 21:29:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' update `ylt_tp`.`ylt_back_order` set status=6 , remark1=  where id=153',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'where id=153\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 21:32:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select id  from `ylt_tp`.`ylt_works_comment_collect` where user_id = 156552 and comment_id =',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 21:32:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select id  from `ylt_tp`.`ylt_works_comment_collect` where user_id = 156552 and comment_id =',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-25 21:47:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 27 order by add_time desc  LIMIT 700,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-25 21:48:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 580,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-25 21:49:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg and parent_id = 26 order by add_time desc  LIMIT 580,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltRX0hbX1dWT1EUVFtOVl1XEklWWFNdSlpRUlg\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

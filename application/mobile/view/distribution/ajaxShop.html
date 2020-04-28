@@ -1,0 +1,34 @@
+
+<if condition="!$shop">
+	<div class="noCommoditys">店主还没有收藏的店铺~</div>
+<else/>
+		<div class="storeBox" style="display: block;">
+			<volist name="$shop" id="value" >
+				<if condition="$value[id] eq $id">
+					<a href="{:Url('Distribution/myShop',array('id'=>$id))}">
+				<else/>
+					<a href="{:Url('Distribution/shopDetails',array('id'=>$id,'shop_id'=>$value[id]))}">
+				</if>
+				<div class="store">
+				<if condition="empty($value[images])">
+					<div class="storeImg"><img src="__MOBILE__/images/bg_master_center.png" alt=""></div>
+				<else/>
+					<div class="storeImg"><img src="{$value.images}" alt=""></div>
+				</if>
+
+				<if condition="empty($value[shop_name])">
+					<div>{$value.nickname}</div>
+				<else/>
+					<div>{$value.shop_name}</div>
+				</if>
+				</div>
+				</a>
+			</volist>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="hints">TA已无更多关注的店铺~</div>
+</if>
+
+
+	</body>
+</html>

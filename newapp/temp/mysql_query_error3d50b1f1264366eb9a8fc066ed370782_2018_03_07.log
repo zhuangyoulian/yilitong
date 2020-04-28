@@ -1,0 +1,150 @@
+2018-03-07 18:03:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_bank_card`(user_id, bank_account_name, card_number, bank_name,branch_name, province, city, district, is_default) values (\'163526\',\'高规格\',\'8888888888888\',\'中国银行\',\'对方过后黄金季节风风光光\',\'28240\',\'28558\',\'\',\'1\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'district\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-03-07 18:03:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_bank_card`(user_id, bank_account_name, card_number, bank_name,branch_name, province, city, district, is_default) values (\'163526\',\'高规格\',\'8888888888888\',\'中国银行\',\'对方过后黄金季节风风光光\',\'28240\',\'28558\',\'\',\'1\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'district\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-03-07 18:03:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_bank_card`(user_id, bank_account_name, card_number, bank_name,branch_name, province, city, district, is_default) values (\'163526\',\'高规格\',\'8888888888888\',\'中国银行\',\'对方过后黄金季节风风光光\',\'28240\',\'28558\',\'\',\'1\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'district\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-03-07 18:03:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_bank_card`(user_id, bank_account_name, card_number, bank_name,branch_name, province, city, district, is_default) values (\'163526\',\'高规格\',\'8888888888888\',\'中国银行\',\'对方过后黄金季节风风光光\',\'28240\',\'28558\',\'\',\'1\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'district\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-03-07 18:03:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_bank_card`(user_id, bank_account_name, card_number, bank_name,branch_name, province, city, district, is_default) values (\'163526\',\'高规格\',\'8888888888888\',\'中国银行\',\'对方过后黄金季节风风光光\',\'28240\',\'28558\',\'\',\'1\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'district\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-03-07 18:04:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_bank_card`(user_id, bank_account_name, card_number, bank_name,branch_name, province, city, district, is_default) values (\'163526\',\'高规格\',\'8888888888888\',\'中国银行\',\'对方过后黄金季节风风光光\',\'28240\',\'28558\',\'\',\'1\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'district\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no”>
+    <title>3折爆品</title>
+    <meta name="keywords" content="3折爆品">
+    <meta name="description" content="3折爆品">
+    <link rel="stylesheet" href="__MOBILE__/css/active.css">
+</head>
+<body style="background:#fafafa;">
+    <div class="zk_topTitle"><a href="javascript:history.go(-1);" class="zk_back"></a><if $info.buy_type eq 1>秒杀活动<else>3折爆品</if></div>
+
+    <!-- 活动banner start -->
+    <div class="zk_banner">
+        <img src="{$info.app_img}" alt="">
+        <a href="javascript:void(0);" class="zk_act_rules" onclick="showRules()">活动规则</a>
+		 <input type="hidden" name="id" value="{$Request.param.id}">
+    </div>
+    <!-- 活动banner end -->
+
+    <!-- 产品列表 start -->
+    <div class="zk_goodsList_container">
+        <ul class="zk_goodsList" id="zk_goodsList">
+
+        </ul>
+    </div>
+    <!-- 产品列表 end -->
+
+    <!--  活动规则 start   -->
+    <div class="zk_rules_container">
+        <div class="zk_rules_content">
+            <h2>活动规则</h2>
+            <div class="zk_rules_del"> {$info.description}
+            </div>
+            <a href="javascript:void(0);" class="zk_close-rules" onclick="hideRules()"></a>
+        </div>
+    </div>
+    <!--  活动规则 end   -->
+
+    <script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/mobile/js/sourch_submit.js"></script>
+    <script>
+    // 分页加载 start******************
+        var page = 1;
+		var id = $("input[name='id']").val();;
+
+        function ajax_sourch_submit(){
+           if(page > 10){
+               return;
+           }
+            $.ajax({
+                type : "get",
+                url:"/Mobile/Activity/ajaxDiscount/id/"+id+"/p/"+page,
+                success: function(data)
+                {
+                    if(data){
+                        $("#zk_goodsList").append(data);
+                    }
+
+                }
+            });
+            page++;
+        }
+         ajax_sourch_submit();
+         // 分页加载 end******************
+
+
+        function showRules(){
+            $('.zk_rules_container').fadeIn(100);
+        }
+        function hideRules(){
+            $('.zk_rules_container').fadeOut(100);
+        }
+    </script>
+</body>
+</html>

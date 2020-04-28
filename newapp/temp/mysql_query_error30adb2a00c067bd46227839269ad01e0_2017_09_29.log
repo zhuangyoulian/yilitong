@@ -1,0 +1,750 @@
+2017-09-29 11:48:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5XXlRdTw and parent_id = 31 order by add_time desc  LIMIT 2610,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5XXlRdTw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 14:27:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UlBSWkxaWFReQVoUUF5JH1lQXk5VXlVaTVA and parent_id = 28 order by add_time desc  LIMIT 1840,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UlBSWkxaWFReQVoUUF5JH1lQXk5VXlVaTVA\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 15:17:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5VXlNdQQ and parent_id = 33 order by add_time desc  LIMIT 2850,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5VXlNdQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 15:28:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5VXlNdQQ and parent_id = 33 order by add_time desc  LIMIT 2850,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5VXlNdQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 15:28:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5VXlNdQQ and parent_id = 33 order by add_time desc  LIMIT 2870,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5VXlNdQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 16:43:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 37 order by add_time desc  LIMIT 2890,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 16:51:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 37 order by add_time desc  LIMIT 2890,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 16:52:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 37 order by add_time desc  LIMIT 2890,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 17:27:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2280,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 17:27:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2280,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 17:28:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2280,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 17:46:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 37 order by add_time desc  LIMIT 2890,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 18:57:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2270,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 18:57:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2270,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 18:57:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 18:57:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2260,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:00:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2550,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:03:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2250,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:03:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 27 order by add_time desc  LIMIT 2250,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:07:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 37 order by add_time desc  LIMIT 2730,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:07:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 33 order by add_time desc  LIMIT 2620,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:07:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 33 order by add_time desc  LIMIT 2620,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:07:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 33 order by add_time desc  LIMIT 2620,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:08:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ and parent_id = 33 order by add_time desc  LIMIT 2620,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VWE5UWlJbQQ\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:29:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw and parent_id = 28 order by add_time desc  LIMIT 2030,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:29:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw and parent_id = 28 order by add_time desc  LIMIT 2030,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:29:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw and parent_id = 27 order by add_time desc  LIMIT 2250,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:29:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw and parent_id = 27 order by add_time desc  LIMIT 2130,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:29:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw and parent_id = 27 order by add_time desc  LIMIT 2130,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-29 19:30:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw and parent_id = 24 order by add_time desc  LIMIT 1110,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UltdWUhUWFJbSFQUV1wEUl1VWE5bWlNXSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

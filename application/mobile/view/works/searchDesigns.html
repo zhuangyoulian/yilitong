@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>设计作品搜索-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+	<meta name="description" content="{$config['shop_info_store_desc']}" />
+	<link rel="stylesheet" href="__MOBILE__/css/mobile_designer.css">
+    <style>
+
+    </style>
+</head>
+<body>
+	<ul class="page-tab">
+		<li><a href="javascript:void(0);" class="tabCur">设计作品</a></li>
+		<li><a href="javascript:void(0);">在售作品</a></li>
+	</ul>
+	<div class="page-container">
+		<div class="designer-works page-tab-col pageCur">
+			<div class="designer-works-show-col">
+				<ul class="designer-infos-shows">
+					<li class="designer-head-Img"></li>
+					<li class="designer-infos-details">
+						<p class="designer-names"><strong>天高任鸟飞,我飞呀飞呀飞呀我飞呀飞呀飞呀我飞呀飞呀飞呀</strong><span>广东深圳</span></p>
+						<p class="designer-type-tips">擅长工艺品设计</p>
+					</li>
+				</ul>
+				<div class="design-imgs-book"></div>
+				<h4 class="design-works-name">作品名称,乡愁是一份沉重的爱。离开故土的游子，默默将爱收藏在心底。在异乡打拼，心里异常孤独，对着城市的钢筋水泥，对着那些永远都不可</h4>
+				<dl class="works-type-infos">
+					<dt><span>书籍设计</span>-<span>作品类型</span></dt>
+					<dd>浏览<span>508</span></dd>
+					<dd>收藏<span>68</span></dd>
+				</dl>
+			</div>
+			<div class="designer-works-show-col">
+				<ul class="designer-infos-shows">
+					<li class="designer-head-Img"></li>
+					<li class="designer-infos-details">
+						<p class="designer-names"><strong>海阔凭鱼跃</strong><span>福建福州</span></p>
+						<p class="designer-type-tips">擅长工艺品设计</p>
+					</li>
+				</ul>
+				<div class="design-imgs-book"></div>
+				<h4 class="design-works-name">作品名称,乡愁是一份沉重的爱。离开故土的游子，默默将爱收藏在心底。在异乡打拼，心里异常孤独，对着城市的钢筋水泥，对着那些永远都不可</h4>
+				<dl class="works-type-infos">
+					<dt><span>书籍设计</span>-<span>作品类型</span></dt>
+					<dd>浏览<span>508</span></dd>
+					<dd>收藏<span>68</span></dd>
+				</dl>
+			</div>
+			<div class="designer-works-show-col">
+				<ul class="designer-infos-shows">
+					<li class="designer-head-Img"></li>
+					<li class="designer-infos-details">
+						<p class="designer-names"><strong>滚蛋吧，肿瘤君！</strong><span>新疆维吾尔自治区</span></p>
+						<p class="designer-type-tips">擅长工艺品设计</p>
+					</li>
+				</ul>
+				<div class="design-imgs-book"></div>
+				<h4 class="design-works-name">作品名称,乡愁是一份沉重的爱。离开故土的游子，默默将爱收藏在心底。在异乡打拼，心里异常孤独，对着城市的钢筋水泥，对着那些永远都不可</h4>
+				<dl class="works-type-infos">
+					<dt><span>书籍设计</span>-<span>作品类型</span></dt>
+					<dd>浏览<span>508</span></dd>
+					<dd>收藏<span>68</span></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="designer-works-sell page-tab-col" style="padding:0;">
+			<div class="works-sell-col-1">
+				<a href="#">
+					<div class="works-sell-img-1"><img src="images/big.jpg" alt=""></div>
+					<div class="works-sell-name-price-1">
+						<p class="works-sell-name-1">作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子</p>
+						<p class="works-price-1">¥<span>198</span></p>
+					</div>
+				</a>
+			</div>
+			<div class="works-sell-col-1">
+				<a href="#">
+					<div class="works-sell-img-1"><img src="images/big.jpg" alt=""></div>
+					<div class="works-sell-name-price-1">
+						<p class="works-sell-name-1">作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子</p>
+						<p class="works-price-1">¥<span>198</span></p>
+					</div>
+				</a>
+			</div>
+			<div class="works-sell-col-1">
+				<a href="#">
+					<div class="works-sell-img-1"><img src="images/big.jpg" alt=""></div>
+					<div class="works-sell-name-price-1">
+						<p class="works-sell-name-1">作品名称,乡愁是一份沉重的爱。离开故土的游子作品名称,乡愁是一份沉重的爱。离开故土的游子</p>
+						<p class="works-price-1">¥<span>198</span></p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script>
+		$(function () {
+			$('.page-tab li').each(function () {
+				$(this).children('a').click(function () {
+					$(this).addClass('tabCur');
+					var n = $(this).parent('li').index();
+					$(this).parent('li').siblings().children('a').removeClass('tabCur')
+					$('.page-tab-col').eq(n).addClass('pageCur').siblings('.page-tab-col').removeClass('pageCur')
+				})
+			})
+		})
+	</script>
+</body>
+</html>

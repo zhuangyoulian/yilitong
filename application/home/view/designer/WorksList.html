@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-首页-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+    
+    <script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/static/js/layer/layer.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+
+<body style="background:#f7f7f7;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<div class="user-home" style="background:#2e2e2e;">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <a href="{:Url('Home/User/index')}" class="exit">退出设计师后台</a>
+    </div>
+</div>
+
+
+<div class="inner clearfix m-top-20">
+    <!-- design-left  start -->
+    <include file="public/designerLeftNav" />
+    <!-- designer-left end -->
+    <div class='page'>
+
+    <!-- design-right  start -->
+    <div class="design-authentication-index">
+        <div class="design-authentication-index-col">
+            <div class="authentication-title">
+                <p class="works-title">我的作品</p>
+                <a href="{:Url('Home/Designer/DesignsUpload')}" id="release-works">发布作品</a>
+            </div>
+            <div class="works-type">
+                <dl class="works-type-list">
+                    <dt>分类</dt>
+                    <dd <if $Request.param.cat_id eq ''>class="type-cur"</if>><a href="{:Url('Home/Designer/WorksList')}">全部</a></dd>
+                    
+                        <foreach name="cat_list" item="vo">
+                          <dd value="{$vo.cat_name}" <if $Request.param.cat_id eq $vo.cat_id>class="type-cur"</if>><a href="{:Url('/Home/Designer/WorksList',array('cat_id'=>$vo.cat_id))}">{$vo.cat_name}</a></dd>
+                        </foreach>           
+                </dl>
+                <dl class="works-states">
+                   <dt>状态</dt>
+                   <dd <if $Request.param.examine eq ''>class="type-cur"</if>><a href="{:Url('Home/Designer/WorksList')}">全部</a></dd>
+
+                   <dd <if $Request.param.examine eq 1>class="type-cur"</if>><a href="{:Url('Home/Designer/WorksList',array('examine'=>1))}">已通过</a></dd>
+                   <dd <if $Request.param.examine neq '' && $Request.param.examine eq 0>class="type-cur"</if>><a href="{:Url('Home/Designer/WorksList',array('examine'=>0))}">待审核</a></dd>
+                   <dd <if $Request.param.examine eq 2>class="type-cur"</if>><a href="{:Url('Home/Designer/WorksList',array('examine'=>2))}">未通过</a></dd>
+               </dl>
+
+            </div>
+        </div>
+        <p class="works-num">共发布<span>{$count}</span>作品</p>
+
+        <div class="design-authentication-index-col">
+        <ul class="works-list">
+            <volist name="designs_list" id="item" >
+                <li>
+                    <div class="works-img">
+                        <a href="{:Url('/Home/Works/WorksDetails',array('id'=>$item[works_id]))}"><img src="{$item.works_img}" alt=""></a>
+                    </div>
+                    <p class="works-name">{$item.works_name}</p>
+
+                   <!-- <p class="works-type-show">{$category_list[$item.cat_id]}</p> -->
+                   <p class="works-type-show">{$item.cat_name}</p>
+                    <dl class="works-like">
+                        <dd class="works-like-1">{$item.click_count|default='0'}</dd>
+                        <dd class="works-like-2">{$item.comment_count|default='0'}</dd>
+                    </dl>
+                    <dl class="works-edit">
+                        <dd><a href="{:Url('/Home/Designer/DesignsUpload',array('works_id'=>$item[works_id]))}">编辑</a></dd>
+                        <!-- <dd><a href="{:Url('/Home/Designer/DelDesignsList',array('works_id'=>$item[works_id]))}">删除</a></dd> -->
+                        <dd><a class="btn red" onclick="del('{$item[works_id]}')" href="javascript:void(0);">删除</a></dd>
+                    </dl>
+                </li>                
+            </volist>
+        </ul>
+
+        </div>
+    </div>
+    {$page}  </div>
+    <!-- designer-right end -->
+</div>
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+
+<script type="text/javascript">
+
+    $(function(){
+        $('.works-type-list dd,.works-states dd').each(function () {
+            $(this).on('click',function () {
+                $(this).addClass('type-cur').siblings('dd').removeClass('type-cur');
+            })
+        })
+    })
+
+    function del(id){
+        //var id = id;
+        layer.confirm('确认删除', {
+            btn: ['确认', '取消'] //可以无限个按钮
+        }, function(index, layero){
+            //按钮【按钮一】的回调
+           // location.href = "{:Url('/Home/Designer/DelDesignsList',array('works_id'=>$item[works_id]))}";
+            $.ajax({
+                type:'GET',
+                url:"{:Url('/Home/Designer/DelDesignsList')}",
+                data:{works_id:id},
+                dataType:'json',
+                success:function(data){
+                    if(data.status== 1){
+                        layer.msg(data.msg,{
+                            icon:1,
+                            time:1000
+                        },function(){
+                             location.href = "{:Url('Home/Designer/DesignsList')}";
+                        });
+                    }else if(data.status== -1){
+                        layer.alert(data.msg);
+                    }else{
+                        layer.alert('操作失败');
+                    }                 
+                }
+            });
+
+        }, function(index, layero){
+            //按钮【按钮二】的回调
+            layer.close(index); //如果设定了yes回调，需进行手工关闭
+        });
+        
+    }
+
+
+</script>
+</body>
+</html>

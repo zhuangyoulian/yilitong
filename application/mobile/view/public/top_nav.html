@@ -1,0 +1,72 @@
+<style>
+    .icon i.icon-home{
+        display:block;
+        width:1.1rem;
+        height:1.1rem;
+        background:url(__MOBILE__/images/btn_under_home@2x.png) no-repeat;
+        background-size:100% auto;
+        margin:0 auto;
+    }
+    .icon i.icon-classify{
+        display:block;
+        width:1.1rem;
+        height:1.1rem;
+        background:url(__MOBILE__/images/btn_under_classification@2x.png) no-repeat;
+        background-size:100% auto;
+        margin:0 auto;
+    }
+    .icon i.icon-shoppingCar{
+        display:block;
+        width:1.1rem;
+        height:1.1rem;
+        background:url(__MOBILE__/images/btn_under_shopping@2x.png) no-repeat;
+        background-size:100% auto;
+        margin:0 auto;
+    }
+    .icon i.icon-my{
+        display:block;
+        width:1.1rem;
+        height:1.1rem;
+        background:url(__MOBILE__/images/btn_under_mime@2x.png) no-repeat;
+        background-size:100% auto;
+        margin:0 auto;
+    }
+</style>
+<div class="flool tpnavf">
+    <div class="footer">
+        <ul>
+            <li>
+                <a class="yello" href="{:Url('Index/index')}">
+                    <div class="icon">
+                        <i class="icon-home"></i>
+                        <p>首页</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:Url('Goods/categoryList')}">
+                    <div class="icon">
+                        <i class="icon-classify"></i>
+                        <p>分类</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:Url('Cart/cart')}">
+                    <div class="icon">
+                        <i class="icon-shoppingCar"></i>
+                        <p>购物车</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{:Url('User/index')}">
+                    <div class="icon">
+                        <i class="icon-my"></i>
+                        <p>我的</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

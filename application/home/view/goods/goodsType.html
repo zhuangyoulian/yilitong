@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <title>商品列表-{$config['shop_info_store_title']}</title>
+    <link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/category.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/goodsType.css">
+</head>
+<body style="background:#f5f5f5;">
+    <!--------头部开始-------------->
+    <include file="public/header" />
+    <!--------头部结束-------------->
+
+    <script src="__PUBLIC__/js/pc_common.js"></script>
+    <script src="__PUBLIC__/js/layer/layer.js"></script>
+
+    <div class="type-menu">
+        <!--<span id="arr-l">&lt;</span>-->
+        <!--<span id="arr-r">&gt;</span>-->
+        <div class="typ-box">
+            <div class="content">
+                <div class="select">
+                    <p data-value="个性创意">个性创意</p>
+                    <ul>
+                        <foreach name="goods_category_tree" item="vo" key="k">
+                            <if condition="$vo[level] eq 1">
+                                <li data-value = "{$vo['name']}">
+                                    {$vo['name']}
+                                </li>
+                            </if>
+                        </foreach>
+                    </ul>
+                </div>
+            </div>
+            <div class="type-menu-list">
+                <ul class="second-classify shows-1">
+                    <li><a href="#">健康养生</a></li>
+                    <li><a href="#">数码配件1</a></li>
+                    <li><a href="#">手机数码1</a></li>
+                    <li><a href="#">娱乐影视1</a></li>
+                    <li><a href="#">茗茶1</a></li>
+                    <li><a href="#">中外名酒1</a></li>
+                    <li><a href="#">海鲜水产1</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="inner">
+        <div class="type-case">
+            <p class="type">分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类：</p>
+            <div class="type-list">
+                <ul>
+                    <li><a href="javascript:;">篮球</a></li>
+                    <li><a href="javascript:;">足球</a></li>
+                    <li><a href="javascript:;">乒乓球</a></li>
+                    <li><a href="javascript:;">排球</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="type-case">
+		 <!--筛选品牌-->
+      <if condition="$filter_brand neq null">
+            <div class="type-case-1">
+                <p class="type">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</p>
+                <div class="type-list">
+				
+                    <ul>
+					 <foreach name="filter_brand" item="v" key="k">
+                <li> <a data-href="" href="{$v[href]}" data-key='brand' data-val='{$v[id]}'><i></i>{$v[name]}</a> </li>
+					</foreach>
+                   
+                    </ul>
+                </div>
+            </div>
+		</if>
+		<if condition="$filter_price neq null">
+            <div class="type-case-1">
+                <p class="type">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</p>
+                <div class="type-list">
+                    <ul>
+					
+				  <foreach name="filter_price" item="v" key="k">
+					<li> <a href="{$v[href]}" data-attr-desc=''><i></i>{$v[value]}</a> </li>
+				  </foreach>
+                       <li class="m-pricebox">
+              <form action="<?php echo urldecode(Url("/Home/Goods/goodsList",$filter_param,''));?>" method="post" id="price_form">
+                    <input type="text" class="u-pri-start" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" name="start_price" id="start_price" />
+                    -
+                    <input type="text" class="u-pri-end" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"  name="end_price" id="end_price" />
+                    <span style="cursor:pointer;" class="z-btn ensure03 u-btn-pri" href="javascript:;" onClick="if($('#start_price').val() !='' && $('#end_price').val() !='' ) $('#price_form').submit();">确认</span>
+              </form>      
+              </li> 
+                    </ul>
+                </div>
+            </div>
+		</if>
+        </div>
+
+        <div class="searchbox">
+            <div class="type-case clearfix">
+                <ul class="type-rank" id="order_ul">
+                    <!-------------------   筛选 ------------------------->
+                    <li> <a class="col7ac  <if condition="$Request.param.sort eq ''">main</if>" href="<?php echo urldecode(Url("/Home/Goods/goodsList",$filter_param,''));?>" style="cursor:pointer;"> 综合 </a> </li>
+                    <li> <a class="col7ac  <if condition="$Request.param.sort eq 'sales_sum'">main</if>" href="<?php echo urldecode(Url("/Home/Goods/goodsList",array_merge($filter_param,array('sort'=>'sales_sum')),''));?>" style="cursor:pointer;"> 销量 </a> </li>
+
+                    <if condition="$Request.param.sort_asc eq 'desc'">
+                        <li><a class="col7ac  <if condition="$Request.param.sort eq 'shop_price'">main</if>" href="<?php echo urldecode(Url("/Home/Goods/goodsList",array_merge($filter_param,array('sort'=>'shop_price','sort_asc'=>'asc')),''));?>" style="cursor:pointer;">价格<span class="icon_s "></span></a></li>
+                    <else />
+                    <li><a class="col7ac  <if condition="$Request.param.sort eq 'shop_price'">main</if>" href="<?php echo urldecode(Url("/Home/Goods/goodsList",array_merge($filter_param,array('sort'=>'shop_price','sort_asc'=>'desc')),''));?>" style="cursor:pointer;">价格<span class="icon_s "></span></a></li>
+                    </if>
+                    <li><a class="col7ac  <if condition="$Request.param.sort eq 'is_new'">main</if>"  href="<?php echo urldecode(Url("/Home/Goods/goodsList",array_merge($filter_param,array('sort'=>'is_new')),''));?>" style="cursor:pointer;">新品</a></li>
+                </ul>
+                <!-- Page -->
+                <div class="right text12" id="pagenavi" style="margin-right:30px;">
+                    <div class="all-number">
+                        <span>共&nbsp;{$page->totalRows}&nbsp;个商品</span>
+                    </div>
+                    <p class="pageArea" data-countPage="1">
+                        <!--<a class="bg_img1"></a>-->
+                        <span class="colf22e01 fontT">{$page->nowPage}</span>
+                        /
+                        <span class="page_count fontT">{$page->totalPages}</span>
+                        <!--<a href="" class="bg_img2"></a> </p>-->
+                </div>
+                <!-- Page End-->
+            </div>
+            <!-- list -->
+        </div>
+
+        <div class="pro-container">
+           
+		
+		<foreach name="goods_list" item="v" key="k">
+            <div class="pro-col">
+                <div class="pro-img"><a href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}"><img src="{$v.goods_thumb}" alt=""></a></div>
+
+                <ul class="pro-img-tab">
+
+			      <foreach name="goods_images" item="v2" key="k2">
+                  <if condition="$v2[goods_id] eq $v[goods_id]">
+                    <li><img src="{$v2[image_url]}"  data-img="{$v[goods_name]}" alt="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}"></li>
+   
+					</if>
+				</foreach>
+                </ul>
+                <div class="pro-price">
+                    <p class="now-price">¥<strong>{$v[shop_price]}</strong></p>
+                    <p class="buy-num">¥<s>28</s></p>
+                </div>
+                <a href="#" title="{$v[goods_name]}" class="pro-title">{$v[goods_name]}</a>
+                <div class="business-infos">
+                    <a href="#" class="business-name" title="{$v[supplier_name]}">{$v[supplier_name]}</a>
+                    <a href="javascript:void(0);" class="join-buy-car" title="加入购物车" onClick="javascript:AjaxAddCart({$v[goods_id]},1,0);"><img src="__STATIC__/images/buyCarIco.png" alt="加入购物车"></a>
+                </div>
+            </div>
+
+		  </foreach>
+
+
+
+            <!-- Page 分页开始 -->
+            <div class="fn-page-css-1 pagintion fix">
+                <div class="pagenavi text12">{$page->show()}</div>
+            </div>
+            <!-- Page 分页结束 -->
+        </div>
+
+    </div>
+
+
+    <!-- 加入购物车 start -->
+    <div style="display:none;" id="shopdilog">
+        <div class="ui-popup ui-popup-modal ui-popup-show ui-popup-focus">
+            <div i="dialog" class="ui-dialog">
+                <div class="ui-dialog-arrow-a"></div>
+                <div class="ui-dialog-arrow-b"></div>
+                <table class="ui-dialog-grid">
+                    <tbody>
+                    <tr>
+                        <td i="body" class="ui-dialog-body">
+                            <div i="content" class="ui-dialog-content" id="content:1459321729418" style="width: 450px; height: auto;">
+                                <div id="addCartBox" class="collect-public" style="display: block;">
+                                    <div class="colect-top">
+                                        <i class="colect-icon"></i>
+                                        <!--<i class="colect-fail"></i>-->
+                                        <div class="conect-title">
+                                            <span>添加成功</span>
+                                            <div class="add-cart-btn fn-clear">
+                                                <a href="javascript:;" class="ui-button ui-button-f80 fl go-shopping">继续购物</a>
+                                                <a href="{:Url('Home/Cart/index')}" class="ui-button ui-button-122 fl">去购物车结算</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td i="footer" class="ui-dialog-footer" style="display: none;">
+                            <div i="statusbar" class="ui-dialog-statusbar" style="display: none;"></div>
+                            <div i="button" class="ui-dialog-button"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 加入购物车 end -->
+
+    <!--------footer-开始-------------->
+    <include file="public/footer" />
+    <!--------footer-结束-------------->
+
+
+    <script>
+        //一级菜单切换
+        $(".select p").click(function(e){
+            $(".select").toggleClass('open');
+            e.stopPropagation();
+        });
+        $(".content .select ul li").click(function(e){
+            var _this=$(this);
+            $(".select > p").text(_this.attr('data-value'));
+            _this.addClass("Selected").siblings().removeClass("Selected");
+            $(".select").removeClass("open");
+            e.stopPropagation();
+            $('.type-menu-list .second-classify').eq($(this).index()).addClass('shows-1').siblings().removeClass('shows-1');
+        });
+        $(document).on('click',function(){
+            $(".select").removeClass("open");
+        })
+
+
+
+        //二级切换
+//        $('.second-classify').each(function(){
+//            $(this).children().eq(0).children().css('color','#e6002d');
+//        })
+        $('.second-classify li a').click(function(){
+            $(this).css('color','#e6002d');
+            $(this).parent('li').siblings().children('a').css('color','#333');
+        })
+
+
+        //产品预览切换 功能
+        $('.pro-img-tab').each(function(){
+            $(this).children().each(function(){
+                $(this).hover(function(){
+                    $(this).addClass('curBorder');
+                    $(this).siblings().removeClass('curBorder');
+                    $(this).parent().siblings('.pro-img').children().children().attr('src',$(this).children().attr('src'))
+                })
+            });
+//                $(this).mouseleave(function(){
+//                    $(this).children().removeClass('curBorder');
+//                })
+        });
+
+
+        //排行切换
+        $('.type-rank').each(function(){
+            $(this).children().eq(0).children().css('color','#e6002d');
+        })
+        $('.type-rank li a').click(function(){
+            $(this).css('color','#e6002d');
+            $(this).parent('li').siblings().children('a').css('color','#333');
+        })
+
+    </script>
+
+
+</body>
+</html>

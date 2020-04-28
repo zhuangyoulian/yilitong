@@ -1,0 +1,926 @@
+2017-09-23 10:33:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select * from `ylt_tp`.`ylt_account_log` where users_id = 156552 and user_money!=0 order by cash_time desc  LIMIT 0,2',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'users_id\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 10:47:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select cash_time,desc,user_money from `ylt_tp`.`ylt_account_log` where user_id = 156552 and user_money!=0 order by cash_time desc  LIMIT 0,2',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'desc,user_money from `ylt_tp`.`ylt_account_log` where user_id = 156552 and user_\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 10:47:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select cash_time,desc,user_money from `ylt_tp`.`ylt_account_log` where user_id = 156552 and user_money!=0 order by cash_time desc  LIMIT 0,2',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'desc,user_money from `ylt_tp`.`ylt_account_log` where user_id = 156552 and user_\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 10:47:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select cash_time,desc,user_money from `ylt_tp`.`ylt_account_log` where user_id = 156552 and user_money!=0 order by cash_time desc  LIMIT 0,2',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'desc,user_money from `ylt_tp`.`ylt_account_log` where user_id = 156552 and user_\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 11:55:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select * from `ylt_tp`.`ylt_account_log` user_id = 156552 and time < 1506138957 and status=1',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'= 156552 and time < 1506138957 and status=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 11:56:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select * from `ylt_tp`.`ylt_account_log` user_id = 156552 and allow_time < 1506138992 and status=1',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'= 156552 and allow_time < 1506138992 and status=1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506148993\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:19
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506148999\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149000\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149001\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149001\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'12344444446吗\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149008\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:43:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'12344444446吗\',qq = \'12354444446\',company_name = \'北京市-北京市-东城区\',
+		province = \'1\',city = \'1\',area = \'3\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149022\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:44:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'所以早睡早起早睡早起早睡早起早在所以早睡早起早睡早起早睡早起早睡早起早睡早起早睡早起早睡早起早睡早起在所以早睡早起心情\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'/public/upload/common/image/2017/09/1506149061501.jpg\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149061\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:47:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo=\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',,set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss is\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149277\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:50:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo =\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss is\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149416\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:50:20
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo =\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149420\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:54:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo =\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/designer/2017/09/16/150552821649327.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149674\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:54:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo =\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',set status=0,  contacts_name = \'蓝家鑫\',supplier_name = \'\',business_licence_number = \'440582199411013333\',
+		guimo = \'wx13410872872\',qq = \'357099568\',company_name = \'广东省-深圳市-龙岗区\',
+		province = \'28240\',city = \'28558\',area = \'28604\',
+		address = \'丹竹头岭背西3巷1号\',company_type = \'高级设计师\',introduction = \'个人简介\',
+		organization_code_electronic = \'id_card_positive.jpg\',general_taxpayer = \'id_card_opposite.jpg\',
+		reading_protocol = \'education.jpg\',bank_licence_electronic = \'material1.jpg\',
+		proxy = \'material2.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149680\'
+		where supplier_id = 355',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'\\xE8\\x93\\x9D\\xE5\\xAE\\xB6\\xE9\\x91\\xAB\',supplier_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 14:54:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_supplier` 
+		set logo =\'/public/upload/head_pic/2017/09-19/3d2a70f29657d9889883d7183b15c2db.jpg\',set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_number = \'12345678912345678x\',
+		guimo = \'123444444465\',qq = \'12354444446\',company_name = \'湖北省-黄石市-黄石港区\',
+		province = \'24022\',city = \'24224\',area = \'24226\',
+		address = \'dfsgd\',company_type = \'平面设计师\',introduction = \'dsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\',
+		organization_code_electronic = \'/public/upload/designer/2017/09/16/150552820095078.jpg\',general_taxpayer = \'/public/upload/designer/2017/09/16/150552820175474.jpg\',
+		reading_protocol = \'\',bank_licence_electronic = \'/public/upload/designer/2017/09/16/150552821633257.jpg\',
+		proxy = \'/public/upload/common/image/2017/09/1506149695869.jpg\',is_designer = \'1\',
+		is_complete = \'1\',add_time = \'1506149696\'
+		where supplier_id = 361',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'set status=0,  contacts_name = \'dxfh\',supplier_name = \'dsgsd\',business_licence_n\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-23 16:30:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:30:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:31:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:31:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-23 16:31:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,status,id as back_id,change_time,addtime as add_time,order_id,order_sn,goods_id  from `ylt_tp`.`ylt_back_order` where supplier_id = 382 order by status asc  LIMIT 0,10 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'change_time\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

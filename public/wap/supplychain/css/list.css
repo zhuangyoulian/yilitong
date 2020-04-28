@@ -1,0 +1,64 @@
+body {
+	font-family: "Microsoft YaHei";
+}
+
+.procurement {
+	width: 100%;
+	height: 5em;
+
+}
+
+.img {
+	width: 55px;
+	height: 55px;
+
+}
+
+img {
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	width: 55px;
+	height: 55px;
+}
+
+.quote {
+	background-color: red;
+	margin-bottom: 10px;
+	padding: 6px 10px;
+	border-radius: 25px;
+	color: white;
+}
+
+.firm {
+	margin: -10px 0px;
+	position: relative;
+}
+
+
+.contact {
+	padding: 5px 15px;
+	border-radius: 25px;
+	border: 1px solid #d9d9d9;
+
+}
+
+.examine {
+	padding: 5px 15px;
+	border-radius: 25px;
+	border: 1px solid #d9d9d9;
+
+}
+
+
+
+.choose {
+	height: 3em;
+	line-height: 3em;
+
+}
+
+.del {
+	padding: 3px 10px;
+	border-radius: 25px;
+}

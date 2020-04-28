@@ -1,0 +1,195 @@
+body{
+	background: rgb(232,232,232);
+}
+.containerp{
+	width: 100%;
+	margin-top: 76px;
+	background: #e8e8e8;
+	margin-bottom: 100px;
+}
+.conentya{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+.conentya .swiper_title{
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #FFFFFF;
+	padding-top: 10px;
+	min-height: 600px;
+	/* height: 400px; */
+}
+.conentya  .swiper_title > li{
+	/* height: 30px; */
+	font-size: 14px;
+	color: #888888;
+	cursor: pointer;
+	margin-top: 5px;
+	/* width: 100%; */
+	/* background: pink; */
+}
+.conentya  .swiper_title > li:hover{
+	color: #E50012;
+}
+.conentya  .swiper_title > li.active{
+	color: #E50012;
+}
+.conentya  .swiper_title > li.active .xiaofenlei{
+	display: block;
+}
+.conentya  .swiper_title > li .xiaofenlei{
+	/* position: absolute; */
+	display: none;
+	color: #333333;
+	padding-left: 15px;
+	margin-left: 13px;
+}
+/* .conentya  .swiper_title > li:hover .xiaofenlei{
+	display: block;
+} */
+ul.xiaofenlei li{
+	cursor: pointer;
+	/* display: ; */
+	
+}
+ul.xiaofenlei li:hover{
+	color: #E50012;
+}
+ul.xiaofenlei li.active{
+	color: #E50012;
+}
+
+	
+.productlist{
+	width: 1000px;
+	margin-left: 26px;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+}
+.productlist li{
+	width: 240px;
+	height: 342px;
+	background: #FFFFFF;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.productlist .goods_name{
+	padding-top: 20px;
+	padding-left: 20px;
+	border-top: 1px solid #f8f8f8;
+	padding-right: 20px;
+	font-size: 14px;
+	color: #333333;
+	width: 240px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    line-height: 20px;
+}
+.productlist .goods_name:hover{
+	color: #E00909;
+}
+.productlist .price{
+	font-size: 18px;
+	color: #E00909;
+	font-weight: 700;
+	padding-left: 20px;
+}
+.containerB{
+
+	bottom: 0px;
+}
+/* .noproduct{
+	width: 1000px;
+} */
+.noproduct{
+	width: 100%;
+	text-align: center;
+	background: #FFFFFF;
+	margin-left: 10px;
+}
+.noproduct img{
+	margin-top: 84px;
+	margin-bottom: 18px;
+}
+.noproduct p{
+	color: gray;
+	font-size: 14px;
+}
+.fenye{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin-right: 10px;
+}
+.fenye .prepage{
+	width: 100px;
+	height: 50px;
+	background: #E50012;
+	cursor: pointer;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+}
+.fenye .prepage:hover{
+	background: #FA0015;
+}
+.fenye .currentpage{
+	width: 100px;
+	height: 50px;
+	background: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+}
+.fenye .lastpage{
+	width: 100px;
+	height: 50px;
+	background: #E50012;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+	color: #FFFFFF;
+}
+.fenye .lastpage:hover{
+	background: #FA0015;
+}
+.fenye .gray{
+	background: gray;
+	pointer-events: none;
+}
+.sanfenlei{
+	margin-left:10px;
+}
+.sanfenlei > li{
+	font-size: 9px;
+	line-height: 20px;
+	color: #333333;
+	width: 60px;
+	margin-bottom: 5px;
+	/* list-style: circle;
+	list-style-position: inside; */
+}
+.sanfenlei > li.active{
+	color:#E50012;
+}
+.sanfenlei > li::before{
+	content:'.';
+}
+.spand{
+	/* margin: 0 auto; */
+	display: flex;
+	justify-content: center;
+}

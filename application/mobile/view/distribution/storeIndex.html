@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>分销商城</title>
+		<link rel="stylesheet" href="__MOBILE__/css/distribution.css">
+		<link rel="stylesheet" href="__MOBILE__/css/swiper.min.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+		<style>
+			.headPortraits img{
+				width: 0.5rem;
+			    height: 0.5rem;
+			    border-radius: 50%;
+			    margin-top: 0.05rem;
+			}
+			.deal span{
+				display: block;
+				float: left;
+			}
+			.ylt_name{
+				width: 1.35rem;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}
+			.hotSaleName{
+				height: 0.6rem;
+			}
+			.fineName{
+				height: 0.72rem;
+			}
+			.hotSale_box{
+				overflow: hidden;
+			}
+			.hotSale_box .gainMoneys{
+				display: block;
+			}
+
+			.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+				bottom: 0;
+			}
+			ul.swiper-wrapper>li:nth-child(3n){
+				margin-right: 0.48rem;
+			}
+			[aria-label="Go to slide 5"]{
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="hisShop">
+			<header class="titlesBar">
+				<div class="backImg"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_black.png"></a></div>
+				<div>分销商城</div>
+				<div></div>
+			</header>
+			<nav class="huntNav">
+				<div class="yltLogoImg"><a href="/"><img src="__MOBILE__/images/logo.png"></a></div>
+				<div class="huntBox">
+					<a href="{:Url('/Mobile/Distribution/search')}">
+					<img src="__MOBILE__/images/icon_search.png">
+					<input type="text" maxlength="10" placeholder="珍妮曲奇饼">
+					</a>
+				</div>
+			</nav>
+			<section class="commodityBox">
+				<!-- 轮播 s-->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<foreach name="brand_roll" item="v" key="k">
+				            <div class="swiper-slide">
+				                <a href="<if $v[ad_link] eq '##1' || $v[ad_link] eq '##2' || $v[ad_link] eq 'minus'><elseif is_numeric($v[ad_link])>{$v[ad_link]|getAdUrl=$v[media_type],###}<else>{$v[ad_link]}</if>">
+				                    <img src="{$v[ad_code]}"  title="{$v[title]}" alt="{$v[title]}">
+				                </a>
+				            </div>
+				        </foreach>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- 轮播 end -->
+				<div>
+					<div class="rankingList">上周交易排行榜</div>
+					<!-- 排行榜轮播  s-->
+					<div class="wrap">
+						<ul class="swiper-wrapper">
+						<foreach name="arsort" item="vl" key="k">
+							<input type="hidden" id=id value="{$id}">
+							<li class="swiper-slide"  onclick="shop({$vl[shop_id]})" >
+								<div class="rankingLeft">
+									<div class="ranking" ><img src="__MOBILE__/images/icon_{$k+1}.png" style="margin-top: 0.28rem" alt=""></div>
+									<div class="headPortraits">
+										<img src="{$vl.images}" alt="">
+									</div>
+									<div class="ylt_name">{$vl.shop_name}</div>
+								</div>
+								<div class="deal"><span>交易金额：</span><span class="dealMoney">￥{$vl.moneys}</span></div>
+							</li>
+						</foreach>
+						</ul>
+					</div>
+					<!-- 排行榜轮播 e -->
+				</div>
+
+				<!-- 热卖推荐 -->
+				<div class="hotSale_box">
+					<div class="hotSaleTitle">热卖推荐</div>
+					<ul  class="swiper-wrapper">
+						<foreach name="goods_hot" item="vl" key="k">
+						<li class="swiper-slide" onclick="goods({$vl[goods_id]})"  z-index:100>
+							<div class="hotSaleImg"><img src="{$vl.goods_thumb}" alt=""></div>
+							<div class="hotSaleName">{$vl.goods_name}</div>
+							<div class="hotSaleMoeny">
+								<span class="moenys">￥{$vl.shop_price}</span>
+								<if condition="$vl.commission_price  neq 0">
+									<span class="gainMoneys">赚 {$vl.commission_price * $ratio['ratio']}</span>
+								<else/>
+									<span class="gainMoneys">赚 {$vl.distribution_price * $ratio['ratio']} </span>
+								</if>
+							</div>
+						</li>
+						</foreach>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+	
+				<!-- 好物专区 -->
+				<div class="fine_goods">
+					<div class="fineTitle" id='sd'>好物专区</div>
+					<ul  id="J_ItemList"></ul>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="bottomHint">已没有更多商品~</div>
+			</section>
+		</div>
+		<!--底部-start-->
+		<include file="distribution/bottom"/>
+		<!--底部-end-->
+
+    	<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+		<script src="__MOBILE__/js/swiper.min.js"></script>
+    	<script type="text/javascript" src="__STATIC__/mobile/js/sourch_submit.js"></script>
+
+		<script type="text/javascript">
+    	// 分页加载 start******************
+    	var page = 1;
+        function ajax_sourch_submit(){
+           if(page > 20){
+               return;
+           }
+            $.ajax({
+                type : "get",
+                url:"/Mobile/Distribution/ajaxGoods_rec/p/"+page,
+                success: function(data)
+                {
+                    if(data){
+                        $("#J_ItemList").append(data);
+                    }
+                }
+            });
+            page++;
+        }
+         ajax_sourch_submit();
+         // 分页加载 end******************
+        function GetQueryString(name)
+		{
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
+
+			var id_id=$('#id').val();
+			function shop(shop_id){
+				console.log(id_id);
+				console.log(shop_id);
+				if (id_id == shop_id) {
+	        	location.href = "/Mobile/Distribution/myShop/id/"+id_id+".html";
+				}else{
+	        	location.href = "/Mobile/Distribution/shopDetails/id/"+id_id+"/shop_id/"+shop_id+".html";
+	        	}
+			}
+		function goods(goods_id){
+        	location.href = "/Mobile/Distribution/goodsInfos/id/"+goods_id;
+		}
+		</script>
+		<script>	
+
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				touchRatio: 1,
+				autoplay: true,
+			});
+			var swipers = new Swiper('.wrap', {
+				direction: 'vertical',
+				autoplay: {disableOnInteraction: false},
+				loop: true, //循环
+				slidesPerView: 3, //slide可见数量				
+			});
+			var swiperss = new Swiper('.hotSale_box', {
+			  slidesPerView: 3,
+			  slidesPerGroup : 3,
+			  slidesOffsetBefore:24,
+			  pagination: {
+			    el: '.swiper-pagination',
+			    clickable: true,
+			  },
+			});
+			
+		</script>
+	</body>
+</html>

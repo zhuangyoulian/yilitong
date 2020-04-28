@@ -1,0 +1,375 @@
+2017-09-18 09:42:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_goods` set  is_on_sale  = 0 where goods_id = 3191and supplier_id = 355',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'supplier_id = 355\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 09:42:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => ' UPDATE `ylt_tp`.`ylt_goods` set  is_on_sale  = 0 where goods_id = 3191and supplier_id = 355',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'supplier_id = 355\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 10:10:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,goods_thumb,goods_name,shop_price,sales_sum from `ylt_tp`.`ylt_goods` where supplier_id = and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LI\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 10:10:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,goods_thumb,goods_name,shop_price,sales_sum from `ylt_tp`.`ylt_goods` where supplier_id = and is_on_sale = 0 and is_designer=1 and examine = 1  order by goods_id desc   LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_on_sale = 0 and is_designer=1 and examine = 1  order by goods_id desc   L\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 10:11:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,goods_thumb,goods_name,shop_price,sales_sum from `ylt_tp`.`ylt_goods` where supplier_id = and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LI\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 10:11:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,goods_thumb,goods_name,shop_price,sales_sum from `ylt_tp`.`ylt_goods` where supplier_id = and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LI\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 10:37:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select is_designer,user_id from `ylt_tp`.`ylt_users` where user_id=',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 10:37:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select is_designer,user_id from `ylt_tp`.`ylt_users` where user_id=',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 11:03:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select goods_id,goods_thumb,goods_name,shop_price,sales_sum from `ylt_tp`.`ylt_goods` where supplier_id = and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_on_sale = 1 and is_designer=1 and examine = 1 order by goods_id desc   LI\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 20:24:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT goods_id,goods_name,shop_price,original_img from,keywords `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer = 1 AND 1=1 AND (  goods_name like \'%三%\' OR keywords like \'%三%\'  )  order by add_time desc  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'keywords `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 20:26:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT goods_id,goods_name,shop_price,original_img,keywords from `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer = 1 AND 1=1 AND (  goods_name like \'%三% )  order by add_time desc  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\'%\\xE4\\xB8\\x89% )  order by add_time desc  LIMIT 0,10\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 20:26:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT goods_id,goods_name,shop_price,original_img,keywords from `ylt_tp`.`ylt_goods` WHERE is_on_sale=1 AND examine = 1 AND is_designer = 1 AND 1=1 AND (  goods_name like \'%三% )  order by add_time desc  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\'%\\xE4\\xB8\\x89% )  order by add_time desc  LIMIT 0,10\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-09-18 20:52:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select W.works_id,W.cat_name,W.works_name,W.click_count,W.supplier_name,W.collect_count,W.works_img,S.company_type,S.supplier_id,S.logo,S.company_name  from `ylt_tp`.`ylt_works` as W left join `ylt_tp`.`ylt_supplier` as S on W.supplier_id=S.supplier_id where W.is_show = 1 and W.examine = 1 order by W.add_time desc  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'W.supplier_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-18 20:52:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select W.works_id,W.cat_name,W.works_name,W.click_count,W.supplier_name,W.collect_count,W.works_img,S.company_type,S.supplier_id,S.logo,S.company_name  from `ylt_tp`.`ylt_works` as W left join `ylt_tp`.`ylt_supplier` as S on W.supplier_id=S.supplier_id where W.is_show = 1 and W.examine = 1 order by W.add_time desc  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'W.supplier_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-09-18 20:52:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select W.works_id,W.cat_name,W.works_name,W.click_count,W.supplier_name,W.collect_count,W.works_img,S.company_type,S.supplier_id,S.logo,S.company_name  from `ylt_tp`.`ylt_works` as W left join `ylt_tp`.`ylt_supplier` as S on W.supplier_id=S.supplier_id where W.is_show = 1 and W.examine = 1 order by W.add_time desc  LIMIT 0,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'W.supplier_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

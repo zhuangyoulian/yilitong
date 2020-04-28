@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的收藏-{$config['shop_info_store_title']}</title>
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+    <script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    <script src="__STATIC__/js/slider.js"></script>
+
+</head>
+
+<body>
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<!--------用户中心 顶菜单-------------->
+<include file="public/userTopbar" />
+<!--------用户中心 顶菜单--------------->
+
+
+
+<div class="layout pa-to-10 fo-fa-ar">
+    <!--菜单-->
+    <include file="user/menu" />
+    <!--菜单-->
+    <div class="fr wi940">
+        <div class="he50 wddd">
+            <div class="fl ddd-h2">
+                <h2><span>我的收藏</span></h2>
+            </div>
+        </div>
+        <div class="wddd-js ov-in">
+            <div class="flool-b layer wi940">
+                <ul class="flool-cle">
+ <if condition="empty($lists)"><!--没查询到数据-->
+     <p style="text-align:center">暂无喜欢的店铺</p>     
+ </if>                
+                    <volist name="lists" id="list">
+                        <li class="sellers sellers-two wi25-BFB">
+                            <div class="best-two ma0-20-20-0">
+                                <div class="he364 about-ced best-tans">
+                                    <div class="best_img best_img2 best_img3">
+                                        <a href="{:Url('Home/Supplier/StoreHome',array('id'=>$list['supplier_id']))}"><img src="{$list.logo}" /></a>
+                                    </div>
+                                    <div class="intr-t intr-t3 pa0-20">{$list.supplier_name}<span class="intr-b"></span></div>
+                                    <div class="price prices">
+     
+                                    </div>
+                                    <div class="add-join">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" class="joins-ri"><a href="{:Url('Home/Supplier/StoreHome',array('id'=>$list['supplier_id']))}" style="display:block;width:100%;height:100%;">去逛逛</a></td>
+                                                <td align="center" class="joins-le"><a href="{:Url('Home/User/del_supplier_collect',array('id'=>$list['collect_id']))}" style="display:block;width:100%;height:100%;">取消</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </volist>
+
+                </ul>
+            </div>
+        
+            <div class="merge pager-paging fr">
+                {$page}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="he80"></div>
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+
+</body>
+
+
+<script>
+    $(function () {
+        $("#h-s").mouseover(function () {
+            $('.ec-ta-x').css('left','124px');
+            $('.ec-ta-x').css('width','110px');
+            $(this).addClass("cullent");
+        });
+        $("#h-s").mouseout(function () {
+            $('.ec-ta-x').css('left','0px');
+            $('.ec-ta-x').css('width','124px');
+            $(this).removeClass("cullent");
+        });
+    });
+    $(function () {
+        $("#q-s").mouseover(function () {
+            $('.ec-ta-x').css('left','0px');
+            $(this).addClass("cullent");
+        });
+        $("#q-s").mouseout(function () {
+            $('.ec-ta-x').css('left','0px');
+        });
+    });
+
+</script>
+</html>

@@ -1,0 +1,50 @@
+2019-09-16 14:41:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select collect_count,click_count,designer_name,works_img,works_name,cat_name,user_id,works_content,supplier_id from `ylt_tp`.`ylt_works` where works_id=__ChadronAlwaysEqualString',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'__ChadronAlwaysEqualString\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2019-09-16 14:58:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select collect_count,click_count,designer_name,works_img,works_name,cat_name,user_id,works_content,supplier_id from `ylt_tp`.`ylt_works` where works_id=__ChadronAlwaysEqualString',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'__ChadronAlwaysEqualString\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

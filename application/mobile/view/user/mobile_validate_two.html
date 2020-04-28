@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="__MOBILE__/css/deposit/index.css">
+		<style type="text/css">
+			.inputCode span{
+				width: 1.1rem;
+			}
+			.inputCode{
+				border-top: 0;
+			}
+			.box{
+				border-bottom: 0.02rem solid #EDEDED;
+				width: 100%;
+				height: 1rem;
+				line-height: 1rem;
+				display: flex;
+				flex-direction: row;
+				padding: 0 0.4rem;
+				background: #fff;
+			}
+			.box span{
+				font-size: 0.3rem;
+				color: #666;
+				width: 1.5rem;
+			}
+			.title{
+				text-align: center;
+				margin: 0.5rem auto;
+			}
+			.title img{
+				width: 32%;
+				height: 50%;
+			}
+			.submit{
+				border-radius: 1rem;
+				background: #e6002d;
+			}
+		</style>
+	</head>
+	<body style="background: #fff;">
+		<div id="register" class="enroll">
+			<div class="title">
+				<img src="__MOBILE__/images/logos.png" >
+			</div>
+			<section class="section">
+				<form>
+					<div class="box">
+						<span>手机号码</span>
+						<input type="number" maxlength="11" placeholder="请输入手机号码" v-model="phone" id="phone">
+					</div>
+					<div id="verifyCode">
+						<div class="inputCode">
+							<span>验证码</span>
+							<input type="number" placeholder="请输入验证码" maxlength="6" value="{securityCode}" v-model="securityCode">
+							<div class="gain" v-show="showGain" @click="clickGain">获取验证码</div>
+							<div class="gain " v-show="showTime">{{time}}s</div>
+							<div class="gain " v-show="showRegain" @click="clickRegain">重新获取</div>
+						</div>
+					</div>
+					<div class="box">
+						<span>密码</span>
+						<input type="password" placeholder="请输入密码" v-model="password">
+					</div>
+					<div class="box">
+						<span>确认密码</span>
+						<input type="password" placeholder="请再次输入密码" v-model="againPassword">
+					</div>
+					<div type="submit" class="submit" @click="submit">登录</div>
+				</form>
+			</section>
+		</div>
+		<script src="__MOBILE__/js/jquery-1.10.2.min.js"></script>
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+		<script src="__MOBILE__/js/vue.js"></script>
+		<script src="__MOBILE__/js/deposit/common.js"></script>
+		<script type="text/javascript">
+			const defatultTime = 60; // 默认倒计时时间
+			var wap = new Vue({
+				el: ".section",
+				data: {
+					securityCode: "", //验证码  
+					time: defatultTime, //时间
+					showGain: true, // 是否显示获取验证码
+					showTime: false, // 是否显示时间
+					showRegain: false, //是否显示重新获取
+					phone:"",
+					password:"",
+					againPassword:"",   //再次密码
+				},
+				methods: {
+					clickGain(){ // 点击获取验证码
+						var mobile = $.trim($('#phone').val());
+				        if(mobile == ''){
+						    alert('请输入您的号码！');
+				            return false;
+				        }
+				        $.ajax({
+				            url : "/index.php?m=Home&c=Api&a=send_validate_code&scene=1&type=5&mobile="+mobile,
+				            type:'post',
+				            dataType:'json',
+				            data:{mobile:mobile},
+				            success:(res)=>{
+				                if(res.status==1){
+				                    alert(res.msg)
+				                    this.showGain = false; //隐藏获取验证码
+									this.showTime = true; //显示时间
+									this.setTime();
+				                }else{
+				                    alert(res.msg)
+				                }
+				            }
+				        })
+						// this.showGain = false; //隐藏获取验证码
+						// this.showTime = true; //显示时间
+						// this.setTime();
+					},
+					setTime(){ // 	时间设置
+						var that = this;
+						if (that.time <= 0) { // 倒计时结束
+							that.gain = false; //隐藏获取验证码
+							that.showTime = false; // 隐藏时间,显示重新获取
+							that.showRegain = true; // 显示重新获取
+							that.time = defatultTime; // 恢复原始倒计时时间
+							clearTimeout(temTime); // 清除setTimeout事件
+							return false;
+						} else {
+							temTime = setTimeout(function() {
+								that.time = --that.time;
+								console.log("time:" + that.time);
+								that.setTime(); // 递归调用本身
+							}, 1000)
+						}
+					},
+					clickRegain() { //点击重新获取
+						this.showTime = true; //显示时间
+						this.showRegain = false; //隐藏重新获取
+						this.setTime();
+					},
+					submit() { 
+						let formData = {
+							mobile:this.phone,
+							code:this.securityCode,
+							password:this.password,
+							aPassword:this.againPassword
+						}
+						if (formData.password != formData.aPassword) {
+							alert("密码不一致，请重新输入！");
+				            return false;
+						}
+						var url = "/index.php?m=Home&c=Api&a=check_validate_code&scene=1&type=phone&mobile="+formData.mobile+"&code="+formData.code;
+				        $.get(url,function(res){
+				            if(res.status == 1)
+							{
+								this.allSubmitData = formData; //  所有要提交的数据
+								$.ajax({
+									type:'POST',
+									url:"/Mobile/User/mobile_validate_two.html",
+									dataType:'json',
+									data:this.allSubmitData,
+									success:function(data){
+										if(data.status == -1){
+											alert(data.msg);
+										}else if(data.code == 0){
+											alert(data.msg);
+										}else if(data.code == 1){
+											alert(data.msg);
+											window.location.href="/Mobile/User/index.html";
+										}
+									},
+									error:function(jqXHR){
+										console.log('提交失败！');
+										alert('系统繁忙！请重试');
+									}
+								});
+								console.log("进入下一页...");
+							}else{
+				                alert(res.msg);
+				            }
+				        })
+						console.log(formData); 
+					}
+				},	
+			})
+		</script>
+		
+	</body>
+</html>

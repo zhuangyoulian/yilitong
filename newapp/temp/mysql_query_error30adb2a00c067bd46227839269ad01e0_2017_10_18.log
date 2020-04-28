@@ -1,0 +1,300 @@
+2017-10-18 18:15:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6002\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 18:15:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6003\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 18:15:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6004\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 18:16:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6005\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 18:18:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6006\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 18:20:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6008\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 18:22:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount) values(\'6010\', 3354, \'【爱美丽】泊泉雅正品 活性炭深层清洁洗发露 300毫升 全国包邮\', \'TP0003354\', 1, 19.99,9.90,\'\',\'\',\'\',\'\',\'9.90\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'goods_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 19:21:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,app_prom_img,goods_ids,ad_height,ad_width,description as description_note from `ylt_tp`.`ylt_prom_goods` where start_time < 1508325719 and end_time > 1508325719',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'ad_height\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 19:22:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,app_prom_img,goods_ids,ad_height,ad_width,description as description_note from `ylt_tp`.`ylt_prom_goods` where start_time < 1508325733 and end_time > 1508325733',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'ad_height\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 19:22:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,app_prom_img,goods_ids,ad_height,ad_width,description as description_note from `ylt_tp`.`ylt_prom_goods` where start_time < 1508325737 and end_time > 1508325737',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'ad_height\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 19:22:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,app_prom_img,goods_ids,ad_height,ad_width,description as description_note from `ylt_tp`.`ylt_prom_goods` where start_time < 1508325765 and end_time > 1508325765',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'ad_height\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-10-18 19:23:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select type,app_prom_img,goods_ids,ad_height,ad_width,description as description_note from `ylt_tp`.`ylt_prom_goods` where start_time < 1508325796 and end_time > 1508325796',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'ad_height\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

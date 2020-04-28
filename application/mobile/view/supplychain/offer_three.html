@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>身份信息</title>
+		<link rel="stylesheet" href="__XCSS__/iconfont.css">
+		<link rel="stylesheet" href="__XCSS__/normalize.css">
+		<link rel="stylesheet" href="__XCSS__/public.css">
+		<link rel="stylesheet" href="__XCSS__/information.css">
+
+
+	</head>
+	<body>
+		<div id="app" class="flexc h bggrey">
+			<!-- 标题 -->
+			<header class="bgf">
+				<div class="flexr p10 head bbe">
+					<span class="iconfont icon-fanhui em1.4" @click="goback"></span>
+					<div class="flex1 title c">身份信息</div>
+				</div>
+			</header>
+
+
+			<!-- 主要内容区 -->
+			<section class="main flex1 pt10 oa">
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">公司名称</div>
+					<div class="flex1 r">
+						<input class="placeholder" placeholder="请填写公司名称" value="{firm}" v-model="firm" style="width: 15rem;">
+					</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">联系人</div>
+					<div class="flex1 r">
+						<input class="placeholder" placeholder="请填写联系人姓名" value="{contact}" v-model="contact">
+					</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">联系方式</div>
+					<div class="flex1 r">
+						<input class="placeholder" type="number" name="mobile" placeholder="请填写手机号" value="{mobileNo}" v-model.number="mobileNo">
+					</div>
+				</div>
+				<!--<div class="box flexr">-->
+					<!--<div class="left">*</div>-->
+					<!--<div class="">手机验证码</div>-->
+					<!--<div class="flex1 r pr5">-->
+						<!--<input class="placeholder" id="tel_tab_div" type="number" placeholder="请输入短信验证码" value="{verify}" v-model.number="verify">-->
+					<!--</div>-->
+					<!--<div>-->
+						<!--<div class="gain bgmain f13 cw" v-show="!showTime"  @click="clickGain">获取验证码</div>-->
+						<!--<div class="gain bggrey2 cw" v-show="showTime">{{time}}</div>-->
+					<!--</div>-->
+
+				<!--</div>-->
+
+
+			</section>
+
+
+			<!-- 底部 -->
+			<footer>
+				<div id="foot" v-show="showNext">
+					<p class="commit bgmain cf" @click="present">提交报价</p>
+				</div>
+			</footer>
+		</div>
+		<script src="__XJS__/vue.js"></script>
+		<script src="__XJS__/vue-resource.js"></script>
+		<script src="__PUBLIC__/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+
+
+
+			// 监听window的变化
+			window.addEventListener('resize', function() {
+				var clientHeight = document.documentElement.clientHeight;
+				app.clientHeight = clientHeight;
+				console.log('可见区域高度:' + clientHeight);
+				if (clientHeight < 400) {
+					app.showNext = false;
+
+				} else {
+					app.showNext = true;
+				}
+
+			});
+			var temTime; // 	临时倒计时
+			var app = new Vue({
+				el: "#app",
+				data: {
+					firm: "<?php if($listSupp['company_name']){ echo $listSupp['company_name']; }else{ echo $listuser['company_name']; } ?>", //公司名称
+					contact: "<?php if($listSupp['user']){ echo $listSupp['user']; }else{ echo $listuser['contacts_name']; } ?>", //联系人
+					mobileNo: "<?php if($listSupp['phone']){ echo $listSupp['phone']; }else{ echo $listuser['contacts_phone']; } ?>", //联系方式
+					verify: "", // 手机验证码
+					showTime: false, // 显倒计时
+					time: 60, // 剩余时间
+					allSubmitData: {}, // 存储所有要提交的数据
+					showNext: true, // 显示提交报价
+				},
+				directives: {
+
+				},
+				methods: {
+					goback: function(e) { // 返回上一页
+						history.back(-1);
+					},
+					clickGain: function() { // 点击获取验证码
+
+						// 手机号验证
+						var regTel = new RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57]|19[9])[0-9]{8}$/);
+						if (!regTel.test(this.mobileNo)) {
+							alert("请填写正确的手机号");
+							return false;
+						}
+
+						this.showTime = true;
+						this.setTime01();
+
+//						// 发送手机短信
+//						var mobile = $('input[name="mobile"]').val();
+//						//alert(mobile);
+//						var url = "/index.php?m=Home&c=Api&a=send_validate_code&scene=1&type=2&mobile="+mobile;
+//						$.get(url,function(res){
+//							if(res.status == 1)
+//							{
+//								$('#count_down').attr("disabled","disabled");
+//								intAs = 90; // 手机短信超时时间
+//								jsInnerTimeout('count_down',intAs);
+//								layer.alert(res.msg, {icon: 1});
+//							}else{
+//								layer.alert(res.msg, {icon: 2});
+//							}
+//						})
+//						// 发送手机短信
+
+
+					},
+					setTime01: function() { // 	时间设置
+						var that = this;
+						if (that.time <= 0) {
+							that.showTime = false;
+							that.time = 60;
+						} else {
+							that.setTime02(that.time);
+						}
+					},
+					setTime02: function(time) {
+						var that = this;
+						if (time <= 0) {
+							that.showTime = false;
+							clearTimeout(temTime);
+							return false;
+						}
+						temTime = setTimeout(function() {
+							that.time = --time;
+							console.log("time:" + time);
+							that.setTime01();
+						}, 1000)
+
+					},
+					present: function(e) { // 提交报价
+						console.log("点击提交报价:");
+						var objData = {
+							firm: this.firm,
+							contact: this.contact,
+							mobileNo: this.mobileNo,
+							verify: this.verify,
+						}
+						console.log(objData);
+
+						// 必填项验证
+						//if (!this.firm || !this.contact || !this.mobileNo || !this.verify) {
+						if (!this.firm || !this.contact || !this.mobileNo ) {
+							this.allSubmitData = null;
+							alert("请先填完所有带*的必填项");
+							return false;
+						}
+						// 手机号验证
+						var regTel = new RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57]|19[9])[0-9]{8}$/);
+						if (!regTel.test(this.mobileNo)) {
+							alert("请填写正确的手机号");
+							return false;
+						}
+//						var regNumber = new RegExp(/^\d+(\.\d+)?$/);
+//						if (!regNumber.test(this.verify)) {
+//							alert("验证码只能是数字");
+//							this.verify = "";
+//							return;
+//						}
+
+						this.allSubmitData = objData; //  所有要提交的数据
+						// this.submitData();
+						console.log(this.allSubmitData);
+						// return;
+						console.log("进入下一页...");
+
+						$.ajax({
+							type:'POST',
+							url:"{:Url('Supplychain/offer_three')}",
+							dataType:'json',
+							data:this.allSubmitData,
+							success:function(data){
+								//console.log(data);
+								if(date=0){
+									console.log('数据库入库失败！');
+								}else{
+									console.log(data+'提交成功！');
+									window.location.href="{:Url('Supplychain/offer_four')}";
+								}
+							},
+							error:function(data){
+								console.log(data);
+								console.log('提交失败！');
+								//alert('系统繁忙！请重试');
+							}
+						});
+						//location.href = "./particulars.html"
+					},
+
+				}
+
+
+			})
+		</script>
+	</body>
+</html>

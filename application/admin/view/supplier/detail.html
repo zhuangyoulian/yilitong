@@ -1,0 +1,400 @@
+<include file="public/layout" />
+<style>
+    td{height:40px;line-height:40px; padding-left:20px;}
+    .span_1{
+        float:left;
+        margin-left:0px;
+        height:130px;
+        line-height:130px;
+    }
+    .span_1 ul{list-style:none;padding:0px;}
+    .span_1 ul li{
+        border:1px solid #CCC;
+        height:40px;
+        padding:0px 10px;
+        margin-left:-1px;
+        margin-top:-1px;
+        line-height:40px;
+    }
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>入驻商管理 - 入驻商信息</h3>
+                <h5>网站系统入驻商家管理信息</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="user_form" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label>入驻商家公司名称</label>
+                </dt>
+				 <dd class="opt">{$su.company_name}</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>商铺名称</label>
+                </dt>
+				<dd class="opt">
+				<input id="supplier_name"  name="supplier_name" value="{$su.supplier_name}" class="input-txt" type="text">
+				</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>店铺简介</label>
+                </dt>
+                <dd class="opt">
+                    <input id="introduction"  name="introduction" value="{$su.introduction}" class="input-txt" type="text">
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>公司所在地</label>
+                </dt>
+                <dd class="opt">{$region_list[$su['province']]['name']}，{$region_list[$su['city']]['name']}，{$region_list[$su['area']]['name']}
+,{$su.address} </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="email">电子邮箱</label>
+                </dt>
+                <dd class="opt">
+                    <input id="email"  name="email" value="{$su.email}" class="input-txt" type="text">
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="qq">QQ</label>
+                </dt>
+                <dd class="opt">
+                    <input id="company_type" name="qq" value="{$su.qq}" class="input-txt" type="text">
+                    <span class="err"></span> </dd>
+            </dl>
+			 <dl class="row">
+                <dt class="tit">
+                    <label class="qq">公司规模</label>
+                </dt>
+                <dd class="opt">
+                    <input id="guimo" name="guimo" value="{$su.guimo}" class="input-txt" type="text">
+                    <span class="err"></span> </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>营业执照电子版</label>
+                </dt>
+				    
+       
+    
+       
+                <dd class="opt">
+					<a href="{$su.zhizhao}" target="_Blank"><img src="{$su.zhizhao}"  width="80px" height="80px" /></a>
+					<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+						<span class="show">
+						  <a id="img_a" class="nyroModal" rel="gal" href="{$su.zhizhao}">
+							<i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.zhizhao}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+						  </a>
+						</span>
+						<span class="type-file-box">            
+						<input type="text" id="zhizhao" name="zhizhao" value="{$su.zhizhao}" class="type-file-text">            
+						<input type="button" name="button" onClick="GetUploadify(1,'zhizhao','business','')" value="上传图片" class="type-file-button"> 
+						 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+						</span>
+				  </div>
+				</dd>
+				
+				
+					
+		  
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>申请时间</label>
+                </dt>
+                <dd class="opt">{$su.add_time|date='Y-m-d H:i',###}</dd>
+            </dl>  
+			<!--<dl class="row">
+                <dt class="tit">
+                    <label>联系人</label>
+                </dt>
+                <dd class="opt"><input id="contacts_name" name="contacts_name" value="{$su.contacts_name}" class="input-txt" type="text"></dd>
+            </dl>  -->
+			<dl class="row">
+                <dt class="tit">
+                    <label>联系人电话</label>
+                </dt>
+                <dd class="opt">  <input id="contacts_phone" name="contacts_phone" value="{$su.contacts_phone}" class="input-txt" type="text"></dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label>公司座机</label>
+                </dt>
+                <dd class="opt">  <input id="phone_number" name="phone_number" value="{$su.phone_number}" class="input-txt" type="text"></dd>
+            </dl>
+			  
+			 <dl class="row">
+                <dt class="tit">
+                    <label>营业执照号</label>
+                </dt>
+                <dd class="opt">{$su.business_licence_number}</dd>
+            </dl>
+		 
+			 <dl class="row">
+                <dt class="tit">
+                    <label>法定经营范围</label>
+                </dt>
+                <dd class="opt">{$su.business_sphere}</dd>
+            </dl>
+			<if $su.organization_code neq ''>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>组织机构代码</label>
+                </dt>
+                <dd class="opt">{$su.organization_code}</dd>
+            </dl>
+			</if>
+			<if $su.organization_code_electronic neq ''>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>组织机构代码证电子版</label>
+                </dt>
+                <dd class="opt">
+					<a href="{$su.organization_code_electronic}" target="_Blank"><img src="{$su.organization_code_electronic}" width="80px" height="80px" /></a>
+					<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+						<span class="show">
+						  <a id="img_a2" class="nyroModal" rel="gal" href="{$su.organization_code_electronic}">
+							<i id="img_i2" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.organization_code_electronic}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+						  </a>
+						</span>
+						<span class="type-file-box">            
+						<input type="text" id="organization_code_electronic" name="organization_code_electronic" value="{$su.organization_code_electronic}" class="type-file-text">            
+						<input type="button" name="button" onClick="GetUploadify(1,'organization_code_electronic','business','')" value="上传图片" class="type-file-button"> 
+						 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back2')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+						</span>
+				    </div>
+				</dd>
+				
+					
+			  
+            </dl>
+			</if>
+			   <if $su.general_taxpayer neq ''>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>一般纳税人证明</label>
+                </dt>
+                <dd class="opt"><a href="{$su.general_taxpayer}" target="_Blank"><img src="{$su.general_taxpayer}" width="80px" height="80px" /></a></dd>
+            </dl>
+			</if>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>银行账号</label>
+                </dt>
+                <dd class="opt"><input name="bank_account_number" id=" bank_account_number" value="{$su.bank_account_number}" class="input-txt" type="text"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>支行名称：</label>
+                </dt>
+                <dd class="opt"><if $su.bank_account_name neq ''><input name="bank_account_name" id=" bank_account_name" value="{$su.bank_account_name}" class="input-txt" type="text"><else><input name="bank_branch" id=" bank_branch" value="{$su.bank_branch}" class="input-txt" type="text"></if></dd>
+            </dl>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>开户名称</label>
+                </dt>
+                <dd class="opt"><input name="bank_name" id=" bank_name" value="{$su.bank_name}" class="input-txt" type="text"></dd>
+            </dl>
+
+				 <dl class="row">
+                <dt class="tit">
+                    <label>保证金</label>
+                </dt>
+                <dd class="opt"><input name="supplier_money" id="supplier_money" value="{$su.supplier_money}" class="input-txt" type="text"></dd>
+            </dl>
+				 <dl class="row">
+                <dt class="tit">
+                    <label>运营姓名</label>
+                </dt>
+                <dd class="opt"><input name="operating_name" id="operating_name" value="{$su.operating_name}" class="input-txt" type="text"></dd>
+            </dl>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>运营者授权证书</label>
+                </dt>
+                <dd class="opt">
+					<a href="{$su.proxy}" target="_Blank"><img src="{$su.proxy}"  width="80px" height="80px" /></a>
+					<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-left:10px;">
+					<span class="show">
+					  <a id="img_a3" class="nyroModal" rel="gal" href="{$su.proxy}">
+						<i id="img_i3" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.proxy}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+					  </a>
+					</span>
+					<span class="type-file-box">            
+					<input type="text" id="proxy" name="proxy" value="{$su.proxy}" class="type-file-text">            
+					<input type="button" name="button" onClick="GetUploadify(1,'proxy','business','')" value="上传图片" class="type-file-button"> 
+					 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back3')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+					</span>
+				  </div>
+					
+				</dd>
+				
+					
+			  
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>店铺Logo</label>
+                </dt>
+                <dd class="opt"><a href="{$su.logo}" target="_Blank"><img src="{$su.logo}"  width="80px" height="80px" /></a>
+				<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+						<span class="show">
+						  <a id="img_a6" class="nyroModal" rel="gal" href="{$su.logo}">
+							<i id="img_i6" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.logo}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+						  </a>
+						</span>
+						<span class="type-file-box">            
+						<input type="text" id="logo" name="logo" value="{$su.logo}" class="type-file-text">            
+						<input type="button" name="button" onClick="GetUploadify(1,'logo','business','')" value="上传图片" class="type-file-button"> 
+						 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back6')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+						</span>
+					  </div>
+				</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>开户许可证</label>
+                </dt>
+                <dd class="opt">
+                    <a href="{$su.bank_licence_electronic}" target="_Blank"><img src="{$su.bank_licence_electronic}"  width="80px" height="80px" /></a>
+                    <div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+                        <span class="show">
+                          <a id="img_a4" class="nyroModal" rel="gal" href="{$su.bank_licence_electronic}">
+                            <i id="img_i4" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.bank_licence_electronic}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                          </a>
+                        </span>
+                        <span class="type-file-box">            
+                        <input type="text" id="bank_licence_electronic" name="bank_licence_electronic" value="{$su.bank_licence_electronic}" class="type-file-text">            
+                        <input type="button" name="button" onClick="GetUploadify(1,'bank_licence_electronic','business','')" value="上传图片" class="type-file-button"> 
+                         <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back4')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+                        </span>
+                      </div>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>经营许可证</label>
+                </dt>
+                <dd class="opt">
+                    <a href="{$su.business_certificate}" target="_Blank"><img src="{$su.business_certificate}"  width="80px" height="80px" /></a>
+                    <div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+                        <span class="show">
+                          <a id="img_a7" class="nyroModal" rel="gal" href="{$su.business_certificate}">
+                            <i id="img_i7" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.business_certificate}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                          </a>
+                        </span>
+                        <span class="type-file-box">            
+                        <input type="text" id="business_certificate" name="business_certificate" value="{$su.business_certificate}" class="type-file-text">            
+                        <input type="button" name="button" onClick="GetUploadify(1,'business_certificate','business','')" value="上传图片" class="type-file-button"> 
+                         <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back7')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+                        </span>
+                      </div>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>入驻协议</label>
+                </dt>
+				<dd class="opt">
+					<a href="{$su.reading_protocol}" target="_Blank"><img src="{$su.reading_protocol}"  width="80px" height="80px" /></a>
+					<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+						<span class="show">
+						  <a id="img_a5" class="nyroModal" rel="gal" href="{$su.reading_protocol}">
+							<i id="img_i5" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.reading_protocol}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+						  </a>
+						</span>
+						<span class="type-file-box">            
+						<input type="text" id="reading_protocol" name="reading_protocol" value="{$su.reading_protocol}" class="type-file-text">            
+						<input type="button" name="button" onClick="GetUploadify(1,'reading_protocol','business','')" value="上传图片" class="type-file-button"> 
+						 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back5')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
+						</span>
+					  </div>
+				</dd>
+				
+					
+				  
+            </dl>
+
+			 <dl class="row">
+                <dt class="tit">
+                    <label>审核结果</label>
+                </dt>
+                <dd class="opt"><select name="status" id="status">
+				 <option value="0" <if condition="($su[status] eq 0)">selected="selected"</if>>未审核</option>   
+				  <option value="1" <if condition="($su[status] eq 1)">selected="selected"</if>>审核通过</option>   
+				   <option value="2" <if condition="($su[status] eq 2)">selected="selected"</if>>审核不通过</option>
+					<option value="-1" <if condition="($su[status] eq -1)">selected="selected"</if>>关闭店铺</option>  				   
+				</select>  </dd>
+            </dl>
+            <div class="bot"><a href="JavaScript:void(0);" onclick="checkUserUpdate();" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+        </div>
+    </form>
+	<script type="text/javascript">
+	
+function img_call_back(fileurl_tmp)
+    {
+        $("#zhizhao").val(fileurl_tmp);
+        $("#img_a").attr('href', fileurl_tmp);
+        $("#img_i").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+function img_call_back2(fileurl_tmp)
+    {
+        $("#organization_code_electronic").val(fileurl_tmp);
+        $("#img_a2").attr('href', fileurl_tmp);
+        $("#img_i2").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+function img_call_back3(fileurl_tmp)
+    {
+        $("#proxy").val(fileurl_tmp);
+        $("#img_a3").attr('href', fileurl_tmp);
+        $("#img_i3").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+function img_call_back4(fileurl_tmp)
+    {
+        $("#bank_licence_electronic").val(fileurl_tmp);
+        $("#img_a4").attr('href', fileurl_tmp);
+        $("#img_i4").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+function img_call_back5(fileurl_tmp)
+    {
+        $("#reading_protocol").val(fileurl_tmp);
+        $("#img_a5").attr('href', fileurl_tmp);
+        $("#img_i5").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+function img_call_back6(fileurl_tmp)
+    {
+        $("#logo").val(fileurl_tmp);
+        $("#img_a6").attr('href', fileurl_tmp);
+        $("#img_i6").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+function img_call_back7(fileurl_tmp)
+    {
+        $("#business_certificate").val(fileurl_tmp);
+        $("#img_a7").attr('href', fileurl_tmp);
+        $("#img_i7").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+	
+ function checkUserUpdate(){
+
+        $('#user_form').submit();
+    }
+</script>
+</div>
+</body>
+</html>

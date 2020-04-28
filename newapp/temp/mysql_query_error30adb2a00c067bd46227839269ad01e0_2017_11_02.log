@@ -1,0 +1,100 @@
+2017-11-02 15:28:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=158228  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-02 15:28:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=158228  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-02 15:29:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=158228  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-02 17:07:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=156552  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

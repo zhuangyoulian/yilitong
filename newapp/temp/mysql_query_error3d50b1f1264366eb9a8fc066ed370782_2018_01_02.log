@@ -1,0 +1,375 @@
+2018-01-02 11:32:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6386\', 4404, \'麻阳冰糖橙10斤装\', \'TP0004404\', 1, 45.00,26.80,\'5055\',\'规格:10斤装（小果）\',\'\',\'\',\'26.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 11:32:54
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6387\', 4404, \'麻阳冰糖橙10斤装\', \'TP0004404\', 1, 45.00,26.80,\'5055\',\'规格:10斤装（小果）\',\'\',\'\',\'26.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 11:32:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6388\', 4404, \'麻阳冰糖橙10斤装\', \'TP0004404\', 1, 45.00,26.80,\'5055\',\'规格:10斤装（小果）\',\'\',\'\',\'26.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 11:32:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6389\', 4404, \'麻阳冰糖橙10斤装\', \'TP0004404\', 1, 45.00,26.80,\'5055\',\'规格:10斤装（小果）\',\'\',\'\',\'26.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 11:32:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6390\', 4404, \'麻阳冰糖橙10斤装\', \'TP0004404\', 1, 45.00,26.80,\'5055\',\'规格:10斤装（小果）\',\'\',\'\',\'26.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 11:32:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6391\', 4404, \'麻阳冰糖橙10斤装\', \'TP0004404\', 1, 45.00,26.80,\'5055\',\'规格:10斤装（小果）\',\'\',\'\',\'26.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6393\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6394\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6395\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6396\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6397\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6398\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6399\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6400\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-02 17:16:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6401\', 3655, \'Binwan清洁护肤系列礼盒 化妆棉 洗脸器 发带洗脸巾 Face四合一\', \'TP0003655\', 1, 158.00,108.00,\'\',\'\',\'\',\'\',\'108.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

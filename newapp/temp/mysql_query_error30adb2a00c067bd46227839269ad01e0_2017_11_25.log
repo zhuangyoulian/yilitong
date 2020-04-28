@@ -1,0 +1,25 @@
+2017-11-25 20:37:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'UPDATE `ylt_tp`.`ylt_cart` set goods_num = goods_num+-17 WHERE user_id=163279 AND spec_key=\'\' AND goods_id=1803 ',
+  ),
+  2 => 
+  array (
+    'error' => 'BIGINT UNSIGNED value is out of range in \'(`ylt_tp`.`ylt_cart`.`goods_num` + -(17))\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1690,
+  ),
+)
+

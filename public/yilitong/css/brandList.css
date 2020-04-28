@@ -1,0 +1,77 @@
+.c{
+clear:both;
+}
+.connet{
+ width:100%;
+ background:#f9f9f9;
+}
+.contaier{
+  width:1152px !important;
+  padding:24px;
+  background:#ffffff;
+  overflow: hidden;
+}
+.list-nav{
+	height:30px;
+}
+
+.z-arrow{
+  display: inline-block;
+  float:left;
+  width: 15px;
+  height: 18px;
+  font-size:16px;
+  color:#292929;
+}
+.div-left,.div-right{
+  float: left;
+}
+.div-left a{
+  display:block;
+  width:40px;
+  font-size:18px;
+  color:#030303;
+  cursor: pointer;
+}
+.div-right a{
+  display: block;
+  width:200px;
+  font-size:18px;
+  color:#707070;
+  cursor: pointer;
+}
+
+
+.word-list li{
+	padding-top:24px; 
+	overflow: hidden;
+	border-bottom: 1px solid #b8b7b6;
+}
+.word-list>li>div{
+	width: 148px;
+	height: 130px;
+	float: left;
+	margin-left: 52px;
+}
+.word-list>li>div:first-child{
+	margin-left: 4px;
+}
+.word-list>li>div>a{
+	display: block;
+	width:  146px;
+	height: 90px;
+	margin-bottom: 10px;
+	border: 1px solid #b8b7b6;
+
+}
+.word-list>li>div>a>img{
+	width: 146px;
+	height: 90px;
+
+}
+.word-list>li>div>p{
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+
+}

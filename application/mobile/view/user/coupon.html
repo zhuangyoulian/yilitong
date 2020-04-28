@@ -1,0 +1,283 @@
+<include file="public/header" title="我的优惠券" body="pore_add"/>
+
+<style>
+    body{
+        background:#fafafa !important;
+    }
+    .collect-goods-title{
+        width: 100%;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: .58rem;
+        position: relative;
+        background: #fff;
+        margin-bottom:.1rem;
+    }
+    .collect-goods-title a{
+        position: absolute;
+        left: .8rem;
+        top: .4rem;
+        display: block;
+        width: .44rem;
+        height: .8rem;
+        background: url(__MOBILE__/images/btn_more@3x.png) no-repeat;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        -ms-background-size: 100% auto;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+    }
+
+    /* 弹出框字体大小(不能删) css */
+    .layui-m-layercont{
+        font-size: .6rem;
+    }
+
+    .coupon-tab{
+        width: 100%;
+        height: 1.4rem;
+        line-height: 1.4rem;
+        background: #fff;
+        overflow: hidden;
+
+    }
+    .coupon-tab li{
+        float: left;
+        width: 33%;
+        text-align: center;
+        font-size: .56rem;
+        color: #333;
+        position: relative;
+    }
+    .coupon-tab li .cur{
+        display: inline-block;
+        width: 40%;
+        height: 2px;
+        background: #e6002d;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .coupon-list{
+        width: 100%;
+        padding: .5rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .coupon-col,.coupon-col li,.coupon-col li a{
+        width: 100%;
+    }
+    .coupon-col{
+        display: none;
+    }
+    .coupon-list .coupon-col-show{
+        display: block;
+    }
+    .coupon-col li{
+        margin-bottom: .5rem;
+    }
+
+    .coupon-col-style1 li a{
+        background: url(__MOBILE__/images/used_coupons@2x.png) no-repeat;
+
+    }
+    .coupon-col-style2 li a{
+        background: url(__MOBILE__/images/unuse_coupons@2x.png) no-repeat;
+
+    }
+    .coupon-col li a{
+        display: block;
+        padding: 0 .2rem .2rem .2rem;
+        height: 4.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: .2rem;
+        text-decoration: none;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        -ms-background-size: 100% 100%;
+        background-size: 100% 100%;
+    }
+    .coupon-col li a dl{
+        overflow: hidden;
+        height: 3rem;
+        margin-bottom: 0;
+        /*background: blue;*/
+    }
+    .coupon-col li a dl dt{
+        float: right;
+        padding: .25rem .8rem;
+        border-radius: .16rem;
+        background: #fff;
+        font-size: .5rem;
+        font-weight: normal;
+        margin-top: .8rem;
+        margin-right: .5rem;
+    }
+    .coupon-col li a dl dd{
+        float: left;
+        color: #fff;
+    }
+    .coupon-col li a dl dd:nth-of-type(1){
+        padding: 0 .5rem;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: .8rem;
+    }
+    .coupon-col li a dl dd:nth-of-type(2){
+        font-size: .52rem;
+        height: 1.5rem;
+        margin-top: .75rem;
+    }
+    .coupon-col li a dl dd:nth-of-type(2) p{
+        margin: 0;
+        padding: 0;
+    }
+    .coupon-col li a h2{
+        height: 1.3rem;
+        line-height: 1.5rem;
+        font-size: .52rem;
+        font-weight: normal;
+        color: #fff;
+        margin-top: 0;
+        padding-left: .5rem;
+    }
+    .coupon-col-style2 li a dl dt{
+        color: #999;
+    }
+    .line-limit-length {
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    /*//文本不换行，这样超出一行的部分被截取，显示...*/
+
+    }
+</style>
+
+<div class="collect-goods-title"><a href="javascript:history.go(-1);"></a>我的优惠券</div>
+
+<!-- 优惠券 start -->
+<ul class="coupon-tab">
+    <li>未使用</li>
+    <li>已使用</li>
+    <li>已过期</li>
+</ul>
+
+<div class="coupon-list">
+    <!-- 去使用 start -->
+    <ul class="coupon-col coupon-col-style1 coupon-col-show">
+        <volist name="list" id="v">
+           <li>
+                <if condition="$v[coupon_type] eq 0 ">
+                <a href="{:Url('Goods/goodsInfo',array('id'=>$v[goods_id]))}">
+                <elseif condition="$v[coupon_type] eq 1 ">
+                <a href="{:Url('Coupon/coupon_goodsList',array('id'=>$v['id']))}">
+                </if>
+                    <dl>
+                        <dt>去使用</dt>
+                        <dd><span>{$v[money]}</span><span>元</span></dd>
+                        <dd>
+                            <p><span>满{$v[condition]}</span><span>元</span>可使用</p>
+                            <p>{$v[send_time]|date="Y.m.d",###}—{$v[use_end_time]|date="Y.m.d",###}</p>
+                        </dd>
+                    </dl>
+                    <h2 class="line-limit-length"><span>优惠券</span>  
+                    <if condition="$v[coupon_type] eq 1">
+                    <span style="padding-left: 120px" >适用店铺商品：
+                    {$v[supplier_name]}</span></h2>
+                    </if>
+                        
+                    <if condition="$v[coupon_type] eq 0">
+                    <span style="padding-left: 120px" >适用产品：
+                    {$v[goods_name]}</span></h2> 
+                    </if>                           
+                </a>
+            </li>
+        </volist>
+        
+    </ul>
+    <!-- 去使用 end -->
+
+     <!-- 已使用 start -->
+    <ul class="coupon-col coupon-col-style2">
+        <volist name="use_list" id="v1">
+            <li>
+                <a href="javascript:void(0);">
+                    <dl>
+                        <dt>已使用</dt>
+                        <dd><span>{$v1[money]}</span><span>元</span></dd>
+                        <dd>
+                            <p><span>{$v1[money]}</span><span>元</span>直减券</p>
+                            <p>{$v1[send_time]|date="Y.m.d",###}—{$v1[use_end_time]|date="Y.m.d",###}</p>
+                        </dd>
+                    </dl>
+                    <h2>优惠券</h2>
+                </a>
+            </li>
+        </volist>
+    </ul>
+    <!-- 已使用 end -->
+
+    <!-- 已过期 start -->
+    <ul class="coupon-col coupon-col-style2">
+        <volist name="end_list" id="v2">
+            <li>
+                <a href="javascript:void(0);">
+                    <dl>
+
+                        <dt>已过期</dt>
+                        <dd><span>{$v2[money]}</span><span>元</span></dd>
+                        <dd>
+                            <p><span>{$v2[money]}</span><span>元</span>直减券</p>
+                            <p>{$v2[send_time]|date="Y.m.d",###}—{$v2[use_end_time]|date="Y.m.d",###}</p>
+                        </dd>
+                    </dl>
+                    <h2>优惠券</h2>
+                </a>
+            </li> 
+        </volist>     
+    </ul>
+    <!-- 已过期 end -->
+</div>
+
+<!-- 优惠券 end -->
+
+ <!--底部导航-start-->
+<include file="public/footer"/>
+<!--底部导航-end-->
+
+<script src="__MOBILE__/js/mobile_layer.js"></script>
+
+
+<script>
+    $(function () {
+        $('.coupon-tab li').each(function () {
+            $('.coupon-tab li').eq(0).append("<span class='cur'></span>");
+            $(this).click(function () {
+                var index = $(this).index();
+                var cur = "<span class='cur'></span>"
+                $('.coupon-tab li span').remove(); //把所有先remove
+                $(this).append(cur);     //选中才添加span
+                $('.coupon-list .coupon-col').eq(index).addClass('coupon-col-show').siblings('.coupon-col').removeClass('coupon-col-show');
+            })
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<include file="public/header" title="专区列表"/>
+<link rel="stylesheet" href="__MOBILE__/css/mobile.css">
+<style>
+    body{
+        background: #fff;
+        padding-top: 2rem;
+    }
+    .topAS{
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        z-index:99999;
+    }
+  	.catalogTab a{
+        text-decoration: none;
+    }
+    .catalogTab-list .supplier-col .supplier-info h6 {
+        font-size: 0.8rem;
+        color: #333;
+        margin-bottom: .2rem;
+        height: 1.3rem;
+    }
+    .catalogTab-list .supplier-col .supplier-info p {
+        font-size: .48rem;
+        color: #888;
+        line-height: .6rem;
+        height: 1.1rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .catalogTab-list {
+         background: #ffffff; 
+    }
+    .catalogTab-list .supplier-col .supplier-logo img {
+      width: 90%;
+      height: 90%;
+    }
+    .catalogTab-list .supplier-col .supplier-logo {
+        height: 3.9rem;
+    }
+</style>
+<div class="topAS">
+    <div class="classreturn">
+        <div class="content">
+            <div class="ds-in-bl return">
+                <a href="/"><img src="__STATIC__/images/logo.png" alt="一礼通"></a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- 星级 评分 start -->
+    <div class="catalogTab-list">
+        <div class="catalogTab-col dedicated-list" id="dedicated-list">
+        </div>
+    </div>
+    <!-- 星级 评分 end -->
+    <div style="height: 2.5rem"></div>
+
+    <!--底部-start-->
+    <include file="public/footer"/>
+    <!--底部-end-->
+<script type="text/javascript" src="__STATIC__/mobile/js/sourch_submit.js"></script>
+<script>
+    var page = 1;
+    function ajax_sourch_submit(){
+        if(page > 10){
+            return;
+        }
+        $.ajax({
+            type : "get",
+            url:"/index.php?m=Mobile&c=Goods&a=ajax_dedicated_list&p="+page,
+            success: function(data)
+            {
+                if(data){
+                    $("#dedicated-list").append(data);
+                }
+            }
+        });
+        page++;
+    }
+    ajax_sourch_submit();
+
+
+    $(function () {
+
+
+        //点击切换2 3级分类
+        var array=new Array();
+        $('.category1 li').each(function(){
+            array.push($(this).position().top-0);
+        });
+        $('.branchList').eq(0).show().siblings().hide();
+        $('.category1 li').click(function() {
+            var index = $(this).index() ;
+            $('.category1').delay(200).animate({scrollTop:array[index]},300);
+            $(this).addClass('cur').siblings().removeClass();
+            $('.branchList').eq(index).show().siblings().hide();
+            $('.category2').scrollTop(0);
+        });
+
+    });
+</script>
+	</body>
+</html>

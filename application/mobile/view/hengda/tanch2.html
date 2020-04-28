@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家电预约</title>
+    <style>
+        * {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        
+        .wrap {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: rgba(0, 0, 0, 1);
+            opacity: 0.7;
+            z-index: 1;
+        }
+        
+        .tachuan {
+            width: 300px;
+            background: #ffffff;
+            z-index: 3;
+            box-sizing: border-box;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .tachuan .titl {
+            padding-top: 16px;
+            background: #CC0000;
+            padding-left: 14px;
+            padding-right: 14px;
+            font-size: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .titl>.icon_img {
+            width: 44px;
+            height: 40px;
+        }
+        
+        .titl>span {
+            color: #ffffff;
+            font-size: 15px;
+        }
+        
+        .titl>.icon_close {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .tachuan .news_detail {
+            padding-left: 14px;
+            padding-right: 14px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+            padding-top: 30px;
+            padding-bottom: 11.5px;
+        }
+        
+        .tachuan .news_detail>p {
+            margin-bottom: 14px;
+            line-height: 1.5;
+            color: #000000;
+        }
+        
+        .tachuan .news_detail>p>span {
+            font-weight: 700;
+        }
+        
+        .tachuan .news_detail>p.right {
+            color: #333333;
+            font-size: 12px;
+            text-align: right;
+            margin-bottom: 8.5px;
+        }
+    </style>
+    <script>
+        function closeW() {
+            document.getElementById("warp").style.display = "none";
+            document.getElementById("tac").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrap" id="warp"></div>
+    <div class="tachuan" id="tac">
+        <div class="titl">
+            <img src="__MOBILE__/images/img@2x.png" alt="" class="icon_img">
+            <span>家电配送延期通知</span>
+            <span  class="icon_close"></span>
+            <!-- <img src="__MOBILE__/images/icon_close@2x.png" alt="" class="icon_close" onclick="closeW()"> -->
+        </div>
+        <div class="news_detail">
+            <!-- <p>尊敬的各位业主您们好：</p>
+            <p>受疫情期间防疫防控、道路管制、部分物流线路停运及安装师傅延迟复工等因素影响，
+                <span>家电配送时间统一延至3月25日以后，具体配送时间请等候另行通知。</span></p>
+            <p>大家要一起加油，没有一个冬天不能逾越，没有一个春天不会来临！2020，我们能行！</p>
+            <p class="right">礼至礼品集团</p>
+            <p class="right">2020年2月20日</p> -->
+
+            <p>尊敬的业主朋友：</p>
+            <p>受疫情影响，复工复产缓慢等原因，我司对系列楼盘的家电配送事项做如下通知：
+            <p>一、已在线上提交过预约申请或兑换申请的业主朋友，我司配送时间统一顺延至5月16-17日。</p>
+            <p>二、对于还没有进行预约配送的业主朋友，我司会在4月15日后在系统开放预约入口，请及时进行预约配送安装的服务。</p>
+            <p>三、敬请登陆我司：“礼至礼品”、“礼至集团”、“一礼通”等各官方微信，点击“家电预约”查看动态。请关注我司发布的最新信息，或致电400-089-7879、13322930317咨询。</p>
+            <p>给您带来的不便，敬请谅解。</p>
+            <p class="right">礼至礼品集团</p>
+            <p class="right">2020年3月25日</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

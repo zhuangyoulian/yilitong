@@ -1,0 +1,25 @@
+2018-09-12 14:14:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select C.id as cart_id,C.goods_id,C.market_price,C.goods_price,C.spec_key as spec_key_id,C.spec_key_name as spec_key,C.goods_num,C.goods_sn,C.goods_name,C.add_time,C.selected,C.commission_price,G.store_count,C.prom_type,C.prom_id,G.original_img,G.supplier_id,G.is_designer,G.is_free_shipping from `ylt_tp`.`ylt_cart` as C left join `ylt_tp`.`ylt_goods` as G ON C.goods_id=G.goods_id where  C.user_id=163435 GROUP BY G.goods_id,G.supplier_id,C.spec_key,C.prom_id,C.prom_type order by C.id DESC',
+  ),
+  2 => 
+  array (
+    'error' => 'File \'./ylt_tp/ylt_goods.MYD\' not found (Errcode: 13 - Permission denied)',
+  ),
+  3 => 
+  array (
+    'errno' => 29,
+  ),
+)
+

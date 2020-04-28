@@ -1,0 +1,354 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    /* background: url('../img/bg@2x.png') no-repeat; */
+    background: url('/public/yilitong/images/bg@2x.png') no-repeat;
+    background-size: 100% auto;
+    /* background-size: cover; */
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+div {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.hz_content {
+    width: 1200px;
+    min-width: 1200px;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    margin: 0 auto;
+}
+
+.section {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 {
+    margin-top: 1124px;
+    margin-bottom: 172px;
+}
+
+.title_1 {
+    width: 338px;
+    height: 96px;
+    margin-bottom: 69px;
+}
+
+.zhuanqu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.zhuanqu_left {
+    background: #ffffff;
+    display: flex;
+    /* background: url('../img/img_line@2x.png') no-repeat; */
+    background: url('/public/yilitong/images/img_line@2x.png') no-repeat;
+    background-size: 894px 464px;
+    width: 894px;
+    height: 464px;
+    box-sizing: border-box;
+    padding-left: 62px;
+    padding-top: 57px;
+}
+
+.three_productlist {
+    display: flex;
+}
+
+.three_productlist .prod>a {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod .prod_left {
+    margin-right: 43px;
+    width: 246px;
+}
+
+.prod .prod_left .productname {
+    font-size: 26px;
+    color: #333333;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 246px;
+    font-weight: 700;
+}
+
+.prod .prod_left .futitle {
+    font-size: 20px;
+    color: #666666;
+    margin-top: 14px;
+    width: 246px;
+    margin-bottom: 27px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prod .prod_left .price {
+    font-size: 32px;
+    color: #AA181F;
+}
+
+.prod .prod_left .err {
+    color: #BABABB;
+    font-size: 20px;
+    text-decoration: line-through;
+    margin-left: 13px;
+}
+
+.prod .prod_left .gobuy {
+    width: 144px;
+    height: 48px;
+    background: rgba(170, 24, 31, 1);
+    border-radius: 10px;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.prod .three_prod_img {
+    width: 344px;
+    height: 344px;
+    margin-right: 24px;
+}
+
+.select_li {
+    display: flex;
+    flex-direction: column;
+}
+
+.select_li .seleckkuai {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 21px;
+    background: rgba(43, 165, 157, 1);
+    opacity: 0.5;
+}
+
+.select_li .seleckkuai.active {
+    background: none;
+    opacity: 1;
+}
+
+.select_li .seleckkuai .select_li .seleckkuai::last-child {
+    margin-bottom: 0px;
+}
+
+.select_li .seleckkuai>img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.zhuan_right {
+    width: 282px;
+    /* height: 304px; */
+    margin-left: 24px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zhuan_right .one_prod_img {
+    width: 282px;
+    height: 304px;
+}
+
+.zhuan_right .hengxian {
+    width: 32px;
+    height: 2px;
+    background: rgba(51, 51, 51, 1);
+    margin-top: 26px;
+    margin-bottom: 15px;
+}
+
+.zhuan_right .p1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.zhuan_right .p2 {
+    margin-bottom: 16px;
+    margin-top: 6px;
+}
+
+.zhuan_right .tomore {
+    width: 108px;
+    height: 36px;
+    background: rgba(170, 24, 31, 1);
+    border-radius: 4px;
+    text-align: center;
+    line-break: 36px;
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+    line-height: 36px;
+}
+
+.productlist {
+    margin-top: 31px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productya {
+    width: 282px;
+    box-sizing: border-box;
+    height: 387px;
+    display: flex;
+    background: #ffffff;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+
+.productya:nth-child(4n+4) {
+    margin-right: 0px;
+}
+
+.productya>img {
+    width: 282px;
+    height: 282px;
+}
+
+.productya .t1 {
+    width: 282px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 27px;
+}
+
+.productya .price_buy {
+    width: 282px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 40px;
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.productya .price_buy .price {
+    color: #AA181F;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.productya .price_buy .price .gray {
+    text-decoration: line-through;
+    color: #999999;
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 17px;
+}
+
+.productya .btnred {
+    width: 88px;
+    height: 28px;
+    background: rgba(170, 24, 31, 1);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 28px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.section3 {
+    margin-top: 158px;
+    margin-bottom: 150px;
+}
+
+.zhuan_right .hengxian2 {
+    width: 54px;
+    height: 3px;
+    background: rgba(51, 51, 51, 1);
+    margin-top: 60px;
+}
+
+.zhuan_right .p3 {
+    font-size: 24px;
+    color: #333333;
+    margin-top: 31px;
+    margin-bottom: 26px;
+    font-weight: 700;
+}
+
+.zhuan_right .p4 {
+    color: #333333;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 57px;
+    width: 184px;
+}
+
+.zhuan_right .watch_more {
+    width: 160px;
+    height: 36px;
+    background: rgba(170, 24, 31, 1);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.zhuan_right .to_consult {
+    width: 160px;
+    height: 36px;
+    border: 1px solid rgba(170, 24, 31, 1);
+    border-radius: 4px;
+    color: #AA181F;
+    font-size: 14px;
+    line-height: 36px;
+    margin-top: 13px;
+    text-align: center;
+}
+
+.prod.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}

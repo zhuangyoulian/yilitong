@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="__MOBILE__/css/maxCard.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+	</head>
+	<body>
+		<div class="maxCard">
+			<header>
+              <div class="back">
+			<a href="javascript:history.back(-1);">
+				<img src="__MOBILE__/images/icon_back_white.png">
+			</a>
+              </div>
+				<div class="headName">我的推广二维码</div>
+				<div></div>
+			</header>
+			<section>
+				<div class="maxCard_Box">
+					<div class="maxCardTop">
+						<div class="headPortrait"><img src="{$maxCard.head_pic}"></div>
+						<div class="designation">{$maxCard.nickname}</div>
+					</div>
+					<div class="maxCardCenter"><img src="{$maxCard.maxCard}"></div>
+					<div class="maxCardBottom">扫一扫识别图中二维码</div>
+				</div>
+				<div class="hint">长按图片保存到相册，即可分享给好友啦~</div>
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="__MOBILE__/css/charity/normalize.css">
+    <link rel="stylesheet" href="__MOBILE__/css/charity/business.css">
+    <link rel="stylesheet" href="__MOBILE__/css/charity/zhuanqu.css">
+    <script src="__MOBILE__/js/charity/jquery-3.4.1.min.js"></script>
+    <script src="__MOBILE__/js/charity/zhuanqu.js"></script>
+
+    <title>物资紧缺企业名录</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="shangmtop"> <img src="__MOBILE__/images/charity/icon_heart@2x.png" alt=""><span>为武汉加油，为中国加油！</span></div>
+        <div class="bank bankk">
+            <ul class="lunbo2">
+                <volist name="purchase" id="list">
+                    <li class="mid">
+                        <div class="oneline">
+                            <img src="__MOBILE__/images/charity/logo@2x.png" alt="" class="icon_logo">
+                            <span class="hospital_name">{$list.do_company}</span>
+                            <!-- <div class="telt">
+                                <img src="__MOBILE__/images/charity/icon_phone@2x.png" alt="">
+                                <a href="tel:{$list.do_phone}" class="telnum">{$list.do_phone}</a>
+                            </div> -->
+                        </div>
+                        <div class="detail_materials one">
+                            <volist name="materials_s" id="value">
+                            <div class="neir">
+                                <span class="materials_name">{$value.0}</span>
+                                <span class="materials_count">{$value.1}个</span>
+                            </div>
+                            </volist>
+                        </div>
+                        <div class="wzya">
+                            <div class="detail_materials hidden" id="showifya">
+                                <volist name="materials_ss" id="value">
+                                <div class="neir">
+                                    <span class="materials_name">{$value.0}</span>
+                                    <span class="materials_count">{$value.1}个</span>
+                                </div>
+                                </volist>
+                            </div>
+                            <div class="zhankai"><span>展开更多</span><img src="__MOBILE__/images/charity/icon_up@2x.png" alt=""></div>
+                            <div class="zhankai hidden"><span>收起</span><img src="__MOBILE__/images/charity/icon_down@2x.png" alt=""></div>
+                        </div>
+                        <div  class="tiaoz">
+                            <a href="{:Url('Mobile/Charity/charity_assign',array('do_id'=>$list['do_id']))}" class="telnum" style="color:red;">申请为它捐赠</a>
+                            <div class="telt">
+                                <img src="__MOBILE__/images/charity/icon_phone@2x.png" alt="">
+                                <a href="tel:{$list.do_phone}" class="telnum">{$list.do_phone}</a>
+                            </div>
+                        </div>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+        <a href="">
+            <a href="/Mobile/Charity/charity_assign">
+            <div class="button_love">
+                <img src="__MOBILE__/images/charity/icon_xin@2x.png" alt="">
+                    <span>爱心捐赠</span>
+            </div>
+            </a>
+        </a>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

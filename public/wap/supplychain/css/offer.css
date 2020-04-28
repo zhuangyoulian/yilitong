@@ -1,0 +1,47 @@
+body{
+        font-family: "Microsoft YaHei";
+    }
+		.detail{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			overflow: hidden;
+			position: relative;
+
+		}
+		.left{
+			height: 55px;
+			line-height: 55px;
+		}
+		input{
+			 
+            text-align: right;
+            
+            border: none;
+             }
+        .placeholder::-webkit-input-placeholder{
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+        .placeholder::-moz-placeholder{ 
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+        .placeholder:-moz-placeholder{ 
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+        .placeholder:-ms-input-placeholder{
+            color:#d9d9d9;
+            font-size: 0.9em;
+        }
+		
+
+		/*下一步*/
+		.next{
+	        border-radius: 2em;
+	        margin: 1em 4em;
+	        height: 3em;
+	        line-height: 3em;
+	        text-align: center;
+	    }

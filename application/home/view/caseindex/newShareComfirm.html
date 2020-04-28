@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no” />
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″/>
+    <meta name="keywords" content="一礼通App下载">
+    <meta name="description" content="一礼通商城，购物，礼品">
+    <title>一礼通App下载</title>
+    <link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css">
+    <style>
+        .shareBg{
+            width:100%;
+            height:auto;
+        }
+        .infos{
+            width:70%;
+            position:absolute;
+            left:50%;
+            bottom:15rem;
+            margin-left:-35%;
+        }
+        .infos .getBtn{
+            width:100%;
+            height:8rem;
+            border-radius:1rem;
+            line-height:8rem;
+            font-size:4rem;
+            margin-bottom:5rem;
+            text-align:center;
+            background:#fff106;
+            display:block;
+            color:#6b4f05;
+            /*font-weight:bold;*/
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <img src="__STATIC__/images/appBg.jpg" alt="" class="shareBg">
+    <div class="infos">
+        <a href="#" class="getBtn">立即注册</a>
+    </div>
+
+    <script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function(){
+            $('.getBtn').click(function(){
+                if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  //判断iPhone|iPad|iPod|iOS
+                    //alert(navigator.userAgent);
+                    window.location.href ="https://itunes.apple.com/cn/app/id1235378591";
+                } else if (/(Android)/i.test(navigator.userAgent)) {   //判断Android
+                    //alert(navigator.userAgent);
+                    window.location.href ="http://a.app.qq.com/o/simple.jsp?pkgname=com.lizhi.lizhimobileshop";
+                }
+            })
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作品评论-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+	<meta name="description" content="{$config['shop_info_store_desc']}" />
+
+	<link rel="stylesheet" href="__MOBILE__/css/mobile_designer.css">
+	<link rel="stylesheet" href="__MOBILE__/css/mobile_designs_style.css">
+	<link rel="stylesheet" href="__MOBILE__/css/mobile_designs_comment.css">
+
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="topSearch">
+		<a href="javascript:history.go(-1);" class="back"></a>
+		<p>评论</p>
+	</div>
+
+	<!--  评论展示 start  -->
+	<div class="comment-container">
+	<foreach name="comment_list" item="vo">
+		<div class="comment-col">
+			<h4>{$vo.user_name}</h4>
+			<!-- <p>评论去年今日此门中，人面桃花相映红。人面不知何处在，桃花依旧笑春风。</p> -->
+			<p>{$vo.content}</p>
+			<dl>
+				<!-- <dt>2017-09-20 12:45</dt> -->
+				<dt>{$vo.add_time|date='Y-m-d',###}</dt>
+				<!-- <dd>(<span>0</span>)</dd> -->
+			</dl>
+		</div>
+	</foreach>
+		<!-- <div class="comment-col">
+			<h4>天高任鸟飞</h4>
+			<p>博陵人崔护，资质甚美，性情孤洁寡，后才专指合，应举进士及第。</p>
+			<dl>
+				<dt>2017-09-20 12:45</dt>
+				<dd>(<span>0</span>)</dd>
+			</dl>
+		</div> -->
+	</div>
+	<!--  评论展示 start  -->
+
+
+</body>
+</html>

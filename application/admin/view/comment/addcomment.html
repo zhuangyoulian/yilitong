@@ -1,0 +1,222 @@
+<include file="public/layout" />
+<style>
+    .err{color:#F00; display:none;}
+
+    /* ** 图片上传css start ** */
+    .comment_img{
+        float: left;
+        margin-right: 10px;
+    }
+    .comment_img img{
+        display: inline-block;
+        width: 126px;
+        height: 126px;
+    }
+    /* ** 图片上传css end ** */
+</style>
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>商品评论 - 添加商品评论</h3>
+                <h5>网站系统商品评论添加</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="handleposition" method="post">
+        <input type="hidden" id="goods_id" name="goods_id" value="{$info.goods_id}">
+        <input type="hidden" name="id" value="{$info.id}">
+        <div class="ncap-form-default">
+            
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>选择待评论商品</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" readonly  id="goods_name" name="goods_name" value="{$info.goods_name}" class="input-txt">
+                    <span class="err" id="err_goods_name"></span>
+                    <p class="notic">
+                        <a onclick="selectGoods()" class="ncap-btn"><i class="fa fa-search"></i>选择商品</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>商品评分</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="goods_rank" name="goods_rank" value="5"  onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" class="input-txt">
+                    <span class="err" id="err_price"></span>
+                    <p class="notic">商品评分(整数)：1-5分</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>物流评分</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="deliver_rank" name="deliver_rank" value="5"  onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" class="input-txt">
+                    <span class="err" id="err_price"></span>
+                    <p class="notic">物流评分(整数)：1-5分</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>商家服务评分</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="service_rank" name="service_rank" value="5"  onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" class="input-txt">
+                    <span class="err" id="err_price"></span>
+                    <p class="notic">商家服务评分(整数)：1-5分</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>评论内容</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="content" id="content" value="{$info.content}"  class="input-txt">
+                    <span class="err" id="err_goods_num"></span>
+         
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>评论人ID</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="user_id" id="user_id" value="163260" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" class="input-txt">
+                    <span class="err" id="err_goods_num"></span>
+         
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>评论昵称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="username" id="username" value="{$info.username}"  class="input-txt">
+                    <span class="err" id="err_goods_num"></span>
+         
+                </dd>
+            </dl>
+            <dl class="row timed">
+                <dt class="tit">
+                    <label><em>*</em>评论日期</label>
+                </dt>
+               <dd class="opt">
+                    <input type="text" id="comment_time" name="comment_time" value="0"  class="input-txt">
+                    <span class="err" id="err_goods_num"></span>
+                    <p class="notic">设置评论时间格式为2008-01-01</p>
+                </dd>
+            </dl>
+            <dl class="row" id="div_img">
+                <dt class="tit">
+                    <label><em></em>图片</label>
+                </dt>
+                <dd class="opt">
+				    <div class="eval-img ov-hi wi457 he130" id="img_container">
+                        <div class="ev-img po-re fl" id="add_img">
+                            <img src="/public/static/images/addPic_icon.png" border="0" alt="" onClick="uploadimg('#div_img')">
+                        </div>
+                    </div>
+                </dd>
+
+            </dl>
+
+
+            <div class="bot"><a onclick="verifyForm()" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#start_time').layDate();
+        $('#end_time').layDate();
+        $('#comment_time').layDate();
+    })
+    function verifyForm(){
+        $('span.err').hide();
+        $.ajax({
+            type: "POST",
+            url: "{:Url('Admin/Comment/addcomment')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    layer.msg(data.msg, {
+                        icon: 1,
+                        time: 1000
+                    }, function(){
+                        location.href = "{:Url('Admin/Comment/index')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2,time: 1000});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+    function selectGoods(){
+        var url = "{:Url('Promotion/search_goods',array('tpl'=>'select_goods'))}";
+        layer.open({
+            type: 2,
+            title: '选择商品',
+            shadeClose: true,
+            shade: 0.2,
+            area: ['75%', '75%'],
+            content: url,
+        });
+    }
+
+    function call_back(goods_id,goods_name,store_count,price){
+        $('#goods_id').val(goods_id);
+        $('#goods_name').val(goods_name);
+        $('#group_num').val(store_count);
+        $('#price').val(price);
+        layer.closeAll('iframe');
+    }
+	
+	<!--上传图片JS-->
+
+    var now_access;
+    function uploadimg(div){
+        now_access = $(div);
+        //检查是否超过限制数量
+        GetUploadify(5,'','comment','add_img')
+    }
+    function delimg(file,t){
+        $.get(
+                "/index.php?m=Admin&c=Uploadify&a=delupload",{action:"del", filename:file},function(){}
+        );
+        $(t).remove();
+        $('#img_container').find('#add_img').show();
+    }
+    function add_img(str){
+        var tpl_list = String(str).split(',');
+        for(var i=0;i<tpl_list.length;i++){
+            //判断是否超过五个图片
+            var obj = $(now_access).find('.comment_img');
+            if(obj.length >= 5)
+            return false;
+            var tpl = '<div class="ev-img po-re fl comment_img" onclick="delimg(\'$IMG\',this)"><input type="hidden" name="comment_img[]" value="$IMG"><img src="$IMG" border="0" alt=""></div>';
+            //var tpl = '<input type="hidden" name="comment_img[]" value="$IMG"><img width="150" height="150" src="$IMG" alt=""><button onclick="delimg(\'$IMG\',this)">删除</button>';
+            var str_do = tpl.replace(/\$IMG/g,tpl_list[i]);
+            $(now_access).find('#img_container').find('#add_img').before(str_do);
+        }     
+    }
+
+<!--上传图片JS结束-->
+</script>
+</body>
+</html>

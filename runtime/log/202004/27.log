@@ -1,0 +1,2792 @@
+[ 2020-04-27T09:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：2.608149s][吞吐率：0.38req/s] [内存消耗：29,733.07kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\home\controller\Index->index[ E:\phpStudy\WWW\tp510\application\home\controller\Index.php ]
+[ info ] [ VIEW ] ./application/home/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'controller',
+  4 => 'search_url',
+  5 => 'brand_list',
+  6 => 'config',
+  7 => 'arrry',
+  8 => 'arr',
+  9 => 'supplier',
+  10 => 'images',
+  11 => 'map_list',
+  12 => 'purchase_count',
+  13 => 'is_hot',
+  14 => 'brands',
+  15 => 'suppliers',
+  16 => 'supplier_lists',
+  17 => 'gifts',
+  18 => 'supplier_id',
+  19 => 'region_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T09:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Admin/login
+[ log ] tp.cn/Admin/Admin/login [运行时间：0.802046s][吞吐率：1.25req/s] [内存消耗：3,097.06kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->login[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] ./application/admin/view/admin\login.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T09:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Admin/vertify.html
+[ log ] tp.cn/admin/Admin/vertify.html [运行时间：0.119006s][吞吐率：8.40req/s] [内存消耗：2,898.22kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Admin',
+    2 => 'vertify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion; PHPSESSID=iggo0idppfcg0m6au538i5ejk2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->vertify[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T09:08:52+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/Admin/Admin/login/0.3398172907883561
+[ log ] tp.cn/index.php/Admin/Admin/login/0.3398172907883561 [运行时间：0.205012s][吞吐率：4.88req/s] [内存消耗：2,962.03kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '57',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://tp.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion; PHPSESSID=iggo0idppfcg0m6au538i5ejk2',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'zhuangyoulian',
+  'password' => 'zhuang123456',
+  'vertify' => '3jvs',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->login[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T09:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Index/index.html
+[ log ] tp.cn/index.php/Admin/Index/index.html [运行时间：0.157009s][吞吐率：6.37req/s] [内存消耗：3,210.73kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/Admin/Admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion; PHPSESSID=iggo0idppfcg0m6au538i5ejk2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Index->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] ./application/admin/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'menu_list',
+  4 => 'order_amount',
+  5 => 'admin_info',
+  6 => 'menu',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T09:08:52+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/Admin/System/login_task.html
+[ log ] tp.cn/index.php/Admin/System/login_task.html [运行时间：0.417024s][吞吐率：2.40req/s] [内存消耗：3,114.27kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'System',
+    2 => 'login_task',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '23',
+  'accept' => '*/*',
+  'origin' => 'http://tp.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion; PHPSESSID=iggo0idppfcg0m6au538i5ejk2',
+)
+[ info ] [ PARAM ] array (
+  'timestamp' => '1587949732000',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->login_task[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T09:08:53+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Promotion/discount_list
+[ log ] tp.cn/Admin/Promotion/discount_list [运行时间：0.508029s][吞吐率：1.97req/s] [内存消耗：3,142.33kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Promotion',
+    2 => 'discount_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; admin_type=1; workspaceParam=discount_list%7CPromotion; PHPSESSID=iggo0idppfcg0m6au538i5ejk2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Promotion->discount_list[ E:\phpStudy\WWW\tp510\application\admin\controller\Promotion.php ]
+[ info ] [ VIEW ] ./application/admin/view/promotion\discount_list.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'pager',
+  4 => 'page',
+  5 => 'discount_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T13:52:15+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/System/index
+[ log ] tp.cn/Admin/System/index [运行时间：0.182010s][吞吐率：5.49req/s] [内存消耗：3,201.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'System',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CSystem',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->index[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ VIEW ] ./application/admin/view/system\shop_info.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'group_list',
+  4 => 'inc_type',
+  5 => 'province',
+  6 => 'city',
+  7 => 'area',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T13:52:16+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Report/index
+[ log ] tp.cn/Admin/Report/index [运行时间：0.720042s][吞吐率：1.39req/s] [内存消耗：2,965.97kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Report',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Report->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Report.php ]
+[ info ] [ VIEW ] ./application/admin/view/report\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'timegap',
+  5 => 'navigate_admin',
+  6 => 'today',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:00+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：2,121.27kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587518731,1587604213,1587692931,1587864406; CNZZDATA1275398921=894064726-1576833015-%7C1587863832; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:05+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：2,121.93kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:05+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：2,121.93kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:06+08:00 ] 127.0.0.1 127.0.0.1 GET /Mobile/Index/index
+[ log ] tp.cn/Mobile/Index/index [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：3,862.45kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; CNZZDATA1275443667=1812905443-1582515900-null%7C1587708192; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->index[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'brand_goods',
+  6 => 'brand_roll',
+  7 => 'brand_sup',
+  8 => 'four_list',
+  9 => 'single_ad',
+  10 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:09+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.163010s][吞吐率：6.13req/s] [内存消耗：4,850.59kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:09+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] tp.cn/favicon.ico [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,526.17kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:13+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Report/index
+[ log ] tp.cn/Admin/Report/index [运行时间：0.316018s][吞吐率：3.16req/s] [内存消耗：2,975.74kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Report',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; workspaceParam=index%7CReport; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Report->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Report.php ]
+[ info ] [ VIEW ] ./application/admin/view/report\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'start_time',
+  3 => 'end_time',
+  4 => 'timegap',
+  5 => 'navigate_admin',
+  6 => 'today',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:14+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Goods/categoryList
+[ log ] tp.cn/Admin/Goods/categoryList [运行时间：0.354020s][吞吐率：2.82req/s] [内存消耗：7,462.98kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'cat_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:48+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/addEditCategory/id/1090.html
+[ log ] tp.cn/admin/Goods/addEditCategory/id/1090.html [运行时间：0.126007s][吞吐率：7.94req/s] [内存消耗：3,725.21kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'addEditCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/Admin/Goods/categoryList',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1090',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->addEditCategory[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\category.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'level_cat',
+  5 => 'cat_list',
+  6 => 'goods_category_info',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=6
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=6 [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：2,639.01kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '6',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:38:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=6
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=6 [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,639.01kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '6',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:43:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/addEditCategory/id/1090.html
+[ log ] tp.cn/admin/Goods/addEditCategory/id/1090.html [运行时间：0.141008s][吞吐率：7.09req/s] [内存消耗：3,545.69kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'addEditCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/Admin/Goods/categoryList',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1090',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->addEditCategory[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\category.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'level_cat',
+  5 => 'cat_list',
+  6 => 'goods_category_info',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:43:56+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=6
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=6 [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：2,639.01kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '6',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:43:57+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=6
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=6 [运行时间：0.049003s][吞吐率：20.41req/s] [内存消耗：2,639.01kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '6',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:02+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/gift.html
+[ log ] tp.cn/mobile/Goods/gift.html [运行时间：0.161009s][吞吐率：6.21req/s] [内存消耗：4,437.63kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'gift',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->gift[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\gift.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:03+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.138008s][吞吐率：7.25req/s] [内存消耗：4,503.38kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/gift.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:07+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/goodsList_S/id/1069.html
+[ log ] tp.cn/mobile/Goods/goodsList_S/id/1069.html [运行时间：0.211012s][吞吐率：4.74req/s] [内存消耗：5,330.31kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'goodsList_S',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1069',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->goodsList_S[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\goodsList_S.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'goods_list',
+  6 => 'scenario_category',
+  7 => 'filter_menu',
+  8 => 'filter_spec',
+  9 => 'filter_brand',
+  10 => 'filter_price',
+  11 => 'scenarioCate',
+  12 => 'cateArr',
+  13 => 'filter_param',
+  14 => 'cat_id',
+  15 => 'gift_id',
+  16 => 'page',
+  17 => 'sort_asc',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/addEditCategory/id/1069.html
+[ log ] tp.cn/admin/Goods/addEditCategory/id/1069.html [运行时间：0.115007s][吞吐率：8.70req/s] [内存消耗：3,561.27kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'addEditCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1069',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->addEditCategory[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\category.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'level_cat',
+  5 => 'cat_list',
+  6 => 'goods_category_info',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:25+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=2
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=2 [运行时间：0.051003s][吞吐率：19.61req/s] [内存消耗：2,639.37kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '2',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:25+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=2
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=2 [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：2,639.37kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '2',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:45:42+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.127007s][吞吐率：7.87req/s] [内存消耗：4,503.78kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/goodsList_S/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/Goods/addEditCategory/id/1090.html
+[ log ] tp.cn/admin/Goods/addEditCategory/id/1090.html [运行时间：0.100006s][吞吐率：10.00req/s] [内存消耗：3,545.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'addEditCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1090',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->addEditCategory[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\category.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'level_cat',
+  5 => 'cat_list',
+  6 => 'goods_category_info',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=6
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=6 [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：2,639.01kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '6',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Home&c=api&a=get_category&parent_id=6
+[ log ] tp.cn/index.php?m=Home&c=api&a=get_category&parent_id=6 [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：2,639.01kb] [文件加载：46]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'api',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Home',
+  'c' => 'api',
+  'a' => 'get_category',
+  'parent_id' => '6',
+)
+[ info ] [ RUN ] ylt\home\controller\Api->get_category[ E:\phpStudy\WWW\tp510\application\home\controller\Api.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:14+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/Goods/addEditCategory/is_ajax/1.html
+[ log ] tp.cn/admin/Goods/addEditCategory/is_ajax/1.html [运行时间：0.151008s][吞吐率：6.62req/s] [内存消耗：3,686.46kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Goods',
+    2 => 'addEditCategory',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '160',
+  'accept' => '*/*',
+  'origin' => 'http://tp.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'name' => '沙发',
+  'parent_id_1' => '6',
+  'parent_id_2' => '1089',
+  'is_show' => '1',
+  'cat_jump' => '0',
+  'image' => '',
+  'icon' => '#icon-zhongshishafa',
+  'sort_order' => '0',
+  'title' => '',
+  'keywords' => '',
+  'description' => '',
+  'id' => '1090',
+  'is_ajax' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->addEditCategory[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:14+08:00 ] 127.0.0.1 127.0.0.1 GET /Admin/Goods/categoryList.html
+[ log ] tp.cn/Admin/Goods/categoryList.html [运行时间：0.255014s][吞吐率：3.92req/s] [内存消耗：6,079.11kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/admin/Goods/addEditCategory/id/1090.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\admin\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/admin/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'admin_user',
+  3 => 'navigate_admin',
+  4 => 'cat_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/System/cleanCache.html
+[ log ] tp.cn/index.php/admin/System/cleanCache.html [运行时间：0.170009s][吞吐率：5.88req/s] [内存消耗：3,309.52kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'System',
+    2 => 'cleanCache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->cleanCache[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ VIEW ] ./application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:19+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.232013s][吞吐率：4.31req/s] [内存消耗：4,873.72kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/goodsList_S/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:21+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Admin/index.html
+[ log ] tp.cn/index.php/Admin/Admin/index.html [运行时间：0.158009s][吞吐率：6.33req/s] [内存消耗：3,170.60kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/admin/System/cleanCache.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] ./application/admin/view/admin\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:32+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：4,504.02kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/goodsList_S/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:47:32+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] tp.cn/favicon.ico [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,526.11kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:48:52+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/goodsList_S/id/1069.html
+[ log ] tp.cn/mobile/Goods/goodsList_S/id/1069.html [运行时间：0.146008s][吞吐率：6.85req/s] [内存消耗：5,330.56kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'goodsList_S',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1069',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->goodsList_S[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\goodsList_S.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'goods_list',
+  6 => 'scenario_category',
+  7 => 'filter_menu',
+  8 => 'filter_spec',
+  9 => 'filter_brand',
+  10 => 'filter_price',
+  11 => 'scenarioCate',
+  12 => 'cateArr',
+  13 => 'filter_param',
+  14 => 'cat_id',
+  15 => 'gift_id',
+  16 => 'page',
+  17 => 'sort_asc',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:48:58+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.123007s][吞吐率：8.13req/s] [内存消耗：4,504.02kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/goodsList_S/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:49:35+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/System/cleanCache.html
+[ log ] tp.cn/index.php/admin/System/cleanCache.html [运行时间：0.097006s][吞吐率：10.31req/s] [内存消耗：3,309.52kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'System',
+    2 => 'cleanCache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->cleanCache[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ VIEW ] ./application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:49:37+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.233013s][吞吐率：4.29req/s] [内存消耗：4,873.72kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/goodsList_S/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T14:49:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Admin/index.html
+[ log ] tp.cn/index.php/Admin/Admin/index.html [运行时间：0.129008s][吞吐率：7.75req/s] [内存消耗：3,170.60kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/admin/System/cleanCache.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] ./application/admin/view/admin\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:10:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/System/cleanCache.html
+[ log ] tp.cn/index.php/admin/System/cleanCache.html [运行时间：0.096005s][吞吐率：10.42req/s] [内存消耗：3,309.52kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'System',
+    2 => 'cleanCache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->cleanCache[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ VIEW ] ./application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:10:35+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.193012s][吞吐率：5.18req/s] [内存消耗：4,874.79kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/goodsList_S/id/1069.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:10:35+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] tp.cn/favicon.ico [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,526.11kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:10:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Admin/index.html
+[ log ] tp.cn/index.php/Admin/Admin/index.html [运行时间：0.120006s][吞吐率：8.33req/s] [内存消耗：3,170.60kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/admin/System/cleanCache.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] ./application/admin/view/admin\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:09+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.895051s][吞吐率：1.12req/s] [内存消耗：29,720.98kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587969481; CNZZDATA1275398921=894064726-1576833015-%7C1587967001; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\home\controller\Index->index[ E:\phpStudy\WWW\tp510\application\home\controller\Index.php ]
+[ info ] [ VIEW ] ./application/home/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'controller',
+  4 => 'search_url',
+  5 => 'brand_list',
+  6 => 'config',
+  7 => 'arrry',
+  8 => 'arr',
+  9 => 'supplier',
+  10 => 'images',
+  11 => 'map_list',
+  12 => 'purchase_count',
+  13 => 'is_hot',
+  14 => 'brands',
+  15 => 'suppliers',
+  16 => 'supplier_lists',
+  17 => 'gifts',
+  18 => 'supplier_id',
+  19 => 'region_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:12+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：2,121.86kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods; is_mobile=0; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:12+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：2,121.84kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods; is_mobile=0; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:13+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] tp.cn/ [运行时间：0.033001s][吞吐率：30.30req/s] [内存消耗：2,121.84kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods; is_mobile=0; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:13+08:00 ] 127.0.0.1 127.0.0.1 GET /Mobile/Index/index
+[ log ] tp.cn/Mobile/Index/index [运行时间：0.191011s][吞吐率：5.24req/s] [内存消耗：3,862.93kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; CNZZDATA1275443667=1812905443-1582515900-null%7C1587966290; workspaceParam=categoryList%7CGoods; is_mobile=0; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->index[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\index.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'brand_goods',
+  6 => 'brand_roll',
+  7 => 'brand_sup',
+  8 => 'four_list',
+  9 => 'single_ad',
+  10 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=1
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=1 [运行时间：0.106006s][吞吐率：9.43req/s] [内存消耗：3,888.01kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=2
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=2 [运行时间：0.171010s][吞吐率：5.85req/s] [内存消耗：3,764.69kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=3
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=3 [运行时间：0.204011s][吞吐率：4.90req/s] [内存消耗：3,742.52kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=4
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=4 [运行时间：0.251014s][吞吐率：3.98req/s] [内存消耗：3,713.88kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=5
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=5 [运行时间：0.322019s][吞吐率：3.11req/s] [内存消耗：3,731.69kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=6
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=6 [运行时间：0.361020s][吞吐率：2.77req/s] [内存消耗：3,724.32kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Index&a=ajaxGetMore&p=7
+[ log ] tp.cn/index.php?m=Mobile&c=Index&a=ajaxGetMore&p=7 [运行时间：0.431025s][吞吐率：2.32req/s] [内存消耗：3,742.94kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Index',
+    2 => 'ajaxGetMore',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Index',
+  'a' => 'ajaxGetMore',
+  'p' => '7',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Index->ajaxGetMore[ E:\phpStudy\WWW\tp510\application\mobile\controller\Index.php ]
+[ info ] [ VIEW ] ./application/mobile/view/index\ajaxGetMore.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'favourite_goods',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:18+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/categoryList.html
+[ log ] tp.cn/mobile/Goods/categoryList.html [运行时间：0.114006s][吞吐率：8.77req/s] [内存消耗：4,504.65kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'categoryList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/Mobile/Index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->categoryList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\categoryList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:20+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Supplier/recsupplier.html
+[ log ] tp.cn/mobile/Supplier/recsupplier.html [运行时间：0.116006s][吞吐率：8.62req/s] [内存消耗：3,657.67kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Supplier',
+    2 => 'recsupplier',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/categoryList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Supplier->recsupplier[ E:\phpStudy\WWW\tp510\application\mobile\controller\Supplier.php ]
+[ info ] [ VIEW ] ./application/mobile/view/supplier\recsupplier.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:20+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?m=Mobile&c=Supplier&a=ajax_recsupplier_list&p=1
+[ log ] tp.cn/index.php?m=Mobile&c=Supplier&a=ajax_recsupplier_list&p=1 [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：3,748.57kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Mobile',
+    1 => 'Supplier',
+    2 => 'ajax_recsupplier_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'referer' => 'http://tp.cn/mobile/Supplier/recsupplier.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'm' => 'Mobile',
+  'c' => 'Supplier',
+  'a' => 'ajax_recsupplier_list',
+  'p' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Supplier->ajax_recsupplier_list[ E:\phpStudy\WWW\tp510\application\mobile\controller\Supplier.php ]
+[ info ] [ VIEW ] ./application/mobile/view/supplier\ajax_recsupplier_list.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:39:22+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/gift.html
+[ log ] tp.cn/mobile/Goods/gift.html [运行时间：0.123007s][吞吐率：8.13req/s] [内存消耗：4,435.01kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'gift',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Supplier/recsupplier.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->gift[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\gift.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:41:44+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/goodsList/gift_id/1206.html
+[ log ] tp.cn/mobile/Goods/goodsList/gift_id/1206.html [运行时间：0.159009s][吞吐率：6.29req/s] [内存消耗：5,386.68kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'goodsList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Goods/gift.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+  'gift_id' => '1206',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->goodsList[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\goodsList.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'goods_list',
+  6 => 'scenario_category',
+  7 => 'filter_menu',
+  8 => 'filter_spec',
+  9 => 'filter_brand',
+  10 => 'filter_price',
+  11 => 'scenarioCate',
+  12 => 'cateArr',
+  13 => 'filter_param',
+  14 => 'cat_id',
+  15 => 'gift_id',
+  16 => 'page',
+  17 => 'sort_asc',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:41:58+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/gift.html
+[ log ] tp.cn/mobile/Goods/gift.html [运行时间：0.104006s][吞吐率：9.61req/s] [内存消耗：4,435.09kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'gift',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Supplier/recsupplier.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->gift[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\gift.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:43:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/System/cleanCache.html
+[ log ] tp.cn/index.php/admin/System/cleanCache.html [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：3,309.52kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'System',
+    2 => 'cleanCache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/Admin/Index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\System->cleanCache[ E:\phpStudy\WWW\tp510\application\admin\controller\System.php ]
+[ info ] [ VIEW ] ./application/admin/view/public\dispatch_jump.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:43:40+08:00 ] 127.0.0.1 127.0.0.1 GET /mobile/Goods/gift.html
+[ log ] tp.cn/mobile/Goods/gift.html [运行时间：0.203011s][吞吐率：4.93req/s] [内存消耗：4,457.29kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'mobile',
+    1 => 'Goods',
+    2 => 'gift',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/mobile/Supplier/recsupplier.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\mobile\controller\Goods->gift[ E:\phpStudy\WWW\tp510\application\mobile\controller\Goods.php ]
+[ info ] [ VIEW ] ./application/mobile/view/goods\gift.html [ array (
+  0 => 'action',
+  1 => 'goods_category_tree',
+  2 => 'scenario_category_tree',
+  3 => 'brand_list',
+  4 => 'config',
+  5 => 'tmp',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:43:41+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] tp.cn/favicon.ico [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,526.13kb] [文件加载：33]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://tp.cn/mobile/Goods/gift.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-04-27T15:43:43+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/Admin/Admin/index.html
+[ log ] tp.cn/index.php/Admin/Admin/index.html [运行时间：0.111007s][吞吐率：9.01req/s] [内存消耗：3,170.60kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\tp510\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Admin',
+    1 => 'Admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://tp.cn/index.php/admin/System/cleanCache.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'UM_distinctid=16f22b3601a1c4-0a409da02e1879-3f385804-1fa400-16f22b3601b131; CNZZDATA1264421531=1279961756-1583717239-http%253A%252F%252Ftp.cn%252F%7C1586400580; PHPSESSID=iggo0idppfcg0m6au538i5ejk2; Hm_lvt_7fb90411d45975d31698b327c980e88b=1587604213,1587692931,1587864406,1587969481; workspaceParam=categoryList%7CGoods; CNZZDATA1275398921=894064726-1576833015-%7C1587973151; Hm_lpvt_7fb90411d45975d31698b327c980e88b=1587973150; is_mobile=1; CNZZDATA1275443667=1812905443-1582515900-null%7C1587973154',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] ylt\admin\controller\Admin->index[ E:\phpStudy\WWW\tp510\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] ./application/admin/view/admin\index.html [ array (
+  0 => 'action',
+  1 => 'config',
+  2 => 'navigate_admin',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

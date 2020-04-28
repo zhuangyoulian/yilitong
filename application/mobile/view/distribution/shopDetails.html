@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TA的店铺</title>
+		<link rel="stylesheet" href="__MOBILE__/css/distribution.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+	</head>
+	<body>
+		<div class="hisShop">
+			<header class="hisShopTOP">
+				<div class="backImg"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_white.png"></a></div>
+				<div class="headImg_name">
+					<if condition="empty($distribution[images])">
+						<div class="headImg"><img src="__MOBILE__/images/bg_master_center.png" alt=""></div>
+					<else/>
+						<div class="headImg"><img src="{$distribution.images}" alt=""></div>
+					</if>
+					<input type="hidden" class="input" value="{$id}">
+					<input type="hidden" class="shop_id" value="{$shop_id}">
+					<div class="referrerBox">
+						<div class="designation">{$distribution.shop_name}</div>
+					</div>
+				</div>
+				<div class="shops">
+					<div class="entire"  onclick="goods({$shop_id})">
+						<div class="entireNum">{$num['goods_id']}</div>
+						<div>全部商品</div>
+					</div>
+					<div class="borderRigth"></div>
+					<div class="hisAttention" onclick="shop({$shop_id})">
+						<div class="entireNum">{$num['shop_id']}</div>
+						<div>TA关注的店铺</div>
+					</div>
+					<div class="borderRigth"></div>
+					<div class="ourShop" id="ourShop1" <if condition="!$r"> style="display: block;"  <else/>  style="display: none;" </if> >
+						<div class="ourShopImg"> <img src="__MOBILE__/images/icon_focus.png"></div>
+						<div>关注本店</div>
+					</div>
+					<div class="ourShop" id="ourShop2" <if condition="$r"> style="display: block;" <else/>  style="display: none;" </if> >
+						<div class="ourShopImg"><img src="__MOBILE__/images/icon_focused.png"></div>
+						<div >已关注</div>
+					</div>
+				</div>
+				<if condition="$distribution['shop_brief']">
+					<div class="shopExplain">{$distribution['shop_brief']}</div>
+				<else/>
+					<div class="shopExplain">店主还未编辑介绍.</div>
+				</if>
+			</header>
+			<section class="commodityBox">
+			<div class="seek"  id="content" ><img src="__MOBILE__/images/icon_search.png">
+				<input type="text" value="" maxlength="10"  id="searchText" placeholder="珍妮曲奇饼">
+				<div id="append"></div>
+			</div>
+				<!--ajax 返回 --> 
+      			<div id="ajax_return" cellpadding="0" cellspacing="0" border="0"></div> 
+			</section>
+			<section class="focusShop">
+				<!--ajax 返回 --> 
+      			<div id="ajax_return2" cellpadding="0" cellspacing="0" border="0"></div> 
+			</section>
+		</div>
+<!--底部-start-->
+<include file="distribution/bottom"/>
+<!--底部-end-->
+<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>							
+<script type="text/javascript" src="__STATIC__/mobile/js/sourch_submit.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+        // 加载页面后默认显示ajax 商品列表
+		var id = $('.input').val(); 
+		var shop_id = $('.shop_id').val(); 
+		if (shop_id) {
+    		goods(shop_id);
+		}else{
+    		goods(id);
+		}
+
+    });
+  //   function goods(shop_id) {
+		// var id = $('.input').val(); 
+  //       $(".commodityBox").show();
+  //       $.ajax({
+  //           type: "POST",
+  //           url: "/index.php?m=Mobile&c=Distribution&a=ajaxGoods&id="+id,
+  //           data: {value:1,shop_id:shop_id},
+  //           success: function (data) {
+  //               $("#ajax_return").html('');
+  //               $("#ajax_return").append(data);
+  //           }
+  //       });
+  //       $(".focusShop").hide();
+  //   }
+  	function goods(shop_id) {
+        $(".commodityBox").show();
+        ajax_sourch_submit();
+        $(".focusShop").hide();
+    }
+    // 分页加载 start******************
+    	var page = 1;
+        function ajax_sourch_submit(){
+            if(page > 20){
+                return;
+            }
+	        $.ajax({
+	            type: "POST",
+	            url:"/Mobile/Distribution/ajaxGoods/p/"+page,
+	            // url:"/Mobile/Distribution/ajaxGoods/id/"+id+"/p/"+page,
+	            data: {value:1},
+	            success: function (data) {
+	                // $("#ajax_return").html('');
+	                $("#ajax_return").append(data);
+	            }
+	        });
+            page++;
+        }
+         ajax_sourch_submit();
+    // 分页加载 start******************
+    function shop(shop_id) {
+		var id = $('.input').val(); 
+        $(".focusShop").show();
+        $.ajax({
+            type: "POST",
+            url: "/index.php?m=Mobile&c=Distribution&a=ajaxShop&id="+id,
+            data: {value:2,shop_id:shop_id},
+            success: function (data) {
+                $("#ajax_return2").html('');
+                $("#ajax_return2").append(data);
+            }
+        });
+        $(".commodityBox").hide();
+    }
+
+
+     $("#content").keydown(function(event){
+		if(event.keyCode == 13){
+			var id = $('.hidden').val();
+			var keyword = $('#searchText').val();
+			$.ajax({
+				type: 'POST',
+				url: "{:Url('Mobile/Distribution/ajaxGoods')}",
+				data:{id:id,keyword:keyword},
+				dataType: 'json',
+				success: function(data){
+					 $("#ajax_return").html('');
+                     $("#ajax_return").append(data);
+				}
+			});
+		}
+	});
+
+    $("#ourShop1").click(function(){
+		var uid = {$_SESSION['user']['user_id']};
+		var shop_id = $('.shop_id').val(); 
+		var id = $('.input').val(); 
+    	$.ajax({
+    		type:"POST",
+    		url:"Mobile/Distribution/shopDetails",
+    		data:{uid:uid,shop_id:shop_id,id:id,value:1},
+    		dateType:'json',
+    		success:function(data){
+    			if (data.code==1) {
+        			$("#ourShop2").show();
+			    	$("#ourShop1").hide();
+    			}else{
+    				alert(data.msg);
+	        		location.href = "/Mobile/Distribution/apply.html";
+    			}
+    		}
+    	})
+	});
+
+    $("#ourShop2").click(function(){
+		var uid = {$_SESSION['user']['user_id']};
+		var shop_id = $('.shop_id').val(); 
+		var id = $('.input').val(); 
+    	$.ajax({
+    		type:"POST",
+    		url:"Mobile/Distribution/shopDetails",
+    		data:{uid:uid,shop_id:shop_id,id:id,value:2},
+    		dateType:'json',
+    		success:function(data){
+    			if (data.code==2) {
+        			$("#ourShop2").hide();
+			    	$("#ourShop1").show();
+    			}else{
+    				alert(data.msg);
+    			}
+    		}
+    	})
+	});
+</script>
+	</body>
+</html>

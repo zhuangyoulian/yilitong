@@ -1,0 +1,75 @@
+<div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+    <table>
+        <tbody>
+        <volist name="withdrawals" id="list">
+            <tr data-id="{$list['FUid']}">
+                <td class="sign">
+                    <div style="width: 24px;"><i class="ico-check"></i></div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.trading_id}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.total_amount}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.actual_amount}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.service_amout}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$type[$list.type]}</div>
+                </td>
+				 <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.payee}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.branch_name}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;"><if $list.status eq '0'>未审核<else>已审核</if></div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.add_time|date='Y-m-d',###}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;"><if $list.pay_status eq 1>已付款<else>未付款</if></div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;"><if $list.pay_time>{$list.pay_time|date='Y-m-d',###}<else>暂未付款</if></div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 80px;">{$list.mobile}</div>
+                </td>
+                <td align="center" class="handle">
+                    <div style="text-align: center; width: 170px; max-width:170px;">
+					<if $list.status  eq '0'> <a class="btn blue" href="{:Url('Admin/business/examineWithdrawals',array('trading_id'=>$list['trading_id']))}">审核通过</a></if>
+					<if $list.status  eq '1' && $list.pay_status eq '0'><a class="btn blue" href="{:Url('Admin/business/bsWdrDetail',array('trading_id'=>$list['trading_id']))}">付款</a></if>
+					<a class="btn blue" href="{:Url('Admin/business/bsWdrDetail',array('id'=>$list['trading_id']))}">查看详情</a>
+                   
+                    </div>
+                </td>
+                <td align="" class="" style="width: 100%;">
+                    <div>&nbsp;</div>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+</div>
+<!--分页位置-->
+{$page}
+<script>
+    $(".pagination  a").click(function(){
+        var page = $(this).data('p');
+        ajax_get_table('search-form2',page);
+    });
+    $(document).ready(function(){
+        // 表格行点击选中切换
+        $('#flexigrid >table>tbody>tr').click(function(){
+            $(this).toggleClass('trSelected');
+        });
+        $('#user_count').empty().html("{$pager->totalRows}");
+    });
+</script>

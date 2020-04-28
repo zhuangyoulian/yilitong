@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="__MOBILE__/css/pinsuccess.css">
+    <title>拼单</title>
+</head>
+
+<body>
+    <div class="cont">
+        <input type="hidden" name="type" value="{$prom_count['type']}">
+
+        <!-- 拼单商品 -->
+        <a href="{:Url('Goods/goodsInfo',array('id'=>$prom_count[goods_id]))}">
+            <div class="productdetail">
+                <img src="{$prom_count['goods_thumb']}" alt="">
+                <div class="info">
+                    <p class="productname">{$prom_count['goods_name']}</p>
+                    <p class="count">已拼{$prom_count['sum']} <if condition="$prom_count['sum'] gt 1000">+</if>件</p>
+                    <p class="price">￥{$prom_count['activity_price']}</p>
+                </div>
+            </div>
+        </a>
+        <div class="geli"></div>
+
+        <!--拼单结束并且已经参与-->
+        <if condition="empty($prom_count['s_count']) && !empty($prom_count['is_participation'])">  
+            <div class="success">
+                <img src="__MOBILE__/images/icon_succeed@3x.png" alt="">
+                <p>恭喜您！拼单成功</p>
+            </div>
+            <div class="add_person a2">   <!--拼单已满人-->
+                <foreach name="$prom_count['select']" item="vo" key="k"  >
+                    <div class="zhu zhu2">
+                        <img src="{$vo.head_pic}" alt="">
+                        <if condition="$k eq 0">
+                            <span>拼主</span>
+                        </if>
+                    </div>
+                </foreach>
+            </div>
+            <a href="/" class="guangguang">
+                <div class="pin_btn">
+                    去首页逛逛
+                </div>
+            </a>
+        </if>
+
+        <!--拼单进行时-->
+        <if condition="$prom_count['is_end'] neq 1"> 
+            <!-- 头像显示    -->
+            <div class="pin_detail">
+                <if condition="!empty($prom_count['s_count'])">
+                    <div class="add_person a2">  <!--拼单进行时未满人-->
+                        <div class="zhu">
+                            <img src="{$prom_count['head_pic']}" alt="">
+                            <span>拼主</span>
+                        </div>
+                        <img src="__MOBILE__/images/icon_relation@2x.png" alt="" class="icon_relation">
+                        <div class="right_person">
+                            +{$prom_count['s_count']}？
+                        </div>
+                    </div>
+                <elseif condition="empty($prom_count['s_count'])  && empty($prom_count['is_participation'])">
+                    <div class="add_person a2">   <!--拼单进行时已满人-->
+                        <foreach name="$prom_count['select']" item="vo" key="k"  >
+                            <div class="zhu zhu2">
+                                <img src="{$vo.head_pic}" alt="">
+                                <if condition="$k eq 0">
+                                    <span>拼主</span>
+                                </if>
+                            </div>
+                        </foreach>
+                    </div>
+                </if>
+            </div>
+            
+            <div class="up">
+                <!-- 拼单状态 -->
+                <if condition="$prom_count['type'] neq 1 && $prom_count['type'] neq 2">    <!--拼单已结束-->
+                    <p class="dec">拼单已结束</p>
+                <elseif condition="!empty($prom_count['s_count'])  && $prom_count['is_end'] neq 1">   <!--拼单进行时-->
+                    <p class="p1">
+                    <if condition="$prom_count['flash_sale']['buy_type_rule'] eq 1 ">
+                        <span class="red">仅差{$prom_count.s_count}人拼成</span>
+                    <elseif condition="$prom_count['flash_sale']['buy_type_rule'] eq 2 ">
+                        <span class="red">仅差{$prom_count.s_count}件拼成</span>
+                    </if>
+                    ，<span class="jsTime" data-time="{$prom_count.buy_end_time|date='Y-m-d H:i:s',###}">23：59：59</span></p>
+                <elseif condition="empty($prom_count['s_count']) && empty($prom_count['is_participation'])  && $prom_count['is_end'] neq 1">    <!--拼单已满人-->
+                    <p class="dec">拼单已满，您可发起新的拼单</p>
+                </if>
+                <!-- 按钮 -->
+                <if condition="!empty($prom_count['s_count']) && empty($prom_count['is_participation'])  && $prom_count['is_end'] neq 1">    <!--拼单进行时并且还未参与-->
+                    <div class="pin_btn" onclick="addcart({$prom_count.goods_id},{$prom_count['flash_sale']['buy_type_purchase_num']},1,{$prom_count.id});">
+                        参与 {$prom_count['nickname']} 的拼单
+                    </div>
+                <elseif condition="!empty($prom_count['s_count']) && !empty($prom_count['is_participation']) && $prom_count['select'][0][u_id] eq $user['user_id']  && $prom_count['is_end'] neq 1"> <!--拼单进行时并且是拼主-->
+                    <div class="pin_btn pin_btn_s pindan2">
+                        发起成功，邀请好友拼单
+                    </div>
+                <elseif condition="!empty($prom_count['s_count']) && !empty($prom_count['is_participation'])  && $prom_count['select'][0][u_id] neq $user['user_id']  && $prom_count['is_end'] neq 1"> <!--拼单进行时并且已经参与-->
+                    <div class="pin_btn pin_btn_s pindan2">
+                        您已参与此次拼单，分享给好友
+                    </div>
+                <elseif condition="empty($prom_count['s_count']) && empty($prom_count['is_participation'])  && $prom_count['is_end'] neq 1"> <!--拼单结束并且还未参与-->
+                    <div class="fen2">
+                        <div class="faqi" onclick="addcart({$prom_count.goods_id},{$prom_count['flash_sale']['buy_type_purchase_num']},1,1);">
+                            我要发起拼单
+                        </div>
+                    </div>
+                </if>
+            </div>
+        </if>
+    
+        <!--拼单失败，已超时-->
+        <if condition="$prom_count['is_end'] eq 1">  
+            <div class="success">
+                <img src="__MOBILE__/images/icon_fail@2x.png" alt="">
+                <p>超出时间，拼单失败</p>
+            </div>
+            <p class="fail_miaosu">可重新发起拼单或单独购买</p>
+            <div class="pin_detail">
+                <div class="add_person a2">
+                    <foreach name="$prom_count['select']" item="vo" key="k"  >
+                        <div class="zhu zhu2">
+                            <img src="{$vo.head_pic}" alt="">
+                            <if condition="$k eq 0">
+                                <span>拼主</span>
+                            </if>
+                        </div>
+                    </foreach>
+                </div>
+            </div>
+            <div class="btn_goumai">
+                <a href="{:Url('Goods/goodsInfo',array('id'=>$prom_count[goods_id]))}">
+                    <div class="separately_buy"  onclick="addcart({$prom_count.goods_id},1,1,0);">
+                        <sapn>单独购买</sapn><span class="price">￥{$prom_count[market_price]}</span>
+                    </div>
+                </a>
+                <a href="{:Url('Goods/goodsInfo',array('id'=>$prom_count[goods_id]))}">
+                    <div class="group_buy"  onclick="addcart({$prom_count.goods_id},{$prom_count['flash_sale']['buy_type_purchase_num']},1,1);">
+                        <sapn>发起拼单</sapn><span class="price">￥{$prom_count[activity_price]}</span>
+                    </div>
+                </a>
+            </div>
+        </if>
+
+        <div class="geli"></div>
+        <div class="pin_detail">
+            <div class="detail_list">
+                <a href="#">
+                    <div class="one">
+                        <span class="s2" style="width: 22rem;">
+                        <if condition="$prom_count.flash_sale.buy_type_rule eq 1">  <!--1用户 2件数-->
+                            {$prom_count.flash_sale.buy_type_rule_num}人团
+                        <else/>
+                            {$prom_count.flash_sale.buy_type_rule_num}件团
+                        </if>
+                        <if condition="$prom_count.flash_sale.buy_type_purchase eq 1">  <!--1限购 2不限购-->
+                            <if condition="$prom_count.flash_sale.buy_type_purchase_num neq 0">  <!--起购-->
+                                ·每人起购{$prom_count.flash_sale.buy_type_purchase_num}件
+                            </if>
+                            <if condition="$prom_count.flash_sale.buy_type_purchase_num_s neq 0">  <!--限购-->
+                                ·每人限购{$prom_count.flash_sale.buy_type_purchase_num_s}件
+                            </if>
+                        <else/>
+                            ·不限购。
+                        </if>
+                        </span>
+                        <img src="__MOBILE__/images/icon_next@2x.png" alt="" class="icon_next">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="geli"></div>
+
+        <div class="geli"></div>
+        <div class="tuijian_product">
+            <p class="title">拼团商品推荐</p>
+            <div class="productlist">
+                <foreach name="prom_goods" item="vo" key="k"  >
+                <a href="{:Url('Goods/goodsInfo',array('id'=>$vo[goods_id]))}">
+                    <div class="product">
+                        <img src="{$vo['goods_thumb']}" alt="">
+                        <p class="productname">{$vo['goods_name']}</p>
+                        <p class="price">￥{$vo['activity_price']}</p>
+                    </div>
+                </a>
+                </foreach>
+            </div>
+            <p class="nomore">没有更多了~</p>
+        </div>
+    </div>
+   
+    <div class="wrap hidden"></div>
+    <div class="share_wrap hidden">
+        <img src="__MOBILE__/images/icon_share_together@2x.png" alt="">
+    </div>
+    <script src="__MOBILE__/js/jquery-3.1.1.min.js"></script>
+    <script>
+        $('.pin_btn_s').click(function() {
+            $('.wrap').removeClass('hidden');
+            $('.share_wrap').removeClass('hidden');
+        });
+        $('.wrap').click(function() {
+            $('.wrap').addClass('hidden');
+            $('.share_wrap').addClass('hidden');
+        });
+        $('.share_wrap').click(function() {
+            $('.wrap').addClass('hidden');
+            $('.share_wrap').addClass('hidden');
+        });
+        $('.pindan2').click(function() {
+            $('.wrap').removeClass('hidden');
+            $('.share_wrap').removeClass('hidden');
+        });
+        //时间格式处理
+        const formatNumber = n => {
+            n = n.toString();
+            return n[1] ? n : '0' + n;
+        };
+        //团购倒计时
+        const teamCountTime = (obj) => {
+            var timer = null;
+
+            function fn() {
+                //获取设置的时间 如：2019-3-28 14:00:00  ios系统得加正则.replace(/\-/g, '/');
+                var setTime = obj.getAttribute('data-time').replace(/\-/g, '/');
+                //获取当前时间
+                var date = new Date(),
+                    now = date.getTime(),
+                    endDate = new Date(setTime),
+                    end = endDate.getTime();
+                //时间差
+                var leftTime = end - now;
+                //d,h,m,s 天时分秒
+                var d, h, m, s;
+                var otime = '';
+                if (leftTime >= 0) {
+                    d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+                    h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+                    m = Math.floor(leftTime / 1000 / 60 % 60);
+                    s = Math.floor(leftTime / 1000 % 60);
+                    if (d <= 0) {
+                        otime = [h, m, s].map(formatNumber).join(':');
+                    } else {
+                        otime = d + '天' + [h, m, s].map(formatNumber).join(':');
+                    }
+                    obj.innerHTML = otime + "后结束";
+                    //
+                    timer = setTimeout(fn, 1e3);
+                } else {
+                    clearTimeout(timer);
+                    obj.innerHTML = '拼团已结束';
+                }
+            }
+            fn();
+        };
+        let jsTimes = document.querySelectorAll('.jsTime');
+        jsTimes.forEach((obj) => {
+            teamCountTime(obj);
+        });
+
+        function addcart(goods_id,num,to_catr,prom=0){
+            $.ajax({
+            type : "POST",
+            url:"/Mobile/Cart/ajaxAddCart/to_catr/"+to_catr+"/prom/"+prom,
+            data :{goods_id:goods_id,goods_num:num,to_catr:to_catr,prom:prom},
+            dataType:'json',
+            success: function(data){
+                // 加入购物车后再跳转到 购物车页面
+                if(data.status != 1)
+                {
+                    if(data.status == '-101'){
+                        alert(data.msg);
+                        location.href = "/Mobile/User/index";
+                    }else{
+                        alert(data.msg);
+                    }
+
+                    return false;
+                }
+                if(data.status == 1)
+                {
+                    if(to_catr == 1)  //直接购买
+                    {
+                        // location.href = "/Mobile/Cart/cart";
+                        location.href = "/Mobile/Cart/orderconfirm/selected/2/goods_id/"+goods_id;
+                    }
+                    else if(to_catr == 0) //加入购物车
+                    {
+                        $('#tips-box').css({display:'block'});
+                        $('.tips-content').css({position:'fixed',left:'50%',top:'50%',marginLeft:'-35%',marginTop:'-150px'});
+                        $('.tips-close').click(function(){
+                            $('#tips-box').hide();
+                        })
+                    }
+
+                    var cart_num = parseInt($('#tp_cart_info').html())+parseInt($('#number').val());
+                    $('#tp_cart_info').html(cart_num)
+                }
+
+
+            }
+        });
+        }
+    </script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js "></script>
+<script>
+
+    //通过config接口注入权限验证配置
+     // alert(location.href.split('#')[0]);
+    wx.config({
+
+        //debug : true,
+        debug : false, 
+        appId: '<?php echo $signPackage["appId"];?>',// 
+        timestamp: '<?php echo $signPackage["timestamp"];?>',//生成签名的时间戳
+        nonceStr: '<?php echo $signPackage["nonceStr"];?>',//生成签名的随机串
+        signature: '<?php echo $signPackage["signature"];?>',
+
+        jsApiList : ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo']
+
+    });
+
+    wx.ready(function(){
+
+      var
+                s_title = '{$prom_count.goods_name}',  // 分享标题
+
+                s_link = 'http://www.yilitong.com/mobile/Goods/phoneAuthfx/id/{$prom_count.goods_id}/referrer_id/{$_SESSION['user']['user_id']}/source_id/{$_SESSION['user']['user_id']}/is_group/1/group_id/{$prom_count.id}/prom_id/{$prom_count.prom_id}',  // 分享链接
+
+                s_desc = '活动价：{$prom_count.activity_price}元！ {$prom_count.goods_remark}',  //分享描述
+
+                s_imgUrl = 'http://www.yilitong.com/{$prom_count.goods_thumb}'; // 分享图标
+
+      //朋友圈
+
+    wx.onMenuShareTimeline({
+
+        title: s_title, // 分享标题
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () {
+        },
+
+        cancel: function () { }
+
+      });
+
+      //发送给好友
+
+      wx.onMenuShareAppMessage({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        type: '', // 分享类型,music、video或link，不填默认为link
+
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+
+        success: function () {
+        },
+
+        cancel: function () {}
+
+      });
+
+      //QQ好友
+
+      wx.onMenuShareQQ({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+      //腾讯微博
+
+      wx.onMenuShareWeibo({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+    });
+
+</script>
+</body>
+
+</html>

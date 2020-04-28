@@ -1,0 +1,2241 @@
+2017-11-01 11:22:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 11:22:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 11:26:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 11:26:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 11:26:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:02:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:02:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:11:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=156552  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:11:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=156552  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:13:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516805\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516806\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516806\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516807\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516811\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516812\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516813\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516814\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516814\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516814\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516815\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516815\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516815\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516815\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516815\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:35
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516815\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516816\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516816\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516816\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516816\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516816\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:36
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516816\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516817\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516818\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516818\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516818\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516818\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516831\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516832\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516832\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516833\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516833\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:54
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516834\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516835\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516835\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516835\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516835\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516836\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516836\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516836\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516836\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516837\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516837\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516837\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516837\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516838\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516838\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516838\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516838\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516838\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516838\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516839\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516839\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516839\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516839\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:13:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516839\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:14:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516840\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:14:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516840\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:14:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516840\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:14:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'insert INTO `ylt_tp`.`ylt_works_comment` (works_id,user_id,user_name,head_pic,parent_id,parent_user_id,parent_user_name,content,add_time) values (\'37\',\'156552\',\'la\' la la\',\'/public/upload/head_pic/2017/09-13/307227844de7493f6c060052dd6b35a2.jpg\',\'299\',\'162621\',\'诗和远方\',
+			\'logo设计包含了很多深层次的蕴意，无论是大公司还是小企业都有自己的一套体系。\',\'1509516841\')',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\\xE2\\x80\\x86la\\xE2\\x80\\x86la\',\'/public/upload/head_pic/2017/09-13/307227844de749\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-11-01 14:23:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VV01SX1ZdSw and parent_id = 37 order by add_time desc  LIMIT 2990,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VV01SX1ZdSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:25:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = Ul1dX0tbW1BbSVEUV1gEUl1VV01SX1ZdSw and parent_id = 37 order by add_time desc  LIMIT 2990,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'Ul1dX0tbW1BbSVEUV1gEUl1VV01SX1ZdSw\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:56:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT B.back_id,B.rec_id,A.order_id,A.order_sn,A.type,A.reason,A.addtime,A.status,A.remark,A.imgs,B.goods_name,B.goods_sn,B.send_number,B.money,A.refund_shipping_no,A.refund_shipping_no from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B on B.back_id=A.id where A.order_id=1084 AND A.user_id=1 AND A.goods_id=224 AND A.spec_key=\'258\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:56:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT B.back_id,B.rec_id,A.order_id,A.order_sn,A.type,A.reason,A.addtime,A.status,A.remark,A.imgs,B.goods_name,B.goods_sn,B.send_number,B.money,A.refund_shipping_no,A.refund_shipping_no from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B on B.back_id=A.id where A.order_id=1084 AND A.user_id=1 AND A.goods_id=224 AND A.spec_key=\'258\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:57:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT B.back_id,B.rec_id,A.order_id,A.order_sn,A.type,A.reason,A.addtime,A.status,A.remark,A.imgs,B.goods_name,B.goods_sn,B.send_number,B.money,A.refund_shipping_no,A.refund_shipping_no from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B on B.back_id=A.id where A.order_id=971 AND A.user_id=1 AND A.goods_id=339 AND A.spec_key=\'469\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:57:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT B.back_id,B.rec_id,A.order_id,A.order_sn,A.type,A.reason,A.addtime,A.status,A.remark,A.imgs,B.goods_name,B.goods_sn,B.send_number,B.money,A.refund_shipping_no,A.refund_shipping_no from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B on B.back_id=A.id where A.order_id=971 AND A.user_id=1 AND A.goods_id=339 AND A.spec_key=\'469\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:57:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT B.back_id,B.rec_id,A.order_id,A.order_sn,A.type,A.reason,A.addtime,A.status,A.remark,A.imgs,B.goods_name,B.goods_sn,B.send_number,B.money,A.refund_shipping_no,A.refund_shipping_no from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B on B.back_id=A.id where A.order_id=923 AND A.user_id=1 AND A.goods_id=224 AND A.spec_key=\'258\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 14:57:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT B.back_id,B.rec_id,A.order_id,A.order_sn,A.type,A.reason,A.addtime,A.status,A.remark,A.imgs,B.goods_name,B.goods_sn,B.send_number,B.money,A.refund_shipping_no,A.refund_shipping_no from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B on B.back_id=A.id where A.order_id=923 AND A.user_id=1 AND A.goods_id=224 AND A.spec_key=\'258\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 15:56:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=93  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 17:18:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 17:18:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-01 17:18:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT A.order_id,A.id as oid,A.order_sn,A.goods_id,A.type,A.reason,A.addtime,A.status,A.spec_key,B.goods_name,B.goods_sn,B.send_number,B.is_real,B.money,A.supplier_id from `ylt_tp`.`ylt_back_order` as A left join `ylt_tp`.`ylt_back_goods` as B ON A.id=B.back_id where A.user_id=26  ORDER BY oid DESC  LIMIT 0,5',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'B.goods_sn\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

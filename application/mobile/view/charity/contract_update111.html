@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>编辑合同</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <!-- <link href="__MOBILE__/css/contract/layout.min.css" rel="stylesheet" /> -->
+    <link href="__MOBILE__/css/contract/scs.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="__MOBILE__/css/contract/reset.css" />
+    <link type="text/css" rel="stylesheet" href="__MOBILE__/css/contract/index.css" />
+
+    <!-- <link type="text/css" rel="stylesheet" href="__MOBILE__/css/contract/picker.css" /> -->
+    <script src="__MOBILE__/js/contract/jquery-3.4.1.min.js"></script>
+    <script src="__MOBILE__/js/contract/addindex.js"></script>
+    <script src="__MOBILE__/js/contract/jquery.scs.min.js"></script>
+    <script src="__MOBILE__/js/contract/CNAddrArr.min.js"></script>
+    <script>
+        $(function() {
+            /**
+             * 通过数组id获取地址列表数组
+             *
+             * @param {Number} id
+             * @return {Array} 
+             */
+            function getAddrsArrayById(id) {
+                var results = [];
+                if (addr_arr[id] != undefined)
+                    addr_arr[id].forEach(function(subArr) {
+                        results.push({
+                            key: subArr[0],
+                            val: subArr[1]
+                        });
+                    });
+                else {
+                    return;
+                }
+                return results;
+            }
+            /**
+             * 通过开始的key获取开始时应该选中开始数组中哪个元素
+             *
+             * @param {Array} StartArr
+             * @param {Number|String} key
+             * @return {Number} 
+             */
+            function getStartIndexByKeyFromStartArr(startArr, key) {
+                var result = 0;
+                if (startArr != undefined)
+                    startArr.forEach(function(obj, index) {
+                        if (obj.key == key) {
+                            result = index;
+                            return false;
+                        }
+                    });
+                return result;
+            }
+
+            //bind the click event for 'input' element
+            $("#city1").click(function() {
+                var PROVINCES = [],
+                    startCities = [],
+                    startDists = [];
+                //Province data，shall never change.
+                addr_arr[0].forEach(function(prov) {
+                    PROVINCES.push({
+                        key: prov[0],
+                        val: prov[1]
+                    });
+                });
+                //init other data.
+                var $input = $(this),
+                    dataKey = $input.attr("data-key"),
+                    provKey = 1, //default province 北京
+                    cityKey = 36, //default city 北京
+                    distKey = 37, //default district 北京东城区
+                    distStartIndex = 0, //default 0
+                    cityStartIndex = 0, //default 0
+                    provStartIndex = 0; //default 0
+
+                if (dataKey != "" && dataKey != undefined) {
+                    var sArr = dataKey.split("-");
+                    if (sArr.length == 3) {
+                        provKey = sArr[0];
+                        cityKey = sArr[1];
+                        distKey = sArr[2];
+
+                    } else if (sArr.length == 2) { //such as 台湾，香港 and the like.
+                        provKey = sArr[0];
+                        cityKey = sArr[1];
+                    }
+                    startCities = getAddrsArrayById(provKey);
+                    startDists = getAddrsArrayById(cityKey);
+                    provStartIndex = getStartIndexByKeyFromStartArr(PROVINCES, provKey);
+                    cityStartIndex = getStartIndexByKeyFromStartArr(startCities, cityKey);
+                    distStartIndex = getStartIndexByKeyFromStartArr(startDists, distKey);
+                }
+                var navArr = [{ //3 scrollers, and the title and id will be as follows:
+                    title: "省",
+                    id: "scs_items_prov"
+                }, {
+                    title: "市",
+                    id: "scs_items_city"
+                }, {
+                    title: "区",
+                    id: "scs_items_dist"
+                }];
+                SCS.init({
+                    navArr: navArr,
+                    onOk: function(selectedKey, selectedValue) {
+                        $input.val(selectedValue).attr("data-key", selectedKey);
+                    }
+                });
+                var distScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[2].id,
+                    dataArr: startDists,
+                    startIndex: distStartIndex
+                });
+                var cityScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[1].id,
+                    dataArr: startCities,
+                    startIndex: cityStartIndex,
+                    onChange: function(selectedItem, selectedIndex) {
+                        distScroller.render(getAddrsArrayById(selectedItem.key), 0); //re-render distScroller when cityScroller change
+                    }
+                });
+                var provScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[0].id,
+                    dataArr: PROVINCES,
+                    startIndex: provStartIndex,
+                    onChange: function(selectedItem, selectedIndex) { //re-render both cityScroller and distScroller when provScroller change
+                        cityScroller.render(getAddrsArrayById(selectedItem.key), 0);
+                        distScroller.render(getAddrsArrayById(cityScroller.getSelectedItem().key), 0);
+                    }
+                });
+            });
+
+            $("#city2").click(function() {
+                var PROVINCES = [],
+                    startCities = [],
+                    startDists = [];
+                //Province data，shall never change.
+                addr_arr[0].forEach(function(prov) {
+                    PROVINCES.push({
+                        key: prov[0],
+                        val: prov[1]
+                    });
+                });
+                //init other data.
+                var $input = $(this),
+                    dataKey = $input.attr("data-key"),
+                    provKey = 1, //default province 北京
+                    cityKey = 36, //default city 北京
+                    distKey = 37, //default district 北京东城区
+                    distStartIndex = 0, //default 0
+                    cityStartIndex = 0, //default 0
+                    provStartIndex = 0; //default 0
+
+                if (dataKey != "" && dataKey != undefined) {
+                    var sArr = dataKey.split("-");
+                    if (sArr.length == 3) {
+                        provKey = sArr[0];
+                        cityKey = sArr[1];
+                        distKey = sArr[2];
+
+                    } else if (sArr.length == 2) { //such as 台湾，香港 and the like.
+                        provKey = sArr[0];
+                        cityKey = sArr[1];
+                    }
+                    startCities = getAddrsArrayById(provKey);
+                    startDists = getAddrsArrayById(cityKey);
+                    provStartIndex = getStartIndexByKeyFromStartArr(PROVINCES, provKey);
+                    cityStartIndex = getStartIndexByKeyFromStartArr(startCities, cityKey);
+                    distStartIndex = getStartIndexByKeyFromStartArr(startDists, distKey);
+                }
+                var navArr = [{ //3 scrollers, and the title and id will be as follows:
+                    title: "省",
+                    id: "scs_items_prov"
+                }, {
+                    title: "市",
+                    id: "scs_items_city"
+                }, {
+                    title: "区",
+                    id: "scs_items_dist"
+                }];
+                SCS.init({
+                    navArr: navArr,
+                    onOk: function(selectedKey, selectedValue) {
+                        $input.val(selectedValue).attr("data-key", selectedKey);
+                    }
+                });
+                var distScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[2].id,
+                    dataArr: startDists,
+                    startIndex: distStartIndex
+                });
+                var cityScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[1].id,
+                    dataArr: startCities,
+                    startIndex: cityStartIndex,
+                    onChange: function(selectedItem, selectedIndex) {
+                        distScroller.render(getAddrsArrayById(selectedItem.key), 0); //re-render distScroller when cityScroller change
+                    }
+                });
+                var provScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[0].id,
+                    dataArr: PROVINCES,
+                    startIndex: provStartIndex,
+                    onChange: function(selectedItem, selectedIndex) { //re-render both cityScroller and distScroller when provScroller change
+                        cityScroller.render(getAddrsArrayById(selectedItem.key), 0);
+                        distScroller.render(getAddrsArrayById(cityScroller.getSelectedItem().key), 0);
+                    }
+                });
+            });
+
+            $("#city3").click(function() {
+                var PROVINCES = [],
+                    startCities = [],
+                    startDists = [];
+                //Province data，shall never change.
+                addr_arr[0].forEach(function(prov) {
+                    PROVINCES.push({
+                        key: prov[0],
+                        val: prov[1]
+                    });
+                });
+                //init other data.
+                var $input = $(this),
+                    dataKey = $input.attr("data-key"),
+                    provKey = 1, //default province 北京
+                    cityKey = 36, //default city 北京
+                    distKey = 37, //default district 北京东城区
+                    distStartIndex = 0, //default 0
+                    cityStartIndex = 0, //default 0
+                    provStartIndex = 0; //default 0
+
+                if (dataKey != "" && dataKey != undefined) {
+                    var sArr = dataKey.split("-");
+                    if (sArr.length == 3) {
+                        provKey = sArr[0];
+                        cityKey = sArr[1];
+                        distKey = sArr[2];
+
+                    } else if (sArr.length == 2) { //such as 台湾，香港 and the like.
+                        provKey = sArr[0];
+                        cityKey = sArr[1];
+                    }
+                    startCities = getAddrsArrayById(provKey);
+                    startDists = getAddrsArrayById(cityKey);
+                    provStartIndex = getStartIndexByKeyFromStartArr(PROVINCES, provKey);
+                    cityStartIndex = getStartIndexByKeyFromStartArr(startCities, cityKey);
+                    distStartIndex = getStartIndexByKeyFromStartArr(startDists, distKey);
+                }
+                var navArr = [{ //3 scrollers, and the title and id will be as follows:
+                    title: "省",
+                    id: "scs_items_prov"
+                }, {
+                    title: "市",
+                    id: "scs_items_city"
+                }, {
+                    title: "区",
+                    id: "scs_items_dist"
+                }];
+                SCS.init({
+                    navArr: navArr,
+                    onOk: function(selectedKey, selectedValue) {
+                        $input.val(selectedValue).attr("data-key", selectedKey);
+                    }
+                });
+                var distScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[2].id,
+                    dataArr: startDists,
+                    startIndex: distStartIndex
+                });
+                var cityScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[1].id,
+                    dataArr: startCities,
+                    startIndex: cityStartIndex,
+                    onChange: function(selectedItem, selectedIndex) {
+                        distScroller.render(getAddrsArrayById(selectedItem.key), 0); //re-render distScroller when cityScroller change
+                    }
+                });
+                var provScroller = new SCS.scrollCascadeSelect({
+                    el: "#" + navArr[0].id,
+                    dataArr: PROVINCES,
+                    startIndex: provStartIndex,
+                    onChange: function(selectedItem, selectedIndex) { //re-render both cityScroller and distScroller when provScroller change
+                        cityScroller.render(getAddrsArrayById(selectedItem.key), 0);
+                        distScroller.render(getAddrsArrayById(cityScroller.getSelectedItem().key), 0);
+                    }
+                });
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="hz_content">
+        <div class="edit_agreement">
+            <input type="text" value="{$contract_num}" id="hetongId" style="display: none;">
+            <input type="text" value="{$id.id}" id="id" style="display: none;" >
+            <input type="text" value="{$id.d_id}" id="d_id" style="display: none;" >
+            <input type="text" value="{$id.p_id}" id="p_id" style="display: none;" >
+            <input type="text" value="{$id.c_id}" id="c_id" style="display: none;" >
+            <input type="text" value="{$is_accomplish}" id="is_accomplish" style="display: none;" >
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>甲方信息</p>
+            </div>
+            <div class="form_input">
+                <p class="form_title">甲方(委托方)<span class="red">*</span></p>
+                <input type="text" placeholder="请输入企业名称" class="form_txt a_name" name="a_name" value="{$find.a_name}">
+            </div>
+            <div class="form_input">
+                <p class="form_title">住所地<span class="red">*</span></p>
+
+                <input type="text" placeholder="请选择省、市（区）、县" class="form_txt a_address" id="city1" readonly >
+                <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+
+            </div>
+
+            <div class="form_input">
+                <p class="form_title">详细地址<span class="red">*</span></p>
+                <input type="text" placeholder="请输入详细地址" class="form_txt a_detailaddress" >
+            </div>
+
+            <div class="form_input">
+                <p class="form_title">法定代表人<span class="red">*</span></p>
+                <input type="text" placeholder="请输入法定代表人" class="form_txt a_person"  name="a_person" value="{$find.a_person}">
+            </div>
+            <div class="form_input">
+                <p class="form_title">统一社会信用代码<span class="red">*</span></p>
+                <input type="text" placeholder="请输入统一社会信用代码" class="form_txt a_idone"  name="a_idone" value="{$find.a_idone}">
+            </div>
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>产品采购报价</p>
+            </div>
+            <div class="form_input" id="addProductInfo">
+                <p class="form_title">产品采购信息及报价<span class="red">*</span></p>
+                <input type="text" placeholder="请输入产品采购信息及报价" class="form_txt a_productinfo" readonly>
+                <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+            </div>
+            <!-- 前端开始 -->
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>交货类型及时间</p>
+
+            </div>
+            <div class="form_input method">
+
+                <p class="form_title">交货类型<span class="red">*</span></p>
+
+                <div class="form_method">
+                    <label for="delivery_one" class="one">一次性交货</label>
+                    <input type="radio" id="delivery_one" name="deliveryMethod"  value="一次性交货" <if condition="empty($find.deliveryMethod) OR $find.deliveryMethod eq '一次性交货'"> checked</if>>
+                    <i></i>
+                </div>
+                <div class="form_method">
+                    <label for="delivery_two">分期分批交货</label>
+                    <input type="radio" id="delivery_two"  name="deliveryMethod" value="分期分批交货" <if condition="!empty($find.deliveryMethod) && $find.deliveryMethod eq '分期分批交货'"> checked  </if>>
+                    <i></i>
+                </div>
+            </div>
+            <p class="notice_txt_one">注：付款方式为“预付款+<span id="fukunM">尾款</span>”</p>
+            <div class="form_input">
+                <p class="form_title">最终交货期<span class="red">*</span></p>
+                <input type="date" placeholder="请选择交货期" class="form_txt lx_datetime"  name="lx_datetime" value="{$find.lx_datetime}">
+            </div>
+            <!-- 选择分期交货时显示，一次性交货时隐藏 -->
+            <div class="form_input" id="paidatetable">
+                <p class="form_title">发货排期表</p>
+                <input type="text" placeholder="请输入发货排期表" class="form_txt paiqi_date" readonly>
+                <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+            </div>
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>付款金额及日期</p>
+            </div>
+            <div class="form_input">
+                <p class="form_title">预付款付款总额<span class="red">*</span></p>
+                <input type="text" placeholder="请选择预付款付款总额" class="form_txt sectedfkprice" readonly  >
+                <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+            </div>
+            <p class="notice_txt_one" id="noticeone">注：在合同签订1个工作日之内，甲方向乙方支付预付款；乙方发货前1个工作日之内，甲方支付乙方尾款。</p>
+            <!-- 备注2号
+            <p class="notice_txt_one hidden" id="noticetwo">注：合同签订之日起 1个工作日内，甲方向乙方支付预付款。</p> -->
+
+
+
+
+
+            <!-- 前端结束 -->
+
+            <!-- <div class="titleban">
+                <div class="redban"></div>
+                <p>货款支付</p>
+            </div>
+            <div class="form_input method">
+                <p class="form_title">首次付款时间（合同签订之日起）<span class="red">*</span></p>
+                <div class="form_method">
+                    <label for="workday_one" class="one">1-3个工作日</label>
+                    <input type="radio" id="workday_one" name="wordkDay" checked value="1-3个工作日">
+                    <i></i>
+                </div>
+                <div class="form_method">
+                    <label for="workday_two">3-5个工作日</label>
+                    <input type="radio" id="workday_two" name="wordkDay" value="3-5个工作日">
+                    <i></i>
+                </div>
+
+            </div>
+            <div class="form_input method">
+                <p class="form_title">首次付款总额（合同总额的占比）<span class="red">*</span></p>
+                <div class="form_method">
+                    <label for="baifenbi_one" class="one">50%</label>
+                    <input type="radio" id="baifenbi_one" name="baifenbi" checked value="50%">
+                    <i></i>
+                </div>
+                <div class="form_method">
+                    <label for="baifenbi_two">70%</label>
+                    <input type="radio" id="baifenbi_two" name="baifenbi" value="70%">
+                    <i></i>
+                </div>
+                <div class="form_method">
+                    <label for="baifenbi_three">100%</label>
+                    <input type="radio" id="baifenbi_three" name="baifenbi" value="100%">
+                    <i></i>
+                </div>
+            </div>
+            <p class="notice_txt_one">注：在乙方发货之日前<span id="notice_day">1-3个工作日</span>， 甲方支付乙方合同总额剩余
+                <span id="notice_baifenbi">50%</span>的货款</p> -->
+
+
+
+
+
+            <div class="titleban">
+                <div class="redban"></div>
+                <!-- 前端开始 -->
+                <p>收货信息</p>
+                <!-- 前端结束 -->
+            </div>
+            <div class="form_input">
+                <p class="form_title">收货人<span class="red">*</span></p>
+                <input type="text" placeholder="请输入收货人姓名" class="form_txt lx_username"  name="lx_username" value="{$find.lx_username}">
+            </div>
+            <div class="form_input">
+                <p class="form_title">收货地址<span class="red">*</span></p>
+
+                <input type="text" placeholder="请输入省、市（区）、县" class="form_txt lx_address" id="city2" readonly >
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">详细地址<span class="red">*</span></p>
+                <input type="text" placeholder="请输入详细地址" class="form_txt lx_detailaddress">
+            </div>
+            <div class="form_input">
+                <p class="form_title">联系电话<span class="red">*</span></p>
+                <input type="number" placeholder="请输入联系电话" class="form_txt lx_tel"  name="lx_tel" value="{$find.lx_tel}">
+            </div>
+            <div class="form_input">
+                <p class="form_title">电子邮箱<span class="red">*</span></p>
+                <input type="text" placeholder="请输入电子邮箱" class="form_txt lx_email"  name="lx_email" value="{$find.lx_email}">
+            </div>
+
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>交货方式</p>
+            </div>
+            <div class="form_input method">
+                <p class="form_title">交货方式（注：运费均由甲方支付）<span class="red">*</span></p>
+                <div class="form_method">
+                    <label for="shipping_one" class="one">甲方自提自运</label>
+                    <input type="radio" id="shipping_one" name="shipping"  value="甲方自提自运"
+                    <if condition="$find.shipping eq 甲方自提自运 OR empty($find.shipping)">checked </if> >
+                    <i></i>
+                </div>
+                <div class="form_method">
+                    <label for="shipping_two">甲方自提并委托承运人</label>
+                    <input type="radio" id="shipping_two" name="shipping" value="甲方自提并委托承运人" <if condition="$find.shipping eq 甲方自提并委托承运人">checked </if> >
+                    <i></i>
+                </div>
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">提货地址<span class="red">*</span></p>
+
+                <input type="text" placeholder="请输入省、市（区）、县" class="form_txt th_address" id="city3" readonly>
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">提货详细地址<span class="red">*</span></p>
+                <input type="text" placeholder="请输入详细地址" class="form_txt th_detailaddress">
+            </div>
+            <!-- <div class="titleban">
+                <div class="redban"></div>
+                <p>交货类型及时间</p>
+
+            </div>
+            <div class="form_input method">
+
+                <p class="form_title">交货类型<span class="red">*</span></p>
+
+                <div class="form_method">
+                    <label for="delivery_one" class="one">一次性交货</label>
+                    <input type="radio" id="delivery_one" name="deliveryMethod" checked value="一次性交货">
+                    <i></i>
+                </div>
+                <div class="form_method">
+                    <label for="delivery_two">分期分批交货</label>
+                    <input type="radio" id="delivery_two" name="deliveryMethod" value="分期分批交货">
+                    <i></i>
+                </div>
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">最终交货期<span class="red">*</span></p>
+                <input type="date" placeholder="请选择交货期" class="form_txt lx_datetime">
+            </div> -->
+
+
+
+
+
+
+            <div class="form_submit" id="submitAgreement">提交合同</div>
+
+
+        </div>
+        <div class="add_product hidden">
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>产品信息</p>
+            </div>
+            <div class="product_box" id="product_box_one">
+                <div class="box">
+                    <div class="form_input">
+                        <p class="form_title">产品名称<span class="red">*</span></p>
+                        <input type="text" placeholder="请输入产品名称" class="form_txt product_name"  value="{$productlist1.0}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">规格型号</p>
+                        <input type="text" placeholder="请输入规格型号" class="form_txt product_type"  value="{$productlist1.1}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">总数量<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入总数量" class="form_txt product_num"  value="{$productlist1.2}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">含税单价（元）<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入含税单价（税率3%）" class="form_txt product_price" value="{$productlist1.3}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">总金额（元）<span class="red">*</span></p>
+                        <input type="text" placeholder="请输入总金额" class="form_txt product_totalp" readonly  value="{$productlist1.4}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">备注</p>
+                        <input type="text" placeholder="请输入备注" class="form_txt product_remarks" value="{$productlist1.5}">
+                    </div>
+                </div>
+                <div class="box2 hidden ">
+                    <div class="form_input">
+                        <p class="form_title">产品名称<span class="red">*</span></p>
+                        <input type="text" placeholder="请输入产品名称" class="form_txt product_name"  value="{$productlist2.0}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">规格型号</p>
+                        <input type="text" placeholder="请输入规格型号" class="form_txt product_type"  value="{$productlist2.1}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">总数量<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入总数量" class="form_txt product_num"  value="{$productlist2.2}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">含税单价（元）<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入含税单价（税率3%）" class="form_txt product_price"  value="{$productlist2.3}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">总金额（元）<span class="red">*</span></p>
+                        <input type="text" placeholder="请输入总金额" class="form_txt product_totalp"  value="{$productlist2.4}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">备注</p>
+                        <input type="text" placeholder="请输入备注" class="form_txt product_remarks"  value="{$productlist2.5}">
+                    </div>
+                </div>
+            </div>
+            <div class="add_box">
+                <img src="__MOBILE__/images/contract/icon_add@3x.png" alt="">
+                <span>新增产品信息</span>
+            </div>
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>合计人民币金额（含增值税）</p>
+            </div>
+            <div class="form_input method">
+                <p class="form_title">合计人民币金额（元）<span class="red">*</span></p>
+                <input type="text" class="form_txt" readonly value="1000" id="totalPrice">
+            </div>
+            <div class="form_submit" id="submitPurchase">提交产品采购报价</div>
+        </div>
+        <!-- 前端结束 -->
+        <div class="add_product2 hidden">
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>发货排期</p>
+            </div>
+            <!-- <div class="product_box" id="product_box_two">
+                <div class="box">
+                    <div class="form_input">
+                        <p class="form_title">产品及数量<span class="red">*</span></p>
+                        <input type="text" placeholder="请选择产品及数量" class="form_txt p2_productnum" readonly>
+                        <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">备注</p>
+                        <input type="text" placeholder="请输入备注" class="form_txt p2_remark">
+                    </div>
+                </div>
+                <div class="box2 hidden">
+                    <div class="form_input">
+                        <p class="form_title">产品及数量<span class="red">*</span></p>
+                        <input type="text" placeholder="请选择产品及数量" class="form_txt p2_productnum">
+                        <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">备注</p>
+                        <input type="text" placeholder="请输入备注" class="form_txt p2_remark">
+                    </div>
+                </div>
+            </div> -->
+            <div class="product_box" id="product_box_two">
+                <div class="box">
+                    <div class="form_input">
+                        <p class="form_title">产品及数量<span class="red">*</span></p>
+                        <input type="text" placeholder="请选择产品及数量" class="form_txt p2_productnum" readonly  value="{$sendgoodslist1.0}">
+                        <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime"  value="{$sendgoodslist1.1}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">备注</p>
+                        <input type="text" placeholder="请输入备注" class="form_txt p2_remark"  value="{$sendgoodslist1.2}">
+                    </div>
+                </div>
+                <div class="box2 <if condition='empty($sendgoodslist2)'> hidden </if> ">
+                    <div class="form_input">
+                        <p class="form_title">产品及数量<span class="red">*</span></p>
+                        <input type="text" placeholder="请选择产品及数量" class="form_txt p2_productnum"  value="{$sendgoodslist2.0}">
+                        <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime"  value="{$sendgoodslist2.1}">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">备注</p>
+                        <input type="text" placeholder="请输入备注" class="form_txt p2_remark"  value="{$sendgoodslist2.2}">
+                    </div>
+                </div>
+            </div>
+            <div class="add_box2 <if condition='!empty($sendgoodslist2)'> hidden </if> ">
+                <img src="__MOBILE__/images/contract/icon_add@3x.png" alt="">
+                <span>新增发货排期</span>
+            </div>
+
+            <div class="form_submit" id="submitSendGoods">提交发货排期表</div>
+        </div>
+        <!-- 前端结束 -->
+        <div class="submit_success hidden">
+            <img src="__MOBILE__/images/contract/icon_contract@3x.png" alt="" class="icon_contract">
+            <p class="su1">合同提交成功</p>
+            <p class="su2">合同编号：<span id="successHtId">{$contract_num}</span></p>
+            <!-- <div class="dow" onclick="printOut()">合同下载</div> -->
+            <a target="_blank" href="" id="img_url" ><div class="dow" >合同下载</div></a>
+            <a href="contract_shouye.html">
+                <div class="dow2">返回首页</div>
+            </a>
+        </div>
+        <div class="notice hidden">提示内容</div>
+    </div>
+
+    <!-- <div style="padding: 30px 0;text-align: center;">
+        <button type="button" class="btn" onclick="printOut()">打印</button>
+    </div> -->
+
+    <!-- 前端开始 -->
+    <div class="wrap hidden"></div>
+    <!-- 底部选择弹出框，请选择预付款付款总额 -->
+    <div class="selectedFuk hidden" id="select_total_price">
+        <div class="tie1">
+            <div class="sected_cancel">取消</div>
+            <p>预付款付款总额</p>
+            <div class="sected_confirm" id="confirmTotalPrice">完成</div>
+        </div>
+        <ul class="sected_content">
+            <li data-amount="60">合同总额的60%；<span id="amount_baifenb1">13000</span>元</li>
+            <li data-amount="80" class="active">合同总额的80%；<span id="amount_baifenb2">12000</span>元</li>
+            <li data-amount="100">合同总额的100%；<span id="amount_baifenb3">12000</span>元</li>
+        </ul>
+    </div>
+    <!-- 发货排期表  选择产品及数量 -->
+    <div class="selectedFuk hidden" id="select_product_num">
+        <div class="tie1">
+            <div class="sected_cancel">取消</div>
+            <p>选择产品及数量</p>
+            <div class="sected_confirm" id="confirmProductNum">完成</div>
+        </div>
+        <ul class="sected_content2">
+            <li class="produt_li" id="productli_one">
+                <input type="radio" name="productSected" id="secteded_productone" checked value="N95口罩">
+                <i></i>
+                <label for="secteded_productone" class="chanp"><span id="pname_one">N95口罩</span>；
+                    <span id="ptype_one" class="sendtype"></span></label>
+                <input type="number" placeholder="请输入配送数量" class="product_num">
+            </li>
+            <li class="produt_li hidden" id="productli_two">
+                <input type="radio" name="productSected" id="secteded_producttwo" value="消毒水">
+                <i></i>
+                <label for="secteded_producttwo" class="chanp"><span id="pname_two">消毒水</span>；
+                    <span id="ptype_two" class="sendtype"></span></label>
+                <input type="number" placeholder="请输入配送数量" class="product_num">
+            </li>
+        </ul>
+    </div>
+    <!-- 前端结束 -->
+    <!-- <div class="successBox hidden">
+        <div class="p1" style="font-size: 15px;">您确定要提交吗？提交的同时将为您自动下载pdf文件。</div>
+        <div class="btton_an"><a href="#">确定</a><a href="javascript:;" id="cancel">取消</a>
+        </div>
+    </div> -->
+
+    <!-- 生成pdf -->
+    <div class="page">
+        <div class="page_box">
+            <section class="pdfscq">
+                <div id="printId">
+                    <div class="content">
+                        <div>
+                            <div class="copy_pdf">
+                                <p style="margin:0pt;  text-align:center; text-indent:-60.5pt"><span style="font-family:黑体; font-size:22pt">医用防护用品代采</span><span style="font-family:黑体; font-size:22pt">合同</span></p>
+                                <p style="line-height:23pt; margin:0pt; text-indent:335.5pt"><span style="font-family:仿宋; font-size:12pt; font-weight:bold">合同编号：</span><span style="font-family:仿宋; font-size:12pt; font-weight:bold" id="pdfId">{$contract_num}</span><span style="font-family:仿宋; font-size:12pt; font-weight:bold"> </span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt"><span style="font-family:仿宋; font-size:12pt; font-weight:bold">甲方(</span><span style="font-family:仿宋; font-size:12pt; font-weight:bold">委托</span><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">方) :</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold "> </span><span style="font-family:仿宋; font-size:12pt; font-weight:bold " id="partA_name">深圳市红礼供应链管理有限公司</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">住所地：</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold " id="partA_localassress">深圳市福田保税区桃花路6号腾飞工业大厦A栋D区4层</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt ">
+                                    <span style=" font-family:仿宋; font-size:12pt; font-weight:bold ">法定代表人：</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold " id="partA_person">刘新</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt ">
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">统一社会信用代码：</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold " id="partA_idone">91440300MA5FM67U6B</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">&#xa0;</span></p>
+                                <!-- 乙方 -->
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">乙方(</span><span style="font-family:仿宋; font-size:12pt;
+                                        font-weight:bold ">受托方</span><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">) :</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">深圳市红礼供应链管理有限公司</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">住所地：</span><span style="font-family:仿宋; font-size:12pt;
+                                        font-weight:bold ">深圳市福田保税区桃花路6号腾飞工业大厦A栋D区4层</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">法定代表人：</span><span style="font-family:仿宋;
+                                        font-size:12pt; font-weight:bold ">刘新</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt 0pt 0pt 10.5pt; text-align:justify; text-indent:11.7pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">统一社会信用代码：</span><span style="font-family:仿宋;
+                                        font-size:12pt; font-weight:bold ">91440300MA5FM67U6B</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">根据《中华人民共和国合同法》及相关法律法规的规定,本着诚实信用、互惠互利的原则,经过双方充分协商一致,订立本合同。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第一条 产品采购报价</span></p>
+
+                                <!-- 表格 -->
+                                <table cellspacing="0 " cellpadding="0 " style="border-collapse:collapse; margin-left:6.85pt; width:503.95pt ">
+                                    <tr style="height:37pt ">
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:24.65pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold;color:#000000 ">序号</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.15pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify ">
+                                                <span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">产品名称</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:46.4pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">规格型号</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:59.6pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">总数量（片）</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">含税</span><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">单价（元）</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.2pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">总金额（元）</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify; text-indent:30pt "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">备注</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height:19.1pt; ">
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:24.65pt;height: 40pt;
+                                        overflow: hidden;
+                                        ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center ">
+                                                <span style="font-family:仿宋; font-size:10.5pt " id="table_bianhao1"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.15pt;height: 40pt;
+                                        overflow: hidden;
+                                        ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style=" font-family:仿宋; font-size:10.5pt " id="table_name1"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:46.4pt ;height: 40pt;
+                                        overflow: hidden;
+                                        ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify; text-indent:10pt "><span style="font-family:仿宋; font-size:10.5pt " id="table_type1"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:59.6pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style="font-family:仿宋; font-size:10.5pt " id="table_num1"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style="font-family:仿宋; font-size:10.5pt " id="table_price1"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.2pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt " id="table_totalp1"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt " id="table_remark1"></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height:19.1pt; ">
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:24.65pt;height: 40pt;
+                                        overflow: hidden;
+                                        ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center; ">
+                                                <span style="font-family:仿宋; font-size:10.5pt " id="table_bianhao2"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.15pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify ">
+                                                <span style=" font-family:仿宋; font-size:10.5pt; " id="table_name2"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:46.4pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify; text-indent:10pt ">
+                                                <span style=" font-family:仿宋; font-size:10.5pt; " id="table_type2"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:59.6pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style=" font-family:仿宋; font-size:10.5pt " id="table_num2"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style=" font-family:仿宋; font-size:10.5pt " id="table_price2"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.2pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style=" font-family:仿宋; font-size:10.5pt " id="table_totalp2"></span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                        border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt " id="table_remark2"></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height:20.7pt ">
+                                        <td colspan="7 " style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000;
+                                        border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:492.4pt ">
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt ">合计人民币金额（含增值税）：（大写）</span><span style="font-family:仿宋; font-size:10.5pt ">【</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">  </span>
+                                                <span style="font-family:仿宋; font-size:10.5pt;display: inline-block;width: 120pt; " id="table_bignum"></span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">】</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">圆整</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">  </span>
+                                                <span style="font-family:仿宋; font-size:10.5pt; ">（小写¥</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt "> 【</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">   </span>
+                                                <span style="font-family:仿宋; font-size:10.5pt;display: inline-block;width: 120pt; " id="table_smallnum"></span><span style="font-family:仿宋; font-size:10.5pt "> </span>
+                                                <span style=" font-family:仿宋; font-size:10.5pt ">】</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">元）。</span>
+                                            </p>
+                                            <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt ">上述报价 </span><span style="font-family:仿宋; font-size:10.5pt; text-decoration:underline
+                                        ">    /   </span><span style="font-family:仿宋; font-size:10.5pt ">元</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">不</span>
+                                                <span style="font-family:仿宋; font-size:10.5pt ">包含运输费，仓储费，进口保管费，关税等！</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height:0pt ">
+                                        <td style="width:35.45pt; border:none "></td>
+                                        <td style="width:77.95pt; border:none "></td>
+                                        <td style="width:57.2pt; border:none "></td>
+                                        <td style="width:70.4pt; border:none "></td>
+                                        <td style="width:92.1pt; border:none "></td>
+                                        <td style="width:78pt; border:none "></td>
+                                        <td style="width:92.1pt; border:none "></td>
+                                    </tr>
+                                </table>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">乙方向甲方开具相应增值税发票，税金由</span><span style="font-family:仿宋; font-size:12pt
+                                        ">乙</span><span style="font-family:仿宋; font-size:12pt ">方承担。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第二条 货款支付</span><span style="width:342.2pt; text-indent:0pt;
+                                        display:inline-block; -aw-tabstop-align:left; -aw-tabstop-pos:456.3pt "></span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">2.1 付款方式，适用以下【<span id="partA_payMethod">    </span>】方式：</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt;widows: 100%; ">
+                                    <span style="font-family:仿宋; font-size:12pt ">（1）合同签订之日起【</span>
+                                    <span style="font-family:仿宋; font-size:12pt
+                                        " class="partA_oneday">&nbsp;</span><span style="font-family:仿宋; font-size:12pt ">】个工作日内，
+                                        甲方</span><span style="font-family:仿宋; font-size:12pt ">向</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">乙方支付合同总额
+                                        【<span id="partA_one_bili1">&nbsp;</span>】%的预付款， 金额【
+                                    <span id="partA_one_amount1"> </span>元】， 乙方发货之前【
+                                    <span class="partA_oneday"> </span>】个工作日内，甲方支付乙方合同总额【<span id="partA_one_bili2"> </span>】%的尾款，金额【<span id="partA_one_amount2"> </span>元】。
+                                    </span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt;widows: 100%; ">
+                                    <span style="font-family:仿宋; font-size:12pt ">
+                                        （2）合同签订之日起【<span class="partA_oneday2">  </span>】个工作日内， 甲方向乙方支付合同总额【
+                                    <span id="partA_two_bili1"> </span>】%的预付款，金额【<span id="partA_two_amount1"> </span>元】， 在每批次发货前，支付每批次发货数量所对应金额的【
+                                    <span id="partA_two_bili2"> </span>】%尾款。
+                                    </span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">2.2 乙方收款账号：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">开户名称：深圳市红礼供应链管理有限公司</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">纳税人识别号：91440300MA5FM67U6B</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">地址：深圳市福田区福保街道福保社区桃花路6号腾飞工业大厦A栋4层402    </span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">电话：0755-22937331</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">开户行：中国民生银行股份有限公司深圳海岸城支行   </span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">账号：159454278</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第三条 产品的交货及运输方式</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">3.1</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">联系信息</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:40pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">收货地址</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">：</span>
+                                    <span style=" font-family:仿宋; font-size:12pt ">【 </span>
+                                    <span style="font-family:仿宋; font-size:12pt " id="partA_address"></span>
+                                    <span style=" font-family:仿宋; font-size:12pt ">】</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:40pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">收</span><span style="font-family:仿宋; font-size:12pt "> </span><span style="font-family:仿宋; font-size:12pt ">货</span><span style="font-family:仿宋; font-size:12pt "> </span>
+                                    <span style="font-family:仿宋; font-size:12pt ">人：</span>
+                                    <span style=" font-family:仿宋; font-size:12pt ">【</span>
+                                    <span style=" font-family:仿宋; font-size:12pt " id="partA_username"></span>
+                                    <span style=" font-family:仿宋; font-size:12pt ">】</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:40pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">联系</span><span style="font-family:仿宋; font-size:12pt ">电话：</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">【
+                                    </span>
+                                    <span style=" font-family:仿宋; font-size:12pt " id="partA_tel"></span>
+                                    <span style=" font-family:仿宋; font-size:12pt ">】</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">3.2交货方式，
+                                    按下列第【</span><span style="font-family:仿宋; font-size:12pt " id="partA_shipping">１</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">】项执行：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">（1）</span><span style="font-family:仿宋; font-size:12pt ">至</span>
+
+                                    <span style=" font-family:仿宋; font-size:12pt; border-bottom:1px solid #000000;display: inline-block;width: 312pt;overflow: hidden; " id="partA_address2"></span>
+                                    <span style="font-family:仿宋; font-size:12pt ">甲方自提自运，运费由甲方支付。</span><span style="width:18pt; text-indent:0pt; display:inline-block "></span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">（2）</span><span style="font-family:仿宋; font-size:12pt ">至</span>
+                                    <span style=" font-family:仿宋; font-size:12pt; border-bottom:1px solid #000000;display: inline-block;width: 312pt;overflow: hidden; " id="partA_address3"></span>
+                                    <span style="font-family:仿宋; font-size:12pt ">甲方自提并委托承运人，运费由甲方支付。</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">3.3 交货时间：产品的交货期限，适用以下
+                                【</span>
+                                    <span style="font-family:仿宋; font-size:12pt" id="partA_Methods">二</span><span style="font-family:仿宋; font-size:12pt ">】方式：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（1）一次性交货：交货期为</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">【</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt " id="partA_year1"> </span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">】</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">年</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">【</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt " id="partA_month1"> </span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">】</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">月</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">【</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt " id="partA_day1"> </span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">】</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">日。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">（2）分期分批交货：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:10pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">特殊时期具体发货时间和数量，以乙方收款后与生产商沟通为准。采用分批发货的方式，总体在</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline " id="partA_year2">&nbsp;</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">年</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline "> </span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline " id="partA_month2">&nbsp;</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline "> </span>
+                                    <span style="font-family:仿宋; font-size:12pt ">月</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline ">  </span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline " id="partA_day2">&nbsp;</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">日发完，（具体分批情况以附件《发货排期表》为准）。乙方应将发货及运输情况及时告知甲方。</span></p>
+                                <!-- <span style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p> -->
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">3.4本合同项下产品准备完成后，如因甲方原因暂时不能接收合同货物，致使货物积压在供应方时，甲方应承担由此产生的包括但不限于仓储、保管、货物损耗、不可抗力因素导致的货损灭失等费用。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">3.5如果上述事项发生变更，需在乙方交货前</span><span style="font-family:仿宋; font-size:12pt
+                                        ">五</span><span style="font-family:仿宋; font-size:12pt ">日，同时以电话与书面通知</span><span style="font-family:仿宋; font-size:12pt ">乙方</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">，否则由此造成的损失由甲方自行承担，给乙方造成损失的（包括但不限于乙方的一切损失、逾期违约金以及乙方为实现债权而支出的诉讼费、律师费、差旅费等相关费用），甲方应向乙方赔偿。</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">3.6甲方变更交货地点与运输方式的，需征得乙方同意，且若发生因交货地点变动而增加运输费用的，其增加的部分由甲方承担。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第四条 产品质量</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">4.1产品质量标准：甲方已知本合同项下的货物源自进口</span><span style="font-family:仿宋; font-size:12pt
+                                        ">/国内</span><span style="font-family:仿宋; font-size:12pt ">，乙方提供</span><span style="font-family:仿宋; font-size:12pt ">对应产品</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">认证检验合格证明，即视为产品符合质量标准。</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">4.2 检验期限:</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">4.2.1甲方自行在乙方的上游供货商处提货、验货，乙方予以协助；甲方应在交货期内收货当日完成货物型号、规格、数量、包装和质量的检验，并有责任签署书面接收文件，产品毁损、灭失风险自货物移交后转移给甲方。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">4.2.2在检验期内，如对货物型号、规格、数量、包装或质量有异议，甲方应向乙方发出书面异议通知；逾期检验或未以书面方式向乙方提出异议的，视为产品不存在问题，验收合格。经双方共同确认产品存在问题的，由乙方协助甲方向乙方的上游供货商要求解决处理。</span></p>
+                                <br><br><br>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">4.3甲方在收到货后，若产品确实出现产品质量问题，乙方确认后乙方将协助甲方向其原供货商更换新产品，乙方对此不承担任何赔偿责任。若因甲方人为因素或自然灾害等不可抗力因素所导致产品破损，应由甲方自行承担责任。</span></p>
+
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">4.4甲乙双方就货物质量、技术、性能等在验收中发生争议时,可交由经双方协商委托的第三方机构进行鉴定；若鉴定结果表明货物未能达到双方约定标准的，则鉴定所产生的费用由乙方的上游供货商承担，否则，鉴定所产生的费用由甲方承担。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第五条 特别约定</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">5.1乙方为甲方与乙方上游供货商之间的销售平台，甲乙双方按照本合同约定付款和收发货。乙方向甲方同时批露不超过三个品牌质量标准相同的货物，供甲方选择。任一品牌的货物有供货不足的情况发生时，其他品牌的货物可替代发货。若有特殊情况乙方有权直接向甲方披露乙方上游供货商，本合同直接约束甲方和乙方上游供货商，而乙方不承担相应的合同义务和责任。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">5.2 乙方仅是本合同项下货物的销售平台，如果本合同项下的货物无论在哪个交易环节被征</span><span style="font-family:仿宋;
+                                        font-size:12pt ">用</span><span style="font-family:仿宋; font-size:12pt ">或没收，均与乙方无关，乙方无义务向甲方返还货款，但乙方将协助甲方或乙方的上游供货商向有关政府机构索取补偿款或赔偿款。如因征用或没收给乙方造成损失，甲方应当给予乙方适当的补偿。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">5.3本合同项下的货物，属于疫情时期的特殊物资，在本合同履行过程中，如乙方或者乙方上游供货商的产量因设备、原材料、监管等客观原因造成的交货期延迟以及无法按本合同继续履行供货义务，均不视为乙方违约。乙方应调集符合相同质量标准的其他品牌或其他上游供应商的符合相同标准的货物补充货源。乙方应及时告知甲方进度情况。在多个品牌和多个供应方都不能满足供应的情况下，双方协商处理。如协商不成，乙方有权解除本合同，不承担任何赔偿责任。乙方应在本合同解除后五个工作日内，扣除已发货部分所产生的相关费用后，将剩余款项原路退回甲方账户。</span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">5.4鉴于疫情特殊时期，在供货中途，如乙方的上游供货商产量因征用而无法按采购合同继续履行供货义务，均不视为乙方违约。乙方有权立即解除本合同。乙方应在合同解除后两个工作日内退还剩余货款。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第六条 违约责任</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt
+                                        ">6.1甲方应按照本合同约定支付货款，甲方逾期付款的，每逾期一天，需向乙方支付逾期付款金额的1‰作为违约金。逾期超过</span><span style="font-family:仿宋; font-size:12pt ">5</span><span style="font-family:仿宋; font-size:12pt ">天，乙方有权解除合同，并要求甲方赔偿由此造成的损失。因甲方延迟付款导致的交期延误，责任由甲方承担。甲方无正当理由拒收货物的，甲方应向乙方支付合同总价</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">10</span><span style="font-family:仿宋; font-size:12pt ">%的违约金，并赔偿因此给乙方造成的一切损失。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">6.2 </span>
+                                    <span style="font-family:仿宋; font-size:12pt
+                                        ">甲方充分认识到本合同项下货物为应急物品，故不能因应急缓解或其他原因而中止合同。如甲方中途单方面中止合同，乙方不退还所有剩余款项。</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">本合同项下的货物</span><span style="font-family:仿宋; font-size:12pt ">供应紧张情形，若因客观原因乙方不能及时供货或无法履行本合同的，乙方有权随时解除本合同，乙方向甲方返还货款（货物被政府征收、没收除外），双方和平协商解决善后事宜。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><a name="_Hlk14770091 "><span style="font-family:仿宋; font-size:12pt ">6.3任何一方违反本合同的约定应赔偿由此给守约方造成的一切损失，包括（但不限于）利息、违约金及守约方为追究违约方违约责任而支付的诉讼费、公证费、律师费、交通差旅费、评估费、拍卖或变卖费等所有费用。</span></a></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <br><br>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第七条 保密条款</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">7.1甲乙双方有义务采取适当措施就专有技术和有关技术资料对任何第三方严格保密，同时，参加合同履行的人员也必须承担同样的保密义务。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">7.2甲乙双方或其技术人员在合同履行过程中所获得或了解的商业秘密均具有保密义务。未经对方事先书面许可，任何一方不得利用或披露。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">7.3保密义务不因合同终止而结束，除非信息所有方主动披露，未经同意泄露或者在本合同以外使用该商业秘密、技术秘密等保密信息给另一方造成损失的，应承担损害赔偿责任。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">7.4保密义务不适用下列信息：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（1）现在或以后进入公共领域的信息；</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（2）能够证明在泄漏时已被一方当事人持有而且是以前直接或间接地从另一方获得的信息；</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（3）一方当事人合法地从第三方获得并且不对此承担保密义务的信息。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><a name="_Hlk14770241 "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第八条 不可抗力</span></a></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">8.1不可抗力定义</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">不可抗力是不可抗力，是指不能预见、不能避免并不能克服的客观情况，甲、乙双方同意以下情形属于不可抗力：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（1）局部冲突、暴乱、战争。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（2）不可抗力的自然灾害。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（3）在本合同有效期内，中国国务院、地方政府颁布的行政命令。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">（4）其它双方经协商予以认可的情形。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">8.2不可抗力的后果</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">双方中一方由于不可抗力不能履行本合同时，应当采取一切可能的有效措施，以避免或减少损失；同时应当及时通知对方，说明不能履行、需要延期履行或部分履行的理由，以便使对方当事人采取必要措施，减轻由此而带来的不良影响。遭受不可抗力的一方应在上述不可抗力事件消除后15日内提供有权证明机构的证明，并将证明送交对方，方可根据具体情况部分或全部免予承担违约责任；不可抗力事件及影响终止或消除后，双方须立即恢复履行各自在本合同项下的各项义务。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="-aw-bookmark-end:_Hlk14770241 "></span><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第九条 争议处理</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">双方如对合同履行发生争议，应当协商解决，未能协商一致的，提交合同签订地有管辖权的人民法院诉讼处理。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第十条 通知</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">10.1合同需要一方向另一方发出的全部通知以及双方的文件往来及与本合同有关的通知和要求等，必须用书面形式，可采用（书信、传真、电报、电话、电子邮件、当面送交等）方式传递。以上方式无法送达的，方可采取公告送达的方式。</span></p>
+                                <!-- <span style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p> -->
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">10.2各方通讯地址如下：</span></p>
+                                <!-- <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p> -->
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">甲方通讯地址：</span>
+                                    <span style="font-family:仿宋; font-size:12pt " id="partA_address4"></span>
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">联系人：</span>
+                                    <span style="font-family:仿宋; font-size:12pt; " id="partA_username2">啊啊啊</span>
+                                    <!-- <span style="font-family:仿宋; font-size:12pt "> </span> -->
+                                    <!-- <span style="color:#ff0000; font-family:仿宋; font-size:12pt ">      </span> -->
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">联系电话：</span>
+                                    <span style="font-family:仿宋; font-size:12pt " id="partA_tel2">13032323232</span>
+                                    <!-- <span style="color:#000000; font-family:仿宋; font-size:12pt ">  </span> -->
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">电子邮箱</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt ">：</span>
+                                    <span style="font-family:仿宋; font-size:12pt " id="partA_email">liuping@lizhi33.cn</span>
+                                    <!-- <span style="color:#ff0000; font-family:仿宋; font-size:12pt ">              </span> -->
+                                    <!-- <span style="color:#ff0000; font-family:仿宋; font-size:12pt; text-decoration:underline ">                </span> -->
+                                </p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">乙方通讯地址：</span><span style="font-family:仿宋; font-size:12pt ">深圳市福田保税区桃花路6号腾飞工业大厦A栋D区4层   </span></p>
+                                <br>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">联系人：</span><span style="font-family:仿宋; font-size:12pt
+                                        ">刘平</span><span style="font-family:仿宋; font-size:12pt ">       联系电话：</span><span style="font-family:仿宋; font-size:12pt ">18038195536　　</span>
+                                    <span style="font-family:仿宋; font-size:12pt ">电子邮箱：</span><span style="font-family:仿宋; font-size:12pt ">liuping@lizhi33.cn</span>
+                                </p>
+                                <!-- <span style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt ">
+                                    <span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p> -->
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">10.3一方变更通知或通讯地址，应自变更之日起1日内，以书面形式通知对方；否则，由未通知方承担由此而引起的相关责任。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">第十一条 其他约定</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">11.1本合同中的标题仅为方便阅读而设，各方权利义务以合同条款的具体内容为准。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">11.2 本合同附件作为本合同有效组成部分，与本合同具有同等法律效力。本合同未尽事宜或需修改补充的事项，由双方协商一致，另行签订补充协议予以确定。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">11.3本合同自双方签字盖章之日起生效。本合同一式贰份，甲乙双方各执一份，具有同等法律效力。</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">本合同于</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline "> </span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline " id="partA_currentyear">&nbsp;</span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline "></span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline "> </span>
+                                    <span style="font-family:仿宋; font-size:12pt ">年</span>
+                                    <!-- <span style="color:#ff0000; font-family:仿宋; font-size:12pt; text-decoration:underline ">   </span> -->
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline " id="partA_currentmonth">&nbsp;</span>
+                                    <!-- <span style="color:#ff0000; font-family:仿宋; font-size:12pt; text-decoration:underline "></span> -->
+                                    <span style="font-family:仿宋; font-size:12pt ">月</span>
+                                    <span style="font-family:仿宋; font-size:12pt "> </span>
+                                    <!-- <span style="color:#ff0000; font-family:仿宋; font-size:12pt; text-decoration:underline ">  </span> -->
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline " id="partA_curretday"></span>
+                                    <span style="color:#000000; font-family:仿宋; font-size:12pt; text-decoration:underline ">  </span>
+                                    <span style="font-family:仿宋; font-size:12pt ">日签订，签订地为中国</span><span style="font-family:仿宋; font-size:12pt ">深圳市</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">(本页以下无正文)</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt ">
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">甲方（盖章）： </span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold "> &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;
+                                        &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&nbsp;</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">乙方（盖章）：</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt "><span style="font-family:仿宋; font-size:12pt; font-weight:bold ">&#xa0;</span></p>
+                                <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24.1pt ">
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">法定代表人/授权代表</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">：&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&nbsp;</span>
+                                    <span style="font-family:仿宋; font-size:12pt; font-weight:bold ">法定代表人/授权代表： </span></p>
+                            </div>
+                        </div>
+                        <div class="fujian" style="margin-top:370pt;">
+                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:justify; text-indent:24pt "><span style="font-family:仿宋; font-size:12pt ">附件:《发货排期表》</span></p>
+                            <br>
+                            <table cellspacing="0 " cellpadding="0 " style="border-collapse:collapse; margin-left:6.85pt; width:503.95pt ">
+                                <tr style="height:37pt ">
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:24.65pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold;color:#000000 ">序号</span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.15pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify ">
+                                            <span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">产品名称</span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:46.4pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">配送时间</span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:59.6pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">配送数量</span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style="font-family:仿宋; font-size:10.5pt; font-weight:bold ">备注</span></p>
+                                    </td>
+
+                                </tr>
+                                <tr style="height:19.1pt; ">
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:24.65pt;height: 40pt;
+                                    overflow: hidden;
+                                    ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center ">
+                                            <span style="font-family:仿宋; font-size:10.5pt " id="table2_bianhao1"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.15pt;height: 40pt;
+                                    overflow: hidden;
+                                    ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style=" font-family:仿宋; font-size:10.5pt " id="table2_name1"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:46.4pt ;height: 40pt;
+                                    overflow: hidden;
+                                    ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify; text-indent:10pt "><span style="font-family:仿宋; font-size:10.5pt " id="table2_type1"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:59.6pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style="font-family:仿宋; font-size:10.5pt " id="table2_num1"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style="font-family:仿宋; font-size:10.5pt " id="table2_remark1"></span></p>
+                                    </td>
+
+                                </tr>
+                                <tr style="height:19.1pt; ">
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:24.65pt;height: 40pt;
+                                    overflow: hidden;
+                                    ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center ">
+                                            <span style="font-family:仿宋; font-size:10.5pt " id="table2_bianhao2"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:67.15pt;height: 40pt;
+                                    overflow: hidden;
+                                    ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify "><span style=" font-family:仿宋; font-size:10.5pt " id="table2_name2"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:46.4pt ;height: 40pt;
+                                    overflow: hidden;
+                                    ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:justify; text-indent:10pt "><span style="font-family:仿宋; font-size:10.5pt " id="table2_type2"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:59.6pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style="font-family:仿宋; font-size:10.5pt " id="table2_num2"></span></p>
+                                    </td>
+                                    <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid;
+                                    border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt ">
+                                        <p style="font-size:10.5pt; line-height:150%; margin:0pt; text-align:center "><span style="font-family:仿宋; font-size:10.5pt " id="table2_remark2"></span></p>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+
+    <script src="__MOBILE__/js/contract/html2canvas.min.js "></script>
+    <script src="__MOBILE__/js/contract/jspdf.min.js "></script>
+    <script type="text/javascript " src="__MOBILE__/js/contract/index.js "></script>
+    <!-- <script type="text/javascript " src="__MOBILE__/js/contract/index.min.js "></script> -->
+
+</body>
+
+</html>

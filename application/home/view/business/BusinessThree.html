@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商家入驻申请—店铺信息</title>
+
+   		<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+		<link rel="stylesheet" href="__BUSINESS__/style/apply_one.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="__BUSINESS__/style/fontsIco.css">
+		<link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+		<link rel="stylesheet" href="__BUSINESS__/style/apply_three.css" />
+
+		<script type="text/javascript" src="__BUSINESS__/js/jquery.min.js"></script>
+        <script type="text/javascript" src="__BUSINESS__/js/jquery.js"></script>
+        <script type="text/javascript" src="__BUSINESS__/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="__BUSINESS__/js/ajaxupload.js"></script>
+
+		<!--new add-->
+		<link rel="stylesheet" href="__BUSINESS__/style/diyUpload.css" />
+		<link rel="stylesheet" href="__BUSINESS__/style/webuploader.css" />
+		<script src="__BUSINESS__/js/diyUpload.js"></script>
+		<script src="__BUSINESS__/js/webuploader.html5only.min.js"></script>
+
+		<style>
+			em{color: #F00;margin-left: 5px;}
+		</style>
+		<script>
+			if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+				alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="customer-header" style="height:100px;line-height:100px;">
+			<div class="wrap">
+				<div class="simplelogo" style="overflow: hidden;">
+					<ul class="logo-businessCenter">
+						<li class="logo-businessCenter-li1"><a href="/"><img src="__BUSINESS__/images/regLogo.png" alt="logo" style=""></a></li>
+						<li class="logo-businessCenter-li2"><a href="{:Url('Home/Business/BusinessIndex')}">商家中心</a></li>
+					</ul>
+					<ul class="regs-info">
+						<li>24小时服务电话：400-089-7879</li>
+						<li><a href="http://yilitong.com/index.php/Home/Article/detail/article_id/43.html">商家指南</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr style="box-shadow:0 1px 2px #ccc;">
+
+		<div class="inner">
+			<div class="seller">
+				<p>商户：<span>{$supplier.user_name}</span><a href="login_out">退出</a></p>
+			</div>
+		</div>
+
+			<!--入驻进度-->
+		<div class="centrol-controller-800">
+			<ul class="progress-bar">
+				<li>
+					<span>1</span>
+					<p class="progress-bar-info">填写公司基本信息</p>
+				</li>
+				<li>
+					<span>2</span>
+					<p class="progress-bar-info">上传资质</p>
+				</li>
+				<li class="gray-bg">
+					<span>3</span>
+					<p class="progress-bar-info">店铺信息</p>
+				</li>
+				<li class="progress-bar-noBody gray-bg">
+					<span class="gray-bg">4</span>
+					<p class="progress-bar-info">等待审核</p>
+				</li>
+			</ul>
+		</div>
+			
+		<!--店铺信息-->
+		<div class="inner" style="margin:70px auto;">
+			<h3>店铺信息</h3>
+			<div class="centrol-controller-800">
+				<form>
+					<div class="shop-info-group">
+						<div class="shop-col">
+							<label class="shop-info-title"><span style="color: #ff0000;-right: 3px;">*</span>店铺命名：</label>
+							<div class="shop-info-box">
+								<input name="supplier_name" type="text" class="shop-name" value="{$row['supplier_name']}">
+								<span></span>
+								<!--i class="shop-info-tips">请认真阅读 <a href="#">《一礼通命名规范》</a></i-->
+							</div>
+						</div>
+						<div class="shop-col">
+							<label class="shop-info-title"><span style="color: #ff0000;-right: 3px;">*</span>店铺logo：</label>
+							<div class="shop-info-box">
+								<div id="business-logo-upload"></div>
+								<if condition="$row.logo"><span><img src="{$row.logo}" style="margin-left:10px;display: block;width:50px;height: 40px;float: left;"/></span></if>
+								<br>
+								<i class="shop-info-tips">图片大小不能超过2M，格式为：jpg、png、jpeg、gif</i>
+							</div>
+						</div>
+
+						<div class="shop-col">
+							<label class="shop-info-title"><span style="color: #ff0000;-right: 3px;">*</span>阅读并签署协议：</label>
+							<div class="shop-info-box" style="padding-top:8px;">
+								<p class="shop-agreement" style="margin-bottom:10px;"><a target="_blank" href="__PUBLIC__/upload/active/agreement/settlementAgreementt.pdf">点击下载《一礼通商家入驻收费项目协议》</a></p>
+								<div class="upload-settlement-agreement">
+									<div id="settlement-agreement"></div>
+									<if condition="$row.reading_protocol"><span><img src="{$row.reading_protocol}" style="margin-left:10px;display: block;width:50px;height: 40px;float: left;"/></span></if>
+									<p class="shop-info-tips" style="margin-top:10px;">签署协议并上传，单图片大小不能超过2M，格式为：jpg、png、jpeg、gif</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<input type="hidden" name="logo" id="logo" value="{$row.logo}">
+				<input type="hidden" name="type" value='<if condition="$row.supplier_name neq null">1</if>'>
+				<input type="hidden" name="reading_protocol"  id="reading_protocol" value="{$row.reading_protocol}">
+				<div class="pre2-next2-btn">
+					<div class="pre-2"><a href="{:Url('Home/Business/BusinessTwo')}">上一步</a></div>
+					<div class="next-2"><a href="javascript:void(0)">下一步</a></div>
+				</div>
+			</div>
+		</div>
+
+		<include file="public/footer" />
+
+		<script>
+			$(function(){
+				//判断店铺名称是否已被注册
+				$('.next-2').click(function(){
+					//开户许可证上传
+					var logo=$("input[name='logo']").val();
+					var reading_protocol=$("input[name='reading_protocol']").val();
+					if($('.shop-name').val() == '') {
+						alert('请填写写店铺名称');return;
+					}else if(logo=="") {
+						alert('请上传店铺logo');return;
+					}else if(reading_protocol==""){
+						alert('请上传入驻协议');return;
+					}else{
+						$.ajax({
+							type:'POST',
+							url:'BusinessThree_save',
+							dataType:'json',
+							data:{
+								supplier_name:$("input[name='supplier_name']").val(),
+								type:$("input[name='type']").val(),
+								logo:$('#logo').val(),
+								reading_protocol:$('#reading_protocol').val(),
+							},
+							success:function(data){
+								if(data=='1'){
+									alert('店铺名已经存在');return;
+								}else if(data=='-1'){
+									//后台控制所有信息上填写和上传完整
+									alert('请完成所有资料填写与上传');return;
+								}else if(data=='2'){
+									window.location="BusinessFour";
+								}else{
+									alert('操作失败');
+								}
+							},
+							error:function(jqXHR){
+								alert('状态码：' + jqXHR);
+							}
+						})
+					}
+				});
+
+				//图片上传
+				var userList = ["business-logo-upload","settlement-agreement"];
+				var userVal = ["logo","reading_protocol"];
+				$.each(userList,function(i,item){
+					var obj=$('#'+item);
+					var val=$("#"+userVal[i]);
+					//图片上传
+					obj.diyUpload({
+						url:'upload',
+						success:function( data ) {
+							var data=data._raw;
+							if(data==2){
+								alert('文件过大');return;
+							}else if(data==1){
+								alert('上传失败');return;
+							}
+							val.val(data);
+						},
+						error:function( err ) {
+							console.info( err );
+						},
+						buttonText : '选择图片',
+						chunked:true,
+						// 分片大小
+						chunkSize:512 * 1024,
+						//最大上传的文件数量, 总文件大小,单个文件大小(单位字节);
+						fileNumLimit:1,
+						//fileSizeLimit:500000 * 1024,
+						//fileSingleSizeLimit:50000 * 1024,
+						fileSingleSizeLimit:1024 * 1024 * 2,
+						accept: {
+							title:"Images",
+							extensions:"jpg,jpeg,bmp,png",
+							mimeTypes:"image/*"
+						}
+					});
+
+				});
+
+			})
+
+		</script>
+
+	</body>
+
+
+</html>

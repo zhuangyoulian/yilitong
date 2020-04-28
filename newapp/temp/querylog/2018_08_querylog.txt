@@ -1,0 +1,4251 @@
+time:20180801174419
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533116659 where user_id = 163763 
+-------------------------------------------------
+
+time:20180802005920
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180802005925
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180802005945
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 37 
+-------------------------------------------------
+
+time:20180802010005
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=57
+-------------------------------------------------
+
+time:20180802010012
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180802010020
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4621
+-------------------------------------------------
+
+time:20180802010028
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4574
+-------------------------------------------------
+
+time:20180802010036
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4335
+-------------------------------------------------
+
+time:20180802010105
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4635
+-------------------------------------------------
+
+time:20180802010122
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3738
+-------------------------------------------------
+
+time:20180802010312
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4188
+-------------------------------------------------
+
+time:20180802131149
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('李世军', '', '1533186709','','1','1','ios524a9400b60938538a359d82b3e0953b','https://thirdwx.qlogo.cn/mmopen/vi_32/bJjBw4nJOV19msoib2BmcntlFD2kteaGBAwQAUT8W3WDle4WYxLqgb4Jpk0WF20IUe6qTXPpia4ibBeUFlOUaiadpg/132','','ormqRwQZPuv-hBRM7RHPKgd8y7SY','weixin')
+-------------------------------------------------
+
+time:20180802131149
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164119' where user_id=164119
+-------------------------------------------------
+
+time:20180802131158
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('18151219087','1533186718','您的验证码是24505(请尽快完成验证)。如非本人操作，请忽略本短信','0','24505')
+-------------------------------------------------
+
+time:20180802131213
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1533185533
+-------------------------------------------------
+
+time:20180802131213
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='UVxQXk0fWVBdS1JQU1lJWxRUW0tQWV1ZQVJQ',`type` ='1',`addtime` ='1533186733',`ip` ='49.92.124.215',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.3.1; Scale/2.00)'
+-------------------------------------------------
+
+time:20180802131239
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='49.92.124.215'
+-------------------------------------------------
+
+time:20180802131239
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=18151219087,extension_id='' where user_id=164119
+-------------------------------------------------
+
+time:20180802131501
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1586
+-------------------------------------------------
+
+time:20180802131535
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4134
+-------------------------------------------------
+
+time:20180802131552
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1667
+-------------------------------------------------
+
+time:20180802131559
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2592
+-------------------------------------------------
+
+time:20180802131705
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4249
+-------------------------------------------------
+
+time:20180802144422
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(50, "ylt_1494856971625","13352781717", "183.40.69.169","1533192262","Android")
+-------------------------------------------------
+
+time:20180802150950
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533193790 where user_id = 164090 
+-------------------------------------------------
+
+time:20180802150950
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164090, "Yvonne","", "221.4.55.205","1533193790","IOS")
+-------------------------------------------------
+
+time:20180802151004
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180802215827
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533218307 where user_id = 164119 
+-------------------------------------------------
+
+time:20180802215827
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164119, "李世军","18151219087", "49.92.100.177","1533218307","IOS")
+-------------------------------------------------
+
+time:20180802215931
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=793
+-------------------------------------------------
+
+time:20180803123815
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164119, "李世军","18151219087", "49.92.100.177","1533271095","IOS")
+-------------------------------------------------
+
+time:20180803123815
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533271095 where user_id = 164119 
+-------------------------------------------------
+
+time:20180803123833
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2902
+-------------------------------------------------
+
+time:20180803123902
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=488
+-------------------------------------------------
+
+time:20180804055121
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533333081 where user_id = 164119 
+-------------------------------------------------
+
+time:20180804055121
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164119, "李世军","18151219087", "49.95.170.213","1533333081","IOS")
+-------------------------------------------------
+
+time:20180804055127
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4618
+-------------------------------------------------
+
+time:20180804115953
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(50, "ylt_1494856971625","13352781717", "183.37.20.16","1533355193","Android")
+-------------------------------------------------
+
+time:20180804131824
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=669
+-------------------------------------------------
+
+time:20180804143958
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3425
+-------------------------------------------------
+
+time:20180804144108
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3733
+-------------------------------------------------
+
+time:20180804144146
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3712
+-------------------------------------------------
+
+time:20180804152714
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164089, "17506255384","17506255384", "183.37.60.41","1533367634","Android")
+-------------------------------------------------
+
+time:20180804152722
+INSERT INTO `ylt_tp`.`ylt_entry_order`( order_sn, user_id, mobile, total_amount,order_amount, add_time, agent_rank) values('us15333676425384','164089','','100.00','100.00','1533367642','5')
+-------------------------------------------------
+
+time:20180804152723
+ update `ylt_tp`.`ylt_entry_order` set pay_code='alipy',pay_name='支付宝支付' where order_sn='us15333676425384' 
+-------------------------------------------------
+
+time:20180804152723
+ update `ylt_tp`.`ylt_entry_order` set pay_code='weixin',pay_name='app微信支付' where order_sn='us15333676425384' 
+-------------------------------------------------
+
+time:20180804201258
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533384778 where user_id = 164119 
+-------------------------------------------------
+
+time:20180804201258
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164119, "李世军","18151219087", "49.95.184.173","1533384778","IOS")
+-------------------------------------------------
+
+time:20180804235933
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('小三才🌈', '', '1533398373','','1','1','ios5422e5a1fc54b62a382ce1f0f8c98988','https://thirdwx.qlogo.cn/mmopen/vi_32/eFoMWr2uGgOhzem7KldydsCZCKqsuSILjdVTenxL04BMibub3ic0rsfJ2Xcdib6dmKrG1catnib60KWtKqW3Ql5FOg/132','','ormqRwcAhUkCElcE7RrNYgoRe4MQ','weixin')
+-------------------------------------------------
+
+time:20180804235933
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164122' where user_id=164122
+-------------------------------------------------
+
+time:20180804235940
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13402880170','1533398380','您的验证码是49856(请尽快完成验证)。如非本人操作，请忽略本短信','0','49856')
+-------------------------------------------------
+
+time:20180804235947
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1533397187
+-------------------------------------------------
+
+time:20180804235947
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='V1FdW04fWVBdS1BRXV1AUxRUW0tQW1xXTVtY',`type` ='1',`addtime` ='1533398387',`ip` ='110.184.20.45',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.2.5; Scale/2.00)'
+-------------------------------------------------
+
+time:20180805000000
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='110.184.20.45'
+-------------------------------------------------
+
+time:20180805000000
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=13402880170,extension_id='' where user_id=164122
+-------------------------------------------------
+
+time:20180805000126
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=468
+-------------------------------------------------
+
+time:20180805110824
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15343378311','1533438504','您的验证码是63321(请尽快完成验证)。如非本人操作，请忽略本短信','0','63321')
+-------------------------------------------------
+
+time:20180805110837
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1533437317
+-------------------------------------------------
+
+time:20180805110837
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VVtWXEkfWVBdS1dbXVtIVxRUW0tQXFZXT1Nc',`type` ='1',`addtime` ='1533438517',`ip` ='112.96.197.102',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.0.0; LND-AL30 Build/HONORLND-AL30)'
+-------------------------------------------------
+
+time:20180805131004
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180805192043
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 37 
+-------------------------------------------------
+
+time:20180805192149
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4306
+-------------------------------------------------
+
+time:20180805201853
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "113.115.54.236","1533471533","IOS")
+-------------------------------------------------
+
+time:20180805201953
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180805201955
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180805214310
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=371
+-------------------------------------------------
+
+time:20180806004804
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "113.115.54.236","1533487684","IOS")
+-------------------------------------------------
+
+time:20180806004813
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180806004943
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4574
+-------------------------------------------------
+
+time:20180806005014
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180806005021
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180806005055
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180806005142
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180806005157
+INSERT INTO `ylt_tp`.`ylt_shop_goods`(`user_id`,`goods_id`,`add_time`) VALUES ('18', '4682','1533487917')
+-------------------------------------------------
+
+time:20180806005211
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4717
+-------------------------------------------------
+
+time:20180806095514
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "14.127.250.160","1533520514","Android")
+-------------------------------------------------
+
+time:20180806095519
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180806130250
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533531770 where user_id = 30 
+-------------------------------------------------
+
+time:20180806130250
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(30, "13338873746","13338873746", "36.149.67.131","1533531770","IOS")
+-------------------------------------------------
+
+time:20180806130500
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1949
+-------------------------------------------------
+
+time:20180806130510
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1948
+-------------------------------------------------
+
+time:20180806130518
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1559
+-------------------------------------------------
+
+time:20180806130525
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1993
+-------------------------------------------------
+
+time:20180806130530
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2037
+-------------------------------------------------
+
+time:20180806154924
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "14.127.250.160","1533541764","Android")
+-------------------------------------------------
+
+time:20180806154949
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533541789 where user_id = 163482 
+-------------------------------------------------
+
+time:20180806154949
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "14.127.250.160","1533541789","IOS")
+-------------------------------------------------
+
+time:20180806214227
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "113.115.70.104","1533562947","IOS")
+-------------------------------------------------
+
+time:20180806231838
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180807091323
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "14.127.250.160","1533604403","Android")
+-------------------------------------------------
+
+time:20180807112751
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533612471 where user_id = 163482 
+-------------------------------------------------
+
+time:20180807112751
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "14.127.250.160","1533612471","IOS")
+-------------------------------------------------
+
+time:20180807142037
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "183.17.235.248","1533622837","Android")
+-------------------------------------------------
+
+time:20180807164434
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533631474 where user_id = 52 
+-------------------------------------------------
+
+time:20180807164437
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(52, "ylt_1494901956352","13246728306", "120.229.75.166","1533631477","Android")
+-------------------------------------------------
+
+time:20180808034945
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533671385 where user_id = 163536 
+-------------------------------------------------
+
+time:20180808034945
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163536, "13915511592","13915511592", "223.104.146.12","1533671385","IOS")
+-------------------------------------------------
+
+time:20180808100743
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808100811
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808101948
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533694788 where user_id = 21 
+-------------------------------------------------
+
+time:20180808101948
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "113.115.45.72","1533694788","IOS")
+-------------------------------------------------
+
+time:20180808103120
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808112513
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808112529
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808113138
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808113210
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808113427
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808113458
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808113834
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808114205
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808114456
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808115052
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808115225
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808115315
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808120042
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808120046
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808120105
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808120313
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808122607
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808123147
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808123159
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808123240
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808123258
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808123311
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808125138
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808125529
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808125838
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808125936
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808130750
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808130759
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808133510
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808133538
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180808134840
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808134843
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180808162809
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533716889 where user_id = 23 
+-------------------------------------------------
+
+time:20180808162809
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(23, "土贼","15207972767", "223.104.174.105","1533716889","IOS")
+-------------------------------------------------
+
+time:20180808162833
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180808162842
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180808163136
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4640
+-------------------------------------------------
+
+time:20180808165802
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180808215906
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "14.154.177.164","1533736746","IOS")
+-------------------------------------------------
+
+time:20180808231028
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180808231035
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180809013343
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2077
+-------------------------------------------------
+
+time:20180809013359
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1580
+-------------------------------------------------
+
+time:20180809013450
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1764
+-------------------------------------------------
+
+time:20180809013514
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2750
+-------------------------------------------------
+
+time:20180809013527
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2059
+-------------------------------------------------
+
+time:20180809072243
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4621
+-------------------------------------------------
+
+time:20180809102425
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164091, "An'an","", "117.136.40.222","1533781465","Android")
+-------------------------------------------------
+
+time:20180809102437
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4717
+-------------------------------------------------
+
+time:20180809102446
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4716
+-------------------------------------------------
+
+time:20180809102536
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180809102650
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4529
+-------------------------------------------------
+
+time:20180809103014
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3724
+-------------------------------------------------
+
+time:20180809103043
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4531
+-------------------------------------------------
+
+time:20180809132149
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163620, "13929456785","13929456785", "223.104.64.141","1533792109","IOS")
+-------------------------------------------------
+
+time:20180809132149
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533792109 where user_id = 163620 
+-------------------------------------------------
+
+time:20180809143146
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3745
+-------------------------------------------------
+
+time:20180809144200
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533796920 where user_id = 164090 
+-------------------------------------------------
+
+time:20180809144200
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164090, "Yvonne","", "221.4.55.205","1533796920","IOS")
+-------------------------------------------------
+
+time:20180809145244
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180809145744
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180809145802
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180809145925
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180809145947
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180809195556
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180810052205
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(47, "礼至成都","13541327991", "222.212.23.43","1533849725","Android")
+-------------------------------------------------
+
+time:20180810052259
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4247
+-------------------------------------------------
+
+time:20180810052914
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3725
+-------------------------------------------------
+
+time:20180810053309
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3718
+-------------------------------------------------
+
+time:20180810053504
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3717
+-------------------------------------------------
+
+time:20180810054733
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1832
+-------------------------------------------------
+
+time:20180810082241
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180810082308
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180810082633
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3712
+-------------------------------------------------
+
+time:20180810082633
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4438
+-------------------------------------------------
+
+time:20180810100821
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=541
+-------------------------------------------------
+
+time:20180810143359
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(162621, "诗和远方","18744901099", "113.87.13.136","1533882839","IOS")
+-------------------------------------------------
+
+time:20180810143359
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533882839 where user_id = 162621 
+-------------------------------------------------
+
+time:20180810143507
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4559
+-------------------------------------------------
+
+time:20180810143523
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180810143540
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=62
+-------------------------------------------------
+
+time:20180810162834
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533889714 where user_id = 164051 
+-------------------------------------------------
+
+time:20180810162834
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164051, "雪饮狂刀","", "112.17.239.21","1533889714","IOS")
+-------------------------------------------------
+
+time:20180810184516
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180810184523
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4692
+-------------------------------------------------
+
+time:20180810184806
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4692
+-------------------------------------------------
+
+time:20180810184811
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4692
+-------------------------------------------------
+
+time:20180810184852
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810185207
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810185224
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810185352
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810185839
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810185847
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810185948
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810190228
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810190352
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4726
+-------------------------------------------------
+
+time:20180810192515
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180810192536
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180810192705
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180810205641
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "120.35.157.33","1533905801","Android")
+-------------------------------------------------
+
+time:20180811074640
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(50, "ylt_1494856971625","13352781717", "113.115.25.137","1533944800","Android")
+-------------------------------------------------
+
+time:20180811074753
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4587
+-------------------------------------------------
+
+time:20180811074845
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4586
+-------------------------------------------------
+
+time:20180811091155
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180811113409
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4728
+-------------------------------------------------
+
+time:20180811123906
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533962346 where user_id = 21 
+-------------------------------------------------
+
+time:20180811123906
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "113.115.27.67","1533962346","IOS")
+-------------------------------------------------
+
+time:20180811152736
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3945
+-------------------------------------------------
+
+time:20180811152739
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3944
+-------------------------------------------------
+
+time:20180811170527
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180811201145
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1533989505 where user_id = 164051 
+-------------------------------------------------
+
+time:20180811201145
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164051, "雪饮狂刀","", "39.189.56.105","1533989505","IOS")
+-------------------------------------------------
+
+time:20180812003330
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(735, "月光爱人(姚琴)一15961019837","15961019837", "112.22.215.39","1534005210","Android")
+-------------------------------------------------
+
+time:20180812084528
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534034728 where user_id = 21 
+-------------------------------------------------
+
+time:20180812084528
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "113.115.39.203","1534034728","IOS")
+-------------------------------------------------
+
+time:20180812084558
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180812084803
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180812084843
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180812084911
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180812101929
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3233
+-------------------------------------------------
+
+time:20180812141113
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4714
+-------------------------------------------------
+
+time:20180812163112
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180812180642
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534068402 where user_id = 30 
+-------------------------------------------------
+
+time:20180812180642
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(30, "13338873746","13338873746", "36.149.192.221","1534068402","IOS")
+-------------------------------------------------
+
+time:20180812194226
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('18998753701','1534074146','您的验证码是59080(请尽快完成验证)。如非本人操作，请忽略本短信','0','59080')
+-------------------------------------------------
+
+time:20180812194255
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534072975
+-------------------------------------------------
+
+time:20180812194255
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VlFVVkgfWVBdTFNfUV9MVRRUW0tXWFJbS1de',`type` ='1',`addtime` ='1534074175',`ip` ='113.75.36.234',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.4.1; Scale/3.00)'
+-------------------------------------------------
+
+time:20180812194255
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='113.75.36.234'
+-------------------------------------------------
+
+time:20180812194255
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`extension_id`,`parent_id`)
+	VALUES('18998753701', '156538ac2961a0989e9503f21e8c067d4695f810', '1534074175','18998753701','1','','')
+-------------------------------------------------
+
+time:20180812194255
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164131' where user_id=164131
+-------------------------------------------------
+
+time:20180812194255
+UPDATE `ylt_tp`.`ylt_users` SET bean_gift = bean_gift + '20'  WHERE user_id = 164131
+-------------------------------------------------
+
+time:20180812194255
+INSERT INTO `ylt_tp`.`ylt_bean_gift_log`(`user_id`,`bean_gift`, `change_time`,`business_type`,`desc`,`change_type`)
+				VALUES('164131', '20', '1534074175','新用户注册赠送','','1')
+-------------------------------------------------
+
+time:20180812194256
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '1', device_token='iosc10cf58daf891082f7a0df03051a8ae1' where mobile=18998753701
+-------------------------------------------------
+
+time:20180812194256
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534074176 where user_id = 164131 
+-------------------------------------------------
+
+time:20180812194317
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180812214526
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(58, "ylt_1494937451321","13350258058", "139.207.123.126","1534081526","Android")
+-------------------------------------------------
+
+time:20180812221131
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180812221220
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=95
+-------------------------------------------------
+
+time:20180812221432
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('聖°', '', '1534083272','','1','1','ios5e097f8172f1b57d2020495773da7e62','https://thirdwx.qlogo.cn/mmopen/vi_32/C7eSjj42ib7rfuicXa49nhe0zWl2plNsDCDfWssgroYsVt16eYyaSFRNzXdHIqORGHRyK30pzpjN53VLTsW6xa5g/132','','ormqRwT00j2W-jYSQLGDASY8WpN4','weixin')
+-------------------------------------------------
+
+time:20180812221432
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164132' where user_id=164132
+-------------------------------------------------
+
+time:20180812221438
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15889500868','1534083278','您的验证码是21245(请尽快完成验证)。如非本人操作，请忽略本短信','0','21245')
+-------------------------------------------------
+
+time:20180812221451
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534082091
+-------------------------------------------------
+
+time:20180812221451
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='UVlXWk0fWVBdTFNQVlxPWxRUW0tXWF1aTFRQ',`type` ='1',`addtime` ='1534083291',`ip` ='222.248.226.48',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.0.1; Scale/3.00)'
+-------------------------------------------------
+
+time:20180812221505
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='222.248.226.48'
+-------------------------------------------------
+
+time:20180812221505
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=15889500868,extension_id='' where user_id=164132
+-------------------------------------------------
+
+time:20180812221717
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=245
+-------------------------------------------------
+
+time:20180812221753
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=296
+-------------------------------------------------
+
+time:20180812221814
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (164132,296,1534083494)
+-------------------------------------------------
+
+time:20180812222319
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1274
+-------------------------------------------------
+
+time:20180812222526
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1433
+-------------------------------------------------
+
+time:20180812223109
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 29 
+-------------------------------------------------
+
+time:20180812223125
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 33 
+-------------------------------------------------
+
+time:20180812223143
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 35 
+-------------------------------------------------
+
+time:20180812223359
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4214
+-------------------------------------------------
+
+time:20180812223607
+update `ylt_tp`.`ylt_supplier` set logo =  'https://thirdwx.qlogo.cn/mmopen/vi_32/C7eSjj42ib7rfuicXa49nhe0zWl2plNsDCDfWssgroYsVt16eYyaSFRNzXdHIqORGHRyK30pzpjN53VLTsW6xa5g/132' where user_id =164132 and is_designer=1
+-------------------------------------------------
+
+time:20180812223607
+DESC `ylt_tp`.`ylt_users`
+-------------------------------------------------
+
+time:20180812223607
+UPDATE `ylt_tp`.`ylt_users` SET sex = '1', birthday = '0', head_pic = 'https://thirdwx.qlogo.cn/mmopen/vi_32/C7eSjj42ib7rfuicXa49nhe0zWl2plNsDCDfWssgroYsVt16eYyaSFRNzXdHIqORGHRyK30pzpjN53VLTsW6xa5g/132', nickname = '聖°' WHERE user_id =164132
+-------------------------------------------------
+
+time:20180812223609
+update `ylt_tp`.`ylt_supplier` set logo =  'https://thirdwx.qlogo.cn/mmopen/vi_32/C7eSjj42ib7rfuicXa49nhe0zWl2plNsDCDfWssgroYsVt16eYyaSFRNzXdHIqORGHRyK30pzpjN53VLTsW6xa5g/132' where user_id =164132 and is_designer=1
+-------------------------------------------------
+
+time:20180812223609
+DESC `ylt_tp`.`ylt_users`
+-------------------------------------------------
+
+time:20180812223609
+UPDATE `ylt_tp`.`ylt_users` SET sex = '1', birthday = '0', head_pic = 'https://thirdwx.qlogo.cn/mmopen/vi_32/C7eSjj42ib7rfuicXa49nhe0zWl2plNsDCDfWssgroYsVt16eYyaSFRNzXdHIqORGHRyK30pzpjN53VLTsW6xa5g/132', nickname = '聖°' WHERE user_id =164132
+-------------------------------------------------
+
+time:20180812224749
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180812225541
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4134
+-------------------------------------------------
+
+time:20180812225803
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4247
+-------------------------------------------------
+
+time:20180812225845
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4032
+-------------------------------------------------
+
+time:20180812225902
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3725
+-------------------------------------------------
+
+time:20180812225918
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3656
+-------------------------------------------------
+
+time:20180812230001
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4653
+-------------------------------------------------
+
+time:20180812232223
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('18881873470','1534087343','您的验证码是75303(请尽快完成验证)。如非本人操作，请忽略本短信','0','75303')
+-------------------------------------------------
+
+time:20180812232234
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534086154
+-------------------------------------------------
+
+time:20180812232234
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VF1WXksfWVBdTFNQUl1MUBRUW0tXWF1WTVdb',`type` ='1',`addtime` ='1534087354',`ip` ='171.36.224.67',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.1.0; vivo X21A Build/OPM1.171019.011)'
+-------------------------------------------------
+
+time:20180812232234
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='171.36.224.67'
+-------------------------------------------------
+
+time:20180812232234
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`extension_id`,`parent_id`)
+	VALUES('18881873470', 'e98e8afb659f76cff95fc40ef711b8cb8546bc48', '1534087354','18881873470','1','','9999')
+-------------------------------------------------
+
+time:20180812232234
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164133' where user_id=164133
+-------------------------------------------------
+
+time:20180812232234
+UPDATE `ylt_tp`.`ylt_users` SET bean_gift = bean_gift + '20'  WHERE user_id = 164133
+-------------------------------------------------
+
+time:20180812232234
+INSERT INTO `ylt_tp`.`ylt_bean_gift_log`(`user_id`,`bean_gift`, `change_time`,`business_type`,`desc`,`change_type`)
+				VALUES('164133', '20', '1534087354','新用户注册赠送','','1')
+-------------------------------------------------
+
+time:20180812232235
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='androidd2cf21f0a46b9a74e42c319e0afe6732' where mobile=18881873470
+-------------------------------------------------
+
+time:20180812232235
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534087355 where user_id = 164133 
+-------------------------------------------------
+
+time:20180812232334
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2695
+-------------------------------------------------
+
+time:20180812232420
+INSERT INTO `ylt_tp`.`ylt_user_address`(`user_id`,`consignee`, `mobile`,`province`,`city`,`district`,`address`,`is_default`,`zipcode`)
+	VALUES('164133', '筱悦', '18881873470','30164', '30165','30196','龙庭小区',1,'00000000')
+-------------------------------------------------
+
+time:20180812232441
+begin
+-------------------------------------------------
+
+time:20180812232441
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '2' where goods_id=2695 
+-------------------------------------------------
+
+time:20180812232441
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232441
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223244109347', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '-2999.00', '0', '0', '-2999.00', '-2999.00', '1534087481', '0', '0', '0', '', '233', 'app', '柔宇（Royole）', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232441
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6817', 2695, '柔宇 3D版 VR 可折叠 超高清 智能移动影院ROYOLE-X ', 'TP0002695', -1, 2999.00,2999.00,'','','','','-2999.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232441
+COMMIT
+-------------------------------------------------
+
+time:20180812232449
+begin
+-------------------------------------------------
+
+time:20180812232449
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '3' where goods_id=2695 
+-------------------------------------------------
+
+time:20180812232449
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232449
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223244999438', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '-2999.00', '0', '0', '-2999.00', '-2999.00', '1534087489', '0', '0', '0', '', '233', 'app', '柔宇（Royole）', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232449
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6818', 2695, '柔宇 3D版 VR 可折叠 超高清 智能移动影院ROYOLE-X ', 'TP0002695', -1, 2999.00,2999.00,'','','','','-2999.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232449
+COMMIT
+-------------------------------------------------
+
+time:20180812232514
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2695
+-------------------------------------------------
+
+time:20180812232518
+begin
+-------------------------------------------------
+
+time:20180812232518
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '2' where goods_id=2695 
+-------------------------------------------------
+
+time:20180812232518
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232518
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223251894461', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '2999.00', '0', '0', '2999.00', '2999.00', '1534087518', '0', '0', '0', '', '233', 'app', '柔宇（Royole）', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232518
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6819', 2695, '柔宇 3D版 VR 可折叠 超高清 智能移动影院ROYOLE-X ', 'TP0002695', 1, 2999.00,2999.00,'','','','','2999.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232518
+COMMIT
+-------------------------------------------------
+
+time:20180812232530
+begin
+-------------------------------------------------
+
+time:20180812232530
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '1' where goods_id=2695 
+-------------------------------------------------
+
+time:20180812232530
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232530
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223253025514', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '2999.00', '0', '0', '2999.00', '2999.00', '1534087530', '0', '0', '0', '', '233', 'app', '柔宇（Royole）', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232530
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6820', 2695, '柔宇 3D版 VR 可折叠 超高清 智能移动影院ROYOLE-X ', 'TP0002695', 1, 2999.00,2999.00,'','','','','2999.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232530
+COMMIT
+-------------------------------------------------
+
+time:20180812232538
+begin
+-------------------------------------------------
+
+time:20180812232538
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '0' where goods_id=2695 
+-------------------------------------------------
+
+time:20180812232538
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232538
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223253880580', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '2999.00', '0', '0', '2999.00', '2999.00', '1534087538', '0', '0', '0', '', '233', 'app', '柔宇（Royole）', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232538
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6821', 2695, '柔宇 3D版 VR 可折叠 超高清 智能移动影院ROYOLE-X ', 'TP0002695', 1, 2999.00,2999.00,'','','','','2999.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232538
+COMMIT
+-------------------------------------------------
+
+time:20180812232600
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=324
+-------------------------------------------------
+
+time:20180812232614
+begin
+-------------------------------------------------
+
+time:20180812232614
+UPDATE `ylt_tp`.`ylt_goods_price` as P SET P.store_count= '3362' where P.goods_id=324 AND P.key='433'
+-------------------------------------------------
+
+time:20180812232614
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232614
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223261432671', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '3864.00', '0', '0', '3864.00', '3864.00', '1534087574', '0', '0', '0', '', '41', 'app', '一礼通自营', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232614
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6822', 324, '纽曼 专业ktv音响10寸套装卡拉OK功放蓝牙音箱家庭影院低音炮会议娱乐k歌通用BW390 豪华套装P6608', 'SM-17051226', 3, 0.00,1288.00,'433','颜色:黑色','','','3864.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232614
+COMMIT
+-------------------------------------------------
+
+time:20180812232622
+begin
+-------------------------------------------------
+
+time:20180812232622
+UPDATE `ylt_tp`.`ylt_goods_price` as P SET P.store_count= '3359' where P.goods_id=324 AND P.key='433'
+-------------------------------------------------
+
+time:20180812232622
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180812232622
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018081223262247861', '164133', '0', '0', '筱悦', '30164', '30165', '30196', '龙庭小区', '18881873470', '3864.00', '0', '0', '3864.00', '3864.00', '1534087582', '0', '0', '0', '', '41', 'app', '一礼通自营', '0', '0', '')
+-------------------------------------------------
+
+time:20180812232622
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6823', 324, '纽曼 专业ktv音响10寸套装卡拉OK功放蓝牙音箱家庭影院低音炮会议娱乐k歌通用BW390 豪华套装P6608', 'SM-17051226', 3, 0.00,1288.00,'433','颜色:黑色','','','3864.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180812232622
+COMMIT
+-------------------------------------------------
+
+time:20180812232701
+UPDATE `ylt_tp`.`ylt_order` set order_status = 3 WHERE user_id=164133 AND order_id='6823'
+-------------------------------------------------
+
+time:20180813084251
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(47, "礼至成都","13541327991", "171.210.167.223","1534120971","Android")
+-------------------------------------------------
+
+time:20180813084534
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3718
+-------------------------------------------------
+
+time:20180813084622
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3717
+-------------------------------------------------
+
+time:20180813085424
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1308
+-------------------------------------------------
+
+time:20180813094209
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534124529 where user_id = 164119 
+-------------------------------------------------
+
+time:20180813094209
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164119, "李世军","18151219087", "49.90.92.212","1534124529","IOS")
+-------------------------------------------------
+
+time:20180813094214
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180813094303
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180813094329
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180813094338
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180813150950
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180813151328
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=37
+-------------------------------------------------
+
+time:20180813151340
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3218
+-------------------------------------------------
+
+time:20180813165321
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180813181454
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1580
+-------------------------------------------------
+
+time:20180813181538
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2724
+-------------------------------------------------
+
+time:20180813181821
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2723
+-------------------------------------------------
+
+time:20180813181831
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2723
+-------------------------------------------------
+
+time:20180813181849
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2914
+-------------------------------------------------
+
+time:20180813184309
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180813184326
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4713
+-------------------------------------------------
+
+time:20180813184329
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4714
+-------------------------------------------------
+
+time:20180813184335
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4716
+-------------------------------------------------
+
+time:20180813184352
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180813184354
+INSERT INTO `ylt_tp`.`ylt_shop_goods`(`user_id`,`goods_id`,`add_time`) VALUES ('18', '4716','1534157034')
+-------------------------------------------------
+
+time:20180813184852
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3218
+-------------------------------------------------
+
+time:20180813184901
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3219
+-------------------------------------------------
+
+time:20180813184908
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3218
+-------------------------------------------------
+
+time:20180813184912
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=37
+-------------------------------------------------
+
+time:20180813184934
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2467
+-------------------------------------------------
+
+time:20180813184948
+INSERT INTO `ylt_tp`.`ylt_shop_goods`(`user_id`,`goods_id`,`add_time`) VALUES ('18', '2467','1534157388')
+-------------------------------------------------
+
+time:20180813185005
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3218
+-------------------------------------------------
+
+time:20180813185010
+INSERT INTO `ylt_tp`.`ylt_shop_goods`(`user_id`,`goods_id`,`add_time`) VALUES ('18', '3218','1534157410')
+-------------------------------------------------
+
+time:20180813185203
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3218
+-------------------------------------------------
+
+time:20180813185205
+UPDATE `ylt_tp`.`ylt_cart` set goods_price=90.00,goods_num=1,spec_key='3789',spec_key_name='重量:500g' WHERE  id=9226
+-------------------------------------------------
+
+time:20180813185205
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '1', goods_price = '90.00' WHERE id='9226' AND user_id='18'
+-------------------------------------------------
+
+time:20180813185214
+delete from `ylt_tp`.`ylt_cart` where id=7617 AND user_id=18
+-------------------------------------------------
+
+time:20180813185219
+delete from `ylt_tp`.`ylt_cart` where id=7339 AND user_id=18
+-------------------------------------------------
+
+time:20180813185223
+delete from `ylt_tp`.`ylt_cart` where id=6504 AND user_id=18
+-------------------------------------------------
+
+time:20180813185229
+delete from `ylt_tp`.`ylt_cart` where id=5786 AND user_id=18
+-------------------------------------------------
+
+time:20180813185233
+delete from `ylt_tp`.`ylt_cart` where id=567 AND user_id=18
+-------------------------------------------------
+
+time:20180813185317
+UPDATE `ylt_tp`.`ylt_user_address` SET consignee='杨先生',mobile='13723438358',province='28240',city='28558',district='28604',address='布吉街道帝景峰二座16H',zipcode='518000' where user_id =18 AND address_id=2340 
+-------------------------------------------------
+
+time:20180813185331
+UPDATE `ylt_tp`.`ylt_user_address` SET consignee='李小姐',mobile='18926760921',province='28240',city='28558',district='28604',address='布吉帝景峰2座16H',zipcode='518000' where user_id =18 AND address_id=2401 
+-------------------------------------------------
+
+time:20180813190702
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180813191126
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4731
+-------------------------------------------------
+
+time:20180813191220
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4731
+-------------------------------------------------
+
+time:20180813191242
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180813191639
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180813191708
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180813191722
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180813191738
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180813191828
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4594
+-------------------------------------------------
+
+time:20180813191938
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4618
+-------------------------------------------------
+
+time:20180813192057
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180813192823
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4717
+-------------------------------------------------
+
+time:20180813192831
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4716
+-------------------------------------------------
+
+time:20180813192923
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "223.104.64.134","1534159763","IOS")
+-------------------------------------------------
+
+time:20180813192923
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534159763 where user_id = 164132 
+-------------------------------------------------
+
+time:20180813194501
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180813195238
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180813195307
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180813195354
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4202
+-------------------------------------------------
+
+time:20180813214536
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534167936 where user_id = 21 
+-------------------------------------------------
+
+time:20180813214536
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "113.115.39.203","1534167936","IOS")
+-------------------------------------------------
+
+time:20180813214546
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180813223907
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "14.154.176.134","1534171147","IOS")
+-------------------------------------------------
+
+time:20180814052755
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163536, "13915511592","13915511592", "112.22.30.58","1534195675","IOS")
+-------------------------------------------------
+
+time:20180814052755
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534195675 where user_id = 163536 
+-------------------------------------------------
+
+time:20180814052838
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3017
+-------------------------------------------------
+
+time:20180814052938
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3021
+-------------------------------------------------
+
+time:20180814065847
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4718
+-------------------------------------------------
+
+time:20180814065913
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4721
+-------------------------------------------------
+
+time:20180814070149
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4717
+-------------------------------------------------
+
+time:20180814103512
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4618
+-------------------------------------------------
+
+time:20180814103602
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180814105104
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180814110520
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180814143915
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534228755","IOS")
+-------------------------------------------------
+
+time:20180814143915
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534228755 where user_id = 164067 
+-------------------------------------------------
+
+time:20180814170804
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4618
+-------------------------------------------------
+
+time:20180814183648
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180814204435
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "183.40.65.86","1534250675","IOS")
+-------------------------------------------------
+
+time:20180814204510
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180814204518
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180814214331
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180814214340
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180814220841
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4559
+-------------------------------------------------
+
+time:20180814220843
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180814221626
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180814221650
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180814231231
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4247
+-------------------------------------------------
+
+time:20180815094837
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815095149
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180815095159
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180815095210
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815095302
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815095338
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815095350
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180815095415
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180815095455
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180815101037
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180815101046
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815110023
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815110211
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180815110232
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180815155350
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1467
+-------------------------------------------------
+
+time:20180815161111
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534320671 where user_id = 164067 
+-------------------------------------------------
+
+time:20180815161111
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534320671","IOS")
+-------------------------------------------------
+
+time:20180815162049
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534321249","IOS")
+-------------------------------------------------
+
+time:20180815162049
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534321249 where user_id = 164067 
+-------------------------------------------------
+
+time:20180815164641
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180815165055
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180815165108
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180815165126
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4640
+-------------------------------------------------
+
+time:20180815170624
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180815170741
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534324061","IOS")
+-------------------------------------------------
+
+time:20180815170741
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534324061 where user_id = 164067 
+-------------------------------------------------
+
+time:20180815174448
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534326288","IOS")
+-------------------------------------------------
+
+time:20180815174448
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534326288 where user_id = 164067 
+-------------------------------------------------
+
+time:20180815174457
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180815190646
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164026, "吴嘉妮","13689595720", "223.104.64.144","1534331206","IOS")
+-------------------------------------------------
+
+time:20180815191702
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4635
+-------------------------------------------------
+
+time:20180816045727
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163536, "13915511592","13915511592", "112.22.0.244","1534366647","IOS")
+-------------------------------------------------
+
+time:20180816045727
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534366647 where user_id = 163536 
+-------------------------------------------------
+
+time:20180816045751
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180816045902
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3029
+-------------------------------------------------
+
+time:20180816050448
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3017
+-------------------------------------------------
+
+time:20180816050452
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3099
+-------------------------------------------------
+
+time:20180816050458
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3018
+-------------------------------------------------
+
+time:20180816050507
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3017
+-------------------------------------------------
+
+time:20180816091827
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('专业写字楼租赁', '', '1534382307','','1','1','ios4c2044af74f45eb8ce931b8a15bf18f5','https://thirdwx.qlogo.cn/mmopen/vi_32/m6LjQhVpW5MGhIypZaZWL3R8XeTqUoAvdtlGtztxYqbeP7umEv6G4KcUu3ib1NxukprXdribfclDcSyZCcicNaEZg/132','','ormqRwVvmMAQ5gzi2RtF0fkwS7Fo','weixin')
+-------------------------------------------------
+
+time:20180816091827
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164136' where user_id=164136
+-------------------------------------------------
+
+time:20180816091833
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13858370108','1534382313','您的验证码是97707(请尽快完成验证)。如非本人操作，请忽略本短信','0','97707')
+-------------------------------------------------
+
+time:20180816091841
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534381121
+-------------------------------------------------
+
+time:20180816091841
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='Wl9SXk8fWVBdTFBQV11JUBRUW0tXW11dTVJb',`type` ='1',`addtime` ='1534382321',`ip` ='112.17.239.245',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 12.0; Scale/3.00)'
+-------------------------------------------------
+
+time:20180816091852
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='112.17.239.245'
+-------------------------------------------------
+
+time:20180816091852
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=13858370108,extension_id='' where user_id=164136
+-------------------------------------------------
+
+time:20180816091905
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=42
+-------------------------------------------------
+
+time:20180816091917
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=339
+-------------------------------------------------
+
+time:20180816091946
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=339
+-------------------------------------------------
+
+time:20180816092217
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1770
+-------------------------------------------------
+
+time:20180816093357
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180816114814
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534391294 where user_id = 164132 
+-------------------------------------------------
+
+time:20180816114814
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "113.104.167.19","1534391294","IOS")
+-------------------------------------------------
+
+time:20180816115735
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180816115800
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180816115804
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180816121343
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180816124100
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15986777508','1534394460','您的验证码是97269(请尽快完成验证)。如非本人操作，请忽略本短信','0','97269')
+-------------------------------------------------
+
+time:20180816124128
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534393288
+-------------------------------------------------
+
+time:20180816124128
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='Wl9XWEEfWVBdTFBRUVpOUxRUW0tXW1xbTlVY',`type` ='1',`addtime` ='1534394488',`ip` ='113.104.167.19',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.1.0; PAAM00 Build/OPM1.171019.011)'
+-------------------------------------------------
+
+time:20180816124357
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15986777508','1534394637','您的验证码是96401(请尽快完成验证)。如非本人操作，请忽略本短信','0','96401')
+-------------------------------------------------
+
+time:20180816124406
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534393446
+-------------------------------------------------
+
+time:20180816124406
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='Wl5RXkkfWVBdTFBRUVhLVBRUW0tXW1xbQFBf',`type` ='1',`addtime` ='1534394646',`ip` ='113.104.167.19',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.1.0; PAAM00 Build/OPM1.171019.011)'
+-------------------------------------------------
+
+time:20180816124406
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='113.104.167.19'
+-------------------------------------------------
+
+time:20180816124406
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`extension_id`,`parent_id`)
+	VALUES('15986777508', '370f887bdb129299fc8b986d324f2aa89d19ffe5', '1534394646','15986777508','1','','9999')
+-------------------------------------------------
+
+time:20180816124406
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164137' where user_id=164137
+-------------------------------------------------
+
+time:20180816124406
+UPDATE `ylt_tp`.`ylt_users` SET bean_gift = bean_gift + '20'  WHERE user_id = 164137
+-------------------------------------------------
+
+time:20180816124406
+INSERT INTO `ylt_tp`.`ylt_bean_gift_log`(`user_id`,`bean_gift`, `change_time`,`business_type`,`desc`,`change_type`)
+				VALUES('164137', '20', '1534394646','新用户注册赠送','','1')
+-------------------------------------------------
+
+time:20180816124406
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='android8d801693f9d23e2ec1c8293531160919' where mobile=15986777508
+-------------------------------------------------
+
+time:20180816124406
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534394646 where user_id = 164137 
+-------------------------------------------------
+
+time:20180816124529
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180816124620
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "113.104.167.19","1534394780","IOS")
+-------------------------------------------------
+
+time:20180816124620
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534394780 where user_id = 164132 
+-------------------------------------------------
+
+time:20180816162148
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534407708","IOS")
+-------------------------------------------------
+
+time:20180816162148
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534407708 where user_id = 164067 
+-------------------------------------------------
+
+time:20180816190959
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534417799 where user_id = 162621 
+-------------------------------------------------
+
+time:20180816190959
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(162621, "诗和远方","18744901099", "113.87.181.98","1534417799","IOS")
+-------------------------------------------------
+
+time:20180816223652
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163962, "15097614971","15097614971", "27.189.77.62","1534430212","IOS")
+-------------------------------------------------
+
+time:20180816223653
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534430213 where user_id = 163962 
+-------------------------------------------------
+
+time:20180817000343
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=42
+-------------------------------------------------
+
+time:20180817055259
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4134
+-------------------------------------------------
+
+time:20180817055433
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180817055543
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2029
+-------------------------------------------------
+
+time:20180817143857
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534487937","IOS")
+-------------------------------------------------
+
+time:20180817143857
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534487937 where user_id = 164067 
+-------------------------------------------------
+
+time:20180817165238
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 31 
+-------------------------------------------------
+
+time:20180817165301
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 35 
+-------------------------------------------------
+
+time:20180817165336
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 35 
+-------------------------------------------------
+
+time:20180817165526
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180817182212
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534501332","IOS")
+-------------------------------------------------
+
+time:20180817182214
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534501334 where user_id = 164067 
+-------------------------------------------------
+
+time:20180817212834
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180817212857
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180817224901
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "222.248.226.48","1534517341","IOS")
+-------------------------------------------------
+
+time:20180817224901
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534517341 where user_id = 164132 
+-------------------------------------------------
+
+time:20180817225009
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4438
+-------------------------------------------------
+
+time:20180817225638
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4321
+-------------------------------------------------
+
+time:20180817225658
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2656
+-------------------------------------------------
+
+time:20180817225835
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=214
+-------------------------------------------------
+
+time:20180817232859
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3718
+-------------------------------------------------
+
+time:20180817232921
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3717
+-------------------------------------------------
+
+time:20180817233200
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=935
+-------------------------------------------------
+
+time:20180817233205
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=938
+-------------------------------------------------
+
+time:20180817233449
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4473
+-------------------------------------------------
+
+time:20180818134933
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(252, "A  丰泰玻璃 15150068838","", "180.104.87.171","1534571373","Android")
+-------------------------------------------------
+
+time:20180818135023
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180818135034
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=39
+-------------------------------------------------
+
+time:20180818135040
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=42
+-------------------------------------------------
+
+time:20180818135050
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=93
+-------------------------------------------------
+
+time:20180818135052
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=92
+-------------------------------------------------
+
+time:20180818135221
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=254
+-------------------------------------------------
+
+time:20180818135223
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=255
+-------------------------------------------------
+
+time:20180818135611
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180818220652
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(30, "13338873746","13338873746", "36.149.64.59","1534601212","IOS")
+-------------------------------------------------
+
+time:20180818220652
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534601212 where user_id = 30 
+-------------------------------------------------
+
+time:20180819001135
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "183.39.6.205","1534608695","IOS")
+-------------------------------------------------
+
+time:20180819001135
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534608695 where user_id = 21 
+-------------------------------------------------
+
+time:20180819001159
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180819141837
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534659517 where user_id = 164132 
+-------------------------------------------------
+
+time:20180819141837
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "222.248.226.48","1534659517","IOS")
+-------------------------------------------------
+
+time:20180819141916
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=95
+-------------------------------------------------
+
+time:20180819143240
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534660360","IOS")
+-------------------------------------------------
+
+time:20180819143240
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534660360 where user_id = 164067 
+-------------------------------------------------
+
+time:20180819144625
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2759
+-------------------------------------------------
+
+time:20180819144852
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3718
+-------------------------------------------------
+
+time:20180819145923
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(160808, "亮亮","18680353892", "112.97.61.169","1534661963","IOS")
+-------------------------------------------------
+
+time:20180819145923
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534661963 where user_id = 160808 
+-------------------------------------------------
+
+time:20180819175641
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534672601","IOS")
+-------------------------------------------------
+
+time:20180819175641
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534672601 where user_id = 164067 
+-------------------------------------------------
+
+time:20180819210301
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180820105132
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180820105224
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180820122336
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='android8fac465d4f989181aadf9ff2bb4ce716' where mobile=15807071716
+-------------------------------------------------
+
+time:20180820122337
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534739017 where user_id = 164143 
+-------------------------------------------------
+
+time:20180820122337
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164143, "15807071716","15807071716", "117.165.47.167","1534739017","Android")
+-------------------------------------------------
+
+time:20180820122343
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3686
+-------------------------------------------------
+
+time:20180820122344
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3686
+-------------------------------------------------
+
+time:20180820122356
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3684
+-------------------------------------------------
+
+time:20180820122403
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3689
+-------------------------------------------------
+
+time:20180820122414
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3689
+-------------------------------------------------
+
+time:20180820122416
+DESC `ylt_tp`.`ylt_cart`
+-------------------------------------------------
+
+time:20180820122416
+INSERT INTO `ylt_tp`.`ylt_cart` (user_id, session_id, goods_id, goods_sn, goods_name, market_price, goods_price, member_goods_price, goods_num, spec_key, spec_key_name, add_time, prom_type, prom_id, supplier_id, supplier_name, is_designer, commission_price) VALUES ('164143', 'Ul1dXk9TX1RZSVUUVFhMUlxWEklWW1FZS1pYVFkEAgYBHBcKDF0IGQBcU1scVw5cVkFSUFQPGQcOXAgeUQoHWhsGX1RY', '3689', 'TP0003689', '雨伞女 晴雨伞折叠伞 防紫外线 全自动 三折伞魅力北京 生活当下', '138.00', '108.00', '108.00', '1', '4391_4392', '尺寸:55CM 颜色:花色', '1534739056', '0', '0', '444', 'ELLYNEI逸在云端', '0', '0.00')
+-------------------------------------------------
+
+time:20180820122419
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3684
+-------------------------------------------------
+
+time:20180820122421
+DESC `ylt_tp`.`ylt_cart`
+-------------------------------------------------
+
+time:20180820122421
+INSERT INTO `ylt_tp`.`ylt_cart` (user_id, session_id, goods_id, goods_sn, goods_name, market_price, goods_price, member_goods_price, goods_num, spec_key, spec_key_name, add_time, prom_type, prom_id, supplier_id, supplier_name, is_designer, commission_price) VALUES ('164143', 'Ul1dXk9TX1RZSVUUVFhMUlxWEklWW1FZS1pYVFkEAgYBHBcKDF0IGQBcU1scVw5cVkFSUFQPGQcOXAgeUQoHWhsGX1RY', '3684', 'TP0003684', '雨伞女 折叠 晴雨伞 永远的敦煌之“敦，大也。煌，盛也” ', '138.00', '108.00', '108.00', '1', '4391_4392', '尺寸:55CM 颜色:花色', '1534739061', '0', '0', '444', 'ELLYNEI逸在云端', '0', '0.00')
+-------------------------------------------------
+
+time:20180820122424
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3685
+-------------------------------------------------
+
+time:20180820122432
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3686
+-------------------------------------------------
+
+time:20180820122436
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3686
+-------------------------------------------------
+
+time:20180820122442
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3686
+-------------------------------------------------
+
+time:20180820122443
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3686
+-------------------------------------------------
+
+time:20180820122454
+delete from `ylt_tp`.`ylt_cart` where id=10215 AND user_id=164143
+-------------------------------------------------
+
+time:20180820122530
+delete from `ylt_tp`.`ylt_cart` where id=10216 AND user_id=164143
+-------------------------------------------------
+
+time:20180820122530
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (164143,3689,1534739130)
+-------------------------------------------------
+
+time:20180820122532
+delete from `ylt_tp`.`ylt_cart` where id=10217 AND user_id=164143
+-------------------------------------------------
+
+time:20180820122532
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (164143,3684,1534739132)
+-------------------------------------------------
+
+time:20180820124028
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=544
+-------------------------------------------------
+
+time:20180820124214
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3724
+-------------------------------------------------
+
+time:20180820134404
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534743844 where user_id = 21 
+-------------------------------------------------
+
+time:20180820134404
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "14.30.14.49","1534743844","IOS")
+-------------------------------------------------
+
+time:20180820134416
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180820134638
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13798491469','1534743998','您的验证码是88318(请尽快完成验证)。如非本人操作，请忽略本短信','0','88318')
+-------------------------------------------------
+
+time:20180820134650
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534742810
+-------------------------------------------------
+
+time:20180820134650
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='W1BWX0AfWVBdTFRcVldBWxRUW0tXX1FbSVpQ',`type` ='1',`addtime` ='1534744010',`ip` ='183.14.30.62',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 12.0; Scale/2.00)'
+-------------------------------------------------
+
+time:20180820134706
+UPDATE `ylt_tp`.`ylt_users` SET password='a3f71c1d2bce97dddc22b7be83bde7ad05c35538' where mobile =13798491469 AND user_id=153800 
+-------------------------------------------------
+
+time:20180820134706
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534744026 where user_id = 153800 
+-------------------------------------------------
+
+time:20180820134707
+UPDATE `ylt_tp`.`ylt_users` SET password='a3f71c1d2bce97dddc22b7be83bde7ad05c35538' where mobile =13798491469 AND user_id=153800 
+-------------------------------------------------
+
+time:20180820134707
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534744027 where user_id = 153800 
+-------------------------------------------------
+
+time:20180820134722
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180820134745
+begin
+-------------------------------------------------
+
+time:20180820134745
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '9999' where goods_id=4729 
+-------------------------------------------------
+
+time:20180820134745
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180820134745
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018082013474554121', '153800', '0', '0', '成箱', '5827', '6384', '6409', '就好好', '13798491469', '192.00', '0', '0', '192.00', '192.00', '1534744065', '0', '0', '0', '', '41', 'app', '一礼通自营', '0', '0', '')
+-------------------------------------------------
+
+time:20180820134745
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6824', 4729, '麦轩2018年广东蛋黄莲蓉红豆凤梨五仁多口味酥中秋节广式月饼礼盒', 'LZYB-04', 1, 226.00,192.00,'','','','','192.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180820134745
+COMMIT
+-------------------------------------------------
+
+time:20180820143502
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(58, "ylt_1494937451321","13350258058", "139.207.28.23","1534746902","Android")
+-------------------------------------------------
+
+time:20180820143533
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4713
+-------------------------------------------------
+
+time:20180820143554
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4557
+-------------------------------------------------
+
+time:20180820143628
+begin
+-------------------------------------------------
+
+time:20180820143628
+UPDATE `ylt_tp`.`ylt_goods_price` as P SET P.store_count= '999' where P.goods_id=4557 AND P.key='5189'
+-------------------------------------------------
+
+time:20180820143628
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180820143628
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018082014362898212', '153800', '0', '0', '成箱', '5827', '6384', '6409', '就好好', '13798491469', '35.00', '0', '0', '35.00', '35.00', '1534746988', '0', '0', '0', '', '642', 'app', '骆驼蜀黍投食店', '0', '0', '')
+-------------------------------------------------
+
+time:20180820143628
+INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id,commission_price) values('6825', 4557, '【骆驼蜀黍-加芯果358g】和田红枣夹核桃仁葡萄干新疆大枣子干果特产', 'TP0004557', 1, 0.00,35.00,'5189','规格:358g','','','35.00','0','0','0.00')
+-------------------------------------------------
+
+time:20180820143628
+COMMIT
+-------------------------------------------------
+
+time:20180820144937
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164100, "15930233763","15930233763", "124.64.16.141","1534747777","Android")
+-------------------------------------------------
+
+time:20180820145350
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('嗯', '', '1534748030','','1','2','android98d08f17002241fa56950736dd85c767','http://thirdqq.qlogo.cn/qqapp/1106091555/AD0AD6C5DD80AC6670BBA986A14B8CA2/100','AD0AD6C5DD80AC6670BBA986A14B8CA2','','qq')
+-------------------------------------------------
+
+time:20180820145350
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164145' where user_id=164145
+-------------------------------------------------
+
+time:20180820145405
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15322049907','1534748045','您的验证码是58599(请尽快完成验证)。如非本人操作，请忽略本短信','0','58599')
+-------------------------------------------------
+
+time:20180820145419
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534746859
+-------------------------------------------------
+
+time:20180820145419
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VlBQV0EfWVBdTFRcXV5MVhRUW0tXX1FXSldd',`type` ='1',`addtime` ='1534748059',`ip` ='119.137.52.112',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.1.0; MI 8 MIUI/V9.5.11.0.OEACNFA)'
+-------------------------------------------------
+
+time:20180820145430
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='119.137.52.112'
+-------------------------------------------------
+
+time:20180820145430
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=15322049907,extension_id='1' where user_id=164145
+-------------------------------------------------
+
+time:20180820145439
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180820145548
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4335
+-------------------------------------------------
+
+time:20180820145649
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4330
+-------------------------------------------------
+
+time:20180820145653
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1622
+-------------------------------------------------
+
+time:20180820145655
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4326
+-------------------------------------------------
+
+time:20180820145656
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1732
+-------------------------------------------------
+
+time:20180820145659
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4325
+-------------------------------------------------
+
+time:20180820145700
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1647
+-------------------------------------------------
+
+time:20180820145702
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1640
+-------------------------------------------------
+
+time:20180820145704
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1646
+-------------------------------------------------
+
+time:20180820145706
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4101
+-------------------------------------------------
+
+time:20180820145707
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4327
+-------------------------------------------------
+
+time:20180820145709
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4334
+-------------------------------------------------
+
+time:20180820145711
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1731
+-------------------------------------------------
+
+time:20180820145713
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4328
+-------------------------------------------------
+
+time:20180820145714
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4333
+-------------------------------------------------
+
+time:20180820145716
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4332
+-------------------------------------------------
+
+time:20180820145717
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4331
+-------------------------------------------------
+
+time:20180820145720
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3602
+-------------------------------------------------
+
+time:20180820145721
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4335
+-------------------------------------------------
+
+time:20180820145723
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4644
+-------------------------------------------------
+
+time:20180820145729
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4252
+-------------------------------------------------
+
+time:20180820145741
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1315
+-------------------------------------------------
+
+time:20180820145743
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3601
+-------------------------------------------------
+
+time:20180820145745
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4671
+-------------------------------------------------
+
+time:20180820145747
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=487
+-------------------------------------------------
+
+time:20180820145750
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3600
+-------------------------------------------------
+
+time:20180820145757
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4098
+-------------------------------------------------
+
+time:20180820163914
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "117.136.40.224","1534754354","IOS")
+-------------------------------------------------
+
+time:20180820163914
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534754354 where user_id = 163482 
+-------------------------------------------------
+
+time:20180820164105
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4134
+-------------------------------------------------
+
+time:20180820183616
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180820185418
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180820203831
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180821092154
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534814514 where user_id = 164019 
+-------------------------------------------------
+
+time:20180821092154
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164019, "13511273259","13511273259", "111.179.5.61","1534814514","IOS")
+-------------------------------------------------
+
+time:20180821092315
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164137, "15986777508","15986777508", "113.91.151.6","1534814595","Android")
+-------------------------------------------------
+
+time:20180821092316
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534814596 where user_id = 164137 
+-------------------------------------------------
+
+time:20180821110556
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3725
+-------------------------------------------------
+
+time:20180821110741
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13827267283','1534820861','您的验证码是71305(请尽快完成验证)。如非本人操作，请忽略本短信','0','71305')
+-------------------------------------------------
+
+time:20180821110754
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534819674
+-------------------------------------------------
+
+time:20180821110754
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VFlWXk0fWVBdTFtaVVZOUhRUW0tXUFdcSFVZ',`type` ='1',`addtime` ='1534820874',`ip` ='175.154.6.16',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.1.0; EML-AL00 Build/HUAWEIEML-AL00)'
+-------------------------------------------------
+
+time:20180821110809
+UPDATE `ylt_tp`.`ylt_users` SET password='a3f1e59f507152145feb405e2a09acfc208b0e30' where mobile =13827267283 AND user_id=155444 
+-------------------------------------------------
+
+time:20180821110818
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534820898 where user_id = 155444 
+-------------------------------------------------
+
+time:20180821110818
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(155444, "ylt_1503071372124","13827267283", "175.154.6.16","1534820898","Android")
+-------------------------------------------------
+
+time:20180821110821
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3659
+-------------------------------------------------
+
+time:20180821111043
+update `ylt_tp`.`ylt_supplier` set logo =  '/public/upload/common/image/2018/08/1534821043159.jpg' where user_id =155444 and is_designer=1
+-------------------------------------------------
+
+time:20180821111043
+DESC `ylt_tp`.`ylt_users`
+-------------------------------------------------
+
+time:20180821111043
+UPDATE `ylt_tp`.`ylt_users` SET sex = '1', birthday = '588092400', head_pic = '/public/upload/common/image/2018/08/1534821043159.jpg', nickname = '小杨' WHERE user_id =155444
+-------------------------------------------------
+
+time:20180821111156
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3742
+-------------------------------------------------
+
+time:20180821111211
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534821131 where user_id = 155444 
+-------------------------------------------------
+
+time:20180821111213
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(155444, "小杨","13827267283", "175.154.6.16","1534821133","Android")
+-------------------------------------------------
+
+time:20180821115049
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180821115127
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180821115138
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180821115157
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180821115217
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4732
+-------------------------------------------------
+
+time:20180821115237
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180821142522
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180821144353
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180821161703
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180821170010
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1534842010","IOS")
+-------------------------------------------------
+
+time:20180821170010
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534842010 where user_id = 164067 
+-------------------------------------------------
+
+time:20180821172342
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180821190927
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180821231939
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163886, "15717249421","15717249421", "113.102.243.41","1534864779","Android")
+-------------------------------------------------
+
+time:20180821234107
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180822083246
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('18582456045','1534897966','您的验证码是75922(请尽快完成验证)。如非本人操作，请忽略本短信','0','75922')
+-------------------------------------------------
+
+time:20180822083323
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534896803
+-------------------------------------------------
+
+time:20180822083323
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VF1cXEofWVBdTFtRUldOVRRUW0tXUFxXSVVe',`type` ='1',`addtime` ='1534898003',`ip` ='182.137.166.76',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.3.1; Scale/3.00)'
+-------------------------------------------------
+
+time:20180822083323
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='182.137.166.76'
+-------------------------------------------------
+
+time:20180822083323
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`extension_id`,`parent_id`)
+	VALUES('18582456045', '08b6ddccd302393e94db8dcc4013953d291629b9', '1534898003','18582456045','1','','9999')
+-------------------------------------------------
+
+time:20180822083323
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164146' where user_id=164146
+-------------------------------------------------
+
+time:20180822083323
+UPDATE `ylt_tp`.`ylt_users` SET bean_gift = bean_gift + '20'  WHERE user_id = 164146
+-------------------------------------------------
+
+time:20180822083323
+INSERT INTO `ylt_tp`.`ylt_bean_gift_log`(`user_id`,`bean_gift`, `change_time`,`business_type`,`desc`,`change_type`)
+				VALUES('164146', '20', '1534898003','新用户注册赠送','','1')
+-------------------------------------------------
+
+time:20180822083323
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '1', device_token='iosc6e18f83c83f88a3e5811aec928476bb' where mobile=18582456045
+-------------------------------------------------
+
+time:20180822083323
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534898003 where user_id = 164146 
+-------------------------------------------------
+
+time:20180822083629
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180822083637
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=57
+-------------------------------------------------
+
+time:20180822083644
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=722
+-------------------------------------------------
+
+time:20180822083657
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 37 
+-------------------------------------------------
+
+time:20180822083711
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4187
+-------------------------------------------------
+
+time:20180822091543
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180822093442
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180822103906
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164137, "15986777508","15986777508", "14.154.176.105","1534905546","Android")
+-------------------------------------------------
+
+time:20180822103906
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534905546 where user_id = 164137 
+-------------------------------------------------
+
+time:20180822133501
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534916101 where user_id = 164132 
+-------------------------------------------------
+
+time:20180822133501
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "117.136.39.86","1534916101","IOS")
+-------------------------------------------------
+
+time:20180822142746
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(196, "Hugo","13418995817", "223.104.63.180","1534919266","IOS")
+-------------------------------------------------
+
+time:20180822142746
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534919266 where user_id = 196 
+-------------------------------------------------
+
+time:20180822151217
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534921937 where user_id = 162621 
+-------------------------------------------------
+
+time:20180822151217
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(162621, "诗和远方","18744901099", "113.87.183.207","1534921937","IOS")
+-------------------------------------------------
+
+time:20180822151245
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3972
+-------------------------------------------------
+
+time:20180822180238
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534932158 where user_id = 44 
+-------------------------------------------------
+
+time:20180822180238
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(44, "幸福情缘","18926760921", "119.123.154.9","1534932158","IOS")
+-------------------------------------------------
+
+time:20180822233054
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13550040831','1534951854','您的验证码是12320(请尽快完成验证)。如非本人操作，请忽略本短信','0','12320')
+-------------------------------------------------
+
+time:20180822233117
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534950677
+-------------------------------------------------
+
+time:20180822233117
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='UlpWXEgfWVBdTFpdVFZNVxRUW0tXUVBdSFZc',`type` ='1',`addtime` ='1534951877',`ip` ='182.146.123.119',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi 5 Plus MIUI/V9.2.3.0.NEGCNEK)'
+-------------------------------------------------
+
+time:20180822233154
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13550040831','1534951914','您的验证码是31423(请尽快完成验证)。如非本人操作，请忽略本短信','0','31423')
+-------------------------------------------------
+
+time:20180822233203
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1534950723
+-------------------------------------------------
+
+time:20180822233203
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='UFlRXEsfWVBdTFpdVFdJVxRUW0tXUVBdSVJc',`type` ='1',`addtime` ='1534951923',`ip` ='182.146.123.119',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi 5 Plus MIUI/V9.2.3.0.NEGCNEK)'
+-------------------------------------------------
+
+time:20180822233203
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='182.146.123.119'
+-------------------------------------------------
+
+time:20180822233203
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`extension_id`,`parent_id`)
+	VALUES('13550040831', 'f302b30e33e08cb67d323823543eefe03ff347fd', '1534951923','13550040831','1','0','9999')
+-------------------------------------------------
+
+time:20180822233203
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164147' where user_id=164147
+-------------------------------------------------
+
+time:20180822233203
+UPDATE `ylt_tp`.`ylt_users` SET bean_gift = bean_gift + '20'  WHERE user_id = 164147
+-------------------------------------------------
+
+time:20180822233203
+INSERT INTO `ylt_tp`.`ylt_bean_gift_log`(`user_id`,`bean_gift`, `change_time`,`business_type`,`desc`,`change_type`)
+				VALUES('164147', '20', '1534951923','新用户注册赠送','','1')
+-------------------------------------------------
+
+time:20180822233204
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='android2b93db6a11d1ad86e2730e439b2eaf0b' where mobile=13550040831
+-------------------------------------------------
+
+time:20180822233204
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534951924 where user_id = 164147 
+-------------------------------------------------
+
+time:20180823113309
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180823113346
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180823113412
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180823115848
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163886, "15717249421","15717249421", "223.104.64.8","1534996728","Android")
+-------------------------------------------------
+
+time:20180823115958
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='android8c1f9e95057ec82c5ae3f54556ddcf3b' where mobile=15717249421
+-------------------------------------------------
+
+time:20180823115959
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1534996799 where user_id = 163886 
+-------------------------------------------------
+
+time:20180823115959
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163886, "15717249421","15717249421", "223.104.64.8","1534996799","Android")
+-------------------------------------------------
+
+time:20180823125414
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "117.136.40.185","1535000054","Android")
+-------------------------------------------------
+
+time:20180823125452
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4531
+-------------------------------------------------
+
+time:20180823132935
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535002175 where user_id = 164132 
+-------------------------------------------------
+
+time:20180823132935
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "117.136.39.86","1535002175","IOS")
+-------------------------------------------------
+
+time:20180823133026
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4725
+-------------------------------------------------
+
+time:20180823133052
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180823160329
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180823160346
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15715691074','1535011426','您的验证码是11273(请尽快完成验证)。如非本人操作，请忽略本短信','0','11273')
+-------------------------------------------------
+
+time:20180823160401
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1535010241
+-------------------------------------------------
+
+time:20180823160401
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='UllXWUsfWVBdTVNZVFpKVRRUW0tWWFRcTlFe',`type` ='1',`addtime` ='1535011441',`ip` ='220.248.243.38',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 6.0.1; AOSP on angler Build/MTC20L)'
+-------------------------------------------------
+
+time:20180823160449
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15715691074','1535011489','您的验证码是74135(请尽快完成验证)。如非本人操作，请忽略本短信','0','74135')
+-------------------------------------------------
+
+time:20180823160501
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1535010301
+-------------------------------------------------
+
+time:20180823160501
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VFxUXU0fWVBdTVNZVFpAWhRUW0tWWFRcTltR',`type` ='1',`addtime` ='1535011501',`ip` ='36.33.24.153',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 6.0.1; AOSP on angler Build/MTC20L)'
+-------------------------------------------------
+
+time:20180823160502
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='220.248.243.38'
+-------------------------------------------------
+
+time:20180823160502
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`extension_id`,`parent_id`)
+	VALUES('15715691074', 'bb9aea63d1e3b0624ce62faa9ab8f08dfb4ada0c', '1535011502','15715691074','1','46','9999')
+-------------------------------------------------
+
+time:20180823160502
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164148' where user_id=164148
+-------------------------------------------------
+
+time:20180823160502
+UPDATE `ylt_tp`.`ylt_users` SET bean_gift = bean_gift + '20'  WHERE user_id = 164148
+-------------------------------------------------
+
+time:20180823160502
+INSERT INTO `ylt_tp`.`ylt_bean_gift_log`(`user_id`,`bean_gift`, `change_time`,`business_type`,`desc`,`change_type`)
+				VALUES('164148', '20', '1535011502','新用户注册赠送','','1')
+-------------------------------------------------
+
+time:20180823160503
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='android800c7f3e68479a542d098af217006dbc' where mobile=15715691074
+-------------------------------------------------
+
+time:20180823160503
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535011503 where user_id = 164148 
+-------------------------------------------------
+
+time:20180823164339
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180823172343
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535016223 where user_id = 44 
+-------------------------------------------------
+
+time:20180823172343
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(44, "幸福情缘","18926760921", "119.123.153.202","1535016223","IOS")
+-------------------------------------------------
+
+time:20180823172422
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180823175306
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4247
+-------------------------------------------------
+
+time:20180823175317
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4247
+-------------------------------------------------
+
+time:20180823175424
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2715
+-------------------------------------------------
+
+time:20180823175504
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4450
+-------------------------------------------------
+
+time:20180823184034
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=917
+-------------------------------------------------
+
+time:20180823184240
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1484
+-------------------------------------------------
+
+time:20180823184603
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3654
+-------------------------------------------------
+
+time:20180823184618
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1730
+-------------------------------------------------
+
+time:20180824183549
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535106949 where user_id = 44 
+-------------------------------------------------
+
+time:20180824183549
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(44, "幸福情缘","18926760921", "14.30.10.142","1535106949","IOS")
+-------------------------------------------------
+
+time:20180824183637
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180824183930
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180824184235
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (44,4724,1535107355)
+-------------------------------------------------
+
+time:20180824184548
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('东山再起', '', '1535107548','','1','1','ios569afbef6274bb05b50a895e84259ed0','https://thirdwx.qlogo.cn/mmopen/vi_32/Z8GRLgpW5icgrNGFX17eIS37wwZ15akRBSq3367SSsnCic5nwgk7duvNraSZjibUB4IgRAkrliaWXfND3icianrjNsIQ/132','','ormqRwbpAhBEmif01fIEYrLwLsos','weixin')
+-------------------------------------------------
+
+time:20180824184548
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164150' where user_id=164150
+-------------------------------------------------
+
+time:20180824195101
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3547
+-------------------------------------------------
+
+time:20180825112612
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('晨涵baby', '', '1535167572','','1','2','androide68b1789c82d3ccf9f9bc0b8a8acbb5f','http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTL73opEYE1jiatVOLq0fY6ZWhFurfibDAlicBmO0iazTnbuBDBCWTZsHkBoic9vaPn9z1oeric8CMr0ibZsg/132','','ormqRwdmrlgcphpMesO_RuF_QxgM','weixin')
+-------------------------------------------------
+
+time:20180825112612
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164152' where user_id=164152
+-------------------------------------------------
+
+time:20180825112627
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('18168188802','1535167587','您的验证码是67040(请尽快完成验证)。如非本人操作，请忽略本短信','0','67040')
+-------------------------------------------------
+
+time:20180825112642
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1535166402
+-------------------------------------------------
+
+time:20180825112642
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VV9VWkgfWVBdTVJeUltAVBRUW0tWWVNWT1tf',`type` ='1',`addtime` ='1535167602',`ip` ='49.95.134.181',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.0.0; BKL-AL20 Build/HUAWEIBKL-AL20)'
+-------------------------------------------------
+
+time:20180825112704
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='49.95.134.181'
+-------------------------------------------------
+
+time:20180825112704
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=18168188802,extension_id='' where user_id=164152
+-------------------------------------------------
+
+time:20180825113428
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4633
+-------------------------------------------------
+
+time:20180825113642
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4633
+-------------------------------------------------
+
+time:20180825122604
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180825141601
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535177761 where user_id = 164067 
+-------------------------------------------------
+
+time:20180825141601
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1535177761","IOS")
+-------------------------------------------------
+
+time:20180825142719
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1275
+-------------------------------------------------
+
+time:20180825143343
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "113.91.151.76","1535178823","IOS")
+-------------------------------------------------
+
+time:20180825155728
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(155444, "小杨","13827267283", "223.104.65.1","1535183848","Android")
+-------------------------------------------------
+
+time:20180825200257
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180825212321
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535203401 where user_id = 164067 
+-------------------------------------------------
+
+time:20180825212321
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1535203401","IOS")
+-------------------------------------------------
+
+time:20180825220854
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164145, "嗯","15322049907", "183.39.25.30","1535206134","Android")
+-------------------------------------------------
+
+time:20180826001539
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535213739 where user_id = 164132 
+-------------------------------------------------
+
+time:20180826001539
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164132, "聖°","15889500868", "222.248.226.48","1535213739","IOS")
+-------------------------------------------------
+
+time:20180826001547
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180826001610
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180826114317
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2759
+-------------------------------------------------
+
+time:20180826182535
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535279135 where user_id = 44 
+-------------------------------------------------
+
+time:20180826182535
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(44, "幸福情缘","18926760921", "14.30.10.142","1535279135","IOS")
+-------------------------------------------------
+
+time:20180826201432
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180826201525
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4648
+-------------------------------------------------
+
+time:20180826231407
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535296447 where user_id = 164092 
+-------------------------------------------------
+
+time:20180826231407
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164092, "","", "223.104.63.4","1535296447","IOS")
+-------------------------------------------------
+
+time:20180827061203
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180827065331
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164122, "小三才","13402880170", "182.150.137.249","1535324011","IOS")
+-------------------------------------------------
+
+time:20180827065331
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535324011 where user_id = 164122 
+-------------------------------------------------
+
+time:20180827065516
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3738
+-------------------------------------------------
+
+time:20180827065812
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1585
+-------------------------------------------------
+
+time:20180827070621
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3165
+-------------------------------------------------
+
+time:20180827081257
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4621
+-------------------------------------------------
+
+time:20180827163101
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4717
+-------------------------------------------------
+
+time:20180827173930
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163980, "18717822242","18717822242", "223.104.212.175","1535362770","Android")
+-------------------------------------------------
+
+time:20180827173930
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535362770 where user_id = 163980 
+-------------------------------------------------
+
+time:20180828080132
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "117.136.79.133","1535414492","IOS")
+-------------------------------------------------
+
+time:20180828080132
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535414492 where user_id = 163482 
+-------------------------------------------------
+
+time:20180828131903
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(50, "ylt_1494856971625","13352781717", "183.39.23.84","1535433543","Android")
+-------------------------------------------------
+
+time:20180828161457
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180828161510
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us18' where user_id = 18 
+-------------------------------------------------
+
+time:20180828202325
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(18, "杨礼至","18938633286", "113.104.165.133","1535459005","IOS")
+-------------------------------------------------
+
+time:20180828212851
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=380
+-------------------------------------------------
+
+time:20180828213633
+UPDATE `ylt_tp`.`ylt_users` SET app_type= '', device_token='android35d16d02b85b9a98e1d24206bd1fbe56' where mobile=18744901099
+-------------------------------------------------
+
+time:20180828213634
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535463394 where user_id = 162621 
+-------------------------------------------------
+
+time:20180828213634
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(162621, "诗和远方","18744901099", "113.87.183.111","1535463394","Android")
+-------------------------------------------------
+
+time:20180828213654
+begin
+-------------------------------------------------
+
+time:20180828213654
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '997' where goods_id=4209 
+-------------------------------------------------
+
+time:20180828213654
+UPDATE `ylt_tp`.`ylt_goods` SET store_count= '993' where goods_id=3658 
+-------------------------------------------------
+
+time:20180828213654
+UPDATE `ylt_tp`.`ylt_goods_price` as P SET P.store_count= '81' where P.goods_id=4560 AND P.key='5193'
+-------------------------------------------------
+
+time:20180828213654
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180828213654
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, supplier_id, source, is_parent, recommend_code) VALUES ('2018082821365483046', '162621', '0', '0', '王国勇', '28240', '28558', '28571', '腾飞工业大厦402', '18744901099', '2788.00', '0.00', '', '2788', '2788.00', '1535463414', '0', '0', '0', '', 'app', '1', '')
+-------------------------------------------------
+
+time:20180828213654
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180828213655
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, parent_id, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018082821365404521', '162621', '0', '0', '王国勇', '28240', '28558', '28571', '腾飞工业大厦402', '18744901099', '98', '0', '0', '98', '98.00', '1535463414', '0', '0', '0', '', '6826', '473', 'app', 'BinWan官方店', '0', '0', '')
+-------------------------------------------------
+
+time:20180828213655
+DESC `ylt_tp`.`ylt_order_goods`
+-------------------------------------------------
+
+time:20180828213655
+INSERT INTO `ylt_tp`.`ylt_order_goods` (order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price, goods_amount, discount_price, spec_key, spec_key_name, prom_type, prom_id, coupon_id, commission_price) VALUES ('6827', '3658', '活动买一送一BinWan粉色香氛手环 防蚊手环防水经典款手链', 'TP0003658', '1', '98.00', '98.00', '98', '0', '', '', '0', '0', '0', '')
+-------------------------------------------------
+
+time:20180828213655
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180828213655
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, parent_id, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018082821365501202', '162621', '0', '0', '王国勇', '28240', '28558', '28571', '腾飞工业大厦402', '18744901099', '110', '0', '0', '110', '110.00', '1535463415', '0', '0', '0', '', '6826', '592', 'app', '泰国乳胶床上用品', '0', '0', '')
+-------------------------------------------------
+
+time:20180828213655
+DESC `ylt_tp`.`ylt_order_goods`
+-------------------------------------------------
+
+time:20180828213655
+INSERT INTO `ylt_tp`.`ylt_order_goods` (order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price, goods_amount, discount_price, spec_key, spec_key_name, prom_type, prom_id, coupon_id, commission_price) VALUES ('6828', '4209', '泰国皇家乳胶婴儿枕头,婴儿定型枕头,0-1-3岁新生儿童枕头', 'TP0004209', '1', '0.00', '110.00', '110', '0', '', '', '0', '0', '0', '')
+-------------------------------------------------
+
+time:20180828213655
+DESC `ylt_tp`.`ylt_order`
+-------------------------------------------------
+
+time:20180828213655
+INSERT INTO `ylt_tp`.`ylt_order` (order_sn, user_id, order_status, pay_status, consignee, province, city, district, address, mobile, goods_price, shipping_price, coupon_price, order_amount, total_amount, add_time, order_prom_type, order_prom_id, order_prom_amount, user_note, parent_id, supplier_id, source, supplier_name, is_parent, is_designer, recommend_code) VALUES ('2018082821365504953', '162621', '0', '0', '王国勇', '28240', '28558', '28571', '腾飞工业大厦402', '18744901099', '2580', '0', '0', '2580', '2580.00', '1535463415', '0', '0', '0', '', '6826', '41', 'app', '一礼通自营', '0', '0', '')
+-------------------------------------------------
+
+time:20180828213655
+DESC `ylt_tp`.`ylt_order_goods`
+-------------------------------------------------
+
+time:20180828213655
+INSERT INTO `ylt_tp`.`ylt_order_goods` (order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price, goods_amount, discount_price, spec_key, spec_key_name, prom_type, prom_id, coupon_id, commission_price) VALUES ('6829', '4560', '菜园认购', 'TP0004560', '1', '2580.00', '2580.00', '2580', '0', '5193', '规格:一年10m²', '0', '0', '0', '')
+-------------------------------------------------
+
+time:20180828213655
+COMMIT
+-------------------------------------------------
+
+time:20180828213906
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535463546 where user_id = 162621 
+-------------------------------------------------
+
+time:20180828213909
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(162621, "诗和远方","18744901099", "113.87.183.111","1535463549","Android")
+-------------------------------------------------
+
+time:20180828213909
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535463549 where user_id = 162621 
+-------------------------------------------------
+
+time:20180828225934
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180829110527
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4587
+-------------------------------------------------
+
+time:20180829211454
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535548494 where user_id = 21 
+-------------------------------------------------
+
+time:20180829211454
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(21, "18038195536","18038195536", "183.40.18.132","1535548494","IOS")
+-------------------------------------------------
+
+time:20180829211557
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180829212537
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4187
+-------------------------------------------------
+
+time:20180829235559
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535558159 where user_id = 44 
+-------------------------------------------------
+
+time:20180829235559
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(44, "幸福情缘","18926760921", "119.123.149.55","1535558159","IOS")
+-------------------------------------------------
+
+time:20180830012838
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1535563718","IOS")
+-------------------------------------------------
+
+time:20180830012838
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535563718 where user_id = 164067 
+-------------------------------------------------
+
+time:20180830012901
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180830103249
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "120.229.77.24","1535596369","Android")
+-------------------------------------------------
+
+time:20180830103304
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180830103502
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=113
+-------------------------------------------------
+
+time:20180830103508
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=113
+-------------------------------------------------
+
+time:20180830161438
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "223.104.63.197","1535616878","Android")
+-------------------------------------------------
+
+time:20180830161616
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180830161629
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4574
+-------------------------------------------------
+
+time:20180830161651
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535617011 where user_id = 163435 
+-------------------------------------------------
+
+time:20180830161655
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "223.104.63.197","1535617015","Android")
+-------------------------------------------------
+
+time:20180830163520
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535618120 where user_id = 163435 
+-------------------------------------------------
+
+time:20180830163523
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "223.104.63.197","1535618123","Android")
+-------------------------------------------------
+
+time:20180830163653
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535618213 where user_id = 163435 
+-------------------------------------------------
+
+time:20180830163656
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "223.104.63.197","1535618216","Android")
+-------------------------------------------------
+
+time:20180830172938
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('小强哥Jonson', '', '1535621378','','1','1','ios22b362913a8bebff8cfab19d397f3184','https://thirdwx.qlogo.cn/mmopen/vi_32/ricV7H8iayA8fOTn3t6bpNzOjNjoszNycmf6KDQfVQHM2QLGoictoFJj3eFwaiccSFPqQpyQZduBNKQfbh9OzDoC4g/132','','ormqRwSASX3tYZGaT3zv4OFLIKhQ','weixin')
+-------------------------------------------------
+
+time:20180830172938
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164157' where user_id=164157
+-------------------------------------------------
+
+time:20180830172950
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13534149771','1535621390','您的验证码是84283(请尽快完成验证)。如非本人操作，请忽略本短信','0','84283')
+-------------------------------------------------
+
+time:20180830173001
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1535620201
+-------------------------------------------------
+
+time:20180830173001
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='W1xXVksfWVBdTVVaVF1BUxRUW0tWXldcTVpY',`type` ='1',`addtime` ='1535621401',`ip` ='113.91.150.115',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.4.1; Scale/3.00)'
+-------------------------------------------------
+
+time:20180830173015
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='113.91.150.115'
+-------------------------------------------------
+
+time:20180830173015
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=13534149771,extension_id='1' where user_id=164157
+-------------------------------------------------
+
+time:20180830173019
+insert INTO `ylt_tp`.`ylt_supplier_collect`(user_id,supplier_id,add_time) values (164157,41,1535621419)
+-------------------------------------------------
+
+time:20180830173218
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4187
+-------------------------------------------------
+
+time:20180830175546
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180830190002
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(50, "ylt_1494856971625","13352781717", "183.40.75.119","1535626802","Android")
+-------------------------------------------------
+
+time:20180830190013
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180830201241
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535631161 where user_id = 196 
+-------------------------------------------------
+
+time:20180830201241
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(196, "Hugo","13418995817", "113.116.52.187","1535631161","IOS")
+-------------------------------------------------
+
+time:20180830223338
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1535639618","IOS")
+-------------------------------------------------
+
+time:20180830223338
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535639618 where user_id = 164067 
+-------------------------------------------------
+
+time:20180830223347
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4727
+-------------------------------------------------
+
+time:20180831001156
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535645516 where user_id = 162621 
+-------------------------------------------------
+
+time:20180831001156
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(162621, "诗和远方","18744901099", "113.118.187.98","1535645516","Android")
+-------------------------------------------------
+
+time:20180831001219
+delete from `ylt_tp`.`ylt_cart` where id=9881 AND user_id=162621
+-------------------------------------------------
+
+time:20180831001219
+delete from `ylt_tp`.`ylt_goods_collect` where goods_id=4560 AND user_id=162621
+-------------------------------------------------
+
+time:20180831001221
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4209
+-------------------------------------------------
+
+time:20180831001227
+delete from `ylt_tp`.`ylt_cart` where id=9743 AND user_id=162621
+-------------------------------------------------
+
+time:20180831001227
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (162621,4560,1535645547)
+-------------------------------------------------
+
+time:20180831001234
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '2', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001235
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '3', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001235
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '4', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001236
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '5', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001236
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '6', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001246
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '993', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001253
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '992', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001254
+UPDATE `ylt_tp`.`ylt_cart` SET goods_num= '993', goods_price = '98.00' WHERE id='9745' AND user_id='162621'
+-------------------------------------------------
+
+time:20180831001318
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180831001322
+DESC `ylt_tp`.`ylt_cart`
+-------------------------------------------------
+
+time:20180831001322
+INSERT INTO `ylt_tp`.`ylt_cart` (user_id, session_id, goods_id, goods_sn, goods_name, market_price, goods_price, member_goods_price, goods_num, spec_key, spec_key_name, add_time, prom_type, prom_id, supplier_id, supplier_name, is_designer, commission_price) VALUES ('162621', 'UlBSWkxaWFReQVoUVFhKVVpUEklWW1BYTFZdVFgEAgYBHBcKDFZbHFJeAV5KAVBQDEECUV0LSQdaUVxIVQoBXx4BDVBY', '4682', 'TP0004682', '【麦轩】端午节粽子礼盒多口味 鲜肉粽子/豆沙/蜜枣粽子 企业团购', '108.00', '78.00', '78.00', '1', '5325', '规格:920G', '1535645602', '0', '0', '643', '麦轩食品旗舰店', '0', '10.00')
+-------------------------------------------------
+
+time:20180831001326
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (162621,4682,1535645606)
+-------------------------------------------------
+
+time:20180831001403
+insert INTO `ylt_tp`.`ylt_works_collect`( works_id,user_id ) value (37,162621)
+-------------------------------------------------
+
+time:20180831001403
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 37 
+-------------------------------------------------
+
+time:20180831001403
+update  `ylt_tp`.`ylt_works` set collect_count = collect_count + 1 where works_id = 37
+-------------------------------------------------
+
+time:20180831001443
+delete from `ylt_tp`.`ylt_works_collect` where user_id = 162621 and works_id =37
+-------------------------------------------------
+
+time:20180831001443
+update  `ylt_tp`.`ylt_works` set collect_count = collect_count - 1 where works_id = 37
+-------------------------------------------------
+
+time:20180831001446
+insert INTO `ylt_tp`.`ylt_works_collect`( works_id,user_id ) value (37,162621)
+-------------------------------------------------
+
+time:20180831001446
+update  `ylt_tp`.`ylt_works` set collect_count = collect_count + 1 where works_id = 37
+-------------------------------------------------
+
+time:20180831001446
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 37 
+-------------------------------------------------
+
+time:20180831102036
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(23, "土贼","15207972767", "106.5.108.107","1535682036","IOS")
+-------------------------------------------------
+
+time:20180831102036
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535682036 where user_id = 23 
+-------------------------------------------------
+
+time:20180831111830
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535685510 where user_id = 164067 
+-------------------------------------------------
+
+time:20180831111830
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164067, "Qwen专属","15858005325", "180.157.114.164","1535685510","IOS")
+-------------------------------------------------
+
+time:20180831113353
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164157, "小强哥Jonson","13534149771", "117.136.31.246","1535686433","IOS")
+-------------------------------------------------
+
+time:20180831113353
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535686433 where user_id = 164157 
+-------------------------------------------------
+
+time:20180831115711
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=56
+-------------------------------------------------
+
+time:20180831144510
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164157, "小强哥Jonson","13534149771", "113.91.150.115","1535697910","IOS")
+-------------------------------------------------
+
+time:20180831144510
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535697910 where user_id = 164157 
+-------------------------------------------------
+
+time:20180831144522
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180831144620
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180831144706
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 37 
+-------------------------------------------------
+
+time:20180831144714
+update `ylt_tp`.`ylt_works` set click_count = click_count+1 where works_id = 28 
+-------------------------------------------------
+
+time:20180831145048
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=61
+-------------------------------------------------
+
+time:20180831170634
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535706394 where user_id = 164157 
+-------------------------------------------------
+
+time:20180831170634
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164157, "小强哥Jonson","13534149771", "113.91.150.115","1535706394","IOS")
+-------------------------------------------------
+
+time:20180831175549
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2739
+-------------------------------------------------
+
+time:20180831175613
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('Duang ', '', '1535709373','','1','1','ioscb33347a40d33fe54d60c8fbfe1a0bff','https://thirdqq.qlogo.cn/qqapp/1106188222/245F15083DF4A83291233DA75613E1A9/100','245F15083DF4A83291233DA75613E1A9','','qq')
+-------------------------------------------------
+
+time:20180831175613
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164158' where user_id=164158
+-------------------------------------------------
+
+time:20180831175652
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164158' where user_id = 164158 
+-------------------------------------------------
+
+time:20180831175701
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('15625250393','1535709421','您的验证码是33037(请尽快完成验证)。如非本人操作，请忽略本短信','0','33037')
+-------------------------------------------------
+
+time:20180831175728
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1535708248
+-------------------------------------------------
+
+time:20180831175728
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='UFtVXU8fWVBdTVRYXFpKUhRUW0tWX1ReTlFZ',`type` ='1',`addtime` ='1535709448',`ip` ='14.155.113.170',`get_header` ='YiLiTong/3.3.1 (iPhone; iOS 11.4.1; Scale/2.00)'
+-------------------------------------------------
+
+time:20180831175741
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='14.155.113.170'
+-------------------------------------------------
+
+time:20180831175741
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=15625250393,extension_id='' where user_id=164158
+-------------------------------------------------
+
+time:20180831175837
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4648
+-------------------------------------------------
+
+time:20180831175859
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180831175910
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180831175912
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180831175934
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163482, "chen ming","13829208060", "223.104.63.248","1535709574","IOS")
+-------------------------------------------------
+
+time:20180831175934
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535709574 where user_id = 163482 
+-------------------------------------------------
+
+time:20180831175939
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180831180006
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535709606 where user_id = 163435 
+-------------------------------------------------
+
+time:20180831180009
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "117.136.32.81","1535709609","Android")
+-------------------------------------------------
+
+time:20180831180015
+INSERT INTO `ylt_tp`.`ylt_users`(`nickname`,`password`, `reg_time`,`mobile`,`mobile_validated`,`app_type`,`device_token`,`head_pic`,`openid`,`unionid`,`oauth`)
+ 	VALUES('皮囊', '', '1535709615','','1','2','android43ebf3df63f35f4ee3a3d595e7ba327b','http://thirdwx.qlogo.cn/mmopen/vi_32/WAVWZmic17sAsHHVjBcULY9y9Iiaqdcbs0wsqpeiczCTeyLdiarl4w2wmnFiahV3rBibjr3NSwQaOpcD4mW7NibTdl6jg/132','','ormqRwReRJVOSAw_AltHlvhuT9j4','weixin')
+-------------------------------------------------
+
+time:20180831180015
+UPDATE `ylt_tp`.`ylt_users` SET recommend_code= 'us164159' where user_id=164159
+-------------------------------------------------
+
+time:20180831180029
+insert into ylt_sms_log (mobile,add_time,code,status,verification_code) values('13682572907','1535709629','您的验证码是53384(请尽快完成验证)。如非本人操作，请忽略本短信','0','53384')
+-------------------------------------------------
+
+time:20180831180040
+delete from `ylt_tp`.`ylt_app_vcode` where `type`='1' and addtime<1535708440
+-------------------------------------------------
+
+time:20180831180040
+insert into `ylt_tp`.`ylt_app_vcode` set `app_name` ='一礼通app',`toke` ='VltWVkwfWVBdTVRYXFhKWhRUW0tWX1ReQFFR',`type` ='1',`addtime` ='1535709640',`ip` ='119.123.33.91',`get_header` ='Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-G9650 Build/R16NW)'
+-------------------------------------------------
+
+time:20180831180048
+UPDATE `ylt_tp`.`ylt_extension` SET register= '1' where download_ip='119.123.33.91'
+-------------------------------------------------
+
+time:20180831180048
+UPDATE `ylt_tp`.`ylt_users` SET password='4bfeb844249b138778ce47077d43a63e5e93173a',mobile=13682572907,extension_id='' where user_id=164159
+-------------------------------------------------
+
+time:20180831180138
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4321
+-------------------------------------------------
+
+time:20180831180150
+insert INTO `ylt_tp`.`ylt_goods_collect`(user_id,goods_id,add_time) values (164159,4321,1535709710)
+-------------------------------------------------
+
+time:20180831180151
+delete from `ylt_tp`.`ylt_goods_collect` where goods_id=4321 AND user_id=164159
+-------------------------------------------------
+
+time:20180831180211
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180831180350
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180831180414
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180831180423
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4640
+-------------------------------------------------
+
+time:20180831180431
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4640
+-------------------------------------------------
+
+time:20180831180434
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180831180436
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4189
+-------------------------------------------------
+
+time:20180831180436
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180831180505
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4187
+-------------------------------------------------
+
+time:20180831180557
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4724
+-------------------------------------------------
+
+time:20180831181151
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180831181717
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4126
+-------------------------------------------------
+
+time:20180831181719
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4126
+-------------------------------------------------
+
+time:20180831181952
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4682
+-------------------------------------------------
+
+time:20180831182307
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180831182323
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180831182433
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4730
+-------------------------------------------------
+
+time:20180831182911
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180831183022
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180831190412
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=60
+-------------------------------------------------
+
+time:20180831191433
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3503
+-------------------------------------------------
+
+time:20180831191444
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3503
+-------------------------------------------------
+
+time:20180831191650
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4729
+-------------------------------------------------
+
+time:20180831191657
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=60
+-------------------------------------------------
+
+time:20180831192029
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180831192106
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4713
+-------------------------------------------------
+
+time:20180831192116
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180831192201
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4247
+-------------------------------------------------
+
+time:20180831192252
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=60
+-------------------------------------------------
+
+time:20180831192254
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=182
+-------------------------------------------------
+
+time:20180831192332
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3503
+-------------------------------------------------
+
+time:20180831192342
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1589
+-------------------------------------------------
+
+time:20180831192345
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3502
+-------------------------------------------------
+
+time:20180831192350
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3504
+-------------------------------------------------
+
+time:20180831192353
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=1584
+-------------------------------------------------
+
+time:20180831192409
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4587
+-------------------------------------------------
+
+time:20180831192440
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4214
+-------------------------------------------------
+
+time:20180831192452
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4406
+-------------------------------------------------
+
+time:20180831192501
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3745
+-------------------------------------------------
+
+time:20180831192612
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4653
+-------------------------------------------------
+
+time:20180831192620
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4647
+-------------------------------------------------
+
+time:20180831192625
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4623
+-------------------------------------------------
+
+time:20180831192735
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4384
+-------------------------------------------------
+
+time:20180831192745
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4375
+-------------------------------------------------
+
+time:20180831192749
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4318
+-------------------------------------------------
+
+time:20180831192756
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4202
+-------------------------------------------------
+
+time:20180831192801
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4188
+-------------------------------------------------
+
+time:20180831192907
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4100
+-------------------------------------------------
+
+time:20180831193003
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3974
+-------------------------------------------------
+
+time:20180831193004
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4678
+-------------------------------------------------
+
+time:20180831193049
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4680
+-------------------------------------------------
+
+time:20180831193126
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180831193200
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4621
+-------------------------------------------------
+
+time:20180831193201
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=37
+-------------------------------------------------
+
+time:20180831193207
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4574
+-------------------------------------------------
+
+time:20180831193211
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4335
+-------------------------------------------------
+
+time:20180831193219
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=50
+-------------------------------------------------
+
+time:20180831193230
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3712
+-------------------------------------------------
+
+time:20180831193246
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4557
+-------------------------------------------------
+
+time:20180831193257
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=54
+-------------------------------------------------
+
+time:20180831193627
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3738
+-------------------------------------------------
+
+time:20180831193654
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3714
+-------------------------------------------------
+
+time:20180831193716
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4654
+-------------------------------------------------
+
+time:20180831193724
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4649
+-------------------------------------------------
+
+time:20180831193801
+UPDATE `ylt_tp`.`ylt_users` SET last_login= 1535715481 where user_id = 164159 
+-------------------------------------------------
+
+time:20180831193804
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(164159, "皮囊","13682572907", "119.123.33.91","1535715484","Android")
+-------------------------------------------------
+
+time:20180831194328
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=491
+-------------------------------------------------
+
+time:20180831194332
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=502
+-------------------------------------------------
+
+time:20180831194337
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3656
+-------------------------------------------------
+
+time:20180831194339
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2080
+-------------------------------------------------
+
+time:20180831194400
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2080
+-------------------------------------------------
+
+time:20180831194402
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=3658
+-------------------------------------------------
+
+time:20180831194405
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4222
+-------------------------------------------------
+
+time:20180831194407
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4240
+-------------------------------------------------
+
+time:20180831194410
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4195
+-------------------------------------------------
+
+time:20180831220839
+INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(163435, "梦","13902465187", "117.136.32.81","1535724519","Android")
+-------------------------------------------------
+
+time:20180831221040
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=4643
+-------------------------------------------------
+
+time:20180831221104
+UPDATE `ylt_tp`.`ylt_goods` SET click_count= click_count + 1 where goods_id=2152
+-------------------------------------------------
+

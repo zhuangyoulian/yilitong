@@ -1,0 +1,132 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>一礼通充值配置 - 编辑一礼通充值配置内容</h3>
+                <h5>一礼通充值配置</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="adminHandle" action="{:Url('Refillcard/refill_card_add')}" method="post">
+        <input type="hidden" name="act" value="{$act}">
+        <input type="hidden" name="id"  value="{$info.id}">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="record_no">充值卡分类</label>
+                </dt>
+                <dd class="opt">
+                      <select name="cat_id" id="cat_id" onChange="get_refill_class(this.value,'cat_id_2','0');" class="small form-control">
+                        <option value="">请选择充值卡分类</option>                                      
+                             <foreach name="cat_list" item="v" key="k" >
+                                <option value="{$v['id']}" <if condition="$v['id'] eq $level_cat['1']">selected="selected"</if> >
+                                    {$v['name']}
+                                </option>
+                             </foreach>
+                      </select>
+                      <select name="cat_id_2" id="cat_id_2" onChange="get_refill_class(this.value,'cat_id_3','0');" class="small form-control">
+                        <option value="" >请选择充值卡分类</option>
+                      </select> 
+                      <select name="cat_id_3" id="cat_id_3" class="small form-control">
+                        <option value="0">请选择商品分类</option>
+                      </select> 
+                    <span class="err" id="err_cat_id" style="color:#F00; display:none;"></span>
+                </dd>
+            </dl>   
+            <dl class="row">
+                <dt class="tit">
+                    <label for="name"><em>*</em>规格名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="name" value="{$info.name}" id="name" class="input-txt">
+                </dd>
+            </dl>  
+            <dl class="row">
+                <dt class="tit">
+                    <label for="encoding"><em>*</em>产品编码</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="encoding" value="{$info.encoding}" id="encoding" class="input-txt">
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="price"><em>*</em>显示金额</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="price" value="{$info.price}" id="price" class="input-txt">
+                    <p class="notic">输入金额为纯数字，可带小数点两位数</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                  <label for="t_mane"><em>*</em>导航显示</label>
+                </dt>
+                <dd class="opt">
+                  <div class="onoff">
+                    <label for="goods_category1" class="cb-enable <if condition="$info[is_show] eq 1">selected</if>">是</label>
+                    <label for="goods_category0" class="cb-disable <if condition="$info[is_show] eq 0">selected</if>">否</label>
+                    <input id="goods_category1" name="is_show" value="1" type="radio" <if condition="$info[is_show] eq 1"> checked="checked"</if>>
+                    <input id="goods_category0" name="is_show" value="0" type="radio" <if condition="$info[is_show] eq 0"> checked="checked"</if>>
+                  </div>
+                  <p class="notic">是否在导航栏显示</p>
+                </dd>        
+            </dl> 
+            <div class="bot"><a href="JavaScript:void(0);" onclick="adsubmit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    /** 以下是编辑时默认选中某个分类*/
+    $(document).ready(function(){
+        <if condition="$level_cat['2'] gt 0">
+         // 商品分类第二个下拉菜单
+            get_refill_class('{$level_cat[1]}','cat_id_2','{$level_cat[2]}');  
+        </if>
+        <if condition="$level_cat['3'] gt 0">
+            // 商品分类第二个下拉菜单
+             get_refill_class('{$level_cat[2]}','cat_id_3','{$level_cat[3]}');   
+        </if>
+    });
+    // 判断输入框是否为空
+    function adsubmit(){
+        if($('#cat_id').val() == ''){
+            layer.msg('一级分类不能为空', {icon: 2,time: 1000});   
+            return false;
+        }
+        if($('#cat_id_2').val() == ''){
+            layer.msg('二级分类不能为空', {icon: 2,time: 1000});   
+            return false;
+        }
+        if($('input[name=name]').val() == ''){
+            layer.msg('规格名称不能为空', {icon: 2,time: 1000});   
+            return false;
+        }
+        if($('input[name=price]').val() == ''){
+            layer.msg('显示金额不能为空', {icon: 2,time: 1000});
+            return false;
+        }
+        $.ajax({
+            type:"post",
+            url:"{:Url('Admin/Refillcard/refill_card_add')}",//+tab,
+            data:$('#adminHandle').serialize(),
+            dataType:"json",
+            success:function(date){
+                if (date.status == 1) {
+                    layer.alert(date.msg, {icon: 1});  
+                    location.href="/Admin/Refillcard/refill_lists";
+                }else{
+                    layer.alert(date.msg, {icon: 2});  
+                }
+            }
+        })
+        // $('#adminHandle').submit();
+    }
+</script>
+</body>
+</html>

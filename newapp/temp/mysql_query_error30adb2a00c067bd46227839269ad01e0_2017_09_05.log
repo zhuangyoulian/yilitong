@@ -1,0 +1,25 @@
+2017-09-05 16:26:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT g.supplier_name,g.goods_id, g.goods_name, g.market_price, g.shop_price,g.original_img,is_designer FROM `ylt_tp`.`ylt_goods` AS g  WHERE  and g.cat_id = 1 order by g.sort asc   LIMIT 0,20',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and g.cat_id = 1 order by g.sort asc   LIMIT 0,20\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

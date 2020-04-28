@@ -1,0 +1,26 @@
+2019-07-25 10:21:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_login_log`(`user_id`,`user_name`, `user_phone`,`log_ip`,`log_time`,`source`)
+		VALUES(, "","", "113.91.151.185","1564021269","IOS")',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \' "","", "113.91.151.185","1564021269","IOS")\' at line 2',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: relative;
+	width: 760px;
+	height: 270px;
+	/*margin: 100px auto 0 auto;*/
+	/* box-shadow: 0 0 5px green; */
+	overflow: hidden;
+    margin-bottom:10px;
+}
+
+.wrap1 {
+	position: absolute;
+	width: 5320px;
+	height: 270px;
+	z-index: 1;
+}
+
+.container .wrap1 img {
+	float: left;
+	width: 760px;
+	height: 270px;
+}
+
+.container .buttons {
+	position: absolute;
+	right: 5px;
+	bottom: 20px;
+	width: 115px;
+	height: 5px;
+	z-index: 2;
+}
+
+.container .buttons span {
+	margin-left: 5px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid white;
+	text-align: center;
+	cursor: pointer;
+}
+.container .buttons span:hover{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container .buttons span.on {
+	background-color: #FE7209;
+}
+
+.container .arrow {
+	position: absolute;
+	top: 35%;
+	z-index: 2;
+	width: 40px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.container .arrow img{
+	width: 40px;
+	height: 60px;
+}
+.container .arrow_left {
+	left: 0;
+}
+
+.container .arrow_right {
+	right: 0;
+}
+
+.container:hover .arrow {
+	display: block;
+}
+
+.container .arrow:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+
+
+}
+.advertising{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: white;
+	background-color: #C3C3C3;
+	font-size: 12px;
+	height: 16px;
+	width: 30px;
+	line-height: 16px;
+	text-align: center;
+	z-index: 3;
+}

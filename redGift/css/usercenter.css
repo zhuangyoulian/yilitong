@@ -1,0 +1,403 @@
+body{
+	background: rgb(232,232,232);
+}
+a{
+	color: #333333!important;
+}
+/* .row{
+	margin: 0px;
+	padding:0px;
+} */
+.containerCenter{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 92px;
+	margin-bottom: 96px;
+}
+.containerCenter .left{
+	width: 300px;
+}
+.left .touxiang{
+	width: 180px;
+	height: 180px;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.left .touxiang img{
+	border-radius: 50px;
+	margin-top: 32px;
+}
+.left .touxiang p{
+	margin-top: 20px;
+	font-size: 16px;
+	color: #333333;
+}
+.left .gongneng{
+	width: 180px;
+	background: #FFFFFF;
+	margin-top: 6px;
+}
+.gongneng{
+	padding-left: 20px;
+}
+.gongneng .head{
+	font-size: 16px;
+	color: #333333;
+	font-weight: 700;
+	padding: 24px 0px;
+}
+.gongneng li{
+	padding-bottom: 20px;
+	cursor: pointer;
+}
+.containerCenter .right{
+	width: 1500px;
+	background: #FFFFFF;
+}
+/* 账号与安全 */
+.zhanghao{
+	width: 100%;
+	padding-left: 48px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	border:1px solid #e9e9e9;
+}
+.zhanghao p{
+	position: relative;
+	margin-right: 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	
+}
+.active2{
+	color: #E50012;
+}
+.active2 span{
+	width: 64px ;
+	display: block;
+	height: 2px;
+	background: #E50012;
+	position: absolute;
+	top: 40px;
+}
+.userdetail{
+	padding-left: 48px;
+}
+.userdetail .touxiang{
+	display: flex;
+	align-items: center;
+	margin-top: 36px;
+}
+.touimg{
+	position: relative;
+}
+.userdetail .touxiang p{
+	margin-right: 48px;
+}
+.touxiang .upimg{
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: 9px;
+}
+.userdetail .touxiang:hover img{
+	opacity: 0.5;
+}
+.userdetail .touxiang:hover .upimg{
+	display: block;
+}
+.userid{
+	display: flex;
+	margin-top: 32px;
+}
+.userid p,.username p,.tel p{
+	margin-right:62px ;
+	font-size: 14px;
+	color: #333333;
+}
+.username{
+	display:flex;
+	margin-top: 32px;
+}
+.bindtel .tit{
+	color: #0D4592;
+}
+.bindtel .tit img{
+	margin-left: 5px;
+}
+.tel{
+	display: flex;
+	margin-top: 28px;
+}
+.bindbox{
+	margin-top: 28px;
+}
+.bindbox .tijiao{
+	display: flex;
+	margin-top: 22px;
+}
+.bindbox .tijiao .btn-l{
+	width: 114px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	background: #b2b2b2;
+	color: #FFFFFF;
+}
+.bindbox .tijiao .btn-r{
+	width: 114px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #000000;
+	background: #FFFFFF;
+	border-radius: 4px;
+	border: 1px solid #E0E0E0;
+}
+.btn2{
+	width: 144px;
+	height: 40px;
+	margin-top: 32px;
+	border-radius: 4px;
+	background: #e50012;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn2:hover{
+	background: #ff0015;
+	color: #FFFFFF;
+}
+/* 修改密码 */
+.editpass{
+	width: 500px;
+	margin-top: 36px;
+	margin-left: 48px;
+}
+/* 编辑地址 */
+.editaddress{
+	width: 600px;
+	padding-top: 36px;
+	padding-left: 48px;
+}
+.ssq,.detail,.tel2,.person{
+	display: flex;
+}
+.ssq p,.tel2 p{
+	margin-right: 48px;
+	white-space: nowrap;
+}
+.detail,.person,.tel2{
+	margin-top: 20px;
+}
+.detail p{
+	 white-space:nowrap;
+}
+.person p{
+	margin-right: 60px;
+}
+.detail p{
+	margin-right: 48px;
+}
+.form-shouhuor{
+	width: 256px;
+	height: 40px;
+}
+.form-shouhuor.diqu{
+	width: 200px;
+	height: 40px;
+	margin-right: 10px;
+}
+/* 订单 */
+.dingdan{
+	width: 90%;
+	margin:0 auto;
+	margin-top: 40px;
+}
+.ordertab_title{
+	background: #F8F8F8;
+	font-weight: 700;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.orderlist{
+	border: 1px solid #E0E0E0;
+	margin-bottom: 24px;
+}
+.orderlist .ordlist_tou{
+	padding-left: 18px;
+	height: 44px;
+	background: #eaf8ff;
+	font-size: 14px;
+	color: #333333;
+	display: flex;
+	align-items: center;
+}
+.orderlist .ord_goods{
+	display: flex;
+}
+.ord_goods .h76{
+	height: 76px;
+	border-top: 1px solid #E0E0E0;
+	margin-left: 0px;
+	display: flex;
+	align-items: center;
+}
+.ord_goods .order_henx{
+	border-top: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	margin-right: -6px;
+	padding-top: 32px;
+	text-align: center;
+}
+.ord_goods .order_henx2{
+	/* border-top: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	margin-right: -6px; */
+	/* margin-top: 32px; */
+	text-align: center;
+}
+.ordertab_title .left{
+	display: flex;
+	align-items: center;
+}
+.ordertab_title .quanxuan{
+	margin-right: 10px;
+	width: 14px;
+	height: 14px;
+	margin-top: 0px;
+}
+.ordertab_title span{
+	margin-left: 24px;
+}
+.ordlist_tou .danxuan{
+	margin-right: 10px;
+	width: 14px;
+	height: 14px;
+	margin-top: 0px;
+}
+.ordlist_tou .ordnumber{
+	margin-left: 30px;
+}
+.quxiaoorder:hover{
+	color: #E00909;
+}
+
+.containerB{
+	position: fixed;
+	bottom: 0px;
+}
+.active{
+	/* color: #0D4592; */
+	color: #e50012;
+}
+/* 暂无相关订单 */
+.noorder{
+	margin-top: 84px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.noorder .nodd{
+	color: #555555;
+	margin-top: 18px;
+}
+/* 分页样式 */
+.page-bar{
+    /* margin:40px; */
+	margin-bottom: 50px;
+}
+ul,li{
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none
+}
+.page-bar li:first-child>a {
+   margin-left: 0px
+}
+.page-bar a{
+    border: 1px solid #ddd;
+    text-decoration: none;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    cursor: pointer
+}
+.page-bar a:hover{
+    background-color: #eee;
+}
+.page-bar a.banclick{
+    cursor:not-allowed;
+}
+.page-bar .active a{
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.page-bar i{
+    font-style:normal;
+    color: #d44950;
+    margin: 0px 4px;
+    font-size: 12px;
+}
+/* 时间选择器 */
+.orderdate{
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.start_date{
+	width: 154px;
+	height: 36px;
+	border: 1px solid #d6d6d;
+}
+.end_date{
+	width: 154px;
+	height: 36px;
+}
+.noquerybtn{
+	width: 72px;
+	height: 36px;
+	background: #B2B2B2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+	margin-left: 10px;
+	border-radius: 4px;
+}
+.querybtn{
+	width: 72px;
+	height: 36px;
+	background: #e50012;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+	margin-left: 10px;
+	border-radius: 4px;
+}
+.querybtn:hover{
+	background: #ff0015;
+}
+

@@ -1,0 +1,125 @@
+2018-01-18 19:52:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6479\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-18 19:52:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6480\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-18 19:52:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6481\', 4191, \'博冠S1-lite智能健康秤\', \'TP0004191\', 1, 109.00,109.00,\'\',\'\',\'\',\'\',\'109.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-18 19:53:04
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6482\', 4191, \'博冠S1-lite智能健康秤\', \'TP0004191\', 1, 109.00,109.00,\'\',\'\',\'\',\'\',\'109.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-18 19:53:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6483\', 4191, \'博冠S1-lite智能健康秤\', \'TP0004191\', 1, 109.00,109.00,\'\',\'\',\'\',\'\',\'109.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

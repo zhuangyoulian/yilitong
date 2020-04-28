@@ -1,0 +1,5625 @@
+2018-01-25 18:21:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6486\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6487\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6488\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6489\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6490\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6491\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6492\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6493\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:22:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6494\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:31:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6495\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:31:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6496\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:31:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6497\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6499\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6500\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6501\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6502\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6503\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6504\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6505\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6506\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6507\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:56
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6508\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:57
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6509\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6510\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:32:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6511\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6512\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6513\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6514\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6515\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6516\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6517\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:33:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6520\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6521\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6522\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6523\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6524\', 3023, \'测试1\', \'TP0003023\', 1, 350.00,0.01,\'3242\',\'颜色:粉色\',\'\',\'\',\'0.01\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6525\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6526\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6527\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6528\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6529\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6530\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6531\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6532\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6533\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:22
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6534\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6535\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6536\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6537\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6538\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6539\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6540\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6541\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6542\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6543\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:24
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6544\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6545\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6546\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6547\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6548\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:25
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6549\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6550\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:39
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6551\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6552\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6553\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6554\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6555\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6556\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6557\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6558\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6559\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6560\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6561\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6562\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6563\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:42
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6564\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6565\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6566\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6567\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6568\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:43
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6569\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6570\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6571\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6572\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:44
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6573\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6574\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6575\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6576\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6577\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:45
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6578\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6579\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6580\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6581\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6582\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:46
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6583\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6584\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6585\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6586\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6587\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6588\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6589\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6590\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6591\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6592\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6593\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6594\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6595\', 4211, \'原装泰国泰丝四件套,泰国蚕丝被,乳胶床垫蚕丝被套,泰丝床单被套\', \'TP0004211\', 1, 1280.00,1280.00,\'\',\'\',\'\',\'\',\'1280.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:34:59
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6596\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6597\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6598\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6599\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6600\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6601\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6602\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6603\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6604\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6605\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6606\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6607\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6608\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6609\', 4203, \'iPhone X多功能手机镜头套装，广角+微距+鱼眼+长焦（三组镜头装）\', \'TP0004203\', 1, 349.00,299.00,\'\',\'\',\'\',\'\',\'299.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6610\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6611\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6612\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6613\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6614\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6615\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6616\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6617\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:17
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6618\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6619\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6620\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6621\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6622\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6623\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6624\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6625\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:29
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6626\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6627\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6628\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6629\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6630\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6631\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6632\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6633\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6634\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6635\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6636\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:31
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6637\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6638\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6639\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6640\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:32
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6641\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6642\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6643\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6644\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:34
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6645\', 2196, \'会坤芝麻夹心海苔-袋装-8g/袋\', \'TP0002196\', 1, 16.80,8.00,\'4264\',\'规格:番茄味\',\'\',\'\',\'8.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6646\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:40
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6647\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6648\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:47
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6649\', 4322, \'正宗陕西高原红富士苹果\', \'TP0004322\', 1, 98.00,38.00,\'4956\',\'规格:10斤/箱（大果18个）\',\'\',\'\',\'38.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6650\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6651\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6652\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6653\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6654\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:48
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6655\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6656\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6657\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6658\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6659\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6660\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:49
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6661\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:35:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6662\', 4560, \'菜园认购\', \'TP0004560\', 1, 0.00,2580.00,\'5193\',\'规格:一年10m²\',\'\',\'\',\'2580.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6663\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6664\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6665\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:05
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6666\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6667\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6669\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6670\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6671\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6672\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6673\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6674\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6675\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6676\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6677\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6678\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6679\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6680\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6681\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:08
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6682\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6683\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:36:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6684\', 4087, \'2018《有时候》周历绘图卡 日历 台历 挂历 文化 创意 智障 儿童 亲子互动 手绘涂鸦\', \'TP0004087\', 1, 68.00,68.00,\'4588\',\'尺寸:102*207\',\'\',\'\',\'68.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6686\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:50
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6687\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6688\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6689\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6690\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6691\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6692\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6693\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:52
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6694\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:39:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6695\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:07
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6696\', 4228, \'热水袋充电防爆电暧宝暧手宝单身狗毛绒可爱卡通暧宝宝可拆洗注水\', \'TP0004228\', 1, 38.80,29.80,\'4740_4741\',\'款式:单色狗 颜色:颜色随机\',\'\',\'\',\'29.80\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6697\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6698\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6699\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6700\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6701\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6702\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:10
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6703\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6704\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6705\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6706\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:11
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6707\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6708\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6709\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6710\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6711\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6712\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:13
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6713\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6714\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2018-01-25 18:40:14
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'INSERT INTO `ylt_tp`.`ylt_order_goods`( order_id, goods_id, goods_name, goods_sn, goods_num, market_price, goods_price,spec_key,spec_key_name,prom_type,prom_id,goods_amount,discount_price,coupon_id) values(\'6715\', 3516, \'山东沾化冬枣 礼品装\', \'一号 1级 1.5kg\', 1, 0.00,73.00,\'\',\'\',\'\',\'\',\'73.00\',\'0\',\'0\')',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'coupon_id\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

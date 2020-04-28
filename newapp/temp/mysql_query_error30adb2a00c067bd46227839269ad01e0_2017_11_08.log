@@ -1,0 +1,575 @@
+2017-11-08 10:46:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 10:46:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 10:46:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 10:46:12
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 10:46:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 10:46:21
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=171',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:05:00
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT order_amount,goods_amount,order_id,goods_name,goods_id,goods_sn,goods_num,goods_price,spec_key from `ylt_tp`.`ylt_order_goods` where order_id=6226 AND goods_id=2873 AND  spec_key=\'401_2180\'',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'order_amount\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:43:23
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT refund_shipping_no as order_sn,shipping_name  as companyname from `ylt_tp`.`ylt_back_order` where user_id=22 AND id=236',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'shipping_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:47:51
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=148',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:47:53
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=145',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:47:58
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=145',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:48:03
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=148',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:53:30
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT refund_shipping_no as order_sn,shipping_name  as companyname from `ylt_tp`.`ylt_back_order` where user_id=26 AND id=232',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'shipping_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:53:38
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT refund_shipping_no as order_sn,shipping_name  as companyname from `ylt_tp`.`ylt_back_order` where user_id=26 AND id=232',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'shipping_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:54:01
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT refund_shipping_no as order_sn,shipping_name  as companyname from `ylt_tp`.`ylt_back_order` where user_id=26 AND id=232',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'shipping_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:54:06
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=148',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:54:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=126',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:54:28
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=123',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:54:33
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=148',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:55:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=148',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 11:56:02
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT rec_id,addtime,user_id,supplier_id,content from `ylt_tp`.`ylt_back_msg` where rec_id=148',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'addtime\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 13:45:37
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT refund_shipping_no as order_sn,shipping_name  as companyname from `ylt_tp`.`ylt_back_order` where user_id=26 AND id=232',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'shipping_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-11-08 16:42:27
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'SELECT refund_shipping_no as order_sn,shipping_name  as companyname from `ylt_tp`.`ylt_back_order` where user_id=22 AND id=247',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'shipping_name\' in \'field list\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

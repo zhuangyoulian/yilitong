@@ -1,0 +1,101 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>设计师分类 - 添加修改分类</h3>
+        <h5>添加或编辑设计师分类</h5>
+      </div>
+    </div>
+  </div>
+  <div class="explanation" id="explanation">
+    <div class="title" id="checkZoom"><i class="fa fa-lightbulb-o"></i>
+      <h4 title="提示相关设置操作时应注意的要点">操作提示</h4>
+      <span id="explanationZoom" title="收起提示"></span>
+    </div>
+    <ul>
+      <li>设计师分类最多分为三级</li>
+      <li>添加或者修改分类时, 应注意选择对应的上级</li>
+    </ul>
+  </div>
+  <!-- <form method="post" class="form-horizontal" id="category_form"> -->
+  <form method="post" id="CategoryAddForm" onSubmit="return CategoryAddFormName();" >
+    <div class="ncap-form-default">
+      <dl class="row">
+        <dt class="tit">
+          <label for="t_mane"><em>*</em>分类名称</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" placeholder="名称" class="input-txt" name="name" value="{$info.name}">
+          <span class="err" id="err_name" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl>
+
+    
+  	  <dl class="row">
+          <dt class="tit">
+            <label for="t_mane"><em>*</em>导航显示</label>
+          </dt>
+          <dd class="opt">
+            <div class="onoff">
+              <label for="Designer_category1" class="cb-enable <if condition="$info[is_show] eq 1">selected</if>">是</label>
+              <label for="Designer_category0" class="cb-disable <if condition="$info[is_show] eq 0">selected</if>">否</label>
+              <input id="Designer_category1" name="is_show" value="1" type="radio" <if condition="$info[is_show] eq 1"> checked="checked"</if>>
+              <input id="Designer_category0" name="is_show" value="0" type="radio" <if condition="$info[is_show] eq 0"> checked="checked"</if>>
+            </div>
+            <p class="notic">是否在导航栏显示</p>
+          </dd>        
+      </dl>  
+
+      <dl class="row">
+          <dt class="tit">
+            <label for="t_mane"><em>*</em>是否热门</label>
+          </dt>
+          <dd class="opt">
+            <div class="onoff">
+              <label for="Designer_category1" class="cb-enable <if condition="$info[is_hot] eq 1">selected</if>">是</label>
+              <label for="Designer_category0" class="cb-disable <if condition="$info[is_hot] eq 0">selected</if>">否</label>
+              <input id="Designer_category1" name="is_hot" value="1" type="radio" <if condition="$info[is_hot] eq 1"> checked="checked"</if>>
+              <input id="Designer_category0" name="is_hot" value="0" type="radio" <if condition="$info[is_hot] eq 0"> checked="checked"</if>>
+            </div>
+          </dd>        
+      </dl>      
+        
+                            
+      <dl class="row">
+        <dt class="tit">
+          <label for="t_sort"><em>*</em>排序</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" class="t_mane" name="sort_order" id="t_sort" value="{$info.sort_order}">
+          <span class="err" style="color:#F00; display:none;" id="err_sort_order"></span>
+          <p class="notic">根据排序进行由小到大排列显示。</p>
+        </dd>
+      </dl>
+                       
+      
+      <div class="bot"><a id="submitBtn" class="ncap-btn-big ncap-btn-green" href="JavaScript:void(0);" onClick="$('#CategoryAddForm').submit();">确认提交</a></div>
+    </div>
+    <!-- <input type="hidden" name="id" value="{$info.id}">
+    <input type="hidden" name="parent_id" value="{$info.parent_id}"> -->
+  </form>
+</div>
+<script>  
+// 判断输入框是否为空
+function CategoryAddFormName(){
+  var name = $("#CategoryAddForm").find("input[name='name']").val();
+    if($.trim(name) == '')
+  {
+    $("#err_name").show();
+    return false;
+  }
+  return true;
+}
+    
+</script>
+</body>
+</html>

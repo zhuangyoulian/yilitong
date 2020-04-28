@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>采购详情</title>
+		<link rel="stylesheet" href="__XCSS__/iconfont.css">
+		<link rel="stylesheet" href="__XCSS__/normalize.css">
+		<link rel="stylesheet" href="__XCSS__/public.css">
+		<link rel="stylesheet" href="__XCSS__/details.css">
+
+	</head>
+
+	<body>
+		<div id="app" class="h">
+			<div class="flexc h oh bggrey">
+				<!-- 标题 -->
+				<header class="bgf">
+					<div class="flexr p10 head bbe">
+						<div class="flex1" @click="goback">
+							<span class="iconfont icon-fanhui em1.4"></span>
+						</div>
+						<div class="flex1 f16 c">采购详情
+						</div>
+						<div class="flex1 r"></div>
+					</div>
+				</header>
+				<div class="p10 bgf m10">{{title}}</div>
+				<nav class="flexr c ml10 mr10">
+					<div class="flex1 p10 bmain" :class="{'bgmain cf':showProduct,'bgf':!showProduct}" @click="clickNav(true)">
+						<span class="iconfont icon-chanpin cmain mr5" :class="{'cf':showProduct}"></span> 采购产品
+					</div>
+					<div class="flex1 p10 bmain" :class="{'bgmain cf':!showProduct,'bgf':showProduct}" @click="clickNav(false)">
+						<span class="iconfont icon-unif012 cmain mr5" :class="{'cf':!showProduct}"></span>详细信息
+					</div>
+				</nav>
+				<section class="flex1 oa">
+					<!-- 采购产品内容 -->
+					<div class="oa ml10 mr10" v-show="showProduct">
+						<table class="tabpro" border="" cellspacing="" cellpadding="">
+							<thead>
+								<th>礼品名称</th>
+								<th>规格</th>
+								<th>颜色</th>
+								<th>品牌</th>
+								<th>单位</th>
+								<th>数量</th>
+
+							</thead>
+							<tbody v-for="item in arr">
+								<tr>
+									<td>{{item.designation}}</td>
+									<td>{{item.specification}}</td>
+									<td>{{item.colour}}</td>
+									<td>{{item.brand}}</td>
+									<td>{{item.unit}}</td>
+									<td>{{item.quantity}}</td>
+
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+					<!-- 详细信息内容 -->
+					<div class="" v-show="!showProduct">
+						<div class="m10 bgf rds5">
+							<div class="flexr labbox">
+								<label class="labname">公司名称</label>
+								<div class="flex1 ctx">{{company}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">预算</label>
+								<div class="flex1 ctx">{{budget}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">是否定制</label>
+								<div class="flex1 ctx">{{customization}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">报价截止时间</label>
+								<div class="flex1 ctx">{{deadline}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">期望收货时间</label>
+								<div class="flex1 ctx">{{expect}}</div>
+							</div>
+
+							<div class="flexr site">
+								<label class="labname">收货地址</label>
+								<textarea cols="30" rows="3" maxlength="32" class="flex1 ctx bn pt12">{{address}}</textarea>
+							</div>
+
+							<div class="flexr labbox">
+								<label class="labname">联系人</label>
+								<div class="flex1 ctx">{{linkman}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">联系电话</label>
+								<div class="flex1 ctx">{{phone}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">发布时间</label>
+								<div class="flex1 ctx">{{issue}}</div>
+							</div>
+
+							<div class="flexr pt10 pl10">
+								<div class="">补充说明：</div>
+								<textarea class="w flex1 c7 bn cb" name="" id="" cols="30" rows="3" maxlength="60">{{explain}}</textarea>
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<div id="foot" v-show="showNext">
+						<p class="btn bgmain cf" @click="check">查看报价</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="__XJS__/vue.js"></script>
+		<script src="__XJS__/vue-resource.js"></script>
+		<script>
+			// 监听window的变化
+			window.addEventListener('resize', function() {
+				var clientHeight = document.documentElement.clientHeight;
+				app.clientHeight = clientHeight;
+				console.log('可见区域高度:' + clientHeight);
+				if (clientHeight < 400) {
+					app.showNext = false;
+
+				} else {
+					app.showNext = true;
+				}
+
+			});
+
+			var app = new Vue({
+				el: "#app",
+				data: {
+					showProduct: true, // 是否显示产品项
+					title: "<?php echo $buylist['title'];?>", // 	标题
+					showNext: true, // 显示查看报价
+
+					// 采购产品
+					arr: [{
+						designation: "<?php echo $orderlist['goods_name'];?>", 	//礼品名称
+						specification: "<?php echo $orderlist['goods_norm'];?>", //规格
+						colour: "<?php echo $orderlist['goods_color'];?>", //颜色
+						brand: "<?php echo $orderlist['goods_brand'];?>", //品牌
+						unit: "<?php echo $orderlist['goods_unit'];?>", //单位
+						quantity: "<?php echo $orderlist['goods_num'];?>", //数量
+					}],
+					//详细信息
+					company: "<?php echo $buylist['company_name'];?>", //公司名称
+					budget: "<?php echo $buylist['budget'];?>", //预算
+					customization: "<?php echo $buylist['sustomized'];?>", //是否定制
+					deadline: "<?php echo date('Y-m-d',$buylist['dead_time']);?>", //报价截止时间
+					expect: "<?php echo date('Y-m-d',$buylist['expect_time']);?>", //期望收货时间
+					address: "<?php echo $buylist['city'].$buylist['area'];?>", //收货地址
+					linkman: "<?php echo $buylist['contacts_name'];?>", //联系人
+					phone: "<?php echo $buylist['tel'];?>", // 联系电话
+					issue: "<?php echo date('Y-m-d',$buylist['add_time']);?>", //发布时间
+					explain: "<?php echo $buylist['description'];?>", //补充说明
+
+				},
+				created: function() {
+
+				},
+				mounted: function() {
+					// 获取后台数据
+					var url = "http://localhost:3001/home";
+					this.$http({
+						url: url,
+						method: 'GET',
+						headers: {
+							"Content-Type": "application/json"
+						},
+						data: {
+							// id: 101
+						}
+					}).then(function(res) { //(res) => 
+						console.log("请求成功回调：");
+						console.log(res)
+
+					}, function(res) {
+						console.log("请求失败回调");
+						console.log(res)
+					});
+				},
+				methods: {
+					goback: function(e) { //返回上一页
+						history.back(-1);
+					},
+					clickNav: function(e) { // 导航选项切换
+						console.log("点击导航：" + e);
+						this.showProduct = e;
+					},
+					check: function(e) { //马上报价
+						console.log("点击查看报价:");
+						console.log("进入下一页...");
+						location.href = "<?php echo Url('Supplychain/myshop_two',array('purchase_id'=>$buylist['id'])); ?>" //跳转至quote界面
+					},
+
+				}
+			})
+		</script>
+	</body>
+
+</html>

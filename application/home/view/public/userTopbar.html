@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+
+<div class="user-home">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <ul class="user-nav-list">
+            <li class="to-user-index">
+                <a href="{:Url('Home/User/index')}">首页</a>
+            </li>
+            <li class="set-account">
+                账号设置
+                <ul class="set-account-list">
+                    <li><a href="{:Url('Home/User/info')}">个人信息</a></li>
+                    <li><a href="{:Url('Home/User/password')}">修改密码</a></li>
+                    <li><a href="{:Url('Home/User/mobile_validate')}">绑定手机</a></li>
+                </ul>
+            </li>
+            <li class="designer-entrance">
+            <!-- <a href="{:Url('Home/designer/designerAuth_1')}">设计师入口</a> -->
+                 <a href="{:Url('Home/Designer/Index')}">设计师入口</a>
+            </li>
+        </ul>
+        <div class="my-mall" id="header_cart_list" style="border:none;">
+            <!---购物车-开始 -->
+            <div class="micart">
+                <div class="myshopCar">
+                    <a href="{:Url('Home/Cart/cart')}">
+                        我的购物车
+                        (<em id="cart_quantity" style="color:#fff;"></em>)
+                    </a>
+                </div>
+
+                <div class="ri ris">
+                    <if condition="count($cartList) eq 0">
+                        <div class="micart-about">
+                            <span class="micart-xg">您的购物车是空的，赶紧选购吧！</span>
+                        </div>
+                    </if>
+                    <div class="commod">
+                        <ul>
+                            <foreach name="cartList" item="v"  key="k">
+                                <foreach name="v.list" item="v2"  key="k0">
+                                    <li class="goods">
+                                        <div>
+                                            <div class="p-img">
+                                                <a href="">
+                                                    <img src="{$v2.goods_thumb}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="p-name">
+                                                <a href="">
+                                                    <span class="p-slogan">{$v2.goods_name}</span>
+                                                    <span class="p-promotions hide"></span>
+                                                </a>
+                                            </div>
+                                            <div class="p-status">
+                                                <div class="p-price">
+                                                    <b>¥&nbsp;{$v2.goods_price}</b>
+                                                    <em>x</em>
+                                                    <span>{$v2.goods_num}</span>
+                                                </div>
+                                                <div class="p-tags"></div>
+                                            </div>
+                                            <!--
+                                            <a href="" class="icon-minicart-del" title="删除">删除</a>
+                                              -->
+                                        </div>
+                                    </li>
+                                </foreach>
+                            </foreach>
+                        </ul>
+                    </div>
+                    <div class="settle">
+                        <p>共<em>{$cart_total_price[anum]}</em>件商品，金额合计<b>¥&nbsp;{$cart_total_price[total_fee]}</b></p>
+                        <a class="js-button" href="{:Url('Home/Cart/cart')}">去结算</a>
+                    </div>
+                </div>
+            </div>
+            <!---购物车-结束 -->
+
+        </div>
+    </div>
+</div>

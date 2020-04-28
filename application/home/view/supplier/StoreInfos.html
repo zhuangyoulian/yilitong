@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes” />
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″/>
+    <meta name="keywords" content="{$config_info['store_keyword']}">
+    <meta name="description" content="{$config_info['store_desc']}">
+    <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+    <title>{$info.supplier_name}-一礼通</title>
+    <link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/category.css" type="text/css">
+    <link rel="stylesheet" href="__BUSINESS__/style/businessStore.css">
+    <style>
+        .slides li a img{
+            margin-left:360px;
+        }
+
+    </style>
+</head>
+<body style="background-color:#f9f9f9;overflow-x:hidden;">
+    <!--------头部开始-------------->
+    <include file="public/head2" />
+    <!--------头部结束-------------->
+    <script src="__PUBLIC__/js/pc_common.js"></script>
+    <script src="__PUBLIC__/js/layer/layer.js"></script>
+
+
+    <div class="inner" style="height:40px;line-height:40px;">
+        <ul class="store-bar">
+            <li>{$info.supplier_name}</li>
+            <!--<li><a href="#" id="attention">+关注</a></li>-->
+            <li><a href="#" onclick="collect_stores({$info['supplier_id']})">收藏</a></li>
+        </ul>
+    </div>
+    <div class="shop-sign">
+        <img src="<if $config_info.store_banner != ''>{$config_info.store_banner}<else>__STATIC__/images/supplier_sign.jpg</if>" alt="">
+    </div>
+
+    <div class="store-nav">
+        <div class="inner">
+            <ul class="store-nav-list">
+                <li style="padding-left:0;"><a href="{:Url('Home/Supplier/StoreHome',array('id'=>$info['supplier_id']))}">首页</a></li>
+                <li><a href="{:Url('Home/Supplier/StoreCategory',array('id'=>$info['supplier_id']))}">全部商品</a></li>
+                <li><a href="{:Url('Home/Supplier/StoreInfos',array('id'=>$info['supplier_id']))}" class="navLi-cur">店铺简介</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="inner">
+        <div class="store-container">
+            <div class="store-logo"><img src="{$config_info.store_logo}"></div>
+            <div class="store-infos">
+                <ul>
+                    <li>店铺名称：<span>{$info.supplier_name}</span></li>
+                    <li>联系电话：<span>{$info.contacts_phone}</span></li>
+                    <li>店铺描述：<span><empty name="$info.introduction">商家尚未填写店铺描述<else/>{$info.introduction}</empty></span></li>
+                    <li>经营范围：<span>{$info.business_sphere}</span></li>
+                    <li>入驻时间：<span>{$info.add_time|date='Y-m-d',###}</span></li>
+                    <li>联系地址：<span><empty name="$address">商家尚未填写联系地址<else/>{$address}</empty></span></li>
+                    <li>联系人：<span><empty name="$info.operating_name">{$info.contacts_name}<else/>{$info.operating_name}</empty></span></li>
+                    <!--li>经营范围：<span class="introduction">{$info.business_sphere}</span></li-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------footer-开始-------------->
+    <include file="public/footer" />
+    <!--------footer-结束-------------->
+
+    <script src="__PUBLIC__/js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //店铺加关注
+            var attention = function(stores_id){
+                var data = {
+                    "id":stores_id
+                }
+                $.ajax({
+                    type:'POST',
+                    url:'/index.php?m=Home&c=Supplier&a=collect_stores&supplier_id="+stores_id',
+                    data:data,
+                    dataType:'json',
+                    success:function(data){
+                        if(data.success){
+                            $('#attention').text('取消关注');
+                        }else{
+                            $('#attention').text('+关注');
+                        }
+                    }
+                })
+            }
+
+
+            //产品预览切换 功能
+            $('.pro-img-tab').each(function(){
+                $(this).children().each(function(){
+                    $(this).hover(function(){
+                        $(this).addClass('curBorder');
+                        $(this).siblings().removeClass('curBorder');
+                        $(this).parent().siblings('.pro-img').children().children().attr('src',$(this).children().attr('src'))
+                    })
+                });
+
+            });
+
+
+        })
+    </script>
+
+</body>
+</html>

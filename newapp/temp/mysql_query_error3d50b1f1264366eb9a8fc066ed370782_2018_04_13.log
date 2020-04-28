@@ -1,0 +1,450 @@
+2018-04-13 10:39:15
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:16
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:18
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2018-04-13 10:39:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select A.order_id,A.order_status,A.pay_status,A.add_time,B.prom_type,B.prom_id from `ylt_tp`.`ylt_order` as A LEFT JOIN `ylt_tp`.`ylt_order_goods` as B ON A.order_id=B.order_id where A.supplier_id= AND A.order_status=0 AND A.pay_status=0',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'AND A.order_status=0 AND A.pay_status=0\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+

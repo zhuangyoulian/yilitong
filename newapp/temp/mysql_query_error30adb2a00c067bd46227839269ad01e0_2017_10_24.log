@@ -1,0 +1,25 @@
+2017-10-24 14:19:26
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select parent_user_id,parent_user_name,comment_id,user_id,user_name,head_pic,collect_count,add_time as time,content from `ylt_tp`.`ylt_works_comment` where works_id = UlBSWkxaWFReQVoUVFhKVVpUEklWWF1WSlZfU1o and parent_id = 37 order by add_time desc  LIMIT 2990,10',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'UlBSWkxaWFReQVoUVFhKVVpUEklWWF1WSlZfU1o\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

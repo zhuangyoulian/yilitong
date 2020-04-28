@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>确认订单-{$config['shop_info_store_title']}</title>
+<meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+<meta name="description" content="{$config['shop_info_store_desc']}" />
+<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/js/global.js"></script>
+<script src="__PUBLIC__/js/pc_common.js"></script>
+<script src="__PUBLIC__/js/layer/layer.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<style>
+	
+	.
+</style>
+</head>
+<body>
+<include file="public/siteTopbar" />
+    <div class="order-header">
+    	<div class="layout after">
+        	<div class="fl">
+            	<div class="logo pa-to-36 wi345">
+                	<a href="/"><img src="{$config['shop_info_store_logo']}" alt=""></a>
+                </div>
+            </div>
+        	<div class="fr">
+            	<div class="pa-to-36 progress-area">
+                	<div class="progress-area-wd" style="display:none">我的购物车</div>
+                	<div class="progress-area-tx" style="display:block">填写核对订单信息</div>
+                	<div class="progress-area-cg" style="display:none">成功提交订单</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+	/*.address tr td { border:#F00 solid 1px; }*/
+    /*没选中的 收货地址*/
+    .order-address-list table{background-color:inherit; border: 0px solid #CCC;}
+    .order-address-list .default{visibility:hidden;}
+    /*选中的 收货地址*/	
+    .address_current{ background-color:#fffde6; border: 1px solid #fadccf;} 
+	.address_current .default{visibility:visible;}	
+	 /*买家留言*/	
+	.leiliste tr{border-bottom:1px solid #dedede}
+	.user_note{float:left;}
+	.user_note input{width:300px;height:34px;}
+	.fzoubddv tr{border:none;border-radius: 10px;}
+	.yifje-order{border-top:none;border-bottom:1px solid #dbdbdb}
+	.leiliste tr{border:0 none;}
+</style>
+<form name="cart2_form" id="cart2_form" method="post">
+    <div class="layout be-table fo-fa ma-bo-45">
+    	<div class="con-info">
+        	<div class="con-y-info ma-bo-35">
+            	<h3 style="margin-top:30px">收货人信息<b>[<a href="javascript:void(0);" onClick="add_edit_address(0);">使用新地址</a>]</b></h3>
+                <div id="ajax_address"><!--ajax 返回收货地址--></div>
+            </div>
+			
+        </div>
+		<div class="con-y-info ma-bo-35 con-h" style="margin-bottom:0;"><h3>您购买的以下商品<h3></div>
+        <div class="sc-area">
+        	<div class="dt-order-area">
+            	<div class="order-pro-list" style="border:1px solid #28c0c6">
+                	<div class="order-pro-list">
+                    	<div class="yxspy">
+                        	
+                        	<div class="bv">
+                            	<table border="0" cellpadding="0" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th class="tr-pro">商品</th>
+                                            <th class="tr-price">单价</th>
+                                            <if condition="($user[discount] neq 1)">
+                                            	<th class="tr-price">会员折扣价</th>
+                                            </if>
+                                            <th class="tr-quantity">数量</th>
+                                            <th class="tr-subtotal">小计</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="leiliste">
+                        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                               
+                            
+									
+								<thead>
+								<tr style="background:#f7f7f7;height:30px;border-bottom:1px solid #dedede;">
+								 <td class="tr-pro tr-pro-1"colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;店铺名称：{$goods.supplier_name} </td></tr>
+								 
+                                    <tr>
+                                        <td class="tr-pro">
+                                            <ul class="pro-area-2 pro-area-02">
+                                                <li  >
+                                                  <a title="{$goods.goods_name}" target="_blank" href="{:Url('Home/Goods/goodsInfo',array('id'=>$goods[goods_id]))}" seed="item-name">
+												  <img src="{$goods.goods_thumb}" style="height:80px;width:80px;float:left">&nbsp;{$goods.goods_name}</a><br />&nbsp;&nbsp;&nbsp;&nbsp;{$goods.spec_key_name}
+													<br />
+                                                </li> 
+												<input type="hidden" name="goods_id" value="{$goods.goods_id}">
+												<input type="hidden" name="key" value="{$goods.spec_key_name}">
+												<input type="hidden" name="goods_num" value="{$goods.goods_num}">
+                                             </ul>
+                                         </td>
+                                        <!-- 预付订金商品的价格为空 -->
+                                        <td class="tr-price te-al">{$goods.goods_price}</td>
+                                       
+                                        <td class="tr-quantity te-al">{$goods.goods_num}</td>
+                                        <td rowspan="1" class="tr-subtotal te-al">
+                                        <p><b>{$goods.goods_price * $goods.goods_num}</b></p>
+                                        </td>
+                                    </tr>
+                                 
+								    </thead>
+                        
+                                <tbody>
+									
+                                    <tr style="background:#f3fbfe;color:#f63;font-weight:bold">
+                                        <td class="tal"></td>
+                                        <td class="tar" colspan=3 style="text-align:center">兑换点数：&nbsp;&nbsp;
+                                           <em id="">{$goods.goods_price * $goods.goods_num}</em>
+										  
+                                    </tr>
+                                        </td>
+										
+                                    <tr style="background:#f3fbfe;color:#f63;font-weight:bold">
+                                        <td class="tal" style="border:none"> <div class="user_note"><label style="font-weight:bold;color:#333;">买家留言&nbsp;</label><input type="text" name="user_note" placeholder="买家留言....."></div></td>
+                                    </tr>                                  
+                                    <tr style="background:#f3fbfe;color:#f63;font-weight:bold">
+										<td class="tal"></td>
+										<td class="tar" colspan=3 style="text-align:center">应付兑换点数：&nbsp;&nbsp;
+											<em>{$goods.goods_price * $goods.goods_num}</em>
+									</td>	
+									</tr> 
+                                </tbody>
+                            	
+										
+                            
+                            
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="order-action-area te-al-ri">
+            	<div class="woypdbe sc-acti-list pa-to-20">
+                    <a class="Sub-orders gwc-qjs" href="javascript:void(0);" onClick="submit_order();"><span>确定兑换</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>    
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->    
+<script>
+$(document).ready(function(){
+	ajax_address(); // 获取用户收货地址列表
+});
+ 
+ 
+
+/**
+* 新增修改收货地址
+* id 为零 则为新增, 否则是修改
+*  使用 公共的 layer 弹窗插件  参考官方手册 http://layer.layui.com/
+*/
+function add_edit_address(id)
+{
+	if(id > 0) 
+		var url = "/index.php?m=Home&c=User&a=edit_address&scene=1&call_back=call_back_fun&id="+id; // 修改地址  
+	else
+		var url = "/index.php?m=Home&c=User&a=add_address&scene=1&call_back=call_back_fun";	// 新增地址
+	layer.open({
+		type: 2,
+		title: '添加收货地址',
+		shadeClose: true,
+		shade: 0.8,
+		area: ['880px', '580px'],
+		content: url,
+	}); 	
+} 
+// 添加修改收货地址回调函数 
+function call_back_fun(v){	 
+	layer.closeAll(); // 关闭窗口
+	ajax_address(); // 刷新收货地址	
+}
+
+// 删除收货地址
+function del_address(id)
+{
+    if(!confirm("确定要删除吗?"))
+	  return false;
+	  
+	  $.ajax({
+		     url:"/index.php?m=Home&c=User&a=del_address&id="+id,
+  			 success: function(data){
+				ajax_address(); // 刷新收货地址
+             
+             }
+		  });	  	  
+}
+ 
+/*
+* ajax 获取当前用户的收货地址列表
+*/
+function ajax_address(){
+	$.ajax({
+		url:"{:Url('Home/Cart/ajaxAddress')}",//+tab,
+		success: function(data){
+			$("#ajax_address").html('');
+			$("#ajax_address").append(data);
+			
+		}
+	});
+}
+
+
+ 
+// 切换收货地址
+function swidth_address(obj)
+{
+    var province_id = $(obj).attr('data-province-id');
+    var city_id = $(obj).attr('data-city-id');
+    var district_id = $(obj).attr('data-district-id');
+
+    $(".order-address-list").removeClass('address_current');
+    $(obj).parent().parent().parent().parent().parent().addClass('address_current');
+
+}
+
+
+// 提交订单
+ajax_return_status = 1;
+function submit_order()
+{
+	if(ajax_return_status == 0)
+	    return false;
+		
+	ajax_return_status = 0;	
+		
+	$.ajax({
+		type : "POST",
+		url:"{:Url('Home/Supplieract/confirmExchange')}",//+tab,
+		data : $('#cart2_form').serialize()+"&act=submit_order",// 你的formid
+        dataType: "json",
+		success: function(data){
+												
+			if(data.status != '1')
+			{
+				// alert(data.msg); //执行有误
+				layer.alert(data.msg, {icon: 2,time: 3000},
+				function(){ // 关闭后执行的函数
+					if(data.result == -1) 
+					location.href ="{:Url('Home/Cart/cart')}";
+					
+					// 登录超时
+				if(data.status == -100) 
+					location.href ="{:Url('Home/User/login')}";
+			});
+				
+				
+				
+				ajax_return_status = 1; // 上一次ajax 已经返回, 可以进行下一次 ajax请求
+				
+				return false;
+			}
+							
+			layer.msg('兑换成功，请等待!', {
+			  icon: 1,   // 成功图标
+			  time: 2000 //2秒关闭（如果不配置，默认是3秒）
+			}, function(){ // 关闭后执行的函数
+					location.href = "/index.php?m=Home&c=Supplieract&a=ex_success"; // 跳转到结算页
+			});			
+		}
+	});	
+}
+</script>
+</body>
+</html>

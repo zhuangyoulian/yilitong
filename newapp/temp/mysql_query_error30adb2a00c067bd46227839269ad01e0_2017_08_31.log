@@ -1,0 +1,75 @@
+2017-08-31 11:44:09
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select status from `ylt_tp`.`ylt_supplier` where user_id= and is_designer= 1 ',
+  ),
+  2 => 
+  array (
+    'error' => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'and is_designer= 1\' at line 1',
+  ),
+  3 => 
+  array (
+    'errno' => 1064,
+  ),
+)
+
+2017-08-31 11:58:55
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select status from `ylt_tp`.`ylt_supplier` where user_id=6f and is_designer= 1 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'6f\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+
+2017-08-31 15:09:41
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'message' => 'MySQL Query Error',
+  ),
+  1 => 
+  array (
+    'sql' => 'select U.mobile,S.qq from `ylt_tp`.`ylt_users` as U left join `ylt_tp`.`ylt_supplier` as S ON U.user_id=S.user_id where id in (6688)  AND U.user_id=6688 AND S.is_designer = 1 ',
+  ),
+  2 => 
+  array (
+    'error' => 'Unknown column \'id\' in \'where clause\'',
+  ),
+  3 => 
+  array (
+    'errno' => 1054,
+  ),
+)
+

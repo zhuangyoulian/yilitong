@@ -1,0 +1,420 @@
+
+<style>
+    .err{color:#F00; display:none;}
+    .ui-tooltip{
+        display:none;
+        display:none !important;
+    }
+  .nput-txt1{
+    margin-right:2px;
+    width: 40px !important;
+}
+  .shan{
+    width:20p;
+    height:20px
+    line-height:20;
+    text-align:center;
+    border:1px solid #aaa;
+    color:#f00;
+   
+    float:right;
+  }
+</style>
+ <include file="public/header" /> 
+  <include file="public/layout" />
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<!-- 省市区插件 -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href="__PUBLIC__/static/css/index.css" type="text/css">
+<link rel="stylesheet" href="__PUBLIC__/js/apply_one.css" />
+
+<body style="background-color: #FFF; overflow: auto;">
+ 
+<div style="width:1200px;margin:0 auto;" >  
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+
+<div class="page">
+   <!-- <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>企业采购 - 编辑采集</h3>
+                <h5>网站系统企业采购采集详情页</h5>
+            </div>
+        </div>
+    </div>-->
+  
+    <form class="form-horizontal" id="handleposition" method="post">
+        <input type="hidden" name="id" value="{$info.id}">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>采购标题</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="title" id="title" value="{$info.title}" class="input-txt" placeholder="请填写采购标题">
+                    <span class="err" id="err_title"></span>
+                    <p class="notic">请填写采购标题</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>公司名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="company_name" id="company_name" value="{$info.company_name}" class="input-txt" placeholder="请填写公司名称">
+                    <span class="err" id="err_company_name"></span>
+                    <p class="notic">请填写公司名称</p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>联系人</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="contacts_name" id="contacts_name" value="{$info.contacts_name}" class="input-txt" placeholder="请填写联系人">
+                    <span class="err" id="err_contacts_name"></span>
+                    <p class="notic">请填写联系人</p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>联系电话</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="tel" id="tel" value="{$info.tel}" class="input-txt" placeholder="请填写联系手机电话">
+                    <span class="err" id="err_tel"></span>
+                    <p class="notic">请填写联系手机电话</p>
+                </dd>
+            </dl>            
+
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>采购商品</label>
+                </dt>
+                <dd class="opt" id="optinput" >
+                     <div class="div0">
+                    <input type="text" name="goods_name[]" id="id1" value="" class="input-txt1" placeholder="产品名称">
+                  <input type="text" name="goods_norm[]" id="id2" value="" class="input-txt1" placeholder="规格">
+                  <input type="text" name="goods_color[]" id="id3"  value="" class="input-txt1" placeholder="颜色">
+                   <input type="text" name="goods_brand[]" id="id4"   value="" class="input-txt1" placeholder="品牌">
+                   <input type="text" name="goods_unit[]" id="id5"  value="" class="input-txt1" placeholder="单位">
+                   <input type="text" name="goods_num[]" id="id6"   value="" class="input-txt1" placeholder="数量">
+                     
+                    </div>
+                   
+                  <span style="width:50px;height:20px;line-height:20px;border:1px #eee solid;text-align:center;display:block;float:right;" id="addclass">添加+</span>
+                 <span style="width:50px;height:20px;line-height:20px;border:1px #eee solid;text-align:center;display:block;float:right;" id="addclass0">减少-</span>
+                    <span class="err" id="err_goods_name"></span>
+                   
+                </dd>
+            </dl>
+
+             <dl class="row">
+                <dt class="tit">
+                    <label for="record_no">产品编号</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" value="{$info.goods_sn}" name="goods_sn" class="input-txt" placeholder="请填写产品编号"/>
+                    <span class="err" id="err_goods_sn" style="color:#F00; display:none;"></span>                
+                    <p class="notic">如果不填会自动生成</p>
+                </dd>
+            </dl> 
+          
+          <!--  <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>采购商品数量</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="goods_count" id="goods_count" value="{$info.goods_count}" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" class="input-txt" placeholder="请填写采购商品数量" >
+                    <span class="err" id="err_goods_count"></span>
+                    <p class="notic">请填写采购商品数量</p>
+                </dd>
+            </dl> -->
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>品牌要求</label>
+                </dt>
+                <dd class="opt">
+                    <textarea placeholder="请输入报价要求" name="goods_ask" rows="6" class="tarea">{$info.goods_ask}</textarea>
+                    <p class="notic">描述品牌要求</p>
+                </dd>
+            </dl> 
+
+            <dl class="row">
+                <dt class="tit">
+                  <label>是否定制</label>
+                </dt>
+                <dd class="opt">
+                  <div class="onoff">
+                    <label for="sustomized1" class="cb-enable <if condition="$goodsInfo[sustomized] eq 1">selected</if>">是</label>
+                    <label for="sustomized0" class="cb-disable <if condition="$goodsInfo[sustomized] eq 0">selected</if>">否</label>
+                    <input id="sustomized1" name="sustomized" value="1" type="radio" <if condition="$goodsInfo[sustomized] eq 1"> checked="checked"</if>>
+                    <input id="sustomized0" name="sustomized" value="0" type="radio" <if condition="$goodsInfo[sustomized] eq 0"> checked="checked"</if>>
+                  </div>
+                  <p class="notic"></p>
+                </dd>
+            </dl> 
+   
+            <dl class="row">
+                <dt class="tit">
+                    <label for="articleForm"><em>*</em>询价时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="inquiry_time" name="inquiry_time" value="{$info.inquiry_time|date="Y-m-d",###}"  class="input-txt" placeholder="询价时间">
+                    <span class="err" id="err_inquiry_time"></span>
+                    <p class="notic">询价时间</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="articleForm"><em>*</em>截止时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="dead_time" name="dead_time" value="{$info.dead_time|date="Y-m-d",###}" class="input-txt" placeholder="截止时间">
+                    <span class="err" id="err_dead_time"></span>
+                    <p class="notic">截止时间</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="articleForm"><em>*</em>期望收货时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="expect_time" name="expect_time" value="{$info.expect_time|date="Y-m-d",###}" class="input-txt" placeholder=">期望收货时间">
+                    <span class="add-on input-group-addon" ></span>
+                    <p class="notic">期望收货时间</p>
+                </dd>
+            </dl>
+
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>发票抬头</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="lnvoice_title" id="lnvoice_title" value="{$info.lnvoice_title}" class="input-txt" placeholder="请填写发票抬头">
+                    <span class="err" id="err_lnvoice_title"></span>
+                    <p class="notic">请填写发票抬头</p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                  <label for="ac_name"><em>*</em>地址</label>
+                </dt>
+                <dd class="opt">
+                  <input type="text" class="input-txt city-tab" id="city" name="address" value="{$info.address}" placeholder="省--市--区">
+                  <span  class="info-tips"  style="color:#F00; display:none;"></span>
+                  <p class="notic">省--市--区</p>
+                </dd>
+            </dl>             
+
+             <dl class="row">
+                <dt class="tit">
+                  <label for="ac_name">所在地区</label>
+                </dt>
+                <dd class="opt">
+                  <!-- <input type="text" class="input-txt" name="region" value="{$info.region}">
+                  <span  class="err" id="err_region" style="color:#F00; display:none;"></span> -->
+                  <textarea placeholder="默认-全国，如广东,上海,天津,湖南,海南,青海,浙江,江西,山东,黑龙江等" name="region" rows="3" class="tarea">{$info.region}</textarea>  
+                  <p class="notic">请输入要求供应商所在省份</p>
+                </dd>
+             </dl>    
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>报价要求</label>
+                </dt>
+                <dd class="opt">
+                    <textarea placeholder="请输入报价要求：需要报含税价,包含运费不允许对询价单部分物料报价" name="quote_ask" rows="6" class="tarea">{$info.quote_ask}</textarea>
+                    <p class="notic">描述报价要求</p>
+                </dd>
+            </dl>
+            <input type="hidden" name="province" value="{$info.province}">
+            <input type="hidden" name="city" value="{$info.city}" >
+            <input type="hidden" name="area" value="{$info.area}"> 
+            <input type="hidden" name="sustomized" value="{$info.sustomized}">
+            <div class="bot"><a onclick="verifyForm()" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+        </div>
+    </form>
+</div>
+</div>
+
+<script src="__PUBLIC__/js/Popt.js"></script>
+<script src="__PUBLIC__/js/cityJson.js"></script>
+<script src="__PUBLIC__/js/citySet.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#inquiry_time').layDate();
+        $('#dead_time').layDate();
+        $('#expect_time').layDate();
+
+        $("#city").focus(function(e){
+            SelCity(this,e);
+            //alert(this);exit;
+            console.log("inout",$(this).val(),new Date())
+        });
+    })
+</script>
+
+<script type="text/javascript">
+
+    function verifyForm(){
+        
+       var  divin=$('#optinput').children('div').length;
+       var lengthi=divin*6;
+       var id=[];
+       while (i<lengthi)       
+      {  
+          if(($("#id"+i+"").val())=="")           
+          {  id[i]=i;         }
+        i=i+1;     
+      }
+      if(id.length>0){
+            //alert("请填写文章标题！");
+            layer.alert("请填写完整商品！");
+            return false;
+        }       
+
+        if($('input[name="title"]').val() == ''){
+            //alert("请填写文章标题！");
+            layer.alert("请填写采购标题！");
+            return false;
+        }       
+        if($('#contacts_name').val() == '' ){
+            layer.alert("请输入联系人");
+            return false;
+        }
+        if($('#tel').val() == '' ){
+            layer.alert("请输入联系电话");
+            return false;
+        }
+       /* if($('#goods_name').val() == '' ){
+            layer.alert("请输入采购商品");
+            return false;
+        }
+        if($('#goods_count').val() == '' ){
+            layer.alert("请输入商品数量");
+            return false;
+        }*/
+        if($('#inquiry_time').val() == '' ){
+            layer.alert("请输入询价时间");
+            return false;
+        }
+        if($('#dead_time').val() == '' ){
+            layer.alert("请输入截止时间");
+            return false;
+        }
+        if($('#expect_time').val() == '' ){
+            layer.alert("请输入期望时间");
+            return false;
+        }
+        if($('#address').val() == '' ){
+            layer.alert("请输入地址");
+            return false;
+        }
+
+
+        $('span.err').hide();
+        $.ajax({
+            type: "POST",
+            //成功提交后数据保存的路径
+            url: "{:Url('Home/Article/add_purchase')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status== 1) {
+                    layer.msg(data.msg, {
+                        icon: 1,
+                        time: 1000
+                    }, function(){
+                        //成功提交后页面跳转的路径
+                      //window.opener.document.location.reload();
+                      //top.location.href="{:Url('Supplier/Purchase/purchase_list')}";
+                      //window.location.href = "{:Url('Supplier/Purchase/purchase_list')}";
+                        window.parent.location.href= "{:Url('Supplier/Index/index')}";
+                        //top.location.href = "{:Url('Supplier/Purchase/purchase_list')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2,time: 1000});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+   $(function(){
+     $(".shan").click(function(){
+       var index=$(this).index()
+       //alert(index)
+    //    $(this).parent().css("display","none")
+     })
+      var ontrue=false;
+      var i=0;
+      var lengthinput;
+      var div=0;
+      var divdiv="";
+      var divinput;
+     
+     
+      $("#addclass").click(function(){
+         
+        divinput=$('#optinput').children('div').length;
+        lengthinput=divinput*6;
+       var id=[];
+       while (i<lengthinput)
+         
+    {
+   
+          if(($("#id"+i+"").val())=="")
+            
+        {  id[i]=i;
+         
+          }
+          
+    
+      i=i+1;
+      
+    }
+        if(id.length==0 && divinput>0){
+            
+        
+        
+        }
+        
+        
+      if(id.length==0)
+      {
+         div=div+1;
+         divdiv="div"+div;
+         
+         $("#addclass").before('<div class="'+divdiv+'"><input  name="goods_name[]" id="id'+(lengthinput+1)+'" type="text"   value="" class="input-txt1" placeholder="产品名称"><input  name="goods_norm[]" id="id'+(lengthinput+2)+'" type="text" value="" class="input-txt1" placeholder="规格"><input  name="goods_color[]" id="id'+(lengthinput+3)+'" type="text"  value="" class="input-txt1" placeholder="颜色"><input  name="goods_brand[]" id="id'+(lengthinput+4)+'" type="text"  value="" class="input-txt1" placeholder="品牌"><input  name="goods_unit[]" id="id'+(lengthinput+5)+'" type="text"  value="" class="input-txt1" placeholder="单位"><input  name="goods_num[]" id="id'+(lengthinput+6)+'" type="text"  value="" class="input-txt1" placeholder="数量"></div>')
+      
+      }else
+      {
+        alert("有没有填的空"+id.length)
+      }
+      })
+      $("#addclass0").click(function(){
+        var lengthi=$('#optinput').children('div').length;
+        if(lengthi>1){
+           $("#addclass0").prev().prev().remove();
+        }
+        
+       
+      
+      })
+   })
+</script>
+
+</body>
+</html>
