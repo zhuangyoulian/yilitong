@@ -26,9 +26,9 @@ class Goods extends Base {
         $model = Db::name("Brand");
         $keyword = I('keyword');
         $where = $keyword  ? " name like '%$keyword%'": "";
-        $count = $model->where($where)->where('is_hot=1')->count();
+        $count = $model->where($where)->count();
         $Page = $pager = new Page($count,15);
-        $brandList = $model->where($where)->where('is_hot=1')->order("`sort` asc")->limit($Page->firstRow.','.$Page->listRows)->select();
+        $brandList = $model->where($where)->order("`id` desc")->limit($Page->firstRow.','.$Page->listRows)->select();
         $show  = $Page->show();
         $cat_list = Db::name('goods_category')->where("parent_id = 0")->column('id,name'); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);

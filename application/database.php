@@ -18,12 +18,12 @@ return [
     'database'        => 'ylt_tp',
     // 'database'        => 'ylt_test',
     // 用户名
-    // 'username'        => 'root',
-    'username'        => 'ylt_test',
+    'username'        => 'root',
+    // 'username'        => 'ylt_test',
     // 'username'        => 'ylt_tp',
     // 密码
-    // 'password'        => 'root',
-    'password'        => 'SSNwtSc7FR',
+    'password'        => 'root',
+    // 'password'        => 'SSNwtSc7FR',
     // 'password'        => '8fkjkxRXE6',
     // 端口
     'hostport'        => '3306',

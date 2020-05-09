@@ -107,14 +107,11 @@ class RedGift extends Base {
         $this->is_login(I('admin_id'));
         //Brand
         $brand_list = Db::name('ad')->where('pid = 53 and enabled=1')->field('ad_code,ad_link')->select();
-        $field = "goods_id,goods_name,goods_thumb,shop_price,market_price";
+        $field = "goods_id,goods_name,goods_thumb,shop_price,market_price,group_price";
         //当季热推 按排序查询4条数据
-        $is_hot_o = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and sort = 1 ')->find();
-        $is_hot_t = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and sort = 2 ')->find();
-        $is_hot_s = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and sort = 3 ')->find();
-        $is_hot_f = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and sort = 4 ')->find();
+        $goods_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0')->order('goods_id desc')->limit('8')->select();
 
-        $rs=array('result'=>'1','info'=>'请求成功','is_hot_o'=>$is_hot_o,'is_hot_t'=>$is_hot_t,'is_hot_s'=>$is_hot_s,'is_hot_f'=>$is_hot_f,'brand_list'=>$brand_list);
+        $rs=array('result'=>'1','info'=>'请求成功','goods_list'=>$goods_list,'brand_list'=>$brand_list);
         exit(json_encode($rs));
     }
 
@@ -408,6 +405,184 @@ class RedGift extends Base {
         }
         return $filter_spec;
     }
+
+    /**
+     * [brandList 品牌列表 更多品牌]
+     * @return [type] [description]
+     */
+    public function brandList(){
+        $brandList = Db::name("brand")
+            ->alias('b')
+            ->join('red_goods g','b.id=g.brand_id')
+            ->where("b.logo != '' and b.is_hot = 1 and g.examine = 1")
+            ->group('b.id')
+            ->order('b.sort desc')
+            ->select();
+        $nameList = array();
+        foreach($brandList as $k => $v)
+        {
+            $name = getFirstCharter($v['name']) .'  --'. $v['name']; // 前面加上拼音首字母
+            $nameList[] = $v['name'] = $name;
+            $brandList[$k] = $v;
+        }
+        array_multisort($nameList,SORT_STRING,SORT_ASC,$brandList);
+
+        $brand_list=[];
+        foreach ($brandList as $key => $value) {
+            switch (mb_substr($value['name'],0,1,'utf-8')) {
+                case 'A':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[0][]=$value;
+                    break;
+                case 'B':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[1][]=$value;
+                    break;
+                case 'C':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[2][]=$value;
+                    break;
+                case 'D':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[3][]=$value;
+                    break;
+                case 'E':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[4][]=$value;
+                    break;
+                case 'F':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[5][]=$value;
+                    break;
+                case 'G':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[6][]=$value;
+                    break;
+                case 'H':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[7][]=$value;
+                    break;
+                case 'I':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[8][]=$value;
+                    break;
+                case 'J':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[9][]=$value;
+                    break;
+                case 'K':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[10][]=$value;
+                    break;
+                case 'L':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[11][]=$value;
+                    break;
+                case 'M':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[12][]=$value;
+                    break;
+                case 'N':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[13][]=$value;
+                    break;
+                case 'O':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[14][]=$value;
+                    break;
+                case 'P':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[15][]=$value;
+                    break;
+                case 'Q':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[16][]=$value;
+                    break;
+                case 'R':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[17][]=$value;
+                    break;
+                case 'S':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[18][]=$value;
+                    break;
+                case 'T':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[19][]=$value;
+                    break;
+                case 'U':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[20][]=$value;
+                    break;
+                case 'V':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[21][]=$value;
+                    break;
+                case 'W':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[22][]=$value;
+                    break;
+                case 'X':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[23][]=$value;
+                    break;
+                case 'Y':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[24][]=$value;
+                    break;
+                case 'Z':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[25][]=$value;
+                    break;
+                case ' ':
+                    $value['name']=mb_substr($value['name'],strpos($value['name'],"--",0)+2,NULL,'UTF-8');
+                    $brand_list[26][]=$value;
+                    break;
+            }
+        }
+        exit(json_encode(array('result'=>'1','info'=>'请求成功','brand_list'=>$brand_list)));
+    }
+    /**
+     * 首页品牌内页展示列表页
+     */
+    public function brandList_goods(){
+        $key = md5($_SERVER['REQUEST_URI'].I('start_price').'_'.I('end_price'));
+        $html =  Cache::get($key);  //读取缓存
+        if(!empty($html))
+        {
+            return $html;
+        }
+
+        $filter_param = array(); // 筛选数组
+        $brand_id = I('get.brand_id/d',0);
+        $sort = I('get.sort','goods_id'); // 排序
+        $sort_asc = I('get.sort_asc','desc'); // 排序
+        $brand_id  && ($filter_param['brand_id'] = $brand_id); //加入筛选条件中
+        $goodsLogic = new GoodsLogic(); // 前台商品操作逻辑类
+        $filter_goods_id = Db::name('red_goods')->where(['examine'=>1,'is_designer'=>0,'brand_id'=>$brand_id])->cache(true)->column("goods_id");
+        // 过滤筛选的结果集里面找商品
+        if($brand_id)// 品牌或者价格
+        {
+            $goods_id_1 = $goodsLogic->getGoodsIdByBrandPrice_red($brand_id,$price); // 根据 品牌 或者 价格范围 查找所有商品id
+            $filter_goods_id = array_intersect($filter_goods_id,$goods_id_1); // 获取多个筛选条件的结果 的交集
+        }
+        $count = count($filter_goods_id);
+        $page_html = input('page_html')?input('page_html'):1; //前端页码
+        $count_html = 12;
+        if ($page_html) {
+            $firstRow = ($page_html-1) * $count_html;
+        }
+
+        // $count = count($filter_goods_id);
+        // $page = new Page($count,12);
+        if($count > 0)
+        {
+            $goods_list = Db::name('red_goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->limit($firstRow.','.$count_html)->select();
+            $filter_goods_id2 = get_arr_column($goods_list, 'goods_id');
+        }
+        exit(json_encode(array('result'=>'1','info'=>'请求成功','goods_list'=>$goods_list,'count'=>$count)));
+    }
+
 
     /*商品相关结束*/
     /*========================================================================*/

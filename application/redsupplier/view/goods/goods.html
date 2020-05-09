@@ -260,22 +260,22 @@
                 </dl>
 
 
-                <!-- <dl class="row">
+                <dl class="row">
                     <dt class="tit">
                         <label for="record_no">商品品牌</label>
                     </dt>
                     <dd class="opt">
                         <span class="err" id="err_market_price" style="color:#F00; display:none;"></span>
-                    <select name="brand_id" id="brand_id"  class="small form-control">
+                        <select name="brand_id" id="brand_id"  class="small form-control">
                              <option value="">所有品牌</option>
                             <foreach name="brandList" item="v" key="k" >
                                <option value="{$v['id']}"  <if condition="$v['id'] eq $goodsInfo['brand_id'] ">selected="selected"</if>>
                                     {$v['name']}
                                </option>
                              </foreach>
-                      </select>
+                        </select>
                     </dd>
-                </dl> -->
+                </dl>
                 <!-- <dl class="row">
                     <dt class="tit">
                         <label for="record_no">本店售价</label>

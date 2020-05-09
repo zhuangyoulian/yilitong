@@ -15,6 +15,66 @@ use think\Request;
 
 
 class Goods extends Base {
+
+
+
+        /**
+     * @return 品牌列表
+     */
+
+    public function brandList(){
+
+        $model = Db::name("Brand");
+        $keyword = I('keyword');
+        $where = $keyword  ? " name like '%$keyword%'": "";
+        $count = $model->where($where)->count();
+        $Page = $pager = new Page($count,15);
+        $brandList = $model->where($where)->order("`id` desc")->limit($Page->firstRow.','.$Page->listRows)->select();
+        $show  = $Page->show();
+        $cat_list = Db::name('goods_category')->where("parent_id = 0")->column('id,name'); // 已经改成联动菜单
+        $this->assign('cat_list',$cat_list);
+        $this->assign('pager',$pager);
+        $this->assign('show',$show);
+        $this->assign('brandList',$brandList);
+        return $this->fetch();
+    }
+
+    /**
+     * @return 添加修改编辑  商品品牌
+     */
+    public  function addBrand(){
+
+        $id = I('id');
+        if(IS_POST)
+        {   
+            if (empty(I('post.logo'))) {
+                $this->error("logo不能为空!!!");
+            }
+            if (empty(I('post.parent_cat_id')) || empty(I('post.cat_id'))) {
+                $this->error("商品分类不能为空!!!");
+            }
+            $data = I('post.');
+            // dump($data);die;
+            if($id){
+                Db::name("Brand")->update($data);
+                adminLog('编辑品牌 '.input('name').'');
+            }else{
+              if(Db::name('Brand')->where('name',$data['name'])->count() !=0)
+                  $this->success("品牌已经存在!!!",Url::build('Supplier/Goods/brandList',array('p'=>I('p'))));
+              else
+                 Db::name("Brand")->insert($data);
+             adminLog('添加品牌 '.input('name').'');
+            }
+            $this->success("操作成功,请等待平台审核!!!",Url::build('Supplier/Goods/brandList',array('p'=>I('p'))));
+            exit;
+        }
+        $cat_list = Db::name('goods_category')->where("parent_id = 0")->select(); // 已经改成联动菜单
+        $this->assign('cat_list',$cat_list);
+        $brand = Db::name("Brand")->find($id);
+        $this->assign('brand',$brand);
+        return $this->fetch('addbrand');
+    }
+
      /**
      *  商品列表
      */
@@ -241,7 +301,7 @@ class Goods extends Base {
         $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成联动菜单
         //      $extend_cat_list = Db::name('redsupplier_goods_category')->where(array('level' => 1,'supplier_id' => $supplier_id))->select(); // 已经改成联动菜单
         $cat_scenario_list = Db::name('scenario_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成场景联动菜单
-        // $brandList = $GoodsLogic->getSortBrands();
+        $brandList = $GoodsLogic->getSortBrands();
         $goodsType = $GoodsLogic->goodsType();
         $goods_shipping_area_ids = explode(',',$goodsInfo['shipping_area_ids']);
         $company_name = Db::name('redsupplier_user')->where('red_admin_id',$supplier_id)->value('company_name');
@@ -252,7 +312,7 @@ class Goods extends Base {
         $this->assign('cat_list', $cat_list);
         //      $this->assign('extend_cat_list', $extend_cat_list);
         $this->assign('cat_scenario_list', $cat_scenario_list);
-        // $this->assign('brandList', $brandList);
+        $this->assign('brandList', $brandList);
         $this->assign('goodsType', $goodsType);
         $this->assign('goodsInfo', $goodsInfo);  // 商品详情
         $goodsImages = Db::name("RedGoodsImages")->where('goods_id =' . I('GET.id', 0))->select();

@@ -94,7 +94,6 @@ class Order extends Base {
 		//$condition['is_parent'] = 0;
 		$keywords =  $keywords ? $keywords : false;
         $keywords ? $condition[''.$keyType.''] = trim($keywords) : false;
-
         // input('order_status') != '' ? $condition['order_status'] = input('order_status') : false;
         input('pay_status') != '' ? $condition['pay_status'] = input('pay_status') : false;
         input('shipping_status') != '' ? $condition['shipping_status'] = input('shipping_status') : false;
@@ -167,7 +166,7 @@ class Order extends Base {
         // $condition['is_topup'] = 0;
 
         $keywords =  $keywords ? $keywords : false;
-        $keywords ? $condition[''.$keyType.''] = trim($keywords) : false;
+        $keywords ? $condition[''.$keyType.''] = str_replace(' ','',trim($keywords)) : false;
 
         if($begin && $end){
             $condition['add_time'] = array('between',"$begin,$end");
@@ -811,16 +810,16 @@ class Order extends Base {
         if(input('close')){
             $where .= " AND close = ".input('close');
         }
-		if(input('pay_status')){
+		if(input('pay_status') =='0' || input('pay_status') == '1'){
 			$where .= " AND pay_status  = ".input('pay_status');
-		}
+        }
 		if(input('pay_code')){
 			if(input('pay_code') == 'alipay')
 				$where .= " AND (pay_code = 'alipay' or pay_code = 'alipayMobile')";
 			else
 				$where .= " AND pay_code = ".input('pay_code');
 		}
-		if(input('shipping_status')){
+		if(input('shipping_status') =='0' || input('shipping_status') == '1'){
 			$where .= "	AND shipping_status = ".input('shipping_status');
 		}
 		if(input('add_time_begin')){

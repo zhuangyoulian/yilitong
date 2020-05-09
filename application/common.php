@@ -1736,7 +1736,7 @@ function get_goods_promotion($goods_id,$user_id=0){
  * @param type $district 县
  * @param type $pay_points 积分
  * @param type $user_money 余额
- * @param type $coupon_id  优惠券
+ * @param type $coupon_id  优惠券(列表可选)
  * @param type $codeCode  礼品卡优惠码
  */
 

@@ -484,6 +484,29 @@ class GoodsLogic extends Model
     }
 
     /**
+     * @param  $brand_id 帅选品牌id
+     * @param  $price 帅选价格
+     * @return array|mixed
+     */
+    function getGoodsIdByBrandPrice_red($brand_id)
+    {
+        if (empty($brand_id) && empty($price)){
+            return array();
+        }
+        $where = " 1 = 1 ";
+        $where .= " and examine = 1";
+        $bind = array();
+        if ($brand_id) // 品牌查询
+        {
+            $brand_id_arr = explode('_', $brand_id);
+            $where .= " and brand_id in(:brand_id_arr)";
+            $bind['brand_id_arr'] = implode(',', $brand_id_arr);
+        }
+        $arr = Db::name('red_goods')->where($where)->bind($bind)->column('goods_id');
+        return $arr ? $arr : array();
+    }
+
+    /**
      * @return array|\type
      * 根据规格 查找 商品id
      * @param $spec 规格

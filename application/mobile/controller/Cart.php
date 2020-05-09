@@ -434,11 +434,10 @@ class Cart extends MobileBase {
         if($this->user_id == 0){
             exit(json_encode(array('status'=>-100,'msg'=>"登录超时请重新登录!",'result'=>null))); // 返回结果状态
         }
-
         $shipping_code  =  input("shipping_code"); //  物流编号
         $address_id     =  input("address_id"); //  收货地址id
         $invoice_title  =  input("invoice_title"); // 发票
-        $coupon_id      =  input("coupon_id"); //  优惠券id
+        $coupon_id      =  input("coupon_id"); //  优惠券id(列表可选)
         $couponCode     =  session('CodeCode') ? session('CodeCode'):''; //  礼品卡代码
         $pay_points     =  input("pay_points",0); //  使用积分
 		$recommend_code =  input("recommend_code"); //推荐人

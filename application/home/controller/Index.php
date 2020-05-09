@@ -434,6 +434,5 @@ class Index extends Base {
         }
         $this->assign('brandList',$brand_list);
         return $this->fetch();
-
     }
 }

@@ -351,6 +351,7 @@ class Cart extends ProgramBase {
         $address_id = input("address_id");          // 收货地址id
         $supplier_id = I('POST.supplier_id');       // 商家ID 
         $condition = I('POST.condition');           // 留言
+        $coupon_id      =  input("coupon_id");      // 优惠券id(列表选择)
         $selected =I('selected');                   // 立即购买
         $couponCode     =  I('CodeCode') ? I('CodeCode'):''; //  礼品卡代码
         $key = "user_note_".$supplier_id;           // user_note_拼接商家ID 留言

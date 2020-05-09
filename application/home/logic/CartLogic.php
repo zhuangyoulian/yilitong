@@ -642,7 +642,7 @@ class CartLogic extends Model
         }
 
         $cart = Db::name('Cart')->where($where)->bind($bind)->order('add_time desc , supplier_id asc ')->limit($limit)->select();  // 获取购物车商品
-        $coupon_list = Db::name('coupon_list')->where('uid', $user[user_id])->select();
+        $coupon_list = Db::name('coupon_list')->where('uid', $user[user_id])->where('order_id = 0')->select();
 
         if ($cart) {
             // 选中商品所有商品

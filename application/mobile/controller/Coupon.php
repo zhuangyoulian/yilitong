@@ -169,6 +169,15 @@ class Coupon extends MobileBase{
     public function Coupon_List(){
         $coupon=Db::name('coupon')->where('is_display',1)->where('send_start_time','<=',time())->where('send_num != 0')->order('id desc')->select();
         foreach ($coupon as $key => $value) {
+            if ($value['renewaltime']!=0) {   //判断是否自动续期/进行时间修改 
+                if ($value['use_end_time'] < time() ) {
+                    $link['use_start_time']=$value['use_start_time']+$value['renewaltime']*86400;
+                    $link['use_end_time']=$value['use_end_time']+$value['renewaltime']*86400;
+                    $link['send_end_time']=$value['send_end_time']+$value['renewaltime']*86400;
+                    $link['send_start_time']=$value['send_start_time']+$value['renewaltime']*86400;
+                    Db::name('coupon')->where("use_end_time" , '<' ,time())->where('id',$value['id'])->update($link);
+                }
+            }
             //下架商品自动隐藏优惠卷类型
             $yes = DB::name('goods')->where("is_on_sale = 0")->where(['goods_id'=>$value['goods_id']])->find();
             if ($yes) {
@@ -188,15 +197,6 @@ class Coupon extends MobileBase{
                 for ($i=0; $i < count($goods); $i++) {
                 $goods[$i]['ling_num']=$value['ling_num'];
                 $goods_s[]=$goods[$i]; 
-                }
-            }
-            if ($value['renewaltime']!=0) {   //判断是否自动续期/进行时间修改 
-                if ($value['use_end_time'] < time() ) {
-                    $link['use_start_time']=$value['use_start_time']+$value['renewaltime']*86400;
-                    $link['use_end_time']=$value['use_end_time']+$value['renewaltime']*86400;
-                    $link['send_end_time']=$value['send_end_time']+$value['renewaltime']*86400;
-                    $link['send_start_time']=$value['send_start_time']+$value['renewaltime']*86400;
-                    Db::name('coupon')->where("use_end_time" , '<' ,time())->where('id',$value['id'])->update($link);
                 }
             }
         }
@@ -254,6 +254,15 @@ class Coupon extends MobileBase{
         $coupon=Db::name('coupon')->where('is_display=1 and coupon_type=1 and send_start_time <='.time().' and send_num != 0 and supplier_id=41')->select();
         $goods_l=array();
         foreach ($coupon as $key => $value) {
+            if ($value['renewaltime']!=0) {   //判断是否自动续期/进行时间修改 
+                if ($value['use_end_time'] < time() ) {
+                    $link['use_start_time']=$value['use_start_time']+$value['renewaltime']*86400;
+                    $link['use_end_time']=$value['use_end_time']+$value['renewaltime']*86400;
+                    $link['send_end_time']=$value['send_end_time']+$value['renewaltime']*86400;
+                    $link['send_start_time']=$value['send_start_time']+$value['renewaltime']*86400;
+                    Db::name('coupon')->where("use_end_time" , '<' ,time())->update($link);
+                }
+            }
             $num=$value['createnumssss']-($value['ling_num']+$value['shenum']);
             @$value['ling_num']=round($num/$value['createnumssss']*100,2)."％";
             if (count(explode(',',$value['goods_id'])) >1 and $value['type']==3 and $value['is_display']==1) {
@@ -270,15 +279,6 @@ class Coupon extends MobileBase{
                 }
             }
             // dump($type_id);
-            if ($value['renewaltime']!=0) {   //判断是否自动续期/进行时间修改 
-                if ($value['use_end_time'] < time() ) {
-                    $link['use_start_time']=$value['use_start_time']+$value['renewaltime']*86400;
-                    $link['use_end_time']=$value['use_end_time']+$value['renewaltime']*86400;
-                    $link['send_end_time']=$value['send_end_time']+$value['renewaltime']*86400;
-                    $link['send_start_time']=$value['send_start_time']+$value['renewaltime']*86400;
-                    Db::name('coupon')->where("use_end_time" , '<' ,time())->update($link);
-                }
-            }
         }
         // dump($goods_l);
         // die;
@@ -337,6 +337,15 @@ class Coupon extends MobileBase{
         // dump($coupon);
         $goods_l=array();
         foreach ($coupon as $key => $value) {
+            if ($value['renewaltime']!=0) {   //判断是否自动续期/进行时间修改 
+                if ($value['use_end_time'] < time() ) {
+                    $link['use_start_time']=$value['use_start_time']+$value['renewaltime']*86400;
+                    $link['use_end_time']=$value['use_end_time']+$value['renewaltime']*86400;
+                    $link['send_end_time']=$value['send_end_time']+$value['renewaltime']*86400;
+                    $link['send_start_time']=$value['send_start_time']+$value['renewaltime']*86400;
+                    Db::name('coupon')->where("use_end_time" , '<' ,time())->update($link);
+                }
+            }
             $num=$value['createnumssss']-($value['ling_num']+$value['shenum']);
             @$value['ling_num']=round($num/$value['createnumssss']*100,2)."％";
             if ($value['type']==3 and $value['is_display']==1 ) {
@@ -350,15 +359,6 @@ class Coupon extends MobileBase{
                 for ($i=0; $i < count($supplier); $i++) {
                 $supplier[$i]['ling_num']=$value['ling_num'];
                 $supplier_l[]=$supplier[$i]; 
-                }
-            }
-            if ($value['renewaltime']!=0) {   //判断是否自动续期/进行时间修改 
-                if ($value['use_end_time'] < time() ) {
-                    $link['use_start_time']=$value['use_start_time']+$value['renewaltime']*86400;
-                    $link['use_end_time']=$value['use_end_time']+$value['renewaltime']*86400;
-                    $link['send_end_time']=$value['send_end_time']+$value['renewaltime']*86400;
-                    $link['send_start_time']=$value['send_start_time']+$value['renewaltime']*86400;
-                    Db::name('coupon')->where("use_end_time" , '<' ,time())->update($link);
                 }
             }
         }
