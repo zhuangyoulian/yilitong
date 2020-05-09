@@ -10,6 +10,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .containerp {
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,27 +46,14 @@
         </div>
         <div class="containerp">
             <div class="conentya">
-                <ul class="swiper_title">
-                    <li id="prc1" :class="{active:currentItem==''}" @click="getCategeProduct('')">全部商品</li>
-                    <li v-for="(item,index) in category" :class="{active:item.id==currentItem}" @click.stop="page_html=1,getCategeProduct(item.id)">
-                        <span class="spand">{{item.name}}</span>
-                        <ul class="xiaofenlei" v-if="item.id==tet">
-                            <li v-for="(cat,index) in item.tmenu" @click.stop="page_html=1,getCategeProduct2(cat.id)" :class="{active:cat.id==currentItem2}">
-                                {{cat.name}}
-                                <ul class="sanfenlei" v-if="cat.id==current_threeId">
-                                    <li v-for="(sub,i) in cat.sub_menu" @click.stop="page_html=1,getCategeProduct3(sub.id)" :class="{active:sub.id==currentlithree}">{{sub.name}}</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- <li @click="getPriceProduct('0-10')" id="prc2">10元以下</li>
-				<li @click="getPriceProduct('10-20')" id="prc3">10元-20元</li>
-				<li @click="getPriceProduct('20-30')" id="prc4">20元-30元</li>
-				<li @click="getPriceProduct('30-50')" id="prc5">30元-50元</li>
-				<li @click="getPriceProduct('50-100')" id="prc6">50元-100元</li>
-				<li @click="getPriceProduct('100-200')" id="prc7">100元-200元</li>
-				<li @click="getPriceProduct('200-1000000')" id="prc8">200元以上</li> -->
-                </ul>
+                <!-- <ul class="swiper_title">
+                    <block v-for="it in pinpailist">
+                        <li v-for="(item,index) in it" :class="{active:item.id==currentItem}" @click.stop="page_html=1,getCategeProduct(item.id)">
+                            <span class="spand">{{item.name}}</span>
+                        </li>
+                    </block>
+
+                </ul> -->
                 <div class="du">
                     <div class="hz_fenlei">
 
@@ -98,11 +90,6 @@
         <div class="containerB">
             <p>红礼供应链管理有限公司</p>
         </div>
-        <div class="dialog-bg" id="dialog-bg">
-            <div class="img-box" id="img-box">
-                <img src="">
-            </div>
-        </div>
 </body>
 
 <script src="js/vue.min.js"></script>
@@ -112,7 +99,7 @@
     var aa = new Vue({
         el: '#vue_index',
         data: {
-            // baseUrl:'http://192.168.1.17/tp510',
+            // baseUrl: 'http://192.168.1.39/tp510',
             baseUrl: 'http://www.yilitong.com',
             addhover: true,
             cur: 0,
@@ -128,11 +115,13 @@
             currentItem2: '',
             page_html: 1, //当前页
             count: '',
-            showcount: 20,
+            showcount: 12,
             totalpage: '',
             tet: '',
             current_threeId: '',
             currentlithree: '',
+            pinpailist: '',
+            brand_id: '',
 
         },
         created() {
@@ -141,11 +130,7 @@
                 window.location.href = 'login.html';
             } else {
                 this.admin_id = localStorage.admin_id;
-                this.getCategeory();
-                // this.getPriceProduct('0-100000000');
-                // this.getCartList(localStorage.admin_id);
-
-                // this.getCategeProduct(this.currentItem);
+                // this.getCategeory();
             }
             var url = window.location.href;
             var i = url.indexOf('?');
@@ -157,56 +142,69 @@
                 arr2[ta[0]] = ta[1];
             }
             var fanwei = arr2.i;
-            console.log(arr2.cat_id);
-            this.getCategeProduct(arr2.cat_id);
-            // cat_id
+            console.log(arr2.brand_id);
+            this.brand_id = arr2.brand_id;
+            // this.getpin();
+            this.getCategoods(arr2.brand_id);
 
-            // if(fanwei==1){
-            // 	this.getPriceProduct('0-1000000');
-            // }
-            // if(fanwei==2){
-            // 	this.getPriceProduct('0-10');
-            // }
-            // if(fanwei==3){
-            // 	this.getPriceProduct('10-20');
-            // }
-            // if(fanwei==4){
-            // 	this.getPriceProduct('20-30');
-            // }
-            // if(fanwei==5){
-            // 	this.getPriceProduct('30-50');
-            // }
-            // if(fanwei==6){
-            // 	this.getPriceProduct('50-100');
-            // }
-            // if(fanwei==7){
-            // 	this.getPriceProduct('100-200');
-            // }
-            // if(fanwei==8){
-            // 	this.getPriceProduct('200-1000000');
-            // }
         },
 
         mounted: function() {
 
         },
         methods: {
-            getpropage(e) {
-                var currentp = this.page_html = this.page_html + e;
-                this.page_html = currentp;
-                if (!this.currentItem2) {
-                    this.getCategeProduct(this.currentItem);
-                } else {
-                    this.getCategeProduct2(this.currentItem2);
-                }
+            // getpin: function() {
+            //     var baseurl = this.baseUrl;
+            //     var that = this;
+            //     var keywords = {
+            //         admin_id: that.admin_id
+            //     };
+            //     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+            //     axios.get(baseurl + '/Home/redGift/brandList', {
+            //         params: keywords
+            //     }).then(function(res) {
+            //         console.log(res);
+            //         that.pinpailist = res.data.brand_list;
+            //     });
+            // },
 
+            getCategoods(e) {
+                var baseurl = this.baseUrl;
+                var that = this;
+                var list = {
+                    admin_id: that.admin_id,
+                    brand_id: e,
+                    page_html: that.page_html
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+                axios.get(baseurl + '/Home/redGift/brandList_goods', {
+                    params: list
+                }).then(function(res) {
+                    console.log(res);
+                    that.productlist = res.data.goods_list;
+                    that.count = res.data.count;
+                    that.gettotalPage();
+                });
             },
             gettotalPage() {
                 let showcount = this.showcount;
                 let count = this.count;
                 let totalpage = Math.ceil(count / showcount);
                 this.totalpage = totalpage;
+                console.log(totalpage)
             },
+            getpropage(e) {
+                var currentp = this.page_html + e;
+                this.page_html = currentp;
+                this.getCategoods(this.brand_id);
+                // if (!this.currentItem2) {
+                //     this.getCategeProduct(this.currentItem);
+                // } else {
+                //     this.getCategeProduct2(this.currentItem2);
+                // }
+
+            },
+
             getCategeory: function() {
                 var baseurl = this.baseUrl;
                 var that = this;
@@ -233,112 +231,7 @@
                 });
             },
 
-            getCategeProduct: function(e) {
-                console.log('aaa' + e);
-                this.currentItem = e;
-                if (this.tet == e) {
-                    this.tet = '';
-                } else {
-                    this.tet = e;
-                }
 
-                // if(this.tet==''){
-                // 	this.tet=e;
-                // }
-                this.currentItem2 = '',
-                    console.log(this.currentItem);
-                var baseurl = this.baseUrl;
-                var that = this;
-                var list = {
-                    cat_id: e,
-                    admin_id: that.admin_id,
-                    page_html: that.page_html,
-                };
-                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-                axios.get(baseurl + '/home/RedGift/goodsList', {
-                    params: list
-                }).then(function(res) {
-                    // console.log(res.data);
-                    that.count = res.data.count;
-                    that.productlist = res.data.goods_list == null ? '' : res.data.goods_list;
-                    that.gettotalPage();
-                    console.log(e);
-                });
-            },
-            getCategeProduct3: function(e) {
-                console.log(e);
-                this.currentlithree = e;
-                var baseurl = this.baseUrl;
-                var that = this;
-                var list = {
-                    cat_id: e,
-                    admin_id: that.admin_id,
-                    page_html: that.page_html,
-                };
-                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-                axios.get(baseurl + '/home/RedGift/goodsList', {
-                    params: list
-                }).then(function(res) {
-                    console.log(res.data);
-                    that.count = res.data.count;
-                    that.productlist = res.data.goods_list == null ? '' : res.data.goods_list;
-                    that.gettotalPage();
-                    // that.current_threeId=e;
-                    console.log(e);
-
-                });
-            },
-            getCategeProduct2: function(e) {
-                this.currentItem2 = e;
-                console.log('bbb' + e);
-                var baseurl = this.baseUrl;
-                var that = this;
-                var list = {
-                    cat_id: e,
-                    admin_id: that.admin_id,
-                    page_html: that.page_html,
-                };
-                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-                axios.get(baseurl + '/home/RedGift/goodsList', {
-                    params: list
-                }).then(function(res) {
-                    console.log(res.data);
-                    that.count = res.data.count;
-                    that.productlist = res.data.goods_list == null ? '' : res.data.goods_list;
-                    that.gettotalPage();
-                    // that.current_threeId=e;
-                    console.log(e);
-                    // that.current_threeId='';
-                    if (that.current_threeId == e) {
-                        that.current_threeId = '';
-                    } else {
-                        that.current_threeId = e;
-                    }
-                });
-            },
-
-            // getFenleisub():function(a,b){
-
-            // }
-
-            getCartList: function(e) {
-                var baseurl = this.baseUrl;
-                var that = this;
-                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-                axios.get(baseurl + '/index.php/home/RedGift/ajaxCartList', {
-                    params: {
-                        admin_id: e
-                    }
-                }).then(function(res) {
-                    console.log(res.data.cartList[41].list);
-                    if (res.data.cartList[41].list == null) {
-                        that.cartLength = '';
-                    } else {
-                        that.cartLength = res.data.cartList[41].list.length;
-                        console.log(that.cartLength);
-                    }
-                });
-            },
             Lagout: function() {
                 localStorage.clear();
             },

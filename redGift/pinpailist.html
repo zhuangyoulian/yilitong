@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>搜索页面</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/sousuo.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="vue_index">
+        <div class="containerT">
+            <div class="top">
+                <!-- <img src="img/logo.png" width="132px" height="39px"> -->
+                <a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
+                <div class="input-group search">
+                    <input type="text" class="form-control form-searchbox" placeholder="搜索品牌名称" v-model="keywords" @keyup.enter="getSousuoData(keywords)">
+                    <span class="input-group-btn">
+					<button class="btn btn-default btn-searchb" type="button" @click="getSousuoData(keywords)">
+						搜索
+					</button>
+				</span>
+                </div>
+                <!-- <div class="shopcart">
+				<img src="img/icon_cart.png" >
+				<a class="text">购物车</a>
+				<a class="number">10</a>
+			</div> -->
+                <img src="img/hz_header.png" width="40px" height="40px" class="headicon" @click="onUsercenter">
+                <div class="userlist" v-show="userc">
+                    <!-- <p class="username">杭州西湖国际中心的</p> -->
+                    <p @click="UserCenter">用户中心</p>
+                    <p @click="Lagout">退出登录</p>
+                </div>
+            </div>
+        </div>
+        <div class="containerp containerp2">
+            <div class="pindan_l">
+                <p class="p_titlename">当前：首页>品牌列表</p>
+                <div class="pinlist">
+                    <div class="pin_zm_lei" v-for="item in pinpailist">
+                        <a :href="['pinpai.html?brand_id='+ite. brand_id]" class="p_xiaolei" v-for="ite in item">
+                            <img :src="'http://www.yilitong.com'+ite.goods_thumb" />
+                            <p>{{ite.name}}</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="containerB">
+            <p>红礼供应链管理有限公司</p>
+        </div>
+        <div class="dialog-bg" id="dialog-bg">
+            <div class="img-box" id="img-box">
+                <img src="">
+            </div>
+        </div>
+</body>
+
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script type="text/javascript">
+    var aa = new Vue({
+        el: '#vue_index',
+        data: {
+            // baseUrl: 'http://192.168.1.39/tp510',
+            baseUrl: 'http://www.yilitong.com',
+            userc: false,
+            recommend_goods: '',
+            keywords: '',
+            sousuoProduct: '',
+            sousoup: 1,
+            addhover: true,
+            cur: 0,
+            placeh: 1,
+            advice_text: '',
+            userc: false,
+            goods: [],
+            admin_id: '',
+            pinpailist: '',
+        },
+        mounted: function() {
+
+        },
+        created() {
+            this.admin_id = localStorage.admin_id;
+
+            // this.getSousuoData(arr2.keyword);
+            this.getpin();
+        },
+        methods: {
+            getpin: function() {
+
+                var baseurl = this.baseUrl;
+                var that = this;
+                var keywords = {
+                    admin_id: that.admin_id
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+                axios.get(baseurl + '/Home/redGift/brandList', {
+                    params: keywords
+                }).then(function(res) {
+                    console.log(res);
+                    that.pinpailist = res.data.brand_list;
+                });
+            },
+
+
+            onUsercenter: function() {
+                this.userc = !this.userc;
+            },
+            Lagout: function() {
+                localStorage.clear();
+                window.location.href = 'index.html';
+            },
+            UserCenter: function() {
+                window.location.href = 'usercenter.html?ed=2';
+            },
+
+            sousuo: function(e) {
+                window.location.href = "sousuo.html?keyword=" + e;
+            },
+        }
+    })
+</script>
+
+
+</html>

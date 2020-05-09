@@ -1,122 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <meta charset="utf-8"> 
-   <title>产品详情页</title>
-   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
-   <link rel="stylesheet" type="text/css" href="css/index.css"/>
-   <link rel="stylesheet" type="text/css" href="css/productdetail.css"/>
-   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen"/>
-   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title>产品详情页</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/productdetail.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-<div id="vue_product">
-	<div class="containerT container2">
-		<div class="top">
-				<a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
-			<a href="index.html" class="shouye">首页</a>
-			<div class="input-group search">
-				<input type="text" class="form-control form-searchbox" placeholder="搜索品牌名称"  v-model="keyword" @keyup.enter="sousuo(keyword)">
-				<span class="input-group-btn">
+    <div id="vue_product">
+        <div class="containerT container2">
+            <div class="top">
+                <a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
+                <a href="index.html" class="shouye">首页</a>
+                <div class="input-group search">
+                    <input type="text" class="form-control form-searchbox" placeholder="搜索品牌名称" v-model="keyword" @keyup.enter="sousuo(keyword)">
+                    <span class="input-group-btn">
 					<button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
 						搜索
 					</button>
 				</span>
-			</div>
-			<div class="shopcart2">
-				<img src="img/icon_cart.png" >
-				<a class="text">购物车</a>
-			</div>
-			<!-- <div class="header">
+                </div>
+                <div class="shopcart2">
+                    <img src="img/icon_cart.png">
+                    <a class="text">购物车</a>
+                </div>
+                <!-- <div class="header">
 				<img src="img/hz_header.png" width="40px" height="40px" class="headicon2" @>
 			</div> -->
-			<img src="img/hz_header.png" width="50px" height="50px" class="headicon" @click="onUsercenter">
-			<div class="userlist" v-show="userc">
-				<!-- <p class="username">杭州西湖国际中心的</p> -->
-				<p @click="UserCenter">用户中心</p>
-				<p @click="Lagout">退出登录</p>
-			</div>
-			</div>
-		</div>
-	<div class="containerProductdetail">
-		<div class="shangp">
-			<p class="navigation"><span>首页</span>><span>当季热推</span>><span>{{goods.goods_name}}</span></p>
-			<div class="product">
-				<div class="img">
-					<img :src="baseUrl+BigUrl" width="430px" height="430px">
-					<ul class="small_img">
-						<li v-for="item in imgUrl">
-							<img :src="baseUrl+item.image_url" alt="" @click="getIndex(item)" width="78px" height="78px">
-						</li>
-					</ul>
-				</div>
-				<div class="introduce">
-					<p class="title">{{goods.goods_name}}</p>
-					<p class="price" v-if="goods.parent_id_path==28"><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.market_price}}(不含税)</span></p>
-					<p class="price" v-else><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.group_price}}(不含税)</span>
-					<span style="text-decoration:line-through">{{goods.market_price}}</span></p>
-					<p class="goodsnumber"><span class="tips">商品编号</span><span class="bianma">{{goods.goods_sn}}</span></p>
-					<div class="address">
-						<span class="tips">收货信息</span>
-						<span class="ad1">{{users_address.user_name}}</span>
-						<span class="tel">{{users_address.mobile}}</span>
-						<span class="geli">|</span>
-						<span class="detailaddress">{{users_address.province}}{{users_address.city}}{{users_address.district}}{{users_address.address}}</span>
-						<a href="usercenter.html?ed=1"><span class="edit">编辑</span></a>
-					</div>
-				
-					<!-- guigelength -->
-					<div class="color" v-if="type[0]"> 
-						<span class="col1">{{type[0]}}</span>
-						<span class="chicun" :class="kp1==index?'active1':''" @click="ChooseSpec1(index)" v-for="(ite,index) in filter_spec[type[0]]">
+                <img src="img/hz_header.png" width="50px" height="50px" class="headicon" @click="onUsercenter">
+                <div class="userlist" v-show="userc">
+                    <!-- <p class="username">杭州西湖国际中心的</p> -->
+                    <p @click="UserCenter">用户中心</p>
+                    <p @click="Lagout">退出登录</p>
+                </div>
+            </div>
+        </div>
+        <div class="containerProductdetail">
+            <div class="shangp">
+                <p class="navigation"><span>首页</span>><span>当季热推</span>><span>{{goods.goods_name}}</span></p>
+                <div class="product">
+                    <div class="img">
+                        <img :src="baseUrl+BigUrl" width="430px" height="430px">
+                        <ul class="small_img">
+                            <li v-for="item in imgUrl">
+                                <img :src="baseUrl+item.image_url" alt="" @click="getIndex(item)" width="78px" height="78px">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="introduce">
+                        <p class="title">{{goods.goods_name}}</p>
+                        <p class="price" v-if="goods.parent_id_path==28"><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.market_price}}(不含税)</span></p>
+                        <p class="price" v-else><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.group_price}}(不含税)</span>
+                            <span style="text-decoration:line-through">{{goods.market_price}}</span></p>
+                        <p class="goodsnumber"><span class="tips">商品编号</span><span class="bianma">{{goods.goods_sn}}</span></p>
+                        <div class="address">
+                            <span class="tips">收货信息</span>
+                            <span class="ad1">{{users_address.user_name}}</span>
+                            <span class="tel">{{users_address.mobile}}</span>
+                            <span class="geli">|</span>
+                            <span class="detailaddress">{{users_address.province}}{{users_address.city}}{{users_address.district}}{{users_address.address}}</span>
+                            <a href="usercenter.html?ed=1"><span class="edit">编辑</span></a>
+                        </div>
+
+                        <!-- guigelength -->
+                        <div class="color" v-if="type[0]">
+                            <span class="col1">{{type[0]}}</span>
+                            <span class="chicun" :class="kp1==index?'active1':''" @click="ChooseSpec1(index)" v-for="(ite,index) in filter_spec[type[0]]">
 							{{ite.item}}
 						</span>
-					</div>
-					<div class="color" v-if="type[1]">
-						<span class="col1">{{type[1]}}</span>
-						<span class="chicun" :class="kp2==index?'active2':''" @click="ChooseSpec2(index)" v-for="(ite,index) in filter_spec[type[1]]">
+                        </div>
+                        <div class="color" v-if="type[1]">
+                            <span class="col1">{{type[1]}}</span>
+                            <span class="chicun" :class="kp2==index?'active2':''" @click="ChooseSpec2(index)" v-for="(ite,index) in filter_spec[type[1]]">
 							{{ite.item}}
 						</span>
-					</div>
-					<div class="color" v-if="is_logo==1">
-						<span class="col1">定制LOGO</span>
-						<span class="chicun" @click="is_logo_xz=0" :class="is_logo_xz==0?'active1':''">否</span>
-						<span class="chicun" @click="is_logo_xz=1" :class="is_logo_xz==1?'active1':''">是</span>
-					</div>
-					<!-- <p class="color"><span class="tips jl">颜色</span><span class="chicun">深空灰</span><span class="chicun">银灰色</span><span class="chicun">钢琴白</span></p> -->
-					<div class="number">
-						<span class="tips">数量</span>
-						<div class="num">
-							<button v-on:click="subtract(count)" class="btn btn2"><span>-</span></button>
-							<input type="text"  v-model="count" style="width: 40px; height: 24px;">
-							<button v-on:click="add(count)" class="btn btn2"><span>+</span></button>
-						</div>
-					</div>
-					<div class="btnsub" @click="AddCart(goods.goods_id)">加入购物车</div>
-				</div>
-			</div>
-		</div>
-		<div class="shangp_detail">
-			<div class="goods_detail">
-				<div class="title">商品详情</div>
-				<div class="tupian">
-					<div v-html="goods.goods_content"></div>
-				</div>
-			</div>
-			<div class="recommendation">
-				<p class="tuijian">推荐商品</p>
-				<ul class="tuijian_goods">
-					<li v-for="tjgoods in recommend_goods">
-						<a :href="['productDetail.html?goods_id='+tjgoods.goods_id]">
-							<img :src="tjgoods.goods_thumb" alt="" width="224px" height="224px">
-							<p class="title">{{tjgoods.goods_name}}</p>
-							<p class="price" v-if="tjgoods.parent_id_path==28">参考价：<span>￥{{tjgoods.market_price}}</span></p>
-							<p class="price" v-else>参考价：<span>￥{{tjgoods.group_price}}</span></p>
-							<!-- parent_id_path -->
-						</a>
-					</li>
-					<!-- <li>
+                        </div>
+                        <div class="color" v-if="is_logo==1">
+                            <span class="col1">定制LOGO</span>
+                            <span class="chicun" @click="is_logo_xz=0" :class="is_logo_xz==0?'active1':''">否</span>
+                            <span class="chicun" @click="is_logo_xz=1" :class="is_logo_xz==1?'active1':''">是</span>
+                        </div>
+                        <!-- <p class="color"><span class="tips jl">颜色</span><span class="chicun">深空灰</span><span class="chicun">银灰色</span><span class="chicun">钢琴白</span></p> -->
+                        <div class="number">
+                            <span class="tips">数量</span>
+                            <div class="num">
+                                <button v-on:click="subtract(count)" class="btn btn2"><span>-</span></button>
+                                <input type="text" v-model="count" style="width: 40px; height: 24px;">
+                                <button v-on:click="add(count)" class="btn btn2"><span>+</span></button>
+                            </div>
+                        </div>
+                        <div class="btnsub" @click="AddCart(goods.goods_id)">加入购物车</div>
+                    </div>
+                </div>
+            </div>
+            <div class="shangp_detail">
+                <div class="goods_detail">
+                    <div class="title">商品详情</div>
+                    <div class="tupian">
+                        <div v-html="goods.goods_content"></div>
+                    </div>
+                </div>
+                <div class="recommendation">
+                    <p class="tuijian">推荐商品</p>
+                    <ul class="tuijian_goods">
+                        <li v-for="tjgoods in recommend_goods">
+                            <a :href="['productDetail.html?goods_id='+tjgoods.goods_id]">
+                                <img :src="tjgoods.goods_thumb" alt="" width="224px" height="224px">
+                                <p class="title">{{tjgoods.goods_name}}</p>
+                                <p class="price" v-if="tjgoods.parent_id_path==28">参考价：<span>￥{{tjgoods.market_price}}</span></p>
+                                <p class="price" v-else>参考价：<span>￥{{tjgoods.group_price}}</span></p>
+                                <!-- parent_id_path -->
+                            </a>
+                        </li>
+                        <!-- <li>
 						<img src="img/hz_product.png" alt="" width="224px" height="224px">
 						<p class="title">女士时尚背包</p>
 						<p class="price">参考价：<span>￥599</span></p>
@@ -126,283 +128,283 @@
 						<p class="title">女士时尚背包</p>
 						<p class="price">参考价：<span>￥599</span></p>
 					</li> -->
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	<div class="containerB" style="margin-top: 50px;">
-		<p>红礼供应链管理有限公司</p>
-	</div>
-	<div class="dialog-bg" id="dialog-bg">
-		<div class="img-box" id="img-box">
-    <img src="">
-	</div>
-</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerB" style="margin-top: 50px;">
+            <p>红礼供应链管理有限公司</p>
+        </div>
+        <div class="dialog-bg" id="dialog-bg">
+            <div class="img-box" id="img-box">
+                <img src="">
+            </div>
+        </div>
 </body>
 
 <script src="js/vue.min.js"></script>
 <script src="js/axios.min.js"></script>
 <script type="text/javascript">
-	var vm = new Vue({
-		el: '#vue_product',
-		data: {
-			// baseUrl:'http://192.168.1.17/tp510',
-			baseUrl:'http://www.yilitong.com',
-			userc:false,
-			kp1:0,
-			kp2:0,
-			kp3:'',
-			spec:'',//规格对应的价格等
-			specs:'',
-			guigelength:'',
-			goods:'',
-			users_address:'',//收货信息
-			filter_spec:'',//规格参数
-			addhover:true,
-			cur:0,
-			placeh:1,
-			advice_text:'',
-			count:1,
-			// 商品图片
-			imgUrl:'',
-			BigUrl:'',
-			chicun:['20英寸','24英寸','26英寸'],
-			xz:false,
-			type:'',
-			maxkuc:'',
-			price:'',
-			store_count:'',
-			quantity:1,
-			goods_key:[],
-			goods_val:[],
-			recommend_goods:'',
-			admin_id:'',
-			keyword:'',
-			is_logo:0,
-			is_logo_xz:0,
-		},
-		updated() {
-			var guigelen=this.type.length;
-			if(guigelen==0){
-				this.goods_key="";
-				this.goods_val="";
-				this.store_count=this.goods.store_count;
-				this.quantity=this.goods.quantity?this.goods.quantity:1;
-			}
-			if(guigelen==1){
-				var i1=this.kp1;
-				var c1=this.filter_spec[this.type[0]];
-				var k1=c1[i1].item_id;
-				var s1=this.type[0];
-				var goods_key=[];
-				goods_key.push(s1);
-				this.goods_key=goods_key;
-				this.goods_val=k1;
-				var specs=[];
-				var spec_id=c1[i1].item_id;
-				// console.log(spec_id);
-				this.price=this.spec[spec_id].price;
-				this.store_count=this.spec[spec_id].store_count;
-				this.quantity=this.spec[spec_id].quantity;
-				this.specs=specs;
-			}
-			if(guigelen==2){
-				var i1=this.kp1;
-				var i2=this.kp2;
-				var c1=this.filter_spec[this.type[0]];
-				var c2=this.filter_spec[this.type[1]];
-				var k1=c1[i1].item_id;
-				var k2=c2[i2].item_id;
-				var s1=this.type[0];
-				var s2=this.type[1];
-				var goods_key=[];
-				var goods_val=[];
-				goods_key.push(s1,s2);
-				// goods_key.push(s2);
-				var k=k1+'_'+k2;
-				// goods_val.push(k);
-				this.goods_key=goods_key;
-				this.goods_val=k;
-				var specs=[];
-				var spec_id=c1[i1].item_id+'_'+c2[i2].item_id;
-				// console.log(spec_id);
-				this.price=this.spec[spec_id].price;
-				this.store_count=this.spec[spec_id].store_count;
-				this.quantity=this.spec[spec_id].quantity;
-				this.specs=specs;
-			}
-			// var i1=this.kp1;
-			// var i2=this.kp2;
-			// var c1=this.filter_spec[this.type[0]];
-			// console.log(c1);
-			// var c2=this.filter_spec[this.type[1]];
-			// var k1=c1[i1].item_id;
-			// var k2=c2[i2].item_id;
-			// var s1=this.type[0];
-			// var s2=this.type[1];
-			// var goods_key=[];
-			// var goods_val=[];
-			// goods_key.push(s1,s2);
-			// // goods_key.push(s2);
-			// var k=k1+'_'+k2;
-			// // goods_val.push(k);
-			// this.goods_key=goods_key;
-			// this.goods_val=k;
-			// var specs=[
-			// 	
-			// ];
-			// // this.fileList.push({name: '', url: ''}); 
-			// var spec_id=c1[i1].item_id+'_'+c2[i2].item_id;
-			// // console.log(spec_id);
-			// this.price=this.spec[spec_id].price;
-			// this.store_count=this.spec[spec_id].store_count;
-			// this.quantity=this.spec[spec_id].quantity;
-			// this.specs=specs;
-			// 
-		},
-		created() {
-			console.log(localStorage);
-			if(!localStorage.admin_id){
-				window.location.href='login.html';
-			}else{
-				this.admin_id=localStorage.admin_id;
-			}
-			var url=window.location.href;
-			var i=url.indexOf('?');
-			var querystr=url.substr(i+1);
-			var arr1=querystr.split('&');
-			var arr2=new Object();
-			for  (i in arr1){
-				var ta=arr1[i].split('=');
-				arr2[ta[0]]=ta[1];
-			}
-			this.getGoodsDetail(arr2.goods_id);
-		},
-		methods: {
-			getGoodsDetail:function(e){
-				var baseurl=this.baseUrl;
-				var that=this;
-				var goods_id={
-					goods_id:e,
-					admin_id:that.admin_id
-				};
-				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-				axios.get(baseurl+'/index.php/home/RedGift/goodsInfo',{
-						params: goods_id
-				}).then(function(res){
-					console.log(res);
-					if(res.data.result==-11){
-						alert("该商品已下架");
-						window.location.href="index.html"
-					}else{
-						that.imgUrl=res.data.goods_images_list;
-						that.BigUrl=that.imgUrl[0].image_url;
-						that.goods=res.data.goods;
-						$('title').html(that.goods.goods_name+'-产品详情');
-						that.users_address=res.data.users_address;
-						var leiixn=res.data.filter_spec;
-						var leiixnstr=[];
-						for(var st in leiixn) {
-							leiixnstr.push(st);
-						}
-						that.type=leiixnstr;
-						that.is_logo=res.data.goods.is_logo;
-						console.log(that.is_logo);
-						that.filter_spec=res.data.filter_spec;
-						// console.log(leiixnstr.length);
-						that.guigelength=leiixnstr.length
-						that.spec=res.data.spec_goods_price;
-						// 推荐商品
-						that.recommend_goods=res.data.recommend_goods;
-					}
-					
-				});
-			},
-			AddCart:function(e){
-				var address=this.users_address;
-				if(address.user_name==''|address.mobile==''|address.province==''|address.city==''|address.district==''|address.address){
-					alert('收货信息不完整，请先填写收货信息！');
-					window.location.href='usercenter.html?ed=1';
-				}
-				var baseurl=this.baseUrl;
-				var that=this;
-				var goods_num=that.count;
-				var goods_spec=that.specs;
-				var list={
-					goods_id:e,
-					goods_num:goods_num,//商品数量
-					// goods_spec:goods_spec,
-					// goods_key:that.goods_key,
-					// goods_val:that.goods_val,
-					goods_key:JSON.stringify(that.goods_key),
-					goods_val:that.goods_val,
-					is_logo:that.is_logo_xz,
-					admin_id:that.admin_id
-				};
-				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-				axios.get(baseurl+'/index.php/home/RedGift/ajaxAddCart',{
-						params: list
-				}).then(function(res){
-					if(res.data.status==1){
-						if (confirm("加入购物车成功!")) {
-							window.location.href='shopcart.html'
-						}else{
-							window.location.href='shopcart.html'
-						}
-					}else{
-						alert(res.data.msg);
-					}
-					console.info(res);
-					// window.location.href="shopcart.html";
-				});
-			},
-			ChooseSpec1:function(a){
-				this.kp1=a;
-			},
-			ChooseSpec2:function(a){
-				this.kp2=a;
-			},
-			ChooseSpec3:function(a){
-				this.kp3=a;
-			},
-			add:function(count){
-				var maxcount=this.store_count;
-				if(this.count>=maxcount){
-					this.count=maxcount;
-				}else{
-					this.count++;
-				}
-			},
-			subtract:function(count){
-				var mincount=this.quantity;
-			  if (this.count<=mincount){
-				this.count=mincount;
-			  }else {
-				this.count-=1;
-			  }
-			},
-			getIndex:function(e){
-				this.BigUrl=e.image_url;
-			},
-			onUsercenter:function(){
-				this.userc=!this.userc;
-			},
-			Lagout:function(){
-				localStorage.clear();
-				window.location.href='index.html';
-			},
-			UserCenter:function(){
-				window.location.href='usercenter.html?ed=2';
-			},
-			sousuo:function(e){
-				window.location.href="sousuo.html?keyword="+e;
-			},
-		details: function() {
-			return  this.site + " - 学的不仅是技术，更是梦想！";
-		}
-		}
-	})
+    var vm = new Vue({
+        el: '#vue_product',
+        data: {
+            // baseUrl:'http://192.168.1.17/tp510',
+            baseUrl: 'http://www.yilitong.com',
+            userc: false,
+            kp1: 0,
+            kp2: 0,
+            kp3: '',
+            spec: '', //规格对应的价格等
+            specs: '',
+            guigelength: '',
+            goods: '',
+            users_address: '', //收货信息
+            filter_spec: '', //规格参数
+            addhover: true,
+            cur: 0,
+            placeh: 1,
+            advice_text: '',
+            count: 1,
+            // 商品图片
+            imgUrl: '',
+            BigUrl: '',
+            chicun: ['20英寸', '24英寸', '26英寸'],
+            xz: false,
+            type: '',
+            maxkuc: '',
+            price: '',
+            store_count: '',
+            quantity: 1,
+            goods_key: [],
+            goods_val: [],
+            recommend_goods: '',
+            admin_id: '',
+            keyword: '',
+            is_logo: 0,
+            is_logo_xz: 0,
+        },
+        updated() {
+            var guigelen = this.type.length;
+            if (guigelen == 0) {
+                this.goods_key = "";
+                this.goods_val = "";
+                this.store_count = this.goods.store_count;
+                this.quantity = this.goods.quantity ? this.goods.quantity : 1;
+            }
+            if (guigelen == 1) {
+                var i1 = this.kp1;
+                var c1 = this.filter_spec[this.type[0]];
+                var k1 = c1[i1].item_id;
+                var s1 = this.type[0];
+                var goods_key = [];
+                goods_key.push(s1);
+                this.goods_key = goods_key;
+                this.goods_val = k1;
+                var specs = [];
+                var spec_id = c1[i1].item_id;
+                // console.log(spec_id);
+                this.price = this.spec[spec_id].price;
+                this.store_count = this.spec[spec_id].store_count;
+                this.quantity = this.spec[spec_id].quantity;
+                this.specs = specs;
+            }
+            if (guigelen == 2) {
+                var i1 = this.kp1;
+                var i2 = this.kp2;
+                var c1 = this.filter_spec[this.type[0]];
+                var c2 = this.filter_spec[this.type[1]];
+                var k1 = c1[i1].item_id;
+                var k2 = c2[i2].item_id;
+                var s1 = this.type[0];
+                var s2 = this.type[1];
+                var goods_key = [];
+                var goods_val = [];
+                goods_key.push(s1, s2);
+                // goods_key.push(s2);
+                var k = k1 + '_' + k2;
+                // goods_val.push(k);
+                this.goods_key = goods_key;
+                this.goods_val = k;
+                var specs = [];
+                var spec_id = c1[i1].item_id + '_' + c2[i2].item_id;
+                // console.log(spec_id);
+                this.price = this.spec[spec_id].price;
+                this.store_count = this.spec[spec_id].store_count;
+                this.quantity = this.spec[spec_id].quantity;
+                this.specs = specs;
+            }
+            // var i1=this.kp1;
+            // var i2=this.kp2;
+            // var c1=this.filter_spec[this.type[0]];
+            // console.log(c1);
+            // var c2=this.filter_spec[this.type[1]];
+            // var k1=c1[i1].item_id;
+            // var k2=c2[i2].item_id;
+            // var s1=this.type[0];
+            // var s2=this.type[1];
+            // var goods_key=[];
+            // var goods_val=[];
+            // goods_key.push(s1,s2);
+            // // goods_key.push(s2);
+            // var k=k1+'_'+k2;
+            // // goods_val.push(k);
+            // this.goods_key=goods_key;
+            // this.goods_val=k;
+            // var specs=[
+            // 	
+            // ];
+            // // this.fileList.push({name: '', url: ''}); 
+            // var spec_id=c1[i1].item_id+'_'+c2[i2].item_id;
+            // // console.log(spec_id);
+            // this.price=this.spec[spec_id].price;
+            // this.store_count=this.spec[spec_id].store_count;
+            // this.quantity=this.spec[spec_id].quantity;
+            // this.specs=specs;
+            // 
+        },
+        created() {
+            console.log(localStorage);
+            if (!localStorage.admin_id) {
+                window.location.href = 'login.html';
+            } else {
+                this.admin_id = localStorage.admin_id;
+            }
+            var url = window.location.href;
+            var i = url.indexOf('?');
+            var querystr = url.substr(i + 1);
+            var arr1 = querystr.split('&');
+            var arr2 = new Object();
+            for (i in arr1) {
+                var ta = arr1[i].split('=');
+                arr2[ta[0]] = ta[1];
+            }
+            this.getGoodsDetail(arr2.goods_id);
+        },
+        methods: {
+            getGoodsDetail: function(e) {
+                var baseurl = this.baseUrl;
+                var that = this;
+                var goods_id = {
+                    goods_id: e,
+                    admin_id: that.admin_id
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                axios.get(baseurl + '/index.php/home/RedGift/goodsInfo', {
+                    params: goods_id
+                }).then(function(res) {
+                    console.log(res);
+                    if (res.data.result == -11) {
+                        alert("该商品已下架");
+                        window.location.href = "index.html"
+                    } else {
+                        that.imgUrl = res.data.goods_images_list;
+                        that.BigUrl = that.imgUrl[0].image_url;
+                        that.goods = res.data.goods;
+                        $('title').html(that.goods.goods_name + '-产品详情');
+                        that.users_address = res.data.users_address;
+                        var leiixn = res.data.filter_spec;
+                        var leiixnstr = [];
+                        for (var st in leiixn) {
+                            leiixnstr.push(st);
+                        }
+                        that.type = leiixnstr;
+                        that.is_logo = res.data.goods.is_logo;
+                        console.log(that.is_logo);
+                        that.filter_spec = res.data.filter_spec;
+                        // console.log(leiixnstr.length);
+                        that.guigelength = leiixnstr.length
+                        that.spec = res.data.spec_goods_price;
+                        // 推荐商品
+                        that.recommend_goods = res.data.recommend_goods;
+                    }
+
+                });
+            },
+            AddCart: function(e) {
+                var address = this.users_address;
+                if (address.user_name == '' | address.mobile == '' | address.province == '' | address.city == '' | address.district == '' | address.address) {
+                    alert('收货信息不完整，请先填写收货信息！');
+                    window.location.href = 'usercenter.html?ed=1';
+                }
+                var baseurl = this.baseUrl;
+                var that = this;
+                var goods_num = that.count;
+                var goods_spec = that.specs;
+                var list = {
+                    goods_id: e,
+                    goods_num: goods_num, //商品数量
+                    // goods_spec:goods_spec,
+                    // goods_key:that.goods_key,
+                    // goods_val:that.goods_val,
+                    goods_key: JSON.stringify(that.goods_key),
+                    goods_val: that.goods_val,
+                    is_logo: that.is_logo_xz,
+                    admin_id: that.admin_id
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                axios.get(baseurl + '/index.php/home/RedGift/ajaxAddCart', {
+                    params: list
+                }).then(function(res) {
+                    if (res.data.status == 1) {
+                        if (confirm("加入购物车成功!")) {
+                            window.location.href = 'shopcart.html'
+                        } else {
+                            window.location.href = 'shopcart.html'
+                        }
+                    } else {
+                        alert(res.data.msg);
+                    }
+                    console.info(res);
+                    // window.location.href="shopcart.html";
+                });
+            },
+            ChooseSpec1: function(a) {
+                this.kp1 = a;
+            },
+            ChooseSpec2: function(a) {
+                this.kp2 = a;
+            },
+            ChooseSpec3: function(a) {
+                this.kp3 = a;
+            },
+            add: function(count) {
+                var maxcount = this.store_count;
+                if (this.count >= maxcount) {
+                    this.count = maxcount;
+                } else {
+                    this.count++;
+                }
+            },
+            subtract: function(count) {
+                var mincount = this.quantity;
+                if (this.count <= mincount) {
+                    this.count = mincount;
+                } else {
+                    this.count -= 1;
+                }
+            },
+            getIndex: function(e) {
+                this.BigUrl = e.image_url;
+            },
+            onUsercenter: function() {
+                this.userc = !this.userc;
+            },
+            Lagout: function() {
+                localStorage.clear();
+                window.location.href = 'index.html';
+            },
+            UserCenter: function() {
+                window.location.href = 'usercenter.html?ed=2';
+            },
+            sousuo: function(e) {
+                window.location.href = "sousuo.html?keyword=" + e;
+            },
+            details: function() {
+                return this.site + " - 学的不仅是技术，更是梦想！";
+            }
+        }
+    })
 </script>
 
 
