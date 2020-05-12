@@ -120,7 +120,7 @@
 							<td align="center" class="handle">
 								<div style="text-align: center; width: 170px; max-width:170px;">
 									<a href="{:Url('Article/link',array('act'=>'edit','link_id'=>$vo['link_id']))}" class="btn blue"><i class="fa fa-pencil-square-o"></i>编辑</a>
-									<a class="btn red"  href="javascript:void(0)" data-url="{:Url('Article/linkHandle')}" data-id="{$vo.link_id}" onClick="delfun(this)"><i class="fa fa-trash-o"></i>删除</a>
+									<a class="btn red"  href="javascript:void(0)" data-url="{:Url('Article/linkHandle',array('act'=>'del','link_id'=>$vo.link_id))}" onClick="delfun(this)"><i class="fa fa-trash-o"></i>删除</a>
 								</div>
 							</td>
 							<td align="" class="" style="width: 100%;">

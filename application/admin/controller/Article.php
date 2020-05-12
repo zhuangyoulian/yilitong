@@ -235,27 +235,22 @@ class Article extends Base {
     }
     
     public function linkHandle(){
-        $data = I('post.');
+        $data = I('');
     	if($data['act'] == 'add'){
     		stream_context_set_default(array('http'=>array('timeout' =>2)));
-//           send_http_status('311');
     		$r = Db::name('friend_link')->insert($data);
     	}
     	if($data['act'] == 'edit'){
     		$r = Db::name('friend_link')->where('link_id', $data['link_id'])->update($data);
     	}
-    	
     	if($data['act'] == 'del'){
     		$r = Db::name('friend_link')->where('link_id', $data['link_id'])->delete();
-    		if($r) exit(json_encode(1));
     	}
-    	
     	if($r){
     		$this->success("操作成功",Url::build('Admin/Article/linkList'));
-    	}else{
-    		$this->error("操作失败",Url::build('Admin/Article/linkList'));
     	}
     }  
+
 
     public function changeIndex(){
         $Article =  Db::name('Article');

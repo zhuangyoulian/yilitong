@@ -108,8 +108,8 @@ class RedGift extends Base {
         //Brand
         $brand_list = Db::name('ad')->where('pid = 53 and enabled=1')->field('ad_code,ad_link')->select();
         $field = "goods_id,goods_name,goods_thumb,shop_price,market_price,group_price";
-        //当季热推 按排序查询4条数据
-        $goods_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0')->order('goods_id desc')->limit('8')->select();
+        //最新商品
+        $goods_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0')->order('goods_id desc')->limit('20')->select();
 
         $rs=array('result'=>'1','info'=>'请求成功','goods_list'=>$goods_list,'brand_list'=>$brand_list);
         exit(json_encode($rs));
