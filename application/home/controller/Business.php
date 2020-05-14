@@ -49,10 +49,13 @@ class Business extends Base{
     public function logout(){
 
         setcookie('supplier_name','',time()-3600,'/');
+        setcookie('redsupplier_name','',time()-3600,'/');
         setcookie('cn','',time()-3600,'/');
         setcookie('supplier_admin_id','',time()-3600,'/');
+        setcookie('redsupplier_red_admin_id','',time()-3600,'/');
         session_unset();
         session_destroy();
+
         $this->redirect('Home/Index/index');
         exit;
 
@@ -928,10 +931,11 @@ class Business extends Base{
      * 
      */
 	public function login_out(){
-      
         setcookie('supplier_name','',time()-3600,'/');
+        setcookie('redsupplier_name','',time()-3600,'/');
         setcookie('cn','',time()-3600,'/');
         setcookie('supplier_admin_id','',time()-3600,'/');
+        setcookie('redsupplier_red_admin_id','',time()-3600,'/');
 		session('supplier',null);
         session_unset();
         session_destroy();

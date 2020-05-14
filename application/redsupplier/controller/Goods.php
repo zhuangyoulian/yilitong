@@ -18,7 +18,7 @@ class Goods extends Base {
 
 
 
-        /**
+     /**
      * @return 品牌列表
      */
 
@@ -60,12 +60,12 @@ class Goods extends Base {
                 adminLog('编辑品牌 '.input('name').'');
             }else{
               if(Db::name('Brand')->where('name',$data['name'])->count() !=0)
-                  $this->success("品牌已经存在!!!",Url::build('Supplier/Goods/brandList',array('p'=>I('p'))));
+                  $this->success("品牌已经存在!!!",Url::build('RedSupplier/Goods/brandList',array('p'=>I('p'))));
               else
                  Db::name("Brand")->insert($data);
              adminLog('添加品牌 '.input('name').'');
             }
-            $this->success("操作成功,请等待平台审核!!!",Url::build('Supplier/Goods/brandList',array('p'=>I('p'))));
+            $this->success("操作成功,请等待平台审核!!!",Url::build('RedSupplier/Goods/brandList',array('p'=>I('p'))));
             exit;
         }
         $cat_list = Db::name('goods_category')->where("parent_id = 0")->select(); // 已经改成联动菜单

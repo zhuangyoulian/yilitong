@@ -48,8 +48,10 @@ class RedBusiness extends Base{
      */
 
     public function logout(){
+        setcookie('supplier_name','',time()-3600,'/');
         setcookie('redsupplier_name','',time()-3600,'/');
         setcookie('cn','',time()-3600,'/');
+        setcookie('supplier_admin_id','',time()-3600,'/');
         setcookie('redsupplier_red_admin_id','',time()-3600,'/');
         session_unset();
         session_destroy();
@@ -659,13 +661,15 @@ class RedBusiness extends Base{
      */
 	public function login_out(){
         
+        setcookie('supplier_name','',time()-3600,'/');
         setcookie('redsupplier_name','',time()-3600,'/');
         setcookie('cn','',time()-3600,'/');
+        setcookie('supplier_admin_id','',time()-3600,'/');
         setcookie('redsupplier_red_admin_id','',time()-3600,'/');
-		    session('redsupplier',null);
+		session('redsupplier',null);
         session_unset();
         session_destroy();
-		    $this->redirect('/Home/RedBusiness/login');
+	    $this->redirect('/Home/RedBusiness/login');
       	exit;
 	}
 	

@@ -426,7 +426,6 @@ function submit_order()
 		data : $('#cart2_form').serialize()+"&act=submit_order",// 你的formid
         dataType: "json",
 		success: function(data){
-												
 			if(data.status != '1')
 			{
 				// alert(data.msg); //执行有误
@@ -441,15 +440,9 @@ function submit_order()
 					 location.href ="{:Url('Home/User/login')}";
           }
 			});
-				
-				
-				
 				ajax_return_status = 1; // 上一次ajax 已经返回, 可以进行下一次 ajax请求
-				
 				return false;
 			}else if(data.status == 1){
-        console.log(data);     
-        return;
         $("#postFee").text(data.result.postFee); // 物流费
         $("#couponFee").text(data.result.couponFee);// 优惠券      
         $("#balance").text(data.result.balance);// 余额 

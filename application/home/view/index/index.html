@@ -1018,7 +1018,16 @@
             },
             getData: function() {
                 var that = this;
-                var productUrl = baseUrl+"/home/GoodsAPI/var_json?token=8d0b6604701b9a30c2547ffb8ee6a3c1";
+                var cururl=window.location.href.substring(0,6);
+
+                if(cururl.indexOf('https')==-1){
+
+                    var productUrl = baseUrl+"/home/GoodsAPI/var_json?token=8d0b6604701b9a30c2547ffb8ee6a3c1";
+                }else{
+
+                    var productUrl = baseUrl2+"/home/GoodsAPI/var_json?token=8d0b6604701b9a30c2547ffb8ee6a3c1";
+                }
+
                 // productUrl = "http://api.douban.com/v2/movie/top250";
 
                 console.log("请求url:" + productUrl);
@@ -1117,7 +1126,16 @@
             },
             getData: function() {
                 var that = this;
-                var product1Url = baseUrl+"/home/GoodsAPI/popular_json?token=5fa3852b08951fcdc4d2e60f89a85bfe";
+                var cururl=window.location.href.substring(0,6);
+
+                if(cururl.indexOf('https')==-1){
+
+                    var product1Url = baseUrl+"/home/GoodsAPI/popular_json?token=5fa3852b08951fcdc4d2e60f89a85bfe";
+                }else{
+
+                    var product1Url = baseUrl2+"/home/GoodsAPI/popular_json?token=5fa3852b08951fcdc4d2e60f89a85bfe";
+                }
+
                 // product1Url = "http://api.douban.com/v2/movie/top250";
 
                 console.log("请求url:" + product1Url);
@@ -1173,7 +1191,6 @@
     }
     var uname = getCookie('user_name');
     var supname =getCookie('supplier_name');
-
 
     if((uname == '' || uname == undefined)&&(supname == '' || supname == undefined)){
         $('.islogin').css("display","none");

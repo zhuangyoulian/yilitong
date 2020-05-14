@@ -229,22 +229,27 @@
     }
 
     function close_cart_more(){
-      if(!confirm('确定要批量删除吗?'))
-      return false;
-      // 循环获取复选框选中的值
-      var chk_value = [];
-      $("tr[class='trSelected']").each(function(){
-        var s_name = $(this).attr('name');
-        var goods_id = s_name.replace("cart_select['",'').replace("']",'');
-        chk_value.push(goods_id);
-      })
-      // ajax  修改
-      if(chk_value && chk_value.length > 0){
-        ajax_cart_order(chk_value.join(','));
-      }else{
-        alert('删除失败，请选择需要删除的商品');
-        return false;
-      }
+      layer.confirm('确认删除？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+          // 循环获取复选框选中的值
+          var chk_value = [];
+          $("tr[class='trSelected']").each(function(){
+            var s_name = $(this).attr('name');
+            var goods_id = s_name.replace("cart_select['",'').replace("']",'');
+            chk_value.push(goods_id);
+          })
+          // ajax  修改
+          if(chk_value && chk_value.length > 0){
+            ajax_cart_order(chk_value.join(','));
+          }else{
+            alert('删除失败，请选择需要删除的商品');
+            return false;
+          }
+        }, function(index){
+            layer.close(index);
+        }
+      );
     }
     // ajax 批量删除商品
     function ajax_cart_order(goods_id)
@@ -255,21 +260,13 @@
         data :{id:goods_id}, 
         success: function(v){
           var v =  eval('('+v+')');                                 
-          if(v.hasOwnProperty('status') && (v.status == 1)){
-            alert(v.msg);    
+          if(v.hasOwnProperty('status') && (v.status == 1)){        
+            layer.alert(v.msg, {icon: 1});  
             ajax_get_table('search-form2',cur_page);
           }else{
-            layer.msg(v.msg, {icon: 2,time: 1000}); //alert(v.msg);
+            layer.alert(v.msg, {icon: 2});  
+            // layer.msg(v.msg, {icon: 2,time: 1000}); //alert(v.msg);
           }
-          
-          //  if(data.status == 1){
-          //   alert(data.msg);
-          //   // ajax_get_table('search-form2',cur_page);
-          //   location.reload();
-          // }else if(data.status == -1){
-          //   alert();
-          //   alert(data.msg);
-          // }
         }
       });
     }

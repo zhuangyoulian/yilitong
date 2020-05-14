@@ -676,7 +676,7 @@ class Goods extends Base {
         }
         $model = Db::name('Goods');
         $count = $model->where($where)->count();
-        $Page  = new AjaxPage($count,10);
+        $Page  = new AjaxPage($count,15);
 		
         /**  搜索条件下 分页赋值
         foreach($condition as $key=>$val) {

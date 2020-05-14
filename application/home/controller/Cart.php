@@ -328,7 +328,6 @@ class Cart extends Base {
             if(empty($coupon_id) && !empty($couponCode))
                $coupon_id_s = Db::name('CodeList')->where("code", $couponCode)->value('id');//新需求使用优惠卷码
             $result = $this->cartLogic->addOrder($this->user_id,$address_id,$invoice_title,$coupon_id_s,$car_price,$user_note,$recommend_code,$order_prom_id_s,$selected); // 添加订单
-            
             exit(json_encode($result));            
         }
             $return_arr = array('status'=>1,'msg'=>'计算成功','result'=>$car_price); // 返回结果状态
