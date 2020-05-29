@@ -444,78 +444,39 @@
           <!-- 圖片 -->
 
           <div class="listPic"> 
-
-          		<a rel="nofollow" target="_blank" href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" style="width:200px;height:200px;">
-
-                	<img width="200" height="200" style="display: block;" src="{$v.goods_thumb}" class="fn_img_lazy"> 
-
-                </a>             
-
+             <!-- 防疫专区的判断，不显示按钮 -->
+          		<a rel="nofollow" target="_blank" <if condition="$v.cat_id neq 1118"/> href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" </if> style="width:200px;height:200px;">
+              	<img width="200" height="200" style="display: block;" src="{$v.goods_thumb}" class="fn_img_lazy"> 
+              </a>             
+           
           </div>
 
           <div class="list-scroll J_scrollBox clearfix"> <a href="javascript:void(0);" class="list-scroll-left cbtn"></a>
 
-            <!--div class="list-scroll-warp J_hideBox">
-
-              <dl class="J_mBox clearfix">            
-
-              <foreach name="goods_images" item="v2" key="k2">
-
-                  <if condition="$v2[goods_id] eq $v[goods_id]">
-
-                    <dd>
-
-	                    <a href="javascript:void(0);">
-
-                        	<img width="30"  height="30" data-img="{$v2[image_url]}" src="{$v2[image_url]}" style="display: block;">
-
-                        </a> 
-
-                    </dd>
-
-                  </if>
-
-              </foreach>
-
-              </dl>
-
-            </div-->
-
             <a href="javascript:void(0);" class="list-scroll-right cbtn"></a> </div>
 
-          
-
           <!-- 价格 -->
-
           <div class="discountPrice">
-
+            <if condition="$v.cat_id neq 1118"/>  <!-- 防疫专区的判断，不显示按钮 -->
             <div class="price-cash">
-
               <span class="text13 colf22e01">¥</span>
-
               <span class="text18 colf22e01 fontT" id="itemPrice_201510CM130003397">
-                  
-              <if condition="$v['shop_price'] lt 0.5">
-                  价格待定
-              <else/>
-                  {$v[shop_price]}
-              </if>
+                <if condition="$v['shop_price'] lt 0.5">
+                    价格待定
+                <else/>
+                    {$v[shop_price]}
+                </if>
               </span>
-
-
               <del></del> 
-
-              <!--span class="text12" style="float: right;color: gray;position: relative;top:3px">{$v[sales_sum]}人付款</span-->
-
             </div>
-
+            </if>
           </div>
 
           <!-- 价格 end--> 
 
           <!-- 品名 -->
 
-          <div class="listDescript"> <a target="_blank" href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" class="text13">{$v[goods_name]}</a> </div>
+          <div class="listDescript"> <a target="_blank"  <if condition="$v.cat_id neq 1118"/>  href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" </if> class="text13">{$v[goods_name]}</a> </div>
 
           <!-- 價格及字樣 -->
 

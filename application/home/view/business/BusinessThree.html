@@ -107,7 +107,7 @@
 								<div class="upload-settlement-agreement">
 									<div id="settlement-agreement"></div>
 									<if condition="$row.reading_protocol"><span><img src="{$row.reading_protocol}" style="margin-left:10px;display: block;width:50px;height: 40px;float: left;"/></span></if>
-									<p class="shop-info-tips" style="margin-top:10px;">签署协议并上传，单图片大小不能超过2M，格式为：jpg、png、jpeg、gif</p>
+									<p class="shop-info-tips" style="margin-top:10px;">选择签署协议的3张图片并上传，请按顺序单独上传，单图片大小不能超过2M，格式为：jpg、png、jpeg、gif</p>
 								</div>
 							</div>
 						</div>
@@ -116,6 +116,7 @@
 				<input type="hidden" name="logo" id="logo" value="{$row.logo}">
 				<input type="hidden" name="type" value='<if condition="$row.supplier_name neq null">1</if>'>
 				<input type="hidden" name="reading_protocol"  id="reading_protocol" value="{$row.reading_protocol}">
+				<input type="hidden" name="url"  id="url" >
 				<div class="pre2-next2-btn">
 					<div class="pre-2"><a href="{:Url('Home/Business/BusinessTwo')}">上一步</a></div>
 					<div class="next-2"><a href="javascript:void(0)">下一步</a></div>
@@ -132,6 +133,7 @@
 					//开户许可证上传
 					var logo=$("input[name='logo']").val();
 					var reading_protocol=$("input[name='reading_protocol']").val();
+					console.log(reading_protocol);
 					if($('.shop-name').val() == '') {
 						alert('请填写写店铺名称');return;
 					}else if(logo=="") {
@@ -147,7 +149,8 @@
 								supplier_name:$("input[name='supplier_name']").val(),
 								type:$("input[name='type']").val(),
 								logo:$('#logo').val(),
-								reading_protocol:$('#reading_protocol').val(),
+								// reading_protocol:$('#reading_protocol').val(),
+								reading_protocol:reading_protocol,
 							},
 							success:function(data){
 								if(data=='1'){
@@ -185,6 +188,17 @@
 								alert('上传失败');return;
 							}
 							val.val(data);
+							//入驻协议的图片拼接
+							var url_ss = $("input[name='url']").val();
+							if (url_ss) {
+								var s1 = url_ss;
+								var s2 = s1+","+data;  	
+								$("input[name='url']").val(s2);
+								$("input[name='reading_protocol']").val(s2);
+							}else{
+								$("input[name='url']").val(data);
+								$("input[name='reading_protocol']").val(data);
+							}
 						},
 						error:function( err ) {
 							console.info( err );

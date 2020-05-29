@@ -31,7 +31,7 @@ class Goods extends Base {
         $Page = $pager = new Page($count,15);
         $brandList = $model->where($where)->order("`id` desc")->limit($Page->firstRow.','.$Page->listRows)->select();
         $show  = $Page->show();
-        $cat_list = Db::name('goods_category')->where("parent_id = 0")->column('id,name'); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->column('id,name'); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $this->assign('pager',$pager);
         $this->assign('show',$show);
@@ -63,12 +63,12 @@ class Goods extends Base {
                   $this->success("品牌已经存在!!!",Url::build('RedSupplier/Goods/brandList',array('p'=>I('p'))));
               else
                  Db::name("Brand")->insert($data);
-             adminLog('添加品牌 '.input('name').'');
+             adminLog('申请添加品牌 '.input('name').'');
             }
             $this->success("操作成功,请等待平台审核!!!",Url::build('RedSupplier/Goods/brandList',array('p'=>I('p'))));
             exit;
         }
-        $cat_list = Db::name('goods_category')->where("parent_id = 0")->select(); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $brand = Db::name("Brand")->find($id);
         $this->assign('brand',$brand);
@@ -329,6 +329,10 @@ class Goods extends Base {
         $goods_id = $_GET['id'];
         Db::name('red_goods')->where('goods_id',$goods_id)->update(array('is_delete'=>'0','is_on_sale'=>'0','last_update' => time()));
         Db::name('goods')->where('red_goods_id',$goods_id)->update(array('is_delete'=>'0','is_on_sale'=>'0','is_recommend'=>'0','is_new'=>'0','is_hot'=>'0'));
+
+        $goods_name = Db::name('RedGoods')->where('goods_id',$goods_id)->value('goods_name');
+        adminLog('重新上架 '.$goods_name.'');
+
         delFile(RUNTIME_PATH);
         $return_arr = array('status' => 1,'msg' => '操作成功','data'  =>'',);   //$return_arr = array('status' => -1,'msg' => '删除失败','data'  =>'',);        
         $this->ajaxReturn($return_arr);
@@ -354,8 +358,12 @@ class Goods extends Base {
             Db::name('goods_collect')->where('goods_id',$re)->delete();
         }
         Db::name('goods')->where('red_goods_id',$goods_id)->update(array('is_delete'=>'1','is_on_sale'=>'0','is_recommend'=>'0','is_new'=>'0','is_hot'=>'0','examine'=>'0'));
+
+        $goods_name = Db::name('RedGoods')->where('goods_id',$goods_id)->value('goods_name');
+        adminLog('删除商品至回收站 '.$goods_name.'');
+
         delFile(RUNTIME_PATH);
-                     
+
         $return_arr = array('status' => 1,'msg' => '操作成功','data'  =>'',);   //$return_arr = array('status' => -1,'msg' => '删除失败','data'  =>'',);        
         $this->ajaxReturn($return_arr);
     }
@@ -407,17 +415,20 @@ class Goods extends Base {
                 }
             }
 
+            $goods_name = Db::name('RedGoods')->where('goods_id',$goods_id)->value('goods_name');
+            adminLog('彻底删除商品（包括图片路径）:'.$goods_name.'');     
             // 删除此商品        
             Db::name("RedGoods")->where('goods_id ='.$goods_id)->delete();          //红礼商品表
             Db::name("red_goods_images")->where('goods_id ='.$goods_id)->delete();  //红礼商品相册
             Db::name("red_goods_price")->where('goods_id ='.$goods_id)->delete();   //红礼商品规格
             Db::name("red_spec_image")->where('goods_id ='.$goods_id)->delete();    //红礼商品规格图片
             Db::name("red_cart")->where('goods_id ='.$goods_id)->delete();          //红礼购物车
-            Db::name("Goods")->where('ren_goods_id ='.$goods_id)->delete();  //商品表
-            Db::name("cart")->where('ren_goods_id ='.$goods_id)->delete();  // 购物车
-            Db::name("goods_images")->where('ren_goods_id ='.$goods_id)->delete();  //商品相册
+            Db::name("Goods")->where('red_goods_id ='.$goods_id)->delete();  //商品表
+            Db::name("cart")->where('red_goods_id ='.$goods_id)->delete();  // 购物车
+            Db::name("goods_images")->where('red_goods_id ='.$goods_id)->delete();  //商品相册
+
             delFile(RUNTIME_PATH);    
-        }         
+        }    
             $return_arr = array('status' => 1,'msg' => '操作成功','data'  =>'',);   
             $this->ajaxReturn($return_arr);
     }

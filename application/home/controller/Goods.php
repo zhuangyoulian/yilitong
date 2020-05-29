@@ -72,8 +72,6 @@ class Goods extends Base {
         
         // 分类菜单显示
         $goodsCate = Db::name('GoodsCategory')->where("id", $id)->find();// 当前分类
-    
-        //($goodsCate['level'] == 1) && header('Location:'.Url::build('Home/Channel/index',array('cat_id'=>$id))); //一级分类跳转至大分类馆
         $cateArr = $goodsLogic->get_goods_cate($goodsCate);
 
         
@@ -109,10 +107,8 @@ class Goods extends Base {
             $field = "goods_id,cat_id,goods_name,goods_thumb,shop_price,market_price,goods_remark,comment_count";
             $goods_list = Db::name('goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->limit($page->firstRow.','.$page->listRows)->select();
             $filter_goods_id2 = get_arr_column($goods_list, 'goods_id');
-          //  if($filter_goods_id2)
-         //   $goods_images = Db::name('goods_images')->where("goods_id", "in", implode(',', $filter_goods_id2))->cache(true)->select();
         }
-        // print_r($filter_menu);         
+        
         $goods_category = Db::name('goods_category')->where('is_show=1')->cache(true)->column('id,name,parent_id,level,title,keywords,description'); // 键值分类数组
 
         $navigate_cat = navigate_goods($id); // 面包屑导航         
@@ -900,8 +896,6 @@ class Goods extends Base {
         {
             $goods_list = Db::name('goods')->where(['is_on_sale'=>1,'goods_id'=>['in',implode(',', $filter_goods_id)]])->order("$sort $sort_asc")->limit($page->firstRow.','.$page->listRows)->select();
             $filter_goods_id2 = get_arr_column($goods_list, 'goods_id');
-            //if($filter_goods_id2)
-            //$goods_images = Db::name('goods_images')->where("goods_id", "in",implode(',', $filter_goods_id2))->select();
         }    
                 
         $this->assign('goods_list',$goods_list);  

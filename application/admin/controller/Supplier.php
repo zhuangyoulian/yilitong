@@ -324,11 +324,12 @@ class Supplier extends Base{
 
         $supplier_id = I('get.id');
         $supplier = Db::name('supplier')->where(array('supplier_id'=>$supplier_id))->find();
-        if(!$supplier)
+        if(!$supplier){
             exit($this->error('入驻商家不存在'));
+        }
+        $supplier['reading_protocol'] = explode(',',$supplier['reading_protocol']);
 		if(IS_POST){
 			$status = I('status');
-
 			$row = Db::name('supplier')->where(array('supplier_id'=>$supplier_id))->update($_POST);
 			//同步修改商铺设置的LOGO
 			if($supplier['logo'] != input('logo')){

@@ -512,10 +512,14 @@ function img_call_back(fileurl_tmp)
                     <label>价格：</label>
                     <div class="goodsInfos-dec goods-prise">
                         <!-- 口罩商品不显示价格 -->
-                        <if condition="$goods['shop_price'] lt 0.5">
-                            <span>价格待定</span>
+                        <if condition="$goods.cat_id eq 1118"/>  <!-- 防疫专区的判断，不显示按钮 -->
+                                <span>价格待定</span>
                         <else/>
-                            ￥<span id="goods_price">{$goods['shop_price']}</span>
+                            <if condition="$goods['shop_price'] lt 0.5">
+                                <span>价格待定</span>
+                            <else/>
+                                ￥<span id="goods_price">{$goods['shop_price']}</span>
+                            </if>
                         </if>
 
 
@@ -625,12 +629,12 @@ function img_call_back(fileurl_tmp)
                         </div>
                     </div>
 
-                    <div class="goodsInfo-group clearfix">
+                    <!-- <div class="goodsInfo-group clearfix">
                         <label>销量：</label>
                         <div class="goodsInfos-dec">
                             {$goods.sales_sum}
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="goodsInfo-group clearfix">
                         <label>服务承诺：</label>
@@ -738,6 +742,7 @@ function img_call_back(fileurl_tmp)
             </div> -->
             <!-- 开始抢购 -->
         <else/>
+            <if condition="$goods.cat_id neq 1118"> <!-- 防疫专区的判断，不显示按钮 -->
             <ul class="join-buy-car">
                 <li><a class="jrgwc-shopping-img jrgwc-shopping-img2"  href="javascript:void(0);" onClick="javascript:AjaxAddCart({$goods.goods_id},1,1);">立即购买</a></li>
                 <li><a class="jrgwc-shopping-img2"  href="javascript:void(0);" onClick="javascript:AjaxAddCart({$goods.goods_id},1,0);">加入购物车</a></li>
@@ -745,6 +750,7 @@ function img_call_back(fileurl_tmp)
                     <li class="customization" id="customsss">去定制</li>
                 </if>
             </ul>
+            </if>
         </if>
         </div>
         <!-- 商品信息 end -->

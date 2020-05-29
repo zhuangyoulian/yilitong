@@ -2260,7 +2260,8 @@ function dy(Array $str)
         }
         //查询所有一级及有商品的分类的二三级
         if ($parent_id_path) {
-            $one = Db::name('goods_category')->where(['level'=>1,'is_show'=>1])->select();
+            // $one = Db::name('goods_category')->where(['level'=>1,'is_show'=>1])->select();
+            $one = Db::name('goods_category')->where('parent_id = 1123 or (level = 1 and is_show =1)')->select();
             foreach ($parent_id_path as $key => $value) {
                 $two[] = Db::name('goods_category')->where('id',$value[2])->find();
                 if ($value[3]) {

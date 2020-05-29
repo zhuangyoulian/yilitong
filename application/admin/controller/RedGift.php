@@ -116,6 +116,8 @@ class RedGift extends Base{
                 }
                 $Goods->is_on_sale = 0;
                 $Goods->isUpdate(true)->save(); // 写入数据到数据库
+                //修改后同步下架一礼通商品
+                Db::name('goods')->where('red_goods_id',$goods_id)->update(['is_on_sale'=>'0','is_recommend'=>'0','is_new'=>'0','is_hot'=>'0']);
                 // 修改商品后购物车的商品价格也修改一下
                 Db::name('red_cart')->where("goods_id = $goods_id and spec_key = ''")->save(array(
                     'market_price'=>I('market_price'), //市场价
@@ -130,7 +132,8 @@ class RedGift extends Base{
                     //delFile(UPLOAD_PATH."goods/thumb/".$goods_id); // 删除缩略图
                     //rmdir(UPLOAD_PATH."goods/thumb/".$goods_id);
                 }
-                adminLog('编辑商品 '.input('goods_name').'');
+                adminLog('编辑红礼商品 '.input('goods_name').'');
+                red_adminLog('编辑商品 '.input('goods_name').'');
             } else {
                 if ($data['goods_group']) {
                     $Goods->is_group = 1;
@@ -147,7 +150,8 @@ class RedGift extends Base{
                 $Goods->is_on_sale = 0;
                 $Goods->save(); // 写入数据到数据库
                 $goods_id = $insert_id = $Goods->getLastInsID();
-                adminLog('添加商品 '.input('goods_name').'');
+                adminLog('添加红礼商品 '.input('goods_name').'');
+                red_adminLog('添加商品 '.input('goods_name').'');
             }
             $Goods->afterSave($goods_id);
            // $GoodsLogic->saveGoodsAttr($goods_id,I('goods_type')); // 处理商品 属性
@@ -170,7 +174,7 @@ class RedGift extends Base{
         $level_cat = $GoodsLogic->find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $level_cat2 = $GoodsLogic->find_parent_cat2($goodsInfo['extend_cat_id']); // 获取分类默认选中的下拉框
         // $cat_list = Db::name('red_goods_category')->where("parent_id = 0 and is_show = 1 ")->select(); // 已经改商品成联动菜单
-        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1 ")->select(); // 已经改商品成联动菜单
+        $cat_list = Db::name('goods_category')->where("id = 1123 or (  parent_id = 0 and is_show = 1 )")->select(); // 已经改商品成联动菜单
         $cat_scenario_list = Db::name('scenario_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成场景联动菜单
         $brandList = $GoodsLogic->getSortBrands();  //查询品牌
         // $goodsType = $GoodsLogic->red_goodsType();
@@ -297,6 +301,11 @@ class RedGift extends Base{
             Db::name('goods_collect')->where('goods_id',$re)->delete();
         }
         Db::name('goods')->where('red_goods_id',$goods_id)->update(array('is_delete'=>'1','is_on_sale'=>'0','is_recommend'=>'0','is_new'=>'0','is_hot'=>'0','examine'=>'0'));
+
+        $goods_name = Db::name("RedGoods")->where('goods_id ='.$goods_id)->value('goods_name');
+        adminLog('删除红礼商品至回收站 '.$goods_name.'');
+        red_adminLog('删除商品至回收站 '.$goods_name.'');
+
         delFile(RUNTIME_PATH);
                      
         $return_arr = array('status' => 1,'msg' => '操作成功','data'  =>'',);   //$return_arr = array('status' => -1,'msg' => '删除失败','data'  =>'',);        
@@ -363,6 +372,11 @@ class RedGift extends Base{
             Db::name("Goods")->where('red_goods_id ='.$value)->delete();  //商品表
             Db::name("cart")->where('red_goods_id ='.$value)->delete();  // 购物车
             Db::name("goods_images")->where('red_goods_id ='.$value)->delete();  //商品相册
+
+            $goods_name = Db::name("RedGoods")->where('goods_id ='.$value)->value('goods_name');
+            adminLog('彻底删除红礼商品 '.$goods_name.'');
+            red_adminLog('彻底删除商品 '.$goods_name.'');
+
             delFile(RUNTIME_PATH);     
             }
         }
@@ -987,7 +1001,8 @@ class RedGift extends Base{
         $is_yilitong = I('get.is_yilitong');   //是否一礼通来源订单
         if($action && $order_id){
             if($action !=='pay'){
-                adminLog('订单操作'.$order_id.I('note').'');
+                adminLog('红礼订单操作'.$order_id.I('note').'');
+                red_adminLog('订单操作 '.$order_id.I('note').'');
             }
             if (empty($is_yilitong)) {
               $a = $orderLogic->red_orderProcessHandle($order_id,$action,array('note'=>I('note'),'admin_id'=>0));
@@ -1070,7 +1085,8 @@ class RedGift extends Base{
             if(!$row){
                 $this->success('没有更新数据',Url::build('Admin/RedGift/editprice',array('order_id'=>$order_id)));
             }else{
-                adminLog("修改订单价格：应付金额改为：".$update['order_amount']."");
+                adminLog("修改红礼订单价格：应付金额改为：".$update['order_amount']."");
+                red_adminLog('修改订单价格：应付金额改为： '.$update['order_amount'].'');
                 $this->success('操作成功',Url::build('Admin/RedGift/orderDetail',array('order_id'=>$order_id)));
             }
             exit;
@@ -1349,8 +1365,8 @@ class RedGift extends Base{
         }
         if($data['act'] == 'del' && $data['admin_id']>1){
             $r = Db::name('red_user')->where('admin_id', $data['admin_id'])->delete();
-            adminLog('删除用户 '.$data['admin_id'].'');
-            red_adminLog('删除用户 '.$data['admin_id'].'');
+            adminLog('删除用户 '.$data['user_name'].'');
+            red_adminLog('删除用户 '.$data['user_name'].'');
             exit(json_encode(1));
         }
         

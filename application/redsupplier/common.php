@@ -10,7 +10,7 @@
   
 function adminLog($log_info){
     $add['log_time'] = time();
-    $add['red_admin_id'] = session('red_admin_id');
+    $add['admin_id'] = session('red_admin_id');
     $add['log_info'] = $log_info;
     $add['log_ip'] = getIP();
     $add['log_url'] = request()->baseUrl();

@@ -85,7 +85,7 @@ class Goods extends Base {
             $this->success("操作成功!!!",Url::build('Admin/Goods/brandList',array('p'=>I('p'))));
             exit;
         }
-        $cat_list = Db::name('goods_category')->where("parent_id = 0")->select(); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $brand = Db::name("Brand")->find($id);
         $this->assign('brand',$brand);

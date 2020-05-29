@@ -291,9 +291,9 @@ class RedBusiness extends Base{
     	//开户许可证
     	$bank_licence_electronic=$_POST['bank_licence_electronic'];
         //经营许可证
-      $business_certificate=$_POST['business_certificate'];
+        $business_certificate=$_POST['business_certificate'];
         //入驻协议
-      $reading_protocol=$_POST['reading_protocol'];
+        $reading_protocol=$_POST['reading_protocol'];
     	// 运营者授权证书
     	// $proxy=$_POST['proxy'];
     	if(empty($business_licence_number) || empty($bank_account_number) || empty($bank_name) || empty($bank_branch) || empty($zhizhao) ){
@@ -309,11 +309,11 @@ class RedBusiness extends Base{
     	'organization_code_electronic'=>$organization_code_electronic,
     	'general_taxpayer'=>$general_taxpayer,
     	'bank_licence_electronic'=>$bank_licence_electronic,
-      'business_certificate'=>$business_certificate,
+        'business_certificate'=>$business_certificate,
     	// 'proxy'=>$proxy,
-      'reading_protocol'=>$reading_protocol,
-      'is_three_one'=>$is_three_one,
-      'is_complete'=>1,
+        'reading_protocol'=>$reading_protocol,
+        'is_three_one'=>$is_three_one,
+        'is_complete'=>1,
     	'status'=>0,
     	];
     	$res = Db::name('redsupplier_user')->where(array('red_admin_id'=>$red_admin_id))->setField($sql);
@@ -644,15 +644,13 @@ class RedBusiness extends Base{
 	 */
 	 
 	private function adminLog($log_info){
-		
-    $add['log_time'] = time();
-    $add['admin_id'] = session('red_admin_id');
-    $add['log_info'] = $log_info;
-    $add['log_ip'] = getIP();
-    $add['log_url'] = request()->baseUrl();
-	// $add['supplier_id'] =  session('redsupplier_id');
-    Db::name('redsupplier_admin_log')->insert($add);
-	
+        $add['log_time'] = time();
+        $add['admin_id'] = session('red_admin_id');
+        $add['log_info'] = $log_info;
+        $add['log_ip'] = getIP();
+        $add['log_url'] = request()->baseUrl();
+    	// $add['supplier_id'] =  session('redsupplier_id');
+        Db::name('redsupplier_admin_log')->insert($add);
 	}
     
     /**
@@ -660,7 +658,6 @@ class RedBusiness extends Base{
      * 
      */
 	public function login_out(){
-        
         setcookie('supplier_name','',time()-3600,'/');
         setcookie('redsupplier_name','',time()-3600,'/');
         setcookie('cn','',time()-3600,'/');

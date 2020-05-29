@@ -287,37 +287,25 @@
                       </div>
                 </dd>
             </dl>
-            <!-- <dl class="row">
+            <dl class="row">
                 <dt class="tit">
-                    <label>入驻协议</label>
+                    <label>是否优质供应商</label>
                 </dt>
-				<dd class="opt">
-					<a href="{$su.reading_protocol}" target="_Blank"><img src="{$su.reading_protocol}"  width="80px" height="80px" /></a>
-					<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
-						<span class="show">
-						  <a id="img_a5" class="nyroModal" rel="gal" href="{$su.reading_protocol}">
-							<i id="img_i5" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.reading_protocol}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
-						  </a>
-						</span>
-						<span class="type-file-box">            
-						<input type="text" id="reading_protocol" name="reading_protocol" value="{$su.reading_protocol}" class="type-file-text">            
-						<input type="button" name="button" onClick="GetUploadify(1,'reading_protocol','business','')" value="上传图片" class="type-file-button"> 
-						 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back5')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
-						</span>
-					  </div>
-				</dd>
-            </dl> -->
-
-			 <dl class="row">
+                <dd class="opt"><select name="is_quality" id="is_quality">
+                 <option value="0" <if condition="($su[is_quality] eq 0)">selected="selected"</if>>否</option>
+                  <option value="1" <if condition="($su[is_quality] eq 1)">selected="selected"</if>>是</option>   
+                </select>  </dd>
+            </dl>
+            <dl class="row">
                 <dt class="tit">
                     <label>审核结果</label>
                 </dt>
                 <dd class="opt"><select name="status" id="status">
-				 <option value="0" <if condition="($su[status] eq 0)">selected="selected"</if>>未审核</option>   
-				  <option value="1" <if condition="($su[status] eq 1)">selected="selected"</if>>审核通过</option>   
-				   <option value="2" <if condition="($su[status] eq 2)">selected="selected"</if>>审核不通过</option>
-					<option value="-1" <if condition="($su[status] eq -1)">selected="selected"</if>>关闭店铺</option>  				   
-				</select>  </dd>
+                 <option value="0" <if condition="($su[status] eq 0)">selected="selected"</if>>未审核</option>   
+                  <option value="1" <if condition="($su[status] eq 1)">selected="selected"</if>>审核通过</option>   
+                   <option value="2" <if condition="($su[status] eq 2)">selected="selected"</if>>审核不通过</option>
+                    <option value="-1" <if condition="($su[status] eq -1)">selected="selected"</if>>关闭店铺</option>                  
+                </select>  </dd>
             </dl>
             <div class="bot"><a href="JavaScript:void(0);" onclick="checkUserUpdate();" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
         </div>

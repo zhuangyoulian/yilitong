@@ -312,8 +312,10 @@
                     <label>入驻协议</label>
                 </dt>
 				<dd class="opt">
-					<a href="{$su.reading_protocol}" target="_Blank"><img src="{$su.reading_protocol}"  width="80px" height="80px" /></a>
-					<div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
+                    <a href="{$su.reading_protocol[0]}" target="_Blank"><img src="{$su.reading_protocol[0]}"  width="80px" height="80px" /></a>
+                    <a href="{$su.reading_protocol[1]}" target="_Blank"><img src="{$su.reading_protocol[1]}"  width="80px" height="80px" /></a>
+					<a href="{$su.reading_protocol[2]}" target="_Blank"><img src="{$su.reading_protocol[2]}"  width="80px" height="80px" /></a>
+					<!-- <div class="input-file-show" id="divComUploadContainer" style="display:inline-block;margin-top:50px;margin-left:10px;">
 						<span class="show">
 						  <a id="img_a5" class="nyroModal" rel="gal" href="{$su.reading_protocol}">
 							<i id="img_i5" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$su.reading_protocol}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
@@ -324,7 +326,7 @@
 						<input type="button" name="button" onClick="GetUploadify(1,'reading_protocol','business','')" value="上传图片" class="type-file-button"> 
 						 <input class="type-file-file" onClick="GetUploadify(1,'','business','img_call_back5')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">          
 						</span>
-					  </div>
+					</div> -->
 				</dd>
 				
 					

@@ -30,7 +30,7 @@ class Goods extends Base {
         $Page = $pager = new Page($count,15);
         $brandList = $model->where($where)->order("`id` desc")->limit($Page->firstRow.','.$Page->listRows)->select();
         $show  = $Page->show();
-        $cat_list = Db::name('goods_category')->where("parent_id = 0")->column('id,name'); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->column('id,name'); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $this->assign('pager',$pager);
         $this->assign('show',$show);
@@ -67,7 +67,7 @@ class Goods extends Base {
             $this->success("操作成功,请等待平台审核!!!",Url::build('Supplier/Goods/brandList',array('p'=>I('p'))));
             exit;
         }
-        $cat_list = Db::name('goods_category')->where("parent_id = 0")->select(); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $brand = Db::name("Brand")->find($id);
         $this->assign('brand',$brand);

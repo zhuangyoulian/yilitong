@@ -26,8 +26,7 @@ class GoodsLogic extends Model
             return array();;
         $goods_id_str = implode(',', $goods_id_arr);
         $goods_id_str = $goods_id_str ? $goods_id_str : '0';
-        $list_brand = Db::query("SELECT * FROM `ylt_brand` WHERE ( id IN ( SELECT brand_id FROM ylt_goods WHERE brand_id > 0 AND goods_id IN ($goods_id_str))) LIMIT 30 ;");
-
+        $list_brand = Db::query("SELECT * FROM `ylt_brand` WHERE ( id IN ( SELECT brand_id FROM ylt_goods WHERE brand_id > 0 AND goods_id IN ($goods_id_str)))  AND is_hot = 1 LIMIT 30 ;");
         foreach ($list_brand as $k => $v) {
             // 帅选参数
             $filter_param['brand_id'] = $v['id'];
@@ -335,8 +334,8 @@ class GoodsLogic extends Model
             $filter_param['price'] = "{$start}-{$end}";
             if ($i == 0){
                 $parr[] = array('value' => "{$end}元以下", 'href' => urldecode(Url::build("Goods/$action", $filter_param, '')));
-            }elseif($i == ($c - 1)){ 
-                $parr[] = array('value' => "{$end}元以上", 'href' => urldecode(Url::build("Goods/$action", $filter_param, '')));
+            // }elseif($i == ($c - 1)){ 
+                // $parr[] = array('value' => "{$end}元以上", 'href' => urldecode(Url::build("Goods/$action", $filter_param, '')));
             }else{
                 $parr[] = array('value' => "{$start}-{$end}元", 'href' => urldecode(Url::build("Goods/$action", $filter_param, '')));
             }
