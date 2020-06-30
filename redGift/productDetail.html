@@ -6,6 +6,7 @@
     <title>产品详情页</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/productdetail.css" />
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
@@ -13,73 +14,198 @@
 </head>
 
 <body>
-    <div id="vue_product">
-        <div class="containerT container2">
-            <div class="top">
-                <a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
-                <a href="index.html" class="shouye">首页</a>
-                <div class="input-group search">
-                    <input type="text" class="form-control form-searchbox" placeholder="搜索商品名称" v-model="keyword" @keyup.enter="sousuo(keyword)">
-                    <span class="input-group-btn">
-					<button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
-						搜索
-					</button>
-				</span>
+    <div id="vue_index">
+        <div class="containerT" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1)">
+            <div class="rd-nav">
+                <div class="rd-top">
+                    <div class="wid">
+                        <span class="sp1">欢迎来到红礼供应链</span> |
+                        <img src="./img/icon_phone@2x.png" alt="" class="icon_phone">
+                        <span class="rd-tel">180-3307-7619</span>
+                        <img src="./img/icon_telephone@2x.png" alt="" class="icon_phone2">
+                        <span class="rd-tel">0755-22937331</span>
+                        <div class="rd-top-right" @mouseenter="onUsercenter" @mouseleave="onUsercenter">
+                            <span class="sp2">{{user.user_name}}</span>
+                            <div class="userlist2" v-show="userc">
+                                <p @click="UserCenter">用户中心</p>
+                                <p @click="Lagout">退出登录</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="shopcart2">
-                    <img src="img/icon_cart.png">
-                    <a class="text">购物车</a>
+                <div class="rd_contya">
+                    <a href="index.html"><img src="./img/logo@2x.png" alt="" class="icon_logo"></a>
+                    <div class="rd_search_keywords">
+                        <div class="rd_search">
+                            <input type="text" class="rd_search_box" placeholder="请输入关键词" v-model="keyword" @keyup.enter="sousuo(keyword)">
+                            <img src="./img/icon_ss.png" class="rd_search_ss" />
+                            <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
+                        </div>
+                        <div class="rd_keywords">
+                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('包')">包</span>
+                            <span @click="sousuo('米')">米</span>
+                            <span @click="sousuo('运动')">运动</span>
+                        </div>
+                    </div>
+                    <a href="shopcart.html" target="_blank">
+                        <div class="rd_shopcart">
+                            <img src="./img/icon_cart@2x.png" alt="">
+                            <span>购物车</span>
+                            <div class="red" v-if="cart_count!=0">{{cart_count}}</div>
+                        </div>
+                    </a>
                 </div>
-                <!-- <div class="header">
-				<img src="img/hz_header.png" width="40px" height="40px" class="headicon2" @>
-			</div> -->
-                <img src="img/hz_header.png" width="50px" height="50px" class="headicon" @click="onUsercenter">
-                <div class="userlist" v-show="userc">
-                    <!-- <p class="username">杭州西湖国际中心的</p> -->
-                    <p @click="UserCenter">用户中心</p>
-                    <p @click="Lagout">退出登录</p>
+                <div class="rd_categroy">
+                    <div class="rd_cate">
+                        <div class="rd_rate_tit" @mouseenter="iscateshow=!iscateshow">
+                            <img src="./img/icon_sort@2x.png" alt="">
+                            <p style="margin: 0px;">商品分类</p>
+                        </div>
+                        <ul class="rd_cate_ul rd_cate_ul2" v-show="iscateshow">
+                            <li @click="navProductlist('','')">
+                                <div class="rd_rate_li_active"></div>
+                                <p>全部商品</p>
+                            </li>
+                            <!-- <li>
+                                <div class="rd_rate_li_active"></div>
+                                品牌折扣区
+                                <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot">
+                            </li> -->
+                            <li v-for="(cate,index) in category" @click="navProductlist(cate.id,'')" class="rd_li">
+                                <div class="rd_rate_li_active"></div>
+                                <div class="rd_cate_name">{{cate.name}}</div>
+                                <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot" v-if="cate.id==1123">
+                                <ul class="rd_two_cate">
+                                    <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="rd_nav">
+                        <li>
+                            <a href="index.html" target="_bank">
+                                <span>首页</span>
+                                <div class="red_bo"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cateproduct.html" target="_bank">
+                                <span>全部商品</span>
+                                <div class="red_bo"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cateproduct.html?cate1=1123" target="_bank">
+                                <span>品牌折扣区</span>
+                                <img src="./img/icon_hot@2x.png" alt="">
+                                <div class="red_bo"></div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="containerProductdetail">
+        <!-- 往下滚动， -->
+        <div class="rd_fixed" v-show="isRdscroll">
+            <div class="rd_fixed_nav">
+                <a href="index.html"><img src="./img/logo@2x.png" alt="" class="rd_fixed_log"></a>
+                <ul class="rd_nav">
+                    <li>
+                        <span>首页</span>
+                        <div class="red_bo"></div>
+                    </li>
+                    <li>
+                        <a href="cateproduct.html" target="_bank">
+                            <span>全部商品</span>
+                            <div class="red_bo"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cateproduct.html?cate1=1123" target="_bank">
+                            <span>品牌折扣区</span>
+                            <img src="./img/icon_hot@2x.png" alt="">
+                            <div class="red_bo"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="rd_search">
+                    <input type="text" class="rd_search_box" placeholder="请输入关键词" v-model="keyword" @keyup.enter="sousuo(keyword)">
+                    <img src="./img/icon_ss.png" class="rd_search_ss" />
+                    <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
+                </div>
+                <a href="shopcart.html" target="_blank">
+                    <div class="rd_shopcart">
+                        <img src="./img/icon_cart@2x.png" alt="">
+                        <span>购物车</span>
+                        <div class="red" v-if="cart_count!=0">{{cart_count}}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 中间 -->
+        <div class="containerProductdetail" @mouseenter="iscateshow=false">
             <div class="shangp">
                 <p class="navigation"><span>首页</span>><span>当季热推</span>><span>{{goods.goods_name}}</span></p>
                 <div class="product">
                     <div class="img">
-                        <img :src="baseUrl+BigUrl" width="430px" height="430px">
+                        <img :src="'http://www.yilitong.com'+BigUrl" width="430px" height="430px">
                         <ul class="small_img">
-                            <li v-for="item in imgUrl">
-                                <img :src="baseUrl+item.image_url" alt="" @click="getIndex(item)" width="78px" height="78px">
+                            <li class="rd_img_left" @click="perviousImg" v-if="imgUrl.length>5">
+                                <img src="./img/proddetail/icon_previous@2x.png" alt="" class="rd_icon_previous">
+                                <img src="./img/proddetail/icon_previous_hover@2x.png" alt="" class="rd_icon_previous_hover">
+                            </li>
+                            <li class="rd_imglist">
+                                <div class="rd_imgya" id="rd_imgScrool">
+                                    <img :src="'http://www.yilitong.com'+item.image_url" alt="" @mouseenter="getIndex(item,index)" @click="getIndex(item,index)" :key="index" v-for="(item,index) in imgUrl" style="width: 64px;height:64px;" :class="currentImgIndex==index?'active':''">
+                                </div>
+                            </li>
+
+                            <li class="rd_img_right" @click="nextImg" v-if="imgUrl.length>5">
+                                <img src="./img/proddetail/icon_next@2x.png" alt="" class="rd_icon_next">
+                                <img src="./img/proddetail/icon_next_hover@2x.png" alt="" class="rd_icon_next_hover">
                             </li>
                         </ul>
                     </div>
                     <div class="introduce">
-                        <p class="title">{{goods.goods_name}}</p>
-                        <p class="price" v-if="goods.parent_id_path==28"><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.market_price}}(不含税)</span></p>
-                        <p class="price" v-else><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.group_price}}(不含税)</span>
-                            <span style="text-decoration:line-through">{{goods.market_price}}</span></p>
-                        <p class="goodsnumber"><span class="tips">商品编号</span><span class="bianma">{{goods.goods_sn}}</span></p>
-                        <div class="address">
-                            <span class="tips">收货信息</span>
-                            <span class="ad1">{{users_address.user_name}}</span>
-                            <span class="tel">{{users_address.mobile}}</span>
-                            <span class="geli">|</span>
-                            <span class="detailaddress">{{users_address.province}}{{users_address.city}}{{users_address.district}}{{users_address.address}}</span>
-                            <a href="usercenter.html?ed=1"><span class="edit">编辑</span></a>
+                        <p class="title"><span class="rd_good_bg" v-if="goods.is_quality==1"></span>{{goods.goods_name}}</p>
+                        <div style="background:#F9F9F9;line-height: 1;padding-top: 16px;padding-bottom: 15px;margin-top:20px;width: 714px;">
+
+                            <!-- <span class="price" v-if="goods.parent_id_path==28"><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.market_price}}(不含税)</span></p> -->
+                            <!-- <p class="price" v-else><span class="tips">价格</span><span class="jiage">￥{{price?price:goods.group_price}}(不含税)</span> -->
+                            <p class="price">
+                                <span class="tips">价格</span>
+                                <span class="jiage" style="font-size: 18px;font-weight: 700"><span style="font-size: 14px;">￥</span>{{price?price:goods.group_price}}
+                                <span v-if="goods.is_discount==1" class="rd_discount">折后</span>
+                                </span>
+                                <span style="text-decoration:line-through;color: #888888;margin-left: 20px;">{{goods.market_price}}</span>
+                            </p>
+                            <p class="goodsnumber"><span class="tips">商品编号</span><span class="bianma">{{goods.goods_sn}}</span></p>
+                            <div class="address">
+                                <span class="tips">收货信息</span>
+                                <span class="ad1">{{users_address.user_name}}</span>
+                                <span class="geli">|</span>
+                                <span class="tel">{{users_address.mobile}}</span>
+                                <span class="geli">|</span>
+                                <span class="detailaddress">{{users_address.province}}{{users_address.city}}{{users_address.district}}{{users_address.address}}</span>
+                                <a href="usercenter.html?ed=1"><span class="edit">编辑</span></a>
+                            </div>
                         </div>
+
 
                         <!-- guigelength -->
                         <div class="color" v-if="type[0]">
                             <span class="col1">{{type[0]}}</span>
                             <span class="chicun" :class="kp1==index?'active1':''" @click="ChooseSpec1(index)" v-for="(ite,index) in filter_spec[type[0]]">
-							{{ite.item}}
-						</span>
+                            {{ite.item}}
+                        </span>
                         </div>
                         <div class="color" v-if="type[1]">
                             <span class="col1">{{type[1]}}</span>
                             <span class="chicun" :class="kp2==index?'active2':''" @click="ChooseSpec2(index)" v-for="(ite,index) in filter_spec[type[1]]">
-							{{ite.item}}
-						</span>
+                            {{ite.item}}
+                        </span>
                         </div>
                         <div class="color" v-if="is_logo==1">
                             <span class="col1">定制LOGO</span>
@@ -111,45 +237,79 @@
                     <ul class="tuijian_goods">
                         <li v-for="tjgoods in recommend_goods">
                             <a :href="['productDetail.html?goods_id='+tjgoods.goods_id]">
-                                <img :src="tjgoods.goods_thumb" alt="" width="224px" height="224px">
-                                <p class="title">{{tjgoods.goods_name}}</p>
-                                <p class="price" v-if="tjgoods.parent_id_path==28">参考价：<span>￥{{tjgoods.market_price}}</span></p>
-                                <p class="price" v-else>参考价：<span>￥{{tjgoods.group_price}}</span></p>
+                                <img :src="'http://www.yilitong.com/'+tjgoods.goods_thumb" alt="" width="224px" height="224px">
+                                <p class="title" style="text-align: center;">{{tjgoods.goods_name}}</p>
+                                <p class="price " v-if="tjgoods.parent_id_path==28 " style="text-align: center;color: #e50012; ">￥<span style="font-weight:700;font-size:18px; ">{{tjgoods.market_price}}</span></p>
+                                <p class="price " v-else style="text-align: center;color: #e50012; ">￥<span style="font-weight:700;font-size:18px; ">{{tjgoods.group_price}}</span></p>
                                 <!-- parent_id_path -->
                             </a>
                         </li>
                         <!-- <li>
-						<img src="img/hz_product.png" alt="" width="224px" height="224px">
-						<p class="title">女士时尚背包</p>
-						<p class="price">参考价：<span>￥599</span></p>
-					</li>
-					<li>
-						<img src="img/hz_product.png" alt="" width="224px" height="224px">
-						<p class="title">女士时尚背包</p>
-						<p class="price">参考价：<span>￥599</span></p>
-					</li> -->
+                        <img src="img/hz_product.png " alt=" " width="224px " height="224px ">
+                        <p class="title ">女士时尚背包</p>
+                        <p class="price ">参考价：<span>￥599</span></p>
+                    </li>
+                    <li>
+                        <img src="img/hz_product.png " alt=" " width="224px " height="224px ">
+                        <p class="title ">女士时尚背包</p>
+                        <p class="price ">参考价：<span>￥599</span></p>
+                    </li> -->
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="containerB" style="margin-top: 50px;">
-            <p>红礼供应链管理有限公司</p>
-        </div>
-        <div class="dialog-bg" id="dialog-bg">
-            <div class="img-box" id="img-box">
-                <img src="">
+        <div class="containerB ">
+            <div class="rd_bottom_nav ">
+                <div class="rd_bottom_one ">
+                    <div class="company ">
+                        <img src="./img/logo@2x.png " />
+                        <span>红礼供应链管理有限公司</span>
+                    </div>
+                    <p class="rd_na ">
+                        <a href="index.html ">红礼首页</a>
+                        <span>|</span>
+                        <a href="cateproduct.html ">全部商品</a>
+                        <span>|</span>
+                        <a href="cateproduct.html?cate1=1123 ">品牌折扣区</a>
+                    </p>
+
+                </div>
+                <div class="rd_bottom_two ">
+                    <div class="rd_tel_person ">
+                        <img src="./img/icon_phone_1@2x.png " alt=" ">
+                        <span>180-3307-7619</span>
+                    </div>
+                    <div class="rd_tel_person ">
+                        <img src="./img/icon_telephone_1@2x.png " alt=" ">
+                        <span>0755-22937331</span>
+                    </div>
+                    <div class="rd_tel_person ">
+                        <img src="./img/icon_address@2x.png " alt=" ">
+                        <span>深圳市福田保税区 腾飞工业大厦A座CD区4楼</span>
+                    </div>
+                </div>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2853116619&site=qq&menu=yes " target="_blank ">
+                    <div class="rd_bottom_three ">
+                        <img src="./img/icon_service_1@2x.png " alt=" " class="img1 ">
+                        <img src="./img/icon_service_1_white@2x.png " alt=" " class="img2 ">
+                        <span>免费在线咨询</span>
+                    </div>
+                </a>
+
             </div>
         </div>
+
+    </div>
 </body>
 
-<script src="js/vue.min.js"></script>
-<script src="js/axios.min.js"></script>
-<script type="text/javascript">
+<script src="js/vue.min.js "></script>
+<script src="js/axios.min.js "></script>
+<script type="text/javascript ">
     var vm = new Vue({
-        el: '#vue_product',
+        el: '#vue_index',
         data: {
-            // baseUrl:'http://192.168.1.17/tp510',
+            // baseUrl: 'http://192.168.1.39/tp510',
             baseUrl: 'http://www.yilitong.com',
             userc: false,
             kp1: 0,
@@ -183,12 +343,21 @@
             keyword: '',
             is_logo: 0,
             is_logo_xz: 0,
+            //导航要用的
+            cart_count: 0,
+            category: '',
+            isRdscroll: false,
+            iscateshow: false,
+            currentImgInfo: '',
+            currentImgIndex: 0,
+            user: '',
+
         },
         updated() {
             var guigelen = this.type.length;
             if (guigelen == 0) {
-                this.goods_key = "";
-                this.goods_val = "";
+                this.goods_key = " ";
+                this.goods_val = " ";
                 this.store_count = this.goods.store_count;
                 this.quantity = this.goods.quantity ? this.goods.quantity : 1;
             }
@@ -252,7 +421,7 @@
             // this.goods_key=goods_key;
             // this.goods_val=k;
             // var specs=[
-            // 	
+            //  
             // ];
             // // this.fileList.push({name: '', url: ''}); 
             // var spec_id=c1[i1].item_id+'_'+c2[i2].item_id;
@@ -281,7 +450,113 @@
             }
             this.getGoodsDetail(arr2.goods_id);
         },
+        mounted() {
+            window.addEventListener("scroll ", this.handleScroll, true);
+            this.getProductlist();
+            this.getCategeory();
+        },
+
         methods: {
+            perviousImg() {
+                var i = this.currentImgIndex;
+                console.log(this.imgUrl.length);
+                var len = this.imgUrl.length;
+                var c = document.getElementById('rd_imgScrool');
+                if (i > 0) {
+                    this.currentImgIndex = i - 1;
+                    console.log(i);
+                    var b = this.currentImgIndex * 67;
+                    c.style.left = '-' + b + 'px';
+                    console.log(this.currentImgIndex, b);
+                } else {
+                    // this.currentImgIndex = len;
+                    this.currentImgIndex = 0;
+                    c.style.left = '0px';
+                    // console.log(c.style);
+                }
+                this.BigUrl = this.imgUrl[this.currentImgIndex].image_url;
+            },
+            nextImg() {
+                var i = this.currentImgIndex;
+
+                var len = this.imgUrl.length;
+                var c = document.getElementById('rd_imgScrool');
+                if (i < len - 1) {
+                    this.currentImgIndex = i + 1;
+                    var b = this.currentImgIndex * 67;
+                    c.style.left = '-' + b + 'px';
+                    console.log(this.currentImgIndex, b);
+
+                } else {
+                    // this.currentImgIndex = 0;
+                    this.currentImgIndex = len - 1;
+                }
+                this.BigUrl = this.imgUrl[this.currentImgIndex].image_url;
+
+            },
+            handleScroll(el) {
+                let _pos = document.getElementById("vue_index ").getBoundingClientRect().top;
+                // console.log('top', _pos);
+                if (_pos < -160) {
+                    this.isRdscroll = true;
+                } else {
+                    this.isRdscroll = false;
+                }
+            },
+            navProductlist(e, b) {
+                console.log(e);
+                if (e == '') {
+                    window.location.href = 'cateproduct.html';
+                } else {
+                    if (b == " ") {
+                        window.location.href = 'cateproduct.html?cate1=' + e;
+                    } else {
+                        window.location.href = 'cateproduct.html?cate1=' + e + '&cate2=' + b;
+                    }
+
+                }
+
+            },
+            getProductlist() {
+                var baseurl = this.baseUrl;
+                var that = this;
+                var list = {
+                    admin_id: this.admin_id
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                axios.get(baseurl + '/Home/redGift/index', {
+                    params: list
+                }).then(function(res) {
+                    that.cart_count = res.data.cart_count;
+                    that.user = res.data.user;
+                });
+            },
+            getCategeory: function(e) {
+                var baseurl = this.baseUrl;
+                var that = this;
+                var list = {
+                    // cat_id:cat_id,
+                    admin_id: e
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                axios.get(baseurl + '/home/RedGift/goodsList', {
+                    params: list
+                }).then(function(res) {
+                    console.log(res);
+                    // this.category=res.data.get_category;
+                    var k = res.data.get_category;
+                    var catearr = [];
+                    for (i in k) {
+                        catearr.push(k[i]);
+                    }
+                    // for(var i=0;i<10;i++){
+                    //  that.category[i]=catearr[i]
+                    // }
+                    that.category = catearr;
+                    console.log(catearr[0].name);
+                });
+            },
+            //以前
             getGoodsDetail: function(e) {
                 var baseurl = this.baseUrl;
                 var that = this;
@@ -295,11 +570,12 @@
                 }).then(function(res) {
                     console.log(res);
                     if (res.data.result == -11) {
-                        alert("该商品已下架");
-                        window.location.href = "index.html"
+                        alert("该商品已下架 ");
+                        window.location.href = "index.html "
                     } else {
                         that.imgUrl = res.data.goods_images_list;
                         that.BigUrl = that.imgUrl[0].image_url;
+                        that.currentImgInfo = that.imgUrl[0];
                         that.goods = res.data.goods;
                         $('title').html(that.goods.goods_name + '-产品详情');
                         that.users_address = res.data.users_address;
@@ -347,7 +623,7 @@
                     params: list
                 }).then(function(res) {
                     if (res.data.status == 1) {
-                        if (confirm("加入购物车成功!")) {
+                        if (confirm("加入购物车成功! ")) {
                             window.location.href = 'shopcart.html'
                         } else {
                             window.location.href = 'shopcart.html'
@@ -356,7 +632,7 @@
                         alert(res.data.msg);
                     }
                     console.info(res);
-                    // window.location.href="shopcart.html";
+                    // window.location.href="shopcart.html ";
                 });
             },
             ChooseSpec1: function(a) {
@@ -384,8 +660,11 @@
                     this.count -= 1;
                 }
             },
-            getIndex: function(e) {
+            getIndex: function(e, i) {
                 this.BigUrl = e.image_url;
+                this.currentImgIndex = i;
+                this.currentImgInfo = e;
+                console.log(i);
             },
             onUsercenter: function() {
                 this.userc = !this.userc;
@@ -401,7 +680,7 @@
                 window.location.href = "sousuo.html?keyword=" + e;
             },
             details: function() {
-                return this.site + " - 学的不仅是技术，更是梦想！";
+                return this.site + " - 学的不仅是技术，更是梦想！ ";
             }
         }
     })

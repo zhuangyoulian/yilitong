@@ -21,10 +21,10 @@
                 <div class="input-group search">
                     <input type="text" class="form-control form-searchbox" placeholder="搜索商品名称" v-model="keyword" @keyup.enter="sousuo(keyword)">
                     <span class="input-group-btn">
-                    <button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
-                        搜索
-                    </button>
-                </span>
+					<button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
+						搜索
+					</button>
+				</span>
                 </div>
                 <div class="shopcart">
                     <img src="img/icon_cart.png">
@@ -42,7 +42,7 @@
         <div class="containerp">
             <div class="conentya">
                 <ul class="swiper_title">
-                    <li id="prc1" :class="{active:currentItem==''}" @click="getCategeProduct('')">全部商品</li>
+                    <li id="prc1" :class="{active:currentItem==''}" @click="getCategeProduct('');page_html=1">全部商品</li>
                     <li v-for="(item,index) in category" :class="{active:item.id==currentItem}" @click.stop="page_html=1,getCategeProduct(item.id)">
                         <span class="spand">{{item.name}}</span>
                         <ul class="xiaofenlei" v-if="item.id==tet">
@@ -56,12 +56,12 @@
                     </li>
                     <li><a href="pinpailist.html">品牌</a></li>
                     <!-- <li @click="getPriceProduct('0-10')" id="prc2">10元以下</li>
-                <li @click="getPriceProduct('10-20')" id="prc3">10元-20元</li>
-                <li @click="getPriceProduct('20-30')" id="prc4">20元-30元</li>
-                <li @click="getPriceProduct('30-50')" id="prc5">30元-50元</li>
-                <li @click="getPriceProduct('50-100')" id="prc6">50元-100元</li>
-                <li @click="getPriceProduct('100-200')" id="prc7">100元-200元</li>
-                <li @click="getPriceProduct('200-1000000')" id="prc8">200元以上</li> -->
+				<li @click="getPriceProduct('10-20')" id="prc3">10元-20元</li>
+				<li @click="getPriceProduct('20-30')" id="prc4">20元-30元</li>
+				<li @click="getPriceProduct('30-50')" id="prc5">30元-50元</li>
+				<li @click="getPriceProduct('50-100')" id="prc6">50元-100元</li>
+				<li @click="getPriceProduct('100-200')" id="prc7">100元-200元</li>
+				<li @click="getPriceProduct('200-1000000')" id="prc8">200元以上</li> -->
                 </ul>
                 <div class="du">
                     <div class="hz_fenlei">
@@ -87,8 +87,8 @@
                 </div>
 
                 <!-- <div v-if="productlist.length==0" class="noproduct">
-                <p>该价格区间下暂无商品</p>
-            </div> -->
+				<p>该价格区间下暂无商品</p>
+			</div> -->
                 <div class="noproduct" v-if="productlist.length==0">
                     <img src="img/icon_ss.png" width="104px" height="104px">
                     <p>该分类下暂无商品</p>
@@ -163,28 +163,28 @@
             // cat_id
 
             // if(fanwei==1){
-            //  this.getPriceProduct('0-1000000');
+            // 	this.getPriceProduct('0-1000000');
             // }
             // if(fanwei==2){
-            //  this.getPriceProduct('0-10');
+            // 	this.getPriceProduct('0-10');
             // }
             // if(fanwei==3){
-            //  this.getPriceProduct('10-20');
+            // 	this.getPriceProduct('10-20');
             // }
             // if(fanwei==4){
-            //  this.getPriceProduct('20-30');
+            // 	this.getPriceProduct('20-30');
             // }
             // if(fanwei==5){
-            //  this.getPriceProduct('30-50');
+            // 	this.getPriceProduct('30-50');
             // }
             // if(fanwei==6){
-            //  this.getPriceProduct('50-100');
+            // 	this.getPriceProduct('50-100');
             // }
             // if(fanwei==7){
-            //  this.getPriceProduct('100-200');
+            // 	this.getPriceProduct('100-200');
             // }
             // if(fanwei==8){
-            //  this.getPriceProduct('200-1000000');
+            // 	this.getPriceProduct('200-1000000');
             // }
         },
 
@@ -227,7 +227,7 @@
                         catearr.push(k[i]);
                     }
                     // for(var i=0;i<10;i++){
-                    //  that.category[i]=catearr[i]
+                    // 	that.category[i]=catearr[i]
                     // }
                     that.category = catearr;
                     console.log(catearr[0].name);
@@ -244,7 +244,7 @@
                 }
 
                 // if(this.tet==''){
-                //  this.tet=e;
+                // 	this.tet=e;
                 // }
                 this.currentItem2 = '',
                     console.log(this.currentItem);

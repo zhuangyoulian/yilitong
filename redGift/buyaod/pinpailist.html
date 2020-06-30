@@ -21,16 +21,16 @@
                 <div class="input-group search">
                     <input type="text" class="form-control form-searchbox" placeholder="搜索商品名称" v-model="keyword" @keyup.enter="sousuo(keyword)">
                     <span class="input-group-btn">
-                    <button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
-                        搜索
-                    </button>
-                </span>
+					<button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
+						搜索
+					</button>
+				</span>
                 </div>
                 <!-- <div class="shopcart">
-                <img src="img/icon_cart.png" >
-                <a class="text">购物车</a>
-                <a class="number">10</a>
-            </div> -->
+				<img src="img/icon_cart.png" >
+				<a class="text">购物车</a>
+				<a class="number">10</a>
+			</div> -->
                 <img src="img/hz_header.png" width="40px" height="40px" class="headicon" @click="onUsercenter">
                 <div class="userlist" v-show="userc">
                     <!-- <p class="username">杭州西湖国际中心的</p> -->
@@ -72,8 +72,8 @@
     var aa = new Vue({
         el: '#vue_index',
         data: {
-            // baseUrl: 'http://192.168.1.39/tp510',
-            baseUrl: 'http://www.yilitong.com',
+            baseUrl: 'http://192.168.1.39/tp510',
+            // baseUrl: 'http://www.yilitong.com',
             userc: false,
             recommend_goods: '',
             keywords: '',

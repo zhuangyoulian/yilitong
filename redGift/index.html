@@ -11,101 +11,230 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/confirm.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/header.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            padding-bottom: 250px;
+        }
+        
+        .rd_cate_ul>li:hover {
+            background: #FFEDEA;
+        }
+        
+        .rd_cate_ul>li:hover>.rd_rate_li_active {
+            position: absolute;
+            width: 2px;
+            height: 44px;
+            background: rgba(229, 0, 18, 1);
+            left: 0;
+            top: 0;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <div id="vue_index">
         <div class="containerT">
-            <div class="top">
-                <a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
-                <a href="" class="shouye" target="_blank">首页</a>
-                <div class="input-group search">
-                    <input type="text" class="form-control form-searchbox" placeholder="搜索商品名称" v-model="keyword" @keyup.enter="sousuo(keyword)">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
-                        搜索
-                    </button>
-                </span>
+            <div class="rd-nav">
+                <div class="rd-top">
+                    <div class="wid">
+                        <span class="sp1">欢迎来到红礼供应链</span> |
+                        <img src="./img/icon_phone@2x.png" alt="" class="icon_phone">
+                        <span class="rd-tel">180-3307-7619</span>
+                        <img src="./img/icon_telephone@2x.png" alt="" class="icon_phone2">
+                        <span class="rd-tel">0755-22937331</span>
+                        <div class="rd-top-right" @mouseenter="onUsercenter" @mouseleave="onUsercenter">
+                            <span class="sp2">{{user.user_name}}</span>
+                            <div class="userlist2" v-show="userc">
+                                <p @click="UserCenter">用户中心</p>
+                                <p @click="Lagout">退出登录</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="shopcart">
-                    <img src="img/icon_cart.png">
-                    <a class="text" href="shopcart.html" target="_blank">购物车</a>
-                    <a class="number" v-if="cartLength!=''">{{cartLength}}</a>
+                <div class="rd_contya">
+                    <a href="index.html"><img src="./img/logo@2x.png" alt="" class="icon_logo"></a>
+                    <div class="rd_search_keywords">
+                        <div class="rd_search">
+                            <input type="text" class="rd_search_box" placeholder="请输入关键词" v-model="keyword" @keyup.enter="sousuo(keyword)">
+                            <img src="./img/icon_ss.png" class="rd_search_ss" />
+                            <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
+                        </div>
+                        <div class="rd_keywords">
+                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('包')">包</span>
+                            <span @click="sousuo('米')">米</span>
+                            <span @click="sousuo('运动')">运动</span>
+                        </div>
+                    </div>
+                    <a href="shopcart.html" target="_blank">
+                        <div class="rd_shopcart">
+                            <img src="./img/icon_cart@2x.png" alt="">
+                            <span>购物车</span>
+                            <div class="red" v-if="cart_count!=0">{{cart_count}}</div>
+                        </div>
+                    </a>
                 </div>
-                <img src="img/hz_header.png" width="50px" height="50px" @click="onUsercenter" class="headicon">
-                <div class="userlist" v-show="userc">
-                    <!-- <p class="username">杭州西湖国际中心的</p> -->
-                    <p @click="UserCenter">用户中心</p>
-                    <p @click="Lagout">退出登录</p>
+                <div class="rd_categroy">
+                    <div class="rd_cate">
+                        <div class="rd_rate_tit">
+                            <img src="./img/icon_sort@2x.png" alt="">
+                            <p>商品分类</p>
+                        </div>
+                        <ul class="rd_cate_ul">
+                            <li @click="navProductlist('','')">
+                                <div class="rd_rate_li_active"></div>
+                                <p>全部商品</p>
+                            </li>
+                            <!-- <li>
+                                <div class="rd_rate_li_active"></div>
+                                品牌折扣区
+                                <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot">
+                            </li> -->
+
+                            <li v-for="(cate,index) in category" @click="navProductlist(cate.id,'')" class="rd_li">
+                                <div class="rd_rate_li_active"></div>
+                                <div class="rd_cate_name">{{cate.name}}</div>
+                                <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot" v-if="cate.id==1123">
+                                <ul class="rd_two_cate">
+                                    <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="rd_nav">
+                        <li class="active">
+                            <span>首页</span>
+                            <div class="red_bo"></div>
+                        </li>
+                        <li>
+                            <a href="cateproduct.html" target="_bank">
+                                <span>全部商品</span>
+                                <div class="red_bo"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cateproduct.html?cate1=1123" target="_bank">
+                                <span>品牌折扣区</span>
+                                <img src="./img/icon_hot@2x.png" alt="">
+                                <div class="red_bo"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 往下滚动， -->
+        <div class="rd_fixed" v-show="isRdscroll">
+            <div class="rd_fixed_nav">
+                <a href="index.html"><img src="./img/logo@2x.png" alt="" class="rd_fixed_log"></a>
+                <ul class="rd_nav">
+                    <li class="active">
+                        <span>首页</span>
+                        <div class="red_bo"></div>
+                    </li>
+                    <li>
+                        <a href="cateproduct.html" target="_bank">
+                            <span>全部商品</span>
+                            <div class="red_bo"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cateproduct.html?cate1=1123" target="_bank">
+                            <span>品牌折扣区</span>
+                            <img src="./img/icon_hot@2x.png" alt="">
+                            <div class="red_bo"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="rd_search">
+                    <input type="text" class="rd_search_box" placeholder="请输入关键词" v-model="keyword" @keyup.enter="sousuo(keyword)">
+                    <img src="./img/icon_ss.png" class="rd_search_ss" />
+                    <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
+                </div>
+                <a href="shopcart.html" target="_blank">
+                    <div class="rd_shopcart">
+                        <img src="./img/icon_cart@2x.png" alt="">
+                        <span>购物车</span>
+                        <div class="red" v-if="cart_count!=0">{{cart_count}}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 轮播图 -->
+        <div class="rd_swiper">
+            <a :href="link_lb" target="_blank">
+                <div><img :src="baseUrl+now" alt="" class="swiper_img"></div>
+            </a>
+            <div class="swiper_advice">
+                <p>提交建议/反馈</p>
+                <div class="tab_advice">
+                    <span @click="cur=0" :class="{active:cur==0}">文字</span>
+                    <span @click="cur=1" :class="{active:cur==1}">图片</span>
+                    <span @click="cur=2" :class="{active:cur==2}">文件</span>
+                </div>
+                <div class="form-text" v-show="cur==0">
+                    <textarea class="form-control tab_text" style="overflow-x:hidden;overflow-y:hidden" id="txt1" @focusin="placeh=0" @focusout="ontext" v-model="advice_text">
+						
+					</textarea>
+                    <span class="notice-top" v-show="placeh==1">请输入文字</span>
+                    <span class="notice-bottom" v-show="placeh==1">0/50</span>
+                </div>
+                <div class="form-img" v-show="cur==1">
+                    <!-- <img src="img/icon_add.png" class="img" @mouseover="uploadimg" v-if = "addhover"> -->
+                    <!-- <img src="img/icon_delete.png" class="delupimg" v-show="!addhover" @click="delUpimg"> -->
+                    <span v-show="imgList.length!==0" class="leftup" @click="upimgLeft">&lt;</span>
+                    <img :src="upimg" class="img" @mouseover="uploadimg" v-if="addhover">
+                    <img src="img/icon_add_hover.png" class="img" @mouseleave="uploadimg" v-show="!addhover" @click="addPic">
+                    <span v-show="imgList.length!==0" class="rightup" @click="upimgRight">&gt;</span>
+                    <input type="file" @change="onFileChange($event)" style="display: none;" accept="image/png,image/gif,image/jpeg" id="imgup">
+                    <p class="p1" @click.stop="uploadImg">点击上传图片</p>
+                    <p class="p2">已上传{{upimg_num}}张(最多5张)</p>
+                </div>
+                <div class="form-file" v-show="cur==2">
+                    <input type="file" @change="onFileChange2($event)" style="display: none;" id="upfile">
+                    <p>{{filename}}</p>
+                    <p class="p3" @click="addFile">点击上传文件</p>
+                </div>
+                <button type="button" class="btn btn-submit" @click="submitAdvice">提交</button>
+            </div>
+        </div>
+        <!-- 品牌折扣区 -->
+        <div class="rd_big_width">
+            <div class="hot_product rd_pai">
+                <p class="top_title" style="padding-bottom:34px;">品牌折扣区</p>
+                <span class="right_top" @click="navProductlist(1123,'','')">查看全部>></span>
+
+                <div class="tuijianproductlist">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2853116619&site=qq&menu=yes" class="rd_ad_left" target="_blank">
+                        <img src="./img/0c3da4a603d01267491a9b7aa4ccd36.jpg" />
+                    </a>
+                    <a :href="['productDetail.html?goods_id='+item.goods_id]" v-for="(item,index) in goods_quality_list" class="tuijianprod">
+                        <img :src="'http://www.yilitong.com'+item.goods_thumb" />
+                        <div class="tj_goodsname"><span class="rd_good_bg" v-if="item.is_quality==1"></span><span class="rd_line_goodsname">{{item.goods_name}}</span></div>
+                        <p class="tj_price">¥{{item.group_price}}<span class="rd_price_txt">折后</span><span class="rd_price_gray">¥{{item.market_price}}</span></p>
+                        <div class="rd_good_shop">
+                            {{item.brand_name}}
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="swiper">
-                <ul class="swiper_title">
-                    <!-- <li><a href="productlist.html?i=1" target="_blank" >全部商品</a></li> -->
-                    <li @click="navProductlist('')">全部商品</li>
-                    <!-- <div class="row carttab_goods" v-for="(cart,index) in cartList"> -->
-                    <li v-for="(cate,index) in category" @click="navProductlist(cate.id)">
-                        {{cate.name}}
-                    </li>
-                    <li><a href="pinpailist.html">品牌</a></li>
-                    <!-- <li><a href="productlist.html?i=2">10元以下</a></li>
-                <li><a href="productlist.html?i=3">10元-20元</a></li>
-                <li><a href="productlist.html?i=4">20元-30元</a></li>
-                <li><a href="productlist.html?i=5">30元-50元</a></li>
-                <li><a href="productlist.html?i=6">50元-100元</a></li>
-                <li><a href="productlist.html?i=7">100元-200元</a></li>
-                <li><a href="productlist.html?i=8">200元以上</a></li> -->
-                </ul>
-                <ul class="swiper_img">
-                    <a :href="link_lb" target="_blank">
-                        <li><img :src="baseUrl+now" alt=""></li>
-                    </a>
-                </ul>
-                <div class="swiper_advice">
-                    <p>提交建议/反馈</p>
-                    <div class="tab_advice">
-                        <span @click="cur=0" :class="{active:cur==0}">文字</span>
-                        <span @click="cur=1" :class="{active:cur==1}">图片</span>
-                        <span @click="cur=2" :class="{active:cur==2}">文件</span>
-                    </div>
-                    <div class="form-text" v-show="cur==0">
-                        <textarea class="form-control tab_text" style="overflow-x:hidden;overflow-y:hidden" id="txt1" @focusin="placeh=0" @focusout="ontext" v-model="advice_text">
-                        
-                    </textarea>
-                        <span class="notice-top" v-show="placeh==1">请输入文字</span>
-                        <span class="notice-bottom" v-show="placeh==1">0/50</span>
-                    </div>
-                    <div class="form-img" v-show="cur==1">
-                        <!-- <img src="img/icon_add.png" class="img" @mouseover="uploadimg" v-if = "addhover"> -->
-                        <!-- <img src="img/icon_delete.png" class="delupimg" v-show="!addhover" @click="delUpimg"> -->
-                        <span v-show="imgList.length!==0" class="leftup" @click="upimgLeft">&lt;</span>
-                        <img :src="upimg" class="img" @mouseover="uploadimg" v-if="addhover">
-                        <img src="img/icon_add_hover.png" class="img" @mouseleave="uploadimg" v-show="!addhover" @click="addPic">
-                        <span v-show="imgList.length!==0" class="rightup" @click="upimgRight">&gt;</span>
-                        <input type="file" @change="onFileChange($event)" style="display: none;" accept="image/png,image/gif,image/jpeg" id="imgup">
-                        <p class="p1" @click.stop="uploadImg">点击上传图片</p>
-                        <p class="p2">已上传{{upimg_num}}张(最多5张)</p>
-                    </div>
-                    <div class="form-file" v-show="cur==2">
-                        <input type="file" @change="onFileChange2($event)" style="display: none;" id="upfile">
-                        <p>{{filename}}</p>
-                        <p class="p3" @click="addFile">点击上传文件</p>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-submit" @click="submitAdvice">提交</button>
-                </div>
-            </div>
             <div class="hot_product">
                 <p class="top_title">为您推荐</p>
-                <span class="right_top" @click="navProductlist('')">全部商品>></span>
+                <span class="right_top right_top2" @click="navProductlist('')">全部商品>></span>
                 <div class="tuijianproductlist">
                     <a :href="['productDetail.html?goods_id='+item.goods_id]" v-for="item in product_tuijian" class="tuijianprod">
                         <img :src="'http://www.yilitong.com'+item.goods_thumb" />
-                        <p class="tj_goodsname">{{item.goods_name}}</p>
+                        <!-- <p class="tj_goodsname">{{item.goods_name}}</p> -->
+                        <div class="tj_goodsname"><span class="rd_good_bg" v-if="item.is_quality==1"></span><span class="rd_line_goodsname">{{item.goods_name}}</span></div>
                         <p class="tj_price">¥{{item.group_price}}</p>
                     </a>
                 </div>
@@ -165,12 +294,49 @@
             </div>
         </div>
         <div class="containerB">
-            <p>红礼供应链管理有限公司</p>
+            <div class="rd_bottom_nav">
+                <div class="rd_bottom_one">
+                    <div class="company">
+                        <img src="./img/logo@2x.png" />
+                        <span>红礼供应链管理有限公司</span>
+                    </div>
+                    <p class="rd_na">
+                        <a href="index.html">红礼首页</a>
+                        <span>|</span>
+                        <a href="cateproduct.html">全部商品</a>
+                        <span>|</span>
+                        <a href="cateproduct.html?cate1=1123">品牌折扣区</a>
+                    </p>
+
+                </div>
+                <div class="rd_bottom_two">
+                    <div class="rd_tel_person">
+                        <img src="./img/icon_phone_1@2x.png" alt="">
+                        <span>180-3307-7619</span>
+                    </div>
+                    <div class="rd_tel_person">
+                        <img src="./img/icon_telephone_1@2x.png" alt="">
+                        <span>0755-22937331</span>
+                    </div>
+                    <div class="rd_tel_person">
+                        <img src="./img/icon_address@2x.png" alt="">
+                        <span>深圳市福田保税区 腾飞工业大厦A座CD区4楼</span>
+                    </div>
+                </div>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2853116619&site=qq&menu=yes" target="_blank">
+                    <div class="rd_bottom_three">
+                        <img src="./img/icon_service_1@2x.png" alt="" class="img1">
+                        <img src="./img/icon_service_1_white@2x.png" alt="" class="img2">
+                        <span>免费在线咨询</span>
+                    </div>
+                </a>
+
+            </div>
         </div>
         <!-- div class="dialog-bg" id="dialog-bg">
-        <div class="img-box" id="img-box">
+		<div class="img-box" id="img-box">
     <img src="">
-    </div> -->
+	</div> -->
         <div class="confirm-container" v-if="tanc">
             <div class="confirm-body">请先修改初始密码
                 <i class="close" @click="Lagout">×</i>
@@ -250,13 +416,18 @@
             tanc2: false,
             category: [],
             product_tuijian: '',
+            // 新增
+            isRdscroll: false,
+            goods_quality_list: '', //品牌折扣区
+            cart_count: 0,
+            user: '',
         },
         created() {
             if (!localStorage.admin_id) {
                 window.location.href = 'login.html';
             } else {
                 this.admin_id = localStorage.admin_id;
-                this.getCartList(localStorage.admin_id);
+                // this.getCartList(localStorage.admin_id);
                 this.getCategeory(localStorage.admin_id);
                 // this.getData(localStorage.admin_id);
                 if (localStorage.updata_paw == 0) {
@@ -267,17 +438,32 @@
 
         mounted: function() {
             this.getProductlist();
+            window.addEventListener("scroll", this.handleScroll, true);
         },
         // updated() {
-        //  console.log(this.imgList);
+        // 	console.log(this.imgList);
         // },
         methods: {
-            navProductlist(e) {
-                console.log(e);
-                if (e == 'quanbu') {
-                    window.location.href = 'productlist.html';
+            handleScroll(el) {
+                let _pos = document.getElementById("vue_index").getBoundingClientRect().top;
+                // console.log('top', _pos);
+                if (_pos < -160) {
+                    this.isRdscroll = true;
                 } else {
-                    window.location.href = 'productlist.html?cat_id=' + e;
+                    this.isRdscroll = false;
+                }
+            },
+            navProductlist(e, b) {
+                console.log(e);
+                if (e == '') {
+                    window.location.href = 'cateproduct.html';
+                } else {
+                    if (b == "") {
+                        window.location.href = 'cateproduct.html?cate1=' + e;
+                    } else {
+                        window.location.href = 'cateproduct.html?cate1=' + e + '&cate2=' + b;
+                    }
+
                 }
 
             },
@@ -298,10 +484,13 @@
                     var lunbotu = res.data.brand_list;
                     that.lunbotu = lunbotu;
                     // setInterval(function(){
-                    //  that.getLunbo(lunbotu);
+                    // 	that.getLunbo(lunbotu);
                     // },4000);
-                    console.log(lunbotu);
+                    that.goods_quality_list = res.data.goods_quality_list;
+                    // console.log(goods_quality_list);
+                    that.cart_count = res.data.cart_count;
                     that.getLunbo(lunbotu);
+                    that.user = res.data.user;
 
                 });
 
@@ -325,7 +514,7 @@
                         catearr.push(k[i]);
                     }
                     // for(var i=0;i<10;i++){
-                    //  that.category[i]=catearr[i]
+                    // 	that.category[i]=catearr[i]
                     // }
                     that.category = catearr;
                     console.log(catearr[0].name);
@@ -364,24 +553,24 @@
                     console.log(res.data);
                 });
             },
-            getCartList: function(e) {
-                var baseurl = this.baseUrl;
-                var that = this;
-                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-                axios.get(baseurl + '/index.php/home/RedGift/ajaxCartList', {
-                    params: {
-                        admin_id: e
-                    }
-                }).then(function(res) {
-                    // console.log(res.data.cartList[41].list);
-                    if (res.data.cartList == null) {
-                        that.cartLength = '';
-                    } else {
-                        that.cartLength = res.data.cartList[41].list.length;
-                        console.log(that.cartLength);
-                    }
-                });
-            },
+            // getCartList: function(e) {
+            //     var baseurl = this.baseUrl;
+            //     var that = this;
+            //     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+            //     axios.get(baseurl + '/index.php/home/RedGift/ajaxCartList', {
+            //         params: {
+            //             admin_id: e
+            //         }
+            //     }).then(function(res) {
+            //         // console.log(res.data.cartList[41].list);
+            //         if (res.data.cartList == null) {
+            //             that.cartLength = '';
+            //         } else {
+            //             that.cartLength = res.data.cartList[41].list.length;
+            //             console.log(that.cartLength);
+            //         }
+            //     });
+            // },
             //提交建议
             submitAdvice: function(e) {
                 var baseurl = this.baseUrl;
@@ -432,10 +621,10 @@
                 }
             },
             // delUpimg:function(){
-            //  var index=this.imgi;
-            //  this.imgList.splice(index,1);
-            //  console.log(index);
-            //  // this.showimg(this.imgList[index]);
+            // 	var index=this.imgi;
+            // 	this.imgList.splice(index,1);
+            // 	console.log(index);
+            // 	// this.showimg(this.imgList[index]);
             // },
             addPic: function(e) {
                 e.preventDefault();
@@ -533,13 +722,13 @@
                     }).then(function(res) {
                     console.info(res.data);
                     // if(res.data.result==-11){
-                    //  window.location.href='login.html';
+                    // 	window.location.href='login.html';
                     // }
                     // var lunbotuobj=res.data.brand_list;
                     var lunbotu = res.data.brand_list;
                     that.lunbotu = lunbotu;
                     // setInterval(function(){
-                    //  that.getLunbo(lunbotu);
+                    // 	that.getLunbo(lunbotu);
                     // },4000);
                     console.log(lunbotu);
                     that.getLunbo(lunbotu);
