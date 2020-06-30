@@ -40,7 +40,7 @@ class Index extends Base {
       	$supplier_id = Db::name('supplier')->field('supplier_id')->where('is_designer=0 and status=1')->order('add_time desc')->cache(true,3600)->select();//获取所有供应商id
         $arr=[];//将供应商表里所有供应商id装在这里
         foreach($supplier_id as $value){
-            foreach($value as $key){
+            foreach($value as $key){    
                 $arr[]=$key;
             }
         }
@@ -102,8 +102,8 @@ class Index extends Base {
             }
         }
         //首页活动资讯
-        $article['arry'] = Db::name('article')->where("thumb != ' ' and is_open != 0 and is_ecommend != 0")->order("publish_time desc")->limit(2)->Field("thumb as image,title,article_id")->select();
-        $article['arr'] = Db::name('article')->where("cat_id = 3 and is_open = 1")->order("publish_time desc")->limit(8)->Field("publish_time as time,title,article_id")->select();
+        $article['arry'] = Db::name('article')->where("thumb != ' ' and is_open = 1 and is_ecommend = 1")->order("publish_time desc")->limit(2)->Field("thumb as image,title,article_id")->select();
+        $article['arr'] = Db::name('article')->where("is_open = 1")->order("publish_time desc")->limit(2,8)->Field("publish_time as time,title,article_id")->select();
 
         $this->assign("arrry",$article['arry']);
         $this->assign("arr",$article['arr']);

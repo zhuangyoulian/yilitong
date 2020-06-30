@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
+  <!------- 下一版修改了分类菜单--------->
 <meta name="baidu-site-verification" content="zUAKXUKvqz" />
 <meta charset="utf-8">
-<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
 <title>【一礼通商城】礼品商城_礼品采购_高端创意礼品_大型礼品网站</title>
 <meta name="keywords" content="一礼通，礼品商城，礼品网站，高端礼品，创意礼品，购物网站，礼品批发 ,礼品定制，礼品采购">
 <meta name="description" content="一礼通大型礼品商城平台诚邀品牌招商入驻，提供各类商务礼品，生日礼物，节日礼品，高端礼品，促销礼品，工艺礼品，员工礼品创意礼品采购等，个性化定制满足不同的送礼需求，结合了最具实力设计师、融合了最具创意的创客idea，为您提供最满意网上购物体验！">
@@ -23,112 +23,73 @@
 	<div class="c"></div>
     
 	<div class="nav-banner">
-		<div class="warp_1200 classification">
-
-	<!-- 	菜单开始	 -->
-    <div class="classdiv" >
-        <div class="classdiv1">
-            <div  class="classdiv11  ondiv dhzt">送礼导航</div>
-            <div  class="classdiv12 dhzt" style="display:block;">商品分类</div>
-        </div>
-     <!--    场景分类 -->
-        <div class="classdiv2">
-			<div class="classdiv21">
-				<ul class="list_ul2" 　style="opacity:1;">
-					<foreach name="scenario_category_tree" key="k" item='v' length="9">
-						<if condition="$v[level] eq 1">
-							<li class="list-li list-li_{$v.id}">
-								<div class="list_a2">
-									<h3>
-										<a href="{:Url('Home/Goods/scenarioList',array('id'=>$v[id]))}" class="title">
-											<span style="font-size: 14px;float: left;width: 77px;margin-left: -30px;margin-top: 3px;" class="zt"><i class="list_ico2"></i>{$v['name']}</span>
-										</a>
-										<foreach name="v[tmenu]" item="v2" key="k2" class="countparent" length="4">
-											<if condition="$v2[parent_id] eq $v[id]">
-												<div style="display: flex;flex-direction: row;float:left;width:72px;" >
-													<div style="flex:1; padding-bottom: 5px;" class="two"><a href="{:Url('Home/Goods/scenarioList',array('id'=>$v2[id]))}" class="zt">{$v2['name']}</a></div>
-												</div>
-											</if>
-										</foreach>
-									</h3>
-								</div>
-								<div class="list_b" style="left: 214px;top:46px;height:400px">
-									<div class="subitems">
-										<foreach name="v[tmenu]" item="v2" key="k2">
-											<if condition="$v2[parent_id] eq $v[id]">
-												<dl class="ma-to-20 cl-bo">
-													<dt class="bigheader wh-sp"><a href="{:Url('Home/Goods/scenarioList',array('id'=>$v2[id]))}">{$v2['name']}</a><i>＞</i></dt>
-													<dd class="ma-le-100">
-														<foreach name="v2[sub_menu]" item="v3" key="k3">
-															<if condition="$v3[parent_id] eq $v2[id]">
-																<a class="hover-r ma-le-10 ma-bo-10 pa-le-10 bo-le-hui fl wh-sp" href="{:Url('Home/Goods/scenarioList',array('id'=>$v3[id]))}">{$v3['name']}</a>
-															</if>
-														</foreach>
-													</dd>
-												</dl>
-											</if>
-										</foreach>
-									</div>
-								</div>
-								<i class="list_img"></i>
-							</li>
-						</if>
-					</foreach>
-				</ul>
-			</div>
-        <!--    商品分类 -->
-            <div class="classdiv22" style="display:none">
-              <ul class="list_ul"　style="opacity:1;">
-              <foreach name="goods_category_tree" key="k" item='v' length="9">
-              <if condition="$v[level] eq 1">
-              <li class="list-li list-li_{$v.id} ">
-              <div class="list_a">
-                  <h3><a href="{:Url('Home/Goods/goodsList',array('id'=>$v[id]))}" class="two"><i class="list_ico"></i><span class="ys zt">{$v['name']}</span></a></h3>
-              </div>
-              <div class="list_b">
-                  <div class="subitems">
-                 <foreach name="v[tmenu]" item="v2" key="k2" >
-                 <if condition="$v2[parent_id] eq $v[id]">
-                  <dl class="ma-to-20 cl-bo">
-                  <dt class="bigheader wh-sp"><a href="{:Url('Home/Goods/goodsList',array('id'=>$v2[id]))}">{$v2['name']}</a><i>＞</i></dt>
-                  <dd class="ma-le-100">
-                 <foreach name="v2[sub_menu]" item="v3" key="k3">
-                   <if condition="$v3[parent_id] eq $v2[id]">
-                   <a class="hover-r ma-le-10 ma-bo-10 pa-le-10 bo-le-hui fl wh-sp" href="{:Url('Home/Goods/goodsList',array('id'=>$v3[id]))}">{$v3['name']}</a>
-                    </if>
-                 </foreach>
-                  </dd>
-                  </dl>
-                  </if>
-                 </foreach>
-                  </div>
-              </div>
-              <i class="list_img"></i>
-              </li>
-              </if>
-              </foreach>
-              </ul>
-             </div>
-        </div>
+		<div class="warp_1200">
+          <div class="allgoods">
+<div class="goods_num"><i class="trinagle"></i><h2 class="fa fa-tasks" style="text-align:rihgt;margin-left:100px;margin-top:-10px;">全部商品</h2></div>
+<div class="list" style="display:none;" <?php if(MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME == 'home/Index/index') echo 'style="display:block;"'; ?> >
+<ul class="list_ul"　style="opacity:1;">
+<foreach name="goods_category_tree" key="k" item='v'>
+<if condition="$v[level] eq 1">
+<li class="list-li list-li_{$v.id} ">
+<div class="list_a">
+    <h3><a href="{:Url('Home/Goods/goodsList',array('id'=>$v[id]))}"><i class="list_ico"></i><span>{$v['name']}</span></a></h3>
+    <!-- p>
+       <assign name="index" value="1" />
+       <foreach name="v[tmenu]" item="v2" key="k2" >
+         <if condition="$v2[parent_id] eq $v[id]">
+            <?php if($index++ > 3) break; ?>
+            <a href="{:Url('Home/Goods/goodsList',array('id'=>$v2[id]))}">{$v2['name']}</a>
+         </if>
+       </foreach>
+    </p -->
+</div>
+<div class="list_b">
+    <!--<div class="list_bigfl">-->
+       <!--<assign name="index" value="1" />                                        -->
+       <!--<foreach name="v[tmenu]" item="v2" key="k2" >-->
+           <!--<if condition="$v2[parent_id] eq $v[id]">-->
+            <!--<?php if($index++ > 6) break; ?>-->
+                <!--<a class="list_big_o ma-le-30" href="{:Url('Home/Goods/goodsList',array('id'=>$v2[id]))}">{$v2['name']}<i>＞</i></a>-->
+           <!--</if> -->
+       <!--</foreach>                                                                                    -->
+    <!--</div>-->
+    <div class="subitems">
+   <foreach name="v[tmenu]" item="v2" key="k2" >
+   <if condition="$v2[parent_id] eq $v[id]">
+    <dl class="ma-to-20 cl-bo">
+    <dt class="bigheader wh-sp"><a href="{:Url('Home/Goods/goodsList',array('id'=>$v2[id]))}">{$v2['name']}</a><i>＞</i></dt>
+    <dd class="ma-le-100">
+   <foreach name="v2[sub_menu]" item="v3" key="k3">
+     <if condition="$v3[parent_id] eq $v2[id]">
+     <a class="hover-r ma-le-10 ma-bo-10 pa-le-10 bo-le-hui fl wh-sp" href="{:Url('Home/Goods/goodsList',array('id'=>$v3[id]))}">{$v3['name']}</a>
+      </if>
+   </foreach>
+    </dd>
+    </dl>
+    </if>
+   </foreach>
     </div>
-
-<!--     菜单结束 -->
-
-
-
-
+</div>
+<i class="list_img"></i>
+</li>
+</if>
+</foreach>
+</ul>
+</div>
+</div>
+          
 			<div id="banner_tabs" class="flexslider" >
 
 				<ul class="slides">
 				<adv limit="3" item="v" pid="2">
 					<li>
-						<a href="{$v.ad_link}" target="_blank">
+						<a href="{$v.ad_link}" <if condition="$v['target'] eq 1">target="_blank"</if>>
 							<img src="{$v[ad_code]}"/>
 						</a>
 					</li>
 				</adv>
 				</ul>
-
+     
 				<div class="bs-ri" >
 					<div class="ris-notice" style="height:480px;width:20%;left:80%;z-index:9999;position:absolute;top:0px;z-index:9999;">
 					<div class="notice_x">
@@ -228,27 +189,18 @@
 
 
 	<div class="layout layer" id="getAllImg">
-       <!--活动 专区 深大送礼-->
+       <!--深大   送礼-->
 		<div class="lou4">
           	<p class="xuxian_left"><img src="__STATIC__/images/xuxian.png"></p>
           <ylt sql="select * from `__PREFIX__ad_position`  where position_id = 40  limit 1" item="v" key="k" >
-			<h2 class="titile_1" style="text-align: center;">活动 专区</h2>
+			<a href="{$v[ad_link]}"><h2 class="titile_1" style="text-align: center;">深大   送礼</h2></a>
            </ylt>
 			<p class="xuxian_right"><img src="__STATIC__/images/xuxian.png"></p>
 			<div class="chuangyi">
-				<div class="chuangyi_top" style="display: flex;flex-direction: row;">
-				<div style="flex: 1">
-					<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 46  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><i class="list_ico_003"></i><p class="title" style="color:#8f82bc;">{$v.position_name}</p></a>
-				</ylt>
-				</div>
-				<div style="flex: 1;">
-					<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 46  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><p style="line-height: 50px;text-align: right;font-size: 18px;color: #8f82bc">更多 ></p></a>
-				</ylt>
-				</div>
-				
-				
+				<div class="chuangyi_top">
+				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 40  limit 1" item="v" key="k" >
+					<a href="{$v[ad_link]}"><i class="list_ico_003"></i><p class="title" style="color:#8f82bc">{$v.position_name}</p></a>
+					</ylt>
 				</div>
 				<div class="chuangyi_but">
 					<div class="chuangyi_but_left">
@@ -295,7 +247,7 @@
 				<div class="lou_left_top">
 					<i class="list_ico_001"></i>
 					  <ylt sql="select * from `__PREFIX__ad_position`  where position_id = 14  limit 1" item="v" key="k" >
-				<a href="{$v[ad_link]}">	<h2 style="color:#c9569a">{$v.position_name}</h2> <p style="line-height: 50px;text-align: right;font-size: 18px;color: #c9569a">更多 ></p></a>
+				<a href="{$v[ad_link]}">	<h2 style="color:#c9569a">{$v.position_name}</h2> </a>
 					  </ylt>
 				</div>
 
@@ -322,11 +274,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- 健康食品 -->
-			<div class="lou_right r" style="margin-top: 5px;width: 588px;">
+			<div class="lou_right r" style="margin-top: 5px;">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 15  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><i class="list_ico_002"></i><h2 style="color:#a86284">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #a86284">更多 ></p></a>
+					<a href="{$v[ad_link]}"><i class="list_ico_002"></i><h2 style="color:#a86284">{$v.position_name}</h2></a>
 					</ylt>
 					<ul class="list">
 					</ul>
@@ -357,19 +308,10 @@
 		<!--生活家居-->
 		<div class="lou4">
 			<div class="chuangyi">
-				<div class="chuangyi_top" style="display: flex;flex-direction: row;">
-				<div style="flex: 1">
+				<div class="chuangyi_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 16  limit 1" item="v" key="k" >
 					<a href="{$v[ad_link]}"><i class="list_ico_003"></i><p class="title" style="color:#8f82bc">{$v.position_name}</p></a>
-				</ylt>
-				</div>
-				
-				<div style="flex: 1;">
-					<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 46  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><p style="line-height: 50px;text-align: right;font-size: 18px;color: #8f82bc">更多 ></p></a>
-				</ylt>
-				</div>
-				
+					</ylt>
 				</div>
 				<div class="chuangyi_but">
 					<div class="chuangyi_but_left">
@@ -409,7 +351,7 @@
 			<div class="lou_left">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 17  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><i class="list_ico_004"></i><h2 style="color:#659cb5">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #659cb5">更多 ></p></a>
+					<a href="{$v[ad_link]}"><i class="list_ico_004"></i><h2 style="color:#659cb5">{$v.position_name}</h2></a>
 				</ylt>
 				</div>
 				<div class="list_1">
@@ -437,7 +379,7 @@
 			<div class="lou_right r" style="width:588px;margin-top: 28px;">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 18  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><i class="list_ico_005"></i><h2 style="color:#35a6a5">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #35a6a5">更多 ></p></a>
+					<a href="{$v[ad_link]}"><i class="list_ico_005"></i><h2 style="color:#35a6a5">{$v.position_name}</h2></a>
 				</ylt>
 				</div>
 				<div class="list_1">
@@ -467,7 +409,7 @@
 			<div class="lou_left">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 19  limit 1" item="v" key="k" >
-				<a href="{$v[ad_link]}">	<i class="list_ico_006"></i><h2 style="color:#b7538d">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #b7538d">更多 ></p></a>
+				<a href="{$v[ad_link]}">	<i class="list_ico_006"></i><h2 style="color:#b7538d">{$v.position_name}</h2></a>
 				</ylt>
 				</div>
 				<div class="list_1">
@@ -492,10 +434,10 @@
 				</div>
 			</div>
 			<!--户外运动-->
-			<div class="lou_right r" style="margin-top: 28px;width: 588px;">
+			<div class="lou_right r" style="margin-top: 28px;">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 20  limit 1" item="v" key="k" >
-				<a href="{$v[ad_link]}">	<i class="list_ico_007"></i><h2 style="color:#c02d49">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #c02d49">更多 ></p></a>
+				<a href="{$v[ad_link]}">	<i class="list_ico_007"></i><h2 style="color:#c02d49">{$v.position_name}</h2></a>
 				</ylt>
 				</div>
 				<div class="list_1">
@@ -523,19 +465,11 @@
 
 		<!--个性创意-->
 		<div class="chuangyi">
-				<div class="chuangyi_top" style="display: flex;flex-direction: row;">
-				<div style="flex: 1">
+				<div class="chuangyi_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 21  limit 1" item="v" key="k" >
 				<a href="{$v[ad_link]}">	<i class="list_ico_008"></i><p class="title" style="color:#a1643f">{$v.position_name}</p></a>
 				</ylt>
 				</div>
-				<div style="flex: 1;">
-					<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 46  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><p style="line-height: 50px;text-align: right;font-size: 18px;color: #a1643f">更多 ></p></a>
-				</ylt>
-				</div>
-				</div>
-				
 				<div class="chuangyi_but">
 					<div class="chuangyi_but_left">
 					<adv limit="1" item="v" ad_id="47">
@@ -572,7 +506,7 @@
 			<div class="lou_left">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 22  limit 1" item="v" key="k" >
-					<a href="{$v[ad_link]}"><i class="list_ico_009"></i><h2 style="color:#694d45">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #694d45">更多 ></p></a>
+					<a href="{$v[ad_link]}"><i class="list_ico_009"></i><h2 style="color:#694d45">{$v.position_name}</h2></a>
 				</ylt>
 				</div>
 				<div class="list_1">
@@ -597,10 +531,10 @@
 				</div>
 			</div>
 			<!--包装材料-->
-			<div class="lou_right r" style="margin-top: 28px;width: 588px;">
+			<div class="lou_right r" style="margin-top: 28px;">
 				<div class="lou_left_top">
 				<ylt sql="select * from `__PREFIX__ad_position`  where position_id = 23  limit 1" item="v" key="k" >
-				<a href="{$v[ad_link]}"><i class="list_ico_0010"></i><h2 style="color:#865454">{$v.position_name}</h2><p style="line-height: 50px;text-align: right;font-size: 18px;color: #865454">更多 ></p></a>
+				<a href="{$v[ad_link]}"><i class="list_ico_0010"></i><h2 style="color:#865454">{$v.position_name}</h2></a>
 				</ylt>
 				</div>
 				<div class="list_1">
@@ -766,14 +700,9 @@
 			 <li><a href="javascript:void(0);">一礼通新品</a></li>
 			 <li>|</li>
 			 <li><a href="javascript:void(0);">开放平台</a></li>
-            <li>|</li>
-            <li><a href="/public/yilitong/images/yingyezizhi.png" rel="nofollow" target="_blank" >营业执照|食品许可证|第二类医疗机械备案凭证</a></li>
-            <li>|</li>
-			<li><a href="/public/yilitong/images/yaopingzhengshu.pdf" rel="nofollow" target="_blank" >《互联网药品信息服务资格证书》</a></li>
-
 		 </ul>
 
-		 <p class="bottomRecord">Copyright © 2017-2027 {$config['shop_info_store_name']}  版权所有 保留一切权利 <a href="http://www.beian.miit.gov.cn" rel="nofollow">备案号:{$config['shop_info_record_no']}</a></p>
+		 <p class="bottomRecord">Copyright © 2017-2027 {$config['shop_info_store_name']}  版权所有 保留一切权利 <a href="http://www.miitbeian.gov.cn" rel="nofollow">备案号:{$config['shop_info_record_no']}</a></p>
 		
 
 		 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264421531'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1264421531%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
@@ -796,9 +725,6 @@
 			 <li>
 				 <img src="__STATIC__/images/zhifubao_cnnic.png">
 			 </li>
-            <li>
-				<script id="ebsgovicon" src="https://szcert.ebs.org.cn/govicons.js?id=451b976b-ae2f-494f-a54d-d6230d676226&width=91&height=37&type=2" type="text/javascript" charset="utf-8"></script>
-			</li>
 		 </ul>
 		 <!-- 安全联盟、可信网站、微信支付、支付宝 end -->
 
@@ -817,7 +743,6 @@
  
 
 <!--------footer-结束-------------->
-<script src="__STATIC__/js/jquery-1.10.2.min.js"></script>
 <!-- 首页轮播图片 轮播js 广告-->
 <script src="__STATIC__/js/slider.js"></script>
 <script src="__PUBLIC__/js/jqueryUrlGet.js"></script><!--获取get参数插件-->
@@ -832,23 +757,9 @@
  
           $(".list").css("display","block");
        
-     //$(".list-li_1018").css("display","none");
+     $(".list-li_1018").css("display","none");
     
 });
-    $(".classdiv1>div").click(function(){
-        var index=$(this).index();
-        $(this).siblings().removeClass("ondiv");
-        $(this).addClass("ondiv");
-        if(index==0){
-            $(".classdiv21").css("display","block");
-            $(".classdiv22").css("display","none");
-        };
-        if(index==1){
-            $(".classdiv21").css("display","none");
-            $(".classdiv22").css("display","block");
-        };
-
-    });
 </script>
 </script>
 </body>

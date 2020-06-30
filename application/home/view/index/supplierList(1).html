@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全球礼品产业链一站式综合服务</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="/public/yilitong/css/style.css" type="text/css">
+<link rel="stylesheet" href="/public/yilitong/css/index.css" type="text/css">
+<script src="/public/yilitong/js/index.js"></script>
+  <style>
+    .subitems{width:400px;height:400px;background: #f00;postion:absolute;z-index:99999999;}
+    .purchase-col {
+    width: 251px;
+    height: auto;
+    padding: 20px;
+    background: #fff;
+    margin-right: 12px;
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+    .classdivdiv000 {
+      width: 760px;
+      margin-right: 5px;
+      margin-left: 200px;
+      position: absolute;
+      height:400px;
+      background: rgba(128, 124, 124, 0.1);
+      z-index:999999;
+      display:none;
+      top:250px;
+}
+     .classdivdiv001 {
+    width: 760px;
+    margin-right: 5px;
+    margin-left: 200px;
+  
+      position: absolute;
+      height:400px;
+      background: rgba(128, 124, 124, 0.1);
+      z-index:999999;
+      display:none;
+      top:250px;
+}
+    .purchase-col .line {
+    width: 0;
+    height: 4px;
+    background: yellowgreen;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transition: all 0.3s ease 0.1s;
+}
+    .purchase-title {
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+    .purchase-time-num {
+    font-size: 12px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+    .purchase-time-num .color-1 {
+    color: #cdae8a;
+}
+    .purchase-time-num .marginTop30 {
+    margin-top: 35px;
+}
+    .purchase-container .purchase-col .company {
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+    .purchase-price {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+    
+    /* 品牌换一批样式*/
+    #iconWall{
+    /*width: 732px;
+    padding-top: 1px;
+    padding-left: 1px;*/
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    overflow: hidden;
+    list-style: none;
+  }
+  
+    #next_brand:hover{
+    transition: 0s;
+  }
+  #iconWall li{
+      width: 198px;
+      height: 180px;
+      border: 1px #f2f2f2 solid;
+      /*
+      background-color: #fff;
+      margin-right: 1px;
+      margin-bottom: 1px;
+      */
+      float: left;
+      position: relative;
+
+  }
+    
+    /*二、3D反转区域处理 */
+  #iconWall  .img-back, .img-front{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        width: 198px;
+        height: 180px;
+        text-align: center;
+        line-height: 180px;
+    }
+
+     #iconWall li img{
+        vertical-align: middle;
+    }
+
+
+    .img-3d{
+        transform-style: preserve-3d;
+    }
+
+    .img-back{
+        transform: rotateY(180deg);
+    }
+
+
+    /*四、处理浮层*/
+  #iconWall  .mask{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 198px;
+        height: 180px;
+      text-align: center;
+        background-color: rgba(0, 0, 0, .7);
+        opacity: 0;
+    }
+
+  #iconWall  .mask p{
+        font-size: 12px;
+        color: #fff;
+        width:180px;
+        margin: 65px auto 0px;
+        text-align: center;
+    }
+  #iconWall  .mask a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        background-color: red;
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 10px;
+    }
+
+    #iconWall li:hover .mask{
+        opacity: 1;
+        transition: .3s linear;
+    }
+      /* 供应商换一批样式*/
+    #Wall{
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    overflow: hidden;
+    list-style: none;
+  }
+  
+    #next_supplier:hover{
+    transition: 0s;
+  }
+
+
+
+  #Wall li{
+      width: 98px;
+      height: 110px;
+      border: 1px #f2f2f2 solid;
+      float: left;
+      position: relative;
+
+  }
+    
+    /*二、3D反转区域处理 */
+  #Wall  .img-back, .img-front{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        width: 98px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+    }
+
+     #Wall li img{
+        vertical-align: middle;
+    }
+
+
+    /*测试代码
+    #iconWall li:hover .img-3d{
+        transition: .3s linear;
+        transform: rotateY(180deg);
+    }
+    */
+  
+
+    /*四、处理浮层*/
+  #Wall  .mask{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 98px;
+        height: 110px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .7);
+        opacity: 0;
+    }
+
+  #Wall  .mask a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        background-color: red;
+        width: 70px;
+        display: block;
+        margin: 50px auto 0px;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 10px;
+    }
+
+    #Wall li:hover .mask{
+        opacity: 1;
+        transition: .3s linear;
+    }
+    
+  </style>
+<body>
+ <include file="public/header" />
+<div class="layout classification" >
+    <div class="classdiv" >
+        <div class="classdiv1">
+            <div  class="classdiv11  ondiv">场景分类</div>
+            <div  class="classdiv12" style="display:block;">商品分类</div>
+        </div>
+     <!--    场景分类 -->
+        <div  class="classdiv2">
+            <div class="classdiv21" >   
+              <ul id="ulli1">
+               <volist name="gifts" id="vo" key="k">
+                <if condition="$vo.parent_id eq 0">
+                   <li><img src="{$vo.icon}" style="float:left; height:20px;width:18px;margin-top:7px;margin-left:20px;"><a href="{:Url('Goods/goodsList',array('gift_id'=>$vo[id]))}"><span class="spanclass" >{$vo.name}&emsp;&emsp;</span><img src="/public/yilitong/images/00.png" style="float:right;height: 40px;width: 16px;margin-top: -35px;margin-right:20px;"></a>
+                    <div class="classdivdiv000">  
+               <foreach name="gifts" item="value" key="key">
+                    <if condition="$value['parent_id'] eq $vo['id']">
+                          <div style="width:280px;height:125px;padding:25px;float:left;background: #fff">
+                                <a href="{:Url('Goods/goodsList',array('gift_id'=>$value[id]))}">
+                                  <img src="{$value.image}" width="100%" height="100%" alt=""></a>
+                          </div>
+                      </if>
+                </foreach>
+                     </div> 
+                 </li>
+                  </if>   
+                <!-- <div class="subitems"></div> -->
+                </volist>
+              </ul> 
+           </div>
+        <!--    商品分类 -->
+            <div class="classdiv22">
+              <ul id="ulli2">
+              <foreach name="goods_category_tree" key="kk" item="vo">
+
+                <li  ><img src="{$vo.icon}" style="float:left; height:20px;width:18px;margin-top:7px;margin-left:20px;"><a href="{:Url('Goods/goodsList',array('id'=>$vo[id]))}"><i class="list_ico"></i><span class="spanclass" >{$vo.name}&emsp;&emsp;</span><img src="/public/yilitong/images/00.png" style="float:right;height: 40px;width: 16px;margin-top: -35px;margin-right:20px;"></a>
+                  <div class="classdivdiv001" style="background: #fff;">
+                        <volist  name="$vo.tmenu" id="val" key='key' length='5'>
+                         <div style="width:20%;text-align: center;float:left;"><a href="{:Url('Goods/goodsList',array('id'=>$val[id]))}"><img style="display: block;margin-right:5px " src="{$val.image}"wdith="120" height="120" alt="">{$val.name}</a></div>
+                        </volist>
+                        <if condition="count($vo['tmenu']) GT 5">
+                         <div style="width:20%;text-align: center;float:left;"><a href="##">+更多</a></div>
+                        </if>
+                     </div> 
+                  </li>
+                <!-- <div class="subitems"></div> -->
+               </foreach>
+              </ul>
+             </div>
+        </div>
+    </div>
+     
+    <div class="classdivdiv">
+        <div class="classdivdiv1" >
+            <div>
+                <ul class="carousel" onmouseover="stop();" onmouseout="lunbo();">
+                   <adv limit="5" item="v" pid="43">
+                    <li>
+                        <a href="{$v.ad_link}" <if condition="$v['target'] eq 1">target="_blank"</if>>
+                            <img src="{$v[ad_code]}" width="760" height="270"/>
+                        </a>
+                    </li>
+                </adv>
+                </ul>
+            </div>
+        </div>
+        <div class="classdivdiv2">
+            <div>
+                <adv limit="1" item="v" ad_id="179">
+                    <li><a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="378" height="180"></a></li>
+                </adv>
+            </div>
+            <div>
+                <adv limit="1" item="v" ad_id="178">
+                    <li><a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="378" height="180"></a></li>
+                </adv>
+           </div>
+        </div>
+    </div>
+    <div class="classlogn">
+      <div class="bs-ri">
+                    <div class="ris-notice">
+                    <div class="notice_x">
+                        <div class="notice-img" >
+                            <div class="v-img l" style="float:left;"><img src="/public/static/images/tou2.png"></div>
+                            <div class=""><p>Hi 您好!<br>欢迎来到一礼通</p></div>
+                        </div>
+                        <div class="c"></div>
+                        <div class="login_btn">
+                      
+                            <div class="mem_login ">
+                                     <a class="nologin" href="/Home/User/user_login.html" rel="nofollow">会员登录</a>
+                                     <a class="islogin" href="{:Url('Home/User/index')}" rel="nofollow" style="display:none">个人中心</a>
+                                     <a class="isSuplogin" href="{:Url('Home/Business/BusinessIndex')}" rel="nofollow"  style="display:none">进入店铺</a>
+                            </div>
+                            <div class="shops_login ">
+                                 <a class="nologin" href="/Home/Business/login.html" rel="nofollow">商家登录</a>
+                                 <a class="islogin" href="{:Url('Home/User/order_list')}" rel="nofollow" style="display:none">我的订单</a>
+                                 <a class="isSuplogin" href="{:Url('Supplier/Index/index')}" rel="nofollow" style="display:none">询报价管理</a>
+                            </div>
+                          </if>
+                        </div>
+                        <div class="c"></div>
+                        <div class="notice-res">
+                            <div class="login1 nologin" style="float:left;width:45%;margin:0;text-align: center;"><a href="/Home/User/register.html" rel="nofollow">注册会员</a></div>
+                            <div class="login2 nologin" style="width:45%;margin:0;text-align: center;float:left;"><a href="/Home/Business/register.html" rel="nofollow">注册商家</a></div>
+                        </div>
+                    </div>
+                    <div class="c"></div>
+                    <div class="notice_t">
+                        <ul>
+                            <li id="not_col" style="margin-left:10px;"><a href="javascript:void(0);">公告</a></li>
+                            <li style="width:15px;"><em>|</em></li>
+                            <li id="not_new"><a href="javascript:void(0);">新闻</a></li>
+                        </ul>
+                    </div>
+                    <div class="notice_b">
+                        <ul class="nob1">
+                                                            <li><a href="/article/148.html">礼至期刊·人物（四）——礼品事业部刘...</a></li>
+
+                                                            <li><a href="/article/145.html">2018年度春季礼至集团又新增礼品年...</a></li>
+
+                                                            <li><a href="/article/141.html">市 代 理 收 益</a></li>
+
+                                                            <li><a href="/article/140.html">区 /县代理 收 益</a></li>
+
+                                                        </ul>
+                        <ul class="nob2" style="display: none;">
+                                                            <li><a href="/article/147.html">平台精选一礼通母亲节礼品！</a></li>
+                                                            <li><a href="/article/146.html">上门拜访或送贵客选什么礼品好？</a></li>
+                                                            <li><a href="/article/144.html">礼至一礼通与万商生态云盟达成战略合作...</a></li>
+                                                            <li><a href="/article/143.html">母情节送这些礼物，妈妈肯定很疼你！</a></li>
+                                                         </ul>
+                    </div>
+                    <!-- 图片暂时注释 -->
+                    <!--<div class="jiayuan_bg"><img src="/public/static/images/homeBg.png"></div>-->
+                    <!-- 图片暂时注释 -->
+                 </div>
+                 <!--公告下方广告位-->
+                    <div class="ris-as">
+                                    </div>
+                </div>
+        <div class="business2">
+            <adv limit="1" item="v" ad_id="180">
+                    <li><a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="190" height="140"></a></li>
+                </adv>
+        </div>
+    </div>
+</div>
+<div class="layout distance">
+    <p class="hearind">采购需求 Procurement</p>
+    <div class="hearinddiv" >
+           <div class="purchase-col" style="display:none">
+                <div class="line"></div>
+                <h6 class="purchase-title"><a href="/trade/141.html" title="64G个性U盘" class="pro-title">64G个性U盘</a></h6>
+                <ul class="purchase-time-num">
+                    <li class="color-1">发布时间：<span>2018-10-05</span></li>
+                    <li>截至时间：<span>2018-10-07</span></li>
+                    <li class="marginTop30">采购数量：<span>100</span></li>
+                    <li class="company"><a href="/trade/687.html" title="深圳市鸣丰贸易有限公司" class="pro-company_name">深圳市鸣丰贸易有限公司</a></li>
+                </ul>
+                <a href="/trade/141.html" class="purchase-price">报价</a>
+            </div>
+
+      
+       <volist name="purchase_list" id="item" >
+        <div class="product">
+            <div class="productdiv" style="text-align:left;"><img src="/public/yilitong/images/logo.png"  style="height:80%;margin-top:5%"/></div>
+            <div class="productdiv1">
+                <p style="overflow: hidden;height:30px;font-weight: 600;font-size:14px;">{$item.title}</p>
+              <!--  <p>采购数量：{$item.goods_count}</p>-->
+
+                
+                  <img src="/public/yilitong/images/imgdi/000.png" style="height:15px;width:15px;float:left;margin-top:3px;"><span>{$region_list[$item.province][name]}</span>
+                <span>&nbsp;|&nbsp;</span>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;期望时间:{$item.expect_time|date='Y-m-d',###}</span>
+
+                <br>
+               
+                <div class="Quote">
+                    <span><a href="{:Url('Home/Article/tradeList',array('id'=>$item[id]))}" title="{$item.title}"  style="color: #f00;">立即报价</a></span>
+                    <p >{$item.dead_time|date='Y-m-d',###} 截止</p>
+                </div>
+            </div>
+        </div>
+        </volist>
+  </div>  
+    <div class="demand">
+        <div class="demanddiv" style="background:url(/public/yilitong/images/bj.jpg);">
+            <p>一礼通目前共发采购需求</p>
+            <span class="demandspan">565454</span>
+            <span class="demandspan1">条</span><br>
+          <span class="demandspan2"><a href="/businessPurchase.html"  style="color: #fff;">查看更多求购信息</a></span>
+        </div>
+        <div class="demanddiv1" id="content">
+          <ul>
+          <volist name="purchase_lists" id="item" >
+            <li style="margin:0px 10px 0px 20px"><a href="{:Url('Home/Article/tradeList',array('id'=>$item[id]))}"><span style="overflow: hidden; display:inline-block;max-width:140px; text-overflow: ellipsis;  white-space: nowrap;">{$item.title}</span><span style="float:right;color:#888">{$item.dead_time|date="Y-m-d",###}截止</span></a></li>
+           </volist>
+          </ul
+         
+        </div>
+    </div>
+          
+</div>
+</div>  
+<div class="alldiv" style="padding-bottom:40px">
+    <div  class="layout distance">
+        <p class="hearind">知名品牌 Translations</p>
+        <div class="likediv">
+            <div  class="likediv1">
+               <!-- <img src="/public/yilitong/images/binpai.jpg" style="height: 100%;width:100%;"/> -->
+
+                <adv limit="1" item="v" ad_id="181">
+                  <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="380" height="240"></a>
+                </adv>
+            </div>
+            <a href="" ><div class="likediv2">
+                <p>为TA挑选</p>
+                <p>top级品牌</p>
+              </div></a>
+        </div>
+        <div class="transdiv">
+            <div class="transdiv1">
+              <a id="next_brand" style="color:#f00;"> <span>换一批</span><img class="imgbut" src="/public/yilitong/images/0.png" style="height: 100%;float:right;"/></a>
+            </div>
+          
+            <ul id="iconWall">
+              <volist name="brands" id="item">
+                <li>
+                    <div class="img-3d">
+                      <volist name="$item" id="vo" key="key">
+                       
+                          <div class=" <eq name="$key" value="2"> img-back <else/>img-front </eq>" >
+                             <img src="{$vo['logo']}"  style="height: 180px;width:198px;"/>
+                          </div>
+                      </volist> 
+                    </div>
+                  <div class="mask">
+                    <input type="hidden" class="back" name="{$item[1][name]}" atc="{:Url('Home/Goods/goodsList',array('brand_id'=>$item[1][id]))}">
+                    <input type="hidden" class="front" name="{$item[0][name]}" atc="{:Url('Home/Goods/goodsList',array('brand_id'=>$item[0][id]))}">
+                    <p>{$item[0][name]}</p >
+                    <a href="{:Url('Home/Goods/goodsList',array('brand_id'=>$item[0][id]))}">点击进入</a >
+                  </div>
+
+                 </li>
+              </volist>
+            </ul>
+        </div>
+    </div>
+</div>
+  
+  
+<div class="layout distance" >
+    <p class="hearind">优质供应商 Quality supplier</p>
+    <div class="supplier">
+        <div class="supplier1">
+          
+            <adv limit="1" item="v" ad_id="182">
+                <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="320" height="170"></a>
+            </adv>
+           <!-- <a href=""><img src="/public/yilitong/images/gongyin.png" style="height: 100%;width:100%;"/></a>  -->
+        </div>
+       <a href="{:Url('Home/Index/supplierList')}"> <div  class="supplier2">
+            查看更多供应商
+         </div></a>
+    </div>
+    <div class="listdiv">
+        <div class="listdiv1">
+
+        </div>
+        <div class="listdiv2 " id="content1">
+          <ul>
+           <volist name="supplier_lists" id="item" >
+             <li><a href="{:Url('Supplier/StoreHome',array('id'=>$item[supplier_id]))}">{$item.company_name}</a></li>
+           </volist>
+          </ul>
+        
+        </div>
+    </div>
+    <div class="listimg" >
+        <div class="transdiv1" style="float:right;">
+
+            <a id="next_supplier"><p class="ppp">换一批</p>
+              <img class="imgbut" src="/public/yilitong/images/0.png" style="height: 100%;"/></a>
+        </div>
+        <div class="c"></div>        
+        <ul id="Wall">
+          <volist name="suppliers" id="item">
+            <li>
+                <div class="img-3d">
+                  <volist name="$item" id="vo" key="key">
+                      <div class=" <eq name="$key" value="2"> img-back <else/>img-front </eq>" >
+                         <img src="{$vo['logo']}"  style="height: 100px;width:85px;"/>
+                      </div>
+                  </volist> 
+                </div>
+              <div class="mask">
+                <input type="hidden" class="back" name="{$item[1][supplier_name]}" atc="{:Url('Home/Supplier/StoreHome',array('supplier_id'=>$item[1][supplier_id]))}">
+                <input type="hidden" class="front" name="{$item[0][supplier_name]}" atc="{:Url('Home/Supplier/StoreHome',array('supplier_id'=>$item[0][supplier_id]))}">
+                <a href="{:Url('Home/Supplier/StoreHome',array('id'=>$item[0][id]))}">点击进入</a >
+              </div>
+
+             </li>
+          </volist>
+        </ul>
+  </div>
+
+</div>
+<div class="alldiv">
+
+    <div class="layout distance" >
+        <p class="gift">热门礼品 Hot gift</p>
+        <div class="giftdiv" >
+            <div class="giftdiv1">
+               <adv limit="1" item="v" ad_id="183">
+                <p class="giftdivp1">好礼推荐</p>
+                <p class="giftdivp2">让TA更好的记住您</p>
+               <a href="{$v[ad_link]}"> <span  class="giftspan">了解详情</span></a>
+                <div>
+                    
+                   
+                        <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="210" height="240"></a>
+                   
+                  <!-- <img src="/public/yilitong/images/hot.png" style="height: 100%;width:100%;"/> -->
+
+                </div>
+                   </adv>
+            </div>
+        </div>
+        <div class="tributetop" style="padding-top:0px;">
+         <volist name="is_hot" id="v" >
+            <div class="tribute">
+                <div>
+                    <a href="{:Url('Home/Goods/goodsInfo' ,array('id'=>$v[goods_id]))}"><img src="{$v.goods_thumb}" height="100%"/></a>
+
+                </div>
+                <p class="tributep1" style="height:25px;    overflow: hidden;">{$v.goods_name|getSubstr=0,18}</p>
+                <p  class="tributep2">￥{$v.shop_price}</p>
+            </div>
+         </volist>
+        </div>
+
+    </div>
+</div>
+<div class="layout distance">
+    <p class="hearind">资讯 Information</p>
+    <div class="trans">
+
+        <div class="trans1">
+            <adv limit="1" item="v" ad_id="184">
+                <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" width="350" height="300"></a>
+            </adv>
+      <!--       <img src="/public/yilitong/images/zixun.png" style="height: 100%;width:100%;"/> -->
+        </div>
+        <div class="trans2">
+           <ylt sql="select * from `__PREFIX__article`  where cat_id = 3 order by article_id desc limit 9" item="v" key="k" >
+             <p class="transp"><a href="{:Url('Home/Article/detail',array('article_id'=>$v[article_id]))}">{$v['title']|getSubstr=0,18}</a></p>
+                <div class="transdivd">{$v['description']|getSubstr=0,20}</div>
+            </ylt>
+
+        </div>
+        <div class="c"></div>
+        <div class="transdivdd">
+            <p  >查看更多 >></p>
+        </div>
+    </div>
+    <div class="trans22">
+        <div class="trans2div">
+           <adv limit="1" item="v" ad_id="187">
+                <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" style="height: 100%;width:100%;"></a>
+            </adv>
+          
+        </div>
+        <div class="trans2div">
+            <adv limit="1" item="v" ad_id="188">
+                <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" style="height: 100%;width:100%;"></a>
+            </adv>
+        </div>
+        <div class="trans2div">
+           <adv limit="1" item="v" ad_id="189">
+                <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" style="height: 100%;width:100%;"></a>
+            </adv>
+        </div>
+        <div class="trans2div">
+         <adv limit="1" item="v" ad_id="190">
+                <a href="{$v[ad_link]}"><img src="{$v[ad_code]}" style="height: 100%;width:100%;"></a>
+            </adv>
+        </div>
+    </div>
+</div>
+<div style="width: 100%;">
+    <div class="layout distance" >
+        <p class="hearind">更多服务 More services</p>
+        <div class="service" id="ser1" style="background: url(/public/yilitong/images/imgdi/001.png);">
+            <p style="font-size:26px">金融服务</p>
+         
+              <p>解决资金上下游资金问题</p>
+           <p>安全、专业、便捷</p>
+          <div style="width:100%;height:360px;background:#ffffff66;margin-top:-360px;display:none;">
+          
+          </div>  
+      </div>
+        
+        <div class="service" id="ser2" style="background: url(/public/yilitong/images/imgdi/002.png);">
+            <p style="font-size:26px">礼商大讲堂</p>
+          <p >国内外礼品电商行业动态
+跟大咖学电商经营</p>
+          <p >案例分享、区块链+电商</p>
+          <div style="width:98%;height:360px;background:#ffffff66;margin-top:-360px;display:none;">
+          </div>
+        </div>
+        <div class="service" id="ser3" style="background: url(/public/yilitong/images/imgdi/003.png);">
+            <p style="font-size:26px">技术服务</p>
+          <p>优质电商技术与服务提供商
+B2B2C多用户商城系统</p>
+          <p>技术服务</p>
+          <div style="width:98%;height:360px;background:#ffffff66;margin-top:-360px;display:none;"></div>
+        </div>
+        <div class="service" id="ser4" style="background: url(/public/yilitong/images/imgdi/004.png);">
+            <p style="font-size:26px">会员服务</p>
+           <p >自卖自营 用更少的人
+赚更多的钱</p>
+           <p >您专属的会员体系系统</p>
+          <div style="width:98%;height:360px;background:#ffffff66;margin-top:-360px;display:none;"></div>
+        </div>
+        <div class="service" id="ser5" style="background: url(/public/yilitong/images/imgdi/005.png);">
+            <p style="font-size:26px">活动资讯</p>
+          <p >活动资讯一目了然
+在线报名 线上解答</p>
+          <p >活动安全 有保障</p>
+          <div style="width:98%;height:360px;background:#ffffff66;margin-top:-360px;display:none;"></div>
+        </div>
+    </div>
+</div>
+<div class="alldiv" style="background: #d8d8d8;">
+    <div class="layout">
+        <ul class="footli">
+            <li>
+                <img src="/public/yilitong/images/footer-icon-1.png"/>
+                <div>
+                    <p class="footp">质量保证</p>
+                    <p>正品行货 放心购物</p>
+                </div>
+            </li>
+            <li>
+                <img src="/public/yilitong/images/footer-icon-2.png"/>
+                <div>
+                    <p class="footp">物流无忧</p>
+                    <p>下单闪电发货包邮</p>
+                 </div>
+            </li>
+            <li>
+                <img src="/public/yilitong/images/footer-icon-3.png"/>
+                <div>
+                    <p class="footp">售后服务</p>
+                    <p>正品行货 放心购物</p>
+                </div>
+            </li>
+            <li>
+                <img src="/public/yilitong/images/footer-icon-4.png"/>
+                <div>
+                    <p class="footp">退换无忧</p>
+                    <p>正品行货 放心购物</p>
+                </div>
+            </li>
+        </ul>
+        <br><br>
+        <hr style="margin-top:40px">
+        <div class="helpful layout">
+    <ylt sql="select * from `__PREFIX__article_cat` where parent_id = 2" key="k" item='v'>
+            <dl <if condition="$k neq 0">class="jszc"</if> >
+                <dt>{$v[cat_name]}</dt>
+                <dd>
+                    <ol>
+                        <ylt sql="select * from `__PREFIX__article` where cat_id = $v[cat_id] and is_open=1" key="k2" item='v2'>
+                        <li><a href="{:Url('Home/Article/detail',array('article_id'=>$v2[article_id]))}" target="_blank">{$v2[title]}</a></li>
+                        </ylt>
+                    </ol>
+                </dd>
+            </dl>
+    </ylt>
+     </div>
+        
+        <hr >
+        <div style="text-align: center;line-height: 40px;">
+            <span><a href="javascript:void(0);">我们的团队</a></span>
+            <span> | </span>
+            <span><a href="javascript:void(0);">网站联盟</a></span>
+            <span> | </span>
+            <span><a href="javascript:void(0);">热火搜索</a></span>
+            <span> | </span>
+            <span><a href="javascript:void(0);">诚征英才</a></span>
+            <span> | </span>
+            <span><a href="javascript:void(0);">友情链接</a></span>
+            <span> | </span>
+            <span><a href="javascript:void(0);">一礼通新品</a></span>
+            <span> | </span>
+            <span>开放平台</span>
+            <br>
+            <p>Copyright © 2017-2027 一礼通 (www.yilitong.com)-互联网生活应用平台 版权所有 保留一切权利 备案号:粤ICP备16118712号-1</p>
+            <br>
+            <span id="cnzz_stat_icon_1264421531"><a href="http://www.cnzz.com/stat/website.php?web_id=1264421531" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a></span>
+            <br>
+            <div style="margin-left: 400px;margin-top: -15px;">
+                <ul class="guarantee">
+                    <li>
+                    <a href="https://v.anquan.org/cert/site/?site=www.yilitong.com&amp;at=realname" rel="nofollow">
+                        <img src="/public/yilitong/images/anquan_cnnic.png">
+                    </a>
+                   </li>
+
+                           <li>
+                    <!--可信网站图片LOGO安装开始-->
+                     <img src="http://rr.knet.cn/static/images/logo/cnnic.png">
+                   </li>
+                   <li>
+                    <img src="/public/yilitong/images/weixin_cnnic.png">
+                   </li>
+                   <li>
+                    <img src="/public/yilitong/images/zhifubao_cnnic.png">
+                   </li>
+               </ul>
+            </div><br>
+           <!-- <span>友情链接 </span><span>礼品公司 </span><span>北京礼品卡 </span><span>玉林批发网 </span><span>礼品网站 </span><span>仓库管理系统 </span><span>礼品册 </span><span>商务礼品 </span><span>节日礼品册 </span><span>礼品商城 </span><span>生日礼物 </span><span>礼品批发 </span><span>礼品采购 </span><span>广州礼品定制 </span>-->
+            <div style="text-align: center;width:1200px;margin:0 auto;">
+             <ul class="friendLink" id="friendLink" style="display: inline-block;margin-top:10px;">
+                 <li><span style="color: #999;">友情链接</span></li>
+                 <ylt sql="select * from `__PREFIX__friend_link` where is_show = 1 order by orderby asc" key="k2" item='vo'>
+                 <li><a style="color: #999;" href="{$vo.link_url}" <if $vo.nofollow eq 1>rel="nofollow"</if> <if $vo.target eq 1> target="_blank"</if> >{$vo[link_name]}</a></li>
+                 </ylt>
+             </ul>
+         </div>
+      </div>
+    </div>
+</div>
+<script>
+  window.onload = function () {    	
+      //品牌效果   
+      var clickTimes = 1;
+      var type=clickTimes%2;
+      //总列数
+      var lineCount = 4;
+      var btnBrand = document.querySelector("#next_brand");
+      var iconBrand = document.querySelector("#next_brand .imgbut")
+
+      var img3DList = document.querySelectorAll("#iconWall .img-3d");
+      var len = img3DList.length;
+      btnBrand.onclick = function () {
+
+          var type=clickTimes%2;
+          iconBrand.style.transition = ".3s linear";
+          iconBrand.style.transform = "rotate("+360*clickTimes+"deg)";          
+          for (var i = 0; i< len; i++){
+            var colNum = parseInt(i/lineCount);
+            var rowNum = i%lineCount;
+            var delayTime = (colNum+rowNum)*100;
+              img3DList[i].style.transition = ".3s "+delayTime+"ms linear";
+              img3DList[i].style.transform = "rotateY("+180*clickTimes+"deg)";
+           }
+
+          clickTimes++;
+          getname(type);
+      }
+      getname(0);
+      function getname(type){
+          for(var i=0;i<$("#iconWall li").length;i++){
+            var brand_name;
+            var link_url;
+            if(type==0){
+               brand_name=$("#iconWall li").eq(i).find(".mask .front").attr("name");
+              link_url=$("#iconWall li").eq(i).find(".mask .front").attr("atc");
+              }else{
+               brand_name=$("#iconWall li").eq(i).find(".mask .back").attr("name");
+               link_url=$("#iconWall li").eq(i).find(".mask .back").attr("atc");
+              }
+            $("#iconWall li").eq(i).find(".mask p").html(brand_name);
+            $("#iconWall li").eq(i).find(".mask a").attr('href',link_url);
+        }
+      }
+
+    //供应商效果
+
+      var clickNum = 1;
+      var  status=clickNum%2;
+      //总列数
+      var listCount = 4;
+      var btnSupplier = document.querySelector("#next_supplier");
+      var iconSupplier = document.querySelector("#next_supplier .imgbut")
+      var i3DList = document.querySelectorAll("#Wall .img-3d");
+      var len = img3DList.length;
+      btnSupplier.onclick = function () {
+        var status=clickNum%2;
+        iconSupplier.style.transition = ".3s linear";
+        iconSupplier.style.transform = "rotate("+360*clickNum+"deg)";          
+        for (var i = 0; i< len; i++){
+          var colNum = parseInt(i/listCount);
+          var rowNum = i%listCount;
+          var delayTime = (colNum+rowNum)*100;
+            i3DList[i].style.transition = ".3s "+delayTime+"ms linear";
+            i3DList[i].style.transform = "rotateY("+180*clickNum+"deg)";
+         }
+
+        clickNum++;
+        gotname(status);
+      }
+      gotname(0);
+      function gotname(status){
+          for(var i=0;i<$("#Wall li").length;i++){
+            //var supplier_name;
+            var link_url;
+            if(status==0){
+              //supplier_name=$("#Wall li").eq(i).find(".mask .front").attr("name");
+              link_url=$("#Wall li").eq(i).find(".mask .front").attr("atc");
+              }else{
+               //supplier_name=$("#Wall li").eq(i).find(".mask .back").attr("name");
+               link_url=$("#Wall li").eq(i).find(".mask .back").attr("atc");
+              }
+            //$("#Wall li").eq(i).find(".mask p").html(supplier_name);
+            $("#Wall li").eq(i).find(".mask a").attr('href',link_url);
+        }
+      }
+
+    }
+</script>
+<script>
+function getCookie(c_name)
+{
+    if (document.cookie.length > 0)
+    {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1)
+        {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";",c_start);
+            if (c_end == -1) {
+                c_end = document.cookie.length
+            }
+            return unescape(document.cookie.substring(c_start,c_end))
+        }
+    } else {
+        return ""
+    }
+}
+var uname = getCookie('user_name');
+var supname =getCookie('supplier_name');
+
+
+if((uname == '' || uname == undefined)&&(supname == '' || supname == undefined)){
+    $('.islogin').css("display","none");
+    $('.isSuplogin').css("display","none");;
+    $('.nologin').css("display","block");
+}else if((uname != '' || uname != undefined)&&(supname == '' || supname == undefined)){
+    $('.nologin').css("display","none");
+    $('.isSuplogin').css("display","none");
+    $('.islogin').css("display","block");
+    $('.userinfo').html(decodeURIComponent(uname));
+}
+if((uname == '' || uname == undefined)&&(supname == '' || supname == undefined)){
+    $('.islogin').css("display","none");
+    $('.isSuplogin').css("display","none");;
+    $('.nologin').css("display","block");
+}else if((uname == '' || uname == undefined)&&(supname != '' || supname != undefined)){
+    $('.nologin').css("display","none");
+    $('.isSuplogin').css("display","block");
+    $('.islogin').css("display","none");
+    $('.supinfo').html(decodeURIComponent(supname));
+}
+  
+  $(function(){
+   $("#li1").css("background","#8a1313");
+     $("#li2").css("background","");
+     $("#li3").css("background","");
+     $("#li4").css("background","");
+    $("#tl-r").css("margin-top","-28px");
+     $("#t1-r-ul").css("margin-top","-28px");
+    $("#t1-r-ul1").css("margin-top","-28px");
+    $("#ulli1>li").mouseover(function(){
+      $(this).find(".classdivdiv000").css("display","block");
+    })
+    $("#ulli1>li").mouseout(function(){
+      $(this).find(".classdivdiv000").css("display","none");
+    })
+     $("#ulli2>li").mouseover(function(){
+      $(this).find(".classdivdiv001").css("display","block");
+    })
+    $("#ulli2>li").mouseout(function(){
+      $(this).find(".classdivdiv001").css("display","none");
+    })
+    $("#ser1").mouseover(function(){
+      $("#ser1>div").css("display","block");
+    })
+     $("#ser1").mouseout(function(){
+      $("#ser1>div").css("display","none");
+    })
+     $("#ser5").mouseover(function(){
+      $("#ser5>div").css("display","block");
+    })
+     $("#ser5").mouseout(function(){
+      $("#ser5>div").css("display","none");
+    })
+     $("#ser2").mouseover(function(){
+      $("#ser2>div").css("display","block");
+    })
+     $("#ser2").mouseout(function(){
+      $("#ser2>div").css("display","none");
+    })
+     $("#ser3").mouseover(function(){
+      $("#ser3>div").css("display","block");
+    })
+     $("#ser3").mouseout(function(){
+      $("#ser3>div").css("display","none");
+    })
+     $("#ser4").mouseover(function(){
+      $("#ser4>div").css("display","block");
+    })
+     $("#ser4").mouseout(function(){
+      $("#ser4>div").css("display","none");
+    })
+});
+</script>
+</script>
+</body>
+</html>

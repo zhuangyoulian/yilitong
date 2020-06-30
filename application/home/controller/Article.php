@@ -215,7 +215,7 @@ class Article extends Base {
 
        
         $count = DB::name('purchase')->where('status',1)->count();
-		 $purchase_list = Db::name('purchase')->where('status',1)->where('inquiry_time','egt',$time)->order('inquiry_time desc')->page($p.',20')->cache(true,3600)->select();
+		    $purchase_list = Db::name('purchase')->where('status',1)->where('inquiry_time','egt',$time)->order('inquiry_time desc')->page($p.',20')->cache(true,3600)->select();
 
         $page = new Page($count,20);
         if(!$purchase_list){
@@ -454,11 +454,8 @@ class Article extends Base {
                 $arr=array('status'=>"-1",'msg'=>"请输入正确的手机号");
                 exit(json_encode($arr));
             }
-          //	$logic = new UsersLogic();
-          //	$check = $logic->check_validate_code($code, $mobile, 'mobile');
-          //dump($supply);
             $supply['t']=time();
-             $res=Db::name('supply')->insertGetId($supply);
+            $res=Db::name('supply')->insertGetId($supply);
             $goods_duration     =$data['goods_duration'];
             $goods_tprice       =$data['goods_tprice'];
             $goods_sprice       =$data['goods_sprice'];
@@ -488,8 +485,9 @@ class Article extends Base {
             }
         }
           
-        if(!$purchase)
+        if(!$purchase){
             exit($this->error('采购商品不存在'));
+        }
          
         $this->assign('purchase_list',$purchase_list); 
         $this->assign('purchase',$purchase); 

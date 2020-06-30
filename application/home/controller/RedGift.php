@@ -110,14 +110,28 @@ class RedGift extends Base {
         $cart_count = Db::name('red_cart')->where('user_id',$user_id)->count();
         //Brand
         $brand_list = Db::name('ad')->where('pid = 53 and enabled=1')->field('ad_code,ad_link')->select();
-        $field = "goods_id,goods_name,goods_thumb,shop_price,market_price,group_price";
+        $field = "goods_id,goods_name,goods_thumb,shop_price,market_price,group_price,red_supplier_id,brand_id";
         //最新商品
         $goods_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0')->order('goods_id desc')->limit('20')->select();
 
         //品牌折扣区
-        $goods_quality_list = Db::name('red_goods')->alias('g')->join('redsupplier_user u','g.red_supplier_id = u.red_admin_id')->join('brand b','g.brand_id = b.id')->field($field)->field('u.is_quality,b.name as brand_name')->where('examine = 1 and is_recommend =1 and is_delete = 0 and g.cat_id = 1127')->order('goods_id desc')->limit('3')->select();
+        $goods_quality_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and cat_id = 1126')->order('goods_id desc')->limit('3')->select();
+        foreach ($goods_quality_list as $key => $value) {
+            if (!empty($value['red_supplier_id'])) {
+                $value['is_quality'] = Db::name('redsupplier_user')->where("red_admin_id",$value['red_supplier_id'])->value('is_quality');
+            }else{
+                $value['is_quality'] = 0;
+            }
+            if (!empty($value['brand_id'])) {
+                $value['brand_name'] = Db::name('brand')->where("id",$value['brand_id'])->value('name');
+            }else{
+                $value['brand_name'] = '';
+            }
+            $goods_quality_lists[]=$value;
+        }
 
-        $rs=array('result'=>'1','info'=>'请求成功','user'=>$user,'cart_count'=>$cart_count,'goods_list'=>$goods_list,'brand_list'=>$brand_list,'goods_quality_list'=>$goods_quality_list);
+
+        $rs=array('result'=>'1','info'=>'请求成功','user'=>$user,'cart_count'=>$cart_count,'goods_list'=>$goods_list,'brand_list'=>$brand_list,'goods_quality_list'=>$goods_quality_lists);
         exit(json_encode($rs));
     }
 
@@ -304,7 +318,7 @@ class RedGift extends Base {
      * @param int $c 分几段 默认分5 段
      * @return array
      */
-    function get_filter_prices($goods_id_arr, $filter_param, $action, $c = 5)
+    function get_filter_prices($goods_id_arr, $filter_param, $action, $c = 10)
     {
         if (!empty($filter_param['price'])){
             return array();
@@ -372,12 +386,17 @@ class RedGift extends Base {
         // $get_category = $this->get_category();
         //只显示有商品的二级和三级分类 两个参数 分类表名及商品表名
         $get_isgoods_category = get_isgoods_category('goods_category','red_goods');
+
         $filter_param = array();                    // 筛选数组                        
         $id = I('get.cat_id/d');                    // 当前分类id
         $sort = I('get.sort','sort');               // 排序
         $sort_asc = I('get.sort_asc','desc');       // 排序
         $brand_id = I('get.brand_id/d',0);          // 品牌
         $price = I('get.price','');                 // 价钱
+
+        $start_price = trim(I('post.start_price','0')); // 输入框价钱
+        $end_price = trim(I('post.end_price','0')); // 输入框价钱
+        if($start_price && $end_price) $price = $start_price.'-'.$end_price.'元'; // 如果输入框有价钱 则使用输入框的价钱
 
         $filter_param['id'] = $id;                              //加入筛选条件中          
         $brand_id  && ($filter_param['brand_id'] = $brand_id);  //加入筛选条件中
@@ -405,15 +424,17 @@ class RedGift extends Base {
         if ($page_html) {
             $firstRow = ($page_html-1) * $count_html;
         }
-        $field = "goods_id,cat_id,goods_name,goods_thumb,shop_price,market_price,goods_remark,comment_count,group_price";
+        $field = "goods_id,cat_id,goods_name,goods_thumb,shop_price,market_price,goods_remark,comment_count,group_price,red_supplier_id";
         if($count > 0)
         {
-            $goods_list = Db::name('red_goods')->alias('g')->join('redsupplier_user u','g.red_supplier_id = u.red_admin_id')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->field('u.is_quality')->limit($firstRow.','.$count_html)->select();
-            if (count($goods_list) != $count) {
-                $goods_list = Db::name('red_goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->limit($firstRow.','.$count_html)->select();
-            }
+            $goods_list = Db::name('red_goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->limit($firstRow.','.$count_html)->select();
             //获取一级分类，判断是否为家居分类
             foreach ($goods_list as $key => $value) {
+                if (!empty($value['red_supplier_id'])) {
+                    $value['is_quality'] = Db::name('redsupplier_user')->where("red_admin_id",$value['red_supplier_id'])->value('is_quality');
+                }else{
+                    $value['is_quality'] = 0;
+                }
                 $parent_path= Db::name('goods_category')->where('id', $value['cat_id'])->value('parent_id_path');
                 $value['parent_id_path']=substr($parent_path,4);
                 $goods_lists[]=$value;
@@ -421,12 +442,14 @@ class RedGift extends Base {
         }else if (!$id) {
             $filter_goods_id = Db::name('red_goods')->where(['examine'=>1,'is_delete'=>0])->order("$sort $sort_asc")->field($field)->column("goods_id");
             $count =count($filter_goods_id);
-            $goods_list = Db::name('red_goods')->alias('g')->join('redsupplier_user u','g.red_supplier_id = u.red_admin_id')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->field('u.is_quality')->limit($firstRow.','.$count_html)->select();
-            if (count($goods_list) != $count) {
-                $goods_list = Db::name('red_goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->limit($firstRow.','.$count_html)->select();
-            }
+            $goods_list = Db::name('red_goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->field($field)->limit($firstRow.','.$count_html)->select();
             //获取一级分类，判断是否为家居分类
             foreach ($goods_list as $key => $value) {
+                if (!empty($value['red_supplier_id'])) {
+                    $value['is_quality'] = Db::name('redsupplier_user')->where("red_admin_id",$value['red_supplier_id'])->value('is_quality');
+                }else{
+                    $value['is_quality'] = 0;
+                }
                 $parent_path= Db::name('goods_category')->where('id', $value['cat_id'])->value('parent_id_path');
                 $value['parent_id_path']=substr($parent_path,4);
                 $goods_lists[]=$value;
@@ -465,6 +488,9 @@ class RedGift extends Base {
         $sort = I('sort','goods_id'); // 排序 goods_id
         $sort_asc = I('sort_asc','desc'); // 排序 asc
         $price = I('price',''); // 价钱
+        $start_price = trim(I('post.start_price','0')); // 输入框价钱
+        $end_price = trim(I('post.end_price','0')); // 输入框价钱
+        if($start_price && $end_price) $price = $start_price.'-'.$end_price.'元'; // 如果输入框有价钱 则使用输入框的价钱
         $keywords = urldecode(trim(I('keywords',''))); // 关键字搜索
         empty($keywords) && $keywords = '电饭煲';
 
@@ -562,14 +588,20 @@ class RedGift extends Base {
         }
         if($count > 0)
         {
-            $goods_list = Db::name('red_goods')->alias('g')->join('redsupplier_user u','g.red_supplier_id = u.red_admin_id')->where(['examine'=>1,'is_delete' => 0,'goods_id'=>['in',implode(',', $filter_goods_id)]])->order("$sort $sort_asc")->field('g.*,u.is_quality')->limit($firstRow.','.$count_html)->select();
-            if (count($goods_list) != $count) {
-                $goods_list = Db::name('red_goods')->where(['examine'=>1,'is_delete' => 0,'goods_id'=>['in',implode(',', $filter_goods_id)]])->order("$sort $sort_asc")->limit($firstRow.','.$count_html)->select();
+            $goods_list = Db::name('red_goods')->where(['examine'=>1,'is_delete' => 0,'goods_id'=>['in',implode(',', $filter_goods_id)]])->order("$sort $sort_asc")->limit($firstRow.','.$count_html)->select();
+            foreach ($goods_list as $key => $value) {
+                if (!empty($value['red_supplier_id'])) {
+                    $value['is_quality'] = Db::name('redsupplier_user')->where("red_admin_id",$value['red_supplier_id'])->value('is_quality');
+                }else{
+                    $value['is_quality'] = 0;
+                }
+                $goods_lists[]=$value;
             }
+
             $filter_goods_id2 = get_arr_column($goods_list, 'goods_id');
         }    
 
-        $rs=array('result'=>'1','info'=>'请求成功','goods_list'=>$goods_list,'filter_brand'=>$filter_brand,'filter_price'=>$filter_price,'cateArr'=>$cateArr,'filter_param'=>$filter_param,'cat_id'=>$id,'count'=>$count);
+        $rs=array('result'=>'1','info'=>'请求成功','goods_list'=>$goods_lists,'filter_brand'=>$filter_brand,'filter_price'=>$filter_price,'cateArr'=>$cateArr,'filter_param'=>$filter_param,'cat_id'=>$id,'count'=>$count);
         exit(json_encode($rs));
     }
 
@@ -962,8 +994,10 @@ class RedGift extends Base {
         exit(json_encode($rs));
     }
 
-    /*
-     * 获取订单商品
+    /**
+     * [red_get_order_goods 获取订单商品]
+     * @param  [type] $order_id [description]
+     * @return [type]           [description]
      */
     public function red_get_order_goods($order_id){
         $this->is_login(I('admin_id'));
@@ -1121,13 +1155,28 @@ class RedGift extends Base {
         $result = $this->red_cartList($user_id, $this->session_id,1,1,0); // 选中的商品
 
         //为您推荐
-        $field = "goods_id,g.cat_id,goods_name,goods_thumb,shop_price,market_price,goods_remark,comment_count,group_price";
-        $goods_quality_list = Db::name('red_goods')->alias('g')->join('redsupplier_user u','g.red_supplier_id = u.red_admin_id')->join('brand b','g.brand_id = b.id')->field($field)->field('u.is_quality,b.name as brand_name')->where('examine = 1 and is_recommend =1 and is_delete = 0 and g.cat_id = 1127')->order('goods_id desc')->limit('4')->select();
+        $field = "goods_id,cat_id,goods_name,goods_thumb,shop_price,market_price,goods_remark,comment_count,group_price,red_supplier_id,brand_id";
+
+        $goods_quality_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and cat_id = 1126')->order('goods_id desc')->limit('4')->select();
+        foreach ($goods_quality_list as $key => $value) {
+            if (!empty($value['red_supplier_id'])) {
+                $value['is_quality'] = Db::name('redsupplier_user')->where("red_admin_id",$value['red_supplier_id'])->value('is_quality');
+            }else{
+                $value['is_quality'] = 0;
+            }
+            if (!empty($value['brand_id'])) {
+                $value['brand_name'] = Db::name('brand')->where("id",$value['brand_id'])->value('name');
+            }else{
+                $value['brand_name'] = '';
+            }
+            $goods_quality_lists[]=$value;
+        }
+
 
         if(empty($result['total_price'])){
             $result['total_price'] = Array( 'total_fee' =>0, 'cut_fee' =>0, 'num' => 0);
         }
-        $rs=array('result'=>'1','info'=>'请求成功','cartList'=>$result['cartList'],'total_price'=>$result['total_price'],'goods_quality_list'=>$goods_quality_list);
+        $rs=array('result'=>'1','info'=>'请求成功','cartList'=>$result['cartList'],'total_price'=>$result['total_price'],'goods_quality_list'=>$goods_quality_lists);
         exit(json_encode($rs));
     }
     /**

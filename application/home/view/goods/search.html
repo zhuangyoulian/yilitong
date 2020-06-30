@@ -445,7 +445,7 @@
 
           <div class="listPic"> 
              <!-- 防疫专区的判断，不显示按钮 -->
-          		<a rel="nofollow" target="_blank" <if condition="$v.cat_id neq 1118"/> href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" </if> style="width:200px;height:200px;">
+          		<a rel="nofollow" target="_blank" href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" style="width:200px;height:200px;">
               	<img width="200" height="200" style="display: block;" src="{$v.goods_thumb}" class="fn_img_lazy"> 
               </a>             
            
@@ -457,7 +457,6 @@
 
           <!-- 价格 -->
           <div class="discountPrice">
-            <if condition="$v.cat_id neq 1118"/>  <!-- 防疫专区的判断，不显示按钮 -->
             <div class="price-cash">
               <span class="text13 colf22e01">¥</span>
               <span class="text18 colf22e01 fontT" id="itemPrice_201510CM130003397">
@@ -469,14 +468,13 @@
               </span>
               <del></del> 
             </div>
-            </if>
           </div>
 
           <!-- 价格 end--> 
 
           <!-- 品名 -->
 
-          <div class="listDescript"> <a target="_blank"  <if condition="$v.cat_id neq 1118"/>  href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" </if> class="text13">{$v[goods_name]}</a> </div>
+          <div class="listDescript"> <a target="_blank"   href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}"  class="text13">{$v[goods_name]}</a> </div>
 
           <!-- 價格及字樣 -->
 

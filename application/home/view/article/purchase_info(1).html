@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes” />
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″/>
+    <meta name="keywords" content="{$config['shop_info_store_keyword']}">
+    <meta name="description" content="{$config['shop_info_store_desc']}">
+    <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+    <title>企业采集</title>
+</head>
+<style>
+    .err{color:#F00; display:none;}
+    .ui-tooltip{
+        display:none;
+        display:none !important;
+    }
+  .input-txt1{
+    margin-right:2px;
+    width: 100px !important;
+}
+  .shan{
+    width:20p;
+    height:20px
+    line-height:20;
+    text-align:center;
+    border:1px solid #aaa;
+    color:#f00;
+   
+    float:right;
+  }
+  .tabletr thead tr{
+   
+    height:30px;
+  }
+   
+  .tabletr tbody tr{
+   
+    height:30px;
+  }
+  #tableid  tr{
+   height:30px;
+  }
+  .ncap-form-default dt.tit, .ncap-form-default dd.opt {
+    font-size: 16px!important;
+    line-height: 24px;
+    vertical-align: top;
+    letter-spacing: normal;
+    display: inline-block;
+}
+  H1{color:#0099ff;}
+  input, textarea, select, button {
+    color: #555;
+    font-size: 16px!important;
+    font-family: "Microsoft Yahei", "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+}
+  .ncap-form-default dl.row:nth-child(even), .ncap-form-all dd.opt:nth-child(even) {
+    background-color: #fff !important
+}
+main.css:952
+.ncap-form-default dl.row, .ncap-form-all dd.opt {
+    font-size: 0;
+    color: #777;
+    background-color: #FFF;
+    padding: 12px 0;
+    margin-top: 0px!important;
+    border-style: solid;
+    border-width:  0 !important;
+   
+    position: relative;
+    z-index: 1;
+}
+  .ncap-form-default dl.row, .ncap-form-all dd.opt {
+    font-size: 0;
+    color: #777;
+    background-color: #FFF;
+    padding: 12px 0;
+    margin-top: -1px;
+    border-style: solid;
+    border-width: 0  !important;
+    border-color: #F0F0F0;
+    position: relative;
+    z-index: 1;
+}
+ 
+</style>
+ <include file="public/header" /> 
+  <include file="public/layout" />
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<link rel="stylesheet" href="__BUSINESS__/style/quoted.css" type="text/css">
+<!-- 省市区插件 -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href="__PUBLIC__/static/css/index.css" type="text/css">
+<link rel="stylesheet" href="__PUBLIC__/js/apply_one.css" />
+
+<body style="background-color: rgb(253, 253, 253); overflow: auto;">
+ 
+<div style="width:1200px;margin:0 auto;" >  
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+
+<div class="page">
+   <!-- <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>企业采购 - 编辑采集</h3>
+                <h5>网站系统企业采购采集详情页</h5>
+            </div>
+        </div>
+    </div>-->
+
+    <form class="form-horizontal" id="handleposition" method="post">
+        <h1>基本信息</h1>
+        <input type="hidden" name="id" value="{$info.id}">
+        <div class="ncap-form-default">
+            
+            <dl class="row">
+                <dt class="tit">
+                    <label>公司名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="company_name" id="company_name" value="{$supplier.company_name}" class="input-txt" placeholder="请填写公司名称">
+                    <span class="err" id="err_company_name"></span>
+                <!--    <p class="notic">请填写公司名称</p>-->
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>采购标题</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="title" id="title" value="" class="input-txt" placeholder="请填写采购标题">
+                    <span class="err" id="err_title"></span>
+                 <!--  <p class="notic">请填写采购标题</p>--> 
+                </dd>
+            </dl>
+          <dl class="row">
+                <dt class="tit">
+                    <label><em></em>预算</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="budget" id="budget" value="" class="input-txt" placeholder="请填写预算">
+                    <span class="err" id="err_title"></span>
+                   <!--<p class="notic">请填写预算</p>--> 
+                </dd>
+            </dl>
+              <dl class="row">
+                <dt class="tit">
+                  <label>是否定制</label>
+                </dt>
+                <dd class="opt">
+                  <div class="onoff">
+                    <label for="sustomized1" class="cb-enable ">是</label>
+                    <label for="sustomized0" class="cb-disable selected">否</label>
+                    <input id="sustomized1" name="sustomized" value="1" type="radio" />
+                    <input id="sustomized0" name="sustomized" value="0" type="radio"  checked="checked"/>
+                  </div>
+                  <p class="notic"></p>
+                </dd>
+            </dl> 
+  <dl class="row">
+                <dt class="tit">
+                    <label for="articleForm"><em>*</em>询价时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="inquiry_time" name="inquiry_time" value=""  class="input-txt" placeholder="询价时间">
+                    <span class="err" id="err_inquiry_time"></span>
+                  <!-- <p class="notic">询价时间</p>--> 
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="articleForm"><em>*</em>截止时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="dead_time" name="dead_time" value="" class="input-txt" placeholder="截止时间">
+                    <span class="err" id="err_dead_time"></span>
+                 <!--  <p class="notic">截止时间</p>--> 
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="articleForm"><em>*</em>期望收货时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="expect_time" name="expect_time" value="" class="input-txt" placeholder="期望收货时间">
+                    <span class="add-on input-group-addon" ></span>
+                  <!--  <p class="notic">期望收货时间</p>-->
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>联系人</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="contacts_name" id="contacts_name" value="{$supplier.contacts_name}" class="input-txt" placeholder="请填写联系人">
+                    <span class="err" id="err_contacts_name"></span>
+                 <!--   <p class="notic">请填写联系人</p>-->
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>联系电话</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="tel" id="tel" value="{$supplier.contacts_phone}" class="input-txt" placeholder="请填写联系手机电话">
+                    <span class="err" id="err_tel"></span>
+               <!--    <p class="notic">请填写联系手机电话</p>--> 
+                </dd>
+            </dl>     
+            <dl class="row">
+                <dt class="tit">
+                  <label for="ac_name"><em>*</em>收货地址</label>
+                </dt>
+                <dd class="opt">
+                  <input type="text" class="input-txt city-tab" id="city" name="address" value="" placeholder="省--市--区">
+                  <span  class="info-tips"  style="color:#F00; display:none;"></span>
+                  <p class="notic">省--市--区</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="ac_name">供应商所在地区</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" class="input-txt" name="region" value="" placeholder="默认-全国，如广东,上海,天津,湖南,海南,青海等">
+
+                        <p class="notic">请输入要求供应商所在省份</p>
+                      </dd>
+                   </dl>
+        <!--
+                  <dl class="row">
+                      <dt class="tit">
+                          <label><em>*</em>采购商品</label>
+                      </dt>
+                      <dd class="opt" id="optinput" >
+                           <div class="div0">
+                          <input type="text" name="goods_name[]" id="id1" value="" class="input-txt1" placeholder="产品名称">
+                        <input type="text" name="goods_norm[]" id="id2" value="" class="input-txt1" placeholder="规格">
+                        <input type="text" name="goods_color[]" id="id3"  value="" class="input-txt1" placeholder="颜色">
+                         <input type="text" name="goods_brand[]" id="id4"   value="" class="input-txt1" placeholder="品牌">
+                         <input type="text" name="goods_unit[]" id="id5"  value="" class="input-txt1" placeholder="单位">
+                         <input type="text" name="goods_num[]" id="id6"   value="" class="input-txt1" placeholder="数量">
+
+                          </div>
+
+                        <span style="width:50px;height:20px;line-height:20px;border:1px #eee solid;text-align:center;display:block;float:right;" id="addclass">添加+</span>
+                       <span style="width:50px;height:20px;line-height:20px;border:1px #eee solid;text-align:center;display:block;float:right;" id="addclass0">减少-</span>
+                          <span class="err" id="err_goods_name"></span>
+
+                      </dd>
+                  </dl>-->
+       <!--
+
+             <dl class="row">
+                <dt class="tit">
+                    <label for="record_no">产品编号</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" value="{$info.goods_sn}" name="goods_sn" class="input-txt" placeholder="请填写产品编号"/>
+                    <span class="err" id="err_goods_sn" style="color:#F00; display:none;"></span>                
+                    <p class="notic">如果不填会自动生成</p>
+                </dd>
+            </dl> 
+          -->
+          <!--  <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>采购商品数量</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="goods_count" id="goods_count" value="{$info.goods_count}" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" class="input-txt" placeholder="请填写采购商品数量" >
+                    <span class="err" id="err_goods_count"></span>
+                    <p class="notic">请填写采购商品数量</p>
+                </dd>
+            </dl> -->
+<!--
+            <dl class="row">
+                <dt class="tit">
+                    <label>品牌要求</label>
+                </dt>
+                <dd class="opt">
+                    <textarea placeholder="请输入报价要求" name="goods_ask" rows="6" class="tarea">{$info.goods_ask}</textarea>
+                    <p class="notic">描述品牌要求</p>
+                </dd>
+            </dl> 
+
+          
+   
+            
+
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>发票抬头</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="lnvoice_title" id="lnvoice_title" value="{$info.lnvoice_title}" class="input-txt" placeholder="请填写发票抬头">
+                    <span class="err" id="err_lnvoice_title"></span>
+                    <p class="notic">请填写发票抬头</p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                  <label for="ac_name"><em>*</em>地址</label>
+                </dt>
+                <dd class="opt">
+                  <input type="text" class="input-txt city-tab" id="city" name="address" value="{$info.address}" placeholder="省--市--区">
+                  <span  class="info-tips"  style="color:#F00; display:none;"></span>
+                  <p class="notic">省--市--区</p>
+                </dd>
+            </dl>             
+
+             <dl class="row">
+                <dt class="tit">
+                  <label for="ac_name">所在地区</label>
+                </dt>
+                <dd class="opt">-->
+                  <!-- <input type="text" class="input-txt" name="region" value="{$info.region}">
+                  <span  class="err" id="err_region" style="color:#F00; display:none;"></span> -->
+              <!--    <textarea placeholder="默认-全国，如广东,上海,天津,湖南,海南,青海,浙江,江西,山东,黑龙江等" name="region" rows="3" class="tarea">{$info.region}</textarea>  
+                  <p class="notic">请输入要求供应商所在省份</p>
+                </dd>
+             </dl>    
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>报价要求</label>
+                </dt>
+                <dd class="opt">
+                    <textarea placeholder="请输入报价要求：需要报含税价,包含运费不允许对询价单部分物料报价" name="quote_ask" rows="6" class="tarea">{$info.quote_ask}</textarea>
+                    <p class="notic">描述报价要求</p>
+                </dd>
+            </dl>
+            <input type="hidden" name="province" value="{$info.province}">
+            <input type="hidden" name="city" value="{$info.city}" >
+            <input type="hidden" name="area" value="{$info.area}"> 
+            <input type="hidden" name="sustomized" value="{$info.sustomized}">-->
+            
+        </div>
+  <div class="ncap-form-default">
+    <h1>项目礼品采购清单</h1><br>
+    <table style="width:10px;float:left;" id="tableid">
+     <thead> <tr><td></td></tr></thead>
+      <tbody>
+      <tr><td style="height: 30px;line-height: 30px;"><span style="height:30px;width:30px;background:#eee;border-radius: 10px;">X</span></td></tr>
+
+        <tr style="height: 30px;line-height: 30px;display:none"><td style="height: 30px;line-height: 30px;"><span style="height:30px;width:30px;background:#eee;border-radius: 10px;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td style="height: 30px;line-height: 30px;"><span style="height:30px;width:30px;background:#eee;border-radius: 10px;">X</span></td></tr>
+        <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+        <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+        <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+         <tr style="height: 30px;line-height: 30px;display:none"><td><span style="height:30px;width:30px;background:#eee;border-radius: 50%;">X</span></td></tr>
+      </tbody>
+    </table>
+    <table border="1" class="tabletr" style='float:left;'>
+      <thead>
+<tr>
+  
+<td style="width:100px;">序号</td>
+<td  style="width:100px;"><span style="color:#f00">*</span>产品名称</td>
+ 
+  <td  style="width:100px;">规格</td>
+  <td  style="width:100px;">颜色</td>
+  <td  style="width:100px;">品牌</td>
+  <td  style="width:100px;"><span style="color:#f00">*</span>单位</td>
+  <td  style="width:100px;"><span style="color:#f00">*</span>数量</td>
+  <td  style="width:200px;">备注</td>
+</tr>
+        
+        
+        </thead>
+         <tbody id="tbodytr">
+           <tr>
+           
+  <td ><input name="goods_number[]" style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" /></td>
+  <td><input  name="goods_name[]"   style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;"  /></td>
+ <!-- <td>
+
+      <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:200px;">
+            <input type="text" id="imagetexts" name="icon[]" value="" class="type-file-text" style="width:101px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+      </dd>
+    </td>-->
+  <td><input  name="goods_norm[]"  style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;"  /></td>
+  <td><input  name="goods_color[]" style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;"  /></td>
+  <td><input  name="goods_brand[]" style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" /></td>
+  <td><input  name="goods_unit[]" style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;"  /></td>
+  <td><input  name="goods_num[]" style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" /></td>
+  <td><input name="goods_remarks[]" style="width:170px; border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" /></td>
+              </tr>
+            </tbody>
+      <tfoot>
+        <tr><td colspan="10" style="text-align:center;color:#0099ff" id="addtr">+添加产品</td></tr>
+      </tfoot>
+</table>
+    
+    <table style="float:left;width:180px;"  id="tableid1">
+       <thead>
+         <tr>
+  
+          <td style="width:150px;height:30px;">图片</td>
+         </tr>
+      </thead>
+       <tbody>
+         <tr>
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts" name="goods_img[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as1" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is1" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts1" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts1','purchaseList1','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts2" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts2','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as2" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is2" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts3" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts3','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as3" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is3" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts4" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts4','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as4" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is4" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts5" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts5','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr><tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts6" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts6','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts7" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts7','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr><tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts8" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts8','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts9" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts9','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr><tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts10" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts10','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts11" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts','purchaseList12','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts13" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts13','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr><tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts14" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts14','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts15" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts15','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+         <tr style="display:none">
+           <td style="height:30px;">
+           <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_as" class="nyroModal" rel="gal" href="{$goods_category_info.image}">
+                  <i id="img_is" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$goods_category_info.icon}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>
+              <span class="type-file-box" style="width:150px;">
+            <input type="text" id="imagetexts16" name="icon[]" value="" class="type-file-text" style="width:50px;"/>
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'imagetexts16','purchaseList','img_call_backs')" value="上传图片" hidefocus="true" nc_type="change_site_logo" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效"/>
+            </span>
+          </div>
+        </dd>
+           </td>
+         </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ncap-form-default"> 
+    <p>报价要求</p>
+    <textarea style="height:100px;width:99%;" name="quote_ask" >
+    </textarea>
+  </div>
+   <div class="ncap-form-default"> 
+    <p>补充详细资料</p>
+    <textarea style="height:100px;width:99%;" name="description" placeholder="请补充详细资料...">
+    </textarea>
+     <p>+添加附件</p>
+  </div>
+   <div class="ncap-form-default"> 
+     <!-- <div style="float:left;height:36px;line-height:36px;width:80px;display:block;text-align:center;background:#eee;margin-top:10px;margin-left:40%;" onclick="preview()">预览</div> -->
+  <div class="bot" ><a onclick="verifyForm()" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+  </div> 
+    </form>
+</div>
+</div>
+
+<script src="__PUBLIC__/js/Popt.js"></script>
+<script src="__PUBLIC__/js/cityJson.js"></script>
+<script src="__PUBLIC__/js/citySet.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#inquiry_time').layDate();
+        $('#dead_time').layDate();
+        $('#expect_time').layDate();
+
+        $("#city").focus(function(e){
+            SelCity(this,e);
+            //alert(this);exit;
+            console.log("inout",$(this).val(),new Date())
+        });
+    })
+</script>
+
+<script type="text/javascript">
+
+
+
+    function verifyForm(){
+        
+       var  divin=$('#optinput').children('div').length;
+       var lengthi=divin*6;
+       var id=[];
+       while (i<lengthi)       
+      {  
+          if(($("#id"+i+"").val())=="")           
+          {  id[i]=i;         }
+        i=i+1;     
+      }
+      if(id.length>0){
+            //alert("请填写文章标题！");
+            layer.alert("请填写完整商品！");
+            return false;
+        }       
+
+        if($('input[name="title"]').val() == ''){
+            //alert("请填写文章标题！");
+            layer.alert("请填写采购标题！");
+            return false;
+        }       
+        if($('#contacts_name').val() == '' ){
+            layer.alert("请输入联系人");
+            return false;
+        }
+        if($('#tel').val() == '' ){
+            layer.alert("请输入联系电话");
+            return false;
+        }
+       /* if($('#goods_name').val() == '' ){
+            layer.alert("请输入采购商品");
+            return false;
+        }
+        if($('#goods_count').val() == '' ){
+            layer.alert("请输入商品数量");
+            return false;
+        }*/
+        if($('#inquiry_time').val() == '' ){
+            layer.alert("请输入询价时间");
+            return false;
+        }
+        if($('#dead_time').val() == '' ){
+            layer.alert("请输入截止时间");
+            return false;
+        }
+        if($('#expect_time').val() == '' ){
+            layer.alert("请输入期望时间");
+            return false;
+        }
+        if($('#address').val() == '' ){
+            layer.alert("请输入地址");
+            return false;
+        }
+
+
+        $('span.err').hide();
+        $.ajax({
+            type: "POST",
+            //成功提交后数据保存的路径
+            url: "{:Url('Home/Article/add_purchase')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status== 1) {
+                    layer.msg(data.msg, {
+                        icon: 1,
+                        time: 1000
+                    }, function(){
+                        //成功提交后页面跳转的路径
+                      //window.opener.document.location.reload();
+                      //top.location.href="{:Url('Supplier/Purchase/purchase_list')}";
+                      //window.location.href = "{:Url('Supplier/Purchase/purchase_list')}";
+                        window.parent.location.href= "{:Url('Supplier/Index/index')}";
+                        //top.location.href = "{:Url('Supplier/Purchase/purchase_list')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2,time: 1000});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+
+
+   $(function(){
+    
+     $("#tableid>tbody>tr>td").click(function(){
+       var leng1= $("#tbodytr").children("tr").length
+       if(leng1>1){
+       $(this).parent().css("display","none")
+         
+         var index=$(this).parent().index();
+        
+         $("#tableid1>tbody>tr:eq("+index+")").css("display","none")
+         
+         $("#tbodytr>tr:eq("+index+")").remove();
+       }
+         
+     })
+     $("#addtr").click(function(){
+       var leng1= $("#tbodytr").children("tr").length;
+
+       for(var i=0 ;i<=leng1;i++)
+       { 
+         $("#tableid>tbody>tr:eq("+i+")").css("display","block");
+       }
+       var leng=leng1-1
+       var html='<tr><td ><input style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_number[]" /></td><td><input  style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_name[]" /></td><td><input  style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_norm[]" /></td><td><input  style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_color[]" /></td><td><input   style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_brand[]" /></td><td><input  style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_unit[]"  /></td><td><input  style="width:70px;border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_num[]" /></td><td><input style="width:170px; border:1px solid #eee;height: 20px;line-height: 20px;border-radius: 4px;" name="goods_remarks[]"/></td></tr>';
+       $("#tbodytr>tr:eq("+leng+")").after(html) ;
+        
+       $("#tableid>tbody>tr:eq("+leng1+")").css("display","block")
+       $("#tableid1>tbody>tr:eq("+leng1+")").css("display","block")
+     })
+     $(".shan").click(function(){
+       var index=$(this).index()
+       //alert(index)
+    //    $(this).parent().css("display","none")
+     })
+      var ontrue=false;
+      var i=0;
+      var lengthinput;
+      var div=0;
+      var divdiv="";
+      var divinput;
+     
+     
+      $("#addclass").click(function(){
+         
+        divinput=$('#optinput').children('div').length;
+        lengthinput=divinput*6;
+       var id=[];
+       while (i<lengthinput)
+         
+    {
+   
+          if(($("#id"+i+"").val())=="")
+            
+        {  id[i]=i;
+         
+          }
+          
+    
+      i=i+1;
+      
+    }
+        if(id.length==0 && divinput>0){
+            
+        
+        
+        }
+        
+        
+      if(id.length==0)
+      {
+         div=div+1;
+         divdiv="div"+div;
+         
+         $("#addclass").before('<div class="'+divdiv+'"><input  name="goods_name[]" id="id'+(lengthinput+1)+'" type="text"   value="" class="input-txt1" placeholder="产品名称"><input  name="goods_norm[]" id="id'+(lengthinput+2)+'" type="text" value="" class="input-txt1" placeholder="规格"><input  name="goods_color[]" id="id'+(lengthinput+3)+'" type="text"  value="" class="input-txt1" placeholder="颜色"><input  name="goods_brand[]" id="id'+(lengthinput+4)+'" type="text"  value="" class="input-txt1" placeholder="品牌"><input  name="goods_unit[]" id="id'+(lengthinput+5)+'" type="text"  value="" class="input-txt1" placeholder="单位"><input  name="goods_num[]" id="id'+(lengthinput+6)+'" type="text"  value="" class="input-txt1" placeholder="数量"></div>')
+      
+      }else
+      {
+        alert("有没有填的空"+id.length)
+      }
+      })
+      $("#addclass0").click(function(){
+        var lengthi=$('#optinput').children('div').length;
+        if(lengthi>1){
+           $("#addclass0").prev().prev().remove();
+        }
+        
+       
+      
+      })
+   })
+    function img_call_backs(fileurl_tmp)
+    {
+        $("#imagetexts").val(fileurl_tmp);
+        $("#img_as").attr('href', fileurl_tmp);
+        $("#img_is").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+</script>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
 <title>
  <if condition="$goodsCate['title'] eq ''"> <if condition="$goodsCate['parent_id'] eq 0">{$goodsCate['parent_name']}_一礼通<else>{$goodsCate['parent_name']}_{$goodsCate['name']}_一礼通</if><else>{$goodsCate['title']}</if></title>
 <meta http-equiv="keywords" content="<if condition="$goodsCate['keywords'] eq ''"> <if condition="$goodsCate['parent_id'] eq 0">{$goodsCate['parent_name']}_一礼通<else>{$goodsCate['parent_name']}_{$goodsCate['name']}_一礼通</if><else>{$goodsCate['keywords']}</if>" />
@@ -244,7 +245,7 @@
         <div class="listbox clearfix"> 
           <!-- 图片 -->
           <div class="listPic"> 
-          		<a rel="nofollow" target="_blank" <if condition="$v.cat_id neq 1118"/>   href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" </if> style="width:200px;height:200px;">
+          		<a rel="nofollow" target="_blank"  href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" style="width:200px;height:200px;">
                 	<img width="200" height="200" style="display: block;" src="{$v.goods_thumb}" class="fn_img_lazy"/> 
                 </a>             
           </div>
@@ -254,7 +255,6 @@
           
           <!-- 价格 -->
           <div class="discountPrice">
-           <if condition="$v.cat_id neq 1118"/>  <!-- 防疫专区的判断，不显示按钮 -->
             <div class="price-cash">
               <span class="text13 colf22e01">¥</span>
               <span class="text18 colf22e01 fontT">
@@ -265,16 +265,13 @@
                 </if>
               </span>
             </div>
-           </if>
           </div>
           <!-- 价格 end--> 
           <!-- 品名 -->
-          <div class="listDescript"> <a target="_blank" <if condition="$v.cat_id neq 1118"/> href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}" </if>  class="text13">{$v[goods_name]}</a> </div>
+          <div class="listDescript"> <a target="_blank"  href="{:Url('Home/Goods/goodsInfo',array('id'=>$v[goods_id]))}"  class="text13">{$v[goods_name]}</a> </div>
           <!-- 价格 -->
           <div class="itemPrice" >
-            <if condition="$v.prom_type neq 6 && $v.cat_id neq 1118"/>  <!-- 防疫专区的判断，不显示按钮 -->
-              <div class="cart_wrapper" > <a style="cursor:pointer;" class="cartlimit" href="javascript:void(0);" onclick="javascript:AjaxAddCart({$v[goods_id]},1,0);" ></a></div>
-            </if>
+            <div class="cart_wrapper" > <a style="cursor:pointer;" class="cartlimit" href="javascript:void(0);" onclick="javascript:AjaxAddCart({$v[goods_id]},1,0);" ></a></div>
           </div>
         </div>
       </li>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-个人中心-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+
+    <style>
+        #pager ul.pages {
+            display: block;
+            border: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 10px 0 50px;
+            padding: 0;
+            font: normal 13px "Microsoft YaHei";
+            font-family: "Microsoft YaHei","微软雅黑","sans-serif";
+        }
+        #pager ul.pages li {
+            float: left;
+            padding:5px 10px;
+            text-decoration: none; /*border: 1px solid #dddddd;*/;
+            border-left-width: 0;
+            list-style: none;
+            background-color: #fff;
+            color: #888;
+            margin: 0 3px 0 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+        #pager ul.pages li:hover {
+            color: #fff;
+            background-color: #3c4852;
+        }
+        #pager ul.pages li.pgNext {
+
+        }
+        #pager ul.pages li.pgEmpty {
+            display: none;
+            /*border:1px solid #eee;
+            color:#eee;
+            */;
+        }
+        #pager ul.pages li.pgCurrent {
+            color: #fff;
+            font-weight: 700;
+            background-color: #ed6c01;
+        }
+    </style>
+</head>
+
+<body style="background:#efefef;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<!--  导航 start  -->
+<include file="works/navigation" />
+<!--  导航 end  -->
+
+
+<!-- 个人中心 信息 开始 -->
+<div class="personal-infos-bg">
+    <div class="personal-infos-bg-cneter">
+        <img src="__STATIC__/images/designer_banner_bg.jpg" alt="">
+    </div>
+</div>
+<div class="personal-infos-container">
+    <div class="personal-infos-content">
+        <div class="personal-head-img"><img src="{$su.logo|default='__STATIC__/images/tou2.png'}" alt="头像"></div>
+        <p class="personal-name">{$su['supplier_name']}</p>
+        <ul class="personal-area-designerType">
+            <li class="personal-area">{$region_list[$su['province']]['name']}-{$region_list[$su['city']]['name']}</li>
+            <li class="cut-line">|</li>
+            <li class="personal-designerType">{$su['company_type']}</li>
+        </ul>
+        <ul class="personal-attention-contact">
+            <!-- <li><a href="javascript:void(0);" class="personal-attention">关注</a></li> -->
+            <li><a id="attention" class="personal-attention" onclick="addAttention({$su.supplier_id})" href="javascript:void(0);">关注</a></li>
+            <li><a href="{:url('Home/Works/personalInfos',array('id'=>$su.supplier_id))}" class="personal-contact">联系TA</a></li>
+        </ul>
+    </div>
+    <ul class="personal-list clearfix">
+        <li><a href="javascript:void(0);" class="personal-list-cur">个人作品</a></li>
+        <li><a href="{:url('Home/Works/personalSelling',array('id'=>$su.supplier_id))}">在售作品</a></li>
+        <li><a href="{:url('Home/Works/personalInfos',array('id'=>$su.supplier_id))}">个人资料</a></li>
+    </ul>
+</div>
+<!-- 个人中心 信息 结束 -->
+
+
+
+<!-- ------  设计作品 开始  ------ -->
+<div class="inner" style="margin-top:20px;">
+    <!--<div class="inner personal-designs">-->
+        <p class="personal-designs-num-title">共上传了<span>{$count}</span>组作品</p>
+    <!--</div>-->
+    <!-- ------  分类 结束  ------ -->
+
+    <!-- 设计作品列表 start -->
+    <div class='page'>
+    <div class="inner">
+        <ul class="designs-container">
+
+        <foreach name="work" item="v" key="k">
+            <li>
+                <a href="{:Url('/Home/Works/WorksDetails',array('id'=>$v.works_id))}" class="works-imgs">
+                    <img src="{$v.works_img}" alt="">
+                </a>
+                <h6 class="designs-title">{$v.works_name}</h6>
+                <p class="designs-types">{$v.cat_name}</p>
+                <dl class="works-browse-praise">
+                    <dd>浏览<span>{$v.click_count}</span></dd>
+                    <dd>赞<span>{$v.fabulous_count}</span></dd>
+                </dl>
+                <dl class="designs-infos-content">
+                    <dt>
+                       
+                            <p>{$v.designer_name}</p>
+                        
+                    </dt>
+                    <dd><span>{$v.add_time|date='Y-m-d',###}</span></dd>
+                </dl>
+            </li>
+         </foreach>
+        </ul>
+    </div>
+    {$page}  </div>
+    <!-- 设计作品列表 end -->
+</div>
+<!-- ------  设计作品 结束  ------ -->
+
+
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+
+<!--  评论  -->
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.js"></script>
+
+
+<script type="text/javascript" language="javascript">
+
+
+    //关注作者
+    // function addAttention(designers_id,states,added){
+    //     $.ajax({
+    //         type : "POST",
+    //         dataType: "json",
+    //         url:"/index.php?m=Home&c=designers&a=collect_designers&designers_id="+designers_id,//+tab,
+    //         success: function(data){
+    //             if(data.status == '1'){
+    //                 if(states == 1){ //判断已登录状态
+    //                     //显示已关注
+    //                     if(added == 1){ //判断已经关注状态
+    //                         alert('已经关注');
+    //                         //$('.personal-attention').text('已关注');
+    //                         return false;
+    //                     }else{
+    //                         //alert(data.msg);
+    //                         alert('关注成功');
+    //                         $('.personal-attention').text('已关注');
+    //                     }
+
+    //                 }else if(states == 0){
+    //                     alert('请先登录');
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
+    //关注作者
+    function addAttention(id){
+        $.ajax({
+            type : "get",
+            dataType: "json",
+            url:"/index.php?m=Home&c=Works&a=collect_supplier&id="+id,//+tab,
+
+            success: function (data) {
+                if (data.status== 1) 
+                {
+                    
+                    $('#attention').text('已关注');
+                } else if(data.status== -1)
+                {
+                    
+                    $('#attention').text('关注');
+                }
+            },
+            error:function(){
+                alert('服务器繁忙，请刷新页面后重试');
+            },
+
+        });
+    }
+</script>
+
+
+</body>
+</html>
