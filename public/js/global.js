@@ -226,6 +226,7 @@ function GetUploadify2(num,elementid,path,callback)
 }
 
 
+
 /*
  * 删除组图input
  * @access   public
@@ -248,6 +249,18 @@ function ClearPicArr2(val)
     $("li[rel='"+ val +"']").remove();
     $.get(
         "{:Url('Home/Uploadify/delupload')}",{action:"del", filename:val},function(){}
+    );
+}
+/*
+ * 删除组图input
+ * @access   public
+ * @val  string  删除的图片input
+ */
+function ClearPicArr3(val)
+{
+    $("li[rel='"+ val +"']").remove();
+    $.get(
+        "{:Url('RedSupplier/Uploadify/delupload')}",{action:"del", filename:val},function(){}
     );
 }
 	
