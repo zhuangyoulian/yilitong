@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="__MOBILE__/css/distribution.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+	</head>
+	<body>
+		<div class="tabbar" id="tabbar">
+			<div class="tab_nav" @click="clickLogo">
+			<a href="/">
+				<div class="tab_nav1">
+					<div><img src="__MOBILE__/images/tab_logo.png" alt=""></div>
+					<div>一礼通</div>
+				</div>
+				<div class="tab_nav2">
+					<div><img src="__MOBILE__/images/tab_log_selected.png" alt=""></div>
+					<div>一礼通</div>
+				</div>	
+			</a>						
+			</div>
+			<div class="tab_nav" @click="clickMall">
+			<a href="{:Url('Mobile/Distribution/storeIndex')}">
+				<if condition="strrchr($url,'storeIndex')"> 
+					<div class="tab_nav1">
+						<div><img src="__MOBILE__/images/tab_mall.png" alt=""></div>
+						<div>分销商城</div>
+					</div> 
+				<else/>
+					<div class="tab_nav2">
+						<div><img src="__MOBILE__/images/tab_mall_selected.png" alt=""></div>
+						<div>分销商城</div>
+					</div>	
+				</if>
+			</a>				
+			</div>
+			<div class="tab_nav" @click="clickCart">
+			<a href="{:Url('Cart/cart')}">
+				<div class="tab_nav1">
+					<div><img src="__MOBILE__/images/tab_cart.png" alt=""></div>
+					<div>购物车</div>
+				</div>
+				<div class="tab_nav2">
+					<div><img src="__MOBILE__/images/tab_cart_selected.png" alt=""></div>
+					<div>购物车</div>
+				</div>	
+			</a>				
+			</div>
+			<div class="tab_nav" @click="clickMaster">
+			<a href="{:Url('/Mobile/Distribution/index',array('id'=>$id))}">
+				<if condition="strrchr($url,'index/id') || strrchr($url,'myShop/id') || strrchr($url,'maxCard') || strrchr($url,'myAttention')"> 
+					<div class="tab_nav2">
+						<div><img src="__MOBILE__/images/tab_master_selected.png" alt=""></div>					<div>店主中心</div>
+					</div>
+				<else/>
+					<div class="tab_nav1">
+						<div><img src="__MOBILE__/images/tab_master.png" alt=""></div>
+						<div>店主中心</div>
+					</div>	
+				</if>
+			</a>				
+			</div>
+		</div>
+	</body>
+</html>

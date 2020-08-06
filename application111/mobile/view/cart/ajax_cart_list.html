@@ -1,0 +1,308 @@
+<style>
+    .layui-m-layercont{
+        font-size: .6rem;
+        color: #555;
+    }
+
+    .thirdlogin span{
+        margin-right: .38rem;
+    }
+    .thirdlogin .check_t i {
+        background-position: -.8rem 0;
+    }
+    .thirdlogin i {
+        width: .86rem;
+        height: .68rem;
+        display: block;
+        float: left;
+        background-image: url(__MOBILE__/images/check.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: .1rem 0;
+    }
+    .cart-col .orderlistshpop{
+        background:#fff;
+    }
+    .plusshopcar-buy{
+        position:relative;
+        left:0;
+        bottom:0;
+        overflow:hidden;
+        width:100%;
+    }
+    .cart-col .orderlistshpop:last-of-type .sc_list{
+        border-bottom: none;
+    }
+    .cart-col .orderlistshpop .deleshow .weight{
+        width: 80%;
+        height:.8rem;
+        margin-bottom: .2rem;
+        font-size: .46rem;
+        line-height: .8rem;
+        border: 1px solid #efefef;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 .2rem;
+        border-radius: .1rem;
+        background: url(__MOBILE__/images/spec_select_icon.png) no-repeat 99% center;
+        background-size: .4rem .4rem;
+        -webkit-background-size: .4rem .4rem;
+        -moz-background-size: .4rem .4rem;
+        -o-background-size: .4rem .4rem;
+    }
+    .cart-col .orderlistshpop .deleshow .similar-product-text{
+        margin-top: 0;
+    }
+    .cart-col .orderlistshpop .maleri30 .deleshow .actTypeName{
+        padding-right: .1rem;
+        color: #e6002d;
+    }
+    .youbia{
+        line-height:.7rem;
+    }
+    .zhuan{
+        margin-left: 0.16rem;
+        opacity: 0.6;
+    }
+</style>
+
+<!--选择属性的弹窗-s-->
+<if condition="empty($cartList) && !empty($user['user_id'])">
+    <!--空车-->
+    <div class="nonenothing">
+        <p>购物车暂无商品</p>
+        <a href="{:Url('Index/index')}">去逛逛</a>
+        <!-- <a href="{:Url('Distribution/storeIndex')}">去逛逛</a> -->
+    </div>
+
+<else/>
+<foreach name="cartList" item="v1" key="k1" >
+    <div class="cart-col">
+        <div class="thirdlogin">
+            <span onClick="checkgood(this)" class="che <if condition="$v1[selected] eq 1" >check_t</if>">
+                <i>
+                    <input type="checkbox" autocomplete="off" id="supplier[{$v1.supplier_id}]" name="supplier[{$v1.supplier_id}]" <if condition="$v1[selected] eq 1">checked="checked"  onclick="ajax_cart_list_cancel({$v1.supplier_id});" <else>onclick="ajax_cart_list();"</if>  value="{$v1.supplier_id}" style="opacity: 0;">
+                </i>
+            </span>
+            <h4>{$v1.supplier_name}</h4>
+        </div>
+
+        <foreach name="v1.list" item="v2" key="k2">
+        <div class="orderlistshpop p">
+            <div class="maleri30">
+                <!--商品列表-s-->
+                <div class="sc_list">
+                    <div class="radio fl ">
+                        <!--商品勾选按钮-->
+                        <span onClick="checkgood(this)" class="che <if condition="$v2[selected] eq 1" >check_t</if>" >
+                            <i>
+                                <input type="checkbox" autocomplete="off" id="good[{$v2.id}]" name="cart_select[{$v2.id}]" <if condition="$v2[selected] eq 1">checked="checked"</if>  style="display:none;" value="1" onclick="ajax_cart_list();">
+                            </i>
+                        </span>
+                    </div>
+                    <div class="shopimg fl">
+                        <a href="{:Url('Goods/goodsInfo',array('id'=>$v2[goods_id]))}">
+                        <!--商品图片-->
+                            <img src="{$v2.goods_thumb}">
+                        </a>
+                    </div>
+                    <div class="deleshow fr">
+                        <div class="deletes">
+                            <!--商品名-->
+                                <span class="similar-product-text fl">
+                                    <a href="{:Url('Goods/goodsInfo',array('id'=>$v2[goods_id]))}">
+                                        <!-- <span class="actTypeName">满100减20</span> -->
+                                        {$v2[goods_name]}
+                                    </a>
+                                </span>
+                            <!--删除按钮-->
+                            <a href="javascript:void(0);" onclick="del_cart_goods({$v2.id})" class="delescj"><img src="__STATIC__/images/dele.png"/></a>
+                        </div>
+                        <!--商品属性，规格-->
+                        <p class="weight" onclick="post_goods_price({$v2[goods_id]},{$v2.id})">{$v2[spec_key_name]}</p>
+                        <div class="prices">
+                            <p class="sc_pri fl">
+                                <!--商品单价-->
+                                <span>￥</span>
+                                <span>{$v2.goods_price}</span>
+                                <!-- <if condition="$v2.brokerage eq 1">
+                                    <if condition="$v2.commission_price neq 0">
+                                        <span class="zhuan">赚{$v2.commission_price * $ratio} </span>
+                                    <elseif condition="$v2.commission_price eq 0 && $v2.cost_price neq 0"/>
+                                        <span class="zhuan">赚{$v2.distribution_price * $ratio} </span>
+                                    </if>
+                                </if> -->
+                            </p>
+                            <!--加减数量-->
+                            <div class="plus fr get_mp">
+                            <foreach name="v2.store_count" item="t2" key="r2">
+                                <span class="mp_minous" onclick="switch_num(-1,{$v2.id},{$t2},'{$v2[spec_key]}',{$v2.quantity})">-</span>
+                                <if condition="$v2.prom_type[0] eq 6"/>
+                                    <span class="mp_mp">
+                                    <input type="text"  value="1"  class="input-num" />
+                                    </span>
+                                    <span class="mp_plus" onclick="alert('限购1份')">+</span>
+                                <else/>
+                                    <span class="mp_mp">
+                                    <input id="goods_num[{$v2.id}]" type="text" onKeyDown='if(event.keyCode == 13) event.returnValue = false' name="goods_num[{$v2.id}]"  value="{$v2.goods_num}"  class="input-num"  onblur="switch_num(0,{$v2.id},{$t2},'{$v2[spec_key]}',{$v2.quantity})"/>
+                                    </span>
+                                    <span class="mp_plus" onclick="switch_num(1, {$v2.id},{$t2},'{$v2[spec_key]}',{$v2.quantity})">+</span>
+                                </if>
+                            </foreach>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--商品列表-e-->
+            </div>
+        </div>
+        </foreach>
+    </div>
+</foreach>
+
+    <!--提交栏-s-->
+    <if condition="$_SESSION['Distribution'] eq 1" >
+        <div class="foohi foohiext" style="position: fixed;left:0; bottom:0rem;z-index: 10;height: auto;">
+    <else/>
+        <div class="foohi foohiext" style="position: fixed;left:0; bottom:2.2rem;z-index: 10;height: auto;">
+    </if>
+        <div class="payit ma-to-20 payallb ">
+            <div class="fl alllef">
+                <div class="radio fl" onclick="chkAll_onclick()">
+                    <span class="che alltoggle">
+                        <i></i>
+                    </span>
+                    <span class="all" style="color:#999;">(全选)</span>
+                </div>
+                <div class="youbia">
+                    <p style="height:2rem;line-height:2rem;text-align:left;padding-left:.8rem;">总计：¥<span id="cartsum" style="vertical-align: baseline;">{$total_price.total_fee}</span></p>
+                </div>
+            </div>
+            <div class="fr">
+                <a href="javascript:void(0);" id="check-out" onclick="return selcart_submit()">确认订单</a>
+            </div>
+        </div>
+    </div>
+    <!--提交栏-e-->
+</if>
+
+
+<!-- ajax 加载修改规格 start -->
+<div id="getSpec"></div>
+<!-- ajax 加载修改规格 end -->
+
+<script>
+    function show_cur_goods_spec(){
+        $('.getSpec').fadeIn(200);
+        $('.choose_shop_aready').stop().animate({bottom:0}, 300);
+    }
+    function hide_cur_goods_spec(){
+        //sel();
+        $('.getSpec').fadeOut(200);
+        $('.choose_shop_aready').stop().animate({bottom:'-20rem'}, 300);
+    }
+    function post_goods_price(goods_id,cart_id){
+        $.ajax({
+            type : "GET",
+            url:'/index.php?m=Mobile&c=Cart&a=ajax_cart_spec&goods_id='+goods_id+'&cart_id='+cart_id,
+            success: function(data){
+                if(data){
+				    $('#getSpec').html('');  //每次加载前 初始化数据 避免数据叠加
+                    $('#getSpec').append(data);
+                    show_cur_goods_spec();  //加载后才能进行显示
+                }
+            }
+        });
+
+    }
+
+
+    //点击结算
+    function selcart_submit()
+    {
+        var numArr = new Array();                  
+        //获取选中的商品个数
+        var j=0;
+        $('input[name^="cart_select"]:checked').each(function(){
+            j++;
+        });
+        //选择数大于0
+        if (j>0){
+            //跳转订单页面
+            window.location.href="{:Url('Cart/orderconfirm')}"
+        }else {
+            layer.open({content:'请选择要结算的商品！',time:2});
+            return false;
+        }
+    }
+
+    //勾选商品
+    function checkgood(obj){
+        if($(obj).hasClass('check_t')){
+            //改变颜色
+            $(obj).removeClass('check_t');
+            //取消选中
+            $(obj).find('input').attr('checked',false);
+        }else {
+            //改变颜色
+            $(obj).addClass('check_t');
+            //勾选选中
+            $(obj).find('input').attr('checked',true);
+        }
+        ajax_cart_list();
+    }
+
+    //判断商品选中 结算按钮-->红，未选中按钮-->灰
+    $('.cart-col').each(function () {
+        if($('.cart-col').find('.che').hasClass('check_t')){
+            $('#check-out').css('background','#f23030');
+        }else{
+            $('#check-out').css('background','#ccc');
+        }
+    })
+
+
+    //定义变量
+    var is_checked = true;
+    //判断商品是否选中，未选中返回false
+    $('.sc_list .che').each(function(){
+        if(!$(this).hasClass('check_t'))
+        {
+            //只要有没选中返回false
+            is_checked = false;
+            return false;
+        }
+    });
+
+    //判断所有商品选择状态，改变全选状态
+    if(is_checked){
+        $('.alllef .che').addClass('check_t');
+    }else
+    {
+        $('.alllef .che').removeClass('check_t');
+    }
+    //全选按钮
+    function chkAll_onclick()
+    {
+        //取消全选
+        if($('.alllef .che').hasClass('check_t')){
+            $('.alllef .che').removeClass('check_t');
+            $('.inner .che').removeClass('check_t');
+            //全部商品取消checked
+            $("input[name^='cart_select']").prop('checked',false);
+            is_checked = false;
+        }
+        //全选
+        else{
+            $('.alllef .che').addClass('check_t');
+            $('.inner .che').addClass('check_t');
+            //全部商品添加checked
+            $("input[name^='cart_select']").prop('checked',true);
+            is_checked = true;
+        }
+        ajax_cart_list();
+    }
+
+
+</script>

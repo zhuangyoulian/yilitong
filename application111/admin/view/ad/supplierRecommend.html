@@ -1,0 +1,156 @@
+<include file="public/layout" />
+<script src="__ROOT__/public/static/js/laydate.js"></script>
+<script src="__ROOT__/public/static/sfilter/sfilter.js"></script>
+<link rel="stylesheet" href="__ROOT__/public/static/sfilter/sfilter.css" />
+<body style="background-color: #FFF; overflow: auto;"> 
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>精选商铺管理 </h3>
+        <h5>编辑添加与管理</h5>
+      </div>
+    </div>
+  </div>
+    <!--表单数据-->
+  <form method="post" id="handleSupplier" action="{:Url('Admin/Ad/supplierRecommendHandle')}">                    
+    <div class="ncap-form-default">
+      <dl class="row" style="z-index:9;">
+        <dt class="tit">
+          <label for="parent_id">选择店铺添加：</label>
+        </dt>
+        <dd class="opt">                 
+            <select name="supplier_id" id="supplier_id" class="small form-control" >
+                 <option value="">请选择</option>
+                <volist name="supplier_info" id="vo">
+                 <option value="{$vo[supplier_id]}" data-introduction="{$vo[introduction]}" data-logo="{$vo[logo]}" data-name="{$vo[supplier_name]}" <if condition="$vo[supplier_id] eq $info[supplier_id]">selected="selected"</if>>{$vo[supplier_name]}</option>
+                </volist>                                        
+            </select> 
+            <span id="err_type_id" class="err" style="color:#F00; display:none;"></span> 
+                    
+        </dd>
+      </dl>	
+      <dl class="row">
+        <dt class="tit">
+          <label>店铺描述：</label>
+        </dt>
+        <dd class="opt"><textarea name="introduction" class="tarea" rows="6" id="introduction" placeholder="小于等于100字.">{$info[introduction]}</textarea></dd>
+        
+      </dl>
+      <dl class="row">
+        <dt class="tit">
+            <label>商铺LOGO</label>
+        </dt>
+        <dd class="opt">
+          <div class="input-file-show" id="divComUploadContainer">
+            <span class="show">
+              <a id="img_a" class="nyroModal" rel="gal" href="{$info.logo_img}">
+                  <i id="img_i" class="fa fa-picture-o" onmouseover="layer.tips('<img src={info.logo_img}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+              </a>
+            </span>   
+            <span class="type-file-box">            
+            <input type="text" id="logo_imgtext" name="logo_img" value="{$info.logo_img}" class="type-file-text">            
+            <input type="button" class="type-file-button" onClick="GetUploadify(1,'logo_imgtext','business','img_call_back')" value="上传图片"/>           
+            </span>
+          </div>
+          <div id="thumbnails" class="ncap-thumb-list">
+            <h5><i class="fa fa-exclamation-circle"></i> 请上传图片格式文件。请压缩图片大小，请勿上传超过2M的图片</h5>
+            <ul>
+            </ul>
+          </div>
+          
+        </dd>
+      </dl>
+
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">推荐度：</label>
+        </dt>
+        <dd class="opt">
+            <input type="text" value="{$info.number|default='10'}" name="number"  class="input-txt"/>
+            <span id="err_order" class="err" style="color:#F00; display:none;"></span>           
+        </dd>
+      </dl>
+
+      <dl class="row">
+        <dt class="tit">
+          <label for="t_mane"><em>*</em>上下架设置</label>
+        </dt>
+        <dd class="opt">
+          <div class="onoff">
+            <label for="goods_category1" class="cb-enable <if condition="$info[is_show] eq 1">selected</if>">是</label>
+            <label for="goods_category0" class="cb-disable <if condition="$info[is_show] eq 0">selected</if>">否</label>
+            <input id="goods_category1" name="is_show" value="1" type="radio" <if condition="$info[is_show] eq 1"> checked="checked"</if>>
+            <input id="goods_category0" name="is_show" value="0" type="radio" <if condition="$info[is_show] eq 0"> checked="checked"</if>>
+          </div>
+          <p class="notic">开启上架时，上下架时间才有效。</p>
+        </dd>        
+    </dl>    
+
+	    <dl class="row">
+        <dt class="tit">
+          <label for="articleForm">开始日期：</label>
+        </dt>
+        <dd class="opt"> 
+            <input type="text" class="input-txt" id="start_time" name="start_time" <if condition="empty($info[start_time] )"> value="{$info.start_time|default="2019-01-01"}" <else /> value="{$info.start_time|date='Y-m-d',###}" </if> >
+          <span class="err"></span>
+        </dd>
+      </dl>    
+      <dl class="row">
+        <dt class="tit">
+          <label for="articleForm">结束时间：</label>
+        </dt>
+        <dd class="opt">
+            <input type="text" class="input-txt" id="end_time" name="end_time" <if condition="empty($info[end_time] )"> value="{$info.end_time|default="2022-01-01"}" <else /> value="{$info.end_time|date='Y-m-d',###}" </if> >
+          <span class="err"></span>
+        </dd>
+      </dl>    
+
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">排序：</label>
+        </dt>
+        <dd class="opt">
+            <input type="text" value="{$info.sort|default='50'}" name="sort"  class="input-txt"/>
+            <span id="err_order" class="err" style="color:#F00; display:none;"></span>           
+        </dd>
+      </dl>	
+      <dl class="row">
+        <dt class="tit">
+          <label>备注：</label>
+        </dt>
+        <dd class="opt"><textarea name="remark" class="tarea" rows="6" id="remark" placeholder="小于等于100字.">{$info[remark]}</textarea></dd>
+        
+      </dl>                
+      <div class="bot"><a href="JavaScript:void(0);" onclick="adsubmit()" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+    </div>
+    <input type="hidden" name="act" value="{$act}">
+    <input type="hidden" name="id" value="{$info.id}">
+    <input type="hidden" name="supplier_name" id="supplier_name" value="{$info.supplier_name}">
+  </form>
+</div>
+ <script>
+ function img_call_back(fileurl_tmp)
+    {
+        $("#logo_imgtext").val(fileurl_tmp);
+        $("#img_a").attr('href', fileurl_tmp);
+        $("#img_i").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+  function adsubmit(){
+    $('#handleSupplier').submit();
+  }
+  $(document).ready(function(){
+    $('#start_time').layDate();
+    $('#end_time').layDate();
+    $("#supplier_id").sfilter();
+
+    //由sfilter插件处检测change
+    $('#supplier_id').change(function(){
+      $("#introduction").val($('#supplier_id').find('option:selected').attr('data-introduction'));
+      $("#supplier_name").val($('#supplier_id').find('option:selected').attr('data-name'));
+      $("#logo_img").val($('#supplier_id').find('option:selected').attr('data-logo'));
+    });
+  });
+ </script>
+</body>
+</html>

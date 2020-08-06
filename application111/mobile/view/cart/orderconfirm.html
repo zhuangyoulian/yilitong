@@ -1,0 +1,707 @@
+<include file="public/header" title="填写订单" body="g4"/>
+<!-- 抗疫推荐弹框 -->
+<!-- <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__MOBILE__/css/charity/index.css">
+    <link rel="stylesheet" href="__MOBILE__/css/charity/normalize.css">
+    <link rel="stylesheet" href="__MOBILE__/css/charity/business.css">
+</head> -->
+<!-- 结束后可删 -->
+
+<style>
+    body{
+        padding-bottom: 3rem;
+        padding-top: 1.7rem;
+    }
+    h2{
+        margin:0;
+    }
+    .collect-goods-title{
+        width: 100%;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: .58rem;
+        /*position: relative;*/
+        background: #fff;
+        /*margin-bottom:.1rem;*/
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .collect-goods-title a{
+        position: absolute;
+        left: .8rem;
+        top: .4rem;
+        display: block;
+        width: .44rem;
+        height: .8rem;
+        background: url(__MOBILE__/images/btn_more@3x.png) no-repeat;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        -ms-background-size: 100% auto;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+    }
+    .edit_gtfix .ttretop{position:absolute;top:0;}
+    .edit_gtfix .ttretop img{display:block;width:16rem;}
+    .send_way{
+        width: 92%;
+        margin: 0 auto .4rem auto;
+        padding: .1rem 0;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        font-size: .56rem;
+    }
+    .send_way dt{
+        float: left;
+        text-align: left;
+    }
+    .send_way dd{
+        float: right;
+        text-align: right;
+    }
+
+    /* 控制弹窗字号大小 */
+    .layui-m-layercont{
+        font-size: .58rem;
+    }
+
+    
+    .zhuan{
+        display: inline-block;
+        color: #e6002d;
+        margin: 0.1rem 0 0 0.16rem;
+        opacity: 0.6;
+        font-size: 0.48rem;
+        height: 0.31rem;
+        line-height: 0.31rem
+    }
+
+
+    /* 2019.12.31 16:17 */
+    .g4{
+        position: relative;
+    }
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000000;
+        opacity: 0.7;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tanchung{
+        width: 240px;
+        height: 220px;
+        /* padding-left: 20px;
+        padding-right: 20px; */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background: #FFFFFF;
+        z-index: 111;
+        transform: translate(-50%,-50%);
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+    .tanchung img{
+        width: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+    .tanchung .tantitle{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15px;
+        line-height: 20px;
+    }
+    .tanchung .tancontent{
+        font-size:14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .tanchung .tanbutton{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+    .hidden{
+        display: none;
+    }
+    #bt{
+        width:95%;
+        text-align:center;
+        height:50px;
+        margin: 0 auto;
+    }
+</style>
+
+<div class="wrapper hidden"></div>
+<div class="tanchung hidden">
+    <!-- <img src="__PUBLIC__/images/but/but3.png" /> -->
+    <p class="tantitle">礼品号码不存在</p>
+    <hr>
+    <div class="tancontent">
+        <p>请检查：</p>
+        <p>1.激活码字符或位数是否正确</p>
+        <p>2.激活码是否已过有效期</p>
+    </div>
+    <hr>
+    <div class="tanbutton">
+        <div id="bt">我知道了</div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $('#bt').click(function(){
+            $('.wrapper').addClass('hidden');
+            $('.tanchung').addClass('hidden');
+        });
+        console.log(document.body.offsetWidth);
+        var wi=document.body.offsetWidth;
+        if(wi>700){
+            $('.tanchung').css('width','480px');
+            $('.tanchung').css('height','340px');
+            $('.tanchung').css('font-size','28px');
+            $('.tanchung').css('color','#333333');
+            $('.tanchung .tantitle').css('margin-top','30px');
+            $('.tanchung .tantitle').css('font-size','26px');
+            $('.tanchung .tantitle').css('line-height','40px');
+            $('.tanchung .tantitle').css('margin-top','30px');
+            $('.tanchung .tancontent').css('font-size','28px');
+            $('.tanchung .tancontent').css('line-height','40px');
+            
+        }
+        if(wi>1000){
+            $('.tanchung').css('width','720px');
+            $('.tanchung').css('height','500px');
+            $('.tanchung').css('font-size','46px');
+            $('.tanchung').css('color','#333333');
+            $('.tanchung .tantitle').css('margin-top','60px');
+            $('.tanchung .tantitle').css('font-size','43px');
+            $('.tanchung .tantitle').css('line-height','60px');
+            $('.tanchung .tantitle').css('margin-top','60px');
+            $('.tanchung .tancontent').css('font-size','43px');
+            $('.tanchung .tancontent').css('line-height','60px');
+            $('#bt').css('height','150px');
+        }
+    });
+</script>
+
+<!-- 2019.12.31 16:17 -->
+
+<div class="collect-goods-title"><a href="javascript:history.go(-1);"></a>确认订单</div>
+<form name="cart2_form" id="cart2_form" method="post">
+    <div class="edit_gtfix">
+        <!--<div class="ttretop">-->
+            <!--<img src="__STATIC__/images/tt.png"/>-->
+        <!--</div>-->
+        <a href="{:Url('User/address_list',array('source'=>'orderconfirm'))}">
+            <div style="overflow: hidden;">
+                <div class="namephone fl">
+                    <div class="top">
+                        <div class="le fl">{$address.consignee}</div>
+                        <div class="lr fl">{$address.mobile}</div>
+                    </div>
+                    <div class="bot">
+                        <i class="dwgp"></i>
+                        <span>{$address.addres}{$address.address}</span>
+                    </div>
+                    <input type="hidden" value="{$address.address_id}" name="address_id" /> <!--收货地址id-->
+                    <input type="hidden" name="source" value="move/公众号">
+                </div>
+                <div class="fr youjter">
+                    <i class="Mright"></i>
+                </div>
+            </div>
+        </a>
+        <!--<div class="ttrebu">-->
+            <!--<img src="__STATIC__/images/tt.png"/>-->
+        <!--</div>-->
+    </div>
+
+    <style>
+        .full-cut-coupon{
+            background:#fff;
+            margin-top:.2rem;
+            height:1.6rem;
+            padding:0 .6rem;
+        }
+        .full-cut-coupon dt,.full-cut-coupon dd{
+            line-height: 1.6rem;
+        }
+        .full-cut-coupon dt{
+            font-size: .6rem;
+            color: #555;
+        }
+        .full-cut-coupon dd{
+            font-size: .56rem;
+            color: #e6002d;
+            padding-left: .3rem;
+        }
+        .coupon-list{
+            width: 100%;
+            background: #fff;
+            padding: .2rem .6rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: none;
+        }
+        .coupon-list li{
+            width: 100%;
+            overflow: hidden;
+            line-height: 1.4rem;
+            border-bottom: 1px solid #efefef;
+        }
+        .coupon-list li:last-of-type{
+            border-bottom: none;
+        }
+        .coupon-list li p{
+            display: inline-block;
+            float: left;
+            font-size: .56rem;
+            margin: 0;
+        }
+        .coupon-list li input{
+            display: inline-block;
+            width: .55rem;
+            height: .55rem;
+            float: right;
+            margin-top:.5rem;
+        }
+    </style>
+    <!-- 优惠赠券 start -->
+    <div class="coupon-container" >
+    </div>
+        <div class="full-cut-coupon" id="full-cut-coupon" style="height: 4.7em;">
+            <div  style="margin-top: 1.2em;margin-left: 1.2em;height: 3.5em;padding-top: 0.5em;" id="butimg" >
+                <img id="img1"  src="__PUBLIC__/images/but/but1.png" style="height: 3.5em;"/>
+                <img id="img11"  src="__PUBLIC__/images/but/but2.png" style="height: 3.5em;"/>
+            </div>
+        </div> 
+            <div class="coupon-container" >
+        <div class="full-cut-coupon" id="butdiv"  style="display:none;height:2rem;margin-top:0px; ">
+             <div style="margin-left:2%;height:80px;padding-top:0px;height:1.8px;">
+                <div style="width:15em;float:left;"><input id="use" name="couponCode" style="height: 2.4em;margin-left:2%;outline: none;border:0;padding-left: 0.5em;width: 14em;background-color:#eee;opacity:0.5;font-size: 1.9em;border-radius: 15px;" placeholder="请输入优惠卡码"/>
+                </div>
+                <div  id="uses" style="height: 1.5rem;float:right;background-color:#eee;color:#000;width: 4.8rem;border-radius:1rem;" ><p style="height: 1.5rem;line-height: 1.5rem;width: 4.8rem;text-align:center;font-size: 1.4em;">激活并使用</p>
+                </div>
+             </div>
+        </div>
+        <input type="hidden" id="couponCode" name="coupon_id" value="">
+    </div>
+    <!-- 优惠赠券 end -->
+    <script>
+        $('#full-cut-coupon').click(function(){
+            $(this).find('.youjter').children('.Mright').animate({transform:"rotate(90deg)"})
+            $('.coupon-list').slideToggle(200);
+        })
+       
+        $('.coupon-list li').click(function () {
+            $('.coupon-list li input').attr('checked',false);
+            $(this).children('input').attr('checked','checked');
+            $('#coupon-name').text($(this).find('p').text());
+            $('#couponCode').val($(this).children('input').data('code'));
+            $('#cartsum').text({$total_price['total_fee']}-$(this).children('input').data('money'));
+            
+        });
+        
+        function coupon_change(){
+            $('.coupon-list li').eq(0).children('input').attr('checked','checked'); //默认选择第一个优惠券
+            $('#coupon-name').text($('.coupon-list li').eq(0).find('p').text());
+            $('#couponCode').val($('.coupon-list li').eq(0).children('input').data('code'));
+        }
+        $(function(){ 
+            coupon_change();
+        }); 
+    </script>
+
+    <!--订单信息-->
+    <style>
+        .supplier_name{
+            font-size: .56rem;
+            padding-top: .5rem;
+        }
+        .ggwc-ys-mj{
+            padding: .2rem;
+            font-size: .46rem;
+            line-height: .7rem;
+            color: #ffffff;
+            background: url(/public/static/images/limitTime-bg.png) no-repeat;
+            background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            -ms-background-size: 100% 100%;
+        }
+    </style>
+
+    <foreach name="cartList" item="v"  key="k">
+        <div class="ord_list fill-orderlist p">
+            <div class="maleri30">
+            <h2 class="supplier_name">{$v.supplier_name}</h2>
+                <foreach name="v.list" item="v2">
+                    <if condition="$v2[selected] eq '1' or $v2[selected] eq '2'">
+                    <div class="shopprice" style="overflow: hidden;">
+                        <div class="img_or fl"><img src="{$v2[goods_thumb]}"/></div>
+                        <div class="fon_or fl">
+                            <h2 class="similar-product-text">{$v2[goods_name]}</h2>
+                            <div>{$v2[spec_key_name]}</div>
+                        </div>
+                        <div class="price_or fr">
+                            <p class="red"><span>￥</span><span>{$v2[member_goods_price]}</span></p>
+                            <p class="ligfill">x{$v2[goods_num]}</p>
+                        </div>
+                    </div>
+                    <if condition="$v2[prom_type] eq 3"><p class="ggwc-ys-mj" style="margin-top:.5">满减活动：{$v2['prom']['start_time']|date="Y/m/d H:i",###} -- {$v2['prom']['end_time']|date="Y/m/d H:i",###}
+                        <br>单品满{$v2['prom']['money']} 减免 {$v2['prom']['expression']}</p></if>
+                    </if>
+                </foreach>                
+            </div>
+        </div>
+
+            <!--支持配送,发票信息-s-->
+    <div class="information_dr">
+        <!--div class="maleri30">
+            <div class="invoice list7">
+                <div class="myorder p">
+                    <div class="content30">
+                        <a class="invoiceclickin" href="javascript:void(0)">
+                            <div class="order">
+                                <div class="fl">
+                                    <span>发票信息</span>
+                                </div>
+                                <div class="fr">
+                                    <span style="line-height:1.18rem;">纸质发票-个人</span>
+                                    <input class="txt1" style='display:none;' type="text" name="invoice_title">
+                                    <i class="Mright"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="invoice" class="invoice list7" style="display: none;">
+                <div class="myorder p">
+                    <div class="content30">
+                        <div class="incorise">
+                            <span>发票抬头：</span>
+                            <input type="text" name="" id="" value="" placeholder="xx单位或xx个人" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div-->
+
+        <!--支持配送,发票信息-s-->
+
+        <!-- 配送方式 start -->
+        <dl class="send_way">
+            <dt>配送方式</dt>
+            <dd>
+              运费：
+              <if condition="!empty($v.shipping_price)">
+                <em id="">&nbsp;¥&nbsp;{$v.shipping_price}&nbsp;&nbsp;&nbsp;&nbsp;</em>
+              <elseif condition="$v.is_free_shipping eq 1"/>
+                商店包邮&nbsp;&nbsp;&nbsp;&nbsp;
+              <else/>
+                商店不包邮&nbsp;&nbsp;&nbsp;&nbsp;
+              </if>
+            </dd>
+        </dl>
+        <!-- 配送方式 end -->
+
+        <!--卖家留言-s-->
+            <div class="customer-messa">
+                <div class="maleri30">
+                    <p>买家留言</p>
+                    <textarea class="tapassa" onkeyup="checkfilltextarea('.tapassa','50')" name="user_note_{$v.supplier_id}" rows="" cols="" placeholder="给商家留言"></textarea>
+                    <span class="xianzd"><em id="zero">50</em>/50</span>
+                </div>
+            </div>
+        <!--卖家留言-e-->
+</foreach>
+        <!--订单金额-s-->
+            <div class="information_dr ma-to-20">
+                <div class="maleri30">
+                    <div class="xx-list">
+                        <p class="p">
+                            <span class="fl">商品金额：</span>
+                            <span class="fr red"><span>￥</span><span>{$total_price.total_fee}</span>元</span>
+                        </p>
+                        <p class="p">
+                            <span class="fl">减免活动：</span>
+                            <span class="fr red" ><span>￥</span><span id="code">-{$total_price.order_prom_amount}</span>元</span>
+                        </p>
+                        <p class="p">
+                            <span class="fl">优惠券：</span>
+                            <span class="fr red" ><span>￥</span><span id="code">-{$total_price.order_prom_amount_l}</span>元</span>
+                        </p>
+                        <p class="p">
+                            <span class="fl">运费</span>
+                            <span class="fr red" ><span>￥</span><span id="code">+{$total_price.shipping_price}</span>元</span>
+                        </p>
+                        <p class="p">
+                            <span class="fl">应付金额：</span>
+                            <span class="fr red" ><span>￥</span><span id="cartsum_s">{$total_price.total_fee - $total_price.order_prom_amount - $total_price.order_prom_amount_l + $total_price.shipping_price}</span>元</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        <!--订单金额-e-->
+        <!--订单信息-e-->
+<input type="hidden" name="recommend_code" value="">
+<input type="hidden" name="selected" value="{$selected}">  
+<!--提交订单-s-->
+    <div class="mask-filter-div" style="display: none;"></div>
+    <div class="payit fillpay" style="width:100%;position:fixed;left:0;bottom:0;z-index: 10;">
+        <div class="fr">
+            <a href="javascript:void(0)" onclick="submit_order()">去结算</a>
+        </div>
+        <div class="fl" style="float: left;font-size:.58rem;">
+            <span style="color: #333;">合计：</span>
+            <span style="color: #e6002d;">¥<span id="cartsum">{$total_price.total_fee - $total_price.order_prom_amount - $total_price.order_prom_amount_l + $total_price.shipping_price}</span></span>
+            <span class="zhuan">赚{$total_price['commission_price']}</span>
+        </div>
+    </div>
+<!--提交订单-e-->
+
+<!-- 抗疫推荐弹框 -->
+<!--     <div class="wrap hidden"></div>
+    <div class="successBox hidden">
+        <div class="p1"></div>
+        <div class="btton_an" style="font-size: 0.56rem"><a href="" onclick="shaer_hidden()">继续付款</a><a id="href" href="#">查看产品详情</a>
+        </div>
+    </div> -->
+<!-- 抗疫推荐弹框，结束后可删 -->
+</form>
+<script>
+    // 抗疫推荐弹框需要
+    // is_shaer_goods = 0; 
+    // function shaer_hidden(){
+    //     $('.wrap').addClass('hidden');
+    //     $('.successBox').addClass('hidden');
+    //     is_shaer_goods = 1; 
+    //     submit_order();
+    // }
+    // function shaer_goods(){
+    //     if ({$shaer}==1) {
+    //         if ({$shaer_goods} == 5862) {
+    //             $('.wrap').removeClass('hidden');
+    //             $('.successBox').removeClass('hidden');
+    //             $('.p1').html('是否添加测温枪，与口罩同时购买的前200名用户可享受集采价优惠');
+    //             $('#href').attr('href',"/Mobile/Goods/goodsInfo/id/5897");
+    //         }else{
+    //             $('.wrap').removeClass('hidden');
+    //             $('.successBox').removeClass('hidden');
+    //             $('.p1').html('是否添加口罩，与测温枪同时购买的前200名用户可享受集采价优惠');
+    //             $('#href').attr('href',"/Mobile/Goods/goodsInfo/id/5862");
+    //         }
+    //     }else{
+
+    //     }
+    // }
+    // 结束后可删
+
+    var x=0;
+    $(document).ready(function(){   
+        //输入优惠券位数获取  
+        $("#img11").css("display","none");
+        $("#use").on("input",function(e){    
+            x=e.delegateTarget.value.length;//获取input输入的值的长度
+            if(x==8){
+            $("#uses").css({"background-color":"#FBE4E5","color":"red"});
+           
+            }
+            if(x>8){
+               $("#use").val('');
+               $("#uses").css({"background-color":"#eee","color":"#000"});
+            };
+        });
+        //是否使用优惠券
+        $("#butimg>img").click(function(){
+            $(this).css("display","none");
+            $(this).siblings().css("display","block");
+            var index=($(this).index());
+          
+            if(index==0){
+              $("#butdiv").css("display","block");
+           
+            }else{ $("#butdiv").css("display","none")}
+        });
+    });
+</script>
+  
+<script type="text/javascript">
+    $('#uses').on('click', function(){
+        $.ajax({
+            url:"/index.php?m=Mobile&c=Cart&a=ajaxCode&code="+$("#use").val(),
+            dataType: "json",
+            success: function(data){
+                if(data.status=='1' ){
+                    $('#code').html('-'+data.result.code_price);
+                    $('#cartsum').html(data.result.total_price);
+                    $('#cartsum_s').html(data.result.total_price);
+                    $("#butdiv").css("display","none");           
+                    $("#img11").css("display","none");
+                    $("#img1").css("display","block");
+                }else{
+                    $('.wrapper').removeClass('hidden');
+                    $('.tanchung').removeClass('hidden');
+                    $('.tanchung .tantitle').html(data.msg);
+                }             
+            }
+        });
+    });
+    function wield(obj){
+        if($.trim($(obj).prev().val()) !=''){
+            showErrorMsg('正在计算金额...');
+            ajax_order_price(); // 计算订单价钱
+        }
+    }
+    // 获取订单价格
+    function ajax_order_price()
+    {
+        $.ajax({
+            type : "POST",
+            url:'/index.php?m=Mobile&c=Cart&a=cart3&act=order_price&t='+Math.random(),
+            data : $('#cart2_form').serialize(),
+            dataType: "json",
+            success: function(data){
+                if(data.status != 1)
+                { //执行有误
+                    $('#coupon_div').show();
+                    showErrorMsg(data.msg);
+                    // 登录超时
+                    if(data.status == -100)
+                        location.href ="{:Url('User/login')}";
+                    return false;
+                }
+              $("#balance").text(data.result.balance);// 余额
+              $("#pointsFee").text(data.result.pointsFee);// 积分支付
+                $("#order_prom_amount").text(data.result.order_prom_amount);// 订单 优惠活动
+
+                if(data.result.couponFee == null){
+                    $("#couponFee").text(0);// 优惠券
+                }else{
+                    $("#couponFee").text(data.result.couponFee);// 优惠券
+                }
+
+            }
+        });
+    }
+
+
+    // 提交订单
+    // is_shaer_goods = 1; 
+    ajax_return_status = 1; // 标识ajax 请求是否已经回来 可以进行下一次请求
+    function submit_order() {
+        // 抗疫推荐弹框需要
+        // if ({$shaer} ==1) {
+        //     if (is_shaer_goods==0) {
+        //         shaer_goods();
+        //         return;
+        //     }
+        // }else{
+        //     is_shaer_goods = 1;
+        // }
+        // 结束后可删
+
+        if (ajax_return_status == 0){
+            return false;
+        }
+        ajax_return_status = 0;
+        $.ajax({
+            type: "POST",
+            url: "{:Url('Cart/cart3')}",//+tab,
+            data: $('#cart2_form').serialize() + "&act=submit_order",// 你的formid
+            dataType: "json",
+            success: function (data) {
+                if (data.status != '1') {
+                    showErrorMsg(data.msg);  //执行有误
+                    // 登录超时
+                    if (data.status == -100){
+                        location.href = "{:Url('User/login')}";
+                    }
+                    ajax_return_status = 1; // 上一次ajax 已经返回, 可以进行下一次 ajax请求
+                    return false;
+                }
+                $("#postFee").text(data.result.postFee); // 物流费
+                if(data.result.couponFee == null){
+                    $("#couponFee").text(0);// 优惠券
+                }else{
+                    $("#couponFee").text(data.result.couponFee);// 优惠券
+                }
+                $("#balance").text(data.result.balance);// 余额
+                $("#pointsFee").text(data.result.pointsFee);// 积分支付
+                $("#order_prom_amount").text(data.result.order_prom_amount);// 订单 优惠活动
+                showErrorMsg('订单提交成功，跳转支付页面!');
+                location.href = "/index.php?m=Mobile&c=Cart&a=payment&order_id=" + data.result;
+            }
+        });
+    }
+
+    $(function(){
+        //显示配送弹窗
+        $('.takeoutps').click(function(){
+            $('.mask-filter-div').show();
+            $('.losepay').show();
+        })
+        //关闭选择物流
+        $('.turenoff').click(function(){
+            $('.mask-filter-div').hide();
+            $('.losepay').hide();
+        })
+
+        $('.submits_de').click(function(){
+            $('.mask-filter-div').hide();
+            $('.losepay').hide();
+        })
+
+        //显示隐藏使用发票信息
+        $('.invoiceclickin').click(function(){
+            $('#invoice').toggle(300);
+        })
+
+    })
+     function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+        return unescape(arr[2]);
+        else
+        return null;
+    }
+
+    function getRecode(){
+         var  recode = getCookie("recode");
+         if(recode != ""){
+            $('input[name="recommend_code"]').val(recode);  
+         }
+    }/*用window.onload调用getCookie()*/
+    window.onload=getRecode;//不要括号
+</script>
+</body>
+</html>

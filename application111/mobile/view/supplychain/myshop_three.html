@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>报价详情</title>
+		<link rel="stylesheet" href="__XCSS__/iconfont.css">
+		<link rel="stylesheet" href="__XCSS__/normalize.css">
+		<link rel="stylesheet" href="__XCSS__/public.css">
+		<link rel="stylesheet" href="__XCSS__/details.css">
+
+	</head>
+	<body>
+		<div id="app" class="h">
+			<div class="flexc h oh bggrey">
+				<!-- 标题 -->
+				<header class="bgf">
+					<div class="flexr p10 head bbe">
+						<div class="flex1" @click="goback">
+							<span class="iconfont icon-fanhui em1.4"></span>
+						</div>
+						<div class="flex1 f16 c">报价详情
+						</div>
+						<div class="flex1 r"></div>
+					</div>
+				</header>
+				<!-- 导航 -->
+				<nav class="flexr c mt10 ml10 mr10">
+					<div class="flex1 p10 bmain" :class="{'bgmain cf':showProduct,'bgf':!showProduct}" @click="clickNav(true)">
+						<span class="iconfont icon-chanpin cmain mr5" :class="{'cf':showProduct}"></span> 采购详情
+					</div>
+					<div class="flex1 p10 bmain" :class="{'bgmain cf':!showProduct,'bgf':showProduct}" @click="clickNav(false)">
+						<span class="iconfont icon-unif012 cmain mr5" :class="{'cf':!showProduct}"></span>供应商报价
+					</div>
+				</nav>
+				<!-- 主内容 -->
+				<section class="flex1 oa">
+					<!-- 采购详情内容 -->
+					<div v-show="showProduct">
+						<div class="m10 bgf rds5">
+							<div class="flexr labbox">
+								<label class="labname">产品名称</label>
+								<div class="flex1 ctx">{{productName}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">规格</label>
+								<div class="flex1 ctx">{{specification}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">颜色</label>
+								<div class="flex1 ctx">{{colour}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">品牌</label>
+								<div class="flex1 ctx">{{brand}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">单位</label>
+								<div class="flex1 ctx">{{units}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">数量</label>
+								<div class="flex1 ctx">{{quantity}}</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- 供应商报价内容 -->
+					<div class="" v-show="!showProduct">
+						<div class="m10 bgf rds5">
+							<div class="flexr labbox">
+								<label class="labname">工期</label>
+								<div class="flex1 ctx">{{limitTime}}<span>天</span></div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">数量</label>
+								<div class="flex1 ctx">{{amount}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">运费（元）</label>
+								<div class="flex1 ctx">{{freight}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">费用（含税单价）</label>
+								<div class="flex1 ctx">{{cost}} <span>元</span></div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">总费用</label>
+								<div class="flex1 ctx">{{expense}} <span>元</span></div>
+							</div>
+
+							
+								<div class="h3em lh3em pl10 bbf4">
+									<span class="iconfont icon-gongyingshang f13 red"></span>
+									<span class="fwb">供应商信息</span>
+								</div>
+								
+
+						
+
+
+							<div class="flexr labbox">
+								<label class="labname">公司名称</label>
+								<div class="flex1 ctx">{{companyName}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">联系人</label>
+								<div class="flex1 ctx">{{linkman}}</div>
+							</div>
+							<div class="flexr labbox">
+								<label class="labname">联系电话</label>
+								<div class="flex1 ctx">{{phone}}</div>
+								<div @click="call">
+									<span class="call">呼叫</span>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+				</section>
+
+
+			</div>
+
+		</div>
+
+
+
+
+		<script src="__XJS__/vue.js"></script>
+		<script src="__XJS__/vue-resource.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+				data: {
+					showProduct: true, // 是否显示产品项
+
+					//报价详情
+					productName: "<?php echo $orderlist['goods_name'];?>", //产品名称
+					specification: "<?php echo $orderlist['goods_norm'];?>", //规格
+					colour: "<?php echo $orderlist['goods_color'];?>", //颜色
+					brand: "<?php echo $orderlist['goods_brand'];?>", //品牌
+					units: "<?php echo $orderlist['goods_unit'];?>", //单位
+					quantity: "<?php echo $orderlist['goods_num'];?>", //数量
+
+					//供应商报价
+					limitTime: "<?php echo $supply_list['goods_duration'];?>", //工期
+					amount: "<?php echo $supply_list['good_num'];?>", //数量
+					freight: "<?php echo $supply_list['goods_freight'];?>", //运费
+					cost: "<?php echo $supply_list['goods_tprice'];?>", //费用
+					expense: "<?php echo $supply_list['goods_sprice'];?>", //总费用
+
+					companyName: "<?php echo $buylist['company_name'];?>", //公司名称
+					linkman: "<?php echo $buylist['user'];?>", // 联系人
+					phone: "<?php echo $buylist['phone'];?>", //联系电话
+
+				},
+				created: function() { // 进入
+
+				},
+				mounted: function() { // 挂载后
+					// 获取后台数据
+					return;
+					var url = "http://localhost:3001/home";
+					this.$http({
+						url: url,
+						method: 'GET',
+						headers: {
+							"Content-Type": "application/json"
+						},
+						data: {
+
+						}
+					}).then(function(res) { //(res) => 
+						console.log("请求成功回调：");
+						console.log(res)
+						// console.log("请求路径："+res.url)
+						// console.log("后台返回的数据：")
+						// console.log(res.body)
+						// var curData = res.body.data;
+						// this.title = curData.title;
+
+					}, function(res) {
+						console.log("请求失败回调");
+						console.log(res)
+					});
+
+				},
+				updated: function() {
+
+				},
+				methods: {
+					goback: function(e) { // 返回上一页
+						history.back(-1);
+					},
+					clickNav: function(e) { // 导航选项切换
+						console.log("点击导航：" + e);
+						this.showProduct = e;
+					},
+					call: function() { // 拨打电话
+						var tel = 18573159187;
+						location.href = 'tel:' + tel;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

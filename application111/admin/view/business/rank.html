@@ -1,0 +1,147 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>会员等级管理 - 编辑会员等级</h3>
+                <h5>网站系统会员等级管理</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="handleposition" action="{:Url('Admin/Business/levelHandle')}" method="post">
+        <input type="hidden" name="act" value="{$act}">
+        <input type="hidden" name="rank_id" value="{$info.rank_id}">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="business_name"><em>*</em>等级名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="business_name" value="{$info.business_name}" id="business_name" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置业务等级名称</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label for="parent_id"><em>*</em>上级</label>
+                </dt>
+                <dd class="opt">
+                  
+					<select name="parent_id" id="parent_id"  class="small form-control">
+                    <option value="0">请选择上级</option>                                      
+                         <foreach name="rank_list" item="v" key="k" >                                                                                          
+                           <option value="{$v['rank_id']}" <if condition="$v['rank_id'] eq $info['parent_id']">selected="selected"</if> >
+                                {$v['business_name']}
+                           </option>
+                         </foreach>
+                  </select>
+				  
+                    <span class="err"></span>
+                    <p class="notic">上级</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label for="identical_profit"><em>*</em>同级推荐分成</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="identical_profit" value="{$info.identical_profit}" id="identical_profit" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置业务等级同级推荐分成</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="recommend_profit"><em>*</em>直接推荐分成</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="recommend_profit" value="{$info.recommend_profit}" id="recommend_profit" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置业务等级直接推荐分成</p>
+                </dd>
+            </dl>
+			
+            <dl class="row">
+                <dt class="tit">
+                    <label for="indirect_profit"><em>*</em>间推</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="indirect_profit" value="{$info.indirect_profit}" id="indirect_profit" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">直推，给继承人的分成</p>
+                </dd>
+            </dl>
+			 <dl class="row">
+                <dt class="tit">
+                    <label for="bond_number"><em>*</em>保证金</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="bond_number" value="{$info.bond_number}" id="bond_number" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">缴纳的保证金</p>
+                </dd>
+            </dl>
+			 <dl class="row">
+                <dt class="tit">
+                    <label for="sale_gift"><em>*</em>销售奖</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="sale_gift" value="{$info.sale_gift}" id="sale_gift" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">分享销售商品获得的分红</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label for="platform_sale_gift"><em>*</em>自营平台销售奖</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="platform_sale_gift" value="{$info.platform_sale_gift}" id="platform_sale_gift" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">分享销售商品获得的分红</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label for="open_gift"><em>*</em>市场开发奖</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="open_gift" value="{$info.open_gift}" id="open_gift" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">市场开发奖,推荐用户注册,产生订单时获得的分红</p>
+                </dd>
+            </dl>
+			 <dl class="row">
+                <dt class="tit">
+                    <label for="platform_open_gift"><em>*</em>自营平台市场开发奖</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="platform_open_gift" value="{$info.platform_open_gift}" id="platform_open_gift" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">自营平台市场开发奖,推荐用户注册,产生订单时获得的分红</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    等级描述
+                </dt>
+                <dd class="opt">
+                    <textarea  name="describe" class="tarea" rows="6">{$info.describe}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">业务等级描述信息</p>
+                </dd>
+            </dl>
+            <div class="bot"><a href="JavaScript:void(0);" onclick="$('#handleposition').submit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

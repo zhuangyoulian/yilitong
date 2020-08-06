@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>填写联系方式</title>
+		<link rel="stylesheet" href="__XCSS__/iconfont.css">
+		<link rel="stylesheet" href="__XCSS__/normalize.css">
+		<link rel="stylesheet" href="__XCSS__/public.css">
+		<link rel="stylesheet" href="__XCSS__/contact_2.css">
+		<link rel="stylesheet" href="__XCSS__/mui.picker.min.css">
+		<link rel="stylesheet" href="__XCSS__/mui.poppicker.css">
+
+	</head>
+
+	<body>
+		<div id="app" class="flexc h bggrey" @click="clickBody">
+			<!-- 标题 -->
+			<header class="bgf">
+				<div class="flexr p10 head bbe">
+					<span class="iconfont icon-fanhui em1.4" @click="goback"></span>
+					<div class="flex1 title c">填写联系方式</div>
+				</div>
+			</header>
+			<!-- 导航 -->
+			<nav class="bgf f13">
+				<div class="flexr grey nav p10">
+					<div class="flexr">
+						<div class="c pb5"><span class="circle bgmain">1</span></div>
+						<div class="pl5 pt1 cmain">基本信息</div>
+					</div>
+					<div class="flex1 c"><span class="navnext iconfont icon-xiayibu"></span></div>
+					<div class="flexr">
+						<div class="c pb5"><span class="circle bgmain">2</span></div>
+						<div class="pl5 pt1 cmain">需求信息</div>
+					</div>
+					<div class="flex1 c"><span class="navnext iconfont icon-xiayibu"></span></div>
+					<div class="flexr">
+						<div class="c pb5"><span class="circle bgmain">3</span></div>
+						<div class="pl5 pt1 cmain">联系方式</div>
+					</div>
+					<!-- <div class="flex1  flexr">
+                    <div class="">
+                        <div class="c pb5"><span class="circle bgmain">1</span></div>
+                        <div class="cmain">基本信息</div>
+                    </div>
+                    <div class="flex1 c pt18"><span class="navnext iconfont icon-xiayibu"></span></div>
+                </div>
+                <div class="flex1  flexr">
+                    <div class="">
+                        <div class="c pb5"><span class="circle bgmain">2</span></div>
+                        <div class="cmain">需求信息</div>
+                    </div>
+                    <div class="flex1 c pt18"><span class="navnext iconfont icon-xiayibu"></span></div>
+                </div>
+                <div class="flex1 flexr">
+                    <div class="">
+                        <div class="c pb5"><span class="circle bgmain">3</span></div>
+                        <div class="cmain">供应商要求</div>
+                    </div>
+                    <div class="flex1 c pt18"><span class="navnext iconfont icon-xiayibu"></span></div>
+                </div>
+                <div class="flexr">
+                    <div class="">
+                        <div class="c pb5"><span class="circle bgmain">4</span></div>
+                        <div class="cmain">联系方式</div>
+                    </div>
+                </div> -->
+				</div>
+			</nav>
+			<!-- 主要内容区 -->
+			<section class="main flex1 pt10 oa">
+				<div class="box flexr" @click="clickAddress">
+					<div class="left">*</div>
+					<div class="">省市区</div>
+					<div class="flex1 r">
+						<input class="placeholder bgf" disabled placeholder="请输入收货地址" value="{location}" v-model="location">
+					</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">详细地址</div>
+					<div class="flex1 r">
+						<input class="placeholder" placeholder="请填写详细地址" value="{region}" v-model="region">
+					</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">联系人</div>
+					<div class="flex1 r">
+						<input class="placeholder" placeholder="请填写联系人姓名" value="{contact}" v-model="contact">
+					</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">联系方式</div>
+					<div class="flex1 r">
+						<input class="placeholder" type="tel" placeholder="请填写手机号" value="{mobileNo}" v-model.number="mobileNo">
+					</div>
+				</div>
+			</section>
+			<!-- 底部 -->
+			<footer>
+				<div id="foot" v-show="showNext">
+					<p class="confirm bgmain cf" @click="confirm">确定发布</p>
+				</div>
+				<!-- <div class="flexr">
+	                <div class="save bgmain cf flex1 " @click="save">保存</div>
+	                <div class="confirm flex1" @click="confirm">确定发布</div>
+	            </div> -->
+			</footer>
+		</div>
+		<script src="__XJS__/vue.js"></script>
+		<script src="__XJS__/vue-resource.js"></script>
+		<script src="__XJS__/mui.min.js"></script>
+		<script src="__XJS__/mui.picker.min.js"></script>
+		<script src="__XJS__/mui.poppicker.js"></script>
+		<script src="__XJS__/city.data.js"></script>
+		<script src="__XJS__/city.data-3.js"></script>
+		<script src="__PUBLIC__/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			// 监听window的变化
+			window.addEventListener('resize', function() {
+				var clientHeight = document.documentElement.clientHeight;
+				app.clientHeight = clientHeight;
+				console.log('可见区域高度:' + clientHeight);
+				if (clientHeight < 400) {
+					app.showNext = false;
+
+				} else {
+					app.showNext = true;
+				}
+
+			});
+			var picker;
+			var app = new Vue({
+				el: "#app",
+				data: {
+					location: "<?php if($procurementlist['city']){ echo $procurementlist['city'];} ?>", //收货地址
+					contact: "<?php if($procurementlist['contacts_name']){ echo $procurementlist['contacts_name']; }else{ echo $company_name1['nickname']; } ?>", //联系人
+					region: "<?php  if($procurementlist['area']){ echo $procurementlist['area'];}?>", // 街道楼牌
+					mobileNo: "<?php if($procurementlist['contact']){ echo $procurementlist['contact']; }else{ echo $company_name1['mobile']; }  ?>", //联系方式
+					allSubmitData: {}, // 存储所有要提交的数据
+					showNext: true, // 显示确定发布
+				},
+				directives: {
+
+				},
+				created: function() { // 进入
+					picker = new mui.PopPicker({
+						layer: 3
+					});
+					picker.setData(cityData3)
+				},
+				mounted: function() { // 挂载后
+
+
+				},
+				updated: function() {
+
+				},
+				methods: {
+					goback: function(e) { //返回上一页
+						history.back(-1);
+					},
+					clickAddress: function(e) { // 	点击收货地址
+						var that = this;
+						e.stopPropagation(); // 	阻止事件冒泡
+						console.log("clickAddr");
+						picker.show(function(selected) {
+							console.log("选中的城市：");
+							console.log(selected);
+							that.province = selected[0].text;
+							that.city = selected[1].text;
+							that.area = selected[2].text;
+							that.location = selected[0].text +  selected[1].text + selected[2].text;
+						})
+					},
+					confirm: function(e) { // 确定发布
+						console.log("点击确定发布:");
+						var objData = {
+							province: this.province,
+							city: this.city,
+							area: this.area,
+							location: this.location,
+							region: this.region,
+							contact: this.contact,
+							mobileNo: this.mobileNo,
+						}
+						console.log(objData);
+
+						// 必填项验证
+						if (!this.location || !this.location || !this.mobileNo || !this.region) {
+							this.allSubmitData = null;
+							alert("请先填完所有带*的必填项");
+							return false;
+						}
+						// 手机号验证
+						var regTel = new RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57]|19[9])[0-9]{8}$/);
+						if (!regTel.test(this.mobileNo)) {
+							alert("请填写正确的手机号");
+							return false;
+						}
+
+						this.allSubmitData = objData; //  所有要提交的数据
+						this.submitData();
+						console.log(this.allSubmitData);
+						// return;
+						console.log("进入下一页...");
+						//location.href = "./release.html"
+					},
+					submitData: function() { //  提交数据给后端
+
+						$.ajax({
+							type:'POST',
+							url:"{:Url('Supplychain/procurement_three')}",
+							//dataType:'json',
+							data:this.allSubmitData,
+							success:function(data){
+								if(data.status==1){
+									alert(data.msg);
+									console.log(data+'提交成功！');
+									window.location.href="{:Url('Supplychain/release')}";
+								}else{
+									alert(data.msg);
+									console.log('数据库入库失败！');
+								}
+							},
+							error:function(jqXHR){
+								console.log('提交失败！');
+								//alert('系统繁忙！请重试');
+							}
+						});
+
+					},
+					clickBody: function() { // 点击body
+						console.log("click body");
+						picker.hide();
+					}
+
+				},
+			})
+			console.log("app.location:");
+			console.log(app.location);
+		</script>
+	</body>
+
+</html>

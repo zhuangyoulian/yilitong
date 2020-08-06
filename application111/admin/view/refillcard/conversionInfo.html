@@ -1,0 +1,127 @@
+<include file="public/layout" />
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>兑换券管理 - 编辑兑换券</h3>
+                <h5>网站系统兑换券管理</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="handleposition" method="post">
+        <input type="hidden" name="id" value="{$code.id}"/>
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>兑换券名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="name" placeholder="小于等于10个字，不能为空" name="name" value="{$code.name}" class="input-txt">
+                    <span class="err" id="err_name"></span>
+                    <p class="notic">请填写兑换券名称</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>兑换券面额</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="money" name="money"  onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" value="{$code.money}" class="input-txt">
+                    <span class="err" id="err_money"></span>
+                    <p class="notic">抵扣金额</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>发放数量</label>
+                </dt> 
+                <dd class="opt">
+                    <input type="text" id="createnumssss" name="createnum" value="{$code.createnum}" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" class="input-txt">
+                    <span class="err" id="err_createnumssss"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>发放类型</label>
+                </dt>
+                <dd class="opt">
+                    <input name="type" type="radio" value="5" <if condition="$code['type'] eq 5">checked</if> ><label>充值中心</label>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>兑换券使用</label>
+                </dt>
+                <dd class="opt">
+                    <input name="use" type="radio" value="0" <if condition="$code['use'] eq 0">checked</if> ><label>全部</label>
+                    <input name="use" type="radio" value="1" <if condition="$code['use'] eq 1">checked</if> ><label>电脑端</label>
+                    <input name="use" type="radio" value="2" <if condition="$code['use'] eq 2">checked</if> ><label>APP和移动端</label>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>使用起始日期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="use_start_time" name="use_start_time" value="{$code.use_start_time|date='Y-m-d H:i:s',###}" class="input-txt">
+                    <span class="err" id="err_use_start_time"></span>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>使用结束日期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="use_end_time" name="use_end_time" value="{$code.use_end_time|date='Y-m-d H:i:s',###}" class="input-txt">
+                </dd>
+            </dl>
+
+            <div class="bot"><a onclick="verifyForm();" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+    $('input[type="radio"]').click(function(){
+        $('.timed').show();
+    })
+
+    $(document).ready(function(){
+        $('input[type="radio"]:checked').trigger('click');
+        $('#use_start_time').layDate();
+        $('#use_end_time').layDate();
+    })
+
+    function verifyForm(){
+        $('span.err').show();
+        $.ajax({
+            type: "POST",
+            url: "{:Url('Admin/Refillcard/conversionInfo')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    layer.msg(data.msg, {icon: 1});
+                    location.href = "{:Url('Admin/Refillcard/conversionLise')}";
+                } else {
+                    layer.msg(data.msg, {icon: 2});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

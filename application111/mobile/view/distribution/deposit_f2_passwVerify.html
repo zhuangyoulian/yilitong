@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>忘记密码</title>
+		<link rel="stylesheet" href="__MOBILE__/css/deposit/index.css">
+		<style type="text/css">
+			.inputCode span{
+				width: 2.1rem;
+			}
+			.inputCode:last-child{
+				border-top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="register" class="enroll">
+			<header>
+				<div class="back"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_black.png"></a></div>
+				<div class="headName">忘记提现密码</div>
+				<div></div>
+			</header>
+			<input type="hidden" name="id" value="{$id}">
+			<section>
+				<div class="b_progress">
+					<div>2/3</div>
+					<div>身份验证</div> 
+				</div>
+				<div>
+					<div class="inputCode">
+						<span>真实姓名</span>
+						<input type="text" id="name"  placeholder="请输入真实姓名" onkeyup="value=value.replace(/[^\u4E00-\u9FA5|^\a-z\A-Z]/g,'')"  maxlength="10" value="{realName}" v-model="realName">
+					</div>
+					<div class="inputCode">
+						<span>身份证号后六位</span>
+						<input type="text" id="id_card" placeholder="请输入身份证号后六位" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')"  maxlength="6"  value="{idCardSix}" v-model="idCardSix">
+					</div>
+				</div>
+				<div class="submit"   @click="Next" >下一步</div>
+			</section>
+		</div>
+		<script src="__MOBILE__/js/deposit/screenAdaptation.js"></script>
+		<script src="__MOBILE__/js/deposit/vue.js"></script>
+		<script src="__MOBILE__/js/deposit/common.js"></script>
+    	<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			var wap = new Vue({
+				el: "#register",
+				data: {
+					realName:"",//真实姓名
+					idCardSix:""//身份证后六位
+				},
+				mounted(){
+					
+				},
+				methods: {
+					Next(){
+						var name = $('#name').val();
+						var id_card = $('#id_card').val();
+			  			var id=$("input[name='id']").val();
+						if (!name) {
+							alert('真实姓名不能为空！');
+        					return false;		
+						}
+						if (!id_card) {
+							alert('身份证不能为空！');
+        					return false;		
+						}
+						if (id_card.length != 6) {
+							alert('请填写身份证后6位数');
+        					return false;		
+						}
+						$.ajax({
+		                    type : "POST",
+		                    url:"/index.php?m=Mobile&c=Distribution&a=deposit_f2_passwVerify",//+tab,
+		                    data :{name:name,id_card:id_card,id:id},// 你的formid 搜索表单 序列化提交
+		                    success: function(data)
+		                    {
+		                        if(data.status == 1)
+		                        {
+        							location.href = "/Mobile/Distribution/deposit_f3_setpassword/id/"+id;
+		                        }else{
+		                            alert(data.msg);
+		                        }
+		                    }
+		                });
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

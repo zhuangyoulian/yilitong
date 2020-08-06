@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<title>发布采购</title>
+	<link rel="stylesheet" href="__XCSS__/mui.min.css">
+	<link rel="stylesheet" href="__XCSS__/mui.picker.min.css">
+	<link rel="stylesheet" href="__XCSS__/iconfont.css">
+	<link rel="stylesheet" href="__XCSS__/normalize.css">
+	<link rel="stylesheet" href="__XCSS__/public.css">
+	<link rel="stylesheet" href="__XCSS__/index.css">
+	<!-- 肖战开始 -->
+	<style>
+		.hz_daoha{
+			width: 100%;
+			padding-top: 15.5px;
+			display: flex;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			background: #FFFFFF;
+			margin-bottom: 10px;
+		}
+		.hz_daoha .block{
+			width: 20px;
+			height: 2px;
+			background: #FFFFFF;
+			margin-top: 10px;
+		}
+		.hz_k{
+			font-size: 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.hz_k:first-child{
+			margin-right: 50px;
+		}
+		.hz_k.h_active .block{
+			background: #000000;
+		}
+		.hz_daoha .henggang{
+			position: absolute;
+			right: 10px;
+			font-size: 13px;
+			color: #e6dfd9;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.hz_daoha .henggang > span{
+			 margin-left:8px ;
+			 color: #333333;
+		 }
+		.hz_daoha .henggang > span > a{
+			/*margin-left:8px ;*/
+			color: #333333;
+		}
+
+	</style>
+	<!-- 肖战结束 -->
+</head>
+
+<body>
+<div id="app" class="flexc h bggrey">
+
+	<!-- 肖战开始 -->
+	<div class="hz_daoha">
+		<div class="hz_k" :class="{h_active:navqie==1}" @click="tabqie(1)">发布采购<div class="block"></div></div>
+		<div class="hz_k" :class="{h_active:navqie==2}" @click="tabqie(2)">名企报价<div class="block"></div></div>
+		<div class="henggang">
+			|<span v-if="navqie==1"><a href="myshop_list">我的采购</a></span>
+			<span v-if="navqie==2"><a href="my_offer_list">我的报价</a></span>
+		</div>
+	</div>
+
+	<!-- 标题 -->
+	<!-- <header class="bgf">
+        <div class="flexr p10 head bbe">
+
+            <div class="flex1">
+                <a href="javascript:history.go(-1)"><span class="iconfont icon-fanhui em1.4"></span></a>
+            </div>
+            <div class="flex1 title c">发布采购
+            </div>
+            <div class="flex1 r" @click="gomy">我的采购</div>
+        </div>
+    </header> -->
+	<!-- 导航 -->
+
+	<!-- 肖战结束 -->
+	<template v-if="navqie==1">
+
+
+		<nav class="bgf f13">
+			<div class="flexr grey nav p10">
+				<div class="flexr">
+					<div class="c pb5"><span class="circle bgmain">1</span></div>
+					<div class="cmain pl5 pt1">基本信息</div>
+				</div>
+				<div class="flex1 c"><span class="navnext iconfont icon-xiayibu"></span></div>
+				<div class="flexr">
+					<div class="c pb5"><span class="circle bggrey2">2</span></div>
+					<div class="pl5 pt1">需求信息</div>
+				</div>
+				<div class="flex1 c"><span class="navnext iconfont icon-xiayibu"></span></div>
+				<div class="flexr">
+					<div class="c pb5"><span class="circle bggrey2">3</span></div>
+					<div class="pl5 pt1">联系方式</div>
+				</div>
+				<!-- <div class="flex1  flexr">
+                <div class="">
+                    <div class="c pb5"><span class="circle bgmain">1</span></div>
+                    <div class="cmain ">基本信息</div>
+                </div>
+                <div class="flex1 c pt18"><span class="navnext iconfont icon-xiayibu"></span></div>
+            </div>
+            <div class="flex1  flexr">
+                <div class="">
+                    <div class="c pb5"><span class="circle bggrey2">2</span></div>
+                    <div class="">需求信息</div>
+                </div>
+                <div class="flex1 c pt18"><span class="navnext iconfont icon-xiayibu"></span></div>
+            </div>
+            <div class="flex1 flexr">
+                <div class="">
+                <div class="c pb5"><span class="circle bggrey2">3</span></div>
+                    <div class="">供应商要求</div>
+                </div>
+                <div class="flex1 c pt18"><span class="navnext iconfont icon-xiayibu"></span></div>
+            </div>
+            <div class="flexr">
+                <div class="">
+                <div class="c pb5"><span class="circle bggrey2">4</span></div>
+                    <div class="">联系方式</div>
+                 </div>
+            </div> -->
+			</div>
+		</nav>
+		<!-- 主要内容区 -->
+		<section class="main flex1 pt10 oa">
+			<div class="bgf pl10 pt10 pr10">
+				<!-- <div class="p10">内容高度：{{clientHeight}}</div> -->
+				<div class="flexr buybox">
+					<div class="left">*</div>
+					<div class="">采购标题</div>
+				</div>
+				<div class="pr">
+							<textarea class="buycon placeholder" name="" id="" cols="30" rows="3" placeholder="请填写采购标题" maxlength="60" value="{inputTitle}"
+									  v-model="inputTitle"></textarea>
+					<span class="areatip">{{inputTitle.length}}/60</span>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">公司名称</div>
+					<div class="flex1 r">
+						<input class="placeholder" type="text" placeholder="请填写公司名称" value="{companyName}" v-model="companyName">
+					</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="">预算</div>
+					<div class="flex1 r">
+						<input class="placeholder" type="number" placeholder="请填写预算金额" value="{money}" v-model.number="money">
+					</div>
+					<div>元</div>
+				</div>
+				<div class="box flexr">
+					<div class="left">*</div>
+					<div class="flex1">是否定制</div>
+					<div class="">
+						<div class="yesorno">
+							<div class="flex1 blrds5" :class="{'bgmain cf':cstmMade}" @click="clickCustomMade(1)">是</div>
+							<div class="flex1 brrds5" :class="{'bgmain cf':!cstmMade}" @click="clickCustomMade(0)">否</div>
+						</div>
+						<!-- 开关样式 -->
+						<!-- <div class="mui-switch  btn-switch" :class="{'mui-active':!cstmMade}" @click="customMade(!cstmMade)">
+                        <div class="mui-switch-handle"></div>
+                    </div> -->
+					</div>
+				</div>
+				<div class="box flexr" @click="clickEndTime">
+					<div class="left">*</div>
+					<div class="">报价截止时间</div>
+					<div class="flex1 r">
+						<input class="placeholder" type="text" disabled placeholder="请选择截止时间" value="{endTime}" v-model="endTime">
+					</div>
+					<div class="">
+						<span class="iconfont icon-xiayibu em12 grey2"></span>
+					</div>
+				</div>
+				<div class="box flexr" @click="clickReciveTime">
+					<div class="left">*</div>
+					<div class="">期望收货日期</div>
+					<div class="flex1 r">
+						<input class="placeholder" type="text" disabled placeholder="请选择时间" value="{reciveTime}" v-model="reciveTime">
+					</div>
+					<div class="">
+						<span class="iconfont icon-xiayibu em12 grey2"></span>
+					</div>
+				</div>
+				<!-- <div class="box flexr">
+                <div class="left">*</div>
+                <div class="">采购礼品是否明确</div>
+                <div class="flex1 r pr"> -->
+				<!-- <span class="iconfont icon-xiayibu em18"></span> -->
+				<!-- <div class="yesorno">
+                        <div class="flex1 blrds5" :class="{'bgmain cf':isExplicit}" @click="clickIsExplicit(true)">是</div>
+                        <div class="flex1 brrds5" :class="{'bgmain cf':!isExplicit}" @click="clickIsExplicit(false)">否</div>
+                    </div>
+                </div>
+            </div> -->
+				<div class="describe">
+					<div class="explain"><span>补充说明描述</span></div>
+					<div class="pr">
+								<textarea class="buycon placeholder" name="" id="" cols="30" rows="3" placeholder="请描述问题（非必填）" maxlength="60"
+										  value="{inputDeclare}" v-model="inputDeclare"></textarea>
+						<span class="areatip">{{inputDeclare.length}}/60</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 底部 -->
+		<footer id="foot" v-show="showNext">
+			<div class="">
+				<p class="next bgmain cf" @click="next">下一步</p>
+			</div>
+		</footer>
+
+	</template>
+
+	<!-- 肖战开始 -->
+	<template v-if="navqie==2">
+		<section class="pl10 pr10 flex1 oa mt10">
+<!--<span>zfsffsafdsfds</span>-->
+			<volist name="res" id="k">
+				<div class="bbe bgf pl10 pr10" >
+					<div class="r red mr_10 fr pr">
+						<span class=""></span>
+					</div>
+					<div class="f16 pt18 fwb">{$k['title']}</div>
+					<a href="{:Url('Supplychainview/offer_one',array('id'=>$k['id']))}" >
+						<div class="flexr procurement pt15" >
+							<div class="flex1 c7 pl10 pr10" style="padding: 0;">
+								<volist name="k['content']" id="v"  length="3" mod="3">
+									<li>{$v['goods_name']}{$v['goods_num']}{$v['goods_unit']}</li>
+								</volist>
+								<li>......</li>
+
+							</div>
+							<div class="r budget">
+								<div class="red f16 pb5 fwb">{$k['budget']}万元</div>
+								<div class="f14 c7">总预算</div>
+							</div>
+						</div>
+					</a>
+					<div class="flexr pt15 pb10 firm">
+						<div class="flex1 f16 pt10 pb10">{$k['company_name']}</div>
+						<a style="color: white;" href="{:Url('Supplychain/offer_two',array('id'=>$k['id']))}" ><div class="r f14 quote" >立即报价</div></a>
+					</div>
+
+					<div class="flexr f13 c7 pb10 ">
+						<div class="flex1 grey2">
+							<span class="iconfont icon-chakan-yuan-f icon f13"></span>
+							<span>{$k['view'] + $k['be_viewed']}</span>
+							<span class="iconfont icon-bao icon f13"></span>
+							<span>{$k['offer_num'] + $k['quoted']}</span>
+						</div>
+						<div class="flex1 r grey2">
+							<span class="iconfont icon-shalou1 icon f13"></span>
+							<span> <?php echo date('Y-m-d',$k['add_time']);?></span>
+						</div>
+					</div>
+
+				</div>
+			</volist>
+
+		</section>
+	</template>
+	<!-- 肖战结束 -->
+
+</div>
+<script src="__XJS__/vue.js"></script>
+<script src="__XJS__/vue-resource.js"></script>
+<script src="__XJS__/mui.min.js"></script>
+<script src="__XJS__/mui.picker.min.js"></script>
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    // 监听window的变化
+    window.addEventListener('resize', function() {
+        var clientHeight = document.documentElement.clientHeight;
+        app.clientHeight = clientHeight;
+        console.log('可见区域高度:' + clientHeight);
+        if (clientHeight < 400) {
+            app.showNext = false;
+
+        } else {
+            app.showNext = true;
+        }
+
+    });
+
+    var timePicker, datePicker;
+
+    //进入页面就触发的事件
+    var app = new Vue({
+        el: "#app",
+        data: {
+            inputTitle: "<?php echo $procurementlist['title'];?>",
+            companyName: "<?php if($procurementlist['company_name']){ echo $procurementlist['company_name']; }else{ echo $company_name1['supplier_name'];  } ?>",
+            money: "<?php echo $procurementlist['budget'];?>",
+            cstmMade:"<?php echo $cstmMade;?>", // 是否定制
+            endTime: "<?php if($procurementlist){ echo date('Y-m-d',$procurementlist['dead_time']); } ?>", //报价截止时间
+            reciveTime: "<?php if($procurementlist){ echo date('Y-m-d',$procurementlist['expect_time']); } ?>", // 期望收货时间
+            // isExplicit: false, // 采购是否明确
+            inputDeclare: "<?php echo $procurementlist['description'];?>", // 采购描述说明
+            allSubmitData: {}, // 存储所有要提交的数据
+            showNext: true, // 显示下一步
+            clientHeight: 0,
+            // 肖战开始
+            navqie:1,
+            // 肖战结束
+        },
+        directives: {
+
+        },
+        created: function() { // 进入
+            timePicker = new mui.DtPicker({
+                type: "date",
+                beginDate: new Date()
+            });
+            datePicker = new mui.DtPicker({
+                type: "date",
+                beginDate: new Date()
+            });
+        },
+        mounted: function() { // 挂载后  加载完页面执行
+            // 获取用户填的内容
+
+            this.getData();
+            //this.cstmMade=<?php echo $cstmMade;?>;
+        },
+        updated: function() {
+
+        },
+        methods: {
+            // 肖战开始
+            tabqie: function(e){
+                this.navqie=e;
+            },
+            // 肖战结束
+            gomy: function(e) {
+                location.href = "<?php echo Url('Supplychain/myshop_list');?>";
+            },
+            customMade: function(e) { // 是否定制（开关样式）
+                console.log("是否定制：" + !e);
+                this.cstmMade = e;
+            },
+            clickCustomMade: function(e) { // 是否定制
+                console.log("是否定制：" + e);
+                this.cstmMade = e;
+            },
+            clickEndTime: function(e) { // 报价截止时间
+                console.log("点击报价截止时间");
+                console.log(e);
+                var that = this;
+                timePicker.show(function(selectItems) {
+                    console.log(selectItems);
+                    that.endTime = selectItems.value;
+                })
+            },
+            clickReciveTime: function() { // 期望收货日期
+                var that = this;
+                datePicker.show(function(item) {
+                    that.reciveTime = item.value;
+                })
+            },
+            // clickIsExplicit: function(e) { // 采购礼品是否明确
+            //     this.isExplicit = e;
+            // },
+            onInputFocus: function(e) { //  监听input聚集事件
+                console.log("监听input聚集事件:");
+                console.log(e);
+            },
+            next: function(e) { // 下一步
+                console.log("点击下一步:");
+                var objData = {
+                    inputTitle: this.inputTitle,
+                    companyName: this.companyName,
+                    money: this.money,
+                    // cstmMade: !this.cstmMade, // 取非，相反的值（开关样式）
+                    cstmMade: this.cstmMade,
+                    endTime: this.endTime,
+                    reciveTime: this.reciveTime,
+                    // isExplicit: this.isExplicit,
+                    inputDeclare: this.inputDeclare
+                }
+                console.log(objData);
+                // 必填项验证
+                if (!this.inputTitle || !this.companyName || !this.endTime || !this.reciveTime) {
+                    this.allSubmitData = null;
+                    alert("请先填完所有带*的必填项");
+                    return false;
+                }
+                var regNumber = new RegExp(/^\d+(\.\d+)?$/);
+                if (!regNumber.test(this.money)) {
+                    alert("金额只能是数字");
+                    this.money = "";
+                    return;
+                }
+                this.allSubmitData = objData; //  所有要提交的数据
+                this.submitData();
+                console.log("进入下一页...");
+                // return;      // 防止跳转
+                // if (this.isExplicit) { // 采购礼品是否明确
+                //location.href = "./need_2.html"
+                // } else {
+                //     location.href = "./need_1.html"
+                // }
+
+            },
+            submitData: function() { //  提交数据给后端
+
+                //console.log(this.allSubmitData);
+
+
+                $.ajax({
+                    type:'POST',
+                    url:"{:Url('Supplychain/procurement_one')}",
+                    //dataType:'json',
+                    data:this.allSubmitData,
+                    success:function(data){
+                        if(date=0){
+                            console.log('数据库入库失败！');
+                        }else{
+                            console.log(data+'提交成功！');
+                            window.location.href="{:Url('Supplychain/procurement_two')}";
+                        }
+                    },
+                    error:function(jqXHR){
+                        console.log('提交失败！');
+                        alert('系统繁忙！请重试');
+                    }
+                });
+
+            },
+            getData: function() { // 获取用户上次填写的内容
+                //alert(123);
+
+
+            }
+        },
+
+    })
+
+    console.log("app.inputTitle:");
+    console.log(app.inputTitle);
+</script>
+</body>
+
+</html>

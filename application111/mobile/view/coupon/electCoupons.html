@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>优惠券</title>
+		<link rel="stylesheet" href="__MOBILE__/css/electCoupons.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+	</head>
+	<body>
+		<div class="electCouponsBox" id="electCoupons">
+			<header>
+				<div class="back"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_s.png"></a></div>
+				<div class="headName">优惠券</div>
+				<div></div>
+			</header>
+			<nav>
+				<div :class="{'curnav':curNav==1,'':curNav!=1}" @click="clickNav(1)">可用优惠券(<span>{{arr.length}}</span>)</div>
+				<div :class="{'curnav':curNav==2,'':curNav!=2}" @click="clickNav(2)">不可用优惠券(<span>{{arrays.length}}</span>)</div>
+			</nav>
+<form id="elect_form" name="elect_form" method="post" action="{:Url('Cart/orderconfirm')}" >
+
+			<section>
+       
+				<div style="display: none;">
+					<div class="hintBox" v-show="curNav==1">
+						<div class="hintImg"><img src="__MOBILE__/images/icon_wulipin.png"></div>
+						<div class="hintText">您暂时没有可用的礼品卡</div>
+					</div>
+				</div>
+				<!-- <div style="display: none;">
+					<div class="hintBox" v-show="curNav==2">
+						<div class="hintImg"><img src="__MOBILE__/images/icon_wulipin.png"></div>
+						<div class="hintText">您暂时没有不可用的礼品卡</div>
+					</div>
+				</div> -->
+				<div class="usableCouponsBox" v-show="curNav==1">
+					<div class="usableCoupons" id="usableCoupons"  v-for="(item,index) in arr" :key="index"  @click="clickSelect(index)">
+						<div class="select" v-show="item.showSelect"><img src="__MOBILE__/images/icon_unselected.png"></div>
+						<div class="select" v-show="!item.showSelect"><img src="__MOBILE__/images/icon_selected.png"></div>
+						<div class="electCoupons">
+						<span style="display: none;"  id="id" class="id">{{item.cid}}</span>
+							<div class="commodityLeft"><img src="__MOBILE__/images/youhuiquan.png"></div>
+							<div class="commodityRight">
+								<div class="couponsSum">
+									<div class="moneys">￥<span class="moneysNum">{{item.money}}</span></div>
+									<div class="condition">满<span>{{item.condition}}</span>元<br>可使用</div>
+								</div>
+								<div class="shops" >{{item.name}}</div>
+							</div>
+						</div>
+					</div>
+					<div style="height: 1rem"></div>
+					<div class="ensure" v-show="showEnsure" @Click="submit()" >确定</div>
+				</div>
+				<div class="unusableCouponsBox" v-show="curNav==2">
+					<div class="noElectCoupons" v-for="items in arrays">
+						<div class="commodityLeft"><img src="__MOBILE__/images/icon_wuyouhui.png"></div>
+						<div class="commodityMiddle">
+							<div class="couponsSum">
+								<div class="moneys1">￥<span class="moneysNum">{$value.money}</span></div>
+								<div class="condition1">满<span>{$value.condition}</span>元<br>可使用</div>
+							</div>
+							<div class="shops1">支持一礼通<span>部分</span>店铺商品</div>
+						</div>
+						<div class="kerley"></div>
+						<div class="noCondition">
+							<div><img src="__MOBILE__/images/icon_gantan.png"></div>
+							<div>未满<span>{$value.condition}</span>元</div>
+						</div>
+					</div>
+				</div>
+			</section>
+</form>
+		</div>
+									
+		<script src="__MOBILE__/js/vue.js"></script>
+		<script src="__MOBILE__/js/vue-resource.js"></script>
+		<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>	
+			<script>
+			var uid = {$_SESSION['user']['user_id']};
+			var wap = new Vue({
+				el: "#electCoupons",
+				data: {
+					curNav: 1,
+					showEnsure: 1,
+					arr:[],
+					commitData:[],
+					arrays:[1,2,3]
+				},
+				mounted: function() { // 挂载后
+					this.getData();
+				},
+				methods: {
+					clickNav: function(e) { // 导航选项切换
+						if (this.curNav == 1) {
+							this.curNav = e;
+							this.showEnsure = 0;
+						} else {
+							this.curNav = e;
+							this.showEnsure = 1;
+						}
+					},
+					clickSelect: function(index) {
+						// console.log(index)
+						this.arr[index].showSelect =!this.arr[index].showSelect;
+						var array=[];
+						// 案例2之只返回选中数组项中的部分值
+						this.arr.forEach(function(item,idx){
+							if(item.showSelect == 0){
+								var obj = {
+									'cid':item.cid,
+									'money':item.money,
+									};
+								array.push(obj)
+							}
+
+						});
+						console.log(array);
+						this.commitData = array;
+					},
+					submit:function(){
+						this.submitData();
+					},
+					submitData: function() { //  提交数据给后端
+						var that = this;
+						$.ajax({
+							type:'POST',
+							url:'/Mobile/Cart/orderconfirm/uid/'+uid,
+							data:{get_coupon_id:this.commitData},
+							dataType: 'json',
+							success: function(data){
+						       if(data.status == 1 || data.status == -11){
+								  location.href = "{:Url('Cart/orderconfirm')}";
+							   }else{
+						           alert(data.msg);
+							   }
+							}
+						})
+					},
+					getData: function() {
+						var that = this;
+						var productUrl ="/Mobile/coupon/ctCoupons/uid/"+uid;	
+						console.log("请求url:" + productUrl);
+						// return;
+						this.$http({
+							url: productUrl,
+							method: 'GET',
+							// 传后端的数据
+							data: {
+							
+							},
+							// 请求头
+							headers: {
+								'Content-Type': 'json'
+							}
+					
+						}).then(function(response) {
+							console.log("请求成功回调：");
+							// console.log(response)			
+							var hot = response.data;
+
+							// hot = JSON.parse(hot);
+							console.log(hot)
+							// // 对后台返回的数据做处理							
+							this.arr = hot;
+							
+						}, function(response) {
+							console.log("请求失败回调");
+							// console.log(response)
+						});
+					},
+				}
+			})
+		</script>
+	</body>
+</html>

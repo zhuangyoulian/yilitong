@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-我的交易-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+
+<body style="background:#f7f7f7;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<div class="user-home" style="background:#2e2e2e;">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <a href="{:Url('Home/User/index')}" class="exit">退出设计师后台</a>
+    </div>
+</div>
+
+
+<div class="inner clearfix m-top-20">
+    <!-- design-left  start -->
+    <include file="public/designerLeftNav" />
+    <!-- designer-left end -->
+
+    <!-- design-right  start -->
+    <div class="design-authentication-index">
+        <div class="design-authentication-index-col">
+            <p class="trade-title">我的订单<span class="order-tips">-订单详情</span><a href="javascript:history.go(-1);">返回</a></p>
+        </div>
+
+        <!--  基本信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:8px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>基本信息</dt>
+                    <dd>订单状态：<span>{$order_status[$order[order_status]]} / <if $order.pay_status eq 1>已支付<else>未支付</if> / 
+					  <if $order.shipping_status eq 1>已发货<else>未发货</if></span></dd>
+                </dl>
+                <div class="padding20">
+                    <ul class="orderBasicInfos">
+                        <li>订单编号：<span>{$order.order_sn}</span></li>
+                        <li>会员：<span>{$order.consignee}</span></li>
+                        <li>支付金额：<span>{$order.order_amount}</span></li>
+                        <li>下单时间：<span>{$order.add_time|date='Y-m-d H:i',###}</span></li>
+                        <li>支付时间：<span><if condition="$order.pay_time neq 0">{$order.pay_time|date='Y-m-d H:i',###}<else/>N</if></span></li>
+                        <li>支付方式：<span>{$order.pay_name|default='其他方式'}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  基本信息 end -->
+
+        <!--  收货信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>收货信息</dt>
+                </dl>
+                <div class="padding20">
+                    <ul class="orderBasicInfos">
+                        <li>收货人：<span>{$order.consignee}</span></li>
+                        <li>手机：<span>{$order.mobile}</span></li>
+                        <li>邮编：<span>{$order.zipcode|default='N'}</span></li>
+                        <li style="width:100%;">收货地址：<span>{$order.address2}</span></li>
+                        <li style="width:100%;">留言：<span>{$order.user_note}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  收货信息 end -->
+		<form action="" id="form1">
+        <!--  商品信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>商品信息</dt>
+                </dl>
+                <div class="padding20 marginTop20">
+                    <div class="order-goodsInfos">
+                        <dl class="order-goodsInfos-list">
+                            <dt>商品名称</dt>
+                            <dd>数量</dd>
+                            <dd>价格</dd>
+                            <dd>合计</dd>
+                        </dl>
+					<volist name="orderGoods" id="good">
+                        <dl class="order-goodsInfos-list" style="background:none;padding:20px 0;">
+                            <dt><a href="{:Url('Home/Goods/goodsInfo',array('id'=>$good['goods_id']))}">{$good.goods_name}</a></dt>
+                            <dd>{$good.goods_num}</dd>
+                            <dd>{$good.goods_price}</dd>
+                            <dd>{$good.goods_total}</dd>
+							<input type="hidden" name="goods[]" value="{$good.rec_id}">
+                        </dl>
+				    </volist>
+                    </div>
+                    <h4 class="orderTotalPrice">订单总额：<span>{$order.order_amount}</span>元</h4>
+                </div>
+            </div>
+        </div>
+        <!--  商品信息 end -->
+
+        <!--  发货操作 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>发货操作</dt>
+                </dl>
+                <div class="padding20">
+                        <div class="marginTop20">
+                            <ul class="transport-ways clearfix">
+                                <li>选择快递：</li>
+                                <li style="margin-left:20px;">
+                                    <select id="transport-ways-list" name="shipping_name">
+                                        <option value="">请选择</option> 
+										<option value="3">虚拟物品</option> 
+										<option value="2">送货上门</option> 
+										<volist name="shipping_list" id="exp">
+										<option value="{$exp.name}" <if condition="$order.shipping_name eq $exp.name">selected="selected" </if>>{$exp.name}</option>     
+										</volist>
+										<option value="-1">其它</option> 
+                                    </select>
+									
+									
+                                </li>
+                                <li style="margin-left:150px;">快递单号：</li>
+                                <li style="margin-left:20px;">
+                                    <input type="text" id="trackingNumber" name="invoice_no">
+									<input type="hidden" name="order_id" value="{$order.order_id}">
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="transport-btn">
+						<if $order.shipping_status eq 0>
+                            <li><a href="javascript:void(0);" onclick="transport()">发货</a></li>
+						</if>
+                            <!--<li><a href="#">无效</a></li>-->
+                        </ul>
+                </div>
+            </div>
+        </div>
+		</form>
+        <!--  发货操作 end -->
+
+        <!--  操作记录 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>操作记录</dt>
+                </dl>
+                <table class="dom-records">
+                    <thead>
+                        <tr>
+                            <td>操作时间</td>
+                            <td>支付状态</td>
+                            <td>发货状态</td>
+                            <td>备注</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="action_log" id="log">
+                        <tr>
+                            <td>{$log.log_time|date='Y-m-d H:i:s',###}</td>
+                            <td><if $log.pay_status eq 1>已支付<else>未支付</if></td>
+                            <td><if $log.shipping_status eq 1>已发货<else>未发货</if></td>
+                            <td>{$log.action_note}</td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+
+                <form action="" id="searchForm">
+                    <div class="padding20 remarkInfosContainer remark-tab-shows" id="remarkInfosContainer">
+                        <p class="marginTop20">备忘信息</p>
+                        <div class="padding20 marginTop20">
+                            <textarea name="note" id="remark" cols="30" rows="6">{$order.admin_note}</textarea>
+                        </div>
+                        <ul class="transport-btn">
+                            <li><a href="javascript:void(0);" id="keepRemark" onclick="keepRemark()">保存</a></li>
+                        </ul>
+                    </div>
+					  <input type="hidden" id="id" name="id" value="{$order.order_id}">
+                    <div class="padding20 remarkInfosContainer" id="remarkInfosContainer1">
+                        <p class="marginTop20">备忘信息<a href="javascript:void(0);" title="编辑备注" class="reEditor" id="reEditor" onclick="reEditor()"></a></p>
+                        <p class="remarkInfos">客户要求发完所有信息</p>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <!--  操作记录 end -->
+
+        <!--  物流信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>物流信息</dt>
+                </dl>
+                <div class="padding20">
+                    <table class="transport-list">
+                        <thead>
+                          <tr>
+                            <th style="width:150px;margin-top:5px;">信息</th>
+                            <th>状态</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="shipping" id="list">
+                            <tr>
+                                 <td class="text-center">{$list.shipping_name}</td>
+                                 <td class="text-center">{$list.invoice_no}</td>
+
+
+                             </tr>
+                             <volist name="list.exp.lastResult.data" id="exp">
+                                <tr>
+                                 <td class="text-center">{$exp.time}</td>
+                                 <td class="text-center">{$exp.context}</td>
+                                </tr>
+                               </volist>
+                          </volist>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!--  物流信息 end -->
+    </div>
+    <!-- designer-right end -->
+</div>
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/static/js/layer/layer.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<script type="text/javascript">
+    //编辑订单备注
+    function keepRemark(){
+        if($('#remark').val() == '' || $('#remark').val() == null){
+            layer.alert('备注不能为空');
+        }else{
+            $('.remarkInfos').text($('#remark').val());
+            $('#remarkInfosContainer').removeClass('remark-tab-shows');
+            $('#remarkInfosContainer1').addClass('remark-tab-shows');
+
+			     $.ajax({
+                        type: "POST",
+                        url: "/index.php/Home/Designer/OrderInfos",
+                        data: $('#searchForm').serialize(),// 你的formid
+                    });
+					
+        }
+
+    }
+
+    //修改订单备注
+    function reEditor(){
+        $('#remarkInfosContainer').addClass('remark-tab-shows');
+        $('#remarkInfosContainer1').removeClass('remark-tab-shows');
+        $('#remark').val($('.remarkInfos').text());
+    }
+
+    //点击发货
+    function transport(){
+        if($('#invoice_no').val() == ''){
+            layer.alert('快递单号不能为空');
+            return false;
+        }
+        $.ajax({
+            type:'POST',
+            url:'/Home/Designer/deliveryHandle',
+            data:$('#form1').serialize(),
+            success:function(data){
+                  layer.alert(data.msg);
+            },
+            error:function(jqXHR){
+                layer.alert('系统繁忙！请刷新重新操作');
+            }
+        });
+    }
+
+
+</script>
+</body>
+</html>

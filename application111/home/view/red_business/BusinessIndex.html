@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes” />
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+    <title>商家注册首页</title>
+	<link rel="stylesheet" href="__BUSINESS__/style/newRegIndex.css" />
+	<link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="inner clearfix" style="height:100px;">
+            <ul class="logo-businessCenter">
+                <!-- <li class="logo-businessCenter-li1"><a href="/"><img src="__BUSINESS__/images/regLogo.png" alt="红礼"></a></li> -->
+                <li class="logo-businessCenter-li2"><a href="{:Url('Home/RedBusiness/BusinessIndex')}">商家中心</a></li>
+            </ul>
+            <!-- <ul class="reg-info">
+                <li>24小时服务电话：400-089-7879</li>
+                <li class="paddingL-no"><a href="http://yilitong.com/index.php/Home/Article/detail/article_id/43.html">商家规则</a></li>
+            </ul> -->
+        </div>
+    </header>
+    <!--<hr style="box-shadow: 0 1px 2px #ccc;">-->
+
+    <!-- banner -->
+    <div class="container-fluid" id="banner-bg" style="background: url(__BUSINESS__/images/businessIndex_bg_s.png) no-repeat;">
+        <!--<img src="images/bannerBg.png" alt="">-->
+        <div class="inner">
+
+            <!-- 登录之后 开始 -->
+            <if condition="$redsupplier.user_name neq null">
+            		<div class="reg-logined ">
+		                <a href="{:Url('Home/RedBusiness/login_out')}" class="close">退出</a>
+		                <ul>
+		                    <li class="login-hi">您好！<span>{$redsupplier.user_name}</span></li>
+		                    <li class="welcome-ylt">欢迎来到红礼</li>
+		                </ul>
+		                <if condition="$redsupplier.status neq 1">
+		                    <div class="enter-business-old"><a href="{:Url('Home/RedBusiness/BusinessOne')}">查看商家管理信息</a></div>
+		                <else>
+    		                <!-- <div class="enter-business-center"><a href="{:Url('Home/RedSupplier/StoreHome',array('id'=>$supplier_id))}">店铺中心</a></div> -->
+    		                <div class="enter-business-center" style="margin-left: 55px;"><a href="{:Url('RedSupplier/Index/index')}">管理中心</a></div>
+		                </if>
+		                
+		            </div>
+            <!-- 登录之后 结束 -->
+            	<else>
+            	 <!-- 未登录 开始 -->
+	            <div class="reg-login">
+	                <h4 class="reg-login-title">你的创享都在这里</h4>
+	                <ul>
+	                    <li><a href="{:Url('Home/RedBusiness/register')}" class="reg-btn">立即注册</a></li>
+	                    <li><a href="{:Url('Home/RedBusiness/login')}" class="login-btn">马上登录</a></li>
+	                </ul>
+	            </div>
+	            <!-- 未登录 结束 -->
+            </if>
+            
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="inner margin100">
+        <div class="col-info">
+            <div class="col-title-bg">红礼入驻流程</div>
+            <ul class="col-title-info">
+                <li class="col-line"></li>
+                <li class="col-title">诚邀各知名品牌入驻</li>
+                <li class="col-line"></li>
+            </ul>
+            <p class="col-infos-p" style="">
+                符合资质要求的商家可直接注册并入驻，入驻操作相关问题可咨询在线客服。若需再进一步接洽，可拨打入驻热线：400-089-7879 。请仔细阅读入驻规则，审核通过后，我们会以短信方式通知您。
+            </p>
+            <div class="flow-chart">
+                <ul class="flow-step">
+                    <li>STEP.1 <br>注册商务账号</li>
+                    <li>STEP.2 <br>注册商户账号</li>
+                    <li>STEP.3 <br>平台审核</li>
+                    <li>STEP.4 <br>入驻成功</li>
+                </ul>
+                <div class="step-line">
+                    <ol class="clearfix">
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ol>
+                </div>
+                <ul class="flow-items">
+                    <li>
+                        <p>*手机注册商家账号</p>
+                        <a href="{:Url('Home/RedBusiness/register')}">立即注册</a>
+                    </li>
+                    <li>
+                        <p>*公司基本信息</p>
+                        <p>*上传相关资质</p>
+                        <!-- <p>*填写店铺信息</p> -->
+                        <a href="{:Url('Home/RedBusiness/BusinessIndex')}">入驻红礼</a>
+                    </li>
+                    <li>
+                        <p>*3个工作日返回结果</p>
+                        <a href="{:Url('Home/RedBusiness/BusinessFour')}">查看审核结果</a>
+                    </li>
+                    <li>
+                        <p>*上传商品</p>
+                        <!-- <p>*报名活动</p> -->
+                        <a href="{:Url('/article/159.html')}">上传商品流程</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-info">
+            <div class="col-title-bg">红礼的优势</div>
+            <ul class="col-title-info">
+                <li class="col-line"></li>
+                <li class="col-title">打造智能生活平台</li>
+                <li class="col-line"></li>
+            </ul>
+            <p class="col-infos-p">
+                红礼，是基于以“礼”为核心，以“产品”、“思想”、“文化”为基础的互联网智能生活应用平台。思想就是创意、创造。绝大
+                多数平台，只专注于产品，没能提供让用户获释思想和文化的路径。
+            </p>
+            <ul class="col-ylt-super clearfix" style="margin-top:50px;">
+                <li>
+                    <i><img src="__BUSINESS__/images/good-1.png" alt=""></i>
+                    <p>
+                        <strong>100万 + 庞大的用户注册</strong><br>
+                        全面覆盖全国各大城市
+                    </p>
+                </li>
+                <li>
+                    <i><img src="__BUSINESS__/images/good-2.png" alt=""></i>
+                    <p>
+                        <strong>平台销量大</strong><br>
+                        每日快递不断
+                    </p>
+                </li>
+                <li>
+                    <i><img src="__BUSINESS__/images/good-3.png" alt=""></i>
+                    <p>
+                        <strong>移动端下载量上千万</strong><br>
+                        APP下载量超过五千万，拥有高度的活跃用户
+                    </p>
+                </li>
+            </ul>
+            <ul class="col-ylt-super">
+                <li>
+                    <i><img src="__BUSINESS__/images/good-4.png" alt=""></i>
+                    <p>
+                        <strong>广告投放量大</strong><br>
+                        创意的广告投放
+                    </p>
+                </li>
+                <li>
+                    <i><img src="__BUSINESS__/images/good-5.png" alt=""></i>
+                    <p>
+                        <strong>助力礼品行业</strong><br>
+                        你的创新创意都在这里
+                    </p>
+                </li>
+                <li>
+                    <i><img src="__BUSINESS__/images/good-6.png" alt=""></i>
+                    <p>
+                        <strong>终极实现</strong><br>
+                        用户直接对话工厂，所想即所得
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- <include file="public/footer" /> -->
+</body>
+</html>

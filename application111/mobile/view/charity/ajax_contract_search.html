@@ -1,0 +1,22 @@
+    <if condition="$select">
+        <div class="tuijian">
+        <volist name="select" id="list">
+            <div class="list">
+                <a href="">
+                    <div class="het">
+                        <div class="xinxi">
+                            <img src="{$list.image}" alt="">
+                            <span>{$list.contract_name}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </volist>
+        </div>
+    <else/>
+        <div class="noresult">
+            <img src="__MOBILE__/images/contract/icon_search_error@3x.png" alt="" class="icon_search_error">
+            <p>无结果，换个关键词试试</p>
+        </div>
+    </if>
+        

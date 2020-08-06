@@ -1,0 +1,187 @@
+<include file="public/header" title="所有分类"/>
+<style>
+    .classreturn .content .return{
+        width: .5rem;
+        height: auto;
+        /*margin-left: .1rem;*/
+    }
+    .classreturn .content .return a img{
+        display: block;
+        width: .5rem;
+        height: auto;
+    }
+</style>
+
+    <div class="classreturn">
+        <div class="content">
+            <div class="ds-in-bl return">
+                <a href="javascript:history.back(-1);"><img src="__STATIC__/images/return.png" alt="返回"></a>
+            </div>
+            <div class="ds-in-bl search" style="margin-left:.8rem;">
+                <form action="" method="post">
+                    <div class="sear-input">
+                        <a href="{:Url('Goods/ajaxSearch')}">
+                            <input type="text" value="" placeholder="请输入您所搜索的商品/店铺">
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /* 2017-10-30 auth:wurupei new AddCss */
+    .classreturn .content .search .sear-input{
+        width: 14rem;
+    }
+
+    .catalogTab-list{
+        margin-top: .4rem;
+        background: #fafafa;
+    }
+    .catalogTab-list .catalogTab-col{
+        /*display: none;*/
+    }
+    .catalogTab-list .catalogTab-list-show{
+        display: block;
+    }
+    .catalogTab-list .catalogTab-col .catalog-list-col{
+        margin-bottom: 1rem;
+        padding: 2%;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background: #fff;
+    }
+    .catalogTab-list .catalog-title{
+        width: 100%;
+        font-size: .6rem;
+        color: #222;
+        margin-bottom: .5rem;
+        padding-top: .1rem;
+        padding-left: .1rem;
+    }
+    .catalogTab-list .catalog-list{
+        overflow: hidden;
+    }
+    .catalogTab-list .catalog-list li{
+        float: left;
+        width: 49%;
+        height: 4rem;
+        border-radius: .2rem;
+        background: #f2f2f2;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        overflow: hidden;
+    }
+    .catalogTab-list .catalog-list li:nth-of-type(2n){
+        margin-right: 0;
+    }
+    .catalogTab-list .catalog-list li img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .catalogTab-list .catalog-list li span{
+        display: block;
+        font-size: .48rem;
+        color: #555;
+    }
+    .catalogTab-list .supplier-list{
+        background: #fff;
+    }
+    .catalogTab-list .supplier-col{
+        width: 100%;
+        overflow: hidden;
+        padding: .4rem .2rem;
+        border-bottom: 1px solid #efefef;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .catalogTab-list .supplier-col a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .catalogTab-list .supplier-col .supplier-logo{
+        width: 26%;
+        height: 4rem;
+        float: left;
+        margin-right: .5rem;
+    }
+    .catalogTab-list .supplier-col .supplier-logo img{
+        width: 100%;
+        height: 100%;
+    }
+    .catalogTab-list .supplier-col .supplier-info{
+        width: 70%;
+        height: 4rem;
+        padding: .2rem 0;
+        float: left;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+
+    }
+    .catalogTab-list .supplier-col .supplier-info h6{
+        font-size: .6rem;
+        color: #333;
+        margin-bottom: .2rem;
+        margin-top: 0;
+    }
+    .catalogTab-list .supplier-col .supplier-info p{
+        font-size: .48rem;
+        color: #888;
+        line-height: .8rem;
+        height: 1.6rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .catalogTab-list .supplier-col .supplier-info .supplier-entrance{
+        display: block;
+        border: 1px solid #e6002d;
+        border-radius: .6rem;
+        width: 3rem;
+        height: 1rem;
+        line-height: 1rem;
+        font-size: .48rem;
+        text-align: center;
+        color: #e6002d;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+</style>
+
+    <div class="catalogTab-list">
+        <div class="catalogTab-col supplier-list">
+      		<volist name="supplier_list" id="list">
+            <div class="supplier-col">
+                <a href="{:Url('Supplier/index',array('id'=>$list['supplier_id']))}" class="stores">
+                    <!-- 设置默认店铺LOGO zy.png -->
+                    <div class="supplier-logo"><img src="{$list.logo|default='__MOBILE__/images/zy.png'}" alt=""></div>
+                    <div class="supplier-info">
+                        <h6>{$list.supplier_name}</h6>
+                        <p>{$list.introduction}</p>
+                        <a href="{:Url('Supplier/index',array('id'=>$list['supplier_id']))}" class="supplier-entrance">进入店铺</a>
+                    </div>
+                </a>
+            </div>
+		    </volist>
+        </div>
+    </div>
+
+    <!--底部-start-->
+    <include file="public/footer"/>
+    <!--底部-end-->
+	</body>
+</html>

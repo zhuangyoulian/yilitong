@@ -1,0 +1,45 @@
+			<if condition="!$order_list">
+				<div class="noEarnings">
+					<div><img src="__MOBILE__/images/icon_earning_false.png"></div>
+					<div>您暂时没有相关收益</div>
+				</div>
+			<else/>
+				<volist name="$order_list" id="value" >
+        			<a href="{:Url('User/order_detail',array('id'=>$value[order_id]))}">
+					<div class="earningsss">
+						<div class="earning_Left">
+								<div class="leftName">{$value[goods_list][0]['goods_name']}等商品</div>
+								<div class="source">收益来源：{$value[goods_list][0]['name']}</div>
+						</div>
+						<div class="vertical"></div>
+
+						<div class="earning_Rigth">
+
+							<if condition="$value[brokerage] neq 0">
+								<div class="rightMoeny">{$value[brokerage]}元</div>
+							<else/>
+								<if condition="$value[u_id] eq $u_id">
+									<div class="rightMoeny">{$value[rebates] * $ratio[ratio]}元</div>
+								<else/>
+									<if condition="$value[shop] eq 1">
+										<div class="rightMoeny">{$value[rebates] * $ratio[top_ratio]}元</div>
+									<else/>
+										<div class="rightMoeny">{$value[rebates] * $ratio[ratio]}元</div>
+									</if>
+								</if>
+							</if>
+
+							<if condition="$value[order_type] eq 0">
+								<div class="status">待审核</div>
+		                	<elseif condition="$value[order_type] eq 1 ">
+								<div class="status">已完成</div>
+		                	<elseif condition="$value[order_type] eq 2 ">
+								<div class="status">无效</div>
+							</if>
+						</div>
+					</div>
+					</a>
+				</volist>
+			</if>
+			
+				

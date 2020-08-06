@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>申请售后-{$config['shop_info_store_title']}</title>
+<meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+<meta name="description" content="{$config['shop_info_store_desc']}" />
+<link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/outhu.css" type="text/css">
+<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/js/global.js"></script>
+<script src="__PUBLIC__/js/pc_common.js"></script>
+<script src="__PUBLIC__/js/layer/layer.js"></script><!--弹窗js 参考文档 http://layer.layui.com/-->
+  <style>
+    .list-type-new li{
+      width:80px;
+      height:26px;
+      text-align:center;
+      line-height:26px;
+      border:1px solid #ccc;
+      cursor:pointer;
+        position:relative;
+    }
+    .list-type-new li input{
+        width:100%;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        cursor:pointer;
+        opacity: 0;
+        -webkit-opacity: 0;
+        -moz-opacity: 5;
+        /* IE 4-9 */
+        filter:alpha(opacity=0);
+        /*This works in IE 8 & 9 too*/
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        border:none;
+    }
+    .list-type-new .selected{
+      border-color:#e6002d;
+      color:#e6002d;
+    }
+  </style>
+</head>
+
+<body>
+<!--------头部开始--------------> 
+<include file="public/header" /> 
+<!--------头部结束-------------->
+
+<div class="layout ov-hi">
+  <div class="breadcrumb-area">
+    <foreach name="navigate_user" key="k" item="v">
+      <if condition="$k neq '首页'"> > </if>
+      <a href="{$v}">{$k}</a> </foreach>
+  </div>
+</div>
+<div class="layout pa-to-10 fo-fa-ar"> 
+  <!--菜单--> 
+  <include file="user/menu" /> 
+  <!--菜单-->
+  <div class="fr wi940">
+    <form name="return_form" id="return_form" autocomplete="off" method="post">
+      <div class="mod-main mod-comm" id="air03">
+        <div class="mt">
+          <h3>申请售后</h3>          
+        </div>
+        <div class="mc">
+          <table class="tb-void mb10">
+            <thead>
+              <tr>
+                <th>商品名称</th>
+				<th>商品规格</th>
+				<th>商品单价</th>
+				<th>购买数量</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><ul class="list-proinfo" id="removeTheSingleGife">
+                    <li class="fore1"> 
+                    <a href="{:Url('Home/Goods/goodsInfo',array('id'=>$goods['goods_id']))}" target="_blank">
+                     <img height="50" width="50" title="{$goods['goods_name']}" src="{$goods[goods_thumb]}" data-img="1" alt="">
+                     {$goods['goods_name']}
+                     </a>
+                    </li>
+                  </ul>
+                </td>
+				<td>
+				 {$goods['spec_key_name']}
+				</td>
+				<td>
+				 {$goods['goods_price']}
+				</td>
+				<td>
+				 {$goods['goods_num']}
+				</td>
+              </tr>
+            </tbody>
+          </table>
+          <div name="productInfo_zp-info" style="display:none"></div>
+        </div>
+        <div class="form">
+          <div class="item kfarea" id="sellerPrompt">
+ 
+            <div class="clr"></div>
+          </div>
+          <div class="repair-steps" id="repairSteps">
+            <div class="repair-step repair-step-curr pt10 mb10" id="firstRepairStep"> 
+              
+              <!-- 服务类型 -->
+              <div class="item"> <span class="label"> <em> * </em> 服务类型： </span>
+                <div class="fl">
+                  <ul class="list-type list-type-new">
+                    
+                      <li name="applyType" id="3" class="selected">退货<input type="radio" name="type" value="1" checked="checked" class="checked1" style=""></li>
+                   <if $order.shipping_status eq '1'>
+                      <li name="applyType" id="1">换货<input type="radio" name="type" value="2" class="checked2" style=""></li>
+                   </if>
+                  </ul>
+                </div>
+            
+              </div>
+			    <div id="miaoShuDiv"> 
+				
+                         <div class="item"> <span class="label"> <em> * </em> 退换货数量 </span>
+                  <div class="fl">
+                    <input tpye="text" name="send_number" id="send_number" value="1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onblur="check_tui_goods_number()" style="padding:1px 4px;border:1px solid #ccc;border-radius:4px;height:24px;">
+                  </div>
+                  <div class="clr"> </div>
+                </div>
+           
+			  </div>
+              <!-- 问题描述 外层div-->
+              <div id="miaoShuDiv" style=""> 
+              
+                
+ 
+                <!-- 问题描述 -->
+                <div class="item"> <span class="label"> <em> * </em> 问题描述： </span>
+                  <div class="fl">
+                    <textarea name="reason" id="reason" cols="" rows="" class="area"></textarea>
+                    <div class="ar ftx-03">10-500字</div>
+                    <div class="msg-text-01"> 请您如实填写申请原因及商品情况，字数在500字内。 </div>
+                  </div>
+                  <div class="clr"> </div>
+                </div>
+                
+                <!-- 图片信息 -->
+                <div class="item item01"> <span class="label">图片信息：</span>
+                  <div class="fl">
+                    <div class="i-btns" style="text-align: left;">
+                      <input type="button" value="上传照片" onClick="GetUploadify2(5,'return_imgs','return_goods','return_imgs');" style="width:80px;height:30px;border-radius:5px;"/>
+                      <input type="text" name="imgs" id="return_imgs" readonly/>                      
+                    </div>                    
+                    <span id="uploadImgLoading" class="fl"></span> <span id="img_des" class="fl">为了帮助我们更好的解决问题，请您上传图片</span>
+                    <div class="clr"></div>
+                    <span class="msg-text">最多可上传5张图片，每张图片大小不超过5M，支持bmp,gif,jpg,png,jpeg格式文件</span>
+                    <div class="clr"></div>
+                    <div name="mscolluploadImg-info" style="display:none"></div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+                <!-- 问题描述 外层div--> 
+              </div>
+            </div>
+         
+            <!-- 提交按钮 -->
+            <div class="item" id="submitDiv" style=""><span class="label">&nbsp;</span>
+              <div class="fl" name="divSubmit">
+                <div name="submitTips" style="display:none"></div>
+                <a href="javascript:void(0)" onClick="submit_form();" class="btn btn-7" name="btnSubmit"><s></s>提交</a> </div>
+              <div class="clr"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="order_id" value="{$order.order_id}" />
+      <input type="hidden" name="order_sn" value="{$order.order_sn}" />
+      <input type="hidden" name="goods_id" value="{$goods_id}" />
+      <input type="hidden" name="spec_key" value="{$spec_key}" />
+    </form>
+  </div>
+</div>
+<div class="he80"></div>
+<!--------footer-开始--------------> 
+<include file="public/footer" /> 
+<!--------footer-结束-------------->
+
+</body>
+<script>
+  function submit_form()
+  {
+      var value = $('input[type=radio]:checked').val();
+      var reason = $.trim($('#reason').val());
+      var return_imgs= $.trim($('#return_imgs').val());
+      //alert(value)
+      if(value == 1){
+
+          if(reason == '')
+          {
+            layer.alert('请输入退货原因', {icon: 2});// alert('请输入退货原因!');
+            return false;
+          }
+
+          if(return_imgs == '')
+          {
+              if(!confirm('确定不传照片吗?'))
+              {
+                return false;
+              }
+          }
+          //alert(111)
+      }
+      if(value == 2){
+
+          if(reason == '')
+          {
+            layer.alert('请输入换货原因', {icon: 2});// alert('请输入换货原因!');
+            return false;
+          }
+
+          if(return_imgs == '')
+          {
+              if(!confirm('确定不传照片吗?'))
+              {
+                return false;
+              }
+          }
+          
+      }
+      $('#return_form').submit();
+
+
+  } 
+  
+  // 上传退货拍照图片
+  function return_imgs(img)
+  {
+		$('#return_imgs').val(img);
+  }
+  
+  
+
+	function check_tui_goods_number()
+	{
+		var now_number = Number(document.getElementById("send_number").value);
+		var goods_number = {$goods.goods_num};
+		if (now_number < 1)
+		{
+			alert("提交数量不能小于1");
+			document.getElementById("send_number").value = 1;
+			document.getElementById("send_number").focus();
+		}
+		else if (now_number > goods_number)
+		{
+			alert("提交数量不能超过购买数量"+goods_number);
+			document.getElementById("send_number").value = goods_number;
+			document.getElementById("send_number").focus();
+		}
+	}
+
+  
+
+
+  $(document).ready(function(){
+        $("ul.list-type-new li").click(function(){
+          $(this).addClass('selected').siblings().removeClass('selected');
+          $(this).children('input').attr('checked',true).parent('li').siblings().children('input').attr('checked',false);
+
+        });
+  });
+</script>
+</html>

@@ -1,0 +1,788 @@
+<include file="public/layout" />
+<style>
+	.no {
+		color:#807f7f;
+	}
+	.yes {
+		color:#36ce90;
+	}
+	#div1{
+        width: 40px;
+        height: 22px;
+        border-radius: 50px;
+        position: relative;
+        display:inline-block;
+        float:left;
+    }
+    #div2{
+        width: 20px;
+        height: 18px;
+        border-radius: 48px;
+        position: absolute;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        display:inline-block;
+        float:left;
+    }
+    .open1{
+        background: rgba(0,184,0,0.8);
+    }
+    .open2{
+        top: 2px;
+        right: 1px;
+    }
+    .close1{
+        background: rgba(255,255,255,0.4);
+        border:1px solid rgba(0,0,0,0.15);
+        left: 0;
+        top: 0;
+    }
+    .close2{
+        left: 0;
+        top: 0;
+        border:1px solid rgba(0,0,0,0.15);
+ 
+    }
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+        var div2=document.getElementById("div2");
+        var div1=document.getElementById("div1");
+        var enabled=document.getElementById("enabled");
+        div2.onclick=function(){
+        	if(div1.className=="close1"){
+        		div1.className="open1";
+        		enabled.value="1";
+        	}else{
+        		div1.className="close1";
+        		enabled.value="0";
+        	}
+        	if(div2.className=="close2"){
+        		div2.className="open2";
+        	}else{
+        		div2.className="close2";
+        	}
+        }
+    }
+</script>
+<script src="__ROOT__/public/static/js/laydate.js"></script>
+<body style="background-color: #FFF; overflow: auto;"> 
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3> 广告详情</h3>
+        <h5>广告添加与管理</h5>
+      </div>
+    </div>
+  </div>
+    <!--表单数据-->
+    <form method="post" id="handleposition" action="{:Url('Admin/Ad/preferredBrand')}">
+
+       <input type="hidden" name="act" value="{$act}">
+       <input type="hidden" name="id" value="{$info.id}">
+
+        <style>
+            .con-body{
+                width: 1000px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .con-title {
+                width: 100%;
+                background: #f9f9f9;
+                margin-bottom: 20px;
+            }
+            .con-title ul{
+                overflow: hidden;
+            }
+            .con-title ul li{
+                float: left;
+                padding: 15px 36px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+            .con-title ul .con-brand-tab{
+                background: #e94150;
+                color: #fff;
+            }
+
+            .con-brand{
+                width: 1000px;
+                overflow: hidden;
+                display: none;
+            }
+            .con-body .con-brand-show{
+                display: block;
+            }
+            .con-brand-left{
+                float: left;
+                width: 260px;
+                overflow: hidden;
+            }
+            .con-brand-left .con-brand-l,.con-brand-left .con-brand-r .con-brand-r-top,.con-brand-left .con-brand-r .con-brand-r-bottom li:nth-of-type(1){
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+            .con-brand-left .con-brand-l{
+                float: left;
+                width: 110px;
+                height: 160px;
+                background: #fafafa;
+                border-right: 1px solid #fff;
+            }
+            .con-brand-left .con-brand-l img{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .con-brand-left .con-brand-r{
+                float:left;
+                width: 150px;
+            }
+            .con-brand-left .con-brand-r .con-brand-r-top{
+                width: 150px;
+                height: 80px;
+                background: #fafafa;
+                border-bottom: 1px solid #fff;
+            }
+            .con-brand-left .con-brand-r .con-brand-r-bottom{
+                width: 150px;
+                height: 80px;
+                overflow: hidden;
+            }
+            .con-brand-left .con-brand-r .con-brand-r-bottom li{
+                width: 75px;
+                height: 80px;
+                float: left;
+                background: #fafafa;
+            }
+            .con-brand-left .con-brand-r .con-brand-r-bottom li:nth-of-type(1){
+                border-right: 1px solid #fff;
+            }
+            .con-brand-right{
+                width: 700px;
+                float: right;
+            }
+
+
+            .brand-link{
+                display: inline-block;
+                min-width: 400px;
+                height: 30px;
+            }
+
+            /*5555555555*/
+            .con-top-title{
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+            .con-top-title dt{
+                float: left;
+            }
+            .con-top-title dd{
+                float: right;
+            }
+            .con-top-title dd a{
+                display: inline-block;
+                padding: 4px 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .con-head-title{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                background: #f9f9f9;
+                padding: 0 35px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+            }
+            .con-head-title b{
+                font-size: 14px;
+            }
+            .con-head-title em{
+                color: #e6002d;
+            }
+
+            .con-brand-info{
+                width: 900px;
+                margin: 20px auto;
+            }
+            .con-brand-info tr{
+                height: 50px;
+            }
+            .con-brand-info tr td{
+                font-size: 14px;
+            }
+            .con-brand-info tr td:nth-of-type(1){
+                width: 100px;
+                padding-right: 10px;
+                text-align: right;
+            }
+            .con-brand-info tr td input{
+                display: block;
+                min-width: 300px;
+                height: 30px;
+                padding: 0 10px;
+            }
+
+            .con-brand-upload{
+                width: 700px;
+            }
+            .con-brand-upload tr{
+                width: 700px;
+                height: 40px;
+            }
+            .con-brand-upload tr td:nth-of-type(1){
+                width: 100px;
+                text-align: right;
+            }
+            .con-brand-upload tr td em{
+                color: #e6002d;
+            }
+            .con-brand-upload select{
+                min-width: 200px;
+                height: 28px;
+            }
+            .brand-upload-tips{
+                font-size: 12px;
+                color: #888;
+            }
+
+            /* ****** 商品设置 start ***** */
+            .con-goods-add-title{
+                width: 100%;
+                overflow: hidden;
+                background: #f9f9f9;
+                padding: 10px 35px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+            }
+            .con-goods-add-title dt{
+                float: left;
+            }
+            .con-goods-add-title dd{
+                float: right;
+            }
+            .con-goods-add-title dd a{
+                display: block;
+                padding: 6px 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .con-goods-set{
+                width: 1000px;
+                border-color: #ccc;
+            }
+            .con-goods-set thead{
+                background: #f9f9f9;
+                border-color: #ccc;
+            }
+            .con-goods-set th{
+                text-align: center;
+                line-height: 40px;
+                font-weight: bold;
+                color: #888;
+            }
+            .con-goods-set td{
+                text-align: center;
+            }
+            .con-goods-set-sort{
+                display: inline-block;
+                width: 60px;
+                height: 20px;
+                border: 1px solid #ccc;
+            }
+            .con-goods-del a{
+                display: inline-block;
+                padding: 4px 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background: #f9f9f9;
+            }
+            /* ****** 商品设置 end ***** */
+        </style>
+        <div class="con-body">
+            <dl class="con-top-title">
+                <dt>添加首页品牌推荐</dt>
+                <dd>
+                    <a href="javascript:history.go(-1);">返回</a>
+                    <!--<a href="">刷新</a>-->
+                </dd>
+            </dl>
+
+            <div class="con-head-title"><b>添加品牌推荐</b>（<em>* </em>表示必选或必填项）</div>
+
+            <table class="con-brand-info">
+                <tr>
+                    <td><em>* </em>品牌名称：</td>
+                    <td><input type="text" placeholder="小于等于8个字" class="input-txt" id="brand_name" name="brand_name" value="{$info.brand_name}"></td>
+                </tr>
+                <tr>
+                    <td><em>* </em>排序：</td>
+                    <td><input type="text"  onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" placeholder="大于等于0的正整数" class="input-txt" name="brand_sort" id="brand_sort" value="{$info.brand_sort|default="0"}"></td>
+                </tr>
+                <tr>
+                    <td><em>* </em>上下架设置：</td>
+                    <td>
+                        <if $info['is_on_sale'] eq 1>
+                        <div id="div1" class="open1">
+                            <div id="div2" class="open2"></div>
+                        </div>
+                        <input type="text" class="input-txt" id="enabled" name="is_on_sale"  style="display:none;"   value="1"/>
+                        <else>
+                            <div id="div1" class="close1">
+                                <div id="div2" class="close2"></div>
+                            </div>
+                            <input type="text" class="input-txt" id="enabled" name="is_on_sale" style="display:none;"  value="0"/>
+                        </if>
+                    </td>
+                </tr>
+                <tr>
+                    <td><em>* </em>上架时间：</td>
+                    <td><input type="text" class="input-txt" id="start_time" name="start_time"  value="{$info.start_time|default="2016-01-01 00:00:00"}"/></td>
+                </tr>
+                <tr>
+                    <td><em>* </em>下架时间：</td>
+                    <td><input type="text" class="input-txt" id="end_time" name="end_time"  value="{$info.end_time|default="2019-01-01 00:00:00"}"/></td>
+                </tr>
+            </table>
+
+            <div class="con-title">
+                <ul>
+                    <li class="con-brand-tab">广告图片</li>
+                    <li>商品设置</li>
+                </ul>
+            </div>
+            <div class="con-brand con-brand-show">
+                <div class="con-brand-left">
+                    <div class="con-brand-l">
+                        <img style="width:110px;height:160px" src="{$info.image1}" id="img1">
+                    </div>
+                    <div class="con-brand-r">
+                        <div class="con-brand-r-top">
+                            <img style="width:150px;height:80px" src="{$info.image2}" id="img2">
+                        </div>
+                        <ul class="con-brand-r-bottom">
+                            <li>
+                                <img style="width:75px;height:80px" src="{$info.image3}"  id="img3">
+                            </li>
+                            <li>
+                                <img style="width:75px;height:80px" src="{$info.image4}"  id="img4">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="con-brand-right">
+                    <table class="con-brand-upload">
+                        <!-- 广告A start -->
+                        <tr>
+                            <td><em>* </em>上传A图片：</td>
+                            <td>
+                                <div class="input-file-show" id="divComUploadContainer">
+                                    <span class="show">
+                                      <a id="img_a1" class="nyroModal" rel="gal" href="{$info.image1}">
+                                        <i id="img_i1" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$info.image1}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                                      </a>
+                                    </span>
+                                    <span class="type-file-box">
+                                    <input type="text" id="image1" name="image1" value="{$info.image1}" class="type-file-text">
+                                    <input type="button" name="button" onClick="GetUploadify(1,'ad_code','ad','')" value="上传图片" class="type-file-button">
+                                    <input class="type-file-file" onClick="GetUploadify(1,'','ad','img_call_back1')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="brand-upload-tips"><i class="fa fa-exclamation-circle"></i> 仅支持jpg、jpeg、png格式的图片。请勿上传超过2M的图片</td>
+                        </tr>
+                        <tr>
+                            <td>A图片跳转设置：</td>
+                            <td>
+                                 <select name="type1" style="height:27px;" class="input-sm" class="form-control">
+					             	 <option value="0" <if $info['media_type'] eq 0> selected="selected" </if> >商品</option>                                             
+					                 <option value="1" <if $info['media_type'] eq 1> selected="selected" </if> >链接</option>
+					                 <option value="2" <if $info['media_type'] eq 2> selected="selected" </if> >分类导航页</option>                                             
+					                 <option value="3" <if $info['media_type'] eq 3> selected="selected" </if> >分类商品页</option>
+					                 <option value="4" <if $info['media_type'] eq 4> selected="selected" </if> >店铺</option>                                             
+					                 <option value="5" <if $info['media_type'] eq 5> selected="selected" </if> >满减</option>
+					                 <option value="6" <if $info['media_type'] eq 6> selected="selected" </if> >折扣 </option>
+					                 <option value="7" <if $info['media_type'] eq 7> selected="selected" </if> >购物车 </option>
+					                 <option value="8" <if $info['media_type'] eq 8> selected="selected" </if> >个人中心</option>
+					                 <option value="9" <if $info['media_type'] eq 9> selected="selected" </if> >店铺列表</option>
+					                 <option value="10" <if $info['media_type'] eq 10> selected="selected" </if> >设计师首页</option>
+					                 <option value="11" <if $info['media_type'] eq 11> selected="selected" </if> >秒杀</option>
+					                 <option value="12" <if $info['media_type'] eq 12> selected="selected" </if> >抢购</option>
+					            </select>       
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="text" class="brand-link" name="link1" value="{$info.link1}" placeholder="请输入相关ID或页面链接">
+                            </td>
+                        </tr>
+                        <!-- 广告A end -->
+
+
+                        <tr><!-- 里面为空格（需保留） --></tr>
+                        <!-- 广告B start -->
+                        <tr>
+                            <td><em>* </em>上传B图片：</td>
+                            <td>
+                                <div class="input-file-show" id="divComUploadContainer">
+                                    <span class="show">
+                                      <a id="img_a2" class="nyroModal" rel="gal" href="{$info.image2}">
+                                        <i id="img_i2" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$info.image2}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                                      </a>
+                                    </span>
+                                    <span class="type-file-box">
+                                    <input type="text" id="image2" name="image2" value="{$info.image2}" class="type-file-text">
+                                    <input type="button" name="button" onClick="GetUploadify(1,'ad_code','ad','')" value="上传图片" class="type-file-button">
+                                    <input class="type-file-file" onClick="GetUploadify(1,'','ad','img_call_back2')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="brand-upload-tips"><i class="fa fa-exclamation-circle"></i> 仅支持jpg、jpeg、png格式的图片。请勿上传超过2M的图片</td>
+                        </tr>
+                        <tr>
+                            <td>B图片跳转设置：</td>
+                            <td>
+                                <select name="type2" style="height:27px;" class="input-sm" class="form-control">
+					                 <option value="0" <if $info['type2'] eq 0> selected="selected" </if> >商品</option>                                             
+					                 <option value="1" <if $info['type2'] eq 1> selected="selected" </if> >链接</option>
+					                 <option value="2" <if $info['type2'] eq 2> selected="selected" </if> >分类页</option>                                             
+					                 <option value="3" <if $info['type2'] eq 3> selected="selected" </if> >商品分类</option>
+					                 <option value="4" <if $info['type2'] eq 4> selected="selected" </if> >店铺</option>                                             
+					                 <option value="5" <if $info['type2'] eq 5> selected="selected" </if> >满减</option>
+					                 <option value="6" <if $info['type2'] eq 6> selected="selected" </if> >折扣 </option>
+					                 <option value="7" <if $info['type2'] eq 7> selected="selected" </if> >购物车 </option>
+					                 <option value="8" <if $info['type2'] eq 8> selected="selected" </if> >个人中心</option>
+					            </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="text" name="link2" class="brand-link" value="{$info.link2}" placeholder="请输入相关ID或页面链接">
+                            </td>
+                        </tr>
+                        <!-- 广告B end -->
+
+
+                        <tr><!-- 里面为空格（需保留） --></tr>
+                        <!-- 广告C start -->
+                        <tr>
+                            <td><em>* </em>上传C图片：</td>
+                            <td>
+                                <div class="input-file-show" id="divComUploadContainer">
+                                    <span class="show">
+                                      <a id="img_a3" class="nyroModal" rel="gal" href="{$info.image3}">
+                                        <i id="img_i3" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$info.image3}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                                      </a>
+                                    </span>
+                                    <span class="type-file-box">
+                                    <input type="text" id="image3" name="image3" value="{$info.image3}" class="type-file-text">
+                                    <input type="button" name="button" onClick="GetUploadify(1,'ad_code','ad','')" value="上传图片" class="type-file-button">
+                                    <input class="type-file-file" onClick="GetUploadify(1,'','ad','img_call_back3')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="brand-upload-tips"><i class="fa fa-exclamation-circle"></i> 仅支持jpg、jpeg、png格式的图片。请勿上传超过2M的图片</td>
+                        </tr>
+                        <tr>
+                            <td>C图片跳转设置：</td>
+                            <td>
+                                <select name="type3" style="height:27px;" class="input-sm" class="form-control">
+					                 <option value="0" <if $info['type3'] eq 0> selected="selected" </if> >商品</option>                                             
+					                 <option value="1" <if $info['type3'] eq 1> selected="selected" </if> >链接</option>
+					                 <option value="2" <if $info['type3'] eq 2> selected="selected" </if> >分类页</option>                                             
+					                 <option value="3" <if $info['type3'] eq 3> selected="selected" </if> >商品分类</option>
+					                 <option value="4" <if $info['type3'] eq 4> selected="selected" </if> >店铺</option>                                             
+					                 <option value="5" <if $info['type3'] eq 5> selected="selected" </if> >满减</option>
+					                 <option value="6" <if $info['type3'] eq 6> selected="selected" </if> >折扣 </option>
+					                 <option value="7" <if $info['type3'] eq 7> selected="selected" </if> >购物车 </option>
+					                 <option value="8" <if $info['type3'] eq 8> selected="selected" </if> >个人中心</option>
+					            </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="text" name="link3" class="brand-link" value="{$info.link3}" placeholder="请输入相关ID或页面链接">
+                            </td>
+                        </tr>
+                        <!-- 广告C end -->
+
+
+                        <tr><!-- 里面为空格（需保留） --></tr>
+                        <!-- 广告D start -->
+                        <tr>
+                            <td><em>* </em>上传D图片：</td>
+                            <td>
+                                <div class="input-file-show" id="divComUploadContainer">
+                                    <span class="show">
+                                      <a id="img_a4" class="nyroModal" rel="gal" href="{$info.image4}">
+                                        <i id="img_i4" class="fa fa-picture-o" onmouseover="layer.tips('<img src={$info.image4}>',this,{tips: [1, '#fff']});" onmouseout="layer.closeAll();"></i>
+                                      </a>
+                                    </span>
+                                    <span class="type-file-box">
+                                    <input type="text" id="image4" name="image4" value="{$info.image4}" class="type-file-text">
+                                    <input type="button" name="button" onClick="GetUploadify(1,'ad_code','ad','')" value="上传图片" class="type-file-button">
+                                     <input class="type-file-file" onClick="GetUploadify(1,'','ad','img_call_back4')" size="30" hidefocus="true" nc_type="change_site_code" title="点击前方预览图可查看大图，点击按钮选择文件并提交表单后上传生效">
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="brand-upload-tips"><i class="fa fa-exclamation-circle"></i> 仅支持jpg、jpeg、png格式的图片。请勿上传超过2M的图片</td>
+                        </tr>
+                        <tr>
+                            <td>D图片跳转设置：</td>
+                            <td>
+                                <select name="type4" style="height:27px;" class="input-sm" class="form-control">
+					                 <option value="0" <if $info['type4'] eq 0> selected="selected" </if> >商品</option>                                             
+					                 <option value="1" <if $info['type4'] eq 1> selected="selected" </if> >链接</option>
+					                 <option value="2" <if $info['type4'] eq 2> selected="selected" </if> >分类页</option>                                             
+					                 <option value="3" <if $info['type4'] eq 3> selected="selected" </if> >商品分类</option>
+					                 <option value="4" <if $info['type4'] eq 4> selected="selected" </if> >店铺</option>                                             
+					                 <option value="5" <if $info['type4'] eq 5> selected="selected" </if> >满减</option>
+					                 <option value="6" <if $info['type4'] eq 6> selected="selected" </if> >折扣 </option>
+					                 <option value="7" <if $info['type4'] eq 7> selected="selected" </if> >购物车 </option>
+					                 <option value="8" <if $info['type4'] eq 8> selected="selected" </if> >个人中心</option>
+					            </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="text" name="link4" class="brand-link" value="{$info.link4}" placeholder="请输入相关ID或页面链接">
+                            </td>
+                        </tr>
+                        <!-- 广告B end -->
+
+
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="con-brand">
+           
+                <dl class="con-goods-add-title">
+                    <dt><b>商品列表</b>（<em>*</em>最多只能上架8款商品）</dt>
+                    <dd><a onclick="selectGoods()" class="ncap-btn"><i class="fa fa-search"></i>选择商品</a></dd>
+                </dl>
+                <table class="con-goods-set" border="1" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                        
+                            <th style="width:50px;">SPU</th>
+                            <th style="width:50px;">商品图片</th>
+                            <th style="width:250px;">商品名称</th>
+                            <th style="width:100px;">价格</th>
+                            <th style="width:100px;">库存</th>
+                            <th style="width:100px;">当前状态</th>
+                            <th style="width:100px;">排序</th>
+                            <th style="width:100px;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="goods_list">
+                       <foreach name="brand_goods" item="vo">
+	                            <tr>
+	                                <td style="display:none"><input type="checkbox" name="goods_id[]" checked="checked" value="{$vo.goods_id}"/></td>
+	                                
+	                                <td  style="width:50px;" class="text-left">{$vo.id}</td>
+	                                <input type="hidden"  name="goods_thumb[]" value="{$vo.goods_thumb}"/>
+	                                <td><img style="width:40px;height:40px;" src="{$vo.goods_thumb}" /></td>
+	                                <input type="hidden"  name="goods_name[]" value="{$vo.goods_name}"/>
+	                                <td class="text-left">{$vo.goods_name}</td>
+	                                <input type="hidden"   name="shop_price[]" value="{$vo.goods_price}"/>
+	                                <td class="text-left">{$vo.goods_price}</td>
+	                                <input type="hidden"  name="store_count[]" value="{$vo.store_count}"/>
+	                                <td class="text-left">{$vo.store_count}</td>
+	                                <td class="" align="left">
+		                                <div id="showVal{$vo.id}" style="text-align: center; width: 50px;" onclick="aaa({$vo.id})">
+		                              	<if $vo['is_on_sale'] eq 1>
+		                                	<input name="show[]" class="showVal" type="hidden" value="1" style="width:20px;">
+		                                	<span class="yes">
+		                                		<i class="fa fa-ban"></i>是
+		                                	</span>
+		                              	<else>
+		                              		<input name="show[]" class="showVal" type="hidden" value="0" style="width:20px;">
+		                                	<span class="no">
+		                                		<i class="fa fa-ban"></i>否
+		                                	</span>
+		                              	</if>
+		                                </div>
+		                            </td>
+	                            	<td><input type="text" name="sort[]" class="con-goods-set-sort" value="{$vo.sort}"></td>
+	                                <td class="text-left"><a href="javascript:void(0)" onclick="javascript:$(this).parent().parent().remove();">删除</a></td>
+	                            </tr>
+	                        </foreach>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bot" style="width:200px;margin: 50px auto;"><a href="JavaScript:void(0);" onclick="adsubmit()" class="ncap-btn-big ncap-btn-green" id="submitBtn" style="width:200px;">确认提交</a></div>
+        </div>
+  </form>
+</div>
+ <script>
+	function aaa(vv){
+		var oo= "showVal" + vv; 
+		$("#"+oo+" input[type='hidden']").each(function(){
+			if($(this).val() == 0){
+				$(this).attr("value","1")
+				$("#"+oo+" span").each(function(){
+					$(this).attr("class","yes");
+					$(this).html("<i class= 'fa fa-ban'></i>是");
+					
+				});
+			}else{
+				$(this).attr("value","0")
+				$("#"+oo+" span").each(function(){
+					$(this).attr("class","no");
+					$(this).html("<i class='fa fa-ban'></i>否");
+				});
+			} 
+		});
+	}
+ 	function select_goods()
+    {
+        if($("input[type='checkbox']:checked").length == 0)
+        {
+            layer.alert('请选择商品', {icon: 2}); //alert('请选择商品');
+            return false;
+        }
+        //将没选中的复选框所在的  tr  remove  然后删除复选框
+        $("input[type='checkbox']").each(function(){
+            if($(this).is(':checked') == false)
+            {
+                $(this).parent().parent().parent().remove();
+                //$("#goods_list", window.parent.document).append("<tr>"+$(this).html()+'<td><a href="javascript:;" class="icon-close" onclick="goods_del(this)"></a></td></tr>');
+            }else{
+                $(this).parent().parent().css('display','none');
+                $(this).attr("checked","checked");
+            }
+            //$(this).siblings().show();
+        });
+//        $(".btn-info").remove();
+        javascript:window.parent.call_back($('#goos_table').html());
+    }
+    function selectGoods(){
+        var goods_id = [];
+        //过滤选择重复商品
+        $('input[name*="goods_id"]').each(function(i,o){
+            goods_id.push($(o).val());
+        });
+        var url = '/index.php?m=Admin&c=Promotion&a=add_brand_goods&goods_id='+goods_id+'&t='+Math.random();
+        layer.open({
+            type: 2,
+            title: '选择商品',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['70%', '80%'],
+            content: url,
+        });
+    }
+
+    function call_back(table_html)
+    {
+        layer.closeAll('iframe');
+        $('#goods_list').append(table_html);
+    }
+
+  	function img_call_back1(fileurl_tmp)
+    {
+        $("#image1").val(fileurl_tmp);
+        $("#img_a1").attr('href', fileurl_tmp);
+        $("#img1").attr('src', fileurl_tmp);
+        $("#img_i1").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+    function img_call_back2(fileurl_tmp)
+    {
+        $("#image2").val(fileurl_tmp);
+        $("#img_a2").attr('href', fileurl_tmp);
+        $("#img2").attr('src', fileurl_tmp);
+        $("#img_i2").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+    function img_call_back3(fileurl_tmp)
+    {
+        $("#image3").val(fileurl_tmp);
+        $("#img_a3").attr('href', fileurl_tmp);
+        $("#img3").attr('src', fileurl_tmp);
+        $("#img_i3").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+    function img_call_back4(fileurl_tmp)
+    {
+        $("#image4").val(fileurl_tmp);
+        $("#img_a4").attr('href', fileurl_tmp);
+        $("#img4").attr('src', fileurl_tmp);
+        $("#img_i4").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+
+	 function adsubmit(){
+	 	if($("#showVal1").val()==undefined){
+	 		//alert('请选择商品');return false;
+	 	}
+	 	if($("#brand_sort").val()==''){
+	 		alert('排序不能为空');return false;
+	 	}
+	 	if($("#brand_name").val()==''){
+	 		alert('品牌名称不能为空');return false;
+	 	}
+	 	if($("#brand_name").val().length>8){
+	 		alert('品牌名称超过8个字符');return false;
+	 	}
+	 	if($("#ad_code1").val()==''){
+	 		alert('图片A为空');return false;
+	 	}
+	 	if($("#ad_code2").val()==''){
+	 		alert('图片B为空');return false;
+	 	}
+	 	if($("#ad_code3").val()==''){
+	 		alert('图片C为空');return false;
+	 	}
+	 	if($("#ad_code4").val()==''){
+	 		alert('图片D为空');return false;
+	 	}
+
+		$('#handleposition').submit();
+	}
+	
+    $(document).ready(function(){
+		$('#start_time').layDate();
+		$('#end_time').layDate();
+	});
+
+    $(function () {
+        $('.con-title ul li').click(function () {
+            $(this).addClass('con-brand-tab').siblings().removeClass('con-brand-tab');
+            $('.con-body .con-brand').eq($(this).index()).addClass('con-brand-show').siblings('.con-brand').removeClass('con-brand-show');
+        });
+
+        $('#allSelect').click(function () {
+            $("#con-goods-tbofy input:checkbox").prop("checked", $(this).prop('checked'));
+        });
+        $("#con-goods-tbofy input:checkbox").click(function() {
+            //当选中的长度等于checkbox的长度的时候,就让控制全选反选的checkbox设置为选中,否则就为未选中
+            if($("#con-goods-tbofy input:checkbox").length === $("#con-goods-tbofy input:checked").length){
+                $("#allSelect").prop("checked", true);
+            }else{
+                $("#allSelect").prop("checked", false);
+            }
+        })
+
+    })
+
+ </script>
+</body>
+</html>

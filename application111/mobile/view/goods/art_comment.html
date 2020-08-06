@@ -1,0 +1,262 @@
+<include file="public/header" title="文章评论" body="pore_add"/>
+
+<style>
+    body{
+        padding-top: 1.6rem;
+        background: #fafafa;
+    }
+    .collect-goods-title{
+        width: 100%;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: .58rem;
+        background: #fff;
+        margin-bottom:1rem;
+        border-bottom: 1px solid #efefef;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+    .collect-goods-title a{
+        position: absolute;
+        left: .8rem;
+        top: .4rem;
+        display: block;
+        width: .44rem;
+        height: .8rem;
+        background: url(__MOBILE__/images/btn_more@3x.png) no-repeat;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+    }
+    .art-comment-container,.art-comment-list,.art-comment-list .art-comment-col,.art-comment-list .art-comment-col dl{
+        width: 100%;
+        height: auto;
+        background: #fff;
+    }
+    .art-comment-list{
+        padding: .5rem .6rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .art-comment-list .art-comment-col{
+        border-bottom: 1px solid #ededed;
+        padding: .6rem 0;
+        position: relative;
+    }
+    .art-comment-list .art-comment-col:not(:first-child){
+        /*margin-top: .2rem;*/
+    }
+    .art-comment-list .art-comment-col dl{
+        overflow: hidden;
+        margin: 0;
+    }
+    .art-comment-list .art-comment-col dl dt{
+        float: left;
+        width: 18%;
+    }
+    .art-comment-list .art-comment-col dl dt img{
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+    .art-comment-list .art-comment-col dl dd{
+        float: left;
+        width: 82%;
+    }
+    .art-comment-list .art-comment-col dl dd h2{
+        font-size: .64rem;
+        font-weight: normal;
+        margin: 0;
+    }
+    .art-comment-list .art-comment-col dl dd span{
+        display: block;
+        color: #999;
+        font-size: .5rem;
+        margin: .3rem 0;
+    }
+    .art-comment-list .art-comment-col dl dd p{
+        font-size: .54rem;
+        line-height: .74rem;
+        color: #555;
+        margin: 0;
+    }
+    .art-comment-list .art-comment-col .like{
+        display: block;
+        min-width: .6rem;
+        height: .6rem;
+        padding-left: .8rem;
+        line-height: .8rem;
+        font-size: .46rem;
+        text-decoration: none;
+        color: #888;
+        background: url(__MOBILE__/images/like_unpre@2x.png) no-repeat left center;
+        position: absolute;
+        right: .0rem;
+        top: .8rem;
+        z-index: 10;
+    }
+    .art-comment-list .art-comment-col .onLike{
+        background: url(__MOBILE__/images/like_pre@2x.png) no-repeat left center;
+        z-index: 20;
+    }
+    .art-comment-list .art-comment-col .like,.art-comment-list .art-comment-col .onLike{
+        -webkit-background-size: auto 100%;
+        -moz-background-size: auto 100%;
+        -o-background-size: auto 100%;
+        background-size: auto 100%;
+    }
+
+    .send-comments-container{
+        width: 100%;
+        padding: .4rem .6rem;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        background: #fff;
+    }
+    .send-comments-container dt{
+        float: left;
+        width: 85%;
+    }
+    .send-comments-container dt input{
+        display: block;
+        outline: none;
+        width: 100%;
+        height: 1.4rem;
+        border: 1px solid #ededed;
+        border-radius: .2rem;
+        padding: .2rem .4rem;
+        font-size: .6rem;
+        font-weight: normal;
+    }
+    .send-comments-container dd{
+        float: left;
+        width: 15%;
+    }
+    .send-comments-container dd input{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        line-height: 1.4rem;
+        font-size: .7rem;
+        outline: none;
+        background: none;
+        border: none;
+        color: #555;
+    }
+</style>
+
+    <div class="collect-goods-title"><a href="javascript:history.go(-1);"></a>评论</div>
+    <div class="art-comment-container">
+        <ul class="art-comment-list">
+            <li class="art-comment-col">
+                <dl>
+                    <dt><img src="__MOBILE__/images/w8.png" alt=""></dt>
+                    <dd>
+                        <h2>天高任鸟飞</h2>
+                        <span>01月03日 17:52</span>
+                        <p>礼品真是出乎意料的好呢！很开心节日有男朋友送的惊喜，小礼也很给力哟~</p>
+                    </dd>
+                </dl>
+                <a href="javascrip:;" class="like">1</a>
+                <input type="hidden" name="likeNum" value="1">
+            </li>
+            <li class="art-comment-col">
+                <dl>
+                    <dt><img src="__MOBILE__/images/w8.png" alt=""></dt>
+                    <dd>
+                        <h2>天高任鸟飞</h2>
+                        <span>01月03日 17:52</span>
+                        <p>礼品真是出乎意料的好呢！很开心节日有男朋友送的惊喜，小礼也很给力哟~</p>
+                    </dd>
+                </dl>
+                <a href="javascrip:;" class="like">52</a>
+                <input type="hidden" name="likeNum" value="52">
+            </li>
+            <li class="art-comment-col">
+                <dl>
+                    <dt><img src="__MOBILE__/images/w8.png" alt=""></dt>
+                    <dd>
+                        <h2>天高任鸟飞</h2>
+                        <span>01月03日 17:52</span>
+                        <p>礼品真是出乎意料的好呢！很开心节日有男朋友送的惊喜，小礼也很给力哟~</p>
+                    </dd>
+                </dl>
+                <a href="javascrip:;" class="like"></a>
+                <input type="hidden" name="likeNum" value="0">
+            </li>
+        </ul>
+    </div>
+
+    <dl class="send-comments-container">
+        <dt><input type="text" name="conments" id="comments" placeholder="我也说几句..."></dt>
+        <dd><input type="button" name="sendComment" value="发送" onclick="sendComment()"></dd>
+    </dl>
+
+    <script>
+        function sendComment(){
+            var comments = $('#comments').val();
+            if(comments != ''){
+                $.ajax({
+                    type: 'POST',
+                    url: '',
+                    data: {
+                        commemt: comments
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        layer.open({content: msg, time: 2});
+                        location.href = 'Goods/articleInfo';
+                    }
+                })
+            }
+        }
+
+        $(function () {
+            //点赞
+            $('.art-comment-list').find('.like').each(function () {
+                $(this).click(function () {
+                    var likeVal = parseInt($(this).siblings('input').val());  //
+                    likeVal += 1;
+                    $.ajax({
+                        type: 'POST',
+                        url: '',
+                        data: {
+                            likeNum: likeVal
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            if(data.state === 0){    //状态值===0的才可以点赞，否则提示已赞过
+                                $(this).addClass('onLike');
+                                $(this).text(likeVal);
+                                $(this).siblings('input').val(likeVal);
+                            }else{  //已点赞提示 已赞过
+                                layer.open({content: msg, time: 2});
+                            }
+                        }
+                    })
+                })
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>

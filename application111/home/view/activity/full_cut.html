@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes” />
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge,chrome=1″/>
+    <title>一礼通商城满就减专场特惠活动_精美礼品_创意礼品攻略_一礼通</title>
+    <meta name="keywords" content="晶美礼品,创意礼品,礼品攻略,一礼通">
+    <meta name="description" content="想送亲朋好友一份特别又有创意的礼物?除了一般的礼品,一礼通商城专场特惠活动，为您提供各种各样的礼物建议,让您和最爱的人们过上温馨的节日!">
+    <link rel="stylesheet" href="__STATIC__/css/active_css.css">
+
+</head>
+<body>
+    <!--------头部开始-------------->
+    <include file="public/businessHeader" />
+    <!--------头部结束-------------->
+    
+
+
+    <!-- ----------------  活动banner start  ----------------- -->
+    
+    <div class="f-banner">
+        <div class="inner">
+            <img src="{$prom[0]['prom_img']}" alt="">
+        </div>
+    </div>
+    
+    <!-- ----------------  活动banner start  ----------------- -->
+
+    
+
+
+    <!-- ----------------  活动列表 start  ----------------- -->
+    <div class="full-cut-bg">
+        <div class="container990">
+
+            <!-- 活动规则 start -->
+            <div class="f-rules-col">
+                <a href="javascript:void(0);" class="f-rules-btn">活<br>动<br>规<br>则<br></a>
+            </div>
+            <!-- 活动规则 end -->
+
+            <!-- 活动产品 start -->
+            <div class="f-col">
+                <ul class="f-goods-list" id="f-goods-list">
+				<foreach name="prom" item="v"  >
+				<foreach name="v.goods_list" item="vo" key="k" >
+                    <li>
+                        <p class="full-cut-sign">满减</p>
+                        <div class="f-goods-img"><a href="{:Url('Home/Goods/goodsInfo',array('id'=>$vo[goods_id]))}"><img src="{$vo.goods_thumb}" alt=""></a></div>
+                        <div class="full-cut-tips">满{$v.money}元减{$v.expression}元</div>
+                        <h4>{$vo.goods_name}</h4>
+                        <p>优惠价：¥<span>{$vo.shop_price}</span></p>
+                        <a href="{:Url('Home/Goods/goodsInfo',array('id'=>$vo[goods_id]))}" class="f-buy-btn" title="立即购买"></a>
+                    </li>
+				</foreach>
+				</foreach>
+                </ul>
+            </div>
+            <!-- 活动产品 end -->
+        </div>
+    </div>
+
+    <!-- 活动规则 start -->
+    <div class="f-rules-bg">
+        <div class="f-rules clearfix">
+            <a href="javascript:void(0);" class="f-rules-close"></a>
+            <h2 class="f-tules-title">满减活动规则</h2>
+            <div class="f-rules-content">
+			<textarea style="width:100%;min-height:450px;background:#fff;" disabled> {$prom[0]['description']}</textarea>
+               
+            </div>
+        </div>
+    </div>
+    <!-- 活动规则 end -->
+
+    <!-- ----------------  活动列表 end  ----------------- -->
+
+    <!--------footer-开始-------------->
+    <include file="public/footer" />
+    <!--------footer-结束-------------->
+
+    <script src="__PUBLIC__/js/jquery-2.1.4.min.js"></script>
+
+    <script>
+
+        $(function () {
+            //活动规则弹出
+            $('.f-rules-btn').click(function () {
+                $('.f-rules-bg').fadeIn(200);
+            });
+
+            //收起活动规则弹框
+            $('.f-rules-close').click(function () {
+                $('.f-rules-bg').fadeOut(200);
+            });
+        })
+    </script>
+
+</body>
+</html>

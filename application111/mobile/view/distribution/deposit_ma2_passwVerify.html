@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修改支付宝</title>
+		<link rel="stylesheet" href="__MOBILE__/css/deposit/index.css">
+		<style type="text/css">
+			.inputCode span{
+				width: 1.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="register" class="enroll">
+			<header>
+				<div class="back"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_black.png"></a></div>
+				<div class="headName">修改支付宝账号</div>
+				<div></div>
+			</header>
+			<input type="hidden" name="id" value="{$id}">
+			<section>
+				<div class="b_progress">
+					<div>2/3</div>
+					<div>提现密码验证</div>
+				</div>
+				<div id="verifyCode">
+					<div class="inputCode">
+						<span>提现密码</span>
+						<input type="password" name="password" placeholder="请输入6位数提现密码" maxlength="6" onkeyup="value=value.replace(/[^\d]/g,'')" value="{passwCode}" v-model="passwCode">
+					</div>
+				</div>
+				<div class="submit"  onclick="Next()">下一步</div>
+			</section>
+		</div>
+		<script src="__MOBILE__/js/deposit/screenAdaptation.js"></script>
+		<script src="__MOBILE__/js/deposit/vue.js"></script>
+		<script src="__MOBILE__/js/deposit/common.js"></script>
+    	<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			const defatultTime = 60; // 默认倒计时时间
+			var wap = new Vue({
+				el: "#verifyCode",
+				data: {
+					passwCode: "", //提现密码
+				},
+				methods: {
+				}
+			})
+			function Next(){
+				var id=$("input[name='id']").val();
+				var password=$("input[name='password']").val();
+		    	$.ajax({
+                    type : "POST",
+                    url:"/index.php?m=Mobile&c=Distribution&a=deposit_ma2_passwVerify",
+                    data :{password:password,id:id},
+                    success: function(data)
+                    {
+                        if(data.status == 1)
+                        {
+							location.href = "/Mobile/Distribution/deposit_ma3_alipay/id/"+id;
+                        }else{
+                            alert(data.msg);
+                        }
+                    }
+                });
+			}
+		</script>
+		
+	</body>
+</html>

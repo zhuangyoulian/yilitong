@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-商品详情-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+
+    <link rel="stylesheet" href="__BUSINESS__/style/diyUpload.css" />
+    <link rel="stylesheet" href="__BUSINESS__/style/webuploader.css" />
+
+    <!-- 评论 -->
+    <link rel="stylesheet" href="__STATIC__/css/designer_details_comment.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer_details_style.css">
+
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+
+<body style="background:#efefef;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<include file="works/navigation" />
+
+<!--  主图 start  -->
+<div class="inner works-details-main-col" style="margin-top:20px;">
+    <div class="selling-works-details-col clearfix">
+        <div class="selling-works-details-title">
+            <h1>商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</h1>
+            <div class="works-price-freight">
+                <dl>
+                    <dt>售价：<span>168.00</span></dt>
+                    <dd>邮费：<span>10.00</span></dd>
+                </dl>
+                <ul>
+                    <li class="collect-works"><a href="javascript:void(0);" id="collect-works" onclick="collect_works(works_id)">收藏</a></li>
+                    <!--<li><a href="javascript:void(0);"></a></li>-->
+                    <li><div class="bdsharebuttonbox" style="float:left;"><a href="#" class="bds_more" id="link-out" data-cmd="more">转发</a></div>
+                        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- banner start -->
+        <div class="designs-banner">
+            <div class="banner-shade">
+                <ul class="slide-banner clearfix">
+                    <li><img src="__STATIC__/images/luobobg1.png" alt=""></li>
+                    <li><img src="__STATIC__/images/luobobg2.png" alt=""></li>
+                    <li><img src="__STATIC__/images/luobobg3.png" alt=""></li>
+                    <li><img src="__STATIC__/images/luobobg4.png" alt=""></li>
+                </ul>
+            </div>
+            <ul class="slide-btn">
+                <li class="slideBtnAct"></li>
+                <li></li>
+                <li></li>
+                <li style="margin-right:0;"></li>
+            </ul>
+            <a href="javascript:void(0);" id="slide-left"></a>
+            <a href="javascript:void(0);" id="slide-right"></a>
+        </div>
+        <!-- banner end -->
+        <div class="selling-works-details-dom clearfix">
+            <dl class="designs-buy-addShoppingCar clearfix">
+                <dt><a href="javascript:void(0);" onclick="AjaxAddCart({$goods.goods_id},1,1);">立即购买</a></dt>
+                <dd><a href="javascript:void(0);" onclick="AjaxAddCart({2533,1,0)">加入购物车</a></dd>
+            </dl>
+            <div class="add-reduce-num">
+                数量：
+                <span onclick="switch_num(-1)">-</span>
+                <input type="text" name="works-num" id="works-num" value="1">
+                <span onclick="switch_num(1)">+</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--  主图 edn  -->
+
+
+<!--  设计师 信息 start  -->
+<div class="inner designs-seller-infos clearfix">
+    <div class="designs-seller-infos-left">
+        <div class="designs-seller-headImg"><a href="#"><img src="__STATIC__/images/tou2.png" alt=""></a></div>
+        <div class="designs-seller-infos-ist">
+            <h4><a href="#">天高任鸟飞，海阔凭鱼跃</a><span>广东深圳</span></h4>
+            <p>平面设计师</p>
+        </div>
+    </div>
+    <div class="designs-seller-infos-right">
+        <a href="#" class="contacting">和TA联系</a>
+        <ul class="connect-designer">
+            <li><a href="#">访问TA</a></li>
+            <li><a href="#" id="following" onclick="addAttention(designers_id,states,added)">关注TA</a></li>
+        </ul>
+    </div>
+</div>
+<!--  设计师 信息 end  -->
+
+<!--  商品描述 start  -->
+<div class="inner designs-selling-works-description">
+    <h4 class="works-description-title">商品描述</h4>
+    <section class="works-descriptions">
+        ssdsadasd
+    </section>
+</div>
+<!--  商品描述 end  -->
+
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+
+<!--  评论  -->
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.flexText.js"></script>
+<script src="__STATIC__/js/design_details_comment.js"></script>
+<script src="__PUBLIC__/js/layer/layer.js"></script>
+<script src="__PUBLIC__/js/pc_common.js"></script>
+
+<script>
+
+    //收藏
+    function collect_works(works_id){
+        $.ajax({
+            type : "GET",
+            dataType: "json",
+            url:"/index.php?m=Home&c=works&a=collect_works&works_id="+works_id,//+tab,
+            success: function(data){
+                layer.msg(data.msg, {icon: 1});
+                //alert(data.msg);
+                $(this).addClass('collected');
+            }
+        });
+    }
+
+    //数量加减
+    function switch_num(num)
+    {
+        var num2 = parseInt($("#works-num").val());
+        num2 += num;
+        if(num2 < 1) num2 = 1; // 保证购买数量不能少于 1
+        $("#works-num").val(num2); // 修改商品购买数量
+    }
+
+    //关注作者
+    function addAttention(designers_id,states,added){
+        $.ajax({
+            type : "POST",
+            dataType: "json",
+            url:"/index.php?m=Home&c=designers&a=collect_designers&designers_id="+designers_id,//+tab,
+            success: function(data){
+                if(data.status == '1'){
+                    if(states == 1){ //判断已登录状态
+                        //显示已关注
+                        if(added == 1){ //判断已经关注状态
+                            alert('已经关注TA');
+                            $('#following').text('已关注');
+                        }else{
+                            //alert(data.msg);
+                            alert('关注成功');
+                            $('#following').text('已关注').css({backgroundColor:'#ed6c01',borderColor:'#ed6c01',color:'#fff'});
+                        }
+
+                    }else if(states == 0){
+                        alert('请先登录');
+                    }
+                }
+            }
+        });
+    }
+
+
+    $(function (){
+        //JQuery--banner轮播 start
+        var iNow=0;
+
+        function slide(){
+            $('.slide-btn li').eq(iNow).addClass('slideBtnAct').siblings().removeClass('slideBtnAct');
+            $('.slide-banner').stop().animate({left:-600*iNow},300);
+        }
+
+        $('.slide-btn li').mouseover(function () {
+            var i = $(this).index();
+            iNow = i;
+            slide();
+        });
+
+        $('#slide-left').click(function () {
+            iNow--;
+            if(iNow < 0) iNow = 3;
+            slide();
+        });
+
+        $('#slide-right').click(function () {
+            iNow++;
+            if(iNow > 3) iNow = 0;
+            slide();
+        });
+        //JQuery--banner轮播 end
+
+
+        //搜索
+        $('.search-type').on('click',function () {
+            $('.search-type-list').css('display','block');
+        })
+        $('.search-type').on('mouseleave',function () {
+            $('.search-type-list').css('display','none');
+        })
+
+        $('.search-type-list li').each(function () {
+            $(this).click(function () {
+                $('.searching-type').text($(this).text());
+            })
+        })
+    })
+
+
+</script>
+
+</body>
+</html>

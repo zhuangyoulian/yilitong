@@ -1,0 +1,138 @@
+<table>
+ 	<tbody>
+     	<volist name="res" id="list">
+      	<tr>
+          <td class="sign" axis="col0">
+            <div style="width: 24px;"><i class="ico-check"></i></div>
+          </td>
+          <td align="left" abbr="do_id" axis="col3" class="">
+            <div style="text-align: left; width: 50px;" class="">{$list.id}</div>
+          </td>
+          <td align="center" abbr="article_time" axis="col6" class="">
+            <div style="text-align: center; width: 100px;" class="">{$list.data_type}</div>
+          </td>
+          <td align="center" abbr="article_time" axis="col6" class="">
+            <div style="text-align: center; width: 120px;" class="">{$list.project_name}</div>
+          </td>
+          <td align="center" abbr="article_time" axis="col6" class="">
+            <div style="text-align: center; width: 120px;" class="">{$list.nickname}</div>
+          </td>
+          <if condition="$list.data_type eq '医疗防护代采合同'">
+            <td align="center" abbr="article_time" axis="col6" class="">
+              <div style="text-align: center; width: 120px;" class="">{$list.a_name}</div>
+            </td>
+            <td align="center" abbr="article_time" axis="col6" class="">
+              <div style="text-align: center; width: 120px;" class="">{$list.lx_username}</div>
+            </td>
+            <td align="center" abbr="article_time" axis="col6" class="">
+              <div style="text-align: center; width: 120px;" class="">{$list.lx_tel}</div>
+            </td>
+          <else/>
+            <td align="center" abbr="article_time" axis="col6" class="">
+              <div style="text-align: center; width: 120px;" class="">乙方：{$list.company_name}</div>
+            </td>
+            <td align="center" abbr="article_time" axis="col6" class="">
+              <div style="text-align: center; width: 120px;" class="">乙方：{$list.company_person}</div>
+            </td>
+            <td align="center" abbr="article_time" axis="col6" class="">
+              <div style="text-align: center; width: 120px;" class="">乙方：{$list.company_tel}</div>
+            </td>
+          </if>
+          <td align="center" axis="col0">
+            <div style="text-align: center; width: 120px;" class="">{$list.contract_num}</div>
+          </td>  
+          <td align="center" abbr="article_time" axis="col6" class="">
+            <div style="text-align: center; width: 100px;" class="">{$list.add_time|date='Y-m-d',###}</div>
+          </td>
+          <td align="center" axis="col0">
+            <div style="text-align: center; width: 100px;">
+              <if condition='$list[is_accomplish] eq 1'>
+                <span class="yes"><i class="fa fa-check-circle"></i>是</span>
+                <else />
+                <span class="no" ><i class="fa fa-ban"></i>否</span>
+              </if>
+            </div>
+          </td>  
+          <td align="center" axis="type">
+            <div style="text-align: center; width: 100px;">
+              <if condition='$list[type] eq 2'>
+                <span class="no" onClick="changeTableVal_table('contract_list','id','{$list.id}','type',this)" ><i class="fa fa-ban"></i>未审核</span>
+                <elseif condition='$list[type] eq 4'/>
+                <span class="no" onClick="changeTableVal_table('contract_list','id','{$list.id}','type',this)" ><i class="fa fa-ban"></i>不通过</span>
+                <elseif condition='$list[type] eq 3'/>
+                <span class="yes" onClick="changeTableVal_table('contract_list','id','{$list.id}','type',this)" ><i class="fa fa-check-circle"></i>通过</span>
+              </if>
+            </div>
+          </td>  
+          <td align="left" axis="col1" class="handle" align="center">
+            <div style="text-align: left; width: 100px;">
+              <a class="btn green" target="_blank" href="{:Url('/Mobile/Charity/contract_transfer',array('d_id'=>$list.d_id,'p_id'=>$list.p_id,'c_id'=>$list.c_id,'Lo_id'=>$list.p_id,'u_id'=>$list.user_id,'id'=>$list.id))}"> <i class="fa fa-edit"></i>编辑</a>
+              <a class="btn green" href="{$list.img_url}"><i class="fa fa-file-powerpoint-o"></i>查看/下载</a>
+              <if condition="$list.attachment">
+                  <a class="btn green" href="{$list.attachment}"><i class="fa fa-file-excel-o"></i>下载附件</a>
+              </if>
+              <if condition="$list[type] neq 3">
+                <a class="btn green" href="javascript:void(0)" data-url="{:Url('/Admin/System/contract_list_del',array('id'=>$list.id))}"  onclick="delfun(this)" > <i class="fa fa-edit"></i>删除</a>
+              </if>
+            </div>
+          </td>
+          <td align="" class="" style="width: 100%;">
+            <div>&nbsp;</div>
+          </td>
+        </tr>
+      </volist>
+  </tbody>
+</table>
+<div class="row">
+    <div class="col-sm-6 text-left"></div>
+    <div class="col-sm-6 text-right">{$page}</div>
+</div>
+<script>
+    $(".pagination  a").click(function(){
+        var page = $(this).data('p');
+        console.log(page);
+        ajax_get_table('search-form2',page);
+    });
+
+    $('.ftitle>h5').empty().html("(共{$pager->totalRows}条记录)");
+
+  
+
+    // 修改指定表的指定字段值 包括有按钮点击切换是否 或者 排序 或者输入框文字
+  function changeTableVal_table(table,id_name,id_value,field,obj)
+  { 
+      var src = "";
+       if($(obj).hasClass('no')) // 图片点击是否操作
+       {          
+          $(obj).removeClass('no').addClass('yes');
+          $(obj).html("<i class='fa fa-check-circle'></i>通过");
+          var value = 3;
+          
+       }else if($(obj).hasClass('yes')){ // 图片点击是否操作                     
+          $(obj).removeClass('yes').addClass('no');
+          $(obj).html("<i class='fa fa-ban'></i>不通过");
+          var value = 4;
+       }else{ // 其他输入框操作
+         var value = $(obj).val();       
+         }
+                                                        
+      $.ajax({
+              type:'POST',
+        url:"/index.php?m=Admin&c=Index&a=changeTableVal",  
+              data:{table:table,id_name:id_name,id_value:id_value,field:field,value:value},
+              dataType:'json',
+        success: function(data){  
+           if (data.status ==1) {
+              layer.msg('更新成功', {icon: 1}); 
+              return;
+           }else if(data.status==5){
+              alert(data.msg);
+              $(obj).removeClass('yes').addClass('no');
+              $(obj).html("<i class='fa fa-ban'></i>否");
+              return;
+           }  
+        }
+      });   
+  }
+
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>发布成功</title>
+		<link rel="stylesheet" href="__XCSS__/iconfont.css">
+		<link rel="stylesheet" href="__XCSS__/normalize.css">
+		<link rel="stylesheet" href="__XCSS__/public.css">
+		<link rel="stylesheet" href="__XCSS__/release.css">
+
+	</head>
+	<body>
+		<div class="release_box flexc" id="app">
+
+			<div class="bg_ima flex1 " style="    background-image: url(__XIMG__/bj.jpg);">
+				<div class="c h f18">
+					<div class="face iconfont icon-yiwancheng-copy"></div>
+					<div class="win">发布成功</div>
+				</div>
+			</div>
+			<div class="flex1">
+				<div class="flexr">
+					<div class="my flex1 r" @click="my">我的采购</div>
+					<div class="home_p flex1" @click="main">首页</div>
+				</div>
+			</div>
+		</div>
+		<script src="__XJS__/vue.js"></script>
+		<script src="__XJS__/vue-resource.js"></script>
+		<script>
+			var app = new Vue({
+				el: "#app",
+				data: {
+
+				},
+				created: function() { // 进入
+
+				},
+				mounted: function() { // 挂载后
+
+
+				},
+				updated: function() {
+
+				},
+				methods: {
+					my: function(e) { //我的采购
+						console.log("点击我的采购:");
+						// this.submitData();
+						console.log("进入下一页...");
+						location.href = "<?php echo Url('Supplychain/myshop_list');?>" //跳转至contact_2界面
+					},
+					main: function(e) { //首页
+						console.log("点击首页:");
+						// this.submitData();
+						console.log("进入下一页...");
+						location.href = "{:Url('Index/index_11_20')}" //跳转至contact_2界面
+					}
+
+				}
+
+			})
+		</script>
+
+	</body>
+</html>

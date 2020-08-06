@@ -1,0 +1,41 @@
+			<dl class="row">
+				<dt class="tit">
+					<label for="cls_full">权限分配</label>
+				</dt>
+				<dd style="margin-left:200px;">
+					<div class="ncap-account-container" style="border-top:none;">
+						<h4>
+							<input id="cls_full" onclick="choosebox(this)" type="checkbox">
+							<label>全选</label>
+						</h4>
+					</div>
+					<foreach name="modules" item="menu" key="kk">
+						<div class="ncap-account-container" style="border-top:none;">
+							<h4>
+								<label>{$group[$kk]}</label>
+								<input value="1" cka="mod-{$kk}" type="checkbox">
+								<label>全部</label>
+							</h4>
+							<ul class="ncap-account-container-list">
+								<foreach name="menu" item="vv">
+									<li>
+										<label><input class="checkbox" name="right[]" value="{$vv.id}" <if condition="$vv.enable eq 1">checked</if> ck="mod-{$kk}" type="checkbox">{$vv.name}</label>
+									</li>
+								</foreach>
+							</ul>
+						</div>
+					</foreach>
+				</dd>
+			</dl>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(":checkbox[cka]").click(function(){
+						var $cks = $(":checkbox[ck='"+$(this).attr("cka")+"']");
+						if($(this).is(':checked')){
+							$cks.each(function(){$(this).prop("checked",true);});
+						}else{
+							$cks.each(function(){$(this).removeAttr('checked');});
+						}
+					});
+				});
+			</script>

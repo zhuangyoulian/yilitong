@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商家入驻申请—审核</title>
+
+    	<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+		<link rel="stylesheet" href="__BUSINESS__/style/apply_one.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="__BUSINESS__/style/fontsIco.css">
+		<link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+		<link rel="stylesheet" href="__BUSINESS__/style/apply_four.css" />
+		<script type="text/javascript" src="__BUSINESS__/js/jquery.min.js"></script>
+		<script>
+			if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+				alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+			}
+		</script>
+	</head>
+	<body>
+		<!--<div class="header">-->
+			<div class="customer-header" style="height:100px;line-height:100px;">
+				<div class="wrap">
+					<div class="simplelogo" style="overflow: hidden;">
+						<ul class="logo-businessCenter">
+							<!-- <li class="logo-businessCenter-li1"><a href="/"><img src="__BUSINESS__/images/regLogo.png" alt="logo" style=""></a></li> -->
+							<li class="logo-businessCenter-li2"><a href="{:Url('Home/RedBusiness/BusinessIndex')}">商家中心</a></li>
+						</ul>
+						<!-- <ul class="regs-info">
+							<li>24小时服务电话：400-089-7879</li>
+							<li><a href="http://yilitong.com/index.php/Home/Article/detail/article_id/43.html">商家指南</a></li>
+						</ul> -->
+					</div>
+				</div>
+			</div>
+			<hr style="box-shadow:0 1px 2px #ccc;">
+
+			<div class="inner" style="padding:0 0 100px 0">
+				<div class="seller">
+					<p>商户：<span>{$supplier.user_name}</span><a href="login_out">退出</a></p>
+				</div>
+				<div class="clearfix"></div>
+
+				<!--入驻进度-->
+				<div class="centrol-controller-800">
+					<ul class="progress-bar">
+						<li>
+							<span>1</span>
+							<p class="progress-bar-info">填写公司基本信息</p>
+						</li>
+						<li>
+							<span>2</span>
+							<p class="progress-bar-info">上传资质</p>
+						</li>
+						<li class="gray-bg">
+							<span>3</span>
+							<p class="progress-bar-info">等待审核</p>
+						</li>
+						<li class="progress-bar-noBody gray-bg">
+							<span class="gray-bg">4</span>
+							<p class="progress-bar-info">入驻成功</p>
+						</li>
+					</ul>
+				</div>
+
+				<h2 style="margin-top:50px;color:#777;">审核状态</h2>
+				<if condition="$status eq 0">
+					<div class="centrol-controller-800">
+						<h4 class="dear-shop">亲爱的商家：<span style="color:#ff0000;">{$username}</span></h4>
+						<p class="verifying-tips">您提交和资料，我们已全部收到，请耐心等待，我们会在1-3个工作日通知您审核结果，或致电：400-089-7879查询审核进度</p>
+						<div class="info-verify">
+							<div class="verify-result-pic">
+								<img src="__STATIC__/images/verifying.png" alt="">
+							</div>
+							<p class="info-verify-tips">当前的审核状态：<span>店铺正在审核中，请耐心等待</span></p>
+						</div>
+					</div>
+				<elseif condition="$status eq 1">
+					<div class="centrol-controller-800">
+						<h4 class="dear-shop">亲爱的商家：<span style="color:#ff0000;">{$username}</span></h4>
+						<p class="verifying-tips">您提交和资料，我们已全部收到，当前的审核状态：店铺审核通过<a href="#"></a></p>
+						<div class="info-verify">
+							<div class="verify-result-pic">
+								<img src="__STATIC__/images/passIcon.png" alt="">
+							</div>
+							<p class="info-verify-tips">当前的审核状态：<span><a href="/RedSupplier/Index/index">店铺审核通过进入商家中心</a></span></p>
+						</div>
+					</div>
+				<elseif condition="$status eq 2">
+					<div class="centrol-controller-800">
+						<h4 class="dear-shop">亲爱的商家：<span style="color:#ff0000;">{$username}</span></h4>
+						<p class="verifying-tips">您提交和资料，我们已全部收到，当前的审核状态：店铺审核不通过，请致电：400-089-7879查询审核原因</p>
+						<div class="info-verify">
+							<div class="verify-result-pic">
+								<img src="__STATIC__/images/failPassIcon.png" alt="">
+							</div>
+							<p class="info-verify-tips">当前的审核状态：<span><a href="BusinessOne">店铺审核不通过，重新编辑</a></span></p>
+						</div>
+					</div>
+				<elseif condition="$status eq -1">
+					<div class="centrol-controller-800">
+						<h4 class="dear-shop">亲爱的商家：<span style="color:#ff0000;">{$username}</span></h4>
+						<p class="verifying-tips">您的店铺因长期无人维护等原因已被平台关闭，请致电：400-089-7879查询关闭原因</p>
+						<div class="info-verify">
+							<div class="verify-result-pic">
+								<img src="__STATIC__/images/OverIcon.png" alt="">
+							</div>
+							<p class="info-verify-tips">当前店铺状态：<span><a href="BusinessOne">店铺已关闭</a></span></p>
+						</div>
+					</div>
+				</if>
+          </div>
+		<!-- <include file="public/footer" /> -->
+	</body>
+</html>

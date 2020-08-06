@@ -1,0 +1,364 @@
+<include file="public/layout" />
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>优惠券管理 - 编辑优惠券</h3>
+                <h5>网站系统优惠券管理</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="handleposition" method="post">
+        <input type="hidden" name="id" value="{$coupon.id}"/>
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>优惠券名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="name" placeholder="小于等于10个字，不能为空" name="name" value="{$coupon.name}" class="input-txt">
+                    <span class="err" id="err_name"></span>
+                    <p class="notic">请填写优惠券名称</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>优惠券面额</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="money" name="money"  onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" value="{$coupon.money}" class="input-txt">
+                    <span class="err" id="err_money"></span>
+                    <p class="notic">优惠券可抵扣金额</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>消费金额</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="condition" name="condition" value="{$coupon.condition}" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" class="input-txt">
+                    <span class="err" id="err_condition"></span>
+                    <p class="notic">订单需满足的最低消费金额(必需为整数)才能使用</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>发放数量</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="createnumssss" name="createnumssss" value="{$coupon.createnumssss}" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" class="input-txt">
+                    <span class="err" id="err_createnumssss"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl><dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>设置已领取数量</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="shenum" name="shenum" value="{$coupon.shenum}" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" class="input-txt">
+                    <span class="err" id="err_shenum"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>每人限领</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="limitget" name="limitget" value="{$coupon.limitget}" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" class="input-txt">
+                    <span class="err" id="err_limitget"></span>
+                    <p class="notic">默认限领1张，也可以手动上调，必须是大于0的正整数</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>发放类型</label>
+                </dt>
+                <dd class="opt">
+					<!-- <input name="type" type="radio" value="0" <if condition="$coupon['type'] eq 0">checked</if> ><label>指定发放</label>
+                    <input name="type" type="radio" value="1" <if condition="$coupon['type'] eq 1">checked</if> ><label>下单赠送</label> -->
+                    <input name="type" type="radio" value="2" <if condition="$coupon['type'] eq 2">checked</if> ><label>注册发放</label>
+                    <input name="type" type="radio" value="3" <if condition="$coupon['type'] eq 3">checked</if> ><label>邀请发放</label>
+					<!-- <input name="type" type="radio" value="4" <if condition="$coupon['type'] eq 4">checked</if> ><label>线下发放</label> -->
+                </dd>
+            </dl>
+			  <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>优惠卷使用</label>
+                </dt>
+                <dd class="opt">
+                    <input name="use" type="radio" value="0" <if condition="$coupon['use'] eq 0">checked</if> ><label>全部</label>
+                    <input name="use" type="radio" value="1" <if condition="$coupon['use'] eq 1">checked</if> ><label>电脑端</label>
+                    <input name="use" type="radio" value="2" <if condition="$coupon['use'] eq 2">checked</if> ><label>APP和移动端</label>
+                </dd>
+            </dl>
+            <dl class="row timed">
+                <dt class="tit">
+                    <label><em>*</em>发放起始日期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="send_start_time" name="send_start_time" value="{$coupon.send_start_time|date='Y-m-d H:i:s',###}"  class="input-txt"  autocomplete="off">
+                    <span class="err" id="err_send_start_time"></span>
+                </dd>
+            </dl>
+            <dl class="row timed">
+                <dt class="tit">
+                    <label><em>*</em>发放结束日期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="send_end_time" name="send_end_time" value="{$coupon.send_end_time|date='Y-m-d H:i:s',###}" class="input-txt"  autocomplete="off">
+              
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>使用起始日期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="use_start_time" name="use_start_time" value="{$coupon.use_start_time|date='Y-m-d H:i:s',###}" class="input-txt"  autocomplete="off">
+                    <span class="err" id="err_use_start_time"></span>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>使用结束日期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" id="use_end_time" name="use_end_time" value="{$coupon.use_end_time|date='Y-m-d H:i:s',###}" class="input-txt"  autocomplete="off">
+
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>活动结束后是否自动续期</label>
+                </dt>
+                <dd class="opt">
+                    <input name="renewal" type="radio" value="1" <if condition="$coupon['renewal'] eq 1">checked</if> ><label>自动续期</label>
+                    <input type="text" id="renewaltime" name="renewaltime" value="{$coupon.renewaltime}" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" style="margin-left: 20px;width: 50px;" > 天
+                    <br/>
+                    <input name="renewal" type="radio" value="0" <if condition="$coupon['renewal'] eq 0">checked</if> ><label>不续期</label>
+                </dd>
+                </dd>
+                <dd class="opt">
+                    
+                    
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>自营商品范围</label>
+                </dt>
+                <dd class="opt">
+                    <input name="coupon_type" type="radio" value="0" id="coupon_type1" <if condition="$coupon['coupon_type'] eq 0">checked</if>>
+                    <label class="notic" for="coupon_type1">
+                        <a onclick="selectGoods()" class="ncap-btn"><i class="fa fa-search"></i>选择一礼通部分商品</a>
+                    </label>              
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>店铺商品范围</label>
+                </dt>
+                <dd class="opt">
+                    <input name="coupon_type" type="radio" value="1" id="coupon_type2" <if condition="$coupon['coupon_type'] eq 1">checked</if>>
+                    <label class="notic" for="coupon_type2">
+                        <a onclick="selectSupplier()" class="ncap-btn"><i class="fa fa-search"></i>选择店铺</a>
+                    </label>               
+                </dd>
+            </dl>
+            <dl class="row"> 
+                <dt class="tit">
+                    <label>已选择的优惠商品</label>
+                </dt>
+                <dd class="opt">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="display:none">选择</th>
+                            <th class="text-left">商品名称</th>
+                            <th class="text-left">价格</th>
+                            <th class="text-left">库存</th>
+                            <th class="text-left">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="goods_list">
+                        <foreach name="prom_goods" item="vo">
+                            <tr>
+                                <td style="display:none"><input type="checkbox" name="goods_id[]" checked="checked" value="{$vo.goods_id}"/></td>
+                                <td class="text-left">{$vo.goods_name}</td>
+                                <td class="text-left">{$vo.shop_price}</td>
+                                <td class="text-left">{$vo.store_count}</td>
+                                <td class="text-left"><a href="javascript:void(0)" onclick="javascript:$(this).parent().parent().remove();">删除</a></td>
+                            </tr>
+                        </foreach>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl> 
+
+            <dl class="row" > 
+                <dt class="tit">
+                    <label>已选择的优惠店铺</label>
+                </dt>
+                <dd class="opt">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th style="display:none">选择</th>
+                            <th class="text-left">店铺名称</th>
+                            <th class="text-left">公司名称</th>
+                            <th class="text-left">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="supplier_list" class="supplier">
+                        <foreach name="prom_supplier" item="vo">
+                            <tr >
+                                <td style="display:none"><input type="checkbox" name="supplier_id[]" checked="checked" value="{$vo.supplier_id}"/></td>
+                                <td class="text-left"><div style="text-align: left; width: 300px;">{$vo.supplier_name}</div></td>
+                                <td class="text-left"><div style="text-align: left; width: 300px;">{$vo.company_name}</div></td>
+                                <td class="text-left"><a  href="javascript:void(0)" onclick="javascript:$(this).parent().parent().remove();"><i class="fa fa-trash-o"></i>删除</a></td>
+                            </tr>
+                        </foreach>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>备注</label>
+                </dt>
+                <dd class="opt">
+                    <!-- <input type="text" id="remark" name="remark" value="{$coupon.remark}" class="input-txt"> -->
+                    <textarea  id="remark" name="remark" value="" cols="40" rows="10" style="height: 80px;">{$coupon.remark}</textarea>
+                    <p class="notic">选填,小于等于500字</p>
+                </dd>    
+            </dl>
+            <div class="bot"><a onclick="verifyForm();" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+
+    function call_back(table_html)
+    {
+        layer.closeAll('iframe');
+        $('#goods_list').append(table_html);
+        // $('#supplier_list').html('');
+    }
+
+    function call_back2(table_html,id)
+    {
+        // console.log(id);
+        layer.closeAll('iframe');
+        $('#supplier_list').append(table_html);
+        // $('#goods_list').html('');
+        selectGoodsTwo(id);
+    }
+
+    function selectGoodsTwo(id){
+
+        // console.log(id);
+        var goods_id_T = [];
+        //过滤选择重复商品
+        $('input[name*="goods_id"]').each(function(i,o){
+            goods_id_T.push($(o).val());
+        });
+        var url = '/index.php?m=Admin&c=Coupon&a=search_goods_Two&id='+id+'&goods_id='+goods_id_T+'&t='+Math.random();
+        layer.open({
+            type: 2,
+            title: '选择商品',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['70%', '80%'],
+            content: url,
+        });
+    }
+    function selectGoods(){
+        var goods_id = [];
+        //过滤选择重复商品
+        $('input[name*="goods_id"]').each(function(i,o){
+            goods_id.push($(o).val());
+        });
+        var url = '/index.php?m=Admin&c=Coupon&a=search_goods&goods_id='+goods_id+'&t='+Math.random();
+        layer.open({
+            type: 2,
+            title: '选择商品',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['70%', '80%'],
+            content: url,
+        });
+    }
+
+    function selectSupplier(){
+        var supplier_id = [];
+        //过滤选择重复店铺
+        $('input[name*="supplier_id"]').each(function(i,o){
+            supplier_id.push($(o).val());
+        });
+        var url = '/index.php?m=Admin&c=Coupon&a=search_supplier&supplier_id='+supplier_id+'&t='+Math.random();
+        layer.open({
+            type: 2,
+            title: '选择店铺',
+            shadeClose: true,
+            shade: 0.3,
+            area: ['70%', '80%'],
+            content: url,
+        });
+
+    }
+
+    $('input[type="radio"]').click(function(){
+       // if($(this).val() == 0 || $(this).val() == 4){
+       //     $('.timed').hide();
+       // }else{
+            $('.timed').show();
+       // }
+    })
+
+    $(document).ready(function(){
+        $('input[type="radio"]:checked').trigger('click');
+        $('#send_start_time').layDate();
+        $('#send_end_time').layDate();
+        $('#use_start_time').layDate();
+        $('#use_end_time').layDate();
+    })
+
+    function verifyForm(){
+
+        if($(".supplier").find('tr').length > 1)
+            {
+                layer.alert('只能添加一个商铺', {icon: 2}); //alert('请选择商品');
+                return false;
+            }
+        $('span.err').show();
+        $.ajax({
+            type: "POST",
+            url: "{:Url('Admin/Coupon/coupon_info')}",
+            data: $('#handleposition').serialize(),
+            dataType: "json",
+            error: function () {
+                layer.alert("服务器繁忙, 请联系管理员!");
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    layer.msg(data.msg, {icon: 1});
+                    location.href = "{:Url('Admin/Coupon/index')}";
+                } else {
+                    layer.msg(data.msg, {icon: 2});
+                    $.each(data.result, function (index, item) {
+                        $('#err_' + index).text(item).show();
+                    });
+                }
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

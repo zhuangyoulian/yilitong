@@ -1,0 +1,218 @@
+<include file="public/layout" />
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+  <script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+	<div class="fixed-bar">
+		<div class="item-title">
+			<div class="subject">
+				<h3>询报价管理</h3>
+				<h5>询报价管理列表</h5>
+			</div>
+		</div>
+	</div>
+	<!-- 操作说明 -->
+	<div id="explanation" class="explanation" style="color: rgb(44, 188, 163); background-color: rgb(237, 251, 248); width: 99%; height: 100%;">
+		<div id="checkZoom" class="title"><i class="fa fa-lightbulb-o"></i>
+			<h4 title="提示相关设置操作时应注意的要点">操作提示</h4>
+			<span title="收起提示" id="explanationZoom" style="display: block;"></span>
+		</div>
+		<ul>
+			<li>网站管理员日志列表, 由总平台设置管理.</li>
+		</ul>
+	</div>
+	<div class="flexigrid">
+		<div class="mDiv">
+			<div class="ftitle">
+				<h3>管理员日志列表</h3>
+				<h5>(共{$pager->totalRows}条记录)</h5>
+			</div>
+			<div title="刷新数据" class="pReload"><i class="fa fa-refresh"></i></div>
+		</div>
+				<form id="search-form2" class="navbar-form form-inline"  method="post" action="{:Url('/Admin/Supplier/BusinessExamine')}">
+      <div class="sDiv">             
+        <div class="sDiv2">
+		      <input type="text" class="qsbox" id="input-order-id" placeholder="搜索词" value="{$_POST['keyword']}" name="keyword">                                        
+          <input type="submit" class="btn" value="搜索">
+        </div>
+      </div>
+     </form>
+		<div class="hDiv">
+			<div class="hDivBox">
+				<table cellspacing="0" cellpadding="0">
+					<thead>
+					<tr>
+						<th class="sign" axis="col0">
+							<div style="width: 24px;"><i class="ico-check"></i></div>
+						</th>
+						<th align="left" abbr="article_title" axis="col3" class="">
+                            <div style="text-align: left; width: 120px;" class="">公司名称</div>
+                        </th>
+						 <th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 120px;" class="">采购标题</div>
+                        </th>
+                        <th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">联系人</div>
+                        </th>
+                        <th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">联系电话</div>
+                        </th>
+                        <th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">询价时间</div>
+                        </th>
+						<th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">截止时间</div>
+                        </th>
+						<th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">期望时间</div>
+                        </th>
+
+						<th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">审核状态</div>
+                        </th>
+						 <th align="center" abbr="article_time" axis="col6" class="">
+                            <div style="text-align: center; width: 100px;" class="">审核操作</div>
+                        </th>
+                      	<th align="center" abbr="article_time" axis="col7" class="">
+							<div style="text-align: center; width: 100px;" class="">操作者</div>
+						</th>
+                      	<th align="center" abbr="article_time" axis="col8" class="">
+							<div style="text-align: center; width: 100px;" class="">操作</div>
+						</th>
+						<th style="width:100%" axis="col9">
+							<div></div>
+						</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+      	<div class="tDiv">
+			<div class="tDiv2">
+				<a href="{:Url('admin/article/purchase_info')}">
+					<div class="fbutton">
+						<div title="添加采购" class="add">
+							<span><i class="fa fa-plus"></i>发布采购</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<div class="bDiv" style="height: auto;">
+			<div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+				<table>
+					<tbody>
+					<foreach name="list" item="vo" key="k" >
+						<tr>
+							<td class="sign">
+								<div style="width: 24px;"><i class="ico-check"></i></div>
+							</td>
+							<td align="left" class="">
+								<div style="text-align: left; width: 120px;">{$vo.company_name}</div>
+							</td>
+							<td align="left" class="">
+								<div style="text-align: center; width: 120px;">{$vo.title}</div>
+							</td>
+				
+							<td align="left" class="">
+								<div style="text-align: center; width: 100px;">{$vo.contacts_name}</div>
+							</td>
+							
+							<td align="left" class="">
+								<div style="text-align: left; width: 100px;">{$vo.tel}</div>
+							</td>
+							<td align="left" class="">
+								<div style="text-align: left; width: 100px;">{$vo.inquiry_time|date="Y-m-d ",###}</div>
+							</td>
+							<td align="left" class="">
+
+								<input style="width: 80px;margin-left: 20px; " type="text" value="{$vo.dead_time|date='Y-m-d',###}"  onChange="changeTableVal_s('purchase','id','{$vo.id}','dead_time',this)">
+								<!-- <div style="text-align: left; width: 100px;">{$vo.dead_time|date="Y-m-d ",###}</div> -->
+							</td>
+
+							<td align="left" class="">
+
+								<input style="width: 80px;margin-left: 20px; "  type="text" value="{$vo.expect_time|date='Y-m-d',###}"  onChange="changeTableVal_s('purchase','id','{$vo.id}','expect_time',this)">
+								<!-- <div style="text-align: left; width: 100px;">{$vo.dead_time|date="Y-m-d ",###}</div> -->
+							</td>
+		
+							<td align="center" class="">
+								<div style="text-align: center; width: 100px;">
+                                  <if $vo.status eq 0>未审核</if>										
+                                  <if $vo.status eq 1>审核通过</if>								
+                                  <if $vo.status eq 2>未通过</if>
+                              </div>
+							</td>
+							<td align="left" class="">
+							<if $vo.status eq 1>
+									<a href="{:Url('Admin/Supplier/PurchaseDetail2',array('id'=>$vo['id']))}" style="display:inline-block;text-align: center;width: 60px;line-height: 42px;">查看信息</a>
+									<a href="{:Url('Admin/Supplier/PurchaseHall',array('id'=>$vo['id']))}" style="display:inline-block;text-align: center;width: 60px; line-height: 42px;">报价详情</a>
+							</if>
+							<if $vo.status eq 0/>
+								<a href="{:Url('Admin/Supplier/PurchaseDetail2',array('id'=>$vo['id']))}"><div style="text-align: center; width: 100px;">审核</div></a>
+							</if>
+							<if $vo.status eq 2/>
+								<a href="{:Url('Admin/Supplier/PurchaseDetail2',array('id'=>$vo['id']))}"><div style="text-align: center; width: 100px;">查看</div></a>
+							</if>
+
+							</td>
+              				<td align="left" class="">
+								<div style="text-align: center; width: 100px;">
+									<if $vo.operator eq 0>待定</if>
+									<if $vo.operator eq 1>用户操作</if>
+									<if $vo.operator eq 2>平台</if>
+								</div>
+							</td>
+              				<td align="left" class="">
+								<div style="text-align: center; width: 100px;">
+									<button class="del" data-id="{$vo.id}">删除</button>
+								</div>
+							</td>
+							<td align="" class="" style="width: 100%;">
+								<div>&nbsp;</div>
+							</td>
+						</tr>
+					</foreach>
+					</tbody>
+				</table>
+			</div>
+			<div class="iDiv" style="display: none;"></div>
+		</div>
+		<!--分页位置-->
+		{$page} </div>
+</div>
+<script>
+
+	$(document).ready(function(){
+		// 表格行点击选中切换
+		$('#flexigrid > table>tbody >tr').click(function(){
+			$(this).toggleClass('trSelected');
+		});
+
+		// 点击刷新数据
+		$('.fa-refresh').click(function(){
+			location.href = location.href;
+		});
+      	$('.del').click(function(){
+			$sure=confirm('是否删除采购信息?');
+			if($sure==true){
+				var purchase_id=$(this).data('id');
+				$.ajax({
+					data : 'purchase_id='+purchase_id,
+					url : "{:url('admin/supplier/PurchaseExamine2')}",
+					type : 'POST',
+					success : function(data){
+						layer.alert(data);
+						location.reload(true);
+					}
+				});
+			}
+		});
+
+	});
+
+</script>
+</body>
+</html>

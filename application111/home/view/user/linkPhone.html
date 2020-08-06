@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册-{$config['shop_info_store_title']}</title>
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    <script src="__STATIC__/js/slider.js"></script>
+    <script src="__PUBLIC__/js/layer/layer.js"></script>
+    <script src="__PUBLIC__/js/global.js"></script>
+	<style>
+		.customer-header{width: 1200px;margin: 0 auto;}
+		.customer-header .x1{width:2px;height: 68px;background: #e7e7e7;float: left;margin: 0 20px;}
+		.customer-header h3{margin-top:15px;font-size:24px;}
+		.form-item-account {z-index: 13}
+		.form-item {position: relative;border: solid 1px #ddd;width: 398px;height:40px;z-index: 0}
+		.form-item label {float: left;width: 80px;height: 40px;line-height: 40px;padding-left: 10px;text-align:right;}
+		.form-item .field {font-size: 14px;width: 190px;height: 19px;padding-bottom: 11px;padding-top: 16px}
+		.form-item input{position: absolute;z-index: 2;/*margin-top: 10px;_margin-top: 10px;*/font-size: 14px;font-family: "Microsoft YaHei", "Hiragino Sans GB";color:#888;display: inline-block;border:none;}
+		.form-item .i-status {position: absolute;display: none;width: 16px;height: 16px;top: 20px;right: 20px}
+		.form-item .to0{top:3px;left:240px;width:110px;height:40px;}
+		.form-item .ma-le-210{margin-left:260px;margin-top:13px;}
+		.zc-ljzc{width:100%;height:40px;background:#059ce1;}
+        .zc-ljzc:hover{background:deepskyblue;}
+		.zc-text{vertical-align:middle;height:none !important;}
+
+        /* wrp add css */
+        .logo-businessCenter li{float: left; margin-top:20px;}
+        .logo-businessCenter li.logo-businessCenter-li1{padding-right: 20px;}
+        .logo-businessCenter li.logo-businessCenter-li2{line-height:60px; padding-left:30px; font-size:18px; border-left:1px solid #ccc;}
+
+        .head-img{
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background:#059ce1;
+            float:left;
+        }
+        .hi-title{
+            float:left;
+            margin-left:10px;
+            font-size:12px;
+            color:#555;
+        }
+        .send-btn{
+            width: 110px;
+            height: 30px;
+            border-radius:4px;
+            margin-left: 45px;
+            background:#e6002d;
+            border:none;
+            color:#ffffff;
+            cursor:pointer;
+        }
+
+        .send-btn:hover{
+            background:#f73159;
+        }
+        table#tableID tr{
+            margin-bottom:30px;
+        }
+        .bind-infos{
+            margin-top:4px;
+            outline:none;
+            height:40px;
+            line-height:40px;
+        }
+        /*.zc-text{*/
+            /*height:32px;*/
+            /*line-height:32px;*/
+            /*border-radius:2px;*/
+        /*}*/
+        .bind-infos{ font-size:12px; width:220px; border:1px solid #bcbcbc; color:#8B8B8B; height:20px; line-height:20px; padding:6px; /*border-radius:4px 4px*/}
+
+        /* 会员登录 底部样式 */
+        .leaguer-footer{
+            text-align:center;
+        }
+        .footer-menu-list{
+            overflow:hidden;
+            width:650px;
+            margin:50px auto 20px auto;
+        }
+        .footer-menu-list li{
+            float:left;
+            padding: 0 5px;
+            border-right:1px solid #999;
+        }
+        .footer-menu-list li a{
+            color:#888;
+        }
+        .footer-menu-list li a:hover{
+            text-decoration:underline;
+        }
+        .footer-menu-list li:last-of-type{
+            border-right:0;
+        }
+        .leaguer-footer p{
+            color:#888;
+        }
+	</style>
+</head>
+
+<body class="reg">
+<!--头部-->
+    <div class="customer-header" style="height:100px;line-height:100px;">
+        <div class="wrap">
+            <div class="simplelogo" style="overflow: hidden;">
+                <ul class="logo-businessCenter">
+                    <li class="logo-businessCenter-li1"><a href="/"><img src="__BUSINESS__/images/regLogo.png" alt="logo" style=""></a></li>
+                    <li class="logo-businessCenter-li2">账号绑定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr style="box-shadow: 0 1px 2px #ccc;">
+
+    <!--手机注册-->
+    <div class="shuru-area" id="tel_tab_div" style="width:1000px;margin:100px auto 30px auto;">
+        <div class="shrk-bd-zc" style="margin:0 auto;width:400px;">
+            <form action="" method="post" onSubmit=" return check_submit(this)" id="reg_form2">
+                <table border="0" cellspacing="0" cellpadding="0" id="tableID">
+                    <tr>
+                        <td style="background:#e6e6e6;overflow:hidden;padding:10px;">
+                            <div class="head-img"></div>
+                            <p class="hi-title" style="float:left;margin-left:10px;width:320px;line-height:20px;">Hi，<span style="color:#ff0000;">558544585更多权益</span>，欢迎来到一礼通，绑定手机后享受更多权益。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="form-item form-item-account" id="form-item-account">
+								<label>手机号码：</label>
+								<input class="bind-infos" style="" type="text" name="mobile" id="mobile2" maxlength="11" placeholder="绑定手机号码后，也可做登录账号" required/>
+							</div>
+						</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+							<div class="form-item form-item-account" id="form-item-account">
+								<label>手机验证码：</label>
+								<input class="bind-infos wi96" style="width:120px;" name="code" id="code" type="text" placeholder="请输入短信验证码" required/>
+								<button type="button" class="po-ab to0 send-btn" style="height:34px;font-size:14px;" id="count_down" onClick="send_sms_reg_code()">发送</button>
+							</div>
+						</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+							<div class="form-item">
+								<label>设置密码：</label>
+								 <input class="bind-infos" type="password" name="password" id="password" placeholder="为您的账号安全请设置登录密码" required/>
+							</div>
+						</td>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="form-item">
+								<label>确认密码：</label>
+								 <input class="bind-infos" type="password" name="password2" id="password2" placeholder="确认您的登录密码" required/>
+							</div>
+						</td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td id="pa1">-->
+							<!--<input class="checkboxs" id="agree1" name="agree" type="checkbox" value="1" required/><label for="agree">同意</label>&lt;!&ndash;a class="iages" href="">《帐号服务条款、隐私政策》</a&ndash;&gt;-->
+						<!--</td>-->
+                    <!--</tr>-->
+                    <tr>
+                        <td>
+                            <input type="hidden" value="save" name="type">
+                            <input type="submit" value="立即注册" class="zc-ljzc"/>
+                        </td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td>-->
+                        <!--<input type="hidden" value="save" name="type">-->
+                        <!--<input type="submit" value="立即注册" class="zc-ljzc"/>-->
+							<!--<div class="tar" style="width:145px;float:right">-->
+								<!--<span>已有账号</span>-->
+								<!--<a class="zc-dl" href="{:Url('Home/Business/login')}">登录</a>-->
+							<!--</div>-->
+						<!--</td>-->
+                    <!--</tr>-->
+                </table>
+            </form>
+
+        </div>
+
+        <div class="cz-clude">
+
+        </div>
+    </div>
+
+    <!--手机注册-->
+</div>
+<div class="hr-60" height="0"></div>
+<div class="leaguer-footer">
+    <ul class="footer-menu-list">
+        <li><a href="#">关于一礼通</a></li>
+        <li><a href="#">我们的团队</a></li>
+        <li><a href="#">网站联盟</a></li>
+        <li><a href="#">热门搜索</a></li>
+        <li><a href="#">诚征英才</a></li>
+        <li><a href="#">友情链接</a></li>
+        <li><a href="#">一礼通新品</a></li>
+        <li><a href="#">开放平台</a></li>
+        <li><a href="#">深圳礼至礼品有限公司</a></li>
+    </ul>
+    <p>Copyright&nbsp;© 2017-2027 {$config['shop_info_store_name']}&nbsp;版权所有&nbsp;保留一切权利&nbsp;备案号:{$config['shop_info_record_no']}</p>
+</div>
+
+<!--<div class="cust-footer">-->
+    <!--<div class="setout po-re">-->
+        <!--<div class="warrant-area">-->
+            <!--<p>-->
+                <!--&lt;!&ndash;a href="">《帐号服务条款、隐私政策》</a>-->
+                <!--<em>|</em&ndash;&gt;-->
+                <!--<a href="">常见问题？</a>-->
+            <!--</p>-->
+        <!--<p>Copyright © 2016-2025 {$config['shop_info_store_name']}  版权所有 保留一切权利 备案号:{$config['shop_info_record_no']}</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<script>
+    flag = true;
+    $(document).ready(function(){
+        $("input[name='mobile']").blur(function () {
+            var mobile = $(this).val();
+            var re = /^(13[0-9]{9})|(15[^4,\\D][0-9]{8})|(18[0-9]{9})|(17[0-9]{9})|((\w{1,20}@\w{1,20}.[a-z]{2,5}))$/;
+            var id = $(this).attr("id");
+            if (re.test(mobile)) {
+                $.ajax({
+                    type : "GET",
+                    url:"/index.php?m=Home&c=Business&a=issetMobile",//+tab,
+                    data :{mobile:mobile},// 你的formid 搜索表单 序列化提交
+                    success: function(data)
+                    {
+                        if(data != '0')
+                        {
+                            flag = false;
+                        }else{
+                            flag = true;
+                        }
+                    }
+                });
+            }else{
+                flag = false;
+            }
+        })
+    });
+	// 普通 图形验证码
+    function verify(id){
+        $('#'+id).attr('src','/index.php?m=Home&c=User&a=verify&type=user_reg&r='+Math.random());
+    }
+    function check_submit(obj){
+
+        var mobile = $(obj).find('input[name="mobile"]').val();
+        var password = $(obj).find('input[name="password"]').val();
+        var password2 = $(obj).find('input[name="password2"]').val();
+        var code = $(obj).find('input[name="code"]').val();
+        var agree = $(obj).find('input[type="checkbox"]:checked').val();
+        var error = '';
+        if(mobile == ''){
+            error += '用户名不能为空';
+        }
+        if(password == '' || password2 == ''){
+            error += '密码不能为空\n';
+        }1
+        if(password !== password2){
+            error += '两次输入密码不一致\n';
+        }
+        if(password.length < 6){
+            error += '密码长度不能低于六位\n';
+        }
+        if(code == ''){
+            error += '请输入验证码\n';
+        }
+        if(!agree > 0){
+            error += '您没有同意注册协议\n';
+        }
+        if(!flag){
+            error += '用户名已经被注册\n';
+        }
+        if(error){
+            layer.alert(error, {icon: 2});// alert(error);
+            return false;
+        }
+        return true;
+    }
+
+	// 发送手机短信
+    function send_sms_reg_code(){
+        var mobile = $('#tel_tab_div').find('input[name="mobile"]').val();
+        var verify_code = $('#tel_tab_div').find('input[name="verify_code"]').val();
+        if(!checkMobile(mobile)){
+            layer.alert('请输入正确的手机号码', {icon: 2});// alert('请输入正确的手机号码');
+            return;
+        }
+        var url = "/index.php?m=Home&c=Api&a=send_validate_code&scene=1&type=mobile&mobile="+mobile;
+        $.get(url,function(res){
+            if(res.status == 1)
+			{
+				$('#count_down').attr("disabled","disabled");
+				intAs = 90; // 手机短信超时时间
+                jsInnerTimeout('count_down',intAs);
+                layer.alert(res.msg, {icon: 1});
+			}else{
+                layer.alert(res.msg, {icon: 2});
+            }
+        })
+    }
+
+
+    $('#count_down').removeAttr("disabled");
+    //倒计时函数
+    function jsInnerTimeout(id,intAs)
+    {
+        var codeObj=$("#"+id);
+        //var intAs = parseInt(codeObj.attr("IntervalTime"));
+
+        intAs--;
+        if(intAs<=-1)
+        {
+            codeObj.removeAttr("disabled");
+//            codeObj.attr("IntervalTime",60);
+            codeObj.text("发送");
+            return true;
+        }
+
+        codeObj.text(intAs+'秒');
+//        codeObj.attr("IntervalTime",intAs);
+
+        setTimeout("jsInnerTimeout('"+id+"',"+intAs+")",1000);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<include file="public/layout" />
+<style>
+    td{height:40px;line-height:40px; padding-left:20px;}
+    .span_1{
+        float:left;
+        margin-left:0px;
+        height:130px;
+        line-height:130px;
+    }
+    .span_1 ul{list-style:none;padding:0px;}
+    .span_1 ul li{
+        border:1px solid #CCC;
+        height:40px;
+        padding:0px 10px;
+        margin-left:-1px;
+        margin-top:-1px;
+        line-height:40px;
+    }
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>入驻商管理 - 入驻商信息</h3>
+                <h5>网站系统入驻商家管理信息</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="settlement_detail" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label>入驻商家公司名称</label>
+                </dt>
+				 <dd class="opt">{$info.company_name}</dd>
+				 
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>商铺名称</label>
+                </dt>
+				<dd class="opt">
+				{$info.supplier_name}
+				</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>结算时间</label>
+                </dt>
+                <dd class="opt">
+                    {$info.settlement_paytime_start|date="Y年m月d日",###} - {$info.settlement_paytime_end|date="Y年m月d日",###}
+                </dd>
+            </dl>
+			  <dl class="row">
+                <dt class="tit">
+                    <label>订单总金额</label>
+                </dt>
+                <dd class="opt">
+                    {$info.order_money_all}
+                </dd>
+            </dl>
+			  <dl class="row">
+                <dt class="tit">
+                    <label>订单退款金额</label>
+                </dt>
+                <dd class="opt">
+                    {$info.back_money}
+                </dd>
+            </dl>
+			  <dl class="row">
+                <dt class="tit">
+                    <label>订单应付款金额</label>
+                </dt>
+                <dd class="opt">
+                    {$info.settlement_all}
+                </dd>
+            </dl>
+			  </dl>
+			  <dl class="row">
+                <dt class="tit">
+                    <label>平台佣金收取</label>
+                </dt>
+                <dd class="opt">
+				<input name="rebate_money" id="rebate_money" value="{$info.rebate_money}" onkeyup="if(isNaN(value))execCommand('undo')" onafterpaste="if(isNaN(value))execCommand('undo')">
+                   
+                </dd>
+            </dl>
+			  <dl class="row">
+                <dt class="tit">
+                    <label>应付款金额</label>
+                </dt>
+                <dd class="opt">
+                    {$info.payable_price}
+                </dd>
+            </dl>
+			<if $info.status eq 1>
+			<dl class="row">
+                <dt class="tit">
+                    <label>付款凭证</label>
+                </dt>
+                <dd class="opt">
+				<input type="text" name="payment_voucher" id="payment_voucher" value="{$info.payment_voucher}">
+                    
+                </dd>
+            </dl>
+			<if $info.status eq 0>
+			<input type="hidden" name="status" id="status" value="1">
+            <div class="bot"><a href="JavaScript:void(0);" onclick="checkUserUpdate();" class="ncap-btn-big ncap-btn-green"> 结算</a></div>
+			<elseif $info.status eq 1>
+			<input type="hidden" name="status" id="status" value="4">
+			<div class="bot"><a href="JavaScript:void(0);" onclick="checkUserUpdate();" class="ncap-btn-big ncap-btn-green"> 完成</a></div>
+			</if>
+        </div>
+    </form>
+	<script type="text/javascript">
+    function checkUserUpdate(){
+        $('#settlement_detail').submit();
+    }
+</script>
+</div>
+</body>
+</html>

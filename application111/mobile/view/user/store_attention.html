@@ -1,0 +1,150 @@
+<include file="public/header" title="店铺关注" body=""/>
+
+<style>
+    .collect-goods-title{
+        width: 100%;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: .58rem;
+        position: relative;
+        border-bottom: 1px solid #efefef;
+    }
+    .collect-goods-title a{
+        position: absolute;
+        left: .8rem;
+        top: .4rem;
+        display: block;
+        width: .44rem;
+        height: .8rem;
+        background: url(__MOBILE__/images/btn_more@3x.png) no-repeat;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        -ms-background-size: 100% auto;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+    }
+    /** ****** 产品 start ***** **/
+    .likeshop #goods_list{
+        width: 100%;
+        margin-bottom:12px;
+        padding-top: 1%;
+		
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .likeshop #goods_list li{
+        width: 100%;
+        margin-right: 2%;
+        margin-bottom: 0.11rem;
+        float: left;
+        background: #fff;
+    }
+    .likeshop #goods_list li:nth-of-type(2n){
+        margin-right: 0;
+    }
+    .likeshop #goods_list li a{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .likeshop #goods_list li a img{
+        display: block;
+        /*width: 100%;*/
+        width: 7.54rem;
+        height: 7.54rem;
+        /*margin-top: .7rem;*/
+    }
+    .likeshop #goods_list li a strong{
+        display: block;
+        padding: 0 0.2rem 0.5rem 0.2rem;
+        font-size: .5rem;
+        color: #e6002d;
+    }
+    
+    .likeshop .similer-product .guess-button{
+        color: #888;
+    }
+	li img{
+	    width:3.5rem;
+	    height:3.5rem;
+		float:left
+	}
+	.guesslike{
+	    padding-top:1px
+	}
+	 .likeshop #goods_list li p{
+        margin-top:1.20rem;
+		padding-left:4rem;
+		font-size:0.60rem;
+
+    }
+	.likeshop #goods_list li span{
+        margin-top:1.2ren;
+		padding-left:1px;
+		font-size:0.36rem;
+		color:#9A9A9A;
+    }
+	
+    /** ****** 产品 end ***** **/
+</style>
+
+<div class="collect-goods-title"><a href="javascript:history.go(-1);"></a>店铺关注</div>
+
+<if condition="empty($store_list)" >
+    <!--没有收藏-s-->
+    <div class="comment_con p">
+        <div class="none"><br><br>亲，此处还没有收藏哦~</div>
+    </div>
+    <!--没有收藏-e-->
+<else/>
+    
+
+    <div class="floor guesslike">
+        <div class="likeshop">
+    		<ul  id="goods_list">
+        		<foreach name="store_list" item="store">
+                    <a href="{:Url('Supplier/index',array('id'=>$store[supplier_id]))}">
+        				<li > 
+                            <img src="{$store['logo']}" />
+        					<p >{$store['supplier_name']}</p>
+        				</li>
+                    </a>
+        		</foreach>	
+    		</ul>		 
+        </div>
+    </div>
+</if>
+<!--底部导航-start-->
+ <include file="public/footer"/>
+<!--底部导航-end-->
+<script type="text/javascript" src="__STATIC__/mobile/js/sourch_submit.js"></script>
+<script  type="text/javascript" charset="utf-8">
+    /**
+     * ajax加载更多
+     * */
+    var page = 1;
+    function ajax_sourch_submit()
+    {
+        page += 1;
+        $.ajax({
+            type : "GET",
+            url:"/index.php/Mobile/User/collect_list?is_ajax=1&p="+page,//+tab,
+            success: function(data)
+            {
+                if($.trim(data) != '')
+                {
+                    $("#goods_list").append(data);
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

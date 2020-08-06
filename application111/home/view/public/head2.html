@@ -1,0 +1,174 @@
+<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/js/global.js"></script>
+<style>
+.text{text-indent:10px;}
+.logo{text-align:left;}
+.navlist li:hover a{text-decoration:none !important;}
+  .Finddiv2li1 li{
+    width:50px;height: 25px;float: left; text-align: center;line-height: 25px;font-size:14px !important;
+}
+  .onli{
+    background: #E6002D;
+    color: #fff;
+}
+  .allgoods2 h2 {
+    line-height: 1px;
+    height: 38px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+</style>
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+ <!--------在线客服-------------->
+<include file="public/service" />
+ <!--------在线客服-------------->
+
+<header style="height:130px;">
+    <div class="layout">
+    <!--logo开始-->
+     <!--   <h1 class="logo"><a href="/" title="一礼通"><img src="{$config['shop_info_store_logo']}" alt="【一礼通商城】礼品商城_礼品采购_高端创意礼品_大型礼品网站" height="90px" ></a></h1>-->
+        <h1 class="logo"><a href="/" title="一礼通"><img src=" /public/yilitong/images/logo.gif" alt="【一礼通商城】礼品商城_礼品采购_高端创意礼品_大型礼品网站" height="110px" ></a></h1>
+     
+    <!--logo结束-->
+    <!-- 搜索开始-->
+        
+        <?php if($controller=='Index'){?><?php $controller='Goods'; ?><?php }?>
+        <div class="searchBar" style="padding-top:0px">
+          <div style="height:25px;margin-top:30px;">
+            <ul class="Finddiv2li1">
+                <volist name='search_url' id="item" key='k'> 
+                  <li <in name="controller" value=":explode('/',$item.url)">  class="onli" </in> name='{:Url($item.url)}' onchange="getsearch({$k})" >{$item.name}</li>
+                </volist> 
+            </ul>
+          </div>
+            <div class="searchBar-form">
+                <form name="sourch_form" id="sourch_form" method="post" action="{:Url('/Home/Goods/search')}">
+                    <!--<select id="search-select" style="float:left;height:34px;outline:none;">-->
+                        <!--<option value ="商品">商品</option>-->
+                        <!--<option value ="店铺">店铺</option>-->
+                        <!--<option value ="店铺">设计师</option>-->
+                    <!--</select>-->
+                    <input type="text" class="text" style="width:500px;line-height:33px;height:33px;border-radius: 5px;" name="keywords" id="keywords" value="<?php echo input('keywords'); ?>"  placeholder="搜索关键字" rel="nofollow" style="display:inline-block;height:34px;padding:0;font-size:14px;"/>
+                    <input type="button" class="button" value="搜索" onclick="if($.trim($('#keywords').val()) != '') $('#sourch_form').submit();"/>
+                </form>
+            </div>
+            <div class="searchBar-hot">
+                <b>热门搜索</b>
+               	<foreach name="config.hot_keywords" item="wd" key="k">
+        			<a target="_blank" href="{:Url('Home/Goods/search',array('q'=>$wd))}" rel="nofollow" <if condition="$k eq 0">class="ht"</if>>{$wd}</a>
+        		</foreach>
+            </div>
+        </div>
+        <!-- 搜索结束-->
+        <div class="ri-mall" style="margin-top: 55px;border:0;">
+            <div class="my-mall" id="header_cart_list">
+                <!---购物车-开始 -->
+                <div class="micart" style="float:left;">
+                    <div class="le les"  style="float:left;margin-right:10px;margin-left:10px;text-align: center;">
+                    	<a href="{:Url('Home/Cart/cart')}" rel="nofollow">我的购物车
+                            <em id="cart_quantity" style="color:#fff;"></em>
+                        </a>                       
+                    </div>
+                   
+                    
+                    <div class="ri ris">
+                       <if condition="count($cartList) eq 0">
+                            <div class="micart-about">
+                                <span class="micart-xg">您的购物车是空的，赶紧选购吧！</span>
+                            </div>
+                        </if>
+                        <div class="commod">
+                        <ul>
+                        <foreach name="cartList" item="v"  key="k">
+							<foreach name="v.list" item="v2"  key="k0">
+                            <li class="goods">
+                                <div>
+                                    <div class="p-img">
+                                        <a href="">
+                                            <img src="{$v2.goods_thumb}" alt="">
+                                        </a>
+                                     </div>
+                                     <div class="p-name">
+                                        <a href="">
+                                            <span class="p-slogan">{$v2.goods_name}</span>
+                                            <span class="p-promotions hide"></span>
+                                        </a>
+                                     </div>
+                                     <div class="p-status">
+                                        <div class="p-price">
+                                            <b>¥&nbsp;{$v2.goods_price}</b>
+                                            <em>x</em>
+                                            <span>{$v2.goods_num}</span>
+                                        </div>
+                                        <div class="p-tags"></div>
+                                     </div>
+                                     <!--
+                                     <a href="" class="icon-minicart-del" title="删除">删除</a>
+                                       -->
+                                </div>
+                            </li>
+							</foreach>   
+                         </foreach>   							
+                        </ul>
+                        </div>
+                        <div class="settle">
+                            <p>共<em>{$cart_total_price[anum]}</em>件商品，金额合计<b>¥&nbsp;{$cart_total_price[total_fee]}</b></p>
+                            <a class="js-button" href="{:Url('Home/Cart/cart')}" rel="nofollow">去结算</a>
+                        </div>
+                    </div>
+                </div>
+                <!---购物车-结束 -->
+              <a href="{:Url('Article/purchase_info')}" rel="nofollow"> <div class="le les" style="float:left;margin-right:10px;text-align:center;">
+                    	发布采购单
+                           
+                                         
+                    </div></a>      
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- 导航 - 开始 -->
+<!-- <div class="navigation" style="background:#E6002D;">
+<div class="layout" > -->
+<!--全部商品-开始-->
+<!-- <div class="allgoods">
+ <div class="allgoods2"><i class="trinagle"></i><h2 class="fa fa-tasks">全部商品</h2></div>
+</div> -->
+<!--全部商品-结束-->
+<!-- <div class="ongoods">
+    <ul class="navlist">
+     
+     <li id="li1"  class="homepage <if $action eq 'index' || 'double_eleven'> navCur </if> "  style="width:70px;margin-left:25px;margin-right:25px;text-align: center;"><a href="http://www.yilitong.com"  style="color:#fff;">首页</a></li>
+                 <li  id="li2" style="width:100px;margin-left:25px;margin-right:25px;text-align: center;"><a href="{:Url('home/Article/businessPurchase')}" style="color:#fff;">名企直采</a></li>
+                 <li id="li3" style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="{:Url('Index/mall')}" style="color:#fff;">旗舰商城</a></li>
+                 <li id="li4"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="{:Url('Home/Works/index')}" style="color:#fff;">自主设计</a></li>
+                 <li id="li5"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="{:Url('Home/Business/BusinessIndex')}" style="color:#fff;">商家入驻</a></li>
+    
+    </ul>
+</div>
+</div>
+</div> -->
+<!-- 导航-结束-->
+<script>
+    function get_cart_num(){
+	  var cart_cn = getCookie('cn');
+	  if(cart_cn == ''){
+		$.ajax({
+			type : "GET",
+			url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+			success: function(data){
+				cart_cn = getCookie('cn');
+				$('#cart_quantity').html(cart_cn);
+			}
+		});
+	  }
+	  $('#cart_quantity').html(cart_cn);
+    }
+
+    get_cart_num();
+</script>

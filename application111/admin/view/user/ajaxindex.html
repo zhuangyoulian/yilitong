@@ -1,0 +1,92 @@
+<div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+    <table>
+        <tbody>
+        <volist name="userList" id="list">
+            <tr data-id="{$list['user_id']}">
+                <td class="sign">
+                    <div style="width: 24px;"><i class="ico-check"></i></div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 100px;">{$list.user_id}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 150px;">{$list.nickname}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 50px;">{$level[$list[level]]}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 80px;">{$list.total_amount}</div>
+                </td>
+  
+           
+                <td align="left" class="">
+                    <div style="text-align: center; width: 130px;">{$list.mobile}
+                        <if condition="($list['mobile_validated'] eq 0) AND ($list['mobile'])">
+                            (未验证)
+                        </if>
+                    </div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.bean_gift}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.cash_gift}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.sale_gift}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.open_gift}</div>
+                </td>
+
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.pay_points}</div>
+                </td>
+				<td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.exchange_points}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 120px;">{$list.reg_time|date='Y-m-d H:i',###}</div>
+                </td>
+                <td align="left" class="">
+                    <div style="text-align: center; width: 70px;">{$list.items_source}</div>
+                </td>
+                <td align="left" class="">
+                    <if condition="$list.activate eq 1">
+                        <div style="text-align: center; width: 70px; color: red">是</div>
+                    <else/>
+                        <div style="text-align: center; width: 70px;">否</div>
+                    </if>
+                </td>
+                <td align="center" class="handle">
+                    <div style="text-align: center; width: 170px; max-width:170px;">
+                        <a class="btn blue" href="{:Url('Admin/user/detail',array('id'=>$list['user_id']))}"><i class="fa fa-pencil-square-o"></i>查看编辑</a>
+                       <!-- <a class="btn blue" href="{:Url('Admin/user/account_log',array('id'=>$list['user_id']))}"><i class="fa fa-search"></i>用户资金</a> -->
+                        <!-- <a class="btn blue" href="{:Url('Admin/user/address',array('id'=>$list['user_id']))}"><i class="fa fa-steam"></i>收货地址</a> -->
+                        <!--a class="btn red"  href="javascript:void(0)" data-id="{$list['user_id']}"  data-url="{:Url('Admin/user/ajax_delete')}" onClick="delfun(this)"><i class="fa fa-trash-o"></i>删除</a-->
+                    </div>
+                </td>
+                <td align="" class="" style="width: 100%;">
+                    <div>&nbsp;</div>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+</div>
+<!--分页位置-->
+{$page}
+<script>
+    $(".pagination  a").click(function(){
+        var page = $(this).data('p');
+        ajax_get_table('search-form2',page);
+    });
+    $(document).ready(function(){
+        // 表格行点击选中切换
+        $('#flexigrid >table>tbody>tr').click(function(){
+            $(this).toggleClass('trSelected');
+        });
+        $('#user_count').empty().html("{$pager->totalRows}");
+    });
+</script>

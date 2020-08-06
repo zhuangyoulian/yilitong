@@ -1,0 +1,99 @@
+
+<!-- 代码部分begin -->
+<style>
+  .qqserver1 .qqserver_fold1 {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: #e63547;
+}
+  .qqserver1 {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    margin-top: -104px;
+     height: 209px; 
+ 
+    z-index: 999;
+}
+  .qqserver_fold1 div {
+    width: 40px;
+    height: 178px;
+    background-image: url(/public/yilitong/images/zaixian1.png);
+    background-position: 0 0;
+}
+  .qqserver-body1{
+  height:178px;
+    width:142px;
+   background-image: url(/public/yilitong/images/zaixian2.png);
+    
+  }
+</style>
+<div class="qqserver">
+  <div class="qqserver_fold">
+    <div></div>
+  </div>
+  <div class="qqserver-body" style="display: block;">
+    <div class="qqserver-header" style="cursor:pointer;">
+        <div></div>
+        <span class="qqserver_arrow"></span> </div>
+		<ul>
+			<li> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&uin={$config['shop_info_qq']}&site=qq&menu=yes" target="_blank" rel="nofollow">
+				<div>在线客服</div>
+				<span>客服</span> </a> </li>
+			<li> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&uin={$config['shop_info_qq2']}&site=qq&menu=yes" target="_blank" rel="nofollow">
+				<div>在线客服</div>
+				<span>资讯</span> </a> </li>
+			<li> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&uin={$config['shop_info_qq3']}&site=qq&menu=yes" target="_blank" rel="nofollow">
+				<div>售后客服</div>
+				<span>售后</span> </a>
+			</li>
+		</ul>
+    
+    <!--div class="qqserver-footer"><span class="qqserver_icon-alert"></span><a class="text-primary" href="javascript:;">大家都在说</a> </div-->
+  </div>
+</div>
+
+<div class="qqserver1" style="top:650px;">
+  <div class="qqserver_fold1">
+    <div></div>
+  </div>
+  <div class="qqserver-body1" style="display: none;">
+   
+		
+    
+    <!--div class="qqserver-footer"><span class="qqserver_icon-alert"></span><a class="text-primary" href="javascript:;">大家都在说</a> </div-->
+  </div>
+</div>
+
+<script>
+$(function(){
+	var $qqServer = $('.qqserver');
+	var $qqserverFold = $('.qqserver_fold');
+	var $qqserverUnfold = $('.qqserver-header');
+	$qqserverFold.click(function(){
+		$qqserverFold.hide();
+		$qqServer.addClass('unfold');
+	});
+	$qqserverUnfold.click(function(){
+		$qqServer.removeClass('unfold');
+		$qqserverFold.show();
+	});
+	//窗体宽度小于1024像素时不显示客服QQ
+	function resizeQQserver(){
+		$qqServer[document.documentElement.clientWidth < 1024 ? 'hide':'show']();
+	}
+	$(window).bind("load resize",function(){
+		resizeQQserver();
+	});
+   $(".qqserver_fold1").mouseenter(function(){
+     $(".qqserver-body1").css("display","block");
+   })
+   $(".qqserver_fold1").mouseleave(function(){
+     $(".qqserver-body1").css("display","none");
+   })
+});
+</script>
+<!-- 代码部分end -->

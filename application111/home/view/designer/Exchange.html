@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-订单退款-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+
+<body style="background:#f7f7f7;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<div class="user-home" style="background:#2e2e2e;">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <a href="{:Url('Home/User/index')}" class="exit">退出设计师后台</a>
+    </div>
+</div>
+
+
+<div class="inner clearfix m-top-20">
+    <!-- design-left  start -->
+    <include file="public/designerLeftNav" />
+    <!-- designer-left end -->
+
+    <!-- design-right  start -->
+    <div class="design-authentication-index">
+        <div class="design-authentication-index-col">
+            <p class="trade-title">我的订单<span class="order-tips">-订单详情</span><a href="javascript:history.go(-1);">返回</a></p>
+        </div>
+
+        <!--  基本信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:8px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt class="curTitleColor">基本信息</dt>
+                    <dd>订单状态：<span style="color:#e6002d;">退换/货</span></dd>
+                </dl>
+                <div class="padding20">
+                    <ul class="orderBasicInfos">
+                        <li>订单编号：<span>123456789123456789</span></li>
+                        <li>会员：<span>天高任鸟飞</span></li>
+                        <li>支付金额：<span>600.00</span></li>
+                        <li>下单时间：<span>2017-09-10 12:01</span></li>
+                        <li>支付时间：<span>2017-09-10 12:12</span></li>
+                        <li>支付方式：<span>支付宝</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  基本信息 end -->
+
+        <!--  收货信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt class="curTitleColor">收货信息</dt>
+                </dl>
+                <div class="padding20">
+                    <ul class="orderBasicInfos">
+                        <li>退换类型：<span style="color:#e6002d;">仅换货</span></li>
+                        <li>手机：<span>15011677115</span></li>
+                        <li>处理状态：<span style="color:#e6002d;" id="dealStatus">等待商家处理</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  收货信息 end -->
+
+        <!--  商品信息 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt class="curTitleColor">商品信息</dt>
+                </dl>
+                <div class="padding20 marginTop20">
+                    <div class="order-goodsInfos">
+                        <dl class="order-goodsInfos-list">
+                            <dt>商品名称</dt>
+                            <dd>数量</dd>
+                            <dd>价格</dd>
+                            <dd>运费</dd>
+                            <dd>合计</dd>
+                        </dl>
+                        <dl class="order-goodsInfos-list" style="background:none;padding:20px 0;">
+                            <dt><a href="#">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</a></dt>
+                            <dd>1</dd>
+                            <dd>600.00</dd>
+                            <dd>0.00</dd>
+                            <dd>600.00</dd>
+                        </dl>
+                    </div>
+                    <h4 class="orderTotalPrice" style="color:#e6002d;">订单总额：<span style="color:#e6002d;">600.00</span>元</h4>
+                </div>
+            </div>
+        </div>
+        <!--  商品信息 end -->
+
+        <!--  操作记录 start -->
+        <div class="design-authentication-index-col" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt class="curTitleColor">退换凭证：</dt>
+                </dl>
+                <div class="padding20 remarkInfosContainer remark-tab-shows">
+                    <p class="marginTop20">退换原因：</p>
+                    <p class="remarkInfos-1 marginTop20" style="">客户要求发完所有信息</p>
+                </div>
+
+
+
+                <div class="padding20 remarkInfosContainer remark-tab-shows">
+                    <p class="marginTop20">退换凭证：</p>
+                    <ul class="remarkImgs marginTop20" id="remarkImgs">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <ul class="returnBack-1" id="returnBack-1">
+                    <li id="back-1"><a href="javascript:void(0);" onclick="Agree()">同意</a></li>
+                    <li id="back-2"><a href="javascript:void(0);" onclick="refuse()">拒绝</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!--  操作记录 end -->
+
+        <!--  发货操作 start -->
+        <div class="design-authentication-index-col hide" id="box-1" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>发货操作</dt>
+                </dl>
+                <div class="padding20">
+                    <form action="" id="form1">
+                        <div class="marginTop20">
+                            <ul class="transport-ways clearfix">
+                                <li>选择快递：</li>
+                                <li style="margin-left:20px;">
+                                    <select id="transport-ways-list">
+                                        <option value="">请选择</option>
+                                        <option value="">中通快递</option>
+                                        <option value="">顺丰快递</option>
+                                        <option value="">韵达快递</option>
+                                        <option value="">圆通快递</option>
+                                    </select>
+                                </li>
+                                <li style="margin-left:150px;">快递单号：</li>
+                                <li style="margin-left:20px;">
+                                    <input type="text" id="trackingNumber">
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="transport-btn">
+                            <li><a href="javascript:void(0);" onclick="transport()">发货</a></li>
+                            <!--<li><a href="#">无效</a></li>-->
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--  发货操作 end -->
+
+        <!--  操作记录 start -->
+        <div class="design-authentication-index-col hide" id="box-2" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>操作记录</dt>
+                </dl>
+                <form action="" id="form2">
+                    <div class="padding20 remarkInfosContainer remark-tab-shows" id="remarkInfosContainer">
+                        <p class="marginTop20">备忘信息</p>
+                        <div class="padding20 marginTop20">
+                            <textarea name="" id="remark" cols="30" rows="6"></textarea>
+                        </div>
+                        <ul class="transport-btn">
+                            <li><a href="javascript:void(0);" id="keepRemark" onclick="keepRemark()">保存</a></li>
+                        </ul>
+                    </div>
+                    <div class="padding20 remarkInfosContainer" id="remarkInfosContainer1">
+                        <p class="marginTop20">备忘信息<a href="javascript:void(0);" title="编辑备注" class="reEditor" id="reEditor" onclick="reEditor()"></a></p>
+                        <p class="remarkInfos">客户要求发完所有信息</p>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <!--  操作记录 end -->
+
+        <!--  物流信息 start -->
+        <div class="design-authentication-index-col hide" id="box-3" style="margin-top:1px;">
+            <div class="padding20">
+                <dl class="ordertitle">
+                    <dt>物流信息</dt>
+                </dl>
+                <div class="padding20">
+                    <ul class="transportInfos marginTop20">
+                        <li>物流信息物流信息</li>
+                        <li>物流信息物流信息</li>
+                        <li>物流信息物流信息物流信息</li>
+                        <li>物流信息</li>
+                        <li>物流信息物流信息</li>
+                        <li>物流信息</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!--  物流信息 end -->
+    </div>
+    <!-- designer-right end -->
+</div>
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/static/js/layer/layer.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<script type="text/javascript">
+    //获取ID
+    function getId(id){
+        return document.getElementById(id);
+    }
+
+    var b1 = getId('back-1'),
+        b2 = getId('back-2'),
+        TransportInfosHide = getId('TransportInfosHide'),
+            dealStatus = getId('dealStatus'),
+            returnBack = getId('returnBack-1'),
+        remarkImgs = getId('remarkImgs'),
+        remarkImgsAli = remarkImgs.getElementsByTagName('li'),
+        box1 = getId('box-1'),
+            box2 =getId('box-2'),
+            box3 = getId('box-3');
+
+    //控制上传凭证图片数量
+    for(var i=0;i<remarkImgsAli.length;i++){
+        if(i>3){
+            remarkImgsAli[i].style.display = 'none';
+        }
+    }
+
+    //同意
+    function Agree(){
+//        dealStatus.innerHTML = '等待商品寄回';
+//        returnBack.style.display = 'none';
+//        box1.classList.remove('hide');
+//        box2.classList.remove('hide');
+//        box3.classList.remove('hide');
+        layer.confirm('同意换货', {
+            btn: ['同意', '取消'] //可以无限个按钮
+        }, function(index, layero){
+            //按钮【按钮一】的回调
+            dealStatus.innerHTML = '等待商品寄回';
+            returnBack.style.display = 'none';
+            box1.classList.remove('hide');
+            box2.classList.remove('hide');
+            box3.classList.remove('hide');
+            layer.close(index); //如果设定了yes回调，需进行手工关闭
+        }, function(index, layero){
+            //按钮【按钮二】的回调
+            layer.close(index); //如果设定了yes回调，需进行手工关闭
+        });
+
+
+    }
+
+
+    //拒绝
+    function refuse(){
+        layer.confirm('拒绝换货', {
+            btn: ['拒绝', '取消'] //可以无限个按钮
+        }, function(index, layero){
+            //按钮【按钮一】的回调
+            layer.close(index); //如果设定了yes回调，需进行手工关闭
+        }, function(index, layero){
+            //按钮【按钮二】的回调
+            layer.close(index); //如果设定了yes回调，需进行手工关闭
+        });
+    }
+
+    //编辑订单备注
+    function keepRemark(){
+        if($('#remark').val() == '' || $('#remark').val() == null){
+            layer.alert('备注不能为空');
+        }else{
+            $('.remarkInfos').text($('#remark').val());
+            $('#remarkInfosContainer').removeClass('remark-tab-shows');
+            $('#remarkInfosContainer1').addClass('remark-tab-shows');
+        }
+
+    }
+
+    //修改订单备注
+    function reEditor(){
+        $('#remarkInfosContainer').addClass('remark-tab-shows');
+        $('#remarkInfosContainer1').removeClass('remark-tab-shows');
+        $('#remark').val($('.remarkInfos').text());
+    }
+
+    //点击发货
+    function transport(){
+        if($('#trackingNumber').val() == ''){
+            layer.alert('快递单号不能为空');
+            return false;
+        }
+        $.ajax({
+            type:'POST',
+            url:'xxx.php',
+            data:$('#trackingNumber').val(),
+            success:function(data){
+                $(this).text('已发货');
+            },
+            error:function(jqXHR){
+                layer.alert('系统繁忙！请刷新重新操作');
+            }
+        })
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

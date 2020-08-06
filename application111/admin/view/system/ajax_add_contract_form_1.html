@@ -1,0 +1,114 @@
+    <if condition="$type eq 2">  <!-- 采购合同-->
+      <input name="excel_url" type="hidden" class="form-control" id="11k" value="{$form_find['excel_url']}">
+      </div>
+    </form>
+      <form class="form-horizontal" id="handleposition" method="post" enctype="multipart/form-data" >
+          <div class="ncap-form-default">
+              <dl class="row">
+                  <dt class="tit">
+                      <label><em>*</em>选择合同下载文件</label>
+                  </dt>
+                  <dd class="opt">
+                      <if condition="$form_find['excel_url']">
+                        <p> {$form_find['excel_url']} </p>
+                        <input name="excel" type="file" class="form-control" id="excel"  onchange="verifyForm()" >
+                      <else/>
+                        <input name="excel" type="file" class="form-control" id="excel"  onchange="verifyForm()" >
+                      </if>
+                  </dd>
+              </dl>
+          </div>
+      </form>
+    <elseif condition="$type eq 4">  <!-- 委托代工合同--> 
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>产品名称</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_name}" name="product_name" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>产品型号</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_type}" name="product_type" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>产品数量</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_num}" name="product_num" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>产品单位</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_danwei}" name="product_danwei" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>包装规格</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_scope}" name="product_scope" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>外包装材质</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_mate}" name="product_mate" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no"><em>*</em>外箱包装要求</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_need}" name="product_need" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no">附件清单交货地点1</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_delivery1}" name="product_delivery1" class="input-txt"/>
+          </dd>
+      </dl>
+      <dl class="row">
+          <dt class="tit">
+              <label for="record_no">附件清单交货地点2</label>
+          </dt>
+          <dd class="opt">
+              <input type="text" value="{$form_find.product_delivery2}" name="product_delivery2" class="input-txt"/>
+          </dd>
+      </dl>
+      </div>
+      </form>
+    <else>
+      <if condition="$p_id neq 0">
+        <div class="notic" style="margin-left: 20rem;margin-top:3rem;font-size:3rem;" >
+          暂无该类型的合同模板
+        </div>
+      </if>
+    </if>
+
+      
+</div>
+<br/>
+<br/>
+<br/>
+<div class="bot" ><a href="{:Url('System/contract_form_list')}"  class="ncap-btn-big ncap-btn-green" >返回</a> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<if condition="$type eq 2 or $type eq 4 ">
+  <a id="submitBtn"  class="ncap-btn-big ncap-btn-green" href="JavaScript:void(0);" onClick="ajax_submit_form('category_form','{:Url('System/add_contract_form?is_ajax=1')}');">确认提交</a>
+</if>
+</div>

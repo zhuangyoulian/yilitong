@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/service.css" type="text/css">
+
+<div class="site-topbar">
+
+    <div class="layout">
+        <div class="t1-l">
+            <ul class="t1-l-ul">
+                <li class="t1font nologin" style="color:#8c8c8c">一礼通平台欢迎商家入驻，咨询采购中秋节礼品！</li>
+				<li class="t1img">&nbsp;</li> 
+				<li class="t1font nologin"><a href="{:Url('Home/User/user_login')}" rel="nofollow" style="color:red">个人登录</a></li>
+				<li class="t1img">&nbsp;</li> 
+				<li class="t1font nologin">&nbsp;<em style="color:#8c8c8c">|</em>&nbsp;</li>
+				<li class="t1img">&nbsp;</li> 				
+				<li class="t1font nologin"><a href="{:Url('Home/User/register')}" rel="nofollow">注册</a></li>
+				<li class="t1img">&nbsp;</li> 
+            </ul>
+        </div>
+        <div class="t1-r" style="width:90%;margin-left:10%;">
+            <ul class="t1-r-ul islogin" style="display:none;float:left;width:55%;margin-left: -110px;" id="t1-r-ul">
+                <li class="t1font" style="color:#8c8c8c">一礼通平台欢迎商家入驻，咨询采购中秋节礼品！</li>
+                <li class="t1font"> <a href="{:Url('Home/User/index')}" class="logon userinfo" rel="nofollow"></a></li>
+                <li class="t1img"></li>				
+                <li class="t1font font_t1"><a href="{:Url('Home/User/order_list')}" rel="nofollow">我的一礼通</a>
+					<ul class="t2font">
+						<li class="t1font"><a href="{:Url('Home/User/index')}"  style="margin-left:15px;" rel="nofollow">个人中心</a></li>
+						<li class="t1img"></li>
+						<li class="t1font"><a href="{:Url('Home/User/order_list')}" style="margin-left:15px;" rel="nofollow">我的订单</a></li>
+						<li class="t1img"></li>
+						<li class="t1font"><a href="{:Url('Home/User/address_list')}" style="margin-left:15px;" rel="nofollow">收货地址</a></li>
+						<li class="t1img"></li>
+					</ul>
+				</li> 
+				<li class="t1font"><a href="{:Url('Home/user/logout')}" style="margin-left:15px;" rel="nofollow">安全退出</a></li>
+				<if $user.exchange_points gt '0' >
+				<li class="t1font"><a href="{:Url('Home/Supplieract/exchange')}" style="margin-left:15px;color:red;" rel="nofollow">兑换专区</a></li></if>
+				
+				<li class="t1img"></li>						
+            </ul>
+            <ul class="t1-r-ul isSuplogin" id ="t1-r-ul1" style="display;float:left;margin-left: -110px;">
+                <li class="t1font" style="color:#8c8c8c">一礼通平台欢迎商家入驻，咨询采购中秋节礼品！</li>
+                <li class="t1font"> <a href="{:Url('Home/Business/BusinessIndex')}" class="logon supinfo" rel="nofollow"></a></li>
+                <li class="t1img">&nbsp;</li>			
+				<li class="t1font"><a href="{:Url('Home/Business/logout')}" style="margin-left:15px;" rel="nofollow">安全退出</a></li>
+				<if $user.exchange_points gt '0' >
+				<li class="t1font"><a href="{:Url('Home/Supplieract/exchange')}" style="margin-left:15px;color:red;" rel="nofollow">兑换专区</a></li></if>
+				<li class="t1img"></li>						
+            </ul>
+			<ul class="t1-r" id="tl-r" style="width:50%;float:right;">
+				<li>
+					<p class="contactImg">400-089-7879</p>
+					<p class="contactImg">18126402625</p>
+				</li>
+				<li class="nologin t1">
+					<em style="color:#8c8c8c;padding:0 5px;">|</em>
+					<span class="t3font"><a href="javascript:;">商家服务</a>
+						<ul class="t3" style="display:none;z-index:999999;">
+							<li><a href="{:Url('Home/Business/login')}" rel="nofollow">商家登录</a></li>
+							<li></li>
+							<li><a href="{:Url('Home/Business/BusinessIndex')}" rel="nofollow">入驻申请</a></li>
+							<li></li>
+							<!--<li><a href="">入驻指南</a></li>-->
+							<li></li>
+							<li><a href="http://yilitong.com/Article/43.html">商家规则</a></li>
+							<li></li>
+						</ul>
+					</span>
+				</li>
+				<li class="r ylt_dow">
+					<span style="color:#8c8c8c;position:relative;">
+						<a href="javascript:;" id="downLoadCode">
+							掌上一礼通
+							<div id="codeImg" style="width:150px;height:150px;overflow:hidden;position:absolute;left:-44px;top:22px;display:none;z-index:99999999999;">
+								<img src="__STATIC__/images/downLoadCode.png" alt="下载一礼通APP" style="width:100%;height:100%;">
+							</div>
+						</a>
+					</span>
+				</li>
+			</ul>
+       </div>
+    </div>
+  
+
+</div>
+<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+
+<!-- 首页js集合 -->
+<script src="__STATIC__/js/pc_index.js"></script>
+
+<script>
+	$(function(){
+
+		var active_li = '{$active}';
+		if(active_li){
+			$('li').remove('curr-res');
+			$('#'+active_li).addClass('curr-res');
+		}
+
+	})
+</script>
+
