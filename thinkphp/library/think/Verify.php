@@ -99,7 +99,6 @@ class Verify {
             $this->reset && session($key, null);
             return true;
         }
-
         return false;
     }
 
