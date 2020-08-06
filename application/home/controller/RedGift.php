@@ -17,7 +17,7 @@ use think\Db;
 use think\Request;
 use think\Cache;
 
-class RedGift extends Base {
+class RedGift extends RedBase{
 
     public $user_id = 0;
     public $user = array();
@@ -115,7 +115,7 @@ class RedGift extends Base {
         $goods_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0')->order('goods_id desc')->limit('20')->select();
 
         //品牌折扣区
-        $goods_quality_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and cat_id = 1126')->order('goods_id desc')->limit('3')->select();
+        $goods_quality_list = Db::name('red_goods')->field($field)->where('examine = 1 and is_recommend =1 and is_delete = 0 and (cat_id = 1126 or cat_id = 1127 or cat_id = 1128)')->order('goods_id desc')->limit('3')->select();
         foreach ($goods_quality_list as $key => $value) {
             if (!empty($value['red_supplier_id'])) {
                 $value['is_quality'] = Db::name('redsupplier_user')->where("red_admin_id",$value['red_supplier_id'])->value('is_quality');
@@ -206,8 +206,7 @@ class RedGift extends Base {
      */
     public function get_category(){
         $arr = $result = array();
-        // $cat_list = Db::name('red_goods_category')->where("is_show = 1")->order('id')->cache(true)->select();//所有分类
-        $cat_list = Db::name('goods_category')->where("id = 1123 or parent_id = 1123 or is_show = 1")->order('id')->cache(true)->select();//所有分类
+        $cat_list = Db::name('goods_category')->where("id = 1123 or parent_id = 1123 or is_red = 1")->order('id')->cache(true)->select();//所有分类
         foreach ($cat_list as $val){
             if($val['level'] == 2){
                 $arr[$val['parent_id']][] = $val;
@@ -1552,6 +1551,7 @@ class RedGift extends Base {
      */
     public function addOrder($user_id,$car_price)
     {   
+
         $this->is_login(I('admin_id'));
         $new_order_id = 0;//父ID
         $order_count = Db::name('RedOrder')->where("user_id", $user_id)->where('order_sn', 'like', date('Ymd') . "%")->count(); // 查找购物车商品总数量
@@ -1694,8 +1694,8 @@ class RedGift extends Base {
         $data_phone = [
             'apikey' => $config['apikey'],
             'mobile' => "18033077619",//发送的手机号  刘星
-            // 'tpl_id' => "3245600",
-            'tpl_id' => "3254446",
+            'tpl_id' => "3356406",
+            // 'tpl_id' => "3254446",
             'tpl_value' =>""
         ];
         $this->sendCodes($data_phone);

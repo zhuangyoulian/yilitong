@@ -7,7 +7,7 @@ use think\Session;
 use think\Cookie;
 use think\Url;
 
-class Base extends Controller {
+class RedBase extends Controller {
     public $session_id;
     public $cateTrre = array();
     /*
@@ -18,17 +18,17 @@ class Base extends Controller {
         header("Cache-control: private");  // history.back返回后输入框值丢失问题 
     	$this->session_id = session_id(); // 当前的 session_id
         define('SESSION_ID',$this->session_id); //将当前的session_id保存为常量，供其它方法调用
-		// 判断当前用户是否手机                
-        if(isMobile())
-            cookie('is_mobile','1',3600); 
-        else 
-            cookie('is_mobile','0',3600);
+		// // 判断当前用户是否手机                
+  //       if(isMobile())
+  //           cookie('is_mobile','1',3600); 
+  //       else 
+  //           cookie('is_mobile','0',3600);
 		
-		  // 如果是手机跳转到 手机模块
-        if(isMobile() == true){
-            header("Location: ".Url::build('Mobile/Index/index'));
-            exit;
-        }
+		//   // 如果是手机跳转到 手机模块
+  //       if(isMobile() == true){
+  //           header("Location: ".Url::build('Mobile/Index/index'));
+  //           exit;
+  //       }
         
 
         $this->public_assign(); 

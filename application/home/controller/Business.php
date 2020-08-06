@@ -15,30 +15,24 @@ class Business extends Base{
     
     public function _initialize() {
     	parent::_initialize();
-    	/*  session_destroy(); */
-        // session('supplier',Db::name('supplier_user')->where("supplier_id",133)->find());
-    	if(!session('?supplier'))
+        if(!I('supplier_admin_id'))
     	{
     		$login = array('BusinessOne','BusinessTwo','upload','BusinessTwoPro','BusinessThreePro','BusinessThree','BusinessFour');
     		if(in_array(ACTION_NAME,$login)){
-    			$this->redirect('Home/business/login');
-    			exit;
+                exit(json_encode(array('status'=>-1,'msg'=>'请先登录')));
     		}
     	}else{
-	    	$supplier = session('supplier');
-	    	$admin_id=$supplier['admin_id'];
-	    	$this->assign("supplier",$supplier);
+	    	$supplier_admin_id = I('supplier_admin_id');
 	    	//如果登录了，看是否已填写入驻商资料
-	    	//dump($supplier);exit;
-			$row = Db::name('supplier_user')->alias('u')->join('supplier s', array('s.supplier_id=u.supplier_id'),'left')->where('u.admin_id',$admin_id)->find();
-			session('supplier',$row);
+			$row = Db::name('supplier_user')->alias('u')->join('supplier s', array('s.supplier_id=u.supplier_id'),'left')->where('u.admin_id',$supplier_admin_id)->find();
 	    	if(!empty($row) && $row['supplier_name'] && $row['status']!=2){
 		    	$action = array('BusinessOne','BusinessTwo','BusinessTwoPro','BusinessThreePro','BusinessThree','verify','forget_pwd');
 	    		if(in_array(ACTION_NAME,$action)){
-	    			$this->redirect('Home/business/BusinessFour');
-	        	   exit;
+                    exit(json_encode(array('status'=>-2,'msg'=>'等到审核中，跳转审核结果页面')));
 	    		}
 	        }
+            $this->supplier = $row;
+            exit(json_encode(array('status'=>1,'msg'=>'请求成功','supplier'=>$row)));
     	}
     }
   
@@ -56,33 +50,32 @@ class Business extends Base{
         session_unset();
         session_destroy();
 
-        $this->redirect('Home/Index/index');
-        exit;
-
+        exit(json_encode(array('status'=>1,'msg'=>'退出成功。')));
+        // $this->redirect('Home/Index/index');
+        // exit;
     }
     
-    /**
-     * @function BusinessIndex() //商家入驻
-     * @return mixed
-     */
-    public function BusinessIndex(){
-            $supplier = session('supplier');
-            $this->assign('supplier_id',$supplier['supplier_id']);
-    		return $this->fetch();
-    	
-    }
+  //   /**
+  //    * @function BusinessIndex() //商家入驻
+  //    * @return mixed
+  //    */
+  //   public function BusinessIndex(){
+  //       $supplier = session('supplier');
+  //       $this->assign('supplier_id',$supplier['supplier_id']);
+		// return $this->fetch();
+  //   }
+
     /**
      * @function BusinessOne()  商家入驻申请
      * @pmarm null
      * @return null
      */
     public function BusinessOne(){
-    	$supplier = session('supplier');
+    	$supplier = $this->supplier;
     	if(!empty($supplier['admin_id'])){
     		$admin_id=$supplier['admin_id'];
     		//如果登录了，看是否已填写入驻商资料
     		$row=Db::name('supplier')->where(array('user_id'=>$admin_id,'is_designer'=>0))->find();
-            // dump($row);exit;
 			 if(!empty($row['province'])){
 				$rs=Db::name('region')->where( 'id',$row['province'])->find();
 				$row['address1']=$rs['name'];
@@ -95,27 +88,19 @@ class Business extends Base{
 					$row['address1'].="-".$rs['name'];
 				}
 			}	
-			
-    		$this->assign('row',$row);
-    		/* if($row['status']=='2'){
-    			$this->redirect('Home/business/BusinessTwo');
-    			exit;
-    		}else{
-    			return $this->fetch();
-    		} */
-    	}
-    	
-        return $this->fetch();
+            exit(json_encode(array('status'=>1,'msg'=>'请求成功','supplier'=>$row)));
+    	}else{
+            exit(json_encode(array('status'=>2,'msg'=>'请求成功','supplier'=>'')));
+        }
     }
-    /**
-     * @function BusinessOnePro()  入驻申请处理1
-     * @pamarm null
-     * @return max
-     */
-    public function BusinessOnePro( ){
-        exit;
-
-    }
+    // /**
+    //  * @function BusinessOnePro()  入驻申请处理1
+    //  * @pamarm null
+    //  * @return max
+    //  */
+    // public function BusinessOnePro( ){
+    //     exit;
+    // }
     /**
      * @function Testing() 检测手机号
      * @param $Contacts_phone
@@ -123,7 +108,7 @@ class Business extends Base{
      */
     public static function Testing( $Contacts_phone ){
         if( strlen( $Contacts_phone ) != 11  || !preg_match( "/^1[3|4|5|7|8][0-9]\d{4,8}$/",$Contacts_phone ) ){
-            echo json_encode(array('rs'=>'1'));exit;
+            exit(json_encode(array('status'=>1)));
         }
     }
     /**
@@ -133,7 +118,7 @@ class Business extends Base{
      */
     public static function TestingEmail( $Email ){
         if( !preg_match("/(\S)+[@]{1}(\S)+[.]{1}(\w)+/",$Email ) ){
-            echo json_encode(array('rs'=>'2'));exit;
+            exit(json_encode(array('status'=>2)));
         }
     }
     /**
@@ -142,9 +127,8 @@ class Business extends Base{
      * @return array
      */
     public static function TestingCompany_name( $Company_name ){
-        //if( Db::table('ylt_supplier')->value( 'company_name',$Company_name  ) == true ){
         if( Db::table('ylt_supplier')->where( 'company_name' ,$Company_name )->find() == true ){
-           echo json_encode(array('rs'=>'3'));exit;
+            exit(json_encode(array('status'=>3)));
         }
     }
     /**
@@ -154,7 +138,7 @@ class Business extends Base{
      */
     public static function TestingBusiness_licence_number( $Business_licence_number ){
         if( Db::table('ylt_supplier')->where( 'business_licence_number' ,$Business_licence_number )->find() == true ){
-            echo json_encode(array('rs'=>'4'));exit;
+            exit(json_encode(array('status'=>4)));
         }
     }
     /**
@@ -164,7 +148,7 @@ class Business extends Base{
      */
     public static function TestingOrganization_code( $Organization_code ){
         if( Db::table('ylt_supplier')->where( 'organization_code' ,$Organization_code )->find() == true ){
-            echo json_encode(array('rs'=>'5'));exit;
+            exit(json_encode(array('status'=>5)));
         }
     }
     /**
@@ -174,7 +158,7 @@ class Business extends Base{
      */
     public static function TsetingIsNull( $isNull ){
         if( empty( $isNull ) ){
-            echo json_encode(array('rs'=>'6'));exit;
+            exit(json_encode(array('status'=>6)));
         }
     }
     /**
@@ -182,19 +166,18 @@ class Business extends Base{
      * @return mixed
      */
     public function BusinessTwo(){
-        $supplier = session('supplier');
+        $supplier = $this->supplier;
     	if(!empty($supplier['admin_id'])){
     		$admin_id=$supplier['admin_id'];
     		//如果登录了，看是否已填写入驻商资料
     		$row=Db::name('supplier')->where( 'user_id',$admin_id)->find();
-    		$this->assign("row",$row);
-    		if(!empty($row['zhizhao']) && !empty($row['organization_code_electronic']) && !empty($row['general_taxpayer'])){
-    			$this->assign("type",'1');
-    		}else{
-    			$this->assign("type",'0');
-    		}
+    		// if(!empty($row['zhizhao']) && !empty($row['organization_code_electronic']) && !empty($row['general_taxpayer'])){
+      //           exit(json_encode(array('status'=>1,'type'=>1)));
+    		// }else{
+      //           exit(json_encode(array('status'=>1,'type'=>0)));
+    		// }
+            exit(json_encode(array('status'=>1,'supplier'=>$row)));
     	}
-        return $this->fetch();
     }
     
     public function upload(){
@@ -241,26 +224,25 @@ class Business extends Base{
     
     //修改或者增加入驻商资料
     public function BusinessOne_save(){
-    	$admin_id=$_SESSION["supplier"]['admin_id'];
-    	$company_name=$_POST['company_name'];
-    	$guimo=$_POST['guimo'];
-        $business_sphere=$_POST['business_sphere'];
-    	$business_describe=$_POST['business_describe'];
-    	//$address1=$_POST['address1'];
-    	//$address2=$_POST['address2'];
-    	$address=$_POST['address2'];
-    	$operating_name=$_POST['operating_name'];
-    	$duties=$_POST['duties'];
-    	$contacts_phone=$_POST['contacts_phone'];
-    	$phone_number=$_POST['phone_number'];
-    	$qq=$_POST['qq'];
-    	$province=$_POST['province'];
-    	$city=$_POST['city'];
-    	$area=$_POST['area'];
-    	$email=$_POST['email'];
-        // dump($business_describe);exit;
-    	if(empty($company_name) || empty($guimo) || empty($business_sphere) || empty($business_describe) || empty($_POST['address1']) || empty($operating_name) || empty($duties) || empty($contacts_phone) || empty($qq) || empty($email) ){
-    	 exit('-1');
+        $supplier = $this->supplier;
+    	$admin_id=$supplier['admin_id'];
+        $data=I('');
+    	$company_name=$data['company_name'];
+    	$guimo=$data['guimo'];
+        $business_sphere=$data['business_sphere'];
+    	$business_describe=$data['business_describe'];
+    	$address=$data['address2'];
+    	$operating_name=$data['operating_name'];
+    	$duties=$data['duties'];
+    	$contacts_phone=$data['contacts_phone'];
+    	$phone_number=$data['phone_number'];
+    	$qq=$data['qq'];
+    	$province=$data['province'];
+    	$city=$data['city'];
+    	$area=$data['area'];
+    	$email=$data['email'];
+    	if(empty($company_name) || empty($guimo) || empty($business_sphere) || empty($business_describe) || empty($data['address1']) || empty($operating_name) || empty($duties) || empty($contacts_phone) || empty($qq) || empty($email) ){
+    	    exit('-1');
     	}
 
     	if(!empty($province) && !is_numeric($province)){
@@ -322,10 +304,6 @@ class Business extends Base{
     		$res =  $db->insert($sql);
     		$id=$db->getLastInsID($res);
     		$ll=Db::name('supplier_user')->where(array('admin_id'=>$admin_id))->update(array('supplier_id'=>$id));
-    		//setcookie("supplier_admin_id",$id);
-    		//$rows = Db::name('supplier_user')->where("supplier_id",$id)->find();
-    		//保存到session
-    		//session('supplier',$rows);	
     	}
     	if(false!==$res){
     		exit(true);
@@ -336,25 +314,28 @@ class Business extends Base{
     
     //保存第二部
     public function BusinessTwo_save(){
-    	$supplier_id=$_COOKIE['supplier_admin_id'];
+        $supplier = $this->supplier;
+        $supplier_id=$supplier['admin_id'];
+        $data=I('');
+    	//$supplier_id=$_COOKIE['supplier_admin_id'];
     	//$supplier_id=$_SESSION["supplier"]['admin_id'];
-    	$business_licence_number=$_POST['business_licence_number'];
-    	$bank_account_number=$_POST['bank_account_number'];
-    	$bank_name=$_POST['bank_name'];
-    	$bank_branch=$_POST['bank_branch'];
-    	$is_three_one=$_POST['is_three_one'];
+    	$business_licence_number=$data['business_licence_number'];
+    	$bank_account_number=$data['bank_account_number'];
+    	$bank_name=$data['bank_name'];
+    	$bank_branch=$data['bank_branch'];
+    	$is_three_one=$data['is_three_one'];
     	//营业执照片
-    	$zhizhao=$_POST['zhizhao'];
+    	$zhizhao=$data['zhizhao'];
     	//组织机构代码证电子
-    	$organization_code_electronic=$_POST['organization_code_electronic'];
+    	$organization_code_electronic=$data['organization_code_electronic'];
     	//纳税证明
-    	$general_taxpayer=$_POST['general_taxpayer'];
+    	$general_taxpayer=$data['general_taxpayer'];
     	//开户许可证
-        $bank_licence_electronic=$_POST['bank_licence_electronic'];
+        $bank_licence_electronic=$data['bank_licence_electronic'];
         //经营许可证
-    	$business_certificate=$_POST['business_certificate'];
+    	$business_certificate=$data['business_certificate'];
     	//运营者授权证书
-    	$proxy=$_POST['proxy'];
+    	$proxy=$data['proxy'];
 
     	if(empty($business_licence_number) || empty($bank_account_number) || empty($bank_name) || empty($bank_branch) || empty($zhizhao) || empty($proxy) ){
             	 exit('-1');
@@ -384,12 +365,15 @@ class Business extends Base{
     
     //保存第三部
     public function BusinessThree_save(){
-    	$admin_id=$_COOKIE['supplier_admin_id'];
+        $supplier = $this->supplier;
+        $supplier_id=$supplier['admin_id'];
+        $data=I('');
+    	// $admin_id=$_COOKIE['supplier_admin_id'];
     	//$supplier_id=$_SESSION["supplier"]['admin_id'];
-    	$supplier_name=$_POST['supplier_name'];
-    	$logo=$_POST['logo'];
-    	$reading_protocol=$_POST['reading_protocol'];
-    	$type=$_POST['type'];
+    	$supplier_name=$data['supplier_name'];
+    	$logo=$data['logo'];
+    	$reading_protocol=$data['reading_protocol'];
+    	$type=$data['type'];
 
     	if(empty($supplier_name) || empty($logo)){
                     	 exit('-1');
@@ -431,9 +415,9 @@ class Business extends Base{
     }
     
     public function checkAjax(){
-    	
-    	$company_name=trim($_POST['company_name']);
-    	$supplier_name=trim($_POST['supplier_name']);
+        $data=I('');
+    	$company_name=trim($data['company_name']);
+    	$supplier_name=trim($data['supplier_name']);
     	if(!empty($company_name)){
     		$rows = Db::name('supplier')->where("company_name","{$company_name}")->find();
     		if(!empty($rows)){
@@ -459,50 +443,53 @@ class Business extends Base{
      * @function Application() 入驻申请表单
      */
     public function BusinessTwoPro(){
-        $Company_name               =    htmlspecialchars( trim( $_POST['company_name'] ) )   ;
+        $data=I('');
+        $Company_name               =    htmlspecialchars( trim( $data['company_name'] ) )   ;
         self::TestingCompany_name(  self::TsetingIsNull( $Company_name )  );
-        $Address                    =    htmlspecialchars( trim( $_POST['address'] ) );
+        $Address                    =    htmlspecialchars( trim( $data['address'] ) );
         self::TsetingIsNull( $Address );
-        $Company_type               =    htmlspecialchars( trim( $_POST['company_type'] ) );
+        $Company_type               =    htmlspecialchars( trim( $data['company_type'] ) );
         self::TsetingIsNull( $Company_type );
-        $Guimo                      =    htmlspecialchars( trim( $_POST['guimo'] ) );
+        $Guimo                      =    htmlspecialchars( trim( $data['guimo'] ) );
         self::TsetingIsNull( $Guimo );
-        $Contacts_name              =    htmlspecialchars( trim( $_POST['contacts_name'] ) );
+        $Contacts_name              =    htmlspecialchars( trim( $data['contacts_name'] ) );
         self::TsetingIsNull( $Contacts_name );
-        $Contacts_phone             =    htmlspecialchars( trim( $_POST['contacts_phone'] ) )   ;
+        $Contacts_phone             =    htmlspecialchars( trim( $data['contacts_phone'] ) )   ;
         self::TsetingIsNull( $Contacts_phone ) ;
         self::Testing($Contacts_phone);
-        $Email   =    htmlspecialchars( trim( $_POST['email'] ) )  ;
+        $Email   =    htmlspecialchars( trim( $data['email'] ) )  ;
         self::TsetingIsNull($Email);
         self::TestingEmail($Email);
         
-        $Business_licence_number    =    htmlspecialchars( trim( $_POST['business_licence_number'] )  ) ;
+        $Business_licence_number    =    htmlspecialchars( trim( $data['business_licence_number'] )  ) ;
         self::TsetingIsNull( $Business_licence_number );
         //self::TestingCompany_name(  );
-        $Three                      =    htmlspecialchars( trim( $_POST['business'] ) );
-        $Business                   =    htmlspecialchars( trim( $_POST['business'] ) );
+        $Three                      =    htmlspecialchars( trim( $data['business'] ) );
+        $Business                   =    htmlspecialchars( trim( $data['business'] ) );
         if( self::TsetingIsNull( $Three !==1 || self::TsetingIsNull( $Business ) !==1 ) ){return false;exit;}
-        $ZhizhaoName                =  trim($_POST['zhizhao']);//营业执照
+        $ZhizhaoName                =  trim($data['zhizhao']);//营业执照
         
-        $Organization_code          =    htmlspecialchars( trim( $_POST['organization_code'] ) )  ;
+        $Organization_code          =    htmlspecialchars( trim( $data['organization_code'] ) )  ;
 		if($Three!=1){
 			self::TsetingIsNull( $Organization_code );
 			//self::TestingCompany_name( );
 		}
-        $Organization_code_electronicName   =trim($_POST['organization_code_electronic']);
-        $Taxpayer  =    htmlspecialchars( trim( $_POST['taxpayer'] ) );
+        $Organization_code_electronicName   =trim($data['organization_code_electronic']);
+        $Taxpayer  =    htmlspecialchars( trim( $data['taxpayer'] ) );
         if($Three!=1){
         	self::TsetingIsNull( $Taxpayer );
         }
         
-        $General_taxpayerName  = $_POST['general_taxpayer'];//纳税人
-        $admin_id=$_SESSION["supplier"]['admin_id'];
+        $General_taxpayerName  = $data['general_taxpayer'];//纳税人
+        $supplier = $this->supplier;
+        $admin_id=$supplier['admin_id'];
+        // $admin_id=$_SESSION["supplier"]['admin_id'];
 		$business_sphere = trim(I('business_sphere'));
-		$bank_account_number = trim($_POST['bank_account_number']);
-		$bank_name 		= trim($_POST['bank_name']);
-		$bank_code 		= trim($_POST['bank_code']);
-		$phone_number =trim($_POST['phone_number']);
-		$qq=trim($_POST['qq']);
+		$bank_account_number = trim($data['bank_account_number']);
+		$bank_name 		= trim($data['bank_name']);
+		$bank_code 		= trim($data['bank_code']);
+		$phone_number =trim($data['phone_number']);
+		$qq=trim($data['qq']);
         $supplier = Db::name('supplier')->where("user_id",$admin_id)->find();
         if($supplier){
         	
@@ -573,12 +560,12 @@ class Business extends Base{
      */
     public function BusinessThree(){
         $this->assign('id',$_GET['id']);
-        
         $supplier = session('supplier');
     	if(!empty($supplier['admin_id'])){
     		$admin_id=$supplier['admin_id'];
     		//如果登录了，看是否已填写入驻商资料
     		$row=Db::name('supplier')->where( 'user_id',$admin_id)->find();
+            $row['reading_protocol'] = explode(',',$row['reading_protocol']);
     		$this->assign("row",$row);
     	}
         return $this->fetch();
@@ -622,12 +609,19 @@ class Business extends Base{
     
     //商家登录
     public function login(){
-	    /*  $referurl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : Url::build("/"); */
-	     $this->assign('referurl',Url::build("/"));
-	     return $this->fetch();
+        setcookie('user_name','',time()-3600,'/');
+        setcookie('cn','',time()-3600,'/');
+        setcookie('user_id','',time()-3600,'/');
+        
+	    $this->assign('referurl',Url::build("/"));
+	    return $this->fetch();
     }
 
     public function ajax_login(){
+        setcookie('user_name','',time()-3600,'/');
+        setcookie('cn','',time()-3600,'/');
+        setcookie('user_id','',time()-3600,'/');
+        
     	$mobile = trim(I('post.mobile'));
     	$password = trim(I('post.password'));
     	$verify_code = I('post.verify_code');
@@ -656,7 +650,6 @@ class Business extends Base{
               if(session('loginUrl')){
                 $res['url'] =  Url::build(substr(session('loginUrl'),0,-5));
                 unset($_SESSION['loginUrl']);
-               
               }else{ 
                $res['url'] =  Url::build('Home/Business/BusinessIndex');  
               }			
@@ -664,7 +657,6 @@ class Business extends Base{
             }else{
                 $res['url'] =  Url::build('Home/Business/BusinessIndex');
                 $rs=Db::name('supplier')->where("user_id",$res['result']['admin_id'])->find();
-                //setcookie('supplier_admin_id',$rs['supplier_id'],null,'/');
                 setcookie('supplier_admin_id',$res['result']['admin_id'],null,'/');
                 $nickname = empty($res['result']['user_name']) ? $mobile : $res['result']['user_name'];
                 setcookie('supplier_name',urlencode($nickname),null,'/');
@@ -676,48 +668,40 @@ class Business extends Base{
     
     //商家注册
     public function register(){
-    	
-    	if($_POST['type']=="save"){
-    			$mobile = trim(I('post.mobile',''));
-    			$password = trim(I('post.password',''));
-    			$password2 = trim(I('post.password2',''));
-    			$code = trim(I('post.code',''));
-				$parent_id = trim(I('post.parent_id',''));
-    			$session_id = session_id();
-    			$verify_code = trim(I('post.verify_code'));
-    			
-    			//验证码
-    			$userlogic = new UsersLogic();
-    			$res = $userlogic->check_validate_code($code, $mobile , $session_id , 'mobile');
-    			if ($res['status'] != 1){
-    				$this->error($res['msg']);
-    			}
-				
+		$mobile = trim(I('post.mobile',''));
+		$password = trim(I('post.password',''));
+		$password2 = trim(I('post.password2',''));
+		$code = trim(I('post.code',''));
+        $verify_code = trim(I('post.verify_code'));
+		// $parent_id = trim(I('post.parent_id',''));
+		$session_id = session_id();
 		
-    			$supLogin=new SupplierLogic();
-    			$data = $supLogin->reg($mobile,$password,$password2,'','',$parent_id);
-    			// dump($data);exit;
-    			if($data['status'] != 1){
-    				$this->error($data['msg']);
-    				exit;
-    			}
+		//验证码
+		$userlogic = new UsersLogic();
+		$res = $userlogic->check_validate_code($code, $mobile , $session_id , 'mobile');
+		if ($res['status'] != 1){
+			$this->error($res['msg']);
+		}
+		
 
-            $res = $supLogin->user_login($mobile,$password);
-            if($res){
-                $res['url'] =  urldecode(I('post.referurl'));
-                session('supplier',$res['result']);
-                setcookie('supplier_admin_id',$res['result']['admin_id'],null,'/');
-                $nickname = empty($res['result']['user_name']) ? $mobile : $res['result']['user_name'];
-                setcookie('supplier_name',urlencode($nickname),null,'/');
-                setcookie('cn',0,time()-3600,'/');
-            }
-    			
-    			$this->success($data['msg'],Url::build('Home/business/BusinessIndex'));
-    			exit;
-    		
-    		
-    	}
-    	return $this->fetch();
+		$supLogin=new SupplierLogic();
+		$data = $supLogin->reg($mobile,$password,$password2,'','',$parent_id);
+		// dump($data);exit;
+		if($data['status'] != 1){
+			$this->error($data['msg']);
+			exit;
+		}
+        $res = $supLogin->user_login($mobile,$password);
+        if($res){
+            $res['url'] =  urldecode(I('post.referurl'));
+            session('supplier',$res['result']);
+            setcookie('supplier_admin_id',$res['result']['admin_id'],null,'/');
+            $nickname = empty($res['result']['user_name']) ? $mobile : $res['result']['user_name'];
+            setcookie('supplier_name',urlencode($nickname),null,'/');
+            setcookie('cn',0,time()-3600,'/');
+        }
+		$this->success($data['msg'],Url::build('Home/business/BusinessIndex'));
+		exit;
     }
 	
 	
@@ -744,8 +728,6 @@ class Business extends Base{
     		$logic = new UsersLogic();
     		$username = I('post.username');
     		$code = I('post.code');
-    		// $new_password = I('post.new_password');
-    		// $confirm_password = I('post.confirm_password');
     		$pass = false;
     	
     		//检查是否手机找回
@@ -768,8 +750,6 @@ class Business extends Base{
     				$this->error('邮箱验证码不匹配');
     			$pass = true;
     		}
-    		// if($user['user_id'] > 0 && $pass)
-    			// $data = $logic->password($user['user_id'],'',$new_password,$confirm_password,false); // 获取用户信息
     		if($data['status'] != 1)
     			$this->error($data['msg'] ? $data['msg'] :  '操作失败');
     		$this->success($data['msg'],Url::build('Home/Business/login'));

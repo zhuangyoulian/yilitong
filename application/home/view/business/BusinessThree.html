@@ -106,7 +106,17 @@
 								<p class="shop-agreement" style="margin-bottom:10px;"><a target="_blank" href="__PUBLIC__/upload/active/agreement/settlementAgreementt.pdf">点击下载《一礼通商家入驻收费项目协议》</a></p>
 								<div class="upload-settlement-agreement">
 									<div id="settlement-agreement"></div>
-									<if condition="$row.reading_protocol"><span><img src="{$row.reading_protocol}" style="margin-left:10px;display: block;width:50px;height: 40px;float: left;"/></span></if>
+									<if condition="$row.reading_protocol">
+										<span>
+											<if condition="$row.reading_protocol.1">
+												<foreach name="$row.reading_protocol"  item="value" key="k">
+												<img src="{$value}" style="margin-left:10px;display: block;width:50px;height: 40px;float: left;"/>
+												</foreach>
+											<else/>
+												<img src="{$row.reading_protocol.0}" style="margin-left:10px;display: block;width:50px;height: 40px;float: left;"/>
+											</if>
+										</span>
+									</if>
 									<p class="shop-info-tips" style="margin-top:10px;">选择签署协议的3张图片并上传，请按顺序单独上传，单图片大小不能超过2M，格式为：jpg、png、jpeg、gif</p>
 								</div>
 							</div>

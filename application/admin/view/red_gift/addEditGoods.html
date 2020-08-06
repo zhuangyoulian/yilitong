@@ -323,6 +323,7 @@
                 <dd class="opt">
                     <input type="text" value="{$goodsInfo.shop_price}" name="shop_price" class="t_mane" onKeyUp="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" />
                     <span class="err" id="err_shop_price" style="color:#F00; display:none;"></span>
+                    <p class="notic">同步一礼通时所需的一件代发件</p>
                 </dd>
             </dl>     
             <dl class="row">
@@ -332,6 +333,7 @@
                 <dd class="opt">
                     <input type="text" value="{$goodsInfo.group_price}" name="group_price" class="t_mane" onKeyUp="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" />
                     <span class="err" id="err_shop_price" style="color:#F00; display:none;"></span>
+                    <p class="notic">红礼展示的企业集采售价</p>
                 </dd>
             </dl>   
             <dl class="row">
@@ -341,7 +343,7 @@
                 <dd class="opt">
                     <input type="text" value="{$goodsInfo.cost_price}" name="cost_price" class="t_mane" onKeyUp="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" />
                     <span class="err" id="err_market_price" style="color:#F00; display:none;"></span>
-                     <p class="notic">仅供后台查看，不予展示</p>
+                    <p class="notic">出货一礼通的价格，仅供后台查看，不予展示</p>
                 </dd>
             </dl> 
             <dl class="row">
@@ -351,7 +353,7 @@
                 <dd class="opt">
                     <input type="text" value="{$goodsInfo.red_cost_price}" name="red_cost_price" class="t_mane" onKeyUp="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" <if condition="$goodsInfo.supplier_name neq '红礼供应链' && !empty($goodsInfo)" > readonly </if>/>
                     <span class="err" id="err_market_price" style="color:#F00; display:none;"></span>
-                     <p class="notic">供应商填写的供货价，仅供后台查看，不予展示,供应商上传的商品后台不可修改</p>
+                    <p class="notic">供应商填写的供货价，仅供后台查看，不予展示,供应商上传的商品后台不可修改</p>
                 </dd>
             </dl>   
             <dl class="row">
@@ -634,11 +636,11 @@
     /*
      * 以下是图片上传方法
      */
-    // 上传商品图片成功回调函数
- //   function call_back(fileurl_tmp){
-  //      $("#original_img").val(fileurl_tmp);
+   //  // 上传商品图片成功回调函数
+   // function call_back(fileurl_tmp){
+   //     $("#original_img").val(fileurl_tmp);
    //   $("#original_img2").attr('href', fileurl_tmp);
-  //  }
+   // }
  
     // 上传商品相册回调函数
     function call_back2(paths){

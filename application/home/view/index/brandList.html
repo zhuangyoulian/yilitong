@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>全球礼品产业链一站式综合服务</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/public/yilitong/js/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet" href="/public/yilitong/css/style.css" type="text/css">
 <link rel="stylesheet" href="/public/yilitong/css/index.css" type="text/css">
 <link rel="stylesheet" href="/public/yilitong/css/brandList.css" type="text/css">
@@ -31,11 +31,11 @@
 		<li>
 			<volist name="$item" id="vo" key='k'>
 				<div>
-                    <a href="{:Url('Home/Goods/brandList',array('brand_id'=>$vo.id))}">
-                        <img src="{$vo.logo}" alt="">
-                    </a>
-                    <p>{$vo.name}</p>
-                </div>
+            <a href="{:Url('Home/Goods/brandList',array('brand_id'=>$vo.id))}">
+                <img src="{$vo.logo}" alt="">
+            </a>
+            <p>{$vo.name}</p>
+        </div>
 			</volist>
 		</li>
 	</volist>	
@@ -91,7 +91,6 @@
             </dl>
     </ylt>
      </div>
-        
         <hr >
         <div style="text-align: center;line-height: 40px;">
             <span><a href="javascript:void(0);">我们的团队</a></span>
@@ -119,7 +118,7 @@
                         <img src="/public/yilitong/images/anquan_cnnic.png">
                     </a>
                    </li>
-					<li>
+					         <li>
                     <!--可信网站图片LOGO安装开始-->
                      <img src="http://rr.knet.cn/static/images/logo/cnnic.png">
                    </li>
@@ -131,7 +130,6 @@
                    </li>
                </ul>
             </div><br>
-           <!-- <span>友情链接 </span><span>礼品公司 </span><span>北京礼品卡 </span><span>玉林批发网 </span><span>礼品网站 </span><span>仓库管理系统 </span><span>礼品册 </span><span>商务礼品 </span><span>节日礼品册 </span><span>礼品商城 </span><span>生日礼物 </span><span>礼品批发 </span><span>礼品采购 </span><span>广州礼品定制 </span>-->
             <div style="text-align: center;width:1200px;margin:0 auto;">
              <ul class="friendLink" id="friendLink" style="display: inline-block;margin-top:10px;">
                  <li><span style="color: #999;">友情链接</span></li>

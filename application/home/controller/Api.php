@@ -143,26 +143,26 @@ class Api extends Controller {
         $mobile = !empty($mobile) ?  $mobile : $sender ;
         $session_id = I('unique_id' , session_id());
 
-        $verify_code = trim(input('get.verify_code'));
-        if(!check_mobile($mobile)){
-            return json(array('status'=>-1,'msg'=>'手机号码格式有误'));
-        }
+        $verify_code = trim(input('verify_code'));
+        // if(!check_mobile($mobile)){
+        //     return json(array('status'=>-1,'msg'=>'手机号码格式有误'));
+        // }
         $url = $_SERVER['HTTP_REFERER'];
         //图像验证码
-        // if ($scene!=1) {  
-        //     $verify = new Verify();
-        //     if (!$verify->check($verify_code,'user_login'))
-        //     {  
-        //       $this->error('图形验证码错误');exit;
-        //     }
-        // }
+        if ($scene == 2) {  
+            $scene_code = 'user_login';
+        }else{
+            $scene_code = 'user_reg';
+        }
+
         if($type != '5'){
             $verify = new Verify();
-            if (!$verify->check($verify_code,'user_reg'))
+            if (!$verify->check($verify_code,$scene_code))
             {  
-              $this->error('图形验证码错误');exit;
+                return json(array('status'=>-12,'msg'=>'图形验证码错误'));exit;
             }
         }
+
         switch ($type) {
             case 'email':
                 break;
@@ -176,7 +176,7 @@ class Api extends Controller {
                 break;
             case '3':
                 if(!Db::name('users')->where('mobile',$mobile)->value('user_id'))
-                return json(array('status'=>-3,'msg'=>'发送失败，该手机号未绑定或注册'));
+                    return json(array('status'=>-3,'msg'=>'发送失败，该手机号未绑定或未注册'));
                 break;
             case '4':
                 if(!Db::name('supplier_user')->where('mobile',$mobile)->value('admin_id'))
@@ -195,7 +195,7 @@ class Api extends Controller {
                     return json(array('status'=>-2,'msg'=>'发送失败，用户已注册'));
                 break;
             default:
-                return json(array('status'=>-6,'msg'=>'发送失败，非法来源'));
+                    return json(array('status'=>-6,'msg'=>'发送失败，非法来源'));
                 break;
         }
 
@@ -228,7 +228,6 @@ class Api extends Controller {
                 return json(array('status'=>-10,'msg'=>'验证码类一小时内不能超过3次，请稍后再试'));
                 exit;
             }
-
         }else{
             $today_num = 1;
         }

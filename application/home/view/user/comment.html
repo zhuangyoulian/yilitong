@@ -45,7 +45,13 @@
                         <li id="h-s" class="fl <if condition="$Request.param.status eq '0'">cullent</if>"><a href="{:Url('Home/User/comment',array('status'=>0))}"><span>待评价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
                         <li id="j-s" class="fl <if condition="$Request.param.status eq '1'">cullent</if>"><a href="{:Url('Home/User/comment',array('status'=>1))}"><span>已评价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
                     </ul>
-                    <div class="ec-ta-x wi82" style="left:0"></div>
+                    <if condition ="I('status') eq '0'">
+                        <div class="ec-ta-x wi82" style="left:94px;"></div>
+                    <elseif condition="I('status') eq '1'">
+                        <div class="ec-ta-x wi82" style="left:188px"></div>
+                    <else>
+                        <div class="ec-ta-x wi82" style="left:0"></div>
+                    </if>
                 </div>
             </div>
         </div>
@@ -245,7 +251,7 @@
     function uploadimg(div){
         now_access = $(div);
         //检查是否超过限制数量
-        GetUploadify2(5,'','comment','add_img')
+        GetUploadify2(5,'','comment','add_img');
     }
     function delimg(file,t){
         $.get(
@@ -262,7 +268,6 @@
             if(obj.length >= 5)
             return false;
             var tpl = '<div class="ev-img po-re fl comment_img" onclick="delimg(\'$IMG\',this)"><input type="hidden" name="comment_img[]" value="$IMG"><img src="$IMG" border="0" alt=""></div>';
-            //var tpl = '<input type="hidden" name="comment_img[]" value="$IMG"><img width="150" height="150" src="$IMG" alt=""><button onclick="delimg(\'$IMG\',this)">删除</button>';
             var str_do = tpl.replace(/\$IMG/g,tpl_list[i]);
             $(now_access).find('#img_container').find('#add_img').before(str_do);
         }     
@@ -324,44 +329,4 @@
 </body>
 
 
-<script>
-    $(function () {
-        $("#j-s").mouseover(function () {
-            $('.ec-ta-x').css('left','188px');
-            $('.ec-ta-x').css('width','70px');
-            $(this).addClass("cullent");
-        });
-        $("#j-s").mouseout(function () {
-            $('.ec-ta-x').css('left','0px');
-            $('.ec-ta-x').css('width','82px');
-            $(this).removeClass("cullent");
-        });
-    });
-    $(function () {
-        $("#h-s").mouseover(function () {
-            $('.ec-ta-x').css('left','94px');
-            $('.ec-ta-x').css('width','82px');
-            $(this).addClass("cullent");
-        });
-        $("#h-s").mouseout(function () {
-            $('.ec-ta-x').css('left','0px');
-            $('.ec-ta-x').css('width','82px');
-            $(this).removeClass("cullent");
-        });
-    });
-    $(function () {
-        $("#q-s").mouseover(function () {
-            $('.ec-ta-x').css('left','0px');
-            $(this).addClass("cullent");
-        });
-        $("#q-s").mouseout(function () {
-            $('.ec-ta-x').css('left','0px');
-        });
-    });
-    function settext(){
-        //var text = $("#saytext").html();
-        //$('#saytext2').html(text);
-    }
-	
-</script>
 </html>

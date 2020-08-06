@@ -19,24 +19,22 @@ class Supplier extends Base {
 	
 	public function _initialize() {
 		parent::_initialize();
-		$id = I('get.id');
+		$id = I('post.supplier_id');
       	if($id){
 		 $info = Db::name('supplier')->field('supplier_id,supplier_name,introduction,business_sphere,supplier_money,add_time,contacts_name,contacts_phone,province,city,area,address,operating_name')->where('supplier_id = '.$id.' and is_designer = 0 and status = 1')->cache(true,600)->find();
-		 if(!$info)
-			 $this->error('该店铺已关闭！');
-		  $config_info = Db::name('supplier_config')->where('supplier_id',$id)->cache(true,600)->column('name,value');
+		 if(!$info){
+	        exit(json_encode(array('status'=>'-1','info'=>'该店铺不存在或已关闭！')));  
+		 }
+		 $config_info = Db::name('supplier_config')->where('supplier_id',$id)->cache(true,600)->column('name,value');
       	}
       	 $info['contacts_phone'] = substr_replace($info['contacts_phone'],'****',3,4);
 		 $this->info = $info;
-		 $this->assign('info',$info);
-		 $this->assign('config_info',$config_info);
-		
-		
+		 $this->config_info = $config_info;
 	}
 
     public function index(){
-
-        return $this->fetch();
+        $rs=array('status'=>'1','info'=>'请求成功','config_info'=>$this->config_info);
+        exit(json_encode($rs));  
     }
 
 
@@ -45,11 +43,7 @@ class Supplier extends Base {
      * @return mixed
      */
      public function StoreHome(){
-		 $id = I('get.id');
-       	/*$recommend = Db::name('goods')->where('is_hot = 1 and supplier_id = '.$id.' and is_on_sale = 1 and examine = 1')->limit(0,16)->cache(true,600)->select();
-		 if(!$recommend){
-			 $recommend = Db::name('goods')->where('supplier_id = '.$id.' and is_on_sale = 1 and examine = 1')->limit(0,16)->cache(true,600)->select();
-		 }*/
+		 $id = I('post.supplier_id');
          $field = "goods_id,goods_name,goods_thumb,shop_price";
 		 $recommend = Db::name('goods')->where('is_recommend = 1 and supplier_id = '.$id.' and is_on_sale = 1 and examine = 1')->field($field)->order('goods_id desc')->limit(0,16)->cache(true,600)->select();
 		 if(!$recommend){
@@ -61,9 +55,10 @@ class Supplier extends Base {
             $value['goods_spec']=$goods_spec;
             $recommends[] = $value;
 		 }
-        Db::name('goods')->getLastSql();
-		$this->assign('recommend',$recommends);
-        return $this->fetch();
+        // Db::name('goods')->getLastSql();
+
+        $rs=array('status'=>'1','info'=>'请求成功','recommend'=>$recommends);
+        exit(json_encode($rs));  
      }
 
      /**
@@ -71,22 +66,19 @@ class Supplier extends Base {
       * @return mixed
       */
       public function StoreCategory(){
-		   $id = I('get.id'); //店铺ID
+		   $id = I('post.supplier_id'); //店铺ID
 		   $filter_param = array();
 		   
 		   $filter_param['id'] = $id;  
 		   $where['supplier_id'] = $id; //加入筛选条件中 
 		   $where['examine'] = 1;
 		   $where['is_on_sale'] = 1;
-           $sort = I('get.sort','goods_id'); // 排序
-           $sort_asc = I('get.sort_asc','desc'); // 排序
-		//	$cat_id = I('get.extend_cat_id','');
-		//	$cat_id  && ($filter_param['extend_cat_id'] = $cat_id); //加入筛选条件中
+           $sort = I('post.sort','goods_id'); // 排序
+           $sort_asc = I('post.sort_asc','desc'); // 排序
            $sup_cat_id=I('extend_cat_id','');//店铺分类
-          if($sup_cat_id){
+           if($sup_cat_id){
               $where['sup_cat_id'] = $sup_cat_id;
-          }
-           
+           }
 		   $where = array_merge($where,$filter_param);
 		   unset($where['id']);
 	   
@@ -103,12 +95,9 @@ class Supplier extends Base {
 	            $value['goods_spec']=$goods_spec;
 	            $recommends[] = $value;
 			}
-		   $this->assign('goods_list',$recommends); // 商品列表
-		   $this->assign('filter_param',$filter_param);
-		   $this->assign('category',$category); // 分类
-		   $this->assign('page',$page);// 赋值分页输出 
-           return $this->fetch();
 
+        	$rs=array('status'=>'1','info'=>'请求成功','goods_list'=>$recommends,'filter_param'=>$filter_param,'category'=>$category,'page'=>$page);
+        	exit(json_encode($rs));  
       }
 
       /**
@@ -116,18 +105,22 @@ class Supplier extends Base {
         * @return mixed
         */
         public function StoreInfos(){
-			
-			 $id = I('get.id/d',41);
-			 
-		 
-			 $config_info = Db::name('supplier_config')->where('supplier_id',$id)->cache(true,600)->column('name,value');
-			 $region_list = get_region_list();
-			 $address = $region_list[$this->info['province']]['name'] . $region_list[$this->info['city']]['name'] . $region_list[$this->info['area']]['name'] . $this->info['address'];
-			 $this->assign('address',$address);
-			 $this->assign('config_info',$config_info);
-			 
-			return $this->fetch();
+			$id = I('supplier_id/d',41);
+			//查询是否已关注
+			$collect = Db::name('supplier_collect')->where(['user_id'=>I('user_id'),'supplier_id'=>I('supplier_id/d',41)])->find();
 
+			$region_list = get_region_list();
+            if (!empty($region_list[$this->info['province']]['name']) && !empty($region_list[$this->info['city']]['name'])) {
+				$address = $region_list[$this->info['province']]['name'] . $region_list[$this->info['city']]['name'] . $region_list[$this->info['area']]['name'] . $this->info['address'];
+            }else{
+				$address = $this->info['province'] . $this->info['city'] . $this->info['area'] . $this->info['address'];
+            }
+			$info = $this->info;
+			$config_info = $this->config_info;
+			$info['store_logo'] = $config_info['store_logo'];
+			$info['address'] = $address;
+        	$rs=array('status'=>'1','config_info'=>$info,'collect'=>$collect);
+        	exit(json_encode($rs));  
         }
 		
 		
@@ -138,28 +131,28 @@ class Supplier extends Base {
 		public function collect_stores(){
 			$id = I('supplier_id');
 				
-			if(!cookie('user_id'))
+			if(empty(I('user_id'))){
 				exit(json_encode(['status'=>-1,'msg'=>'请先登录！']));
+			}
 			
-			$add['user_id'] = cookie('user_id');
+			$add['user_id'] = I('user_id');
 			$add['supplier_id'] = $id;
-			if(Db::name('supplier_collect')->where($add)->find())
+			if(Db::name('supplier_collect')->where($add)->find()){
 				exit(json_encode(['status'=>-1,'msg'=>'已收藏！']));
+			}
 			
 			$add['add_time'] = time();
 			Db::name('supplier_collect')->insert($add);
 			
 			exit(json_encode(['status'=>1,'msg'=>'收藏成功！']));
 			
-
-			
 		}
 
 		public function search(){
-			$sort = I('get.sort','add_time'); // 排序
-			$sort_asc = I('get.sort_asc','desc'); // 排序
-            $company_name=$_POST['keywords']; //公司名称
-			//$supplierCount=Db::name('supplier')->count("*");
+			$sort = I('post.sort','add_time'); // 排序
+			$sort_asc = I('post.sort_asc','desc'); // 排序
+            $company_name=I('keywords'); //公司名称
+
           	$supplierCount=Db::name('supplier')->where('is_designer=0 and status=1')->where('company_name','like','%'.$company_name.'%')->count();
 			$page = new Page($supplierCount,12);
 			$supplier_id = Db::name('supplier')->field('supplier_id')->where('is_designer=0 and status=1')->order('add_time desc')->cache(true,3600)->select();//获取所有供应商id
@@ -182,18 +175,12 @@ class Supplier extends Base {
 			}
 			if($supplierCount > 0)
 			{
-              
-				//$supplier_newList = Db::name('supplier')->where('is_designer=0 and status=1')->where("supplier_id in (".implode(',',$supplierArr).")")->order("$sort $sort_asc")->limit($page->firstRow.','.$page->listRows)->select();
-
               $supplier_newList = Db::name('supplier')->where('is_designer=0 and status=1')->where('company_name','like','%'.$company_name.'%')->order("$sort $sort_asc")->limit($page->firstRow.','.$page->listRows)->select();
-
             }
-//        $result=$id;
-//        $this->ajaxReturn($result);die();
-			$this->assign('supplier_newList',$supplier_newList);
-			$this->assign("supplierCount",$supplierCount);
-			$this->assign('page',$page);
-        	return	$this->fetch("index/supplierList");//没有搜索或者列表页，用更多页代替
+
+        	$rs=array('status'=>'1','info'=>'请求成功','supplier_newList'=>$supplier_newList,'supplierCount'=>$supplierCount,'page'=>$page);
+        	exit(json_encode($rs));  
+
         }
 
     

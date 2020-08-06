@@ -329,6 +329,7 @@ class Supplier extends Base{
         }
         $supplier['reading_protocol'] = explode(',',$supplier['reading_protocol']);
 		if(IS_POST){
+			$note = I('note');
 			$status = I('status');
 			$row = Db::name('supplier')->where(array('supplier_id'=>$supplier_id))->update($_POST);
 			//同步修改商铺设置的LOGO
@@ -358,7 +359,8 @@ class Supplier extends Base{
 			}elseif($status == '2'){
 				Db::name('supplier')->where('supplier_id',$supplier_id)->update(array('is_complete'=>0,'status'=>2));
 				Db::name('supplier_user')->where('supplier_id',$supplier_id)->update(array('state'=>'0'));
-				sendCode($supplier['contacts_phone'],'尊敬的商户，您好！您提交的商铺信息审核失败，请按要求正确填写.');
+				// sendCode($supplier['contacts_phone'],'尊敬的商户，您好！您提交的商铺信息审核失败，请按要求正确填写.');
+				sendCode($supplier['contacts_phone'],'尊敬的商户，您好！您提交的商铺信息审核失败，请按要求正确填写,备注：'.$note.'。');
 			}elseif($status == '-1'){
 				Db::name('supplier')->where('supplier_id',$supplier_id)->update(array('status'=>'-1'));
 				Db::name('supplier_user')->where('supplier_id',$supplier_id)->update(array('state'=>'0'));

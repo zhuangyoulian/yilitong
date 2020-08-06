@@ -326,14 +326,17 @@ class User extends MobileBase{
      */
 
     public function userCustom(){
-        $base64 = $_POST['logoImages'];
-
+        // $base64 = $_POST['logoImages'];
+        $base64 = I('post.logoImages');
+        if (empty($base64)) {
+            exit(json_encode(array('status'=>-1,'msg'=>'参数为空')));
+        }
         if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64, $result)){
             $type = $result[2]; //jpeg
             $IMG = base64_decode(str_replace($result[1], '', $base64)); //返回文件流
+        }else{
+            exit(json_encode(array('status'=>-2,'msg'=>'参数有误')));
         }
-                // dump($base64);die;
-        //$IMG = base64_decode($base64);   //base64位转码，还原图片
         $path ='public/upload/head_pic/pic/';
         if (!file_exists($path)){
             mkdir($path,0777,true);

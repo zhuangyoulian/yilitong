@@ -1665,13 +1665,14 @@ function get_goods_promotion($goods_id,$user_id=0){
 		$prom['prom_type'] = $prom['prom_id'] = 0 ;//活动已过期
 		$prom['is_end'] = 1;//已结束
 	}
-    // if($prominfo['buy_type'] != 6 && $prominfo['buy_type'] != 7 && $prominfo['end_time'] < $now){
-	if($prominfo['end_time'] < $now){
-		if($goods['prom_type'] > 0 && $prom['prom_id'] > 0){
-			Db::name('goods')->where("prom_type", $goods['prom_type'])->where('prom_id',$prom['prom_id'])->update(['prom_type'=>0,'prom_id'=>0]);
-			Db::name('cart')->where("prom_type", $goods['prom_type'])->where('prom_id',$prom['prom_id'])->delete();
-		}
-		return 1;//已结束
+    if($prominfo['buy_type'] != 6 && $prominfo['buy_type'] != 7){
+    	if($prominfo['end_time'] < $now){
+    		if($goods['prom_type'] > 0 && $prom['prom_id'] > 0){
+    			Db::name('goods')->where("prom_type", $goods['prom_type'])->where('prom_id',$prom['prom_id'])->update(['prom_type'=>0,'prom_id'=>0]);
+    			Db::name('cart')->where("prom_type", $goods['prom_type'])->where('prom_id',$prom['prom_id'])->delete();
+    		}
+    		return 1;//已结束
+        }
 	}
 	return $prom;
 }
@@ -2260,12 +2261,21 @@ function dy(Array $str)
         }
         //查询所有一级及有商品的分类的二三级
         if ($parent_id_path) {
-            // $one = Db::name('goods_category')->where(['level'=>1,'is_show'=>1])->select();
-            $one = Db::name('goods_category')->where('id = 1123 or (level = 1 and is_show =1)')->select();
-            foreach ($parent_id_path as $key => $value) {
-                $two[] = Db::name('goods_category')->where('id',$value[2])->find();
-                if ($value[3]) {
-                    $three[] = Db::name('goods_category')->where('id',$value[3])->find();
+            if ($table == 'red_goods') {
+                $one = Db::name('goods_category')->where('id = 1123 or (level = 1 and is_red =1)')->select();
+                foreach ($parent_id_path as $key => $value) {
+                    $two[] = Db::name('goods_category')->where('is_red =1')->where('id',$value[2])->find();
+                    if ($value[3]) {
+                        $three[] = Db::name('goods_category')->where('is_red =1')->where('id',$value[3])->find();
+                    }
+                }
+            }elseif($table == 'goods'){
+                $one = Db::name('goods_category')->where('id = 1123 or (level = 1 and is_show =1)')->select();
+                foreach ($parent_id_path as $key => $value) {
+                    $two[] = Db::name('goods_category')->where('is_show =1')->where('is_red =1')->where('id',$value[2])->find();
+                    if ($value[3]) {
+                        $three[] = Db::name('goods_category')->where('is_show =1')->where('id',$value[3])->find();
+                    }
                 }
             }
         }

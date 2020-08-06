@@ -397,9 +397,6 @@ class Goods extends MobileBase {
         }elseif ($prom_count['prom_type'] == 7) {
             $this->assign('prom_count',$prom_count);
         }
-        // dump($goods);
-        // dump($prom_count);
-        // die;
         $goods_images_list = Db::name('GoodsImages')->where("goods_id", $goods_id)->order('img_id desc')->select(); // 商品 图册
         $filter_spec = $goodsLogic->get_spec($goods_id);
         $spec_goods_price  = Db::name('goods_price')->where("goods_id", $goods_id)->column("key,price,store_count,quantity"); // 规格 对应 价格 库存表

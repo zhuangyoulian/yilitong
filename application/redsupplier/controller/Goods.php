@@ -31,7 +31,7 @@ class Goods extends Base {
         $Page = $pager = new Page($count,15);
         $brandList = $model->where($where)->order("`id` desc")->limit($Page->firstRow.','.$Page->listRows)->select();
         $show  = $Page->show();
-        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->column('id,name'); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_red = 1")->column('id,name'); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $this->assign('pager',$pager);
         $this->assign('show',$show);
@@ -68,7 +68,7 @@ class Goods extends Base {
             $this->success("操作成功,请等待平台审核!!!",Url::build('RedSupplier/Goods/brandList',array('p'=>I('p'))));
             exit;
         }
-        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_red = 1")->select(); // 已经改成联动菜单
         $this->assign('cat_list',$cat_list);
         $brand = Db::name("Brand")->find($id);
         $this->assign('brand',$brand);
@@ -298,7 +298,7 @@ class Goods extends Base {
         $goodsInfo = Db::name('RedGoods')->where('goods_id=' . I('GET.id', 0))->find();
         $level_cat = $GoodsLogic->find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $level_cat2 = $GoodsLogic->find_parent_cat2($goodsInfo['extend_cat_id']); // 获取场景分类默认选中的下拉框
-        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成联动菜单
+        $cat_list = Db::name('goods_category')->where("parent_id = 0 and is_red = 1")->select(); // 已经改成联动菜单
         //      $extend_cat_list = Db::name('redsupplier_goods_category')->where(array('level' => 1,'supplier_id' => $supplier_id))->select(); // 已经改成联动菜单
         $cat_scenario_list = Db::name('scenario_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成场景联动菜单
         $brandList = $GoodsLogic->getSortBrands();

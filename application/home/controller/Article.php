@@ -11,143 +11,125 @@ use think\Request;
 
 class Article extends Base {
     
-    public function index(){       
-      $article_id = I('article_id/d',38);
-    	$article = Db::name('article')->where("article_id", $article_id)->find();
-    	$this->assign('article',$article);
-        return $this->fetch();
-    }
- 
-    /**
-     * 文章内列表页
-     */
-    public function articleList(){
-        $article_cat = Db::name('ArticleCat')->where("parent_id  = 0")->select();
-        $this->assign('article_cat',$article_cat);
-        return $this->fetch();
-    }    
-	
 	
     /**
      * 文章内容页
      */
     public function detail(){
-		
-    $article_id = I('article_id/d',1);
-
-		$key = md5($_SERVER['REQUEST_URI'].I('article_id/d',1));
-		$html =  Cache::get($key);  //读取缓存
-		
-		Db::name('article')->where("article_id", $article_id)->setInc('click'); //统计点击数
-		
-		if(!empty($html))
-		{
-			return $html;
-		}
-			
-    	$article = Db::name('article')->where("article_id", $article_id)->find();
-		 
-    	if($article){
-    		$parent = Db::name('article_cat')->where("cat_id",$article['cat_id'])->find();
-    		$this->assign('cat_name',$parent['cat_name']);
-    		$this->assign('article',$article);
-    	}
-		
-		//常见问题分类
-		$classification = Db::name('article_cat')->where("cat_id",in,"1,2,3,4,7")->select();
-		//分类文章
-		$classifiedArticle = Db::name('article')->where('cat_id',in,'1,2,3,4,7')->where('is_open',1)->order('add_time','desc')->limit(20)->select();
-		
-		$this->assign('classification',$classification);
-		$this->assign('classifiedArticle',$classifiedArticle);
-		
-        $html = $this->fetch();
-		Cache::set($key,$html);
-		return $html;
+      $article_id = I('article_id/d',1);
+  		Db::name('article')->where("article_id", $article_id)->setInc('click'); //统计点击数
+  		if(!empty($html))
+  		{
+  			return $html;
+  		}
+      	$article = Db::name('article')->where("article_id", $article_id)->find();
+      	if($article){
+      		$parent = Db::name('article_cat')->where("cat_id",$article['cat_id'])->find();
+      	}
+      $rs=array('status'=>'1','info'=>'请求成功','cat_name'=>$parent['cat_name'],'article'=>$article);
+      exit(json_encode($rs));
     } 
+    /**
+     * [ArticleList 文章列表页]
+     */
+    public function ArticleList(){
+      $cat_id = I('cat_id/d',3);
+      $p = I('p/d',1);
+      //常见问题分类
+      $classification = Db::name('article_cat')->where("cat_id",in,"1,2,3,4,7")->select();
+      $cat_name = Db::name('article_cat')->where("cat_id",$cat_id)->value('cat_name');
+      //分类文章
+      $ArticleCount = Db::name('article')->where('cat_id',$cat_id)->where('is_open',1)->order('add_time','desc')->count();
+      $classifiedArticle = Db::name('article')->where('cat_id',$cat_id)->where('is_open',1)->order('add_time','desc')->page($p,20)->select();
+
+      $rs=array('status'=>'1','info'=>'请求成功','cat_name'=>$parent['cat_name'],'article'=>$article,'classification'=>$classification,'classifiedArticle'=>$classifiedArticle,'cat_name'=>$cat_name,'ArticleCount'=>$ArticleCount);
+      exit(json_encode($rs));
+
+    }
 
     /**
-     * @function businessPurchase() //企业采集
+     * [ArticleGift 礼品方案更多列表]
+     */
+    public function ArticleGift(){
+      $p = I('p/d',1);
+      $scheme = Db::name('article')->where("thumb != ' ' and is_open = 1 and is_ecommend = 1 and cat_id = 98")->order("publish_time desc")->page($p,12)->Field("thumb as image,title,article_id")->select();
+
+      $rs=array('status'=>'1','info'=>'请求成功','scheme'=>$scheme);
+      exit(json_encode($rs));
+    }
+
+    /**
+     * [ArticleGift_inof 礼品方案详情页]
+     */
+    public function ArticleGift_inof(){
+      $article_id = I('article_id/d');
+      $scheme = Db::name('article')->where("article_id",$article_id)->find();
+      if (!$scheme) {
+        exit(json_encode(array('status'=>'-1','info'=>'文章不存在')));
+      }
+      $rs=array('status'=>'1','info'=>'请求成功','scheme'=>$scheme);
+      exit(json_encode($rs));
+    }
+
+    /**
+     * @function businessPurchase() //企业采集--名企直采页面
      * @return mixed
      */
     public function businessPurchase(){
-
-        $purchase_list = Db::name('purchase')->where('status',1)->where('dead_time','>',time())->order('inquiry_time desc')->limit(0,12)->cache(true,3600)->select();
-		    $purchase_lists = Db::name('purchase')->where('status',1)->where('dead_time','>',time())->order('inquiry_time desc')->limit(0,20)->cache(true,3600)->select();//获取采购信息
-		    if(!$purchase_list){
-    			$purchase_list = Db::name('purchase')->where('status',1)->where('dead_time','>',time())->order('inquiry_time desc')->limit(0,12)->cache(true,3600)->select();
+        $purchase_list = Db::name('purchase')->alias('p')->join('supplier s','p.supplier_id = s.supplier_id')->where('p.status',1)->where('p.dead_time','>',time())->field('p.*')->order('p.inquiry_time desc')->limit(0,12)->cache(true,3600)->select();
+        foreach($purchase_list as &$v){
+            $v['count'] = Db::name("purchase_list")->where("purchase_id = $v[id]")->count();
+            $v['content']= Db::name("purchase_list")->where("purchase_id = $v[id]")->select();
+            $v['budget'] = $v['budget'] / 10000;
         }
+        $purchase_count= Db::name("purchase")->where("status=1")->where('dead_time','>',time())->count();/*采购信息的总数*/
 
-        $this->assign('purchase_list',$purchase_list);
-		    $this->assign('purchase_lists',$purchase_lists);
-        return $this->fetch();
+        $rs=array('status'=>'1','info'=>'请求成功','purchase_list'=>$purchase_list,'purchase_count'=>$purchase_count);
+        exit(json_encode($rs));
     }
-  
-      public function purchase_info(){
-      	  if(session('user')){
-              $this->error('商家账号才能发布采购，请用商家账号登录！！',Url::build('Home/Business/login'));
-          }
-        if(session('supplier')){      
-          $supplier=session('supplier');
-          if( $supplier['state'] == 0){
-          		$this->error('您还未完善商家信息，请完善！！',Url::build('Home/Business/BusinessOne'));
-          }else if( $supplier['status'] == 0){
-          		$this->error('商家信息审核中请您耐心等待！！',Url::build('Home/Business/BusinessIndex'));
-          }else if($supplier['status'] == 2){
-                $this->error('您提交商家信息审核未通过！！',Url::build('Home/Business/BusinessFour'));
-          }else if($supplier['status'] == -1){
-                $this->error('您的商家店铺已关闭！！',Url::build('Home/Business/BusinessFour'));
-          }
-          
- 		}
-        
-         if(!session('supplier_id')){
-          	session('loginUrl',$_SERVER['REQUEST_URI']);
-        	$this->error('请先登录！！',Url::build('Home/Business/login'));
+    
+    /**
+     * [purchase_info 发布采购单页面]
+     * @return [type] [description]
+     */
+    public function purchase_info(){
+      if(I('supplier_admin_id')){      
+        $supplier = Db::name('supplier_user')->alias('u')->join('supplier s', array('s.supplier_id=u.supplier_id'),'left')->where('u.admin_id',I('supplier_admin_id'))->find();
+        if( $supplier['status'] == 0){
+            exit(json_encode(array('status'=>'-13','info'=>'商家信息审核中请您耐心等待！！','url'=>'Home/Business/BusinessFour')));
+        }else if($supplier['status'] == 2){
+            exit(json_encode(array('status'=>'-14','info'=>'您提交商家信息审核未通过！！','url'=>'Home/Business/BusinessFour')));
+        }else if( $supplier['state'] == 0){
+            exit(json_encode(array('status'=>'-12','info'=>'您还未完善商家信息，请完善！！','url'=>'Home/Business/BusinessOne')));
+        }else if($supplier['status'] == -1){
+            exit(json_encode(array('status'=>'-15','info'=>'您的商家店铺已关闭！！','url'=>'Home/Business/BusinessFour')));
         }
-     	
-        $this->assign('supplier',$supplier);
-        return $this->fetch();
+ 		  }else{
+        session('loginUrl',$_SERVER['REQUEST_URI']);
+        exit(json_encode(array('status'=>'-11','info'=>'商家账号才能发布采购，请用商家账号登录！！','url'=>'Home/Business/login')));
+      }
+   	
+      $rs=array('status'=>'1','info'=>'请求成功','supplier'=>$supplier);
+      exit(json_encode($rs));
     }
 
   //添加
    public function add_purchase(){
         $data = I('post.');
-        $data['supplier_id'] = session('supplier_id') ? session('supplier_id') :41;
-        // dump($data['supplier_id']);die;
+        $data['supplier_id'] = I('supplier_id') ? I('supplier_id') :41;
         $data['inquiry_time'] = strtotime($data['inquiry_time']);
         $data['dead_time'] = strtotime($data['dead_time']);
         $data['expect_time'] = strtotime($data['expect_time']);
         $data_now=strtotime("now")-3600*24;
         $data['add_time'] = time();
         $data['sustomized']=I('sustomized');
-//        $result=111;
-//        $this->ajaxReturn($result);die();
         if(!(preg_match("/^1[345789]{1}\d{9}$/",$data['tel']))){
             $arr=array('status'=>"-1",'msg'=>"请输入正确的手机号");
             exit(json_encode($arr));
         }
 
-        /*if($data['goods_count']>9999999999){
-            $arr=array('status'=>"-1",'msg'=>"采购商品数量不能超过1亿");
-            exit(json_encode($arr));
-        }*/
-
         if(empty($data['goods_sn'])){
             $data['goods_sn'] = date('Ymd').substr(implode(NULL,array_map('ord',str_split(substr(uniqid(),7,13),1))),0,8);
-        }
-
-        if(!empty($data['hcity']) && !is_numeric($data['hcity'])){
-            $rs=Db::name('region')->where( 'name',"{$data['hcity']}")->find();
-            $data['province']=$rs['id'];
-        }
-        if(!empty($data['hproper']) && !is_numeric($data['hproper'])){
-            $rs=Db::name('region')->where( 'name',"{$data['hproper']}")->find();
-            $data['city']=$rs['id'];
-        }
-        if(!empty($data['harea']) && !is_numeric($data['harea'])){
-            $rs=Db::name('region')->where( 'name',"{$data['harea']}")->find();
-            $data['area']=$rs['id'];
         }
         if(empty($data['province']) || empty($data['city'])){
             $arr=array('status'=>"-1",'msg'=>"请输入正确地址");
@@ -157,8 +139,6 @@ class Article extends Base {
         if(empty($data['region'])){
             $data['region'] = "全国";
         }
-
-
         if($data['inquiry_time']<$data_now){
             $arr=array('status'=>"-1",'msg'=>"请输入正确询价时间!");
             exit(json_encode($arr));
@@ -167,8 +147,8 @@ class Article extends Base {
             $arr=array('status'=>"-1",'msg'=>"请输入正确截止时间!");
             exit(json_encode($arr));
         }
+        
         if($data['expect_time']>$data['dead_time']){
-
             if($data['id']){
                 $rs= Db::name('Purchase')->where('id',$data['id'])->where('supplier_id',session('supplier_id'))->update($data);
             }else{
@@ -183,25 +163,17 @@ class Article extends Base {
                              	  'addressxn'=>$data['addressxn'],'add_time'=>time(),'wxnum'=>$data['wx'],'qqnum'=>$data['qq']
                                  ];
                     }
-                
                     $result = Db::name('purchase_list')->insertAll($pl);    // 批量添加
-                                
                 }
-              
-              
               Db::name('purchase')->where('supplier_id',$data['supplier_id'])->update(['operator'=>2]);
             }
-
             $rs=array('status'=>'1','msg'=>'编辑成功!');
             exit(json_encode($rs));
         }
         else{
             $rs=array('status'=>'-1','msg'=>'期望收货时间比截止时间晚!');
             exit(json_encode($rs));
-
         }
-
-
     }
 
 
@@ -212,44 +184,24 @@ class Article extends Base {
     public function moreBusinessTrade(){
         $p = I('p/d',1);
         $time = time();
-
-       
-        $count = DB::name('purchase')->where('status',1)->count();
-		    $purchase_list = Db::name('purchase')->where('status',1)->where('inquiry_time','egt',$time)->order('inquiry_time desc')->page($p.',20')->cache(true,3600)->select();
+        $where = 'p.status = 1';
+        if (I('dead_time') == '1') {
+          $where .= ' and p.dead_time >= '.$time;
+        }
+        $count = DB::name('purchase')->alias('p')->join('supplier s','p.supplier_id = s.supplier_id')->where($where)->count();
 
         $page = new Page($count,20);
-        if(!$purchase_list){
-            $purchase_list =  Db::name('purchase')->where('status',1)->order('inquiry_time desc')->limit($page->firstRow.','.$page->listRows)->cache(true,3600)->select();
+        $purchase_list = Db::name('purchase')->alias('p')->join('supplier s','p.supplier_id = s.supplier_id')->where($where)->field('p.*')->order('p.inquiry_time desc')->limit($page->firstRow.','.$page->listRows)->cache(true,3600)->select();
+        foreach($purchase_list as &$v){
+            $v['count'] = Db::name("purchase_list")->where("purchase_id = $v[id]")->count();
+            $v['content']= Db::name("purchase_list")->where("purchase_id = $v[id]")->select();
+            $v['budget'] = $v['budget'] / 10000;
         }
-
-        $this->assign('page',$page);
-        $this->assign('purchase_list',$purchase_list);
-        return $this->fetch();
+      
+        $rs=array('status'=>'1','info'=>'请求成功','page'=>$page,'purchase_list'=>$purchase_list,'purchase_count'=>$count);
+        exit(json_encode($rs));
     }
 
-    /**
-     * @function moreBusinessTrade() //企业采集 -->  即将到期
-     * @return mixed
-     */
-    public function moreBusinessTrade2(){
-        $p = I('p/d',1);
-        $purchase_time=strtotime("now")+3600*24*7;
-        $time = time();
-
-        //$purchase_list = Db::name('purchase')->where('status',1)->where('dead_time','egt',$time)->where('dead_time','elt',$purchase_time)->order('dead_time')->page($p.',20')->cache(true,3600)->select();
-		$purchase_list = Db::name('purchase')->where('status',1)->order('inquiry_time')->page($p.',20')->cache(true,3600)->select();
-		 if(!$purchase_list){
-			 $purchase_list =  Db::name('purchase')->where('status',1)->order('inquiry_time desc')->page('0,20')->cache(true,3600)->select();
-		 }
-        //$count = DB::name('purchase')->where('status',1)->where('dead_time','egt',$time)->where('dead_time','elt',$purchase_time)->count();
-		$count = DB::name('purchase')->where('status',1)->count();
-        $Page = new Page($count,20);
-        $show = $Page->show();
-        $this->assign('pager',$Page);
-        $this->assign('page',$show);
-        $this->assign('purchase_list',$purchase_list);
-        return $this->fetch();
-    }
 
      /**
      * @function tradeList() //企业采集 --> 企业采集单
@@ -257,10 +209,10 @@ class Article extends Base {
      */
      public function tradeList(){
         $id = I('id');
-        $goodsNum1=Db::name('purchase')->field('id')->where('id',$_GET['id'])->find();//查询采购是否存在
+        $goodsNum1=Db::name('purchase')->field('id')->where('id',$id)->find();//查询采购是否存在
        	$goodsNum=Db::name('purchase_list')->field('id')->where('purchase_id',$id)->find();//获取purchase_list表的id
         if (!$goodsNum1 or !$goodsNum) {
-           $this->error('该条采购信息已删除',Url::build('/businessPurchase'));
+          exit(json_encode(array('status'=>'-16','info'=>'该条采购信息已删除','url'=>'/businessPurchase')));
         }
          $purchase_list_id="";
          foreach($goodsNum as $key =>$value){
@@ -309,9 +261,10 @@ class Article extends Base {
              $xncompany_name.=$value['company_name'];
              $xncontact_name.=$value['contacts_name'];
         }
-//----------------------------</end>添加虚拟数据----------------------------------
+        //----------------------------</end>添加虚拟数据----------------------------------
         $region_list = get_region_list();
        
+         //更多商机（推荐报价）
         $purchase=Db::name('purchase')
         			->field('p.title,p.id,p.expect_time,p.province,p.dead_time,s.logo,p.inquiry_time,p.be_viewed,p.quoted,p.budget,p.operator')
                     ->alias('p')
@@ -330,37 +283,38 @@ class Article extends Base {
                     ->field('goods_name,goods_img,goods_num,goods_unit')
                     ->where('purchase_id',$value['id'])
                     ->select();
-            $value['list']= $goods_list; 
+            $value['content']= $goods_list; 
+            $value['count'] = count($goods_list);
+            // $value['budget'] = $value['budget'] / 10000;
             $map[]=$value;      
         } 
-         $supplier_info['address'] = $region_list[$supplier_info['province']]['name'] . $region_list[$supplier_info['city']]['name'] . $region_list[$supplier_info['area']]['name'] . $supplier_info['address'];
-         $plist = Db::name('purchase')->alias('p')->join('purchase_list l','p.id = l.purchase_id')->where('p.status=1 and p.id!='.$id.' and  p.supplier_id="'.$info['supplier_id'].'"')->order('inquiry_time desc')->field('p.*')->limit(0,6)->cache(true,3600)->select();//获取采购信息
+
+        //地址
+        if (is_numeric($supplier_info['province'])) {
+          $supplier_info['address'] = $region_list[$supplier_info['province']]['name'] . $region_list[$supplier_info['city']]['name'] . $region_list[$supplier_info['area']]['name'] . $supplier_info['address'];
+        }else{
+          $supplier_info['address'] = $supplier_info['province'] . $supplier_info['city'] . $supplier_info['area'] . $supplier_info['address'];
+        }
+        //采购信息
+        $plist = Db::name('purchase')->alias('p')->join('purchase_list l','p.id = l.purchase_id')->where('p.status=1 and p.id!='.$id.' and  p.supplier_id="'.$info['supplier_id'].'"')->order('inquiry_time desc')->field('p.*')->limit(0,6)->cache(true,3600)->select();//获取采购信息
        	if(!session('?supplier_id') and !session('?user')){
           $info['tel'] = substr_replace($info['tel'],'****',3,4);
           $wxnum = substr_replace($wxnum,'****',2,4);
           $qqnum = substr_replace($qqnum,'****',3,4);
           $email = substr_replace($email,'****',3,4);
         }
-        $this->assign('supplier',$supplier_info);
-        $this->assign('purchase_list',$purchase_list);
-        $this->assign('purchase',$purchase);
-        $this->assign('map_list',$map);
-        $this->assign('plist',$plist);
-        $this->assign('info',$info);
-       	//虚拟数据渲染start-----------------
-        $this->assign('xnsj',$xnsj);
-        $this->assign('xncompany_name',$xncompany_name);
-        $this->assign('xncontact_name',$xncontact_name);
-        $this->assign('company_phone',$company_phone);
-        $this->assign('email',$email);
-        $this->assign('address',$addressxn);
-        $this->assign('wxnum',$wxnum);
-        $this->assign('qqnum',$qqnum);
-        //虚拟数据渲染end-----------------
-        return $this->fetch();
+        $supply_count = Db::name('supply')->where('purchase_id',$id)->count();  //已有报价数量
+
+        $rs=array('status'=>'1','supplier'=>$supplier_info,'purchase_list'=>$purchase_list,'map_list'=>$map,'plist'=>$plist,'info'=>$info,'xnsj'=>$xnsj,'xncompany_name'=>$xncompany_name,'xncontact_name'=>$xncontact_name,'company_phone'=>$company_phone,'email'=>$email,'address'=>$addressxn,'wxnum'=>$wxnum,'qqnum'=>$qqnum,'supply_count'=>$supply_count);
+        exit(json_encode($rs));
+
      }
 
-     public function search(){
+     /**
+      * [search 采购搜索]
+      * @return [type] [description]
+      */
+    public function search(){
        $keywords=I('keywords','');
        $where='status=1';
        if(!empty($keywords)){
@@ -410,46 +364,57 @@ class Article extends Base {
         $search_list = Db::name('purchase')->where($where)->order('inquiry_time desc')->limit(0,12)->cache(true,3600)->select();
         $search_lists = Db::name('purchase')->where($where)->order('inquiry_time desc')->limit(0,20)->cache(true,3600)->select();//获取采购信息
 
-        $this->assign('search_list',$search_list);
-        $this->assign('search_lists',$search_lists);
-        return $this->fetch();
+        $rs=array('status'=>'1','info'=>'请求成功','search_list'=>$search_list,'search_lists'=>$search_lists);
+        exit(json_encode($rs));
+
     }
-     //立即报价
-        public function quoteNow(){
-         if(session('supplier')){      
-          $supplier=session('supplier');
-          if( $supplier['state'] == 0){
-                $this->error('您还未完善商家信息，请完善！！',Url::build('Home/Business/BusinessOne'));
-          }else if( $supplier['status'] == 0){
-                $this->error('商家信息审核中请您耐心等待！！',Url::build('Home/Business/BusinessIndex'));
+     //立即报价页面
+    public function quoteNow(){
+        if(I('supplier_admin_id')){      
+          $supplier = Db::name('supplier_user')->alias('u')->join('supplier s', array('s.supplier_id=u.supplier_id'),'left')->where('u.admin_id',I('supplier_admin_id'))->find();
+          if( $supplier['status'] == 0){
+            exit(json_encode(array('status'=>'-13','info'=>'商家信息审核中请您耐心等待！！','url'=>'Home/Business/BusinessIndex')));
           }else if($supplier['status'] == 2){
-                $this->error('您提交商家信息审核未通过！！',Url::build('Home/Business/BusinessFour'));
+            exit(json_encode(array('status'=>'-14','info'=>'您提交商家信息审核未通过！！','url'=>'Home/Business/BusinessFour')));
+          }else if( $supplier['state'] == 0){
+            exit(json_encode(array('status'=>'-12','info'=>'您还未完善商家信息，请完善！！','url'=>'Home/Business/BusinessOne')));
           }else if($supplier['status'] == -1){
-                $this->error('您的商家店铺已关闭！！',Url::build('Home/Business/BusinessFour'));
+            exit(json_encode(array('status'=>'-15','info'=>'您的商家店铺已关闭！！','url'=>'Home/Business/BusinessFour')));
           }
-          
+        }else{
+          session('loginUrl',$_SERVER['REQUEST_URI']);
+          exit(json_encode(array('status'=>'-11','info'=>'请先登录！！','url'=>'Home/Business/login')));
         }
-         if(!session('supplier_id')){
-            session('loginUrl',$_SERVER['REQUEST_URI']);
-            $this->error('请先登录！！',Url::build('Home/Business/login'));
-        }
+
         $id  = I('get.id');
         $purchase          = Db::name('purchase')->where('id',$id)->find();
         $purchase_list     =Db::name('purchase_list')->where('purchase_id',$id)->select();
-        //dump($purchase);
+          
+        if(!$purchase){
+            exit(json_encode(array('status'=>'-17','info'=>'采购商品不存在')));
+        }
 
-        if(IS_POST){ 
+        $rs=array('status'=>'1','info'=>'请求成功','purchase_list'=>$purchase_list,'purchase'=>$purchase);
+        exit(json_encode($rs));
+    }
+    /**
+     * [add_quote 提交报价]
+     */
+    public function add_quote(){
+      if(IS_POST){ 
             $data = I('post.');
-          	$mobile=$data['phone'];
-          	$code=$data['code'];
+            $mobile=$data['phone'];
+            // $code=$data['code'];
             $supply['title']=$data['title'];
             $supply['content']=$data['content'];
             $supply['phone']=$data['phone'];
-            $supply['an_time']=strtotime($data['an_time']);
+            // $supply['an_time']=strtotime($data['an_time']);
             $supply['purchase_id']=$data['purchase_id'];
             $supply['title']=$data['title'];
             $supply['end_time']=strtotime($data['end_time']);
-            $supply['supplier_id'] = session('supplier_id');
+            $supply['supplier_id'] = $data('supplier_id');
+            $supply['company_name'] = Db::name('supplier')->where('supplier_id',$data('supplier_id'))->value('company_name');
+
             if(!(preg_match("/^1[34578]{1}\d{9}$/",$data['phone']))){
                 $arr=array('status'=>"-1",'msg'=>"请输入正确的手机号");
                 exit(json_encode($arr));
@@ -477,21 +442,11 @@ class Article extends Base {
                     $content=array('status'=>'1','msg'=>'报价成功!');
                     exit(json_encode($content));
                 }else{
-
                     $content=array('status'=>'2','msg'=>'报价出错，请重试!');
                     exit(json_encode($content));
                 }
-
             }
         }
-          
-        if(!$purchase){
-            exit($this->error('采购商品不存在'));
-        }
-         
-        $this->assign('purchase_list',$purchase_list); 
-        $this->assign('purchase',$purchase); 
-        return $this->fetch();
     }
 
 }

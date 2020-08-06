@@ -17,6 +17,18 @@ class RedGift extends Base{
      */
     public function a_red_list(){
         //     truncate table ylt_red_cart   清空表
+        // $co = Db::name('red_goods')->alias('g')->join('goods_category c','g.cat_id = c.id')->where('red_supplier_id = 0 and c.parent_id != 1089 and c.id != 1089')->field('goods_id,goods_name')->select();
+        // foreach ($co as $key => $value) {
+        //     Db::name('red_goods')->where('goods_id',$value['goods_id'])->update(['is_delete'=>1]);
+        // }
+        // die;
+        // $goods =  Db::name('red_goods')->alias('g')->join('goods_category c','g.cat_id = c.id')->where('c.parent_id != 1089 and c.id != 1089 and (g.red_cost_price != 0 or g.red_cost_price != Null )')->field('red_cost_price,group_price,goods_id')->select();
+        // foreach ($goods as $key => $value) {
+        //     $red_cost_price = $value['red_cost_price']*1.2;
+        //     Db::name('red_goods')->where('goods_id = '.$value['goods_id'])->update(['group_price'=>$red_cost_price]);
+        // }
+        // die;
+
         $GoodsLogic = new GoodsLogic();
         // $categoryList = $GoodsLogic->red_getSortCategory();
         $categoryList = $GoodsLogic->getSortCategory();
@@ -39,7 +51,7 @@ class RedGift extends Base{
         $key_word = I('key_word') ? trim(I('key_word')) : '';
         if($key_word)
         {
-            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%')" ;
+            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%' or supplier_name like '%$key_word%')" ;
         }
 
         if($cat_id > 0)
@@ -72,6 +84,7 @@ class RedGift extends Base{
         $this->assign('catList',$catList);
         $this->assign('goodsList',$goodsList);
         $this->assign('page',$show);// 赋值分页输出
+        $this->assign('pager',$Page);
         return $this->fetch();
     }  
 
@@ -97,7 +110,10 @@ class RedGift extends Base{
                 );
                 $this->ajaxReturn($return_arr);
             }
-
+            if (empty($data['original_img'])) {
+                $this->ajaxReturn(array('status' => -5,'msg' => '主图不可为空'));
+            }
+            
             $Goods->data(I('post.'),true); // 收集数据
 
             I('cat_id_2') && ($Goods->cat_id = I('cat_id_2'));
@@ -173,8 +189,8 @@ class RedGift extends Base{
         // $level_cat = $GoodsLogic->red_find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $level_cat = $GoodsLogic->find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $level_cat2 = $GoodsLogic->find_parent_cat2($goodsInfo['extend_cat_id']); // 获取分类默认选中的下拉框
-        // $cat_list = Db::name('red_goods_category')->where("parent_id = 0 and is_show = 1 ")->select(); // 已经改商品成联动菜单
-        $cat_list = Db::name('goods_category')->where("id = 1123 or (  parent_id = 0 and is_show = 1 )")->select(); // 已经改商品成联动菜单
+        // $cat_list = Db::name('red_goods_category')->where("parent_id = 0 and is_red = 1 ")->select(); // 已经改商品成联动菜单
+        $cat_list = Db::name('goods_category')->where("id = 1123 or (  parent_id = 0 and is_red = 1 )")->select(); // 已经改商品成联动菜单
         $cat_scenario_list = Db::name('scenario_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成场景联动菜单
         $brandList = $GoodsLogic->getSortBrands();  //查询品牌
         // $goodsType = $GoodsLogic->red_goodsType();
@@ -244,7 +260,7 @@ class RedGift extends Base{
         $key_word = I('key_word') ? trim(I('key_word')) : '';
         if($key_word)
         {
-            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%')" ;
+            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%' or supplier_name like '%$key_word%')" ;
         }
 
         if($cat_id > 0)
@@ -263,6 +279,7 @@ class RedGift extends Base{
         $this->assign('catList',$catList);
         $this->assign('goodsList',$goodsList);
         $this->assign('page',$show);// 赋值分页输出
+        $this->assign('pager',$Page);
         $this->assign('count',$count);// 赋值分页输出
         return $this->fetch();
     }
@@ -1337,10 +1354,10 @@ class RedGift extends Base{
      * @return [type] [description]
      */
     public function adminHandle(){
-        $data = I('post.');
-        $data['password'] = encrypt($data['password']);
-        $data['user_name'] = trim($data['user_name']);
+        $data = I('');
         if($data['act'] == 'add'){
+            $data['password'] = encrypt($data['password']);
+            $data['user_name'] = trim($data['user_name']);
             if(empty($data['password']) || empty($data['user_name'])){
                 $this->error("账号或密码不能为空");
             }
@@ -1356,6 +1373,8 @@ class RedGift extends Base{
         }
         
         if($data['act'] == 'edit'){
+            $data['password'] = encrypt($data['password']);
+            $data['user_name'] = trim($data['user_name']);
             if(empty($data['password']) || empty($data['user_name'])){
                 $this->error("账号或密码不能为空");
             }
