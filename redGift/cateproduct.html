@@ -49,7 +49,7 @@
                             <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
                         </div>
                         <div class="rd_keywords">
-                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('中秋')">中秋</span>
                             <span @click="sousuo('包')">包</span>
                             <span @click="sousuo('米')">米</span>
                             <span @click="sousuo('运动')">运动</span>
@@ -251,7 +251,7 @@
                             <img src="./img/icon_good@2x.png" v-if="prod.is_quality==1" />
                             <p>{{prod.goods_name}}</p>
                         </div>
-                        <p class="rd_prod_price"><span>¥</span>{{prod.group_price}}</p>
+                        <p class="rd_prod_price"><span>¥</span>{{prod.group_price}}<span class="rd_market_price">¥{{prod.market_price}}</span></p>
                     </a>
                 </div>
                 <!-- 分页显示 -->
@@ -355,7 +355,7 @@
         el: '#vue_index',
         data: {
             addhover: true,
-            // baseUrl: 'http://192.168.1.39/tp510',
+            // baseUrl: 'http://192.168.1.14/tp510',
             baseUrl: 'http://www.yilitong.com',
             cur: 0,
             placeh: 1,
@@ -499,7 +499,7 @@
                 var category = this.category;
                 var that = this;
                 that.active_cate_1 = e;
-                that.isCateshow = true;
+
                 that.hover_cate_1 = e;
                 if (e == "") {
                     that.isCateshow = false;
@@ -507,6 +507,11 @@
                     category.forEach(v => {
                         if (v.id == e) {
                             that.currentCateList = v.tmenu
+                            if (v.tmenu) {
+                                that.isCateshow = true;
+                            } else {
+                                that.isCateshow = false;
+                            }
                         }
                     });
                 }
@@ -753,6 +758,13 @@
         }
     })
 </script>
-
+<style>
+    .rd_market_price {
+        color: #999999;
+        font-size: 14px;
+        text-decoration: line-through;
+        margin-left: 10px;
+    }
+</style>
 
 </html>

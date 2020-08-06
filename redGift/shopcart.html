@@ -11,6 +11,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .rd_cate_ul.rd_cate_ul2 {
+            z-index: 99999999999999999999999999999999999999999;
+            background: #FFFFFF;
+            position: absolute;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,7 +50,7 @@
                             <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
                         </div>
                         <div class="rd_keywords">
-                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('中秋')">中秋</span>
                             <span @click="sousuo('包')">包</span>
                             <span @click="sousuo('米')">米</span>
                             <span @click="sousuo('运动')">运动</span>
@@ -77,7 +84,7 @@
                                 <div class="rd_rate_li_active"></div>
                                 <div class="rd_cate_name">{{cate.name}}</div>
                                 <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot" v-if="cate.id==1123">
-                                <ul class="rd_two_cate">
+                                <ul class="rd_two_cate" v-if="cate.tmenu">
                                     <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
                                 </ul>
                             </li>
@@ -161,7 +168,7 @@
             <div class="row carttab_goods" v-for="(cart,index) in cartList">
                 <div class="goods">
                     <a :href="['productDetail.html?goods_id='+cart.goods_id]" target='_blank'>
-                        <div class="col-md-2 danxuan">
+                        <div class="col-md-4 danxuan">
                             <input type="checkbox" name="gouwuche" id="" class="danxuanc" :checked="cart.selected==1?true:false" @change="goodsSelected(index,$event)" />
                             <img :src="baseUrl+cart.goods_thumb" width="100px" height="100px">
                         </div>
@@ -303,7 +310,7 @@
         el: '#vue_product',
         data: {
             listshop: 1,
-            // baseUrl: 'http://192.168.1.39/tp510',
+            // baseUrl: 'http://192.168.1.14/tp510',
             baseUrl: 'http://www.yilitong.com',
             userc: false,
             cartList: [],

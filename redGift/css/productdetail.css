@@ -208,9 +208,13 @@
 }
 
 .shangp_detail .goods_detail .tupian {
-    width: 800px;
+    max-width: 800px;
     /* margin: 0 auto; */
     margin-top: 40px;
+}
+
+.shangp_detail .goods_detail .tupian img {
+    max-width: 800px;
 }
 
 .shangp_detail .goods_detail .tupian>div {

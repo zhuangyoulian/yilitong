@@ -20,6 +20,11 @@
             padding-bottom: 250px;
         }
         
+        .rd_cate_ul>li {
+            height: 36px;
+            line-height: 36px;
+        }
+        
         .rd_cate_ul>li:hover {
             background: #FFEDEA;
         }
@@ -32,7 +37,23 @@
             left: 0;
             top: 0;
             display: block;
+            z-index: 5;
         }
+        
+        .rd_cate_ul {
+            max-height: 454px;
+            /* overflow-y: scroll;
+            overflow-x: visible;
+            z-index: 3; */
+        }
+        
+        .rd_cate_ul::-webkit-scrollbar {
+            display: none;
+        }
+        /* .rd_cate>block {
+            width: 100%;
+            background: red;
+        } */
     </style>
 </head>
 
@@ -66,7 +87,7 @@
                             <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
                         </div>
                         <div class="rd_keywords">
-                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('中秋')">中秋</span>
                             <span @click="sousuo('包')">包</span>
                             <span @click="sousuo('米')">米</span>
                             <span @click="sousuo('运动')">运动</span>
@@ -86,26 +107,29 @@
                             <img src="./img/icon_sort@2x.png" alt="">
                             <p>商品分类</p>
                         </div>
-                        <ul class="rd_cate_ul">
-                            <li @click="navProductlist('','')">
-                                <div class="rd_rate_li_active"></div>
-                                <p>全部商品</p>
-                            </li>
-                            <!-- <li>
-                                <div class="rd_rate_li_active"></div>
-                                品牌折扣区
-                                <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot">
-                            </li> -->
+                        <block>
+                            <ul class="rd_cate_ul">
+                                <li @click="navProductlist('','')">
+                                    <div class="rd_rate_li_active"></div>
+                                    <p>全部商品</p>
+                                </li>
+                                <!-- <li>
+                                    <div class="rd_rate_li_active"></div>
+                                    品牌折扣区
+                                    <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot">
+                                </li> -->
 
-                            <li v-for="(cate,index) in category" @click="navProductlist(cate.id,'')" class="rd_li">
-                                <div class="rd_rate_li_active"></div>
-                                <div class="rd_cate_name">{{cate.name}}</div>
-                                <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot" v-if="cate.id==1123">
-                                <ul class="rd_two_cate">
-                                    <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
-                                </ul>
-                            </li>
-                        </ul>
+                                <li v-for="(cate,index) in category" @click="navProductlist(cate.id,'')" class="rd_li">
+                                    <div class="rd_rate_li_active"></div>
+                                    <div class="rd_cate_name">{{cate.name}}</div>
+                                    <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot" v-if="cate.id==1123">
+                                    <ul class="rd_two_cate" v-if="cate.tmenu">
+                                        <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </block>
+
                     </div>
                     <ul class="rd_nav">
                         <li class="active">
@@ -212,7 +236,7 @@
                 <span class="right_top" @click="navProductlist(1123,'','')">查看全部>></span>
 
                 <div class="tuijianproductlist">
-                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2853116619&site=qq&menu=yes" class="rd_ad_left" target="_blank">
+                    <a href="cateproduct.html?cate1=1132" class="rd_ad_left" target="_blank">
                         <img src="./img/0c3da4a603d01267491a9b7aa4ccd36.jpg" />
                     </a>
                     <a :href="['productDetail.html?goods_id='+item.goods_id]" v-for="(item,index) in goods_quality_list" class="tuijianprod">
@@ -235,7 +259,7 @@
                         <img :src="'http://www.yilitong.com'+item.goods_thumb" />
                         <!-- <p class="tj_goodsname">{{item.goods_name}}</p> -->
                         <div class="tj_goodsname"><span class="rd_good_bg" v-if="item.is_quality==1"></span><span class="rd_line_goodsname">{{item.goods_name}}</span></div>
-                        <p class="tj_price">¥{{item.group_price}}</p>
+                        <p class="tj_price">¥{{item.group_price}}<span class="rd_price_txt"></span><span class="rd_price_gray">¥{{item.market_price}}</span></p>
                     </a>
                 </div>
 
@@ -384,7 +408,7 @@
         el: '#vue_index',
         data: {
             addhover: true,
-            // baseUrl: 'http://192.168.1.39/tp510',
+            // baseUrl: 'http://192.168.1.14/tp510',
             baseUrl: 'http://www.yilitong.com',
             cur: 0,
             placeh: 1,

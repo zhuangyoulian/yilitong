@@ -47,7 +47,7 @@
                             <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
                         </div>
                         <div class="rd_keywords">
-                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('中秋')">中秋</span>
                             <span @click="sousuo('包')">包</span>
                             <span @click="sousuo('米')">米</span>
                             <span @click="sousuo('运动')">运动</span>
@@ -80,7 +80,7 @@
                             <li v-for="(cate,index) in category" @click="navProductlist(cate.id,'')" class="rd_li">
                                 <div class="rd_rate_li_active"></div>
                                 <div class="rd_cate_name">{{cate.name}}</div>
-                                <ul class="rd_two_cate">
+                                <ul class="rd_two_cate" v-if="cate.tmenu">
                                     <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
                                 </ul>
                             </li>
@@ -615,7 +615,7 @@
     var vm = new Vue({
         el: '#vue_product',
         data: {
-            // baseUrl: 'http://192.168.1.39/tp510',
+            // baseUrl: 'http://192.168.1.14/tp510',
             baseUrl: 'http://www.yilitong.com',
             userc: false,
             keyword: '',

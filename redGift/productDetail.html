@@ -43,7 +43,7 @@
                             <div class="rd_icon"><img src="./img/icon_next@2x.png" alt="" class="rd_icon_next" @click="sousuo(keyword)"></div>
                         </div>
                         <div class="rd_keywords">
-                            <span @click="sousuo('端午')">端午</span>
+                            <span @click="sousuo('中秋')">中秋</span>
                             <span @click="sousuo('包')">包</span>
                             <span @click="sousuo('米')">米</span>
                             <span @click="sousuo('运动')">运动</span>
@@ -77,7 +77,7 @@
                                 <div class="rd_rate_li_active"></div>
                                 <div class="rd_cate_name">{{cate.name}}</div>
                                 <img src="./img/icon_hot@2x.png" alt="" class="rd_icon_hot" v-if="cate.id==1123">
-                                <ul class="rd_two_cate">
+                                <ul class="rd_two_cate" v-if="cate.tmenu">
                                     <li v-for="it in cate.tmenu" @click.stop="navProductlist(cate.id,it.id)">{{it.name}}</li>
                                 </ul>
                             </li>
@@ -198,14 +198,14 @@
                         <div class="color" v-if="type[0]">
                             <span class="col1">{{type[0]}}</span>
                             <span class="chicun" :class="kp1==index?'active1':''" @click="ChooseSpec1(index)" v-for="(ite,index) in filter_spec[type[0]]">
-                            {{ite.item}}
-                        </span>
+							{{ite.item}}
+						</span>
                         </div>
                         <div class="color" v-if="type[1]">
                             <span class="col1">{{type[1]}}</span>
                             <span class="chicun" :class="kp2==index?'active2':''" @click="ChooseSpec2(index)" v-for="(ite,index) in filter_spec[type[1]]">
-                            {{ite.item}}
-                        </span>
+							{{ite.item}}
+						</span>
                         </div>
                         <div class="color" v-if="is_logo==1">
                             <span class="col1">定制LOGO</span>
@@ -245,15 +245,15 @@
                             </a>
                         </li>
                         <!-- <li>
-                        <img src="img/hz_product.png " alt=" " width="224px " height="224px ">
-                        <p class="title ">女士时尚背包</p>
-                        <p class="price ">参考价：<span>￥599</span></p>
-                    </li>
-                    <li>
-                        <img src="img/hz_product.png " alt=" " width="224px " height="224px ">
-                        <p class="title ">女士时尚背包</p>
-                        <p class="price ">参考价：<span>￥599</span></p>
-                    </li> -->
+						<img src="img/hz_product.png " alt=" " width="224px " height="224px ">
+						<p class="title ">女士时尚背包</p>
+						<p class="price ">参考价：<span>￥599</span></p>
+					</li>
+					<li>
+						<img src="img/hz_product.png " alt=" " width="224px " height="224px ">
+						<p class="title ">女士时尚背包</p>
+						<p class="price ">参考价：<span>￥599</span></p>
+					</li> -->
                     </ul>
                 </div>
             </div>
@@ -309,7 +309,7 @@
     var vm = new Vue({
         el: '#vue_index',
         data: {
-            // baseUrl: 'http://192.168.1.39/tp510',
+            // baseUrl: 'http://192.168.1.14/tp510',
             baseUrl: 'http://www.yilitong.com',
             userc: false,
             kp1: 0,
@@ -421,7 +421,7 @@
             // this.goods_key=goods_key;
             // this.goods_val=k;
             // var specs=[
-            //  
+            // 	
             // ];
             // // this.fileList.push({name: '', url: ''}); 
             // var spec_id=c1[i1].item_id+'_'+c2[i2].item_id;
@@ -550,7 +550,7 @@
                         catearr.push(k[i]);
                     }
                     // for(var i=0;i<10;i++){
-                    //  that.category[i]=catearr[i]
+                    // 	that.category[i]=catearr[i]
                     // }
                     that.category = catearr;
                     console.log(catearr[0].name);
