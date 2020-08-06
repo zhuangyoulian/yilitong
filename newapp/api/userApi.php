@@ -908,9 +908,19 @@ elseif($action=="get_all_address"){
 	if(!empty($list)){
 		foreach ($list as $key =>$val){
 			$temp[$key]=$val;
-			$temp[$key]['province_name']=get_regin_name($val['province']);
-			$temp[$key]['city_name']=get_regin_name($val['city']);
-			$temp[$key]['district_name']=get_regin_name($val['district']);
+			if (is_numeric($val['province'])) {
+				$temp[$key]['province_name']=get_regin_name($val['province']);
+				$temp[$key]['city_name']=get_regin_name($val['city']);
+				$temp[$key]['district_name']=get_regin_name($val['district']);
+			}else{
+				$temp[$key]['province_name']=$val['province'];
+				$temp[$key]['city_name']=$val['city'];
+				$temp[$key]['district_name']=$val['district'];
+			}
+			
+			// $temp[$key]['province_name']=get_regin_name($val['province']);
+			// $temp[$key]['city_name']=get_regin_name($val['city']);
+			// $temp[$key]['district_name']=get_regin_name($val['district']);
 		}
 	}
 	if(!empty($temp)){

@@ -1722,11 +1722,21 @@ elseif($action=="get_all_address"){
 
 			$temp[$key]=$val;
 
-			$temp[$key]['province_name']=get_regin_name($val['province']);
+			if (is_numeric($val['province'])) {
+				$temp[$key]['province_name']=get_regin_name($val['province']);
+				$temp[$key]['city_name']=get_regin_name($val['city']);
+				$temp[$key]['district_name']=get_regin_name($val['district']);
+			}else{
+				$temp[$key]['province_name']=$val['province'];
+				$temp[$key]['city_name']=$val['city'];
+				$temp[$key]['district_name']=$val['district'];
+			}
+	
+			// $temp[$key]['province_name']=get_regin_name($val['province']);
 
-			$temp[$key]['city_name']=get_regin_name($val['city']);
+			// $temp[$key]['city_name']=get_regin_name($val['city']);
 
-			$temp[$key]['district_name']=get_regin_name($val['district']);
+			// $temp[$key]['district_name']=get_regin_name($val['district']);
 
 		}
 

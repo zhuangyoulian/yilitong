@@ -1184,18 +1184,34 @@ function get_order_info2($userid,$order_id){
 	$sql="select $file from ".$GLOBALS['ecs']->table('order')." as O where O.order_id={$order_id} AND user_id={$userid}";
 	$order=$GLOBALS['db']->getRow($sql);
 	
-	if(!empty($order['province'])){
-		$order['province_name']=get_regin_name($order['province']);
-		$order['province']=get_regin_name($order['province']);
+	if (is_numeric($order['province'])) {
+		if(!empty($order['province'])){
+			$order['province_name']=get_regin_name($order['province']);
+			$order['province']=get_regin_name($order['province']);
+		}
+		if(!empty($order['city'])){
+			$order['city_name']=get_regin_name($order['city']);
+			$order['city']=get_regin_name($order['city']);
+		}
+		if(!empty($order['district'])){
+			$order['district_name']=get_regin_name($order['district']);
+			$order['district']=get_regin_name($order['district']);
+		}
+	}else{
+		if(!empty($order['province'])){
+			$order['province_name']=$order['province'];
+			$order['province']=$order['province'];
+		}
+		if(!empty($order['city'])){
+			$order['city_name']=$order['city'];
+			$order['city']=$order['city'];
+		}
+		if(!empty($order['district'])){
+			$order['district_name']=$order['district'];
+			$order['district']=$order['district'];
+		}
 	}
-	if(!empty($order['city'])){
-		$order['city_name']=get_regin_name($order['city']);
-		$order['city']=get_regin_name($order['city']);
-	}
-	if(!empty($order['district'])){
-		$order['district_name']=get_regin_name($order['district']);
-		$order['district']=get_regin_name($order['district']);
-	}
+
 	if ($order['pay_code']=="weixin"||$order['pay_code']=="weixinJSAPI") {
 		$order['pay_code']="微信支付";
 	}elseif($order['pay_code']=="alipay"||$order['pay_code']=="alipayMobile"){
@@ -1388,15 +1404,28 @@ function get_order_info($userid,$order_id){
 	$sql="select $file from ".$GLOBALS['ecs']->table('order')." as O where O.order_id={$order_id} AND user_id={$userid}";
 	$order=$GLOBALS['db']->getRow($sql);
 	
-	if(!empty($order['province'])){
-		$order['province_name']=get_regin_name($order['province']);
+	if (is_numeric($order['province'])) {
+		if(!empty($order['province'])){
+			$order['province_name']=get_regin_name($order['province']);
+		}
+		if(!empty($order['city'])){
+			$order['city_name']=get_regin_name($order['city']);
+		}
+		if(!empty($order['district'])){
+			$order['district_name']=get_regin_name($order['district']);
+		}
+	}else{
+		if(!empty($order['province'])){
+			$order['province_name']=$order['province'];
+		}
+		if(!empty($order['city'])){
+			$order['city_name']=$order['city'];
+		}
+		if(!empty($order['district'])){
+			$order['district_name']=$order['district'];
+		}
 	}
-	if(!empty($order['city'])){
-		$order['city_name']=get_regin_name($order['city']);
-	}
-	if(!empty($order['district'])){
-		$order['district_name']=get_regin_name($order['district']);
-	}
+	
 	//获取订单商品信息
 	$order['goods']=get_order_goods($order_id);
 	$order['number']=$order['goods']['number'];

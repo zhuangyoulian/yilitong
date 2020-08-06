@@ -2572,14 +2572,26 @@ function get_order_info2($supplier_id,$order_id){
 	$sql = "select shipping_name,invoice_no from " .$GLOBALS['ecs']->table('shipping_order')." where order_id = {$order["order_id"]}";
 	$shipping =$GLOBALS['db']->getRow($sql);
 
-	if(!empty($order['province'])){
-		$order['province_name']=get_regin_name($order['province']);
-	}
-	if(!empty($order['city'])){
-		$order['city_name']=get_regin_name($order['city']);
-	}
-	if(!empty($order['district'])){
-		$order['district_name']=get_regin_name($order['district']);
+	if (is_numeric($order['province'])) {
+		if(!empty($order['province'])){
+			$order['province_name']=get_regin_name($order['province']);
+		}
+		if(!empty($order['city'])){
+			$order['city_name']=get_regin_name($order['city']);
+		}
+		if(!empty($order['district'])){
+			$order['district_name']=get_regin_name($order['district']);
+		}
+	}else{
+		if(!empty($order['province'])){
+			$order['province_name']=$order['province'];
+		}
+		if(!empty($order['city'])){
+			$order['city_name']=$order['city'];
+		}
+		if(!empty($order['district'])){
+			$order['district_name']=$order['district'];
+		}
 	}
 
 	//检测是否为活动的订单

@@ -241,9 +241,15 @@ elseif($action=='check_cart'){
 	$sql="select address_id,consignee,province,city,district,address,mobile,is_default from ".$GLOBALS['ecs']->table('user_address')." where user_id={$userid} AND is_default=1 ";
 	$address=$GLOBALS['db']->getRow($sql);
 	if(!empty($address)){
-		$address['province_name']=get_regin_name($address['province']);
-		$address['city_name']=get_regin_name($address['city']);
-		$address['district_name']=get_regin_name($address['district']);
+		if (is_numeric($address['province'])) {
+			$address['province_name']=get_regin_name($address['province']);
+			$address['city_name']=get_regin_name($address['city']);
+			$address['district_name']=get_regin_name($address['district']);
+		}else{
+			$address['province_name']=$address['province'];
+			$address['city_name']=$address['city'];
+			$address['district_name']=$address['district'];
+		}
 	}else{
 		$address=(object)array();
 	}
@@ -576,9 +582,15 @@ elseif($action=="buy_now"){
 	$sql="select address_id,consignee,province,city,district,address,mobile,is_default from ".$GLOBALS['ecs']->table('user_address')." where user_id={$userid} AND is_default=1 ";
 	$address=$GLOBALS['db']->getRow($sql);
 	if(!empty($address)){
-		$address['province_name']=get_regin_name($address['province']);
-		$address['city_name']=get_regin_name($address['city']);
-		$address['district_name']=get_regin_name($address['district']);
+		if (is_numeric($address['province'])) {
+			$address['province_name']=get_regin_name($address['province']);
+			$address['city_name']=get_regin_name($address['city']);
+			$address['district_name']=get_regin_name($address['district']);
+		}else{
+			$address['province_name']=$address['province'];
+			$address['city_name']=$address['city'];
+			$address['district_name']=$address['district'];
+		}
 	}else{
 		$address=(object)array();
 	}
