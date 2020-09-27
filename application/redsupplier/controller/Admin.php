@@ -76,36 +76,58 @@ class Admin extends Base {
     //     return $this->fetch();
     // }
     
-    public function admin_info(){
-    	$red_admin_id = session('red_admin_id');
-    	if($red_admin_id){
-    		$info = D('redsupplier_user')->where("red_admin_id", $red_admin_id)->find();
-			  $info['password'] =  "";
-    		$this->assign('info',$info);
-    	}
-    	$act = empty($red_admin_id) ? 'add' : 'edit';
-    	$this->assign('act',$act);
-    	return $this->fetch();
-    }
+   //  public function admin_info(){
+   //  	$red_admin_id = I('get.red_admin_id/d',0);
+   //  	if($red_admin_id){
+   //  		$info = D('redsupplier_user')->where("red_admin_id", $red_admin_id)->find();
+			//   $info['password'] =  "";
+   //  		$this->assign('info',$info);
+   //  	}
+   //  	$act = empty($red_admin_id) ? 'add' : 'edit';
+   //  	$this->assign('act',$act);
+   //  	// $role = Db::name('redsupplier_role')->where('redsupplier_id',session('redsupplier_id'))->select();
+   //  	// $this->assign('role',$role);
+   //  	return $this->fetch();
+   //  }
     
-    public function adminHandle(){
-    	$data = I('post.');
-		  $data['red_admin_id'] = session('red_admin_id');
-    	if(empty($data['password'])){
-    		unset($data['password']);
-    	}else{
-    		$data['password'] = encrypt($data['password']);
-    	}
-    	if($data['act'] == 'edit'){
-    		$r = Db::name('redsupplier_user')->where('red_admin_id', $data['red_admin_id'])->update($data);
-			  adminLog('修改管理员信息 '.$data['user_name'].'');
-    	}
-    	if($r){
-    		$this->success("操作成功",Url::build('RedSupplier/Index/index'));
-    	}else{
-    		$this->error("操作失败",Url::build('RedSupplier/Index/index'));
-    	}
-    }
+   //  public function adminHandle(){
+   //  	$data = I('post.');
+		 //  $data['red_admin_id'] = session('red_admin_id');
+   //  	if(empty($data['password'])){
+   //  		unset($data['password']);
+   //  	}else{
+   //  		$data['password'] = encrypt($data['password']);
+   //  	}
+   //  	if($data['act'] == 'add'){
+   //  		unset($data['red_admin_id']); 
+			//   $data['red_admin_id'] = session('red_admin_id');
+   //  		$data['add_time'] = time();
+			//   $data['state'] = 1;
+   //  		if(Db::name('redsupplier_user')->where(array('mobile'=>$data['mobile']))->count()){
+   //  			$this->error("手机号已注册，请更换",Url::build('redsupplier/Admin/admin_info'));
+   //  		}else{
+   //  			$r = Db::name('redsupplier_user')->insert($data);
+			// 	adminLog('添加管理员 '.$data['user_name'].'');
+   //  		}
+   //  	}
+    	
+   //  	if($data['act'] == 'edit'){
+   //  		$r = Db::name('redsupplier_user')->where('red_admin_id', $data['red_admin_id'])->update($data);
+			//   adminLog('修改管理员信息 '.$data['user_name'].'');
+   //  	}
+    	
+   //      if($data['act'] == 'del' && $data['red_admin_id']>1){
+   //  		$r = Db::name('redsupplier_user')->where('red_admin_id', $data['red_admin_id'])->delete();
+			// adminLog('删除管理员'.$data['red_admin_id'].'');
+   //  		exit(json_encode(1));
+   //  	}
+    	
+   //  	if($r){
+   //  		$this->success("操作成功",Url::build('redsupplier/Admin/index'));
+   //  	}else{
+   //  		$this->error("操作失败",Url::build('redsupplier/Admin/index'));
+   //  	}
+   //  }
     
     
     /*

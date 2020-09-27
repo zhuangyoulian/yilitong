@@ -1187,7 +1187,6 @@ class CartLogic extends Model
                             }else{
                                 $data['order_prom_amount_s'] = 0;   //端午活动专区
                             }
-
                         }else{
                             $data['order_prom_amount_s'] = 0;   //端午活动专区
                         }
@@ -1210,10 +1209,13 @@ class CartLogic extends Model
                 }
             }
             
-            if (!empty($car_price[0]['codeFee'])) {         //匹配礼品卡优惠的商品，分订单时准确计算金额
+
+            if (!empty($car_price[0]['codeFee']) && $val['list'] && $car_price[0]['code_goods_id']) {         //匹配礼品卡优惠的商品，分订单时准确计算金额
                 foreach ($car_price[0]['code_goods_id'] as $key => $value_id) {
-                    if ($value_id == $val['list'][$key]['goods_id']) {
-                        $data['code_money']  = $car_price[0]['codeFee'];
+                    foreach ($val['list'] as $ke_l => $val_l) {
+                        if ($value_id == $val_l['goods_id']) {
+                            $data['code_money']  = $car_price[0]['codeFee'];
+                        }
                     }
                 }
             }
@@ -1221,6 +1223,7 @@ class CartLogic extends Model
             //'应付款金额'
             $data['order_amount'] = ($val['total_price'] - $val['order_prom_amount'] - $data['coupon_price']- $data['code_money'] + $data['shipping_price']);
 
+            
             if (session('custom_id')) {
                 $custom=Db::name('custom')->where('id',session('custom_id'))->find();
                 $data['custom_id']=$custom['id'];
@@ -1600,28 +1603,30 @@ class CartLogic extends Model
 
 
     /**
-     * [zhongqiuCode 2019.09.06 中秋活动，结束后可删]
+     * [zhongqiuCode 2020.09.18 中秋活动，结束后可删]
      * @return [type] [description]
      */
     public function zhongqiuCode($code,$cartList){
         $count = 0;
         $goods_num = 0;
         $codelist  = Db::name('CodeList')->where('code', $code)->find();//查询优惠卡码
-        if ($codelist['cid'] == 54 || $codelist['cid'] == 55 ) {           //固定的卡ID，需要修改
-            foreach ($cartList['41']['list'] as $key => $value) {
-                if ($value['goods_id'] == 5632 || $value['goods_id'] == 5633 || $value['goods_id'] == 5634) {
-                    $goods_num += $value['goods_num'];
-                    $count += 1;
+        if ($codelist['cid'] == 71 || $codelist['cid'] == 72 ) {           //固定的卡ID，需要修改
+            if ($cartList['41']['list']) {
+                foreach ($cartList['41']['list'] as $key => $value) {
+                    if ($value['goods_id'] == 6323 || $value['goods_id'] == 6324 || $value['goods_id'] == 6372) {
+                        $goods_num += $value['goods_num'];
+                        $count += 1;
+                    }
                 }
             }
             if ($goods_num>1 || $count>1) {
-                return  array('status' => -1, 'msg' => '使用该优惠券时只可购买一份商品') ;
+                return  array('status' => -1, 'msg' => '使用该礼品卡时只可购买一份商品') ;
             }
         }
     }
     
     /**
-     * [zhongqiuCode 2019.10.14 电器兑换活动，结束后可删]
+     * [electricCode 2019.10.14 电器兑换活动，结束后可删]
      * @return [type] [description]
      */
     public function electricCode($code,$cartList){
@@ -1629,14 +1634,16 @@ class CartLogic extends Model
         $goods_num = 0;
         $codelist  = Db::name('CodeList')->where('code', $code)->find();//查询优惠卡码
         if ($codelist['cid'] == 58) {           //固定的卡ID，需要修改
-            foreach ($cartList['41']['list'] as $key => $value) {
-                if ($value['goods_id'] == 5657 || $value['goods_id'] == 5656 || $value['goods_id'] == 5655) {
-                    $goods_num += $value['goods_num'];
-                    $count += 1;
+            if ($cartList['41']['list']) {
+                foreach ($cartList['41']['list'] as $key => $value) {
+                    if ($value['goods_id'] == 5657 || $value['goods_id'] == 5656 || $value['goods_id'] == 5655) {
+                        $goods_num += $value['goods_num'];
+                        $count += 1;
+                    }
                 }
             }
             if ($goods_num>1 || $count>1) {
-                return array('status' => -1, 'msg' => '使用该优惠券时只可购买一份商品') ;
+                return array('status' => -1, 'msg' => '使用该礼品卡时只可购买一份商品') ;
             }
         }
     }

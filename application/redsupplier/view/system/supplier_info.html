@@ -1,0 +1,159 @@
+<include file="public/layout" />
+<style>
+    td{height:40px;line-height:40px; padding-left:20px;}
+    .span_1{
+        float:left;
+        margin-left:0px;
+        height:130px;
+        line-height:130px;
+    }
+    .span_1 ul{list-style:none;padding:0px;}
+    .span_1 ul li{
+        border:1px solid #CCC;
+        height:40px;
+        padding:0px 10px;
+        margin-left:-1px;
+        margin-top:-1px;
+        line-height:40px;
+    }
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>入驻商管理 - 入驻商信息</h3>
+                <h5>网站系统入驻商家管理信息，商家信息完整更易收录进首页展示</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="user_form" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label>入驻商家公司名称</label>
+                </dt>
+				 <dd class="opt">{$su.company_name}</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>公司所在地</label>
+                </dt>
+                <dd class="opt">{$su['province']}，{$su['city']}，{$su['area']},{$su.address} </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label>公司负责人姓名</label>
+                </dt>
+                <dd class="opt"><input id="contacts_name" name="contacts_name" value="{$su.contacts_name}" class="input-txt" type="text"></dd>
+            </dl>  
+            <dl class="row">
+                <dt class="tit">
+                    <label>公司负责人联系电话</label>
+                </dt>
+                <dd class="opt">  <input id="contacts_name_mobile" name="contacts_name_mobile" value="{$su.contacts_name_mobile}" class="input-txt" type="text"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>运营者姓名</label>
+                </dt>
+                <dd class="opt"><input name="operating_name" id="operating_name" value="{$su.operating_name}" class="input-txt" type="text"></dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label>运营者联系电话</label>
+                </dt>
+                <dd class="opt">  <input id="mobile" name="mobile" value="{$su.mobile}" class="input-txt" type="text"></dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label>公司座机</label>
+                </dt>
+                <dd class="opt">  <input id="phone_number" name="phone_number" value="{$su.phone_number}" class="input-txt" type="text"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>店铺Logo</label>
+                </dt>
+                <dd class="opt"><a href="{$su.logo}" target="_Blank"><img src="{$su.logo}"  width="80px" height="80px" /></a></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>营业执照电子版</label>
+                </dt>
+                <dd class="opt"><a href="{$su.zhizhao}" target="_Blank"><img src="{$su.zhizhao}"  width="80px" height="80px" /></a></dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label>营业执照号</label>
+                </dt>
+                <dd class="opt">{$su.business_licence_number}</dd>
+            </dl>
+			<if $su.organization_code neq ''>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>组织机构代码</label>
+                </dt>
+                <dd class="opt">{$su.organization_code}</dd>
+            </dl>
+			</if>
+			<if $su.organization_code_electronic neq ''>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>组织机构代码证电子版</label>
+                </dt>
+                <dd class="opt"><a href="{$su.organization_code_electronic}" target="_Blank"><img src="{$su.organization_code_electronic}" width="80px" height="80px" /></a></dd>
+            </dl>
+			</if>
+			   <if $su.general_taxpayer neq ''>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>一般纳税人证明</label>
+                </dt>
+                <dd class="opt"><a href="{$su.general_taxpayer}" target="_Blank"><img src="{$su.general_taxpayer}" width="80px" height="80px" /></a></dd>
+            </dl>
+			</if>
+			 <dl class="row">
+                <dt class="tit">
+                    <label>开户银行账号</label>
+                </dt>
+                <dd class="opt"><input name="bank_account_number" id=" bank_account_number" value="{$su.bank_account_number}" class="input-txt" type="text"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>开户行支行名称</label>
+                </dt>
+                <dd class="opt"><if $su.bank_account_name neq ''><input name="bank_account_name" id=" bank_account_name" value="{$su.bank_account_name}" class="input-txt" type="text"><else><input name="bank_branch" id=" bank_branch" value="{$su.bank_branch}" class="input-txt" type="text"></if></dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label>开户名称</label>
+                </dt>
+                <dd class="opt"><input name="bank_name" id=" bank_name" value="{$su.bank_name}" class="input-txt" type="text"></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>开户许可证</label>
+                </dt>
+                <dd class="opt"><a href="{$su.bank_licence_electronic}" target="_Blank"><img src="{$su.bank_licence_electronic}"  width="80px" height="80px" /></a></dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>申请时间</label>
+                </dt>
+                <dd class="opt">{$su.add_time|date='Y-m-d H:i',###}</dd>
+            </dl> 
+            <dl class="row" style="color: red;">
+                <dt class="tit">
+                    <label></label>
+                </dt>
+                <dd class="opt">公司资料需要修改请联系客服修改入驻状态</dd>
+            </dl>   
+        </div>
+    </form>
+</div>
+</body>
+</html>

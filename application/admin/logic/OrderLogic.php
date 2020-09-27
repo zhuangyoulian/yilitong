@@ -174,7 +174,11 @@ class OrderLogic extends Model
     public function red_orderActionLog($order_id,$action,$note=''){     
         $order = Db::name('red_order')->where(array('order_id'=>$order_id))->find();
         $data['order_id'] = $order_id;
-        $data['action_user'] = session('admin_id');
+        if (session('red_admin_id')) {
+            $data['action_user'] = session('red_admin_id'); 
+        }else{
+            $data['action_user'] = session('admin_id'); 
+        }
         $data['action_note'] = $note;
         $data['order_status'] = $order['order_status'];
         $data['pay_status'] = $order['pay_status'];
@@ -594,6 +598,9 @@ class OrderLogic extends Model
         $updata['shipping_code'] = $data['invoice_no'];
 		$updata['shipping_status'] = 1;
 		
+        if ($order['supplier_id'] == 686) {    //一礼通订单发货同步
+            Db::name('red_order')->where("order_id=".$data['order_id'])->update($updata);//改变红礼订单状态
+        }
 		Db::name('order')->where("order_id=".$data['order_id'])->update($updata);//改变订单状态
 		
 		if(Db::name('back_order')->where(array('order_id'=>$data['order_id'],'status'=>4))->find())
@@ -694,12 +701,16 @@ class OrderLogic extends Model
             default:
                 $shipping_code = Db::name('plugin')->where(array('type'=>'shipping','name'=>$data['shipping_name']))->value('code');
         }
-                
         $data['order_sn'] = $order['order_sn'];
         $data['delivery_sn'] = $this->get_delivery_sn();
         $data['zipcode'] = $order['zipcode'];
         $data['user_id'] = $order['user_id'];
-        $data['admin_id'] = session('red_admin_id');
+        if (session('red_admin_id')) {
+            $data['admin_id'] = session('red_admin_id');
+        }else{
+            $data['admin_id'] = session('admin_id');
+        }
+        $data['admin_id'] = session('admin_id');
         $data['consignee'] = $order['consignee'];
         $data['mobile'] = $order['mobile'];
         $data['country'] = $order['country'];
@@ -718,6 +729,15 @@ class OrderLogic extends Model
         }else{
             $did = Db::name('red_shipping_order')->insertGetId($data);
         }
+
+
+        $updata['shipping_time'] = time();
+        $updata['shipping_name'] = $data['shipping_name'];
+        $updata['shipping_code'] = $data['invoice_no'];
+        $updata['shipping_status'] = 1;
+        
+        Db::name('red_order')->where("order_id=".$data['order_id'])->update($updata);//改变红礼订单状态
+
         $is_delivery = 0;
         foreach ($orderGoods as $k=>$v){
             if($v['is_send'] == 1){
@@ -732,6 +752,7 @@ class OrderLogic extends Model
                 foreach ($selectgoods as $key => $value) {
                     $selectgoods_s[] = DB::name('red_order_goods')->where("order_goods_rid=".$value)->value('rec_id');
                 }
+                Db::name('order')->where("order_id=".$data['order_id'])->update($updata);//改变一礼通订单状态
                 if($v['is_send'] == 0 && in_array($v['rec_id'],$selectgoods_s)){
                     $res['is_send'] = 1;
                     $res['delivery_id'] = $did;
@@ -748,13 +769,6 @@ class OrderLogic extends Model
             }        
         }
 
-
-        $updata['shipping_time'] = time();
-        $updata['shipping_name'] = $data['shipping_name'];
-        $updata['shipping_code'] = $data['invoice_no'];
-        $updata['shipping_status'] = 1;
-        
-        Db::name('red_order')->where("order_id=".$data['order_id'])->update($updata);//改变订单状态
         
         if(Db::name('red_back_order')->where(array('order_id'=>$data['order_id'],'status'=>4))->find())
             Db::name('red_back_order')->where(array('order_id'=>$data['order_id'],'status'=>4))->update(array('status'=>5)); //退换货发货

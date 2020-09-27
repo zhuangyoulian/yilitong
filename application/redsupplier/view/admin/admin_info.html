@@ -30,8 +30,17 @@
                     <label for="mobile"><em>*</em>手机号码</label>
                 </dt>
                 <dd class="opt">
-                    <input type="text" name="mobile" value="{$info.mobile}" id="mobile" class="input-txt" disabled ='disabled'>
+                    <input type="text" name="mobile" value="{$info.mobile}" id="mobile" class="input-txt">
                     <p class="notic">登录号码</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="email"><em></em>Email地址</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="email" value="{$info.email}" id="email" class="input-txt">
+                    <p class="notic">Email地址</p>
                 </dd>
             </dl>
             <dl class="row">
@@ -43,6 +52,22 @@
                     <p class="notic">登陆密码</p>
                 </dd>
             </dl>
+            <if condition=" ($act eq 'add') OR ($info['admin_id'] gt 1)">
+                <dl class="row">
+                    <dt class="tit">
+                        <label><em>*</em>所属角色</label>
+                    </dt>
+                    <dd class="opt">
+                        <select name="role_id">
+                            <volist name="role" id="item">
+                                <option value="{$item.role_id}" <if condition="$item[role_id] eq $info[role_id]"> selected="selected"</if> >{$item.role_name}</option>
+                            </volist>
+                        </select>
+                        <span class="err"></span>
+                        <p class="notic">所属角色</p>
+                    </dd>
+                </dl>
+            </if>
             <div class="bot"><a href="JavaScript:void(0);" onclick="adsubmit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
         </div>
     </form>
@@ -59,6 +84,7 @@
             layer.alert('请输入正确的手机号码', {icon: 2});// alert('请输入正确的手机号码');
             return;
         }
+      
         if($('input[name=password]').val() == ''){
             layer.msg('密码不能为空！', {icon: 2,time: 1000});//alert('少年，密码不能为空！');
             return false;

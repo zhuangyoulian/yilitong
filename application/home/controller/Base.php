@@ -40,31 +40,38 @@ class Base extends Controller {
     public function public_assign()
     {
         
-        $config = array();
-        $tp_config = Db::name('config')->cache(true,YLT_CACHE_TIME)->select();
-        foreach($tp_config as $k => $v)
-        {
-       	    if($v['name'] == 'hot_keywords'){
-       	  	    $config['hot_keywords'] = explode('|', $v['value']);
-       	    }       	  
-            $config[$v['inc_type'].'_'.$v['name']] = $v['value'];
-        }                        
-        //商品分类
-        $this->goods_category_tree = get_goods_category_tree();    
-       
-      	//场景分类
-        $this->scenario_category_tree = get_scenario_category_tree();
-        
-
-        $this->brand_list = Db::name('brand')->cache(true,YLT_CACHE_TIME)->field('id,parent_cat_id,logo,is_hot')->where("parent_cat_id>0")->select();
+       $config = array();
+       $tp_config = Db::name('config')->cache(true,YLT_CACHE_TIME)->select();
+       foreach($tp_config as $k => $v)
+       {
+       	  if($v['name'] == 'hot_keywords'){
+       	  	 $config['hot_keywords'] = explode('|', $v['value']);
+       	  }       	  
+          $config[$v['inc_type'].'_'.$v['name']] = $v['value'];
+       }                        
+       //商品分类
+       $goods_category_tree = get_goods_category_tree();    
+       $this->cateTrre = $goods_category_tree;
+       $this->assign('goods_category_tree', $goods_category_tree); 
       
-        $this->search_url=array(
+      	//场景分类
+        $scenario_category_tree = get_scenario_category_tree();
+        $this->cateTrre = $scenario_category_tree;
+        $this->assign('scenario_category_tree', $scenario_category_tree);
+      
+       $brand_list = Db::name('brand')->cache(true,YLT_CACHE_TIME)->field('id,parent_cat_id,logo,is_hot')->where("parent_cat_id>0")->select();
+      
+        $search_url=array(
                         array('name'=>'礼品','url'=>'Home/Goods/search','k'=>1),
                         array('name'=>'供应商','url'=>'Home/Supplier/search','k'=>2),
                         array('name'=>'采购','url'=>'Home/Article/search','k'=>3)
                         );
-        $this->controller=request()->controller(); 
-
+       
+        $controller=request()->controller(); 
+       $this->assign('controller',$controller);
+       $this->assign('search_url',$search_url);
+       $this->assign('brand_list', $brand_list);
+       $this->assign('config', $config);
     }
     /*
      * 

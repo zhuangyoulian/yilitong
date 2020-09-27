@@ -286,6 +286,7 @@ class Cart extends MobileBase {
         }
         
         if ($selected == 2) {    //详情页立即购买
+            session('cart_goods_id',$goods_id);  //保存立即购买的商品ID，方便礼品卡检测
             $result = $this->cartLogic->cartList($this->user, $this->session_id,2,1,1,$goods_id); // 获取购物车商品
         }else{                   //购物车提交选择商品
             if($this->cartLogic->cart_count($this->user_id,1) == 0 ) {
@@ -403,11 +404,16 @@ class Cart extends MobileBase {
 
     /**
      * [ajaxCode 礼品卡]
-     * @param  [type] $code [description]
+     * @param  [type] $code [卡码]
+     * @param  [type] $selected [订单提交状态，1购物车 2立即提交]
      * @return [type]       [description]
      */
   	public function ajaxCode($code){
-        $result = $this->cartLogic->cartList($this->user, $this->session_id,1,1,1); // 获取购物车商品
+        if (session('selected') == 2) {
+            $result = $this->cartLogic->cartList($this->user, $this->session_id,2,1,1,session('cart_goods_id')); // 获取购物车商品
+        }else{
+            $result = $this->cartLogic->cartList($this->user, $this->session_id,1,1,1); // 获取购物车商品
+        }
     	if($this->user_id == 0){
             session('login_url',$_SERVER[REQUEST_URI]);
             $this->error('请先登陆',Url::build('User/login'));
@@ -415,14 +421,16 @@ class Cart extends MobileBase {
         if($this->cartLogic->cart_count($this->user_id,1) == 0 ){ 
             $this->error ('你的购物车没有选中商品','Cart/cart');
         }
-        if ($code) {
+        if ($code && $result) {
             $aa = $this->cartLogic->zhongqiuCode($code,$result['cartList']);   //2019.09.06 中秋活动，结束后可删
             $bb = $this->cartLogic->electricCode($code,$result['cartList']);   //2019.10.14 电器活动，结束后可删
             if ($aa['status']=="-1" OR $bb['status']=="-1") {
-                $this->error('使用该优惠券时只可购买一份商品');
+                $this->error('使用该礼品卡时只可购买一份商品');
             }
             $return_arr=$this->cartLogic->getCode($code,$this->user);
             session('CodeCode',$code);
+        }else{
+            $this->error('参数错误，没有输入卡号或商品不在购物车');
         }
         return $return_arr;
     }
@@ -463,7 +471,7 @@ class Cart extends MobileBase {
 		if($result['status'] < 0){
 			exit(json_encode($result));   
        }
-
+       
 	    // 订单满额优惠活动	
         $order_prom=get_order_promotion($result['result']);
         $result['result']['order_amount'] = $order_prom['order_amount'] ;

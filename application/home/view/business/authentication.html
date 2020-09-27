@@ -49,60 +49,59 @@
 							</p>
 							<p class="step-nav step-nav-4">4.完成</p>
 						</div>
-							
-											<div class="steps-con block-01">
-											<div class="step-col way-ul-1 " id="verify-way">
-												<div id="way-se">
-													<label class="title" for="verify-type-selector">请选择验证方式：</label>
-													<div class="con">
-														<select id="verify-type-selector">
-															<if condition="strstr($Request.param.username,'@')">
-																<option value="email" selected alias-value="2">邮箱验证</option>
-                                                            <else / >
-																<option value="phone" selected alias-value="1">手机验证</option>                                                                
-															</if>
-														</select>
-													</div> 
-												</div>
-												<div class="captcha_row">
-														<!-- way-u-1 begin -->
-														<ul class="pub-ul way-u way-u-1 fn-form verify-captcha-sms" data-fn-verify="">
-															<if condition="$userinfo['mobile'] neq ''">
-															<li class="li-01"><span class="title">已验证手机号码：</span>
-																<div class="con verify-group">
-																	<span class="s-01">{$userinfo.mobile}</span>
-																</div>
-															</li>
-															</if>
-															<if condition="$userinfo['email'] neq ''">
-															<li class="li-02"><span class="title">已验证邮箱：</span>
-																<div class="con verify-group">
-																	<span class="s-01">{$userinfo.email}</span>
-																</div>
-															</li>
-															</if>
-															<li class="li-03"><span class="title">验证码：</span>
-																<div class="con verify-group">
-																	<input type="text" class="msg-code ie-01 verify-ctrl"  name="code" id="code" maxlength="10" value="">
-																	<input type="button" class="get-msg-code" id="sendSms" onclick="sendcode(this)" value="获取验证码">
-																	<span class="v-tips verify-tips" data-tips-for="code"><i class="icon"></i><span class="txt"></span></span>
-																
-																</div>
-															</li>
-															<li class="li-04">
-																<button type="button" class="btn_120 verify-ctrl" id="fx_next" onclick="setpwd()">下一步</button>
-															</li>
-														</ul>
-														<!-- way-u-1 end -->
-												</div>
+						<div class="steps-con block-01">
+						<div class="step-col way-ul-1 " id="verify-way">
+							<div id="way-se">
+								<label class="title" for="verify-type-selector">请选择验证方式：</label>
+								<div class="con">
+									<select id="verify-type-selector">
+										<if condition="strstr($Request.param.username,'@')">
+											<option value="email" selected alias-value="2">邮箱验证</option>
+                                        <else / >
+											<option value="phone" selected alias-value="1">手机验证</option>                                                                
+										</if>
+									</select>
+								</div> 
+							</div>
+							<div class="captcha_row">
+									<!-- way-u-1 begin -->
+									<ul class="pub-ul way-u way-u-1 fn-form verify-captcha-sms" data-fn-verify="">
+										<if condition="$userinfo['mobile'] neq ''">
+										<li class="li-01"><span class="title">已验证手机号码：</span>
+											<div class="con verify-group">
+												<span class="s-01">{$userinfo.mobile}</span>
 											</div>
-											<!-- /#step-col -->
-										</div>
-										<div class="steps-con off block-02" id="inform-hint">
-											<div class="step-col">
-												<div class="set-hint"><p></p><font color="red" size="+1"><p></p></font></div>
+										</li>
+										</if>
+										<if condition="$userinfo['email'] neq ''">
+										<li class="li-02"><span class="title">已验证邮箱：</span>
+											<div class="con verify-group">
+												<span class="s-01">{$userinfo.email}</span>
 											</div>
-										</div>
+										</li>
+										</if>
+										<li class="li-03"><span class="title">验证码：</span>
+											<div class="con verify-group">
+												<input type="text" class="msg-code ie-01 verify-ctrl"  name="code" id="code" maxlength="10" value="">
+												<input type="button" class="get-msg-code" id="sendSms" onclick="sendcode(this)" value="获取验证码">
+												<span class="v-tips verify-tips" data-tips-for="code"><i class="icon"></i><span class="txt"></span></span>
+											
+											</div>
+										</li>
+										<li class="li-04">
+											<button type="button" class="btn_120 verify-ctrl" id="fx_next" onclick="setpwd()">下一步</button>
+										</li>
+									</ul>
+									<!-- way-u-1 end -->
+							</div>
+						</div>
+						<!-- /#step-col -->
+					</div>
+					<div class="steps-con off block-02" id="inform-hint">
+						<div class="step-col">
+							<div class="set-hint"><p></p><font color="red" size="+1"><p></p></font></div>
+						</div>
+					</div>
 					</div>
 				</div>
 			</section>

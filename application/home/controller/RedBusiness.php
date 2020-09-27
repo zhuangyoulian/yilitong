@@ -235,27 +235,38 @@ class RedBusiness extends Base{
     	$city=$_POST['city'];
         $area=$_POST['area'];
         $logo=$_POST['logo'];
-    	$operating_name=$_POST['operating_name'];
-    	if(empty($company_name) || empty($address) || empty($phone_number) || empty($province) || empty($city) || empty($area) || empty($operating_name)){
+        $operating_name=$_POST['operating_name'];
+        $mobile=$_POST['mobile'];
+        $contacts_name=$_POST['contacts_name'];
+        $contacts_name_mobile=$_POST['contacts_name_mobile'];
+
+
+    	if(empty($company_name) || empty($address) || empty($phone_number) || empty($province) || empty($city) || empty($area) || empty($operating_name) || empty($mobile) || empty($contacts_name) || empty($contacts_name_mobile))
+        {
     	   exit('-1');
     	}
     	$redsupplier = Db::name('redsupplier_user')->where(array('red_admin_id'=>$red_admin_id))->find();
 
     	if($redsupplier){
     		//存在入驻资料信息
-    		$sql = [ 'company_name' =>$company_name,
+    		$sql = [ 
+            'company_name' =>$company_name,
     		'address'=>$address,
     		'phone_number'=>$phone_number,
     		'province'=>$province,
     		'city'=>$city,
             'area'=>$area,
             'operating_name'=>$operating_name,
+            'mobile'=>$mobile,
+            'contacts_name'=>$contacts_name,
+            'contacts_name_mobile'=>$contacts_name_mobile,
     		'logo'=>$logo,
     		];
     		$res = Db::name('redsupplier_user')->where(array('red_admin_id'=>$red_admin_id))->setField($sql);
     	}else{
     		//不存在入驻资料信息
-    		$sql = [ 'company_name' =>$company_name,
+    		$sql = [ 
+            'company_name' =>$company_name,
     		'address'=>$address,
     		'add_time'=>time(),
     		'phone_number'=>$phone_number,
@@ -263,6 +274,9 @@ class RedBusiness extends Base{
     		'city'=>$city,
     		'area'=>$area,
             'operating_name'=>$operating_name,
+            'mobile'=>$mobile,
+            'contacts_name'=>$contacts_name,
+            'contacts_name_mobile'=>$contacts_name_mobile,
             'logo'=>$logo,
     		];
     		$res=Db::name('redsupplier_user')->where(array('red_admin_id'=>$red_admin_id))->insert($sql);

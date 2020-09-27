@@ -103,8 +103,8 @@
                                                     <a style="color:#999;" href="{:Url('Home/User/back_order',array('order_id'=>$list['order_id'],'order_sn'=>$list['order_sn'],'goods_id'=>$good['goods_id'],'spec_key'=>$good['spec_key']))}">售后服务</a>
                                                 </p>    
                                         </if>
-											<if condition="($list[comment_btn] eq 1) and ($good[is_comment] eq 0)">
-                                            	<p class="p-link"><a href="{:Url('Home/User/comment')}" target="_blank"><span>评价</span></a></p>
+										<if condition="($list[comment_btn] eq 1) and ($good[is_comment] eq 0)">
+                                        	<p class="p-link"><a href="{:Url('Home/User/comment')}" target="_blank"><span>评价</span></a></p>
                                         </if>
                                         </td>                                        
                                 </volist>

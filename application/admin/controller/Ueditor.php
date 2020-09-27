@@ -282,6 +282,7 @@ class Ueditor extends Base
             $info = $file->rule(function ($file) {    
             return  md5(mt_rand()); // 使用自定义的文件保存规则
             })->move('public/upload/'.$this->savePath);        
+           //echo print_r($info,true);              
             if ($info) 
                 $state = "SUCCESS";                         
             else 
@@ -294,6 +295,7 @@ class Ueditor extends Base
         $return_data['original'] = ''; // 这里好像没啥用 暂时注释起来
         $return_data['state'] = $state;
         $return_data['path'] = $path;        
+        //print_r($return_data);
         $this->ajaxReturn($return_data,'json');
     }
 

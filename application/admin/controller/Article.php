@@ -167,7 +167,7 @@ class Article extends Base {
     }
     
     public function aticleHandle(){
-        $data = I('post.');
+        $data = I('');
         $data['content'] = I('content'); // 文章内容单独过滤
         $data['publish_time'] = strtotime($data['publish_time']);
         $url = $this->request->server('HTTP_REFERER');

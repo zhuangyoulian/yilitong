@@ -448,7 +448,7 @@ class UsersLogic extends Model
         
         //检查订单是否已完成
         $order = Db::name('order')->where("order_id", $add['order_id'])->where('user_id', $add['user_id'])->find();
-        if($order['order_status'] != 2 and $order['order_status'] != 4)
+        if($order['order_status'] != 2)
             return array('status'=>-1,'msg'=>'该笔订单还未确认收货','result'=>'');
 
         //检查是否已评论过
@@ -613,9 +613,8 @@ class UsersLogic extends Model
             if($post['is_default'] == 1 && $address['is_default'] != 1)
                 Db::name('user_address')->where(array('user_id'=>$user_id))->update(array('is_default'=>0));
             $row = Db::name('user_address')->where(array('address_id'=>$address_id,'user_id'=> $user_id))->update($post);
-            if(!$row){
-                return array('status'=>-1,'msg'=>'操作失败','result'=>'');
-            }
+            if(!$row)
+                return array('status'=>-1,'msg'=>'操作完成','result'=>'');
             return array('status'=>1,'msg'=>'编辑成功','result'=>'');
         }
         //添加模式

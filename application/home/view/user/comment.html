@@ -102,7 +102,7 @@
                                 </td>
                                 <td rowspan="1" class="col-operate">
                                     <if condition="$list['is_comment'] eq 0">
-                                        <p class="p-link"><a onClick="comment({$list.order_id},{$list.goods_id})">立即评价</a></p>
+                                        <p class="p-link"><a onClick="comment(({$list.order_id},{$list.goods_id})">立即评价</a></p>
                                     </if>
                                     <if condition="$list['is_comment'] eq 1">
                                         <p class="p-link"><a href="{:Url('Home/Goods/goodsInfo',array('id'=>$list['goods_id']))}">查看评价</a></p>

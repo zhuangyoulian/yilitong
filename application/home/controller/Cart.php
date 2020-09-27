@@ -25,12 +25,16 @@ class Cart extends Base {
     public function _initialize() {
         parent::_initialize();
         $this->cartLogic = new CartLogic();
-        if(I('user_id'))
+        if(session('?user'))
         {
-            $user = Db::name('users')->field('user_id,mobile,mobile_validated,parent_id')->where("user_id", I('user_id'))->find();
+            $user = session('user');
+            $user = Db::name('users')->field('user_id,mobile,mobile_validated,parent_id')->where("user_id", $user['user_id'])->find();
             session('user',$user);  //覆盖session 中的 user
             $this->user = $user;
             $this->user_id = $user['user_id'];
+            $this->assign('user',$user); //存储用户信息
+
+			
         }else{
 			
 			$nologin = array(
@@ -43,17 +47,17 @@ class Cart extends Base {
     public function ajaxCode(){
         $result = $this->cartLogic->cartList($this->user, $this->session_id,1,1,1); // 获取购物车商品
     	if($this->user_id == 0){
-            exit(json_encode(array('status'=>'-11','info'=>'请先登陆')));
+            $this->error('请先登陆',Url::build('Home/User/user_login'));
         }
         if($this->cartLogic->cart_count($this->user_id,1) == 0 ){
-            exit(json_encode(array('status'=>'-12','info'=>'你的购物车没有选中商品')));
+            $this->error ('你的购物车没有选中商品','Cart/cart');
         } 
       	$code=input("code");//优惠卷码
         if ($code) {
             $aa = $this->cartLogic->zhongqiuCode($code,$result['cartList']);   //2019.09.06 中秋活动，结束后可删
             $bb = $this->cartLogic->electricCode($code,$result['cartList']);   //2019.10.14 电器活动，结束后可删
             if ($aa['status']=="-1" OR $bb['status']=="-1") {
-                exit(json_encode(array('status'=>'-13','info'=>'使用该优惠券时只可购买一份商品')));
+                $this->error('使用该优惠券时只可购买一份商品');
             }
             $return_arr=$this->cartLogic->getCode($code,$this->user);
             session('code',$code);
@@ -62,23 +66,23 @@ class Cart extends Base {
     }
   
   
-    // public function cart(){
-    //     return $this->fetch();
-    // }
+    public function cart(){
+        return $this->fetch();
+    }
 
-    // public function index(){
-    //     return $this->fetch('cart');
-    // }
+    public function index(){
+        return $this->fetch('cart');
+    }
 
 
-    // public function cart_login(){
-    //     $user_id =$this->user_id;
-    //     if($this->user_id == 0){
-    //         return array('status' => 1, 'msg' => '请先登录', 'result' => '');
-    //     }else{
-    //         return array('status' => 2, 'msg' => '已登录', 'result' => '');
-    //     }
-    // }
+    public function cart_login(){
+        $user_id =$this->user_id;
+        if($this->user_id == 0){
+            return array('status' => 1, 'msg' => '请先登录', 'result' => '');
+        }else{
+            return array('status' => 2, 'msg' => '已登录', 'result' => '');
+        }
+    }
     
     /**
      * ajax 将商品加入购物车
@@ -102,7 +106,7 @@ class Cart extends Base {
         exit(json_encode($result));
     }
 
-    //ajax 头部"我的购物车"请求列表
+    //ajax 请求购物车列表
     public function header_cart_list()
     {
         $cart_result = $this->cartLogic->cartList($this->user, $this->session_id,0,1,0);
@@ -110,9 +114,10 @@ class Cart extends Base {
             $cart_result['total_price'] = Array( 'total_fee' =>0, 'cut_fee' =>0, 'num' => 0);
         }
 
-        $rs=array('status'=>'1','info'=>'请求成功','cartList'=>$cart_result['cartList'],'cart_total_price'=>$cart_result['total_price']);
-        exit(json_encode($rs));
-
+        $this->assign('cartList', $cart_result['cartList']); // 购物车的商品
+        $this->assign('cart_total_price', $cart_result['total_price']); // 总计
+        $template = I('template','header_cart_list');
+        return $this->fetch($template);
     }
 	
 	/*
@@ -120,9 +125,6 @@ class Cart extends Base {
      */
     public function ajaxCartList()
     {
-        if($this->user_id == 0){
-            exit(json_encode(array('status'=>'-11','info'=>'请先登陆')));
-        }
         //删除未支付的selected=2商品
         Db::name('Cart')->where(['selected'=>2,'user_id'=>$this->user_id])->delete();  
 
@@ -155,12 +157,16 @@ class Cart extends Base {
                     Db::name('Cart')->where("id", $key)->update($data);
                 }
             }
+            $this->assign('select_all', I('post.select_all')); // 全选框
         }
 
         $result = $this->cartLogic->cartList($this->user, $this->session_id,1,1,0); // 选中的商品
         
-        $rs=array('status'=>'1','info'=>'请求成功','prom_goods'=>$cartList,'cartList'=>$result['cartList'],'total_price'=>$result['total_price']);
-        exit(json_encode($rs));
+		$this->assign('prom_goods', $cartList); // 满减数据
+        $this->assign('cartList', $result['cartList']); // 购物车的商品                
+        $this->assign('total_price', $result['total_price']); // 总计
+        return $this->fetch('ajax_cart_list');
+
 		
     }
 	
@@ -169,7 +175,7 @@ class Cart extends Base {
      */
     public function ajaxDelCart()
     {       
-        $ids = input("cart_id"); // 商品 ids
+        $ids = input("ids"); // 商品 ids
         $result = Db::name("Cart")->where("id", "in", $ids)->delete(); // 删除用户数据
         $return_arr = array('status'=>1,'msg'=>'删除成功','result'=>''); // 返回结果状态       
         exit(json_encode($return_arr));
@@ -185,26 +191,33 @@ class Cart extends Base {
         $goods_id = I('goods_id/d');        //立即购买的商品ID
         $selected  = I('selected/d');       //详情页立即购买
         if($this->user_id == 0){
-            exit(json_encode(array('status'=>'-11','info'=>'请先登陆','url'=>'Home/User/user_login')));
+            $this->error('请先登陆',Url::build('Home/User/user_login'));
         }
         
         if ($selected == 2) {    //详情页立即购买
             $result = $this->cartLogic->cartList($this->user, $this->session_id,2,1,1,$goods_id); // 获取购物车商品
         }else{                   //购物车提交选择商品
             if($this->cartLogic->cart_count($this->user_id,1) == 0 ) {
-                exit(json_encode(array('status'=>'-17','info'=>'你的购物车没有选中商品','url'=>'Home/Cart/cart')));
+                $this->error('你的购物车没有选中商品',Url::build('Cart/cart'));
             }
             $result = $this->cartLogic->cartList($this->user, $this->session_id,1,1,1); // 获取购物车商品
         }
         if (!$result['cartList']) {
-            exit(json_encode(array('status'=>'-18','url'=>'Home/User/order_list')));
+            $this->redirect('User/order_list');
         }
         session('shipping_price',$result['total_price']['shipping_price']);  //保存订单邮费
         $custom=Db::name('custom')->where(array('id'=>$custom_id))->find();
 
-        $rs=array('status'=>'1','info'=>'请求成功','custom'=>$custom,'selected'=>$selected,'cartList'=>$result['cartList'],'total_price'=>$result['total_price'],'shipping_price'=>$result['total_price']['shipping_price']);
-        exit(json_encode($rs));
-
+        //$Model = new \think\Model(); // 找出这个用户的优惠券 没过期的  并且 订单金额达到 condition 优惠券指定标准的               
+       /* $sql = "select c1.name,c1.money,c1.condition, c2.* from __PREFIX__coupon as c1 inner join __PREFIX__coupon_list as c2  on c2.cid = c1.id and c1.type in(0,1,2,3) and order_id = 0  where c2.uid = :user_id  and ".time()." < c1.use_end_time and c1.condition <= :total_fee";
+        $couponList = Db::query($sql,['user_id'=>$this->user_id,'total_fee'=>$result['total_price']['total_fee']]);
+               
+        $this->assign('couponList', $couponList); // 优惠券列表  */
+        $this->assign('custom', $custom);              
+        $this->assign('selected', $selected);              
+        $this->assign('cartList', $result['cartList']); // 购物车的商品                
+        $this->assign('total_price', $result['total_price']); // 总计                               
+        return $this->fetch();
     }
 	
 	/*
@@ -212,9 +225,6 @@ class Cart extends Base {
      */
     public function ajaxAddress(){
         $address_list = Db::name('UserAddress')->where(['user_id'=>$this->user_id,'is_pickup'=>0])->select();
-        if($this->user_id == 0){
-            exit(json_encode(array('status'=>'-11','info'=>'请先登陆','url'=>'Home/User/user_login')));
-        }
         if($address_list){
         	$area_id = array();
         	foreach ($address_list as $val){
@@ -225,6 +235,8 @@ class Cart extends Base {
         	}    
             $area_id = array_filter($area_id);
         	$area_id = implode(',', $area_id);
+        	// $regionList = Db::name('region')->where("id", "in", $area_id)->column('id,name');
+        	// $this->assign('regionList', $regionList);
         }
         $address_where['is_default'] = 1;
         $c = Db::name('UserAddress')->where(['user_id'=>$this->user_id,'is_default'=>1,'is_pickup'=>0])->count(); // 看看有没默认收货地址
@@ -239,10 +251,8 @@ class Cart extends Base {
             } 
             $address_listss[] = $value;
         } 
-
-        $rs=array('status'=>'1','info'=>'请求成功','address_list'=>$address_listss);
-        exit(json_encode($rs));
-
+        $this->assign('address_list', $address_listss);
+        return $this->fetch('ajax_address');
     }
 	
     /**
@@ -258,16 +268,18 @@ class Cart extends Base {
         $address_id     =  input("address_id");     //  收货地址id
         $shipping_code  =  input("shipping_code");  //  物流编号
         $invoice_title  =  input("invoice_title");  //  发票
-        $coupon_id      =  input("coupon_id");      //  优惠券id(PC端暂无)
-        $codeCode       =  input("codeCode");       //  礼品卡卡码
+        $coupon_id      =  input("coupon_id");      //  优惠券id
+        $couponCode     =  input("couponCode");     //  优惠券代码
         $pay_points     =  input("pay_points",0);   //  使用积分
         $recommend_code =  input("recommend_code"); //  推荐人
         $user_money     =  0;
-        $user_note      =  input('POST.');          // 留言
+        $user_note      =  I('POST.');              // 留言
         $shipping_price =  $_SESSION['shipping_price'];// 物流费
-        $selected       =  input('selected');       // 立即购买
+        $selected       =  I('selected');                   // 立即购买
 
-        if(!$address_id){ exit(json_encode(array('status'=>-3,'msg'=>'请先填写收货人信息','result'=>null)));}// 返回结果状态
+        if(!$address_id){
+            exit(json_encode(array('status'=>-3,'msg'=>'请先填写收货人信息','result'=>null)));
+        } // 返回结果状态
         $address = Db::name('UserAddress')->where("address_id", $address_id)->find();
         if ($selected == 2) {
             $order_goods = Db::name('cart')->where(['user_id'=>$this->user_id,'selected'=>2])->order('id desc')->limit(1)->select();
@@ -278,7 +290,7 @@ class Cart extends Base {
             $order_goods = Db::name('cart')->where(['user_id'=>$this->user_id,'selected'=>1])->select();
         }
         //calculate_price()查询是否有活动或优惠卷等，计算订单金额
-        $result = calculate_price($this->user_id,$order_goods,$shipping_code,$shipping_price,$address[province],$address[city],$address[district],$pay_points,$user_money,$coupon_id,$codeCode);
+        $result = calculate_price($this->user_id,$order_goods,$shipping_code,$shipping_price,$address[province],$address[city],$address[district],$pay_points,$user_money,$coupon_id,$couponCode);
         if($result['status'] < 0){
             exit(json_encode($result));   
         }
@@ -298,6 +310,7 @@ class Cart extends Base {
         // }
         for ($i=0; $i <count($result['result']['order_goods']) ; $i++) { 
             $car_price[] = array(
+                'code_goods_id'=> $result['result']['code_goods_id'],   // 礼品卡优惠商品
                 'postFee'      => $result['result']['shipping_price'],  // 物流费
                 'couponFee'    => $result['result']['coupon_price'],    // 优惠券            
                 'codeFee'      => $result['result']['code_price'],      // 礼品卡            
@@ -312,6 +325,7 @@ class Cart extends Base {
             // $order_prom_id_s[]=$car_price[$i]['order_prom_id_s'];
             $order_prom_id_s[]=$result['result']['coupon_Yprice'][$i];
         }
+        
         // 提交订单        
         if($_REQUEST['act'] == 'submit_order')
         {  
@@ -343,10 +357,10 @@ class Cart extends Base {
             $pre_sell_info = Db::name('goods_activity')->where(array('act_id'=>$order['order_prom_id']))->find();
             $pre_sell_info = array_merge($pre_sell_info,unserialize($pre_sell_info['ext_info']));
             if($pre_sell_info['retainage_start'] > time()){
-                exit(json_encode(array('status'=>'-19','info'=>'还未到支付尾款时间'.date('Y-m-d H:i:s',$pre_sell_info['retainage_start']))));
+                $this->error('还未到支付尾款时间'.date('Y-m-d H:i:s',$pre_sell_info['retainage_start']));
             }
             if($pre_sell_info['retainage_end'] < time()){
-                exit(json_encode(array('status'=>'-20','info'=>'对不起，该预售商品已过尾款支付时间'.date('Y-m-d H:i:s',$pre_sell_info['retainage_start']))));
+                $this->error('对不起，该预售商品已过尾款支付时间'.date('Y-m-d H:i:s',$pre_sell_info['retainage_start']));
             }
         }
 		
@@ -380,10 +394,13 @@ class Cart extends Base {
                 $bankCodeList[$val['code']] = unserialize($val['bank_code']);        
             }                
         }                
+             
+        $this->assign('paymentList',$paymentList);        
+        $this->assign('order',$order);
+        $this->assign('bankCodeList',$bankCodeList);        
+        $this->assign('pay_date',date('Y-m-d', strtotime("+1 day")));
         
-        $rs=array('status'=>'1','info'=>'请求成功','paymentList'=>$paymentList,'order'=>$order,'bankCodeList'=>$bankCodeList,'pay_date'=>date('Y-m-d', strtotime("+1 day")));
-        exit(json_encode($rs));
-
+        return $this->fetch();
     }	
 
 

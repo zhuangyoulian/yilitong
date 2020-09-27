@@ -106,7 +106,7 @@
 								<p class="shop-agreement" style="margin-bottom:10px;"><a target="_blank" href="__PUBLIC__/upload/active/agreement/settlementAgreementt.pdf">点击下载《一礼通商家入驻收费项目协议》</a></p>
 								<div class="upload-settlement-agreement">
 									<div id="settlement-agreement"></div>
-									<if condition="$row.reading_protocol">
+									<if condition="$row.reading_protocol.0">
 										<span>
 											<if condition="$row.reading_protocol.1">
 												<foreach name="$row.reading_protocol"  item="value" key="k">
@@ -125,7 +125,11 @@
 				</form>
 				<input type="hidden" name="logo" id="logo" value="{$row.logo}">
 				<input type="hidden" name="type" value='<if condition="$row.supplier_name neq null">1</if>'>
-				<input type="hidden" name="reading_protocol"  id="reading_protocol" value="{$row.reading_protocol}">
+				<if condition="$row.reading_protocol.1">
+					<input type="hidden" name="reading_protocol"  id="reading_protocol" value="{$row.reading_protocol.0},{$row.reading_protocol.1},{$row.reading_protocol.2}">
+				<else/>
+					<input type="hidden" name="reading_protocol"  id="reading_protocol" value="{$row.reading_protocol.0}">
+				</if>
 				<input type="hidden" name="url"  id="url" >
 				<div class="pre2-next2-btn">
 					<div class="pre-2"><a href="{:Url('Home/Business/BusinessTwo')}">上一步</a></div>
@@ -143,7 +147,10 @@
 					//开户许可证上传
 					var logo=$("input[name='logo']").val();
 					var reading_protocol=$("input[name='reading_protocol']").val();
-					console.log(reading_protocol);
+					var url=$("input[name='url']").val();
+					if (reading_protocol!=''&& url =='') {
+						var url = reading_protocol;
+					}
 					if($('.shop-name').val() == '') {
 						alert('请填写写店铺名称');return;
 					}else if(logo=="") {
@@ -159,8 +166,7 @@
 								supplier_name:$("input[name='supplier_name']").val(),
 								type:$("input[name='type']").val(),
 								logo:$('#logo').val(),
-								// reading_protocol:$('#reading_protocol').val(),
-								reading_protocol:reading_protocol,
+								reading_protocol:url,
 							},
 							success:function(data){
 								if(data=='1'){
@@ -199,15 +205,15 @@
 							}
 							val.val(data);
 							//入驻协议的图片拼接
-							var url_ss = $("input[name='url']").val();
-							if (url_ss) {
-								var s1 = url_ss;
-								var s2 = s1+","+data;  	
-								$("input[name='url']").val(s2);
-								$("input[name='reading_protocol']").val(s2);
-							}else{
-								$("input[name='url']").val(data);
-								$("input[name='reading_protocol']").val(data);
+							if (val.selector== "#reading_protocol") {
+								var url_ss = $("input[name='url']").val();
+								if (url_ss) {
+									var s1 = url_ss;
+									var s2 = s1+","+data;  	
+									$("input[name='url']").val(s2);
+								}else{
+									$("input[name='url']").val(data);
+								}
 							}
 						},
 						error:function( err ) {

@@ -17,18 +17,6 @@ class RedGift extends Base{
      */
     public function a_red_list(){
         //     truncate table ylt_red_cart   清空表
-        // $co = Db::name('red_goods')->alias('g')->join('goods_category c','g.cat_id = c.id')->where('red_supplier_id = 0 and c.parent_id != 1089 and c.id != 1089')->field('goods_id,goods_name')->select();
-        // foreach ($co as $key => $value) {
-        //     Db::name('red_goods')->where('goods_id',$value['goods_id'])->update(['is_delete'=>1]);
-        // }
-        // die;
-        // $goods =  Db::name('red_goods')->alias('g')->join('goods_category c','g.cat_id = c.id')->where('c.parent_id != 1089 and c.id != 1089 and (g.red_cost_price != 0 or g.red_cost_price != Null )')->field('red_cost_price,group_price,goods_id')->select();
-        // foreach ($goods as $key => $value) {
-        //     $red_cost_price = $value['red_cost_price']*1.2;
-        //     Db::name('red_goods')->where('goods_id = '.$value['goods_id'])->update(['group_price'=>$red_cost_price]);
-        // }
-        // die;
-
         $GoodsLogic = new GoodsLogic();
         // $categoryList = $GoodsLogic->red_getSortCategory();
         $categoryList = $GoodsLogic->getSortCategory();
@@ -51,7 +39,7 @@ class RedGift extends Base{
         $key_word = I('key_word') ? trim(I('key_word')) : '';
         if($key_word)
         {
-            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%' or supplier_name like '%$key_word%')" ;
+            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%')" ;
         }
 
         if($cat_id > 0)
@@ -84,7 +72,6 @@ class RedGift extends Base{
         $this->assign('catList',$catList);
         $this->assign('goodsList',$goodsList);
         $this->assign('page',$show);// 赋值分页输出
-        $this->assign('pager',$Page);
         return $this->fetch();
     }  
 
@@ -110,10 +97,7 @@ class RedGift extends Base{
                 );
                 $this->ajaxReturn($return_arr);
             }
-            if (empty($data['original_img'])) {
-                $this->ajaxReturn(array('status' => -5,'msg' => '主图不可为空'));
-            }
-            
+
             $Goods->data(I('post.'),true); // 收集数据
 
             I('cat_id_2') && ($Goods->cat_id = I('cat_id_2'));
@@ -189,8 +173,8 @@ class RedGift extends Base{
         // $level_cat = $GoodsLogic->red_find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $level_cat = $GoodsLogic->find_parent_cat($goodsInfo['cat_id']); // 获取分类默认选中的下拉框
         $level_cat2 = $GoodsLogic->find_parent_cat2($goodsInfo['extend_cat_id']); // 获取分类默认选中的下拉框
-        // $cat_list = Db::name('red_goods_category')->where("parent_id = 0 and is_red = 1 ")->select(); // 已经改商品成联动菜单
-        $cat_list = Db::name('goods_category')->where("id = 1123 or (  parent_id = 0 and is_red = 1 )")->select(); // 已经改商品成联动菜单
+        // $cat_list = Db::name('red_goods_category')->where("parent_id = 0 and is_show = 1 ")->select(); // 已经改商品成联动菜单
+        $cat_list = Db::name('goods_category')->where("id = 1123 or (  parent_id = 0 and is_show = 1 )")->select(); // 已经改商品成联动菜单
         $cat_scenario_list = Db::name('scenario_category')->where("parent_id = 0 and is_show = 1")->select(); // 已经改成场景联动菜单
         $brandList = $GoodsLogic->getSortBrands();  //查询品牌
         // $goodsType = $GoodsLogic->red_goodsType();
@@ -260,7 +244,7 @@ class RedGift extends Base{
         $key_word = I('key_word') ? trim(I('key_word')) : '';
         if($key_word)
         {
-            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%' or supplier_name like '%$key_word%')" ;
+            $where = "$where and (goods_name like '%$key_word%' or goods_sn like '%$key_word%')" ;
         }
 
         if($cat_id > 0)
@@ -279,7 +263,6 @@ class RedGift extends Base{
         $this->assign('catList',$catList);
         $this->assign('goodsList',$goodsList);
         $this->assign('page',$show);// 赋值分页输出
-        $this->assign('pager',$Page);
         $this->assign('count',$count);// 赋值分页输出
         return $this->fetch();
     }
@@ -1183,13 +1166,9 @@ class RedGift extends Base{
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">电话</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">订单金额</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">实际支付</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">支付方式</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">支付状态</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">发货状态</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">结算状态</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">商品信息</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">交易流水单号</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">店铺名称</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司名称</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">交易账号</td>';
         $strTable .= '</tr>';
@@ -1200,26 +1179,30 @@ class RedGift extends Base{
                 $strTable .= '<td style="text-align:center;font-size:12px;">&nbsp;'.$val['order_sn'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['create_time'].' </td>';               
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['consignee'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'."{$region[$val['province']]},{$region[$val['city']]},{$region[$val['district']]},{$region[$val['twon']]}{$val['address']}".' </td>';
+                if (!empty($region[$val['province']]) && !empty($region[$val['city']])) {
+                    $strTable .= '<td style="text-align:left;font-size:12px;">'."{$region[$val['province']]},{$region[$val['city']]},{$region[$val['district']]},{$region[$val['twon']]}{$val['address']}".' </td>';
+                }else{
+                    $strTable .= '<td style="text-align:left;font-size:12px;">'."{$val['province']},{$val['city']},{$val['district']},{$val['address']}".' </td>';
+                }
+                
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['mobile'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['goods_price'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['order_amount'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['pay_name'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$this->pay_status[$val['pay_status']].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$this->shipping_status[$val['shipping_status']].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$this->close[$val['close']].'</td>';
-                $orderGoods = Db::name('order_goods')->where('order_id='.$val['order_id'])->field('goods_sn,goods_name,spec_key_name')->select();
+                $orderGoods = Db::name('red_order_goods')->where('order_id='.$val['order_id'])->field('goods_sn,goods_name,spec_key_name,goods_num')->select();
                 $strGoods="";
                 foreach($orderGoods as $goods){
-                    $strGoods .= "商品编号：".$goods['goods_sn']." 商品名称：".$goods['goods_name'];
-                    if ($goods['spec_key_name'] != '') $strGoods .= " 规格：".$goods['spec_key_name'];
-                    $strGoods .= "<br />";
+                    $strGoods .= "商品编号：".$goods['goods_sn']."<br /> 商品名称：".$goods['goods_name'];
+                    if ($goods['spec_key_name'] != '') $strGoods .= " <br /> 规格：".$goods['spec_key_name'];
+                    $strGoods .= " <br /> 数量：".$goods['goods_num']." <br />" ;
                 }
                 unset($orderGoods);
-                $supplier = Db::name('supplier')->where('supplier_id='.$val['supplier_id'])->find();
+                if ($val['red_supplier_id'] == 0) {
+                    $val['red_supplier_id'] = 686;
+                }
+                $supplier = Db::name('redsupplier_user')->where('red_admin_id='.$val['red_supplier_id'])->find();
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$strGoods.' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['transaction_id'].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$supplier['supplier_name'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$supplier['company_name'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$supplier['bank_name'].'-'.$supplier['bank_account_name'].'-'. $supplier['bank_account_number'].' </td>';
                 $strTable .= '</tr>';
@@ -1354,10 +1337,10 @@ class RedGift extends Base{
      * @return [type] [description]
      */
     public function adminHandle(){
-        $data = I('');
+        $data = I('post.');
+        $data['password'] = encrypt($data['password']);
+        $data['user_name'] = trim($data['user_name']);
         if($data['act'] == 'add'){
-            $data['password'] = encrypt($data['password']);
-            $data['user_name'] = trim($data['user_name']);
             if(empty($data['password']) || empty($data['user_name'])){
                 $this->error("账号或密码不能为空");
             }
@@ -1373,8 +1356,6 @@ class RedGift extends Base{
         }
         
         if($data['act'] == 'edit'){
-            $data['password'] = encrypt($data['password']);
-            $data['user_name'] = trim($data['user_name']);
             if(empty($data['password']) || empty($data['user_name'])){
                 $this->error("账号或密码不能为空");
             }
@@ -1518,56 +1499,46 @@ class RedGift extends Base{
         
 
         $keyword = $data['keyword'];
-        $where = $keyword ? " (supplier_name like '%$keyword%' or company_name like '%$keyword%') and status=1 and is_designer = 0" : "status=1 and is_designer = 0";
-        $orderList= Db::name('supplier')->where($where)->order('supplier_id')->select();
+        $where = $keyword ? " (supplier_name like '%$keyword%' or company_name like '%$keyword%') and status=1" : "status=1 ";
+        $orderList= Db::name('redsupplier_user')->where($where)->order('red_admin_id')->select();
     
   
         $strTable ='<table width="500" border="1">';
         $strTable .= '<tr>';
-        $strTable .= '<td style="text-align:center;font-size:12px;width:100px;">商铺编码</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="100">商铺名称</td>';
+        $strTable .= '<td style="text-align:center;font-size:12px;width:100px;">商家ID</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司名称</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司地址</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司简介</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司规模</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">电子邮箱</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">入驻时间</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">联系人电话</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">公司座机</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">营业执照号</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">开户名称</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">支行名称</td>';
+        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">银行支行名称</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">运营者姓名</td>';
-        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">保证金</td>';
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">审核状态</td>';
+        $strTable .= '<td style="text-align:center;font-size:12px;" width="*">入驻时间</td>';
         $strTable .= '</tr>';
         if(is_array($orderList)){
-            $region = Db::name('region')->column('id,name'); 
+            // $region = Db::name('region')->column('id,name'); 
             foreach($orderList as $k=>$val){
                 $strTable .= '<tr>';
-                $strTable .= '<td style="text-align:center;font-size:12px;">&nbsp;'.$val['supplier_id'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['supplier_name'].' </td>';             
+                $strTable .= '<td style="text-align:center;font-size:12px;">&nbsp;'.$val['red_admin_id'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['company_name'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'."{$region[$val['province']]},{$region[$val['city']]},{$region[$val['area']]},{$val['address']}".' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['introduction'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['guimo'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['email'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.date('Y-m-d H-i',$val['add_time']).'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['contacts_phone'].' </td>';
+                $strTable .= '<td style="text-align:left;font-size:12px;">'."{$val['province']},{$val['city']},{$val['area']},{$val['address']}".' </td>';
+                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['mobile'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['phone_number'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['business_licence_number'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['bank_name'].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['bank_branch'].' </td>';
+                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['bank_account_name'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['operating_name'].' </td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['supplier_money'].' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">审核通过</td>';
+                $strTable .= '<td style="text-align:left;font-size:12px;">'.date('Y-m-d H-i',$val['add_time']).'</td>';
                 $strTable .= '</tr>';
                 
             }
         }
         $strTable .='</table>';
         unset($orderList);
-        downloadExcel($strTable,'入驻商家信息');
+        downloadExcel($strTable,'红礼入驻商家信息');
         exit();
     }
 

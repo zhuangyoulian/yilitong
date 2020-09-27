@@ -7,7 +7,6 @@
  */
 namespace ylt\mobile\controller;
 use ylt\home\logic\UsersLogic;
-use ylt\home\controller\Notify;
 use think\Page;
 use think\Request;
 use think\Verify;
@@ -34,10 +33,6 @@ class User extends MobileBase{
             $this->user = $user;
             $this->user_id = $user['user_id'];
             $this->assign('user', $user); //存储用户信息
-            //联系客服手机号
-            $phone = Db::name('config')->where("id",56)->field('value')->value('value');
-            $this->phone = $phone;
-            $this->assign('phone', $phone); 
         }
 		if(strstr($_SERVER['HTTP_USER_AGENT'],'MicroMessenger')){
 			 $nologin = array(
@@ -61,40 +56,32 @@ class User extends MobileBase{
 
 			// 如果是微信浏览器，则用微信授权登录
 			if(strstr($_SERVER['HTTP_USER_AGENT'],'MicroMessenger')){
-                $this->weixin_config = Db::name('wx_user')->find(); //获取微信配置
-                $this->assign('wechat_config', $this->weixin_config);
-                if(is_array($this->weixin_config) && $this->weixin_config['wait_access'] == 1){
-                    $wxuser = $this->GetOpenid(); //授权获取openid以及微信用户信息
-                   // setcookie('subscribe',$wxuser['subscribe']);
-                    //微信自动登录
-    				$wxuser['recommend_code'] = input('recommend_code');
-    				$wxuser['unionid'] = $wxuser['unionid'] ? $wxuser['unionid'] : '';
-                    $logic = new \ylt\home\model\UsersLogic();
-                    $data = $logic->thirdLogin($wxuser);
+            $this->weixin_config = Db::name('wx_user')->find(); //获取微信配置
+            $this->assign('wechat_config', $this->weixin_config);
+            if(is_array($this->weixin_config) && $this->weixin_config['wait_access'] == 1){
+                $wxuser = $this->GetOpenid(); //授权获取openid以及微信用户信息
+               // setcookie('subscribe',$wxuser['subscribe']);
+                //微信自动登录
+				$wxuser['recommend_code'] = input('recommend_code');
+				$wxuser['unionid'] = $wxuser['unionid'] ? $wxuser['unionid'] : '';
+                $logic = new \ylt\home\model\UsersLogic();
+                $data = $logic->thirdLogin($wxuser);
 
-                    if($data['status'] == 1){
-                        session('user',$data['result']);
-                        setcookie('user_id',$data['result']['user_id'],null,'/');
-    					$this->user_id = $data['result']['user_id'];
-                        setcookie('user_name',$data['result']['nickname'],null,'/');
-                        // 登录后将购物车的商品的 user_id 改为当前登录的id
-                        Db::name('cart')->where("session_id", $this->session_id)->update(array('user_id'=>$data['result']['user_id']));
-
-                        $Notify = new \ylt\home\controller\Notify();
-                        //查询是否有礼至家居过来的中奖记录
-                        $sdf = $Notify->inquire_lottery($wxuser['unionid']);
-                        //绑定手机号
-                        if (empty($data['result']['mobile'])) {
-                            session('login_url',$_SERVER[REQUEST_URI]);
-                            // session('login_url',$_SERVER[PHP_SELF]);
-                            $this->error('请先绑定手机账号',Url::build('User/mobile_validate_two'));
-                        }
-                    }
+                if($data['status'] == 1){
+                    session('user',$data['result']);
+                    setcookie('user_id',$data['result']['user_id'],null,'/');
+					$this->user_id = $data['result']['user_id'];
+                    setcookie('user_name',$data['result']['nickname'],null,'/');
+                    // 登录后将购物车的商品的 user_id 改为当前登录的id
+                    Db::name('cart')->where("session_id", $this->session_id)->update(array('user_id'=>$data['result']['user_id']));
                 }
-			}else{   
-                    session('login_url',$_SERVER[REQUEST_URI]);
+              }
+			}else{
+				
 				    header("location:" . Url::build('User/login'));
                     exit;
+
+                
 			}
             
         }
@@ -116,9 +103,6 @@ class User extends MobileBase{
         $user_id =$this->user_id;
         $logic = new UsersLogic();
         $user = $logic->get_info($user_id); //当前登录用户信息
-        if (empty($user['result']['mobile'])) {
-            $this->error('请先绑定手机账号',Url::build('User/mobile_validate_two'));
-        }
         $comment_count = Db::name('comment')->where("user_id", $user_id)->count();   // 我的评论数
         $cart = Db::name('cart')->where("user_id", $user_id)->count();   // 我的购物车数
         $time=time();
@@ -143,20 +127,16 @@ class User extends MobileBase{
         return $this->fetch();
     }
 
-	/**
+	   /**
      *  登录
      */
     public function login()
     {
         if ($this->user_id > 0) {
+//
             header("Location: " . Url::build('User/index'));
         }
-        //是否有上级地址
-        $referurl = session('login_url') ? session('login_url') : Url::build("User/index");
-        //是否充值中心
-        if (I('login_url') == 1) {
-            $referurl = 'http://tp.cn/static/index.html';
-        }
+        $referurl = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : Url::build("User/index");
         $this->assign('referurl', $referurl);
         return $this->fetch();
     }
@@ -169,15 +149,23 @@ class User extends MobileBase{
     {
 
         if($this->user_id > 0) {
+			//if(strstr($_SERVER['HTTP_USER_AGENT'],'MicroMessenger'))
+			//	$row = '跳过';
+			//else
             $this->redirect(Url::build('Index/index'));
+//            $this->ajaxReturn(['status'=>1,'msg'=>'您已注册']);
         }
         $reg_sms_enable = tpCache('sms.regis_sms_enable');
 
+
         if (IS_POST) {
             $logic = new UsersLogic();
+            //验证码检验
+           // $this->verifyHandle('user_reg');
             $username = I('post.mobile', '');
             $password = I('post.password', '');
             $password2 = I('post.password2', '');
+            //是否开启注册验证码机制
             $code = I('post.mobile_code', '');
             $scene = I('post.scene', 1);
 			$recommend_code = I('post.recommend_code');
@@ -271,7 +259,6 @@ class User extends MobileBase{
 
 				if (!input('post.password'))
                     $this->error('请输密码');
-
 				$post['password'] =  encrypt(trim(input('post.password')));
 				$post['mobile_validated'] = 1;
 
@@ -370,7 +357,6 @@ class User extends MobileBase{
             }
             session('user', $res['result']);
             setcookie('user_id', $res['result']['user_id'], null, '/');
-            // $this->user_id = $res['result']['user_id'];
             $nickname = empty($res['result']['nickname']) ? $username : $res['result']['nickname'];
             setcookie('user_name', urlencode($nickname), null, '/');
             $cartLogic = new \ylt\home\logic\CartLogic();
@@ -392,8 +378,7 @@ class User extends MobileBase{
         setcookie('user_name','',time()-3600,'/');
         setcookie('user_id','',time()-3600,'/');
         setcookie('PHPSESSID','',time()-3600,'/');
-        //清除临时推荐人
-        Db::name('users')->where("user_id", $this->user_id)->update(array('source_id'=>0));
+
         header("Location:" . Url::build('user/login'));
         exit();
     }
@@ -413,12 +398,13 @@ class User extends MobileBase{
         $Page = new Page($count, 10);
         $show = $Page->show();
         $order_str = "order_id DESC";
-        $field="order_id,supplier_name,order_amount,order_status";
         $order_list = Db::name('order')->order($order_str)->where($where)->where('is_parent!=1')->limit($Page->firstRow . ',' . $Page->listRows)->select();
+
         //获取订单商品
         $model = new UsersLogic();
         foreach ($order_list as $k => $v) {
             $order_list[$k] = set_btn_order_status($v);  // 添加属性  包括按钮显示属性 和 订单状态显示属性
+            //$order_list[$k]['total_fee'] = $v['goods_amount'] + $v['shipping_fee'] - $v['integral_money'] -$v['bonus'] - $v['discount']; //订单总额
             $data = $model->get_order_goods($v['order_id']);
             $order_list[$k]['goods_list'] = $data['result'];
         }
@@ -430,8 +416,9 @@ class User extends MobileBase{
             }
             $order_list[$key]['count_goods_num'] = $count_goods_num;
         }
-
-        // dump($order_list);die;
+        $this->assign('order_status', config('ORDER_STATUS'));
+        $this->assign('shipping_status', config('SHIPPING_STATUS'));
+        $this->assign('pay_status', config('PAY_STATUS'));
         $this->assign('page', $show);
         $this->assign('lists', $order_list);
         $this->assign('active', 'order_list');
@@ -449,47 +436,31 @@ class User extends MobileBase{
     public function order_detail()
     {
         $id = I('get.id/d');
-        $user_id = $this->user_id;
-        $order_info = Db::name('order')->where("order_id = ".$id." and (user_id = ".$user_id." || recommend_code = ".$user_id.")")->find();
+        $map['order_id'] = $id;
+        $map['user_id'] = $this->user_id;
+        $order_info = Db::name('order')->where($map)->find();
+        $order_info = set_btn_order_status($order_info);  // 添加属性  包括按钮显示属性 和 订单状态显示属性
         if (!$order_info) {
             $this->error('没有获取到订单信息');
             exit;
         }
-        $order_info = set_btn_order_status($order_info);  // 添加属性  包括按钮显示属性 和 订单状态显示属性
         //获取订单商品
         $model = new UsersLogic();
         $data = $model->get_order_goods($order_info['order_id']);
         $order_info['goods_list'] = $data['result'];
         $region_list = get_region_list();
-        if (empty($region_list[$order_info['province']]['name']) && empty($region_list[$order_info['city']]['name'])) {
-            $order_info['address2'] = $order_info['province'].','.$order_info['city'].','.$order_info['district'].','.$order_info['address'];      
-        }else{
-            $order_info['address2'] =  $region_list[$order_info['province']]['name'] .','. $region_list[$order_info['city']]['name'] .','. $region_list[$order_info['district']]['name'];
-            $order_info['address2'] = $order_info['address2'].$order_info['address'];      
-        }   
         //获取订单操作记录
         $order_action = Db::name('order_action')->where(array('order_id' => $id))->select();
-
-        //拼单内容
-        if ($order_info['is_share'] >= 1) {
-            //拼单的用户数量
-            $share_the = Db::name('share_the_bill')->alias('s')->join('users u','s.u_id = u.user_id')->where('p_id',$order_info['is_share'])->field('u.head_pic')->select();  
-            $share_the['count'] = count($share_the);
-            $share = Db::name('share_the_bill')->alias('s')->join('discount_buy b','s.prom_id = b.id')->where('s.id',$order_info['is_share'])->find();
-            if ($order_info['pay_status'] == 1) {
-                $the_bill  = Db::name('share_the_bill')->where(['p_id'=>$order_info['is_share'],'u_id'=>$user_id,'prom_id'=>$share['prom_id']])->find();
-                $this->assign('the_bill', $the_bill);
-            }
-        }
-        // dump($share_the);die;
-
+        //联系客服手机号
+        $phone = Db::name('config')->where("id",56)->field('value')->value('value');
+      
         $this->assign('order_status', config('ORDER_STATUS'));
         $this->assign('shipping_status', config('SHIPPING_STATUS'));
         $this->assign('pay_status', config('PAY_STATUS'));
+        $this->assign('region_list', $region_list);
         $this->assign('order_info', $order_info);
-        $this->assign('share_the', $share_the);
         $this->assign('order_action', $order_action);
-
+        $this->assign('phone', $phone);
         if (I('waitreceive')) {  //待收货详情
             return $this->fetch('wait_receive_detail');
         }
@@ -510,7 +481,7 @@ class User extends MobileBase{
         return $this->fetch();
     }
 
-	/**
+	    /**
      * 确定收货成功
      */
     public function order_confirm()
@@ -550,15 +521,8 @@ class User extends MobileBase{
     {
         $address_lists = get_user_address_list($this->user_id);
         $region_list = get_region_list();
-        foreach ($address_lists as $key => $value) {
-            if (!empty($region_list[$value['province']]['name']) && !empty($region_list[$value['city']]['name'])) {
-                $value['province'] =  $region_list[$value['province']]['name'];
-                $value['city']     =  $region_list[$value['city']]['name'];
-                $value['district'] =  $region_list[$value['district']]['name'];
-            } 
-            $address_listss[] = $value;
-        }
-        $this->assign('lists', $address_listss);
+        $this->assign('region_list', $region_list);
+        $this->assign('lists', $address_lists);
         return $this->fetch();
     }
 
@@ -567,14 +531,15 @@ class User extends MobileBase{
      */
     public function add_address()
     {
+
         if (IS_POST) {
-            $datas = I('post.');
-            // dump($datas);die;
             $logic = new UsersLogic();
-            $data = $logic->add_address($this->user_id, 0, $datas);
-            if ($data['status'] != 1){
+            $data = $logic->add_address($this->user_id, 0, I('post.'));
+
+            if ($data['status'] != 1)
                 $this->error($data['msg']);
-            }elseif (I('post.source') == 'orderconfirm') {
+            elseif (I('post.source') == 'orderconfirm') {
+
 				$this->success($data['msg'],Url::build('Cart/orderconfirm'));
                 exit;
             }
@@ -783,7 +748,7 @@ class User extends MobileBase{
 				$order['order_amount'] = Db::name('order')->where('order_id',$order['parent_id'])->value('order_amount');
 
 			$goods = Db::name('order_goods')->where($order_goods_where)->find();
-            if (empty($data['imgs'])) {
+          if (empty($data['imgs'])) {
                 $data['imgs'] = $goods['goods_thumb'];
             }
             $data['order_id'] = $order_id;
@@ -830,7 +795,7 @@ class User extends MobileBase{
     }
 
 
-	/**
+	   /**
      * 退换货列表
      */
     public function back_goods_list()
@@ -875,23 +840,6 @@ class User extends MobileBase{
         return $this->fetch();
     }
 
-    /**
-     * [return_goods_cancel 取消退换货]
-     * @return [type] [description]
-     */
-    public function return_goods_cancel(){
-        $data = I('get.');
-        // $a = Db::name('back_order')->where('id',$data['id'])->delete();
-        $a = Db::name('back_order')->where('id',$data['id'])->update(['status'=>-2]);
-        $b = Db::name('order_goods')->where(['order_id'=>$data['order_id'],'goods_id'=>$data['goods_id']])->update(['is_service' => 0]);
-        if ($a && $b) {
-            $this->success("取消成功。", Url::build('User/back_goods_list'));
-        // return array('status' =>1,'msg'=>'取消售后成功。');
-        }else{
-            $this->error("取消失败，订单商品不存在。");
-        }
-    }
-
 	 /**
      * 用户收藏列表
      */
@@ -922,7 +870,8 @@ class User extends MobileBase{
         }
     }
 
-    /*
+
+	   /*
     * 手机验证
     */
     public function mobile_validate()
@@ -962,39 +911,6 @@ class User extends MobileBase{
             $this->error('验证码手机不匹配');
         }
         $this->assign('step', $step);
-        return $this->fetch();
-    }
-    
-    /**
-     * [mobile_validate_two 手机绑定 2019.08]
-     * @return [type] [description]
-     */
-    public function mobile_validate_two()
-    {   
-        // $url = $_SERVER['HTTP_REFERER'];
-        $userLogic = new UsersLogic();
-        $user_info = $userLogic->get_info($this->user_id); // 获取用户信息
-        $user_info = $user_info['result'];
-        if (IS_POST) {
-            $mobile = I('post.mobile');
-            $password = I('post.password');
-            if (empty($mobile) || empty($password)) {
-                $this->error('手机和密码不能为空');
-            }
-            if ($user_info['mobile_validated'] == 0) {
-                $da = $userLogic->update_email_mobile($mobile, $this->user_id, 2 ,$password);
-                if (!$da){
-                    $this->error('手机已存在');
-                }
-                if (!empty(session('login_url'))) {
-                    $this->success('绑定成功', Url::build(session('login_url')));
-                }else{
-                    $this->success('绑定成功', Url::build('User/index'));
-                }
-            }else{
-                $this->error('账号已绑定过手机');
-            }
-        }
         return $this->fetch();
     }
 
@@ -1246,6 +1162,8 @@ class User extends MobileBase{
             $type = $result[2]; //jpeg
             $IMG = base64_decode(str_replace($result[1], '', $base64)); //返回文件流
         }
+                // dump($base64);die;
+        //$IMG = base64_decode($base64);   //base64位转码，还原图片
         $path ='public/upload/logo/custom/';
         if (!file_exists($path)){
             mkdir($path,0777,true);
@@ -1256,90 +1174,5 @@ class User extends MobileBase{
         file_put_contents($picname,$IMG);
         $picname2=$u.'.jpg';
         $this->ajaxReturn(array('status' => 1,'pic_id' =>$picname2,'pic_path'=>$picname_s));
-    }
-
-    /**
-     * [charity_list 抗疫行动记录列表]
-     * @return [type] [description]
-     */
-    public function charity_list(){
-        // $charity_list = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where(['is_purchase'=>1])->where("is_donate like '%爱心捐赠%'")->find();
-        $charity_list1 = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where("is_donate",'企业自用')->find();                    //企业自用
-        $charity_list2 = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where("is_donate", '爱心捐赠')->select();   //爱心捐赠
-        $charity_list3 = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where(['is_purchase'=>2])->find();                //供货
-        $charity_list4 = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where(['is_purchase'=>3])->find();                //求助
-        if (I('type')==1) {
-            $arr = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where("do_id",I('do_id'))->update(['status'=>4]);                    //取消
-            if ($arr) {
-                return array('status'=>1,'msg'=>'取消成功');
-            }else{
-                return array('status'=>-1,'msg'=>'取消失败');
-            }
-        }
-        $this->assign('charity_list1',$charity_list1);
-        $this->assign('charity_list2',$charity_list2);
-        $this->assign('charity_list3',$charity_list3);
-        $this->assign('charity_list4',$charity_list4);
-        
-        return $this->fetch();
-    }
-
-    /**
-     * [charity_info 抗疫行动详情]
-     * @return [type] [description]
-     */
-    public function charity_info(){
-        $do_id = I('do_id');
-        $charity_info = Db::name('MedicalCharity')->where('user_id',$this->user_id)->where(['do_id'=>$do_id])->find();               
-        if ($charity_info['supply_goods']) {
-            $supply = explode(';',$charity_info['supply_goods']);
-            foreach ($supply as $key => $value) {
-                $supply_goods[] = explode(',',$value);
-            }
-        }
-        if ($charity_info['materials']) {
-            $mate = explode(',',$charity_info['materials']);
-            foreach ($mate as $key => $value) {
-                $materials[] = explode(':',$value);
-            }
-        }
-        if ($charity_info['materials_s']) {
-            $mate_s = explode(',',$charity_info['materials_s']);
-            foreach ($mate_s as $key => $value) {
-                $materials_s[] = explode(':',$value);
-            }
-        }
-        $this->assign('charity_info',$charity_info);
-        $this->assign('supply_goods',$supply_goods);
-        $this->assign('materials',$materials);
-        $this->assign('materials_s',$materials_s);
-
-        return $this->fetch();
-    }
-
-    /**
-     * [consult 端午资讯页面]
-     * @return [type] [description]
-     */
-    public function consult(){
-        if(IS_POST){
-            $data = I('');
-            $user = $this->user;
-            $data['username'] = $user['nickname'];
-            $data['user_id']  = $user['user_id'];
-            $data['add_time'] = time();
-            $Earr = Db::name('goods_consult')->where(['user_id'=>$data['user_id'],'consult_type'=>$data['consult_type']])->whereTime('add_time', 'd')->find();
-            if ($Earr) {   //今天的重复留言只修改
-                $arr = Db::name('goods_consult')->where(['user_id'=>$data['user_id'],'consult_type'=>$data['consult_type']])->update($data);
-            }else{
-                $arr = Db::name('goods_consult')->insert($data);
-            }
-            if ($arr) {
-                // sendCode(13728740390,"您好，有一个定制礼品的咨询留言，请登录一礼通后台查看并及时回复。");
-                sendCode($this->phone,"您好，有一个定制礼品的咨询留言，请登录一礼通后台查看并及时回复。");
-                return array('status'=>1,'msg'=>'留言成功！稍后公司相关人员将与您联系。');
-            }
-        }
-        return $this->fetch();
     }
 }

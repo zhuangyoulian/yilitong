@@ -1,0 +1,491 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2017/6/2
+ * Time: 11:34
+ */
+namespace ylt\mobile\controller;
+use ylt\mobile\logic\GoodsLogic;
+use think\AjaxPage;
+use think\Controller;
+use think\Url;
+use think\Config;
+use think\Page;
+use think\Db;
+use think\Request;
+use think\Cache;
+class Goods extends MobileBase {
+
+    public function index(){
+
+        return $this->fetch();
+    }
+
+
+    /**
+     * 分类列表显示
+     */
+    public function categoryList(){
+        return $this->fetch();
+    }
+	
+	 /**
+     * 礼品推荐
+     */
+    public function gift(){
+        $data = Db::name('gifts_category')->Cache(true,YLT_CACHE_TIME)->order('sort_order DESC')->select();//获取对应数据
+            //将数据打包成二维数组对象
+            //dump($data);
+        foreach( $data as $k=>$v){
+            if ($v['parent_id']==0){
+                $tmp[$v['id']]=$v;
+                }
+            }
+        foreach($data as $k=>$v){
+            foreach($tmp as $b=>$a){
+                if ($v['parent_id']==$b){
+                    $tmp[$b]['tmenu'][]=$v;
+                    }
+                }
+
+            }
+   
+
+            $this->assign('tmp',$tmp);
+                // return view('',['tmp'=>$tmp]);
+            return $this->fetch();
+        
+    }
+
+
+
+    /**
+     * 商品列表页
+     */
+     public function goodsList(){
+        $filter_param = array(); // 帅选数组
+        $id = I('id/d',1); // 当前分类id
+        $gift_id = I('gift_id/d',0);
+        $brand_id = I('brand_id/d',0);
+        $spec = I('spec',0); // 规格
+        $attr = I('attr',''); // 属性
+        $sort = I('sort','goods_id'); // 排序
+        $sort_asc = I('sort_asc','asc'); // 排序
+        $price = I('price',''); // 价钱
+        $start_price = trim(I('start_price','0')); // 输入框价钱
+        $end_price = trim(I('end_price','0')); // 输入框价钱
+        if($start_price && $end_price) $price = $start_price.'-'.$end_price; // 如果输入框有价钱 则使用输入框的价钱       
+        $filter_param['id'] = $id; //加入帅选条件中
+        $brand_id  && ($filter_param['brand_id'] = $brand_id); //加入帅选条件中
+        $spec  && ($filter_param['spec'] = $spec); //加入帅选条件中
+        $attr  && ($filter_param['attr'] = $attr); //加入帅选条件中
+        $price  && ($filter_param['price'] = $price); //加入帅选条件中
+         
+        $goodsLogic = new \ylt\home\logic\GoodsLogic(); // 前台商品操作逻辑类
+        // 分类菜单显示
+        $goodsCate = Db::name('GoodsCategory')->where("id", $id)->find();// 当前分类
+
+        $cateArr = $goodsLogic->get_goods_cate($goodsCate);
+         
+        // 帅选 品牌 规格 属性 价格
+        $cat_id_arr = getCatGrandson ($id);
+        $where = "cat_id in (".implode(',', $cat_id_arr).")";
+       
+        //场景分类
+        if ($gift_id) {
+            $filter_param['gift_id'] = $gift_id; //加入帅选条件中
+            $gift_id_arr = getGiftGrandson($gift_id);
+            $goods_id = Db::name('GiftsCategory')->where("id","in", implode(',', $gift_id_arr))->column("goods_id");
+            $new_goods = array(0);
+            foreach ($goods_id as $key => $value) {
+                if ($value) {
+                    $new_goods = array_merge($new_goods,explode(",", $value));
+                }
+            }
+            $goods_id = array_unique($new_goods);
+            $where = "goods_id in (".implode(',', $goods_id).")";
+            $gift_cat_arr = Db::name('GiftsCategory')->where('is_show=1')->select();
+            $gift_cat_arr = makeTree($gift_cat_arr, $id="id", $pid="parent_id", $son = 'sub_menu');
+            $this->assign('gift_cat_arr',$gift_cat_arr);
+
+            //查看全部
+            $sel =I('sel');
+            //促销商品
+            if($sel == 'prom_type'){
+                $where .= ' and prom_type = 3';
+            }
+            //看有货
+            if($sel == 'store_count'){
+                $where .= ' and store_count > 0';
+            }
+            //看包邮
+            if($sel == 'free_post'){
+                $where .= ' and is_free_shipping=1';
+            }
+        }
+        $filter_goods_id = Db::name('goods')->where("is_on_sale=1 and examine=1 and is_designer = 0")->where($where)->cache(true,YLT_CACHE_TIME)->column("goods_id");
+
+
+        // 过滤帅选的结果集里面找商品
+        if($brand_id || $price)// 品牌或者价格
+        {
+            $goods_id_1 = $goodsLogic->getGoodsIdByBrandPrice($brand_id,$price); // 根据 品牌 或者 价格范围 查找所有商品id
+            $filter_goods_id = array_intersect($filter_goods_id,$goods_id_1); // 获取多个帅选条件的结果 的交集
+        }
+        if($spec)// 规格
+        {
+            $goods_id_2 = $goodsLogic->getGoodsIdBySpec($spec); // 根据 规格 查找当所有商品id
+            $filter_goods_id = array_intersect($filter_goods_id,$goods_id_2); // 获取多个帅选条件的结果 的交集
+        }
+        if($attr)// 属性
+        {
+            $goods_id_3 = $goodsLogic->getGoodsIdByAttr($attr); // 根据 规格 查找当所有商品id
+            $filter_goods_id = array_intersect($filter_goods_id,$goods_id_3); // 获取多个帅选条件的结果 的交集
+        }
+
+        //筛选网站自营,入驻商家,仅看有货,促销商品
+        $sel =I('sel');
+        if($sel&&!$gift_id)
+        {
+            $goods_id_4 = $goodsLogic->getFilterSelected($sel,$cat_id_arr);
+            $filter_goods_id = array_intersect($filter_goods_id,$goods_id_4);
+        }
+
+        $filter_menu  = $goodsLogic->get_filter_menu($filter_param,'goodsList'); // 获取显示的帅选菜单
+        $filter_price = $goodsLogic->get_filter_price($filter_goods_id,$filter_param,'goodsList'); // 帅选的价格期间
+        $filter_brand = $goodsLogic->get_filter_brand($filter_goods_id,$filter_param,'goodsList',1); // 获取指定分类下的帅选品牌
+
+        $count = count($filter_goods_id);
+        $page = new Page($count,config('PAGESIZE'));
+        if($count > 0)
+        {
+            $goods_list = Db::name('goods')->where("goods_id","in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->limit($page->firstRow.','.$page->listRows)->select();
+            $filter_goods_id2 = get_arr_column($goods_list, 'goods_id');
+            if($filter_goods_id2)
+                $goods_images = Db::name('goods_images')->where("goods_id", "in", implode(',', $filter_goods_id2))->cache(true)->select();
+        }
+        $goods_category = Db::name('goods_category')->where('is_show=1')->cache(true)->column('id,name,parent_id,level'); // 键值分类数组
+        $this->assign('goods_list',$goods_list);
+        $this->assign('goods_category',$goods_category);
+        $this->assign('goods_images',$goods_images);  // 相册图片
+        $this->assign('filter_menu',$filter_menu);  // 帅选菜单
+        $this->assign('filter_spec',$filter_spec);  // 帅选规格
+        $this->assign('filter_attr',$filter_attr);  // 帅选属性
+        $this->assign('filter_brand',$filter_brand);// 列表页帅选属性 - 商品品牌
+        $this->assign('filter_price',$filter_price);// 帅选的价格期间
+        $this->assign('goodsCate',$goodsCate);
+        $this->assign('cateArr',$cateArr);
+        $this->assign('filter_param',$filter_param); // 帅选条件
+        $this->assign('cat_id',$id);
+        $this->assign('gift_id',$gift_id);
+        $this->assign('page',$page);// 赋值分页输出
+        $this->assign('sort_asc', $sort_asc == 'asc' ? 'desc' : 'asc');
+        config('TOKEN_ON',false);
+        if(input('is_ajax'))
+            return $this->fetch('ajaxGoodsList');
+        else
+            return $this->fetch();
+    }
+	
+	
+	/**
+     * 商品详情页
+     */
+    public function goodsInfo(){
+		
+		
+		$goods_id = I("get.id/d");
+             
+        $goodsLogic = new \ylt\home\logic\GoodsLogic();
+		
+        $goods = Db::name('Goods')->where("goods_id",$goods_id)->cache(true,YLT_CACHE_TIME)->find();
+		
+        $goods['discount'] = $goods->discount;
+    
+        if(empty($goods) || ($goods['is_on_sale'] == 0)){
+            $this->error('此商品不存在或者已下架');
+        }
+        if($goods['brand_id']){
+            $brnad = Db::name('brand')->where("id", $goods['brand_id'])->find();
+            $goods['brand_name'] = $brnad['name'];
+        }
+
+        //商品是否正在促销中
+        if($goods['prom_type'] > 0)
+        {
+            $goods['flash_sale'] = get_goods_promotion($goods['goods_id']);
+			if($goods['flash_sale'] == 1){
+				$goods['prom_type'] = 0; // 活动结束
+				$goods['flash_sale'] = '';
+			}
+				 
+        }
+	
+        $goods_images_list = Db::name('GoodsImages')->where("goods_id", $goods_id)->select(); // 商品 图册
+		$filter_spec = $goodsLogic->get_spec($goods_id);
+        $spec_goods_price  = Db::name('goods_price')->where("goods_id", $goods_id)->column("key,price,store_count"); // 规格 对应 价格 库存表
+        $commentStatistics = $goodsLogic->commentStatistics($goods_id);// 获取某个商品的评论统计
+        $this->assign('spec_goods_price', json_encode($spec_goods_price,true)); // 规格 对应 价格 库存表
+      	$goods['sale_num'] = Db::name('order_goods')->where(['goods_id'=>$goods_id,'is_send'=>1])->count();
+        //当前用户收藏
+       // $user_id = cookie('user_id');
+       // $collect = Db::name('goods_collect')->where(array("goods_id"=>$goods_id ,"user_id"=>$user_id))->count();
+        $logo = Db::name('supplier_config')->where(array('supplier_id'=>$goods['supplier_id'],'name'=>'store_logo'))->value('value'); //商品收藏数
+        $this->assign('collect',1);
+        $this->assign('commentStatistics',$commentStatistics);//评论概览    
+        $this->assign('filter_spec',$filter_spec);//规格参数
+        $this->assign('goods_images_list',$goods_images_list);//商品缩略图
+        $this->assign('goods',$goods);
+        $this->assign('logo',$logo); //商品收藏人数
+        return $this->fetch();
+       
+    }
+	
+	
+	/*
+     * ajax获取商品评论
+     */
+    public function ajaxComment()
+    {
+		$p = I('p') ? I('p') : 1 ;
+        $goods_id = I("goods_id/d", 0);
+        $commentType = I('commentType', '1'); // 1 全部 2好评 3 中评 4差评
+        if ($commentType == 5) {
+            $where = array(
+                'goods_id' => $goods_id, 'parent_id' => 0, 'img' => ['<>', ''],'is_show'=>1
+            );
+        } else {
+            $typeArr = array('1' => '0,1,2,3,4,5', '2' => '4,5', '3' => '3', '4' => '0,1,2');
+            $where = array('is_show'=>1,'goods_id' => $goods_id, 'parent_id' => 0, 'ceil((deliver_rank + goods_rank + service_rank) / 3)' => ['in', $typeArr[$commentType]]);
+        }
+        $count = Db::name('Comment')->where($where)->count();
+        $page_count = config('PAGESIZE');
+        $page = new AjaxPage($count, $page_count);
+        $list = Db::name('Comment')
+            ->alias('c')
+            ->join('__USERS__ u', 'u.user_id = c.user_id', 'LEFT')
+            ->where($where)
+            ->order("add_time desc")
+            ->limit($page->firstRow . ',' . $page->listRows)
+            ->select();
+        $replyList = Db::name('Comment')->where(['goods_id' => $goods_id, 'parent_id' => ['>', 0]])->order("add_time desc")->select();
+        foreach ($list as $k => $v) {
+            $list[$k]['img'] = unserialize($v['img']); // 晒单图片
+            $replyList[$v['comment_id']] = Db::name('Comment')->where(['is_show' => 1, 'goods_id' => $goods_id, 'parent_id' => $v['comment_id']])->order("add_time desc")->select();
+        }
+        $this->assign('goods_id', $goods_id);//商品id
+        $this->assign('commentlist', $list);// 商品评论
+        $this->assign('commentType', $commentType);// 1 全部 2好评 3 中评 4差评 5晒图
+        $this->assign('replyList', $replyList); // 管理员回复
+        $this->assign('count', $count);//总条数
+        $this->assign('page_count', $page_count);//页数
+        $this->assign('current_count', $page_count * $p);//当前条
+        $this->assign('p', $p);//页数
+        return $this->fetch();
+    }
+	
+	
+	  /**
+     * 商品搜索列表页
+     */
+    public function ajaxSearch()
+    {
+        return $this->fetch();
+    }
+	
+	
+	/**
+     * 商品搜索列表页
+     */
+    public function search(){
+    	$filter_param = array(); // 帅选数组
+    	$id = I('get.id/d',0); // 当前分类id
+    	$brand_id = I('brand_id/d',0);    	    	
+    	$sort = I('sort','goods_id'); // 排序
+    	$sort_asc = I('sort_asc','asc'); // 排序
+    	$price = I('price',''); // 价钱
+    	$start_price = trim(I('start_price','0')); // 输入框价钱
+    	$end_price = trim(I('end_price','0')); // 输入框价钱
+    	if($start_price && $end_price) $price = $start_price.'-'.$end_price; // 如果输入框有价钱 则使用输入框的价钱   	 
+    	$filter_param['id'] = $id; //加入帅选条件中
+    	$brand_id  && ($filter_param['brand_id'] = $brand_id); //加入帅选条件中    	    	
+    	$price  && ($filter_param['price'] = $price); //加入帅选条件中
+        $q = urldecode(trim(I('q',''))); // 关键字搜索
+        $q  && ($_GET['q'] = $filter_param['q'] = $q); //加入帅选条件中
+        $qtype = I('qtype','');
+      
+		$where  = "is_on_sale = 1 AND examine = 1 AND is_designer = 0";
+		$keywords = $q;
+		if(!empty(I('q'))){
+			
+			$arr = array();
+			if (stristr($keywords, ' AND ') !== false)
+			{
+				/* 检查关键字中是否有AND，如果存在就是并 */
+				$arr        = explode('AND', $keywords);
+				$operator   = " AND ";
+			}
+			elseif (stristr($keywords, ' OR ') !== false)
+			{
+				/* 检查关键字中是否有OR，如果存在就是或 */
+				$arr        = explode('OR', $keywords);
+				$operator   = " OR ";
+			}
+			elseif (stristr($keywords, ' + ') !== false)
+			{
+				/* 检查关键字中是否有加号，如果存在就是或 */
+				$arr        = explode('+', $keywords);
+				$operator   = " OR ";
+			}
+			else
+			{
+				/* 检查关键字中是否有空格，如果存在就是并 */
+				$arr        = explode(' ', $keywords);
+				$operator   = " AND ";
+			}
+
+			$where .= ' AND (';
+			foreach ($arr AS $key => $val)
+			{
+				if ($key > 0 && $key < count($arr) && count($arr) > 1)
+				{
+					$where .= $operator;
+				}
+				
+				$where .= " (`goods_name` LIKE '%".$val."%' OR `keywords` LIKE '%".$val."%' OR `goods_sn` LIKE '%".$val."%.' )";
+				
+				if(Db::name('keywords')->where('keyword',$val)->value('keyword'))
+					DB::name('keywords')->where('keyword',$val)->setInc('count');
+				else
+					Db::name('keywords')->insert(['date'=>date('Y-m-d'),'searchengine'=>'ylt','keyword'=>$val,'count'=> 1,'source'=>'move']);
+			}
+			
+			$where .= ')';
+
+		}else{
+			
+			$where .= " AND (`goods_name` LIKE '%".$keywords."%' OR `keywords` LIKE '%".$keywords."%' OR `goods_sn` LIKE '%".$keywords."%.' )";
+		}
+        
+    	$goodsLogic = new \ylt\home\logic\GoodsLogic(); // 前台商品操作逻辑类
+    	$filter_goods_id = Db::name('goods')->where($where)->cache(true,YLT_CACHE_TIME)->column("goods_id");
+
+    	// 过滤帅选的结果集里面找商品
+    	if($brand_id || $price)// 品牌或者价格
+    	{
+    		$goods_id_1 = $goodsLogic->getGoodsIdByBrandPrice($brand_id,$price); // 根据 品牌 或者 价格范围 查找所有商品id
+    		$filter_goods_id = array_intersect($filter_goods_id,$goods_id_1); // 获取多个帅选条件的结果 的交集
+    	}
+
+        //筛选网站自营,入驻商家,货到付款,仅看有货,促销商品
+        $sel = I('sel');
+        if($sel)
+        {
+            $goods_id_4 = $goodsLogic->getFilterSelected($sel);
+            $filter_goods_id = array_intersect($filter_goods_id,$goods_id_4);
+        }
+
+    	$filter_menu  = $goodsLogic->get_filter_menu($filter_param,'search'); // 获取显示的帅选菜单
+    	$filter_price = $goodsLogic->get_filter_price($filter_goods_id,$filter_param,'search'); // 帅选的价格期间
+    	$filter_brand = $goodsLogic->get_filter_brand($filter_goods_id,$filter_param,'search',1); // 获取指定分类下的帅选品牌    	 
+
+    	$count = count($filter_goods_id);
+    	$page = new Page($count,12);
+    	if($count > 0)
+    	{
+    		$goods_list = Db::name('goods')->where("goods_id", "in", implode(',', $filter_goods_id))->order("$sort $sort_asc")->limit($page->firstRow.','.$page->listRows)->select();
+    		$filter_goods_id2 = get_arr_column($goods_list, 'goods_id');
+    		if($filter_goods_id2)
+    			$goods_images = Db::name('goods_images')->where("goods_id", "in", implode(',', $filter_goods_id2))->cache(true)->select();
+    	}
+    	$goods_category = Db::name('goods_category')->where('is_show=1')->cache(true)->column('id,name,parent_id,level'); // 键值分类数组
+    	$this->assign('goods_list',$goods_list);
+    	$this->assign('goods_category',$goods_category);
+    	$this->assign('goods_images',$goods_images);  // 相册图片
+    	$this->assign('filter_menu',$filter_menu);  // 帅选菜单     
+    	$this->assign('filter_brand',$filter_brand);// 列表页帅选属性 - 商品品牌
+    	$this->assign('filter_price',$filter_price);// 帅选的价格期间    	
+    	$this->assign('filter_param',$filter_param); // 帅选条件    	
+    	$this->assign('page',$page);// 赋值分页输出
+    	$this->assign('sort_asc', $sort_asc == 'asc' ? 'desc' : 'asc');
+        config('TOKEN_ON',false);
+        if(input('is_ajax'))
+            return $this->fetch('ajaxGoodsList');
+        else
+            return $this->fetch();
+    }
+	
+	
+	/**
+     * 用户收藏商品
+     * @param type $goods_id
+     */
+    public function collect_goods()
+    {
+        $goods_id = I('goods_id/d');
+		$goodsLogic = new \ylt\home\logic\GoodsLogic();		
+        $result = $goodsLogic->collect_goods(cookie('user_id'),$goods_id);
+        exit(json_encode($result));
+    }
+	
+	
+	/**
+     * 用户搜索关键词
+     * @param type $goods_id
+     */
+    public function keywords_goods()
+    {
+        $key = trim(input('keyword'));
+		if(preg_match("/[\x7f-\xff]/", $key)){
+			$result = Db::name('keywords')->field('keyword')->where('keyword','like',$key.'%')->order('count','desc')->limit(10)->select();
+		}
+
+        exit(json_encode($result));
+    }
+
+
+    /**
+     * 新二级分类
+     */
+    public function giftStrategy()
+    {
+		
+		$categoryId=input('id');
+	
+
+		$category= Db::name('goods_category')->field('id as g_id,mobile_name,image')->where('id',$categoryId)->cache(true,YLT_CACHE_TIME)->find();
+		if($category){
+			
+			$list = Db::name('goods_category')->field('id as g_id,mobile_name,image,cat_jump')->where('parent_id',$categoryId)->order('sort_order desc')->cache(true,YLT_CACHE_TIME)->select();
+			
+			foreach ($list as $key =>$value){
+				$list[$key]['g_id'] = $value['cat_jump'] ? $value['cat_jump'] : $value['g_id'];
+			}
+			
+		}
+	
+		$this->assign('list',$list);
+		$this->assign('category',$category);
+	
+        return $this->fetch();
+    }
+
+    /**
+     * 送礼攻略--文章内容
+     */
+    public function articleInfo()
+    {
+        return $this->fetch();
+    }
+
+    /**
+     * 送礼攻略--文章内容--文章评论列表
+     */
+    public function art_comment()
+    {
+        return $this->fetch();
+    }
+
+
+}

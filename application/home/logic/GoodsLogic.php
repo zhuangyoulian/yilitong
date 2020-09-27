@@ -152,12 +152,9 @@ class GoodsLogic extends Model
      */
     public function commentStatistics($goods_id)
     {
-        $c1 = Db::name('Comment')->where("is_show = 1 and  goods_id = :goods_id and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5)")->bind(['goods_id'=>$goods_id])->count();
-        //好评
-        $c2 = Db::name('Comment')->where("is_show = 1 and  goods_id = :goods_id and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3)")->bind(['goods_id'=>$goods_id])->count(); 
-        // 中评
-        $c3 = Db::name('Comment')->where("is_show = 1 and  goods_id = :goods_id and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2)")->bind(['goods_id'=>$goods_id])->count();
-        // 差评
+        $c1 = Db::name('Comment')->where("is_show = 1 and  goods_id = :goods_id and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(4,5)")->bind(['goods_id'=>$goods_id])->count(); // 好评
+        $c2 = Db::name('Comment')->where("is_show = 1 and  goods_id = :goods_id and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(3)")->bind(['goods_id'=>$goods_id])->count(); // 中评
+        $c3 = Db::name('Comment')->where("is_show = 1 and  goods_id = :goods_id and parent_id = 0 and  ceil((deliver_rank + goods_rank + service_rank) / 3) in(1,2)")->bind(['goods_id'=>$goods_id])->count(); // 差评
 
         $c0 = $c1 + $c2 + $c3; // 所有评论
         if($c0 <= 0){
@@ -320,6 +317,11 @@ class GoodsLogic extends Model
         $max_price = (int)$priceList[0];
 
         $psize = ceil($max_price / $c); // 每一段累积的价钱
+        if ($psize<=100) {      //间隔算整数
+            $psize=100;
+        }else{
+            $psize=200;
+        }
         $parr = array();
         for ($i = 0; $i < $c; $i++) {
             $start = $i * $psize;
@@ -471,8 +473,8 @@ class GoodsLogic extends Model
         if ($brand_id) // 品牌查询
         {
             $brand_id_arr = explode('_', $brand_id);
-            $where .= " and brand_id in(".implode(',',$brand_id_arr).")";
-            // $bind['brand_id_arr'] = implode(',', $brand_id_arr);
+            $where .= " and brand_id in(:brand_id_arr)";
+            $bind['brand_id_arr'] = implode(',', $brand_id_arr);
         }
         if ($price)// 价格查询
         {

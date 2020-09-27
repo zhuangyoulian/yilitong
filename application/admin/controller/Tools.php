@@ -276,6 +276,9 @@ class Tools extends Base {
 	public function restoreUpload()
 	{
 		$file = request()->file('sqlfile');
+        if (!$file) {
+            $this->error('未选择文件');
+        }
 		// 移动到框架应用根目录/public/uploads/ 目录下
 		$save_url = 'public/upload/sqldata';
 		$info = $file->validate(['size'=>100000000,'ext'=>'sql',])->move($save_url,'');

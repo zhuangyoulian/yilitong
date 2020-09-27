@@ -210,13 +210,14 @@
                 </dt>
                 <dd class="opt"><input name="bank_name" id=" bank_name" value="{$su.bank_name}" class="input-txt" type="text"></dd>
             </dl>
-			<dl class="row">
+
+				 <dl class="row">
                 <dt class="tit">
                     <label>保证金</label>
                 </dt>
                 <dd class="opt"><input name="supplier_money" id="supplier_money" value="{$su.supplier_money}" class="input-txt" type="text"></dd>
             </dl>
-			<dl class="row">
+				 <dl class="row">
                 <dt class="tit">
                     <label>运营姓名</label>
                 </dt>
@@ -311,24 +312,25 @@
                     <label>入驻协议</label>
                 </dt>
 				<dd class="opt">
-                    <a href="{$su.reading_protocol[0]}" target="_Blank"><img src="{$su.reading_protocol[0]}"  width="80px" height="80px" /></a>
-                    <a href="{$su.reading_protocol[1]}" target="_Blank"><img src="{$su.reading_protocol[1]}"  width="80px" height="80px" /></a>
-					<a href="{$su.reading_protocol[2]}" target="_Blank"><img src="{$su.reading_protocol[2]}"  width="80px" height="80px" /></a>
+                    <foreach name="$su.reading_protocol"  item="value" key="k">
+                        <a href="{$value}" target="_Blank"><img src="{$value}"  width="80px" height="80px" /></a>
+                    </foreach>
 				</dd>
+				
+					
+				  
             </dl>
 
-			<dl class="row">
+			 <dl class="row">
                 <dt class="tit">
                     <label>审核结果</label>
                 </dt>
-                <dd class="opt">
-                    <select name="status" id="status">
-    				    <option value="0" <if condition="($su[status] eq 0)">selected="selected"</if>>未审核</option>   
-    				    <option value="1" <if condition="($su[status] eq 1)">selected="selected"</if>>审核通过</option>   
-    				    <option value="2" <if condition="($su[status] eq 2)">selected="selected"</if>>审核不通过</option>
-    					<option value="-1" <if condition="($su[status] eq -1)">selected="selected"</if>>关闭店铺</option>  				   
-    				</select>
-                </dd>
+                <dd class="opt"><select name="status" id="status">
+				 <option value="0" <if condition="($su[status] eq 0)">selected="selected"</if>>未审核</option>   
+				  <option value="1" <if condition="($su[status] eq 1)">selected="selected"</if>>审核通过</option>   
+				   <option value="2" <if condition="($su[status] eq 2)">selected="selected"</if>>审核不通过</option>
+					<option value="-1" <if condition="($su[status] eq -1)">selected="selected"</if>>关闭店铺</option>  				   
+				</select>  </dd>
             </dl>
             <dl class="row">
                 <dt class="tit">

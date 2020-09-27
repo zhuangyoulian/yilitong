@@ -439,9 +439,8 @@ function trim_array_element($array){
  * @param $mobile 手机号码
  */
 function check_mobile($mobile){
-    if(preg_match("/0?(13|14|15|16|17|18|19)[0-9]{9}/",$mobile)){
+    if(preg_match("/0?(13|14|15|16|17|18|19)[0-9]{9}/",$mobile))
         return true;
-    }
     return false;
 }
 

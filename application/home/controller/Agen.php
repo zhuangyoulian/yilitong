@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by PhpStorm 一创科技.
+ * Created by PhpStorm.
  * User: lijiayi
  * Date: 2019/9/6
  * Time: 14:32
@@ -986,14 +986,13 @@ class Agen extends Base {
         $data_phone = [
             'apikey' => $config['apikey'],
             'mobile' => "13922852605",//发送的手机号  一创负责人
-            // 'tpl_id' => "3245600",
             'tpl_id' => "3254446",
             'tpl_value' =>""
         ];
-        $this->sendCodes($data_phone);
+        // $this->sendCodes($data_phone);
         $datas_phone = [
             'apikey' => $config['apikey'],
-            'mobile' => "18126091429",//发送的手机号  李贵围
+            'mobile' => "18038195536",//发送的手机号  刘平
             'tpl_id' => "3254446",
             'tpl_value' =>""
         ]; 

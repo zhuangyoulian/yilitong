@@ -126,6 +126,13 @@ class User extends Base {
     public function add_user(){
     	if(IS_POST){
     		$data = I('post.');
+            $data['plate'] = Db::name('plate_menu')->where('id',$data['plate'])->value('name');
+            if ($data['items_source'] == '') {
+                $data['items_source'] = "其它";
+            }
+            if ($data['plate'] == '') {
+                $data['plate'] = "礼商云仓";
+            }
 			$user_obj = new UsersLogic();
 			$res = $user_obj->addUser($data);
 			if($res['status'] == 1){

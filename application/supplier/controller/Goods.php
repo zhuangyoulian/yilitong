@@ -393,7 +393,8 @@ class Goods extends Base {
                     }
                     adminLog('编辑商品 '.input('goods_name').'');
                 } else {
-                    $Goods->add_time = time(); // 上架时间
+                    $Goods->add_time = time();      // 上架时间
+                    $Goods->last_update = time();   // 更新时间
                     // $Goods->supplier_id = $supplier_id; // 入驻商ID
                     // $Goods->supplier_id = 41; // 入驻商ID
                     // $Goods->supplier_name = '一礼通自营';

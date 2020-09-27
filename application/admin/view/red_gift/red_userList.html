@@ -139,7 +139,7 @@
 								<div style="text-align: center; width: 200px; max-width:170px;">
 									<a href="{:Url('RedGift/user_info',array('admin_id'=>$vo['admin_id']))}" class="btn blue"><i class="fa fa-pencil-square-o"></i>编辑</a>
 									<if condition="$vo['admin_id'] gt 1">
-										<a class="btn red"  href="javascript:void(0)" data-url="{:Url('RedGift/adminHandle',array('act'=>'del','admin_id'=>$vo['admin_id']))}"  onclick="delfun(this)"><i class="fa fa-trash-o"></i>删除</a>
+										<a class="btn red"  href="javascript:void(0)" data-url="{:Url('RedGift/adminHandle')}" data-id="{$vo.admin_id}" onclick="delfun(this)"><i class="fa fa-trash-o"></i>删除</a>
 									</if>
 
 									<a  onClick="r_paw({$vo['admin_id']})" class="btn blue"><i class="fa fa-pencil-square-o"></i>重置密码</a>

@@ -25,30 +25,9 @@ class Index extends Base {
      * @return [type] [description]
      */
     public function mall(){
-        $field = 'goods_id,goods_name,shop_price,goods_thumb,cat_id';
-        $fields = 'ad_code,ad_link,ad_name';
-        // banner
-        $ad_banner = Db::name('ad')->where('pid = 59 and enabled =1')->field($fields)->order('orderby desc')->find();
-        //今日推荐
-        $ad_hot = Db::name('ad')->where('pid = 56 and enabled =1')->field($fields)->order('orderby asc')->limit(5)->select();
-        //礼品专区
-        $hot_cat_id_arr = getCatGrandson (1070);// 过滤筛选的结果集里面找商品 
-        $code_hot['goods'] = Db::name('goods')->where(['is_on_sale'=>1,'examine'=>1,'is_designer'=>0,'is_delete'=>0,'cat_id'=>['in',implode(',', $hot_cat_id_arr)]])->cache(true)->order('goods_id desc')->limit(6)->field($field)->select();
-        $code_hot['ad'] = Db::name('ad')->where('pid = 57 and enabled =1')->field($fields)->order('orderby desc')->limit(2)->select();
-        $code_hot['ad_link'] = "/Home/Goods/goodsList/id/1070";
-
-        //健康养生等  
-        $type = I('type',2); //（健2办4数5家6户7汽8工9）
-        $cat_id_arr = getCatGrandson ($type);// 过滤筛选的结果集里面找商品 
-        $classify_goods['goods'] = Db::name('goods')->where(['is_on_sale'=>1,'examine'=>1,'is_designer'=>0,'is_delete'=>0,'cat_id'=>['in',implode(',', $cat_id_arr)]])->cache(true)->order('goods_id desc')->limit(6)->field($field)->select();
-        $classify_goods['ad'] = Db::name('ad')->where('pid = 58 and enabled =1')->where('orderby',$type)->field($fields)->find();
-        $classify_goods['ad_link'] = "/Home/Goods/goodsList/id/".$type;
-
-        //热卖+推荐
-        $is_hot = Db::name('goods')->where('examine = 1 and is_recommend =1 and is_on_sale = 1 and is_designer = 0 and is_delete = 0 and is_hot = 1')->field($field)->order('goods_id desc')->limit(10)->select();
-
-        $rs=array('result'=>'1','info'=>'请求成功','ad_banner'=>$ad_banner,'ad_hot'=>$ad_hot,'code_hot'=>$code_hot,'classify_goods'=>$classify_goods,'is_hot'=>$is_hot,'goods_category_tree'=>$this->goods_category_tree,'scenario_category_tree'=>$this->scenario_category_tree);
-        exit(json_encode($rs));
+		$is_hot = Db::name('goods')->where('examine = 1 and is_recommend =1 and is_on_sale = 1 and is_designer = 0')->order('sort')->limit(1,15)->select();
+        $this->assign('is_hot',$is_hot);
+        return $this->fetch();
     }
 
     /**
@@ -56,6 +35,8 @@ class Index extends Base {
      * @return [type] [description]
      */
   	public function index(){
+        $gifts = Db::name('gifts_category')->Cache(true,YLT_CACHE_TIME)->order('sort_order DESC')->select();//获取对应场景分类数据
+        $purchase_lists = Db::name('purchase')->where('status',1)->where('dead_time','>',time())->order('id desc')->limit(0,20)->cache(true,3600)->select();//获取采购信息
       	$supplier_id = Db::name('supplier')->field('supplier_id')->where('is_designer=0 and status=1')->order('add_time desc')->cache(true,3600)->select();//获取所有供应商id
         $arr=[];//将供应商表里所有供应商id装在这里
         foreach($supplier_id as $value){
@@ -75,56 +56,94 @@ class Index extends Base {
                 $supplierArr[]=$key;
             }
         }
-
-        //品牌
-        $brand_list = $this->new_brand();
-
-        //供应商
-        $supplier_list['list']=Db::name('supplier')//查询所有有商品的供应商
+        $supplier_list=Db::name('supplier')//查询所有有商品的供应商
             ->where("supplier_id in (".implode(',',$supplierArr).")")
             ->where("is_designer=0 and status=1 and logo!=''")
             ->field('supplier_id,supplier_name,logo')
             ->order('add_time desc')
             ->limit(0,30)
             ->select();
-        $supplier_list['count']=Db::name('supplier')//查询所有有商品的供应商
-            ->where("supplier_id in (".implode(',',$supplierArr).")")
-            ->where("is_designer=0 and status=1 and logo!=''")
-            ->field('supplier_id,supplier_name,logo')
-            ->order('add_time desc')
-            ->count();
+      	$supplier_lists = Db::name('supplier')->where('is_designer=0 and status=1')->order('add_time desc')->limit(0,30)->cache(true,3600)->select();//获取供应商信息
 
+        //品牌
+        $brand_list = $this->new_brand();
         
-        //为您推荐
-        $is_hot = Db::name('goods')->field("goods_id,goods_name,goods_thumb,shop_price,supplier_id")->where('examine = 1 and is_recommend =1 and is_on_sale = 1 and is_designer = 0')->order('sort')->limit(0,6)->select();//获取推荐商品信息
+        $is_hot = Db::name('goods')->field("goods_id,goods_name,goods_thumb,sales_sum,prom_type,shop_price")->where('examine = 1 and is_recommend =1 and is_on_sale = 1 and is_designer = 0')->order('sort')->limit(0,8)->select();//获取推荐商品信息
 
-        //采购信息新代码
-        $res['count']= Db::name("purchase")->where("status=1")->count();/*采购信息的总数*/
-        $res['list'] = Db::name("purchase")
+        //新代码
+        $res = Db::name("purchase")
             ->where("status=1")
             ->where('dead_time','>',time())
             ->order("id desc")
             ->limit(0,8)
             ->cache(true,3600)
             ->select();
-        foreach($res['list'] as &$v){
+        foreach($res as &$v){
             $v['count'] = Db::name("purchase_list")->where("purchase_id = $v[id]")->count();
             $v['content']= Db::name("purchase_list")->where("purchase_id = $v[id]")->select();
             $v['budget'] = $v['budget'] / 10000;
         }
+        $purchase_count= Db::name("purchase")->where("status=1")->count();/*采购信息的总数*/
         //新代码结束
+        $region_list = get_region_list();
+        $brands=array();
+        for($i=0;$i<count($brand_list);$i++){
+            if($i%2==0){
+                $brands[$i][0]=$brand_list[$i];
+                $brands[$i][1]=$brand_list[$i+1];
+            }
+        }
 
-        //礼品方案
-        $scheme['list'] = Db::name('article')->where("thumb != ' ' and is_open = 1 and is_ecommend = 1 and cat_id = 98")->order("publish_time desc")->limit(3)->Field("thumb as image,title,article_id")->select();
-        $scheme['count'] = Db::name('article')->where("thumb != ' ' and is_open = 1 and is_ecommend = 1 and cat_id = 98")->order("publish_time desc")->Field("article_id")->count();
-        
-        
+      	$suppliers=array();
+        for($i=0;$i<count($supplier_list);$i++){
+            if($i%2==0){
+                $suppliers[$i][0]=$supplier_list[$i];
+                $suppliers[$i][1]=$supplier_list[$i+1];
+            }
+        }
         //首页活动资讯
-        $article = Db::name('article')->where("thumb != ' ' and is_open = 1 and is_ecommend = 1 and cat_id != 98")->order("publish_time desc")->limit(4)->Field("thumb as image,title,article_id,add_time,click")->select();
+        $article['arry'] = Db::name('article')->where("thumb != ' ' and is_open = 1 and is_ecommend = 1")->order("publish_time desc")->limit(2)->Field("thumb as image,title,article_id")->select();
+        $article['arr'] = Db::name('article')->where("is_open = 1")->order("publish_time desc")->limit(2,8)->Field("publish_time as time,title,article_id")->select();
 
-        $rs=array('result'=>'1','info'=>'请求成功','res'=>$res,'is_hot'=>$is_hot,'brand_list'=>$brand_list,'supplier_list'=>$supplier_list,'goods_category_tree'=>$this->goods_category_tree,'scenario_category_tree'=>$this->scenario_category_tree,'scheme'=>$scheme,'article'=>$article);
-        exit(json_encode($rs));
+        $this->assign("arrry",$article['arry']);
+        $this->assign("arr",$article['arr']);
 
+      	/* 获取登录商户的信息  可能有漏洞*/
+     	$supplier = session('supplier');
+     	$admin_id=$supplier['admin_id'];
+      	$this->assign("supplier",$supplier);
+		$row = Db::name('supplier_user')->alias('u')->join('supplier s', array('s.supplier_id=u.supplier_id'),'left')->where('u.admin_id',$admin_id)->find();//重新检查商户的状态
+		session('supplier',$row);
+
+        $this->assign('images',$goods_images_list);
+        $this->assign('map_list',$res);
+        $this->assign('purchase_count',$purchase_count);
+        $this->assign('is_hot',$is_hot);
+        $this->assign('brands',$brands);
+        $this->assign('suppliers',$suppliers);
+        $this->assign('supplier_lists',$supplier_lists);
+        $this->assign('gifts',$gifts);
+        $this->assign('supplier_id',$supplier_id);
+        $this->assign('region_list',$region_list);
+        return $this->fetch();
+    }
+
+
+    /**
+     * [spike 首页活动/限时折扣/秒杀 产品查询]
+     * @return [type] [description]
+     */
+    public  function spike(){
+        $data=Db::name("discount_goods")
+            ->where('discount_id',1)
+            ->field('activity_count,activity_market_price,goods_name,goods_thumb,order_num,activity_price')
+            ->limit(0,8)
+            ->select();
+        foreach ($data as $key => $value) {
+            $data[$key]['order_num']=round($value['order_num']/$value['activity_count']*100,2)."％";//处理为百分比数据
+        }
+        // dump($data);die;
+        echo json_encode($data, JSON_HEX_TAG);
     }
 
 
@@ -154,14 +173,7 @@ class Index extends Base {
             }
             return json($brands);
         }else{
-            $data['count'] = Db::name("brand")
-                ->alias('b')
-                ->join('goods g','b.id=g.brand_id')
-                ->where("b.logo != '' and b.is_hot = 1 and g.examine = 1 and is_on_sale = 1 ")
-                ->field("b.id,b.name,b.logo")
-                ->group('b.id')
-                ->count();
-            $data['list'] = Db::name("brand")
+            $data = Db::name("brand")
                 ->alias('b')
                 ->join('goods g','b.id=g.brand_id')
                 ->where("b.logo != '' and b.is_hot = 1 and g.examine = 1 and is_on_sale = 1 ")
@@ -174,6 +186,12 @@ class Index extends Base {
         }
     }
  
+    /**
+     *  公告详情页
+     */
+    public function notice(){
+        return $this->fetch();
+    }
     
  
     
@@ -198,6 +216,29 @@ class Index extends Base {
         $Verify->entry($type);        
     }
     
+    /**
+     * [promoteList 促销活动页面]
+     * @return [type] [description]
+     */
+    public function promoteList()
+    {
+        $goodsList = DB::query("select * from __PREFIX__goods as g inner join __PREFIX__panic_buying as f on g.goods_id = f.goods_id   where ".time()." > start_time  and ".time()." < end_time");
+        $brandList = Db::name('brand')->column("id,name,logo");
+        $this->assign('brandList',$brandList);
+        $this->assign('goodsList',$goodsList);
+        return $this->fetch();
+    }
+    
+    function truncate_tables (){
+        $tables = DB::query("show tables");
+        $table = array('tp_admin','tp_config','tp_region','tp_system_module','tp_admin_role','tp_system_menu','tp_article_cat');
+        foreach($tables as $key => $val)
+        {                                    
+            if(!in_array($val['tables_in_tpshop'], $table))                             
+                echo "truncate table ".$val['tables_in_tpshop'].' ; ';
+                echo "<br/>";         
+        }                
+    }
 	
 	    // PC端微信支付二维码
     public function qr_code(){   
@@ -218,9 +259,8 @@ class Index extends Base {
         $p = I('p/d',1);
         $i = I('i',5); //显示条数
         $favourite_goods = Db::name('goods')->where("is_recommend=1 and is_on_sale=1 and is_hot")->order('goods_id DESC')->page($p,$i)->cache(true,YLT_CACHE_TIME)->select();//首页推荐商品
-
-        $rs=array('result'=>'1','info'=>'请求成功','favourite_goods'=>$favourite_goods);
-        exit(json_encode($rs));
+        $this->assign('favourite_goods',$favourite_goods);
+        return $this->fetch();
     }
 
     /**
@@ -228,9 +268,8 @@ class Index extends Base {
      * @return [type] [description]
      */
     public function supplierList(){
-        $sort       = I('get.sort','add_time'); // 排序
-        $sort_asc   = I('get.sort_asc','desc'); // 排序
-        $p          = I('p/d',1);
+        $sort = I('get.sort','add_time'); // 排序
+        $sort_asc = I('get.sort_asc','desc'); // 排序
         $supplier_id = Db::name('supplier')->field('supplier_id')->where('is_designer=0 and status=1')->order('add_time desc')->cache(true,3600)->select();//获取所有供应商id
         $arr=[];//将供应商表里所有供应商id装在这里
         foreach($supplier_id as $value){
@@ -239,25 +278,24 @@ class Index extends Base {
             }
         }
         $haveShopSupplier=Db::name('goods')//查询所有有商品的供应商
-            ->field('supplier_id')
+        ->field('supplier_id')
             ->where("supplier_id in (".implode(',',$arr).") and is_on_sale=1 and examine=1")
             ->group('supplier_id')
             ->select();
-        $count = count($haveShopSupplier);
         $supplierArr=[];//将商品表所有有商品的供应商id装在这里
         foreach($haveShopSupplier as $value){
             foreach($value as $key){
                 $supplierArr[]=$key;
             }
         }
+      	$page = new Page(count($supplierArr),12);
         if(count($supplierArr) > 0)
         {
-            $supplier_newList = Db::name('supplier')->where('is_designer=0 and status=1')->where("supplier_id in (".implode(',',$supplierArr).")")->order("$sort $sort_asc")->page($p,12)->select();
+            $supplier_newList = Db::name('supplier')->where('is_designer=0 and status=1')->where("supplier_id in (".implode(',',$supplierArr).")")->order("$sort $sort_asc")->limit($page->firstRow.','.$page->listRows)->select();
         }
-
-        $rs=array('result'=>'1','info'=>'请求成功','supplier_newList'=>$supplier_newList,'count'=>$count);
-        exit(json_encode($rs));
-
+        $this->assign('supplier_newList',$supplier_newList);
+        $this->assign('page',$page);
+        return $this->fetch();
     }
   	
     /**
@@ -265,13 +303,12 @@ class Index extends Base {
      * @return [type] [description]
      */
     public function brandList(){
-        $brandList = Db::name("brand")
+      	$brandList = Db::name("brand")
             ->alias('b')
             ->join('goods g','b.id=g.brand_id')
             ->where("b.logo != '' and b.is_hot = 1 and g.examine = 1 and is_on_sale = 1")
             ->group('b.id')
             ->order('b.sort desc')
-            ->field('b.logo,b.id,b.name')
             ->select();
         $nameList = array();
         foreach($brandList as $k => $v)
@@ -395,7 +432,7 @@ class Index extends Base {
                     break;
             }
         }
-        $rs=array('result'=>'1','info'=>'请求成功','brand_list'=>$brand_list);
-        exit(json_encode($rs));
+        $this->assign('brandList',$brand_list);
+        return $this->fetch();
     }
 }

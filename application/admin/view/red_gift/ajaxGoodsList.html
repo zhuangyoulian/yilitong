@@ -27,16 +27,16 @@
                   <div style="text-align: left; width: 260px;">{$list.goods_name|getSubstr=0,33}</div>
                 </td>
                 <td align="center" axis="col0">
-                  <div style="text-align: center; width: 60px;">{$list.goods_sn}</div>
+                  <div style="text-align: center; width: 80px;">{$list.goods_sn}</div>
                 </td>
                 <td align="center" axis="col0">
-                  <div style="text-align: center; width: 60px;">{$catList[$list[cat_id]][name]}</div>
+                  <div style="text-align: center; width: 80px;">{$catList[$list[cat_id]][name]}</div>
                 </td>
                 <td align="center" axis="col0">
-                  <div style="text-align: center; width: 60px;">{$list.group_price}</div>
+                  <div style="text-align: center; width: 80px;">{$list.group_price}</div>
                 </td>               
                 <td align="center" axis="col0">
-                  <div style="text-align: center; width: 60px;">
+                  <div style="text-align: center; width: 80px;">
                     <if condition='$list[is_recommend] eq 1'>
                       <span class="yes" onClick="changeTableVal('red_goods','goods_id','{$list.goods_id}','is_recommend',this)" ><i class="fa fa-check-circle"></i>是</span>
                       <else />
@@ -63,29 +63,24 @@
                   </div>
                 </td>    
                 <td align="center" axis="col0">                  
-                <div style="text-align: center; width: 60px;">
+                <div style="text-align: center; width: 80px;">
                   <input type="text" onKeyUp="this.value=this.value.replace(/[^\.\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onChange="changeTableVal('red_goods','goods_id','{$list.goods_id}','shop_price',this)" size="6" value="{$list.shop_price}" />
                 </div>                  
                 </td>  
                 <td align="center" axis="col0">                  
-                <div style="text-align: center; width: 60px;">
+                <div style="text-align: center; width: 80px;">
                   <input type="text" onKeyUp="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onChange="changeTableVal('red_goods','goods_id','{$list.goods_id}','store_count',this)" size="4" value="{$list.store_count}" />
                 </div>                  
                 </td>           
                 <td align="center" axis="col0">                  
-                <div style="text-align: center; width: 60px;">
+                <div style="text-align: center; width: 80px;">
                   <input type="text" onKeyUp="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onChange="changeTableVal('red_goods','goods_id','{$list.goods_id}','sort',this)" size="4" value="{$list.sort}" />
                 </div>                  
                 </td>  
                 <td align="center" axis="col0">                  
-                  <div style="text-align: center; width: 100px;">
-                    <span>{$list.last_update|date='Y-m-d',###}</span>
-                  </div>                  
-                </td> 
-                <td align="center" axis="col0">                  
-                  <div style="text-align: center; width: 100px;">
-                    <span>{$list.add_time|date='Y-m-d',###}</span>
-                  </div>                  
+                <div style="text-align: center; width: 120px;">
+                  <span>{$list.last_update|date='Y-m-d H:i:s',###}</span>
+                </div>                  
                 </td>                    
                 <td align="" class="" style="width: 100%;">
                   <div>&nbsp;</div>
@@ -132,6 +127,5 @@
 						}
 				});
 			}		
-      $('.ftitle>h5').empty().html("(共{$pager->totalRows}条记录)");
 			
         </script>        

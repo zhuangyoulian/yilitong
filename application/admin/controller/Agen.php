@@ -942,13 +942,12 @@ class Agen extends Base{
         $strTable .= '<td style="text-align:center;font-size:12px;" width="*">交易账号</td>';
         $strTable .= '</tr>';
         if(is_array($orderList)){
-            $region = Db::name('region')->column('id,name'); 
             foreach($orderList as $k=>$val){
                 $strTable .= '<tr>';
                 $strTable .= '<td style="text-align:center;font-size:12px;">&nbsp;'.$val['order_sn'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['create_time'].' </td>';               
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['consignee'].'</td>';
-                $strTable .= '<td style="text-align:left;font-size:12px;">'."{$region[$val['province']]},{$region[$val['city']]},{$region[$val['district']]},{$region[$val['twon']]}{$val['address']}".' </td>';
+                $strTable .= '<td style="text-align:left;font-size:12px;">'."{$val['province']},{$val['city']},{$val['district']},{$val['twon']}{$val['address']}".' </td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['mobile'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['goods_price'].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$val['order_amount'].'</td>';
@@ -956,12 +955,12 @@ class Agen extends Base{
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$this->pay_status[$val['pay_status']].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$this->shipping_status[$val['shipping_status']].'</td>';
                 $strTable .= '<td style="text-align:left;font-size:12px;">'.$this->close[$val['close']].'</td>';
-                $orderGoods = Db::name('order_goods')->where('order_id='.$val['order_id'])->field('goods_sn,goods_name,spec_key_name')->select();
+                $orderGoods = Db::name('agen_order_goods')->where('order_id='.$val['order_id'])->field('goods_sn,goods_name,spec_key_name,goods_num')->select();
                 $strGoods="";
                 foreach($orderGoods as $goods){
-                    $strGoods .= "商品编号：".$goods['goods_sn']." 商品名称：".$goods['goods_name'];
-                    if ($goods['spec_key_name'] != '') $strGoods .= " 规格：".$goods['spec_key_name'];
-                    $strGoods .= "<br />";
+                    $strGoods .= "商品编号：".$goods['goods_sn']."<br /> 商品名称：".$goods['goods_name'];
+                    if ($goods['spec_key_name'] != '') $strGoods .= " <br /> 规格：".$goods['spec_key_name'];
+                    $strGoods .= " <br /> 数量：".$goods['goods_num']." <br />" ;
                 }
                 unset($orderGoods);
                 $supplier = Db::name('supplier')->where('supplier_id='.$val['supplier_id'])->find();

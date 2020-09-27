@@ -100,7 +100,7 @@ function getAllMenu(){
 	return	array(
 
 			'goods' => array('name' => '商品管理', 'icon'=>'fa-book', 'sub_menu' => array(
-					array('name' => '商品分类', 'act'=>'categoryList', 'control'=>'Goods'),
+					array('name' => '店铺分类', 'act'=>'categoryList', 'control'=>'Goods'),
 					array('name' => '商品列表', 'act'=>'goodsList', 'control'=>'Goods'),
 					array('name' => '品牌列表', 'act'=>'brandList', 'control'=>'Goods'),
 					array('name' => '商品评论','act'=>'index','control'=>'Comment'),

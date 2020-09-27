@@ -110,6 +110,10 @@ function getAllMenu(){
 					// array('name' => '退货单', 'act'=>'back_order_list', 'control'=>'Order'),
 					// array('name' => '订单日志', 'act'=>'order_log', 'control'=>'Order'),
 			)),
+			'system' => array('name'=>'商家设置','icon'=>'fa-cog','sub_menu'=>array(
+					array('name'=>'入驻信息','act'=>'supplier_info','control'=>'System'),
+					
+			)),
 	);
 }
 /**

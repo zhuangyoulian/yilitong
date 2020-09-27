@@ -96,18 +96,28 @@
 							</div>
 						</div>
 					</div>
-					<div class="info-group marginTop70">
-						<label><span>*</span>运营姓名：</label>
+					<div class="info-group ">
+						<label><span>*</span>运营者姓名：</label>
 						<input name="operating_name" type="text" value="{$row.operating_name}" class="infos" >
 						<span class="info-tips" id="nameTips"></span>
 					</div>
 					<div class="info-group">
-						<label><span>*</span>手机号码：</label>
+						<label><span>*</span>运营者手机号码：</label>
 						<input name="mobile" type="text" value="{$row.mobile}" class="infos" id="phone" maxlength="11">
 						<span class="info-tips" id="phoneTips">联系人的手机号码，可以为非注册手机号码</span>
 					</div>
+					<div class="info-group ">
+						<label><span>*</span>公司负责人姓名：</label>
+						<input name="contacts_name" type="text" value="{$row.contacts_name}" class="infos" >
+						<span class="info-tips" id="contacts_nameTips"></span>
+					</div>
 					<div class="info-group">
-						<label><span>*</span>座机号码：</label>
+						<label><span>*</span>公司负责人联系电话：</label>
+						<input name="contacts_name_mobile" type="text" value="{$row.contacts_name_mobile}" class="infos" id="contacts_phone" maxlength="11">
+						<span class="info-tips" id="contacts_phoneTips">公司负责人联系电话，可以为非注册手机号码</span>
+					</div>
+					<div class="info-group">
+						<label><span>*</span>公司座机号码：</label>
 						<input name="phone_number" type="text" value="{$row.phone_number}" class="infos-tel" id="infos-tel" maxlength="29">
 						<span class="info-tips" id="infos-tel-tips">如：400-0897879、0755-22937331</span>
 					</div>
@@ -175,6 +185,18 @@
 						$('#phoneTips').css('color','red');
 					}
 				})
+				$('#contacts_phone').blur(function(){
+					if(/^1[34578]\d{9}$/.test($('#phone').val())){
+						$('#contacts_phoneTips').text('手机可用');
+						$('#contacts_phoneTips').css('color','green');
+					}else if($('#phone').val() == ''){
+						$('#contacts_phoneTips').text('电话不能为空');
+						$('#contacts_phoneTips').css('color','red');
+					}else{
+						$('#contacts_phoneTips').text('请填写正确手机号码');
+						$('#contacts_phoneTips').css('color','red');
+					}
+				})
 
 				
 
@@ -183,10 +205,13 @@
 					var company_name=$("input[name='company_name']").val();
 					var address=$("input[name='address']").val();
 					var operating_name=$("input[name='operating_name']").val();
+					var contacts_name=$("input[name='contacts_name']").val();
 					var phone_number=$("input[name='phone_number']").val();
 					var province=$("input[name='hcity']").val();
 					var city=$("input[name='hproper']").val();
 					var area=$("input[name='harea']").val();
+					var contacts_name_mobile=$("input[name='contacts_name_mobile']").val();
+					var mobile=$("input[name='mobile']").val();
 					if(company_name==""){
 						alert('公司名称不能为空');
 						return;
@@ -196,6 +221,9 @@
 					}else if(operating_name==""){
 						alert("运营姓名不能为空");
 						return;
+					}else if(contacts_name==""){
+						alert("负责人姓名不能为空");
+						return;
 					}else if(phone_number==""){
 						alert("座机号不能为空");
 						return;
@@ -203,6 +231,7 @@
 						alert('请上传店铺logo');
 						return;
 					}
+
 					if($('#info-container').find('input').val() != ''){
 						$.ajax({
 							type:'POST',
@@ -213,6 +242,9 @@
 								company_name:company_name,
 								address:address,
 								operating_name:operating_name,
+								mobile:mobile,
+								contacts_name:contacts_name,
+								contacts_name_mobile:contacts_name_mobile,
 								phone_number:phone_number,
 								province:province,
 								city:city,
