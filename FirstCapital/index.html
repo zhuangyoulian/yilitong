@@ -1,180 +1,182 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <meta charset="utf-8"  http-equiv="Access-Control-Allow-Origin" content="*">
-   <!-- <meta charset="utf-8"  content="*"> -->
-   <title>一创首页</title>
+    <meta charset="utf-8" http-equiv="Access-Control-Allow-Origin" content="*">
+    <!-- <meta charset="utf-8"  content="*"> -->
+    <title>一创首页</title>
     <meta name="Keywords" content="礼品定制,礼品定做,商务礼品,企业礼品,北京礼品定制,中国礼品网,创意礼品定制,礼品网,礼品,礼至礼品" />
     <meta name="Description" content="礼至礼品-中国专业的企业商务礼品定制公司。汇聚千家优质礼品定做供应商，在线定制礼品包括：商务礼品定制、北京礼品定制、创意礼品、企业礼品、办公礼品、公司礼品等12大类近万种礼品。多年来服务上万大中型企业客户,真实口碑、精良品质，一站式礼品定制网。
-"/>
-   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
-    <link rel="stylesheet" type="text/css" href="css/confirm.css"/>
-   <link rel="stylesheet" type="text/css" href="css/index.css"/>
-   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen"/>
-   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/confirm.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" media="screen" />
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-<div id="vue_index">
-	<div class="containerT">
-		<div class="top">
-				<a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
-			<a href="" class="shouye" target="_blank" >首页</a>
-			<div class="input-group search">
-				<input type="text" class="form-control form-searchbox" placeholder="搜索品牌名称"  v-model="keyword" @keyup.enter="sousuo(keyword)">
-				<span class="input-group-btn">
+    <div id="vue_index">
+        <div class="containerT">
+            <div class="top">
+                <a :href="['index.html']"><img src="img/logo.png" width="132px" height="39px"></a>
+                <a href="" class="shouye" target="_blank">首页</a>
+                <div class="input-group search">
+                    <input type="text" class="form-control form-searchbox" placeholder="搜索品牌名称" v-model="keyword" @keyup.enter="sousuo(keyword)">
+                    <span class="input-group-btn">
 					<button class="btn btn-default btn-searchb" type="button" @click="sousuo(keyword)">
 						搜索
 					</button>
 				</span>
-			</div>
-			<div class="shopcart">
-				<img src="img/icon_cart.png" >
-				<a class="text" href="shopcart.html" target="_blank" >购物车</a>
-				<a class="number" v-if="cartLength!=''">{{cartLength}}</a>
-			</div>
-			<img src="img/hz_header.png" width="50px" height="50px" @click="onUsercenter" class="headicon">
-			<div class="userlist" v-show="userc">
-				<!-- <p class="username">杭州西湖国际中心的</p> -->
-				<p @click="UserCenter">用户中心</p>
-				<p @click="Lagout">退出登录</p>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="swiper">
-			<ul class="swiper_title">
-				<li><a href="productlist.html?i=1" target="_blank" >全部商品</a></li>
-				<li><a href="productlist.html?i=2">10元以下</a></li>
-				<li><a href="productlist.html?i=3">10元-20元</a></li>
-				<li><a href="productlist.html?i=4">20元-30元</a></li>
-				<li><a href="productlist.html?i=5">30元-50元</a></li>
-				<li><a href="productlist.html?i=6">50元-100元</a></li>
-				<li><a href="productlist.html?i=7">100元-200元</a></li>
-				<li><a href="productlist.html?i=8">200元以上</a></li>
-			</ul>
-			<ul class="swiper_img">
-				<a :href="link_lb" target="_blank" ><li><img :src="baseUrl+now" alt=""></li></a>
-			</ul>
-			<div class="swiper_advice">
-				<p>提交建议/反馈</p>
-				<div class="tab_advice">
-					<span @click="cur=0" :class="{active:cur==0}">文字</span>
-					<span @click="cur=1" :class="{active:cur==1}">图片</span>
-					<span @click="cur=2" :class="{active:cur==2}">文件</span>
-				</div>
-				<div class="form-text" v-show="cur==0">
-					<textarea class="form-control tab_text" style="overflow-x:hidden;overflow-y:hidden" id="txt1" @focusin="placeh=0" @focusout="ontext" v-model="advice_text">
+                </div>
+                <div class="shopcart">
+                    <img src="img/icon_cart.png">
+                    <a class="text" href="shopcart.html" target="_blank">购物车</a>
+                    <a class="number" v-if="cartLength!=''">{{cartLength}}</a>
+                </div>
+                <img src="img/hz_header.png" width="50px" height="50px" @click="onUsercenter" class="headicon">
+                <div class="userlist" v-show="userc">
+                    <!-- <p class="username">杭州西湖国际中心的</p> -->
+                    <p @click="UserCenter">用户中心</p>
+                    <p @click="Lagout">退出登录</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="swiper">
+                <ul class="swiper_title">
+                    <li><a href="productlist.html?i=1" target="_blank">全部商品</a></li>
+                    <li><a href="productlist.html?i=2">10元以下</a></li>
+                    <li><a href="productlist.html?i=3">10元-20元</a></li>
+                    <li><a href="productlist.html?i=4">20元-30元</a></li>
+                    <li><a href="productlist.html?i=5">30元-50元</a></li>
+                    <li><a href="productlist.html?i=6">50元-100元</a></li>
+                    <li><a href="productlist.html?i=7">100元-200元</a></li>
+                    <li><a href="productlist.html?i=8">200元以上</a></li>
+
+                </ul>
+                <ul class="swiper_img">
+                    <a :href="link_lb" target="_blank">
+                        <li><img :src="baseUrl+now" alt=""></li>
+                    </a>
+                </ul>
+                <div class="swiper_advice">
+                    <p>提交建议/反馈</p>
+                    <div class="tab_advice">
+                        <span @click="cur=0" :class="{active:cur==0}">文字</span>
+                        <span @click="cur=1" :class="{active:cur==1}">图片</span>
+                        <span @click="cur=2" :class="{active:cur==2}">文件</span>
+                    </div>
+                    <div class="form-text" v-show="cur==0">
+                        <textarea class="form-control tab_text" style="overflow-x:hidden;overflow-y:hidden" id="txt1" @focusin="placeh=0" @focusout="ontext" v-model="advice_text">
 						
 					</textarea>
-					<span class="notice-top" v-show="placeh==1">请输入文字</span>
-					<span class="notice-bottom" v-show="placeh==1">0/50</span>
-				</div>
-				<div class="form-img" v-show="cur==1">
-					<!-- <img src="img/icon_add.png" class="img" @mouseover="uploadimg" v-if = "addhover"> -->
-					<!-- <img src="img/icon_delete.png" class="delupimg" v-show="!addhover" @click="delUpimg"> -->
-					<span v-show="imgList.length!==0" class="leftup" @click="upimgLeft">&lt;</span>
-					<img :src="upimg" class="img" @mouseover="uploadimg" v-if = "addhover">
-					<img src="img/icon_add_hover.png" class="img" @mouseleave="uploadimg" v-show="!addhover" @click="addPic">
-					<span v-show="imgList.length!==0" class="rightup" @click="upimgRight">&gt;</span>
-					<input type="file" @change="onFileChange($event)" style="display: none;" accept="image/png,image/gif,image/jpeg" id="imgup">
-					<p class="p1" @click.stop="uploadImg">点击上传图片</p>
-					<p class="p2">已上传{{upimg_num}}张(最多5张)</p>
-				</div>
-				<div class="form-file" v-show="cur==2">
-					<input type="file" @change="onFileChange2($event)" style="display: none;" id="upfile">
-					<p>{{filename}}</p>
-					<p class="p3" @click="addFile">点击上传文件</p>
-				</div>
-				<button type="button" class="btn btn-primary btn-submit" @click="submitAdvice">提交</button>
-			</div>
-		</div>
-		<div class="hot_product">
-			<p class="top_title">当季热推</p>
-			<div class="productlist">
-				<a :href="['productDetail.html?goods_id='+is_hot_o.goods_id]" target="_blank" >
-					<div class="product_one">
-						<p class="title">{{is_hot_o.goods_name}}</p>
-						<p class="price">参考价<span>￥{{is_hot_o.shop_price}}</span></p>
-						<img :src="baseUrl+is_hot_o.goods_thumb" :alt="is_hot_o.goods_name" width="240px" height="240px">
-					</div>
-				</a>
-				<a :href="['productDetail.html?goods_id='+is_hot_t.goods_id]" target="_blank" >
-				<div class="product_one">
-					<p class="title">{{is_hot_t.goods_name}}</p>
-					<p class="price">参考价<span>￥{{is_hot_t.shop_price}}</span></p>
-					<img :src="baseUrl+is_hot_t.goods_thumb" :alt="is_hot_t.goods_name" width="240px" height="240px">
-				</div>
-				</a>
-				<div class="product_three">
-					<a :href="['productDetail.html?goods_id='+is_hot_s.goods_id]" target="_blank" >
-					<div class="top">
-						<img :src="baseUrl+is_hot_s.goods_thumb" width="186px" height="186px">
-						<div class="detail">
-							<p class="title">{{is_hot_s.goods_name}}</p>
-							<p class="price">参考价<span>￥{{is_hot_s.shop_price}}</span></p>
-						</div>
-					</div>
-					</a>
-					<a :href="['productDetail.html?goods_id='+is_hot_f.goods_id]" target="_blank" >
-					<div class="top">
-						<div class="detail">
-							<p class="title">{{is_hot_f.goods_name}}</p>
-							<p class="price">参考价<span>￥{{is_hot_f.shop_price}}</span></p>
-						</div>
-						<img :src="baseUrl+is_hot_f.goods_thumb" width="186px" height="186px">
-					</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="containerB">
-		<p>第一创业证券股份有限公司</p>
-	</div>
-	<!-- div class="dialog-bg" id="dialog-bg">
+                        <span class="notice-top" v-show="placeh==1">请输入文字</span>
+                        <span class="notice-bottom" v-show="placeh==1">0/50</span>
+                    </div>
+                    <div class="form-img" v-show="cur==1">
+                        <!-- <img src="img/icon_add.png" class="img" @mouseover="uploadimg" v-if = "addhover"> -->
+                        <!-- <img src="img/icon_delete.png" class="delupimg" v-show="!addhover" @click="delUpimg"> -->
+                        <span v-show="imgList.length!==0" class="leftup" @click="upimgLeft">&lt;</span>
+                        <img :src="upimg" class="img" @mouseover="uploadimg" v-if="addhover">
+                        <img src="img/icon_add_hover.png" class="img" @mouseleave="uploadimg" v-show="!addhover" @click="addPic">
+                        <span v-show="imgList.length!==0" class="rightup" @click="upimgRight">&gt;</span>
+                        <input type="file" @change="onFileChange($event)" style="display: none;" accept="image/png,image/gif,image/jpeg" id="imgup">
+                        <p class="p1" @click.stop="uploadImg">点击上传图片</p>
+                        <p class="p2">已上传{{upimg_num}}张(最多5张)</p>
+                    </div>
+                    <div class="form-file" v-show="cur==2">
+                        <input type="file" @change="onFileChange2($event)" style="display: none;" id="upfile">
+                        <p>{{filename}}</p>
+                        <p class="p3" @click="addFile">点击上传文件</p>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-submit" @click="submitAdvice">提交</button>
+                </div>
+            </div>
+            <div class="hot_product">
+                <p class="top_title">当季热推</p>
+                <div class="productlist">
+                    <a :href="['productDetail.html?goods_id='+is_hot_o.goods_id]" target="_blank">
+                        <div class="product_one">
+                            <p class="title">{{is_hot_o.goods_name}}</p>
+                            <p class="price">参考价<span>￥{{is_hot_o.shop_price}}</span></p>
+                            <img :src="baseUrl+is_hot_o.goods_thumb" :alt="is_hot_o.goods_name" width="240px" height="240px">
+                        </div>
+                    </a>
+                    <a :href="['productDetail.html?goods_id='+is_hot_t.goods_id]" target="_blank">
+                        <div class="product_one">
+                            <p class="title">{{is_hot_t.goods_name}}</p>
+                            <p class="price">参考价<span>￥{{is_hot_t.shop_price}}</span></p>
+                            <img :src="baseUrl+is_hot_t.goods_thumb" :alt="is_hot_t.goods_name" width="240px" height="240px">
+                        </div>
+                    </a>
+                    <div class="product_three">
+                        <a :href="['productDetail.html?goods_id='+is_hot_s.goods_id]" target="_blank">
+                            <div class="top">
+                                <img :src="baseUrl+is_hot_s.goods_thumb" width="186px" height="186px">
+                                <div class="detail">
+                                    <p class="title">{{is_hot_s.goods_name}}</p>
+                                    <p class="price">参考价<span>￥{{is_hot_s.shop_price}}</span></p>
+                                </div>
+                            </div>
+                        </a>
+                        <a :href="['productDetail.html?goods_id='+is_hot_f.goods_id]" target="_blank">
+                            <div class="top">
+                                <div class="detail">
+                                    <p class="title">{{is_hot_f.goods_name}}</p>
+                                    <p class="price">参考价<span>￥{{is_hot_f.shop_price}}</span></p>
+                                </div>
+                                <img :src="baseUrl+is_hot_f.goods_thumb" width="186px" height="186px">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerB">
+            <p>第一创业证券股份有限公司</p>
+        </div>
+        <!-- div class="dialog-bg" id="dialog-bg">
 		<div class="img-box" id="img-box">
     <img src="">
 	</div> -->
-	<div class="confirm-container" v-if="tanc">
-		<div class="confirm-body">请先修改初始密码
-			<i class="close" @click="Lagout">×</i>
-		</div>
-		<div class="confirm-footer clearfix">
-			<button class="button" id="cancel" @click="Lagout" >取消</button>
-			<button class="button" id="confirm" @click="confirmEdit" >确认</button>
-		</div>
-	</div>
-	<div class="wrap" v-if="tanc"></div>
-	<div class="tancy" v-if="tanc2">
-		<p>修改密码</p>
-		<div class="form-group lan">
-			<label for="firstmima" class="col-sm-3 control-label">原密码：</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="firstmima" v-model="o_password"
-					   placeholder="请输入原密码">
-			</div>
-		</div>
-		<div class="form-group lan">
-			<label for="lastname" class="col-sm-3 control-label">新密码：</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="lastname" v-model="password"
-					   placeholder="请输入新密码">
-			</div>
-		</div>
-		<div class="form-group lan">
-			<label for="lastname" class="col-sm-3 control-label">确认密码：</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" id="lastname" v-model="password_s"
-					   placeholder="请输入确认密码">
-			</div>
-		</div>
-		<div class="btn2" @click="editPassword">
-			保存
-		</div>
-	</div>	
-	
-</div>
+        <div class="confirm-container" v-if="tanc">
+            <div class="confirm-body">请先修改初始密码
+                <i class="close" @click="Lagout">×</i>
+            </div>
+            <div class="confirm-footer clearfix">
+                <button class="button" id="cancel" @click="Lagout">取消</button>
+                <button class="button" id="confirm" @click="confirmEdit">确认</button>
+            </div>
+        </div>
+        <div class="wrap" v-if="tanc"></div>
+        <div class="tancy" v-if="tanc2">
+            <p>修改密码</p>
+            <div class="form-group lan">
+                <label for="firstmima" class="col-sm-3 control-label">原密码：</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="firstmima" v-model="o_password" placeholder="请输入原密码">
+                </div>
+            </div>
+            <div class="form-group lan">
+                <label for="lastname" class="col-sm-3 control-label">新密码：</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="lastname" v-model="password" placeholder="请输入新密码">
+                </div>
+            </div>
+            <div class="form-group lan">
+                <label for="lastname" class="col-sm-3 control-label">确认密码：</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="lastname" v-model="password_s" placeholder="请输入确认密码">
+                </div>
+            </div>
+            <div class="btn2" @click="editPassword">
+                保存
+            </div>
+        </div>
+
+    </div>
 </body>
 
 <script src="js/vue.min.js"></script>
@@ -182,307 +184,310 @@
 <script src="js/axios.min.js"></script>
 <script src="js/qs.min.js"></script>
 <script type="text/javascript">
-	var aa = new Vue({
-		el: '#vue_index',
-		data: {
-			addhover:true,
-			// baseUrl:'http://192.168.1.20/tp510hout',
-			baseUrl:'http://www.yilitong.com',
-			cur:0,
-			placeh:1,
-			link_lb:'',
-			keyword:'',
-			lunbotu:'',
-			i:0,
-			now:'',
-			advice_text:'',
-			userc:false,
-			is_hot_o:'',
-			is_hot_t:'',
-			is_hot_s:'',
-			is_hot_f:'',
-			imgList: [],
-			imgi:1,
-			imgListbase:[],
-			upimg:'img/icon_add.png',
-			upimg_num:0,
-			admin_id:'',
-			txt:'',//文件
-			filename:'',
-			houz2:[],
-			cartLength:'',
-			o_password:'',
-			password:'',
-			password_s:'',
-			tanc:false,
-			tanc2:false,
-			
-		},
-		created() {
-			if(!sessionStorage.admin_id){
-				window.location.href='login.html';
-			}else{
-				this.admin_id=sessionStorage.admin_id;
-				this.getCartList(sessionStorage.admin_id);
-				this.getData(sessionStorage.admin_id);
-				if(sessionStorage.updata_paw==0){
-					this.tanc=!this.tanc;
-				}
-			}
-		},
-		
-		mounted:function(){
-			
-		},
-		// updated() {
-		// 	console.log(this.imgList);
-		// },
-		methods: {
-			confirmEdit:function(){
-				this.tanc2=true;
-				$('.confirm-container').addClass('hide');
-			},
-			
-			//修改密码
-			editPassword:function(){
-				var baseurl=this.baseUrl;
-				var that=this;
-				var list={
-					o_password:that.o_password,
-					password:that.password,
-					password_s:that.password_s,
-					admin_id:that.admin_id
-				};
-				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-				axios.get(baseurl+'/index.php/home/Agen/user_paw',{
-						params: list
-				}).then(function(res){
-					if(res.data.result==1){
-						that.Lagout();
-						alert(res.data.info);
-					}else{
-						alert(res.data.info);
-					}
-					console.log(res.data);
-				});
-			},
-			getCartList:function(e){
-				var baseurl=this.baseUrl;
-				var that=this;
-				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-				axios.get(baseurl+'/index.php/home/Agen/ajaxCartList'
-				,{params:{admin_id:e}}
-				).then(function(res){
-					console.log(res.data.cartList[41].list);
-					if(res.data.cartList[41].list==null){
-						that.cartLength='';
-					}else{
-						that.cartLength=res.data.cartList[41].list.length;
-						console.log(that.cartLength);
-					}
-				});
-			},
-			//提交建议
-			submitAdvice:function(e){
-				var baseurl=this.baseUrl;
-				var that=this;
-				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
-				axios.post(baseurl+'/home/Agen/suggest',Qs.stringify({
-						admin_id:that.admin_id,
-						content:that.advice_text,
-						images_type:that.houz2,
-						txt_type:that.houz,
-						images:that.imgList,
-						txt:that.txt,
-				})).then(function(res){
-					console.log(res.data);
-						if(res.data.result==1){
-							alert(res.data.info);
-							that.advice_text='';
-							that.imgList=[];
-							that.imgListbase=[];
-						}
-				});
-			},
-			Lagout:function(){
-				sessionStorage.clear();
-				window.location.href='login.html';
-			},
-			UserCenter:function(){
-				window.location.href='usercenter.html?ed=2';
-			},
-			upimgLeft:function(){
-				var index=this.imgi;
-				if(index==0){
-					alert("这是第一张");
-				}else{
-					this.imgi=index-1;
-					this.showimg(this.imgListbase[this.imgi]);
-				}
-				// console.log(index,this.imgList.length);
-			},
-			upimgRight:function(){
-				var index=this.imgi;
-				var maxindex=this.imgList.length-1;
-				if(index==maxindex){
-					alert("这是第最后一张");
-				}else{
-					this.imgi=index+1;
-					this.showimg(this.imgListbase[this.imgi]);
-				}
-			},
-			// delUpimg:function(){
-			// 	var index=this.imgi;
-			// 	this.imgList.splice(index,1);
-			// 	console.log(index);
-			// 	// this.showimg(this.imgList[index]);
-			// },
-			addPic:function(e){
-				e.preventDefault();
-				$('#imgup').trigger('click');
-                return false;
-			},
-			onFileChange(e) {
-                var files = e.target.files || e.dataTransfer.files;
-                if (!files.length)return; 
-                this.createImage(files);
-				// console.log(e.target.files);
+    var aa = new Vue({
+        el: '#vue_index',
+        data: {
+            addhover: true,
+            // baseUrl:'http://192.168.1.20/tp510',
+            baseUrl: 'http://www.yilitong.com',
+            cur: 0,
+            placeh: 1,
+            link_lb: '',
+            keyword: '',
+            lunbotu: '',
+            i: 0,
+            now: '',
+            advice_text: '',
+            userc: false,
+            is_hot_o: '',
+            is_hot_t: '',
+            is_hot_s: '',
+            is_hot_f: '',
+            imgList: [],
+            imgi: 1,
+            imgListbase: [],
+            upimg: 'img/icon_add.png',
+            upimg_num: 0,
+            admin_id: '',
+            txt: '', //文件
+            filename: '',
+            houz2: [],
+            cartLength: '',
+            o_password: '',
+            password: '',
+            password_s: '',
+            tanc: false,
+            tanc2: false,
+
+        },
+        created() {
+            if (!sessionStorage.admin_id) {
+                window.location.href = 'login.html';
+            } else {
+                this.admin_id = sessionStorage.admin_id;
+                this.getCartList(sessionStorage.admin_id);
+                this.getData(sessionStorage.admin_id);
+                if (sessionStorage.updata_paw == 0) {
+                    this.tanc = !this.tanc;
+                }
+            }
+        },
+
+        mounted: function() {
+
+        },
+        // updated() {
+        // 	console.log(this.imgList);
+        // },
+        methods: {
+            confirmEdit: function() {
+                this.tanc2 = true;
+                $('.confirm-container').addClass('hide');
             },
-		   // 上传文件
-		   addFile:function(e){
-			   e.preventDefault();
-			   $('#upfile').trigger('click');
-			   return false;
-		   },
-		   onFileChange2(e) {
-		       var files = e.target.files || e.dataTransfer.files;
-		       if (!files.length)return; 
-		       this.uploadFile(files);
-		   	// console.log(e.target.files);
-		   },
-		   uploadFile:function(file){
-			   if(typeof FileReader==='undefined'){
-			       alert('您的浏览器不支持文件上传，请升级您的浏览器');
-			       return false;
-			   }
-			   var filename=file[0].name;
-			   this.filename=filename;
-			   var houz=filename.substr(filename.lastIndexOf('.'));
-			   this.houz=houz;
-			   var that = this;
-			   var base64file='';
-			   var reader = new FileReader();
-			   reader.readAsDataURL(file[0]);
-			   reader.onloadend =function(e){
-				base64file=e.target.result.substr(e.target.result.indexOf(',') + 1);
-				that.txt=base64file;
-				console.log(e);
-			   }
-		   },
-			createImage(file) {
-                if(typeof FileReader==='undefined'){
+
+            //修改密码
+            editPassword: function() {
+                var baseurl = this.baseUrl;
+                var that = this;
+                var list = {
+                    o_password: that.o_password,
+                    password: that.password,
+                    password_s: that.password_s,
+                    admin_id: that.admin_id
+                };
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                axios.get(baseurl + '/index.php/home/Agen/user_paw', {
+                    params: list
+                }).then(function(res) {
+                    if (res.data.result == 1) {
+                        that.Lagout();
+                        alert(res.data.info);
+                    } else {
+                        alert(res.data.info);
+                    }
+                    console.log(res.data);
+                });
+            },
+            getCartList: function(e) {
+                var baseurl = this.baseUrl;
+                var that = this;
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+                axios.get(baseurl + '/index.php/home/Agen/ajaxCartList', {
+                    params: {
+                        admin_id: e
+                    }
+                }).then(function(res) {
+                    console.log(res.data.cartList[41].list);
+                    if (res.data.cartList[41].list == null) {
+                        that.cartLength = '';
+                    } else {
+                        that.cartLength = res.data.cartList[41].list.length;
+                        console.log(that.cartLength);
+                    }
+                });
+            },
+            //提交建议
+            submitAdvice: function(e) {
+                var baseurl = this.baseUrl;
+                var that = this;
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+                axios.post(baseurl + '/home/Agen/suggest', Qs.stringify({
+                    admin_id: that.admin_id,
+                    content: that.advice_text,
+                    images_type: that.houz2,
+                    txt_type: that.houz,
+                    images: that.imgList,
+                    txt: that.txt,
+                })).then(function(res) {
+                    console.log(res.data);
+                    if (res.data.result == 1) {
+                        alert(res.data.info);
+                        that.advice_text = '';
+                        that.imgList = [];
+                        that.imgListbase = [];
+                    }
+                });
+            },
+            Lagout: function() {
+                sessionStorage.clear();
+                window.location.href = 'login.html';
+            },
+            UserCenter: function() {
+                window.location.href = 'usercenter.html?ed=2';
+            },
+            upimgLeft: function() {
+                var index = this.imgi;
+                if (index == 0) {
+                    alert("这是第一张");
+                } else {
+                    this.imgi = index - 1;
+                    this.showimg(this.imgListbase[this.imgi]);
+                }
+                // console.log(index,this.imgList.length);
+            },
+            upimgRight: function() {
+                var index = this.imgi;
+                var maxindex = this.imgList.length - 1;
+                if (index == maxindex) {
+                    alert("这是第最后一张");
+                } else {
+                    this.imgi = index + 1;
+                    this.showimg(this.imgListbase[this.imgi]);
+                }
+            },
+            // delUpimg:function(){
+            // 	var index=this.imgi;
+            // 	this.imgList.splice(index,1);
+            // 	console.log(index);
+            // 	// this.showimg(this.imgList[index]);
+            // },
+            addPic: function(e) {
+                e.preventDefault();
+                $('#imgup').trigger('click');
+                return false;
+            },
+            onFileChange(e) {
+                var files = e.target.files || e.dataTransfer.files;
+                if (!files.length) return;
+                this.createImage(files);
+                // console.log(e.target.files);
+            },
+            // 上传文件
+            addFile: function(e) {
+                e.preventDefault();
+                $('#upfile').trigger('click');
+                return false;
+            },
+            onFileChange2(e) {
+                var files = e.target.files || e.dataTransfer.files;
+                if (!files.length) return;
+                this.uploadFile(files);
+                // console.log(e.target.files);
+            },
+            uploadFile: function(file) {
+                if (typeof FileReader === 'undefined') {
+                    alert('您的浏览器不支持文件上传，请升级您的浏览器');
+                    return false;
+                }
+                var filename = file[0].name;
+                this.filename = filename;
+                var houz = filename.substr(filename.lastIndexOf('.'));
+                this.houz = houz;
+                var that = this;
+                var base64file = '';
+                var reader = new FileReader();
+                reader.readAsDataURL(file[0]);
+                reader.onloadend = function(e) {
+                    base64file = e.target.result.substr(e.target.result.indexOf(',') + 1);
+                    that.txt = base64file;
+                    console.log(e);
+                }
+            },
+            createImage(file) {
+                if (typeof FileReader === 'undefined') {
                     alert('您的浏览器不支持图片上传，请升级您的浏览器');
                     return false;
                 }
-				if(this.imgListbase.length>4){
-					alert('最多上传五张图片');
-					return false;
-				} 
-				var filename=file[0].name;
-				var houz2=filename.substr(filename.lastIndexOf('.'));
-				this.houz2.push(houz2);
-				console.log(file);
-                var image = new Image();         
+                if (this.imgListbase.length > 4) {
+                    alert('最多上传五张图片');
+                    return false;
+                }
+                var filename = file[0].name;
+                var houz2 = filename.substr(filename.lastIndexOf('.'));
+                this.houz2.push(houz2);
+                console.log(file);
+                var image = new Image();
                 var that = this;
-				var base64img='';
-				var reader = new FileReader();
-				reader.readAsDataURL(file[0]);
-				reader.onloadend =function(e){
-					base64img=e.target.result.substr(e.target.result.indexOf(',') + 1);
-					that.imgListbase.push(e.target.result);
-					that.imgList.push(base64img);
-					that.imgi=that.imgListbase.length-1;
-					that.showimg(that.imgListbase[that.imgi]);
-				}
-				// reader.readAsDataURL(file[0]);
-				console.log(that.imgList);
+                var base64img = '';
+                var reader = new FileReader();
+                reader.readAsDataURL(file[0]);
+                reader.onloadend = function(e) {
+                        base64img = e.target.result.substr(e.target.result.indexOf(',') + 1);
+                        that.imgListbase.push(e.target.result);
+                        that.imgList.push(base64img);
+                        that.imgi = that.imgListbase.length - 1;
+                        that.showimg(that.imgListbase[that.imgi]);
+                    }
+                    // reader.readAsDataURL(file[0]);
+                console.log(that.imgList);
             },
-			showimg:function(e){
-				this.upimg=e;
-				this.upimg_num=this.imgList.length;
-			},
-			uploadImg:function(){
-				var obj = {};
-				obj.images=this.imgList;
-				console;log(obj);
-			},
-			sousuo:function(e){
-				window.location.href="sousuo.html?keyword="+e;
-			},
-			getData:function(e){
-				var baseurl=this.baseUrl;
-				var that=this;
-				axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
-				axios.get(baseurl+'/home/Agen/index',
-				// axios.get('http://www.szleezen.cn/Mobile/User/index',
-				{
-					params:{
-						admin_id:e,
-					}
-				}).then(function(res){
-					console.info(res.data);
-					// if(res.data.result==-11){
-					// 	window.location.href='login.html';
-					// }
-					// var lunbotuobj=res.data.brand_list;
-					var lunbotu=res.data.brand_list;
-					that.lunbotu=lunbotu;
-					// setInterval(function(){
-					// 	that.getLunbo(lunbotu);
-					// },4000);
-					console.log(lunbotu);
-					that.getLunbo(lunbotu);
-					that.is_hot_o=res.data.is_hot_o;
-					that.is_hot_t=res.data.is_hot_t;
-					that.is_hot_s=res.data.is_hot_s;
-					that.is_hot_f=res.data.is_hot_f;
-				});
-			},
-			getLunbo:function(e){
-				console.log(e[0].ad_code);
-				this.now=e[0].ad_code;
-				this.link_lb=e[0].ad_link;
-				var that=this;
-				setInterval(function(){
-					that.i++;
-					if(that.i>e.length-1){
-						that.i=0;
-					}
-					that.now=e[that.i].ad_code;
-					that.link_lb=e[that.i].ad_link;
-				},4000);
-			},
-			uploadimg:function(){
-				this.addhover=!this.addhover;
-			},
-			tabAdvice:function(){
-				console.log('aaa');
-			},
-			ontext:function(){
-				if(this.advice_text==''){
-					this.placeh=1;
-				}else{
-					this.placeh=0
-				}
-			},
-			onUsercenter:function(){
-				this.userc=!this.userc;
-			},
-			details: function() {
-				return  this.site + " - 学的不仅是技术，更是梦想！";
-			}
-		}
-	})
+            showimg: function(e) {
+                this.upimg = e;
+                this.upimg_num = this.imgList.length;
+            },
+            uploadImg: function() {
+                var obj = {};
+                obj.images = this.imgList;
+                console;
+                log(obj);
+            },
+            sousuo: function(e) {
+                window.location.href = "sousuo.html?keyword=" + e;
+            },
+            getData: function(e) {
+                var baseurl = this.baseUrl;
+                var that = this;
+                axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+                axios.get(baseurl + '/home/Agen/index',
+                    // axios.get('http://www.szleezen.cn/Mobile/User/index',
+                    {
+                        params: {
+                            admin_id: e,
+                        }
+                    }).then(function(res) {
+                    console.info(res.data);
+                    // if(res.data.result==-11){
+                    // 	window.location.href='login.html';
+                    // }
+                    // var lunbotuobj=res.data.brand_list;
+                    var lunbotu = res.data.brand_list;
+                    that.lunbotu = lunbotu;
+                    // setInterval(function(){
+                    // 	that.getLunbo(lunbotu);
+                    // },4000);
+                    console.log(lunbotu);
+                    that.getLunbo(lunbotu);
+                    that.is_hot_o = res.data.is_hot_o;
+                    that.is_hot_t = res.data.is_hot_t;
+                    that.is_hot_s = res.data.is_hot_s;
+                    that.is_hot_f = res.data.is_hot_f;
+                });
+            },
+            getLunbo: function(e) {
+                console.log(e[0].ad_code);
+                this.now = e[0].ad_code;
+                this.link_lb = e[0].ad_link;
+                var that = this;
+                setInterval(function() {
+                    that.i++;
+                    if (that.i > e.length - 1) {
+                        that.i = 0;
+                    }
+                    that.now = e[that.i].ad_code;
+                    that.link_lb = e[that.i].ad_link;
+                }, 4000);
+            },
+            uploadimg: function() {
+                this.addhover = !this.addhover;
+            },
+            tabAdvice: function() {
+                console.log('aaa');
+            },
+            ontext: function() {
+                if (this.advice_text == '') {
+                    this.placeh = 1;
+                } else {
+                    this.placeh = 0
+                }
+            },
+            onUsercenter: function() {
+                this.userc = !this.userc;
+            },
+            details: function() {
+                return this.site + " - 学的不仅是技术，更是梦想！";
+            }
+        }
+    })
 </script>
 
 

@@ -48,9 +48,9 @@ class weixin extends Model
             $input->SetTrade_type("NATIVE"); // 交易类型   取值如下：JSAPI，NATIVE，APP，详细说明见参数规定    NATIVE--原生扫码支付
             $input->SetProduct_id("ylt"); // 商品ID trade_type=NATIVE，此参数必传。此id为二维码中包含的商品ID，商户自行定义。
             $result = $notify->GetPayUrl($input); // 获取生成二维码的地址
-			
             $url2 = $result["code_url"];
-            return '<img alt="扫码支付" src="/index.php?m=Home&c=Index&a=qr_code&data='.urlencode($url2).'" style="width:200px;height:200px;"/>';
+
+            return urlencode($url2);
     }    
     /**
      * 服务器点对点响应操作给支付接口方调用
