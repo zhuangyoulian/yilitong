@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>手机号验证</title>
+		<link rel="stylesheet" href="__MOBILE__/css/deposit/index.css">
+		<style type="text/css">
+			.inputCode span{
+				width: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="register" class="enroll" >
+			<header>
+				<div class="back"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_black.png"></a></div>
+				<div class="headName">手机号验证</div>
+				<div></div>
+			</header>
+			<input type="hidden" name="id" value="{$id}">
+			<section class="section">
+				<div class="b_progress">
+					<div>请输入预约手机号进行验证</div>
+				</div>
+				<div id="verifyCode">
+					<div class="inputCode">
+						<span>手机号</span>
+						<input type="text" id="phone" placeholder="请输入预约手机号" maxlength="11" value="{$phone}" v-model="phone"  autocomplete="off">
+					</div>
+					<div class="inputCode">
+						<span>图形码</span>
+						<input type="text" name="verify_code" placeholder="请输入图形验证码">
+						<div>
+		                	<img  style="width: 2.3rem;height: 1rem;" src="/index.php?m=Mobile&c=User&a=verify&type=user_reg" id="verify_code_img" onclick="verify()">
+		                </div>
+					</div>
+					<div class="inputCode">
+						<span>验证码</span>
+						<input type="text" id="verify_code" placeholder="请输入验证码" maxlength="6" value="{securityCode}" v-model="securityCode">
+						<div class="gain" v-show="showGain" @click="clickGain">获取验证码</div>
+						<div class="gain " v-show="showTime">{{time}}s</div>
+						<div class="gain " id="count_down" v-show="showRegain" @click="clickRegain">重新获取</div>
+					</div>
+				</div>
+				<div class="submit" @click="Next">下一步</div>
+			</section>
+		</div>
+		<script src="__MOBILE__/js/deposit/screenAdaptation.js"></script>
+		<script src="__MOBILE__/js/deposit/vue.js"></script>
+		<script src="__MOBILE__/js/deposit/common.js"></script>
+    	<script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			const defatultTime = 60; // 默认倒计时时间
+			var wap = new Vue({
+				el: ".section",
+				data: {
+					securityCode: "", //验证码  
+					time: defatultTime, //时间
+					showGain: true, // 是否显示获取验证码
+					showTime: false, // 是否显示时间
+					showRegain: false, //是否显示重新获取
+				},
+				created() { // 进入
+
+				},
+				mounted() { // 挂载后
+
+				},
+				updated() {
+				
+				},
+				methods: {
+					clickGain(){ // 点击获取验证码
+
+						var verify_code = $('input[name="verify_code"]').val(); //图形验证码
+						var mobile = $('#phone').val();
+				        console.log(mobile);
+				        var url = "/index.php?m=Home&c=Api&a=send_validate_code&scene=0&type=5&mobile="+mobile+"&verify_code="+verify_code;
+				        $.get(url,(res)=>{
+				            if(res.status == 1)
+							{
+								this.showGain = false; //隐藏获取验证码
+								this.showTime = true; //显示时间
+								this.setTime();
+								$('#count_down').attr("disabled","disabled");
+				                alert(res.msg);
+							}else{
+				                alert(res.msg);
+				            }
+				        })
+					},
+					setTime(){ // 	时间设置
+						var that = this;
+						if (that.time <= 0) { // 倒计时结束
+							that.gain = false; //隐藏获取验证码
+							that.showTime = false; // 隐藏时间,显示重新获取
+							that.showRegain = true; // 显示重新获取
+							that.time = defatultTime; // 恢复原始倒计时时间
+							clearTimeout(temTime); // 清除setTimeout事件
+							return false;
+						} else {
+							temTime = setTimeout(function() {
+								that.time = --that.time;
+								that.setTime(); // 递归调用本身
+							}, 1000)
+						}
+					},
+					clickRegain() { //点击重新获取
+						this.showTime = true; //显示时间
+						this.showRegain = false; //隐藏重新获取
+						this.clickGain();
+					},
+					Next(){
+						var verify_code = $('#verify_code').val();  //手机验证码
+						var mobile = $('#phone').val();
+			  			var id=$("input[name='id']").val();
+						var url = "/index.php?m=Home&c=Api&a=check_validate_code&scene=1&type=phone&mobile="+mobile+"&code="+verify_code;
+				        $.get(url,function(res){
+				            if(res.status == 1)
+							{
+        						location.href = "/Mobile/Hdyujing/hdyujing/mobile/"+mobile;
+							}else{
+				                alert(res.msg);
+				            }
+				        })
+					}
+				}
+			})
+			//  普通 图形验证码
+	        function verify(){
+	            $('#verify_code_img').attr('src','/index.php?m=mobile&c=User&a=verify&type=user_reg&r='+Math.random());
+	        }
+		</script>
+		
+	</body>
+</html>

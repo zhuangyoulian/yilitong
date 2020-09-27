@@ -1,0 +1,152 @@
+<include file="public/layout" />
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title">
+      <div class="subject">
+        <h3>设计师提现申请列表</h3>
+        <h5>设计师提现申请列表</h5>
+      </div>
+    </div>
+  </div>
+  <!-- 操作说明 -->
+  <div id="explanation" class="explanation" style="color: rgb(44, 188, 163); background-color: rgb(237, 251, 248); width: 99%; height: 100%;">
+    <div id="checkZoom" class="title"><i class="fa fa-lightbulb-o"></i>
+      <h4 title="提示相关设置操作时应注意的要点">操作提示</h4>
+      <span title="收起提示" id="explanationZoom" style="display: block;"></span>
+    </div>
+    <ul>
+      <li>设计师申请提现,由平台设置管理</li>
+    </ul>
+  </div>
+  <div class="flexigrid">
+    <div class="mDiv">
+      <div class="ftitle">
+        <h3>设计师提现申请列表</h3>
+        <h5>(共{$pager->totalRows}条记录)</h5>
+      </div>
+      <div title="刷新数据" class="pReload"><i class="fa fa-refresh"></i></div>   
+  <form id="search-form2" class="navbar-form form-inline"  method="post" action="{:Url('/Admin/Designer/WithdrawalsLog')}">
+      <div class="sDiv">             
+        <div class="sDiv2">
+          <input type="text" class="qsbox" id="input-order-id" placeholder="搜索词" value="{$_POST['keyword']}" name="keyword">                                        
+          <input type="submit" class="btn" value="搜索">
+        </div>
+      </div>
+     </form>    
+    </div>
+    <div class="hDiv">
+      <div class="hDivBox">
+        <table cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th align="center" axis="col0" class="sign">
+                <div style="text-align: center; width: 24px;"><i class="ico-check"></i></div>
+              </th>
+              <th align="center" axis="col2"><div style="text-align: center; width: 60px;">id</div></th>
+              <th align="center" axis="col3"><div style="text-align: center; width: 100px;">用户id</div></th>
+			  <th align="center" axis="col3"><div style="text-align: center; width: 100px;">提现用户名</div></th>
+              <th align="center" axis="col5"><div style="text-align: center; width: 100px;">提现金额</div></th>
+              <th align="center" axis="col6"><div style="text-align: center; width: 150px;">提现账号</div></th>
+              <th align="center" axis="col9"><div style="text-align: center; width: 150px;">申请时间</div></th>   
+			  <th align="center" axis="col9"><div style="text-align: center; width: 100px;">状态</div></th> 
+			  <th align="center" axis="col6"><div style="text-align: center; width: 150px;">转账时间</div></th>
+              <th align="center" axis="col9"><div style="text-align: center; width: 150px;">交易流水号</div></th>   			  
+              <th align="center" axis="col1" class="handle">
+                <div style="text-align: center; width: 170px;">操作</div>
+              </th>
+              <th style="width:100%" axis="col7">
+                <div></div>
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+    <div class="tDiv">
+      <div class="tDiv2">
+         <a href="{:Url('Designer/WorksCategoryAdd')}">
+          <div class="fbutton">
+            
+          </div>
+         </a> 
+        </div>
+      <div style="clear:both"></div>
+    </div>
+    <div class="bDiv" style="height: auto;">
+      <div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+        <table>
+          <tbody>
+            <volist name="List" id="list">
+              <tr>
+                <td class="sign">
+                  <div style="width: 24px;"><i class="ico-check"></i></div>
+                </td>
+                <td align="left" class="">
+                  <div style="text-align: left; width: 60px;">{$list.id}</div>
+                </td>
+                <td align="left" class="">
+                  <div style="text-align: left; width: 100px;">{$list.user_id}</div>
+                </td>
+				<td align="left" class="">
+                  <div style="text-align: left; width: 100px;">{$list.real_name}</div>
+                </td>
+                <td align="left" class="">
+                  <div style="text-align: left; width: 100px;">{$list.money_num}</div>
+                </td>
+                <td align="left" class="">
+                  <div style="text-align: left; width: 150px;">{$list.account}</div>
+                </td>
+                <td align="left" class="">
+                  <div style="text-align: left; width: 150px;">{$list.add_time|date='Y-m-d H:i',###}</div>
+                </td> 
+				<td align="left" class="">
+                  <div style="text-align: left; width: 100px;"><if $list.status eq 0 >未提现<else>提现成功</if></div>
+                </td>
+				<td align="left" class="">
+                  <div style="text-align: left; width: 150px;"><if $list.odd_time neq 0 >{$list.odd_time|date='Y-m-d H:i',###}</if></div>
+                </td> 
+				<td align="left" class="">
+                  <div style="text-align: left; width: 150px;">{$list.odd_numbers}</div>
+                </td>				
+                <td align="center" class="handle">
+                  <div style="text-align: center; width: 170px; max-width:170px;">                
+               
+                    <a href="{:Url('Admin/Designer/WorksCategoryAdd',array('id'=>$list['id']))}" class="btn blue"><i class="fa fa-pencil-square-o"></i>编辑</a>
+
+                  </div>
+                </td>
+                <td align="" class="" style="width: 100%;">
+                  <div>&nbsp;</div>
+                </td>
+              </tr>
+            </volist>
+          </tbody>
+        </table>
+      </div>
+      <div class="iDiv" style="display: none;"></div>
+    </div>
+    <!--分页位置--> 
+    {$pager->show()} </div>
+</div>
+<script>
+    $(document).ready(function(){ 
+      // 表格行点击选中切换
+      $('#flexigrid > table>tbody >tr').click(function(){
+        $(this).toggleClass('trSelected');
+    });
+    
+    // 点击刷新数据
+    $('.fa-refresh').click(function(){
+      location.href = location.href;
+    });
+    
+  });
+
+
+   
+</script>
+</body>
+</html>

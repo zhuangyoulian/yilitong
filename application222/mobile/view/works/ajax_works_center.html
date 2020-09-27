@@ -1,0 +1,17 @@
+<foreach name="worksList" item="v" key="k">
+	<div class="designer-works-show-col">
+        <div class="design-imgs-book">
+            <a href="{:Url('/Mobile/Works/WorksDetail',array('id'=>$v.works_id))}" class="works-imgs">
+            <img src="{$v.works_img}" alt="">
+        </a>
+        </div>
+        			        
+        <h4 class="design-works-name">{$v.works_name}</h4>
+        <dl class="works-type-infos">
+            <dt>{$v.cat_name}</dt>
+            <dd class="lx">{$v.comment_count}</dd>
+            <dd class="pl">{$v.click_count}</dd>
+        </dl>
+    
+    </div>
+</foreach>

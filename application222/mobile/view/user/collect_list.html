@@ -1,0 +1,136 @@
+<include file="public/header" title="我的收藏" body=""/>
+
+<style>
+    .collect-goods-title{
+        width: 100%;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-size: .58rem;
+        position: relative;
+        border-bottom: 1px solid #efefef;
+    }
+    .collect-goods-title a{
+        position: absolute;
+        left: .8rem;
+        top: .4rem;
+        display: block;
+        width: .44rem;
+        height: .8rem;
+        background: url(__MOBILE__/images/btn_more@3x.png) no-repeat;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        -ms-background-size: 100% auto;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+    }
+    /** ****** 产品 start ***** **/
+    .likeshop #goods_list{
+        width: 100%;
+        overflow: hidden;
+        padding: 2%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .likeshop #goods_list li{
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        float: left;
+        background: #fff;
+    }
+    .likeshop #goods_list li:nth-of-type(2n){
+        margin-right: 0;
+    }
+    .likeshop #goods_list li a{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .likeshop #goods_list li a img{
+        display: block;
+        /*width: 100%;*/
+        width: 7.54rem;
+        height: 7.54rem;
+        /*margin-top: .7rem;*/
+    }
+    .likeshop #goods_list li a strong{
+        display: block;
+        padding: 0 0.2rem 0.5rem 0.2rem;
+        font-size: .5rem;
+        color: #e6002d;
+    }
+    .likeshop #goods_list li a strong span{
+        font-size: .7rem;
+        padding-left: .1rem;
+    }
+    .likeshop .similer-product .guess-button{
+        color: #888;
+    }
+    /** ****** 产品 end ***** **/
+</style>
+<div class="collect-goods-title"><a href="javascript:history.go(-1);"></a>商品收藏</div>
+
+<if condition="empty($goods_list)" >
+    <!--没有收藏-s-->
+    <div class="comment_con p">
+        <div class="none"><br><br>亲，此处还没有收藏哦~</div>
+    </div>
+    <!--没有收藏-e-->
+<else/>
+    <div class="floor guesslike">
+        <div class="likeshop">
+            <ul id="goods_list">
+                <foreach name="goods_list" item="good">
+                    <li>
+                        <div class="similer-product">
+                            <a class="simidibl" href="{:Url('Goods/goodsInfo',array('id'=>$good[goods_id]))}">
+                                <img src="{$good.goods_thumb}"/>
+                                <span class="similar-product-text">{$good[goods_name]|getSubstr=0,20}</span>
+                            </a>
+                            <span class="similar-product-price">
+                                ¥
+                                <span class="big-price">{$good[shop_price]}</span>
+                                <!--<a href="{:Url('Goods/goodsList',['id'=>$good.cat_id])}"><span class="guess-button dele-button J_ping">看相似</span></a>-->
+                                <a href="{:Url('User/cancel_collect', ['collect_id'=>$good[collect_id]])}"><span class="guess-button  J_ping">取消收藏</span></a>
+                            </span>
+                        </div>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+</if>
+<!--底部导航-start-->
+ <include file="public/footer"/>
+<!--底部导航-end-->
+<script type="text/javascript" src="__STATIC__/mobile/js/sourch_submit.js"></script>
+<script  type="text/javascript" charset="utf-8">
+    /**
+     * ajax加载更多
+     * */
+    var page = 1;
+    function ajax_sourch_submit()
+    {
+        page += 1;
+        $.ajax({
+            type : "GET",
+            url:"/index.php/Mobile/User/collect_list?is_ajax=1&p="+page,//+tab,
+            success: function(data)
+            {
+                if($.trim(data) != '')
+                {
+                    $("#goods_list").append(data);
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

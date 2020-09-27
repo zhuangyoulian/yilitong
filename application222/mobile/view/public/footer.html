@@ -1,0 +1,86 @@
+    <style>
+        .footer-new {
+            position: fixed;
+            background: #fff;
+            width: 100%;
+            bottom: 0;
+            overflow: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+        }
+        .footer-div {
+          flex: 1;
+         
+            /*width: 15%;*/
+            margin: 0.3rem 0.4rem;
+           /* float: left;*/
+            bottom: 0;
+        }
+        .footer-a {
+            text-decoration: none;
+            color: #000;
+            font-family: "微软雅黑";
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-a:visited{
+            text-decoration: blink;
+        }
+        .footer-div >.footer-a> img {
+            width: 40%;
+            margin: auto;
+            display: block;
+        }
+        .footer-div >.footer-a> span {
+            text-align: center;
+            display: block;
+            font-size: 0.5rem;
+        }
+        .footer-div >.footer-a> img{
+            /* margin: 0 0 0.15rem 0.8rem; */
+            margin-bottom: 0.15rem;
+        }
+    </style>
+
+    <div class="footer-new">
+        <div class="footer-div">
+            <a class="footer-a" href="{:Url('Index/index')}">
+         <?php
+            $url=$_SERVER['REQUEST_URI'];
+            if(strrchr($url,"Index")){
+                echo '<img src="__MOBILE__/images/b_home_selected@2x.png"> <span style="color: red;">首页</span>';
+            }else{
+                echo '<img src="__MOBILE__/images/b_home@2x.png"> <span>首页</span>';
+                }
+        ?>
+            </a>
+        </div>
+        <div class="footer-div">
+            <a class="footer-a" href="{:Url('Goods/categoryList')}">
+        <?php
+            if(strrchr($url,"Goods")){
+                echo '<img src="__MOBILE__/images/b_nav_selected@2x.png"> <span style="color: red;">分类</span>';
+                }else{
+                echo ' <img src="__MOBILE__/images/b_nav@2x.png"> <span>分类</span>';
+            }
+        ?>
+            </a>
+        </div>
+        <div class="footer-div">
+            <a class="footer-a" href="{:Url('Index/zixun')}" ><img src="__MOBILE__/images/b_consult@2x.png"> <span>咨询</span></a>
+        </div>
+        <div class="footer-div">
+            <a class="footer-a" href="{:Url('User/index')}">
+                <?php
+                
+            if(strrchr($url,"User")){
+                echo '<img src="__MOBILE__/images/b_me_selected@2x.png"> <span style="color: red;">我的</span>';
+                }else{
+                echo ' <img src="__MOBILE__/images/b_me@2x.png"> <span>我的</span>';
+                }
+                ?>
+            </a>
+        </div>
+    </div>

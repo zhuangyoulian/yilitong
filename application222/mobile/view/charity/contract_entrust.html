@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑合同</title>
+    <link href="__MOBILE__/css/contract/scs.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="__MOBILE__/css/contract/reset.css" />
+    <link type="text/css" rel="stylesheet" href="__MOBILE__/css/contract/index.css" />
+    <link rel="stylesheet" href="__MOBILE__/css/contract/pdf2.css">
+    <script src="__MOBILE__/js/contract/jquery-3.4.1.min.js"></script>
+    <script src="__MOBILE__/js/contract/wthtong.js"></script>
+</head>
+
+<body>
+    <div class="hz_content">
+        <input type="text" value="{$contract_num}" id="hetongId" style="display: none;">
+        <input type="text" value="{$id.id}" id="id" style="display: none;" >
+        <input type="text" value="{$id.d_id}" id="d_id" style="display: none;" >
+        <input type="text" value="{$id.p_id}" id="p_id" style="display: none;" >
+        <input type="text" value="{$id.c_id}" id="c_id" style="display: none;" >
+        <input type="text" value="{$id.u_id}" id="u_id" style="display: none;" >
+        <input type="text" value="{$is_accomplish}" id="is_accomplish" style="display: none;" >
+        <section class="bank_one">
+            <div class="pinkc"><span class="s1">1/3</span><span>基本信息</span></div>
+            <div class="titleban one">
+                <div class="redban"></div>
+                <p>项目信息</p>
+            </div>
+            <div class="form_input">
+                <p class="form_title">项目名称<span class="red">*</span></p>
+                <input type="text" placeholder="请输入项目名称" class="form_txt project_name" value="{$contract_form.contract_name}" readonly>
+            </div>
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>乙方（供应方）信息</p>
+            </div>
+            <div class="form_input">
+                <p class="form_title">公司名称<span class="red">*</span></p>
+                <input type="text" placeholder="请输入公司名称" class="form_txt company_name" value="{$find.company_name}">
+            </div>
+            <div class="form_submit" id="submitWtOne">下一步</div>
+            
+
+        </section>
+        <section class="bank_two hidden" id="product_box_one">
+            <div class="pinkc"><span class="s1">2/3</span><span>产品信息</span></div>
+            <div class="titleban one">
+                <div class="redban"></div>
+                <p>产品信息</p>
+            </div>
+            <div class="form_input">
+                <p class="form_title">产品名称<span class="red">*</span></p>
+                <!-- <input type="text" placeholder="请输入产品名称" class="form_txt product_name" value="口罩" readonly > -->
+                <input type="text" placeholder="请输入产品名称" class="form_txt product_name" value="{$contract_form.product_name}" readonly >
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">产品型号</p>
+                <!-- <input type="text" placeholder="请输入产品型号" class="form_txt product_type" value="N95" readonly> -->
+                <input type="text" placeholder="请输入产品型号" class="form_txt product_type" value="{$contract_form.product_type}" readonly>
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">产品数量<span class="red">*</span></p>
+                <!-- <input type="number" placeholder="请输入产品数量" class="form_txt product_num" value="5000" readonly> -->
+                <input type="number" placeholder="请输入产品数量" class="form_txt product_num" value="{$contract_form.product_num}" min="0" readonly>
+
+            </div>
+            <div class="form_input">
+                <p class="form_title">产品单位<span class="red">*</span></p>
+                <!-- <input type="text" placeholder="请输入产品单位" class="form_txt product_danwei" value="个" readonly> -->
+                <input type="text" placeholder="请输入产品单位" class="form_txt product_danwei" value="{$contract_form.product_danwei}" readonly>
+            </div>
+            <div class="form_input">
+                <p class="form_title">税率</p>
+                <input type="text" placeholder="请选择税率" class="form_txt taxrate" readonly value="{$find.taxrate}">
+                <img src="img/icon_next@3x.png" alt="" class="icon_next">
+            </div>
+            <div class="form_input">
+                <p class="form_title">含税单价<span class="red">*</span></p>
+                <input type="number" placeholder="请输入含税单价" class="form_txt product_price" value="{$find.product_price}" min="0">
+            </div>
+            <div class="form_input">
+                <p class="form_title">合同总金额<span class="red">*</span></p>
+                <input type="number" placeholder="请输入合同总金额" class="form_txt product_totalprice" value="{$find.product_totalprice}" min="0" readonly>
+            </div>
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>包装方式</p>
+            </div>
+
+            <div class="form_input">
+                <p class="form_title">包装规格<span class="red">*</span></p>
+                <!-- <input type="text" placeholder="请输入包装规格" class="form_txt product_scope" value="50个" readonly>  -->
+                <input type="text" placeholder="请输入包装规格" class="form_txt product_scope" value="{$contract_form.product_scope}" readonly > 
+            </div>
+            <div class="form_input">
+                <p class="form_title">外包装材质<span class="red">*</span></p>
+                <!-- <input type="text" placeholder="请输入外包装材质" class="form_txt product_mate" value="彩盒" readonly> -->
+                <input type="text" placeholder="请输入外包装材质" class="form_txt product_mate" value="{$contract_form.product_mate}" readonly>
+            </div>
+            <div class="form_input">
+                <p class="form_title">外箱包装要求<span class="red">*</span></p>
+                <!-- <input type="text" placeholder="请输入外箱包装要求" class="form_txt product_need" value="硬纸盒" readonly> -->
+                <input type="text" placeholder="请输入外箱包装要求" class="form_txt product_need" value="{$contract_form.product_need}" readonly>
+            </div>
+            <div class="form_buttons" id=form_buttonsTwo>
+                <div class="but_gray" id="BackWtTwo">上一步</div>
+                <div class="but_red" id="submitWtTwo">下一步</div>
+            </div>
+        </section>
+        <section class="bank_three hidden">
+            <div class="pinkc"><span class="s1">3/3</span><span>发货及付款</span></div>
+            <div class="titleban one">
+                <div class="redban"></div>
+                <p>发货时间及数量</p>
+            </div>
+            <div class="form_input" id="one_cash_time">
+                <p class="form_title">发货排期表<span class="red">*</span></p>
+                <input type="text" placeholder="请输入发货排期表" class="form_txt send_date" readonly>
+                <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+            </div>
+            <div class="titleban one">
+                <div class="redban"></div>
+                <p>付款方式</p>
+            </div>
+
+            <div class="form_input" id="twice_cash_time">
+                <p class="form_title">预付款付款总额<span class="red">*</span></p>
+                <input type="text" placeholder="请选择付款总额" class="form_txt send_totalprice" readonly >
+                <img src="__MOBILE__/images/contract/icon_next@3x.png" alt="" class="icon_next">
+            </div>
+
+            <p class="notice_txt_one" id="noticeone">注：预付款在合同签订后3个工作日内支付。</p>
+            <div class="form_input hidden" id="weikuan">
+                <p class="form_title">尾款付款总额<span class="red">*</span></p>
+                <input type="text" class="form_txt send_wk" readonly>
+            </div>
+            <div class="titleban one">
+                <div class="redban"></div>
+                <p>乙方收款账户</p>
+            </div>
+            <div class="form_input">
+                <p class="form_title">收款账户<span class="red">*</span></p>
+                <input type="text" placeholder="请输入收款账户" class="form_txt cash_username" value="{$find.cash_username}">
+            </div>
+            <div class="form_input">
+                <p class="form_title">开户银行<span class="red">*</span></p>
+                <input type="text" placeholder="请输入开户银行" class="form_txt cash_name"  value="{$find.cash_name}">
+            </div>
+            <div class="form_input">
+                <p class="form_title">银行账号<span class="red">*</span></p>
+                <input type="text" placeholder="请输入银行账号" class="form_txt cash_account" value="{$find.cash_account}">
+            </div>
+
+            <div class="form_buttons">
+                <div class="but_gray" id="BackWtThree">上一步</div>
+                <div class="but_red" id="submitWtThree">提交合同</div>
+            </div>
+        </section>
+        <div class="notice hidden">提示内容</div>
+        <div class="add_product2 hidden">
+            <div class="titleban">
+                <div class="redban"></div>
+                <p>发货排期</p>
+            </div>
+            <div class="product_box" id="product_box_two">
+                <div class="box">
+                    <div class="form_input">
+                        <p class="form_title">配送数量<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入配送数量" class="form_txt p2_productnum"  value="{$sendgoodslist1.0}" min="0">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime"  value="{$sendgoodslist1.1}">
+                    </div>
+                </div>
+                <if condition='!empty($sendgoodslist2)'>
+                <div class="box">
+                    <div class="form_input">
+                        <p class="form_title">配送数量<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入配送数量" class="form_txt p2_productnum"  value="{$sendgoodslist2.0}" min="0">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime"  value="{$sendgoodslist2.1}">
+                    </div>
+                </div>
+                </if> 
+                <div class="box2 hidden">
+                    <div class="form_input">
+                        <p class="form_title">配送数量<span class="red">*</span></p>
+                        <input type="number" placeholder="请输入配送数量" class="form_txt p2_productnum"  value="{$sendgoodslist2.0}" min="0">
+                    </div>
+                    <div class="form_input">
+                        <p class="form_title">配送时间<span class="red">*</span></p>
+                        <input type="date" placeholder="请输入配送时间" class="form_txt p2_sendtime"  value="{$sendgoodslist2.1}">
+                    </div>
+                </div>
+            </div>
+            <div class="add_box2  <if condition='!empty($sendgoodslist2)'> hidden </if> ">
+                <img src="__MOBILE__/images/contract/icon_add@3x.png" alt="">
+                <span>新增发货排期</span>
+            </div>
+            
+            <div class="form_buttons">
+                <div class="but_gray" id="BackWtFour">返回</div>
+                <div class="but_red" id="submitSendGoods">提交发货排期表</div>
+            </div>
+            <!-- <div class="form_submit" id="submitSendGoods">提交发货排期表</div> -->
+        </div>
+        <div class="submit_success hidden">
+            <img src="__MOBILE__/images/contract/icon_contract@3x.png" alt="" class="icon_contract">
+            <p class="su1">合同提交成功</p>
+            <p class="su2">合同编号：<span id="successHtId">{$contract_num}</span></p>
+            <!-- <div class="dow" onclick="printOut()">合同下载</div> -->
+            <!-- <a target="_blank" href="" id="img_url" ><div class="dow" >合同下载</div></a> -->
+            <a href="/Mobile/Charity/contract_me"><div class="dow" >进入合同中心</div></a>
+            <a href="/Mobile/Charity/contract_shouye.html">
+                <div class="dow2">返回首页</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="wrap hidden"></div>
+
+
+
+    <!-- 底部选择 预付款付款总额-->
+    <div class="selectedFuk hidden" id="select_cash_price">
+        <div class="tie1">
+            <div class="sected_cancel">取消</div>
+            <p>预付款付款总额</p>
+            <div class="sected_confirm" id="confirmCashPrice">完成</div>
+        </div>
+        <ul class="sected_content">
+            <li data-bili="30">合同总额的30%</li>
+            <li data-bili="40" class="active">合同总额的40%</li>
+            <li data-bili="50">合同总额的50%</li>
+            <li data-bili="60">合同总额的60%</li>
+            <li data-bili="70">合同总额的70%</li>
+            <li data-bili="80">合同总额的80%</li>
+            <li data-bili="90">合同总额的90%</li>
+            <li data-bili="100">合同总额的100%</li>
+        </ul>
+    </div>
+    <!--  选择税率 -->
+    <div class="selectedFuk hidden" id="select_tax_rate">
+        <div class="tie1">
+            <div class="sected_cancel">取消</div>
+            <p>选择产品及数量</p>
+            <div class="sected_confirm" id="confirmTaxRate">完成</div>
+        </div>
+        <ul class="sected_content">
+            <li data-amount="0">0%</li>
+            <li data-amount="3">3%</li>
+            <li data-amount="6" class="active">6%</li>
+            <li data-amount="9">9%</li>
+            <li data-amount="13">13%</li>
+        </ul>
+    </div>
+    <!-- 选择税率 -->
+
+    <div class="successBox hidden">
+        <div class="p1" style="font-size: 15px;">您有未提交的该合同类型，是否要继续编辑？</div>
+        <div class="btton_an"><a href="#" class="del" >重新创建</a><a href="javascript:;" class="edit" style="color: #E6002D;">继续编辑</a>
+        </div>
+    </div>
+
+
+    <!-- pdf页面 -->
+    <div class="pdf_page">
+        <div class="pdf_page_box">
+            <section class="showorhidden">
+                <div id="printId2">
+                    <div class="content">
+                        <div>
+                            <p style="margin:0pt; text-align:center"><span style="font-family:'Times New Roman'; font-size:16pt; font-weight:bold">&#xa0;</span></p>
+                            <p style="margin:0pt; text-align:center">
+                                <span style="font-family:'Times New Roman'; font-size:20pt; font-weight:bold; text-decoration:underline" id="wt_hetongname">               </span>
+                                <span style="font-family:宋体; font-size:20pt; font-weight:bold">委托</span>
+                                <span style="font-family:宋体; font-size:20pt; font-weight:bold">生产</span>
+                                <span style="font-family:宋体; font-size:20pt; font-weight:bold">合同</span>
+                            </p>
+                            <p style="margin:0pt"><span style="font-family:'Times New Roman'; font-size:12pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">合同编号：</span>
+                                <span style="font-family:宋体; font-size:14pt" id="wt_hetongId">{$contract_num}</span>
+                                <span style="font-family:宋体; font-size:14pt">    </span><span style="font-family:宋体; font-size:14pt">    </span>
+                                <span style="font-family:宋体; font-size:14pt">签订日期：<span id="wt_currentyear">2020</span>年</span>
+                                <span style="font-family:宋体; font-size:14pt" id="wt_currentmonth">  </span>
+                                <span style="font-family:宋体; font-size:14pt">月</span>
+                                <span style="font-family:宋体; font-size:14pt" id="wt_currentday">   </span>
+                                <span style="font-family:宋体; font-size:14pt">日</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">甲方（</span><span style="font-family:宋体; font-size:14pt">委托</span><span style="font-family:宋体; font-size:14pt">方）: </span><span style="font-family:宋体; font-size:14pt; text-decoration:underline">{$contract_corporate.company}</span>
+                                <!-- <span style="font-family:宋体; font-size:14pt">有限公司</span> -->
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">乙方（</span>
+                                <span style="font-family:宋体; font-size:14pt">受</span>
+                                <span style="font-family:宋体; font-size:14pt">托方）:</span><span style="font-family:宋体; font-size:14pt"> </span>
+                                <span style="font-family:宋体; font-size:14pt; display: inline-block; width: 200pt;border-bottom: 1pt solid #333333;" id="wt_company">                    </span>
+                                <span style="font-family:宋体; font-size:14pt"></span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify; text-indent:24pt"><span style="font-family:宋体; font-size:14pt">1、</span><span style="font-family:宋体; font-size:14pt">乙双方在平等互利、诚实信用的基础上，根据《中华人民共和国合同法》及相关的法律法规规定，经双方友好协商，就甲方向乙方采购货物、乙方负责</span><span style="font-family:宋体; font-size:14pt">生产</span>
+                                <span style="font-family:宋体; font-size:14pt">并提供</span>
+                                <span style="font-family:宋体; font-size:14pt">交货</span>
+                                <span style="font-family:宋体; font-size:14pt">服务一事，特订立本合同以资双方共同遵守：</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt 0pt 0pt 28pt; text-indent:-28pt">
+                                <span style="font-family:宋体; font-size:14pt">一、</span>
+                                <span style="font:7.0pt 'Times New Roman'"> </span>
+                                <span style="font-family:宋体; font-size:14pt">产品名称、型号、数量</span>
+                                <span style="font-family:宋体; font-size:14pt">、</span>
+                                <span style="font-family:宋体; font-size:14pt">金额：</span>
+                            </p>
+                            <div style="text-align:center">
+                                <table cellspacing="0" cellpadding="0" style="border-collapse:collapse; margin:0 auto; width:433.3pt">
+                                    <tr style="height:23.35pt">
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:26.25pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">序号</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:58.95pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt; font-weight:bold">货物名称</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:53.7pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">规格型号</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:79.2pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">含税</span><span style="font-family:宋体; font-size:12pt; font-weight:bold">单价（元）</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:39.45pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">单 位</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:41.4pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">数 量</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:58pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">金额（元）</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:26.25pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt">1</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:58.95pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center;height: 50pt;">
+                                                <span style="font-family:宋体; font-size:12pt" id="wt_goodsname">&#xa0;</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:53.7pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt" id="wt_goodstype">&#xa0;</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:79.2pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt" id="wt_goodsprice">&#xa0;</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:39.45pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt" id="wt_goodsdanwei">&#xa0;</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:41.4pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt" id="wt_goodsnum">&#xa0;</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:58pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt" id="wt_goodstotalprice">&#xa0;</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:421.75pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:12pt">合同总价</span><span style="font-family:宋体; font-size:12pt">  </span><span style="font-family:宋体; font-size:12pt">￥</span><span style="font-family:宋体; font-size:12pt">:</span>
+                                                <span style="font-family:宋体; font-size:12pt; display: inline-block;width: 300pt;border-bottom: 1pt solid #333333;text-align:right;"><span id="wt_goodstotalprice2"></span>元</span>
+                                                <span style="font-family:宋体; font-size:12pt">  </span><span style="font-family:宋体; font-size:12pt">    </span><span style="font-family:宋体; font-size:12pt">  </span><span style="font-family:宋体; font-size:12pt">大写</span>
+                                                <span style="font-family:宋体; font-size:12pt">（人民币）</span>
+                                                <span style="font-family:宋体; font-size:12pt">：</span>
+                                                <span style="font-family:宋体; font-size:12pt; text-align: right;display: inline-block;border-bottom: 1pt solid #333333;width:300pt;"> 
+                                                    <span id="wt_goodstotalprice_big"></span>
+                                                <span style="font-family:宋体; font-size:12pt">圆</span>
+                                                <span style="font-family:宋体; font-size:12pt">整</span>
+                                                </span>
+
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height:0pt">
+                                        <td style="width:37.05pt; border:none"></td>
+                                        <td style="width:69.75pt; border:none"></td>
+                                        <td style="width:64.5pt; border:none"></td>
+                                        <td style="width:90pt; border:none"></td>
+                                        <td style="width:50.25pt; border:none"></td>
+                                        <td style="width:52.2pt; border:none"></td>
+                                        <td style="width:68.8pt; border:none"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">增值税率为<span id="wt_taxrate">13</span>%</span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">二、</span><span style="font-family:宋体; font-size:14pt">产品质量参数要求：</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">按</span><span style="font-family:宋体; font-size:14pt">样品或本合同项下所列明的产品必须符合国家的相关产品技术和质量的生产标准要求。</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt; text-indent:0pt"><span style="font-family:宋体; font-size:14pt">3、</span><span style="font-family:宋体; font-size:14pt">包装方式</span><span style="font-family:宋体; font-size:14pt">：</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">产品名称：</span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:underline" id="wt_productname">               </span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:none"> ，</span>
+                                <span style="font-family:宋体; font-size:14pt">包装规格：</span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:underline" id="wt_productscope">    </span>
+                                <span style="font-family:宋体; font-size:14pt">单位(个/盒/片等)；</span>
+                                <span style="font-family:宋体; font-size:14pt">外包装材质：</span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:underline" id="wt_productmate">              </span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:none">，</span>
+                                <span style="font-family:宋体; font-size:14pt">外箱包装要求：</span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:underline" id="wt_productneed">           </span>
+                                <span style="font-family:宋体; font-size:14pt; text-decoration:none">；</span>
+                            </p>
+
+                        </div>
+                        <div>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">四、交货与验收：</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">4.1、乙方负责把产品送到合同指定的交货地点，并承担产品的运输风险，采取以保护货物的包装方式。为了保证产品在运输和装卸过程中的安全，乙方所销售产品包装应符合国家或行业（部）标准，没有相关规定的，应符合行业通用的包装方式。</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">4.2、发货时间</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <div style="text-align:center">
+                                <table cellspacing="0" cellpadding="0" style="border-collapse:collapse; margin:0 auto; width:443.9pt" id="wt_tabletr">
+                                    <tr style="height:23.35pt">
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:34.85pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center">
+                                                <span style="font-family:宋体; font-size:12pt; font-weight:bold">序号</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:146.8pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">发货时间</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:229.1pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">发货数量</span></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">4.3、交货地点：甲方指定</span><span style="font-family:宋体; font-size:14pt">的深圳</span><span style="font-family:宋体; font-size:14pt">交货地点</span><span style="font-family:宋体; font-size:14pt">（后附清单）</span>
+                                <span style="font-family:宋体; font-size:14pt">。</span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                        </div>
+                        <div>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">五、付款方式：</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">合同签订后，</span>
+                                <span style="font-family:宋体; font-size:14pt">三个工作日内支付总货款的</span>
+                                <span style="font-family:宋体; font-size:14pt; width: 50pt;display: inline-block;border-bottom: 1pt solid #333333;text-align: center;" id="wt_bili">   </span>
+                                <span style="font-family:宋体; font-size:14pt">%作为预付款，金额为（小写：</span>
+                                <span style="font-family:宋体; font-size:14pt; width: 150pt;display: inline-block;border-bottom: 1pt solid #333333;text-align: right;" id="wt_preprice">         </span>
+                                <span style="font-family:宋体; font-size:14pt">元整，大写：</span>
+                                <span style="font-family:宋体; font-size:14pt; width: 200pt;display: inline-block;border-bottom: 1pt solid #333333;text-align: right;" id="wt_preprice_big">            </span>
+                                <span style="font-family:宋体; font-size:14pt">圆整），根据每批的发货数量支付对应数量的尾款金额的</span>
+                                <span style="font-family:宋体; font-size:14pt; width: 50pt;display: inline-block;border-bottom: 1pt solid #333333;text-align: center;" id="wt_fin_bili">    </span>
+                                <span style="font-family:宋体; font-size:14pt">%。</span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">六、质量保证和售后服务：</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 12pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">6.1、乙方保证所</span><span style="font-family:宋体; font-size:14pt">生产的</span><span style="font-family:宋体; font-size:14pt">货物均为</span><span style="font-family:宋体; font-size:14pt">自己工</span>
+                                <span style="font-family:宋体; font-size:14pt">厂</span>
+                                <span style="font-family:宋体; font-size:14pt">（或有直接授权的符合相关资质的工厂）</span><span style="font-family:宋体; font-size:14pt">生产，保证货物完全符合的国家强制性技术质量</span><span style="font-family:宋体; font-size:14pt">标准</span><span style="font-family:宋体; font-size:14pt">和合同</span>
+                                <span style="font-family:宋体; font-size:14pt">约定的</span>
+                                <span style="font-family:宋体; font-size:14pt">要求。</span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt 0pt 12pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">6.2、</span><span style="font-family:宋体; font-size:14pt">乙方根据合同数量，做好自身的产能和交期安排，不得因（包括但不限于）材料短缺、设备故障、人员流动、技术欠缺等原因拖延交货的时间和数量。因上述等原因给乙方造成的损失由甲方承担。</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">6.3、</span><span style="font-family:宋体; font-size:14pt">乙方保证所提供的货物在其使用寿命期内具有符合质量要求和产品说明书标明的性能和使用寿命。在产品质量保证期之内，乙方须对由于设计、工艺或材料的缺陷而发生的任何不足或故障负责。</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">七、违约责任：</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">7.1、甲方违约责任</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 6pt"><span style="font-family:宋体; font-size:14pt">（1）甲方逾期付款的，</span><span style="font-family:宋体; font-size:14pt">乙方顺延</span><span style="font-family:宋体; font-size:14pt">发货。</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 18pt"><span style="font-family:宋体; font-size:14pt">（2）甲方在未经乙方书面授权的情况下，不得侵犯乙方知识产权，否则将承担一切经济和法律责任。</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">7.2、乙方违约责任</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 12pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">（</span><span style="font-family:宋体; font-size:14pt">1）若乙方不能按时交货，则须按合同总额的</span><span style="font-family:宋体; font-size:14pt; text-decoration:underline">??</span><span style="font-family:宋体; font-size:14pt">%作为赔偿金支付给甲方。</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">（</span><span style="font-family:宋体; font-size:14pt">2</span><span style="font-family:宋体; font-size:14pt">）乙方交</span><span style="font-family:宋体; font-size:14pt">付的</span><span style="font-family:宋体; font-size:14pt">货物规格、型号、数量、质量、外包装</span>
+                                <span style="font-family:宋体; font-size:14pt">等</span><span style="font-family:宋体; font-size:14pt">不符合合同约定的，乙方</span><span style="font-family:宋体; font-size:14pt">应立即</span><span style="font-family:宋体; font-size:14pt">更换货处理，并承担更换</span>
+                                <span style="font-family:宋体; font-size:14pt">货</span>
+                                <span style="font-family:宋体; font-size:14pt">而</span><span style="font-family:宋体; font-size:14pt">产生</span><span style="font-family:宋体; font-size:14pt">的</span><span style="font-family:宋体; font-size:14pt">一切</span>
+                                <span style="font-family:宋体; font-size:14pt">费用</span>
+                                <span style="font-family:宋体; font-size:14pt">并赔偿甲方损失</span>
+                                <span style="font-family:宋体; font-size:14pt">。</span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt; text-indent:0pt"><span style="font-family:宋体; font-size:14pt">8、</span><span style="font-family:宋体; font-size:14pt">争议的解决：</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">本合同一经签订，双方必须严格执行，若有异议或未尽事宜，双方可协商解决，协商不</span><span style="font-family:宋体; font-size:14pt">成的，</span><span style="font-family:宋体; font-size:14pt">可通过在合同签订所在</span><span style="font-family:宋体; font-size:14pt">地（</span>
+                                <span style="font-family:宋体; font-size:14pt">深圳</span><span style="font-family:宋体; font-size:14pt">）</span><span style="font-family:宋体; font-size:14pt">进行诉讼程序解决。</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+
+                        </div>
+                        <div>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">九、不可抗力因素：</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">因台风、地震、水灾以及其它非需、供方责任造成的，不能预见、不能避免、并不能克服的客观情况为不可抗力。遇有不可抗力的一方，应立即将事件情况通知对方，并提供事件详情以及合同不能履行，或部分不能履行，或需要延期履行的理由的有效证明文件，按事件对履行合同的影响程度，由双方协商决定是否解</span><span style="font-family:宋体; font-size:14pt">除</span>
+                                <span style="font-family:宋体; font-size:14pt">合同、部分免除履行合同的责任或延期履行。</span>
+                            </p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="font-size:14pt; line-height:150%; margin:0pt"><span style="font-family:宋体; font-size:14pt">十、</span><span style="font-family:宋体; font-size:14pt">其他：</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-align:justify"><span style="font-family:宋体; font-size:14pt">本合同经甲乙双方法定代表人或委托代表签字</span><span style="font-family:宋体; font-size:14pt">（或盖章）</span><span style="font-family:宋体; font-size:14pt">后生效；本合同一式</span><span style="font-family:宋体; font-size:14pt">四</span>
+                                <span style="font-family:宋体; font-size:14pt">份，</span><span style="font-family:宋体; font-size:14pt">甲、</span><span style="font-family:宋体; font-size:14pt">乙</span><span style="font-family:宋体; font-size:14pt">双</span>
+                                <span style="font-family:宋体; font-size:14pt">方</span>
+                                <span style="font-family:宋体; font-size:14pt">各</span><span style="font-family:宋体; font-size:14pt">执贰份原件。</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">（以</span><span style="font-family:宋体; font-size:14pt">下</span><span style="font-family:宋体; font-size:14pt">无正文）</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">附（乙方收款账户）：</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">收</span><span style="font-family:宋体; font-size:14pt">款账户： </span>
+                                <span style="font-family:宋体; font-size:14pt" id="wt_cash_username"> </span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">开户银行：<span id="wt_cash_name"></span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">银行账号：<span id="wt_cash_account"></span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <!-- <span style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p> -->
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">甲方</span>
+                                <span style="font-family:宋体; font-size:14pt">： {$contract_corporate.company}</span><span style="font-family:宋体; font-size:14pt"></span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">法定代表人（授权代表）</span><span style="font-family:宋体; font-size:14pt">：  </span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">签</span>
+                                <span style="font-family:宋体; font-size:14pt">   </span><span style="font-family:宋体; font-size:14pt">章：</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">联系人电话：</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <p style="line-height:20pt; margin:0pt 0pt 0pt 39pt; padding-left:195pt; text-indent:-234pt"><span style="font-family:宋体; font-size:14pt">乙方 ：</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">法定代表人（授权代表）</span><span style="font-family:宋体; font-size:14pt">： </span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">签  章：</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">联系人电话：</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-indent:180pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <!-- <span style="line-height:20pt; margin:0pt; text-indent:180pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p> -->
+                            <p style="line-height:20pt; margin:0pt; text-indent:180pt"><span style="font-family:宋体; font-size:14pt">签订日期：2020年</span><span style="font-family:宋体; font-size:14pt; text-decoration:underline">    </span><span style="font-family:宋体; font-size:14pt">月 </span><span style="font-family:宋体; font-size:14pt; text-decoration:underline">     </span>
+                                <span style="font-family:宋体; font-size:14pt">日    </span>
+                            </p>
+
+
+
+                        </div>
+                        <div>
+                            <p style="line-height:20pt; margin:0pt; text-indent:180pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt; text-indent:180pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">附件：</span><span style="font-family:宋体; font-size:14pt">交货地点</span><span style="font-family:宋体; font-size:14pt">清单</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <div style="text-align:center">
+                                <table cellspacing="0" cellpadding="0" style="border-collapse:collapse; margin:0 auto; width:443.9pt">
+                                    <tr style="height:23.35pt">
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:34.85pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">序号</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:386.7pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt; font-weight:bold">交货地点</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:34.85pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt">1</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:386.7pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt">{$contract_form.product_delivery1}</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:34.85pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt">2</span></p>
+                                        </td>
+                                        <td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:top; width:386.7pt">
+                                            <p style="font-size:12pt; line-height:150%; margin:0pt; text-align:center"><span style="font-family:宋体; font-size:12pt">{$contract_form.product_delivery2}</span></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                            <p style="line-height:20pt; margin:0pt"><span style="font-family:宋体; font-size:14pt">&#xa0;</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+    <script src="__MOBILE__/js/contract/html2canvas.min.js "></script>
+    <script src="__MOBILE__/js/contract/jspdf.min.js "></script>
+</body>
+
+</html>

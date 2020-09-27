@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>申请店主</title>
+		<link rel="stylesheet" href="__MOBILE__/css/distribution.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+		<style>
+			.axis{
+				box-sizing: border-box;
+			}
+			.welfareName{
+				margin: 0 0.25rem 0 0.3rem;
+			}
+          	.close img{
+          		position:relative;
+            	top:0.5rem;
+            	right:0.8rem;
+          	}
+          	.win3box{
+          		height:5.6rem;
+            	font-size:0.26rem;
+          	}
+          	.affirm{
+          		color:#fff;
+          	}
+		</style>
+	</head>
+	<body>
+		<div class="shopkeeper">
+			<header class="titleBar">
+				<div class="backImg"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_white.png"></a></div>
+				<div class="headName">申请店主</div>
+				<div></div>
+			</header>
+			<section class="shopkeeperBox">
+				<div class="literture"><img src="__MOBILE__/images/literture.png"></div>
+				<div class="shopkeeperText">
+					<div class="welfare">
+						<div class="axis"></div>
+						<div class="welfareName">店主福利</div>
+						<div class="axis"></div>
+					</div>
+					<div class="welfareExplain">
+						<div class="explainLeft">
+							<div class="left1">
+								<div>1.奖励高佣金</div>
+								<div class="letter"><img src="__MOBILE__/images/icn_doubt.png"></div>
+							</div>
+							<div>3.低门槛升级</div>
+						</div>
+						<div class="explainRight">
+							<div>2.专属优惠券</div>
+							<div>4.简单易操作</div>
+						</div>
+					</div>
+					<if condition="empty($_SESSION['l_code'])">
+					<div class="invite">邀请码：<input type="tel" placeholder="请输入邀请码" maxlength="6" id="code"></div>
+					<else/>
+					<div class="invite">邀请码：<input type="tel" value="{$_SESSION['l_code']}" maxlength="6" id="code"></div>
+					</if>  
+					<div class="affirm" onclick="submit()">我要成为店主</div>
+					<div class="noInvite">我没有邀请码</div>
+					<div class="inviteExplain">邀请码是一礼通为店主用户提供的专属编码，普通用户需要有店主用户推荐方可成为店主用户，快去找你身边的一礼通店主会员吧。</div>
+				</div>
+			</section>
+			<div class="win2">
+				<div class="win2wrap">
+					<div class="win2box">
+						<div class="reminder">系统将为您自动生成邀请码</div>
+						<div class="choice">
+							<div class="no">取消</div>
+							<div class="cancel">确定</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="win3">
+				<div class="win3wrap">
+					<div class="win3box">
+						<div class="BonusName">奖励高佣金</div>
+						<div class="Bonus">1.店主自己购买或推荐普通用户购买商品，可获得该订单的100%佣金。</div>
+						<div class="Bonus">2.店主推荐普通用户成为店主的人购买商品或TA再推荐别人购买商品，该店主可获得该订单佣金的28%。</div>
+						<div class="Bonus">3.店主推荐普通用户升级为店主的人数≥3时，并且均产生订单时，该店主还可额外获得该订单佣金的14%。</div>
+						<div class="close"><img src="__MOBILE__/images/icon_close.png" alt=""></div>
+					</div>
+					
+				</div>
+			</div>
+			<input type="hidden" id="url" value="{$url}">
+		</div>
+<script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js "></script>
+<script>
+
+    //通过config接口注入权限验证配置
+     // alert(location.href.split('#')[0]);
+    wx.config({
+
+        //debug : true,
+        debug : false, 
+        appId: '<?php echo $signPackage["appId"];?>',// 
+        timestamp: '<?php echo $signPackage["timestamp"];?>',//生成签名的时间戳
+        nonceStr: '<?php echo $signPackage["nonceStr"];?>',//生成签名的随机串
+        signature: '<?php echo $signPackage["signature"];?>',
+
+      jsApiList : ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo']
+
+    });
+
+    wx.ready(function(){
+
+      var
+                s_title = '我在礼店主赚了好多零花钱，给你分享一个赚钱小秘诀！',  // 分享标题
+
+                s_link = 'https://www.yilitong.com/mobile/Distribution/phoneAuthfx/referrer_id/{$_SESSION['user']['user_id']}',  // 分享链接
+
+                s_desc = '自用省钱，分享赚钱！史上最赚钱的礼店主来了~快!给你争取了一个名额！',  //分享描述
+
+                s_imgUrl = 'http://www.yilitong.com/public/static/mobile/images/logo2.png'; 	// 分享图标
+
+      //朋友圈
+
+      wx.onMenuShareTimeline({
+
+        title: s_title, // 分享标题
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+      //发送给好友
+
+      wx.onMenuShareAppMessage({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        type: '', // 分享类型,music、video或link，不填默认为link
+
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+
+        success: function () {},
+
+        cancel: function () {}
+
+      });
+
+      //QQ好友
+
+      wx.onMenuShareQQ({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+      //腾讯微博
+
+      wx.onMenuShareWeibo({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+    });
+
+</script>							
+<script>
+	$(".letter").click(function(){
+		$('.win3').show();
+	})
+	$(".close").click(function(){
+		$('.win3').hide();
+	})
+	$(".noInvite").click(function(){
+		$('.win2').show();
+	})
+	$(".no").click(function(){
+		$('.win2').hide();
+	})
+	$(".cancel").click(function(){
+		$.ajax({
+			type:'POST',
+			url:"{:Url('Distribution/apply')}",
+			data:{self:1},
+			dataType: 'json',
+			success: function(data){
+				if(data.status == 2){
+		          alert(data.msg);
+		          window.location.reload();  //刷新当前页面
+			   }
+			}
+		})
+		$('.win2').hide();
+	})
+	function submit(){
+		var code=$("#code").val();
+		var url=$("#url").val();   //上一页的地址
+		var u_id = {$_SESSION['user']['user_id']};
+		$.ajax({
+			type:'POST',
+			url:"{:Url('Distribution/apply')}",
+			data:{code:code,u_id:u_id},
+			dataType: 'json',
+			success: function(data){
+		       if(data.status == 1){
+		          alert(data.msg);
+				  location.href = '/Mobile/Distribution/index/id/'+data.id+'.html';
+			   }else if(data.status == 3){
+		          alert(data.msg);
+				  location.href = url;
+			   }else{
+		           alert(data.msg);
+			      // showErrorMsg(data.msg);
+			   }
+			}
+		})
+	}
+</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的推广二维码</title>
+		<link rel="stylesheet" href="__MOBILE__/css/distribution.css">
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+	</head>
+	<body>
+		<div class="generalize">
+			<header class="titlesBar">
+				<div class="backImg"><a href="javascript:history.go(-1);"><img src="__MOBILE__/images/icon_back_black.png"></a></div>
+				<div>我的推广二维码</div>
+				<div></div>
+			</header>
+			<section class="generalize_box">
+				<div class="twoCode">
+					<div class="headPortrait">
+					<if condition="empty($maxCard[head_pic])">
+						<div class="headImgs"><img src="__MOBILE__/images/bg_master_center.png" alt=""></div>
+					<else/>
+						<div class="headImgs"><img src="{$maxCard.head_pic}" alt=""></div>
+					</if>
+						<div class="headRight">
+							<div class="shopkeeper_name">{$maxCard['shop_name']}</div>
+							<div class="ylt_shopkeeper">一礼通店主</div>
+						</div>
+					</div>
+					<div class="twoCodeImg"><img src="{$maxCard['qr_code']}"></div>
+					<div class="twoCodeHint">扫一扫识别图中二维码进入我的小店</div>
+				</div>
+				<div class="shareHint">长按图片保存到相册，即可分享给好友~</div>
+				<div class="hint_box">
+					<div class="how">
+						<div><img src="__MOBILE__/images/icon_money.png"></div>
+						<div>如何赚钱</div>
+					</div>
+					<p>1.转发商品链接或商品图片给微信好友;</p>
+					<p>2.从您转发的链接或图片进入商城的好友，系统将自动锁定成为您的客户，他们在微信商城中购买任何商品，您都可以获得店主收益。</p>
+					<p>3.您可以在店主中心查看【我推荐的店主】和【店主订单】，好友确认收货后收益方可体现。</p>
+					<div class="how"><img src="__MOBILE__/images/icon_instructions.png">说明</div>
+					<p>分享后会带有独特的推荐码，您的好友访问之后，系统会自动检测并记录客户关系。如果您的好友已被其他人抢先发展成为客户，TA就不能成为您的客户，以最早发展成为客户为准。</p>
+				</div>
+				<div style="height: 1rem"></div>
+			</section>
+		</div>
+<!--底部-start-->
+<include file="distribution/bottom"/>
+<!--底部-end-->
+	</body>
+</html>

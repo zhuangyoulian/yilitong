@@ -1,0 +1,376 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico" media="screen"/>
+    <title>设计师-设计作品-{$config['shop_info_store_title']}</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+
+    <meta http-equiv="keywords" content="礼品定制,礼品设计,创意礼品,一礼通" />
+
+    <meta name="description" content="一礼通传播世界前沿设计思潮和设计理念,推动中国原创设计发展，为用户提供了自己找设计师设计产品功能,其中包括产品，画册，包装等设计服务,实现了用户与设计师直接在线沟通交流，是中国最具价值的创意礼品设计服务平台！" />
+
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+
+	<link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+
+
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+
+
+
+    <script>
+
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+
+        }
+
+    </script>
+
+    <style>
+
+        #pager ul.pages {
+
+            display: block;
+
+            border: none;
+
+            text-transform: uppercase;
+
+            font-size: 12px;
+
+            margin: 10px 0 50px;
+
+            padding: 0;
+
+            font: normal 13px "Microsoft YaHei";
+
+            font-family: "Microsoft YaHei","微软雅黑","sans-serif";
+
+        }
+
+        #pager ul.pages li {
+
+            float: left;
+
+            padding:5px 10px;
+
+            text-decoration: none; /*border: 1px solid #dddddd;*/;
+
+            border-left-width: 0;
+
+            list-style: none;
+
+            background-color: #fff;
+
+            color: #888;
+
+            margin: 0 3px 0 0;
+
+            -webkit-border-radius: 3px;
+
+            -moz-border-radius: 3px;
+
+            border-radius: 3px;
+
+        }
+
+        #pager ul.pages li:hover {
+
+            color: #fff;
+
+            background-color: #3c4852;
+
+        }
+
+        #pager ul.pages li.pgNext {
+
+        }
+
+        #pager ul.pages li.pgEmpty {
+
+            display: none
+
+            /*border:1px solid #eee;
+
+            color:#eee;
+
+            */;
+
+        }
+
+        #pager ul.pages li.pgCurrent {
+
+            color: #fff;
+
+            font-weight: 700;
+
+            background-color: #ed6c01;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body style="background: #efefef;">
+
+<!--最顶部-->
+
+<include file="public/siteTopbar" />
+
+
+
+<include file="works/navigation" />
+
+
+
+<div style="width:100%;background:#fff;padding:20px 0;">
+
+    <div class="designs-list-ad">
+
+        <a href="#" style=""><img src="__STATIC__/images/h5_app_ad.jpg" alt=""></a>
+
+    </div>
+
+    <!--<div class="designs-details-ad">-->
+
+        <!---->
+
+    <!--</div>-->
+
+</div>
+
+
+
+
+
+<div class="designs-type-list-container">
+
+    <div class="inner">
+
+        <ul class="designs-type-list">
+
+		<li><a href="{:Url('Home/Works/worksList')}" class="designs-list-cur">全部</a></li>
+
+		<foreach name="WCategory" item="v" key="k">
+
+            <li><a href="{:Url('Home/Works/worksList',array('cat'=>$v['id']))}">{$v.name}</a></li>
+
+		 </foreach>
+
+        </ul>
+
+        <ul class="designs-rank-list">
+
+            <li><a href="javascript:void(0);">最新发布</a></li>
+
+            <li><a href="javascript:void(0);">上升最快</a></li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+
+<div class="designs-list-bg">
+
+    <!-- 设计作品列表 start -->
+
+    <div class="inner">
+
+        <ul class="designs-container">
+
+		<foreach name="worksList" item="v" key="k">
+
+            <li>
+
+                <a href="{:Url('/Home/Works/WorksDetails',array('id'=>$v.works_id))}" class="works-imgs">
+
+                    <img src="{$v.works_img}" alt="">
+
+                </a>
+
+                <h6 class="designs-title">{$v.works_name}</h6>
+
+                <p class="designs-types">{$v.cat_name}</p>
+
+                <dl class="works-browse-praise">
+
+                    <dd>浏览<span>{$v.click_count}</span></dd>
+
+                    <dd>赞<span>{$v.fabulous_count}</span></dd>
+
+                </dl>
+
+                <dl class="designs-infos-content">
+
+                    <dt>
+
+                        <a href="{:Url('Home/Works/personalInfos',array('id'=>$v['supplier_id']))}">
+
+                            <p>{$v.designer_name}</p>
+
+                        
+
+                    </dt>
+
+                    <dd><span>{$v.add_time|date='Y-m-d',###}</span></dd>
+
+                </dl>
+
+            </li>
+
+		 </foreach>
+
+        </ul>
+
+    </div>
+
+    <!-- 设计作品列表 end -->
+
+
+
+
+
+    <!--  分页 start  -->
+
+      <div class="fn-page-css-1 pagintion fix" style="display: block;">
+
+  	<div class="pagenavi text12">{$page->show()}</div>
+
+  </div>
+
+    <!--  分页 end  -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--------footer-开始-------------->
+
+<include file="public/footer" />
+
+<!--------footer-结束-------------->
+
+
+
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+
+<script src="__PUBLIC__/js/layer/layer.js"></script>
+
+
+
+
+
+<script>
+
+    //收藏
+
+    function collect_works(works_id){
+
+        $.ajax({
+
+            type : "GET",
+
+            dataType: "json",
+
+            url:"/index.php?m=Home&c=works&a=collect_works&works_id="+works_id,//+tab,
+
+            success: function(data){
+
+                layer.msg(data.msg, {icon: 1});
+
+                //alert(data.msg);
+
+                $(this).find('i').addClass('collect_icon_cur');
+
+            }
+
+        });
+
+    }
+
+
+
+    $(function () {
+
+        //搜索
+
+        $('.search-type').on('click',function () {
+
+            $('.search-type-list').css('display','block');
+
+        });
+
+        $('.search-type').on('mouseleave',function () {
+
+            $('.search-type-list').css('display','none');
+
+        });
+
+
+
+        $('.search-type-list li').each(function () {
+
+            $(this).click(function () {
+
+                $('.searching-type').text($(this).text());
+
+            })
+
+        });
+
+
+
+
+
+        //切换选择
+
+        $('.designs-type-list li').each(function () {
+
+            $(this).children().click(function () {
+
+                $(this).addClass('designs-list-cur');
+
+                $(this).parent('li').siblings().find('a').removeClass('designs-list-cur');
+
+            })
+
+        })
+
+    });
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

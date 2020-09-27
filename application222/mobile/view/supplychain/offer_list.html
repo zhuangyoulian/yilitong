@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>名企直采</title>
+		<link rel="stylesheet" href="__XCSS__/iconfont.css">
+		<link rel="stylesheet" href="__XCSS__/normalize.css">
+		<link rel="stylesheet" href="__XCSS__/public.css">
+		<link rel="stylesheet" href="__XCSS__/list.css">
+
+	</head>
+
+	<body>
+		<div id="app" class="bggrey h flexc">
+			<!-- 标题 -->
+			<header class="bgf">
+				<div class="flexr p10  bbe">
+					<a style="color:#000000;" href="javascript:history.go(-1)"><span class="iconfont icon-fanhui em1.4" ></span></a>
+					<div class="flex1  c f16">名企直采</div>
+				</div>
+			</header>
+			<!-- 主要内容区 -->
+			<section class="pl10 pr10 flex1 oa mt10">
+
+			<?php foreach($res as $v => $k){ ?>
+				<div class="bbe bgf pl10 pr10" >
+					<div class="r red mr_10 fr pr">
+						<span class=""></span>
+					</div>
+					<div class="f16 pt18 fwb">{$k['title']}</div>
+				<a href="{:Url('Supplychain/offer_one',array('id'=>$k['id']))}" >
+					<div class="flexr procurement pt15" >
+						<div class="img bggrey"><img src="<?php if($k['goods_img']=null){ echo $k['goods_img']; }else{ echo '__XIMG__/note.jpg'; } ?>"></div>
+						<div class="flex1 c7 pl10 pr10">{$k['goods_name']}{$k['goods_num']}{$k['goods_unit']}</div>
+						<div class="r budget">
+							<div class="red f16 pb5 fwb">{$k['budget']}</div>
+							<div class="f14 c7">总预算/元</div>
+						</div>
+					</div>
+				</a>
+					<div class="flexr pt15 pb10 firm">
+						<div class="flex1 f16 pt10 pb10">{$k['company_name']}</div>
+						<a style="color: white;" href="{:Url('Supplychain/offer_two',array('id'=>$k['id']))}" ><div class="r f14 quote" >立即报价</div></a>
+					</div>
+
+					<div class="flexr f13 c7 pb10 ">
+						<div class="flex1 grey2">
+							<span class="iconfont icon-chakan-yuan-f icon f13"></span>
+							<span>{$k['view']}</span>
+							<span class="iconfont icon-bao icon f13"></span>
+							<span>{$k['p_num']}</span>
+						</div>
+						<div class="flex1 r grey2">
+							<span class="iconfont icon-shalou1 icon f13"></span>
+							<span> <?php echo date('Y-m-d',$k['t']);?></span>
+						</div>
+					</div>
+
+				</div>
+			<?php }?>
+
+			</section>
+
+		</div>
+
+	</body>
+</html>

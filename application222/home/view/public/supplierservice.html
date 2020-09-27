@@ -1,0 +1,46 @@
+
+<!-- 代码部分begin -->
+<div class="qqserver">
+  <div class="qqserver_fold">
+    <div></div>
+  </div>
+  <div class="qqserver-body" style="display: block;">
+    <div class="qqserver-header">
+      <div></div>
+      <span class="qqserver_arrow"></span> </div>
+    <ul>
+	<li> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&uin={$config_info['qq']}&site=qq&menu=yes" target="_blank" rel="nofollow">
+        <div>在线客服</div>
+        <span>客服</span> </a> </li>
+    <li> <a title="点击这里给我发消息" href="http://wpa.qq.com/msgrd?v=3&uin={$config_info['qq2']}&site=qq&menu=yes" target="_blank" rel="nofollow">
+        <div>在线客服</div>
+        <span>资讯</span> </a> </li>
+
+    
+    <!--div class="qqserver-footer"><span class="qqserver_icon-alert"></span><a class="text-primary" href="javascript:;">大家都在说</a> </div-->
+  </div>
+</div>
+
+<script>
+$(function(){
+	var $qqServer = $('.qqserver');
+	var $qqserverFold = $('.qqserver_fold');
+	var $qqserverUnfold = $('.qqserver_arrow');
+	$qqserverFold.click(function(){
+		$qqserverFold.hide();
+		$qqServer.addClass('unfold');
+	});
+	$qqserverUnfold.click(function(){
+		$qqServer.removeClass('unfold');
+		$qqserverFold.show();
+	});
+	//窗体宽度小于1024像素时不显示客服QQ
+	function resizeQQserver(){
+		$qqServer[document.documentElement.clientWidth < 1024 ? 'hide':'show']();
+	}
+	$(window).bind("load resize",function(){
+		resizeQQserver();
+	});
+});
+</script>
+<!-- 代码部分end -->

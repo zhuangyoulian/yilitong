@@ -1,0 +1,16 @@
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>所属项目</label>
+                </dt>
+                <dd class="opt">
+                    <select name="items_source">
+                      <option value="">所属项目</option>
+                      <volist name="palte_list" id="v" key="k">
+                          <option value="{$v.role_name}"<if condition="$user['items_source'] eq $v.role_name"> selected="selected"</if>>{$v.role_name}</option>
+                      </volist>
+                          <option value="其它" <if condition="$user['items_source'] eq '其它'"> selected="selected"</if>>其它</option>
+                   </select>
+                </dd>
+            </dl>
+     

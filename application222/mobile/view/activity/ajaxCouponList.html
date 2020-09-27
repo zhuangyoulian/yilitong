@@ -1,0 +1,11 @@
+<foreach name="goods_list" item="v">
+    <li>
+        <div class="similer-product">
+            <a href="{:Url('Goods/goodsInfo',array('id'=>$v[goods_id]))}" class="item">
+                <img src="{$v.goods_thumb}">
+                <span class="similar-product-text fl">{$v.goods_name|getSubstr=0,20}</span>
+            </a>
+            <p class="sc_pri fl"><span>￥</span><span>{$v[market_price]}元</span></p>
+        </div>
+    </li>
+</foreach>

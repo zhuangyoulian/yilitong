@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+		<title>礼品卡</title>
+		<link rel="stylesheet" href="__MOBILE__/css/giftCard.css">
+	</head>
+	<body>
+		<div id="giftCard" class="giftCardBox">
+			<header>
+				<div class="back"><a href="{:Url('Mobile/Cart/orderconfirm')}"><img src="__MOBILE__/images/icon_back_s.png"></a></div>
+				<div class="headName">礼品卡</div>
+				<div></div>
+			</header>
+			<nav>
+				<div :class="{'curnav':curNav==1,'':curNav!=1}" @click="clickNav(1)">可用礼品卡(<span>{{arr.length}}</span>)</div>
+				<div :class="{'curnav':curNav==2,'':curNav!=2}" @click="clickNav(2)">不可用礼品卡(<span>0</span>)</div>
+				<div class="addCard"><a href="{:Url('Mobile/coupon/boundCodes',array('uid'=>$uid))}"><img src="__MOBILE__/images/icon_jia.png">&nbsp;<span>绑卡</span></a></div>
+			</nav>
+			<section>
+				<div style="display: none;">
+					<div class="hintBox" v-show="curNav==1">
+						<div class="hintImg"><img src="__MOBILE__/images/icon_wulipin.png"></div>
+						<div class="hintText">您暂时没有可用的礼品卡</div>
+					</div>					
+				</div>
+				<div style="display: none;">
+					<div class="hintBox" v-show="curNav==2">
+						<div class="hintImg"><img src="__MOBILE__/images/icon_wulipin.png"></div>
+						<div class="hintText">您暂时没有不可用的礼品卡</div>
+					</div>				
+				</div>
+				<!-- 可用礼品卡 -->
+			
+				<div class="usableBox">
+					<div class="usable" v-show="curNav==1" v-for="(item,index) in arr" :key="index"  @click="clickSelect(index)">
+						<div class="select" v-show="item.showSelect"><img src="__MOBILE__/images/icon_unselected.png"></div>
+						<div class="select" v-show="!item.showSelect"><img src="__MOBILE__/images/icon_selected.png"></div>
+						<div class="giftCard">
+							<div class="cardTop">
+								<div class="cardLogo"><img src="__MOBILE__/images/icon_logo_hong.png"></div>
+								<div class="cardName1">礼品卡</div>
+								<div class="detail">礼品卡专区使用</div>
+							</div>
+							<div class="cardCentre">
+								<div class="centreLeft">
+									<div class="leftName1">卡号</div>
+									<div class="centreNum1">{{item.number}}</div>
+									<!-- <div class="leftName1">余额</div> -->
+									<!-- <div class="centreNum3">￥{$value.money}</div> -->
+								</div>
+								<div class="centreRight1">
+									<div class="rightName1">面值</div>
+									<div class="centreNum3">￥{{item.money}}</div>
+									<!-- <div class="rightName1">已支出</div> -->
+									<!-- <div class="centreNum1">￥</div> -->
+								</div>
+							</div>
+							<div class="underline"></div>
+							<div class="cardBottom">
+								<div class="bottomLeft1">绑定时间&nbsp;<span>{{item.binding_time}}</span></div>
+								<div class="bottomRight1">有效期限&nbsp;<span>{{item.use_end_time}}</span></div>
+							</div>
+						</div>						
+					</div>
+					<div class="ensure" v-show="showEnsure" @Click="submit()" >确定</div>
+				</div>
+				<!-- 可用礼品卡结束 -->
+				<!-- 不可用礼品卡 -->
+				<div class="unusable">
+					<div class="noGiftCard"  v-show="curNav==2">
+						<div class="cardTop">
+							<div class="cardLogo"><img src="__MOBILE__/images/icon_logo_hui.png"></div>
+							<div class="cardName2">礼品卡</div>
+							<div class="detail" style="color: #999">礼品卡专区使用</div>
+						</div>
+						<div class="cardCentre">
+							<div class="centreLeft">
+								<div class="leftName2">卡号</div>
+								<div class="centreNum2">{$value.number}</div>
+								<!-- <div class="leftName2">余额</div> -->
+								<!-- <div class="centreNum2">￥10000.00</div> -->
+							</div>
+							<div class="centreRight2">
+								<div class="rightName2">面值</div>
+								<div class="centreNum2">￥{$value.money}</div>
+								<!-- <div class="rightName2">已支出</div> -->
+								<!-- <div class="centreNum2">-￥10000.00</div> -->
+							</div>
+						</div>
+						<div class="underline"></div>
+						<div class="cardBottom">
+							<div class="bottomLeft2">绑定时间&nbsp;<span>{$value.binding_time|date="Y/m/d ",###}</span></div>
+							<div class="bottomRight2">有效期限&nbsp;<span>{$value.use_end_time|date="Y/m/d ",###}</span></div>
+						</div>
+						<div class="cardBottom" style="color: #f23057;">
+							<p >不可用原因：</p>
+							<p>不在活动时间内</p>
+						</div>
+					</div>				
+				</div>
+				<!-- 不可用礼品卡结束 -->
+			</section>
+		</div>
+		<script src="__MOBILE__/js/vue.js"></script>
+		<script src="__MOBILE__/js/vue-resource.js"></script>
+		<script src="/public/js/jquery-3.1.1.min.js"></script>	
+		<!-- <script src="__MOBILE__/js/jquery-1.11.3.min.js"></script>	 -->
+		<script src="__MOBILE__/js/screenAdaptation.js"></script>
+		<script>
+			var uid = {$_SESSION['user']['user_id']};
+			var wap = new Vue({
+				el: "#giftCard",
+				data: {					
+					curNav:1,
+					showEnsure:1,
+					arr:[],
+				},
+				mounted: function() { // 挂载后
+					this.getData();
+				},
+				methods: {
+					clickNav: function(e) { // 导航选项切换
+						if(this.curNav==1){
+							this.curNav = e;
+							this.showEnsure = 0;
+						}else{
+							this.curNav = e;
+							this.showEnsure = 1;
+						}
+						
+					},
+					clickSelect: function(index) {
+						// console.log(index)						
+						this.arr[index].showSelect =!this.arr[index].showSelect;
+						var array=[];
+						// 案例2之只返回选中数组项中的部分值
+						this.arr.forEach(function(item,idx){
+							if(item.showSelect == 0){
+								var obj = {
+									'code':item.code,
+									'money':item.money,
+									};
+								array.push(obj)
+							}
+
+						});
+						this.commitData = array;
+					},
+					submit:function(){
+						this.submitData();
+					},
+					submitData: function() { //  提交数据给后端
+						var that = this;
+						$.ajax({
+							type:'POST',
+							url:'/Mobile/Cart/orderconfirm/uid/'+uid,
+							data:{code:this.commitData},
+							dataType: 'json',
+							success: function(data){
+						       if(data.status == 1){
+								  location.href = "{:Url('Cart/orderconfirm')}";
+							   }else{
+						           alert(data.msg);
+							   }
+							}
+						})
+					},
+
+					getData: function() {
+						var that = this;
+						var productUrl ="/Mobile/coupon/CtCodes/uid/"+uid;	
+						console.log("请求url:" + productUrl);
+						// return;
+						this.$http({
+							url: productUrl,
+							method: 'GET',
+							// 传后端的数据
+							data: {
+							
+							},
+							// 请求头
+							headers: {
+								'Content-Type': 'json'
+							}
+					
+						}).then(function(response) {
+							console.log("请求成功回调：");
+							console.log(response)			
+							var hot = response.data;
+
+							// hot = JSON.parse(hot);
+							console.log(hot)
+							// // 对后台返回的数据做处理							
+							this.arr = hot;
+						}, function(response) {
+							console.log("请求失败回调");
+							// console.log(response)
+						});
+					},
+
+				}
+			})
+		</script>
+	</body>
+</html>

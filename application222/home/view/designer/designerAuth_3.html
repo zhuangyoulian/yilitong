@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师身份认证——个人简介-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+	<style>
+
+	</style>
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+    </script>
+</head>
+
+<body style="background:#f7f7f7;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<div class="user-home">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <a href="{:Url('Home/User/index')}" class="exit">退出设计师后台</a>
+    </div>
+</div>
+
+
+<div class="inner clearfix m-top-20">
+    <!-- design-left  start -->
+    <div class="design-menu" style="background:#fff;">
+        <div class="designer-head-img"><img src="{$user.head_pic|default='__STATIC__/images/tou2.png'}" alt="头像"></div>
+        <p class="designer-account">用户：<span>{$user['nickname']}</span></p>
+        <p class="authentication-tips">（尚未提交身份认证）</p>
+        <ul class="designer-works grayColor">
+            <li><a href="javascript:void(0);">我的作品</a></li>
+            <li><a href="javascript:void(0);">在售作品</a></li>
+            <li><a href="javascript:void(0);">我的订单</a></li>
+            <li><a href="javascript:void(0);">退货单</a></li>
+            <li><a href="javascript:void(0);">收入</a></li>
+            <li><a href="javascript:void(0);">设计报价</a></li>
+        </ul>
+    </div>
+    <!-- designer-left end -->
+
+    <!-- design-right  start -->
+    <div class="design-authentication" style="background:#fff;">
+        <div class="authentication-title"><p>3、设计师身份认证——个人简介</p></div>
+        <form>
+            <input type="hidden" name="user_id" id="user_id-1" value="{$user_id}">
+            <textarea name="self-introduction" class="self-introduction" id="self-introduction" cols="30" rows="12" placeholder="为了让大家更好的了解你，请你在这里写下你的个人简介吧！100字以内"><?php echo $introduction?></textarea>
+        </form>
+        <div class="designer-submit-btn-group-3">
+            <a href="{:Url('Home/Designer/designerAuth_2')}" class="design-submit-2">上一步</a>
+            <a href="javascript:void(0);" class="design-submit" onclick="design_submit()">提交</a>
+        </div>
+
+
+    </div>
+    <!-- designer-right end -->
+</div>
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script src="__PUBLIC__/static/js/layer/layer.js"></script>
+
+
+<script>
+    function design_submit(){
+        var self_introduction = $("textarea[name='self-introduction']").val();
+        var data = self_introduction;
+        //alert(self_introduction);exit();
+        if(self_introduction == ''){
+            layer.alert('个人简介不能为空');
+            exit;
+        }else{
+             
+            $.ajax({
+                type:'POST',
+                url:'add_designerAuth_3',
+                dataType:'json',
+                data:{
+                        user_id:$('#user_id-1').val(),
+                        introduction:self_introduction
+                },
+                error: function () {
+                    layer.alert("服务器繁忙, 请联系管理员!");
+                },
+
+                success: function (data) {
+                    if (data.status== 1) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            time: 1000
+                        }, function(){
+                            //成功提交后页面跳转的路径
+                            location.href = "{:Url('Home/Designer/designerAuth_4')}";
+                            //window.location = "designerAuth_2";
+                        });
+                    } else {
+                        layer.msg(data.msg, {icon: 2,time: 1000});
+                        $.each(data.result, function (index, item) {
+                            $(index).text(item).show();
+                        });
+                    }
+                }
+
+            })
+        }
+
+    }
+
+</script>
+</body>
+</html>

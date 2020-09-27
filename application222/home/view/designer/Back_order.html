@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计师-我的交易-{$config['shop_info_store_title']}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <script type="text/javascript" src="__PUBLIC__/static/js/layer/layer.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+
+    <link rel="stylesheet" href="__STATIC__/css/user-new-style.css">
+    <link rel="stylesheet" href="__STATIC__/css/designer.css">
+    <link rel="stylesheet" href="__STATIC__/css/shijian.css">
+	<link rel="stylesheet" href="__STATIC__/css/page.css" type="text/css">
+
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+            alert("您的IE浏览器版本过低，为增加更好的使用体验，请下载IE10及以上版本或者使用谷歌，火狐，搜狗，360等其它浏览器");
+        }
+
+    </script>
+    <style>
+        #pager ul.pages {
+            display: block;
+            border: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 10px 0 50px;
+            padding: 0;
+            font: normal 13px "Microsoft YaHei";
+            font-family: "Microsoft YaHei","微软雅黑","sans-serif";
+        }
+        #pager ul.pages li {
+            float: left;
+            padding:5px 10px;
+            text-decoration: none; /*border: 1px solid #dddddd;*/;
+            border-left-width: 0;
+            list-style: none;
+            background-color: #fff;
+            color: #888;
+            margin: 0 3px 0 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+        #pager ul.pages li:hover {
+            color: #fff;
+            background-color: #3c4852;
+        }
+        #pager ul.pages li.pgNext {
+
+        }
+        #pager ul.pages li.pgEmpty {
+            display: none;
+            /*border:1px solid #eee;
+            color:#eee;
+            */;
+        }
+        #pager ul.pages li.pgCurrent {
+            color: #fff;
+            font-weight: 700;
+            background-color: #ed6c01;
+        }
+
+
+    </style>
+</head>
+
+<body style="background:#f7f7f7;">
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+<div class="user-home" style="background:#2e2e2e;">
+    <div class="inner clearfix">
+        <div class="logo-home">
+            <a href="/">
+                <img src="__STATIC__/images/userIndexLogo.png" alt="logo">
+                <p>（返回一礼通商城首页）</p>
+            </a>
+        </div>
+        <a href="{:Url('Home/User/index')}" class="exit">退出设计师后台</a>
+    </div>
+</div>
+
+
+<div class="inner clearfix m-top-20">
+    <!-- design-left  start -->
+    <include file="public/designerLeftNav" />
+    <!-- designer-left end -->
+
+    <!-- design-right  start -->
+    <div class="design-authentication-index">
+        <div class="design-authentication-index-col">
+            <p class="trade-title">我的订单</p>
+        </div>
+
+        <div class="design-authentication-index-col" style="margin-top:4px;">
+            <p class="trade-title-2">订单列表</p>
+
+
+            <!--  订单列表 start  -->
+            <div class="trade-list-container">
+                <ul class="trade-list-title">
+                    <li>订单编号</li>
+                    <li>商品名称</li>
+                    <li>售后类型</li>
+                    <li>申请日期</li>
+                    <li>当前状态</li>
+                    <li>操作</li>
+                </ul>
+                <div class="trade-list-group" id="trade-list-group">
+				 <foreach name="back_list" item="vo">
+                    <ul class="trade-list-del">
+                        <li><a href="{:url('Home/Designer/Trade',array('sn'=>$vo.order_sn))}">{$vo.order_sn}</a></li>
+                        <li>{$goods_list[$vo.goods_id]}</li>
+                        <li><if condition="$items[type] eq 1">退货<else>换货</if></li>
+                        <li>{$vo.addtime|date='Y-m-d H:i',###}</li>
+                        <li><span>
+							<if $vo[status] eq -1>拒绝申请</if>
+							<if $vo[status] eq 0 >未处理</if>
+							<if $vo[status] eq 1 >待寄回商品</if>
+							<if $vo[status] eq 2 >用户寄回商品</if>
+							<if $vo[status] eq 3 >收到寄回商品</if> 
+							<if $vo[status] eq 4 >收到寄回商品</if> 
+							<if $vo[status] eq 5 >寄出售后商品</if> 
+							<if $vo[status] eq 6 >已完成</if> </span></li>
+                        <li><a href="{:url('Home/Designer/return_info',array('id'=>$vo.id))}">去处理</a></li>
+                    </ul>
+				 </foreach>
+
+                </div>
+                <!--  订单列表 end  -->
+
+                <!--  分页 start  -->
+                <div class="fn-page-css-1 pagintion fix" style="display: block;">
+					<div class="pagenavi text12">{$page->show()}</div>
+				</div>
+                <!--  分页 end  -->
+            </div>
+        </div>
+    </div>
+    <!-- designer-right end -->
+</div>
+
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+
+<script src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+<script src="__PUBLIC__/js/jquery.pager.js"></script>
+<script src="__PUBLIC__/js/jquer_shijian.js"></script>
+<script>
+    window.onload = function () {
+        var oDiv = document.getElementById('trade-list-group');
+        var oUl = oDiv.getElementsByTagName('ul');
+
+        for(var i=0;i<oUl.length;i++){
+            if(i%2){
+                oUl[i].style.background = '#fff';
+            }else{
+                oUl[i].style.background = '#fbfbfb';
+            }
+        }
+
+    }
+</script>
+<script type="text/javascript">
+    //分页
+    $(document).ready(function() {
+        $("#pager").pager({ pagenumber: 1, pagecount: 15, buttonClickCallback: PageClick });
+    });
+
+    PageClick = function(pageclickednumber) {
+        $("#pager").pager({ pagenumber: pageclickednumber, pagecount: 15, buttonClickCallback: PageClick });
+        $("#result").html("Clicked Page " + pageclickednumber);
+    };
+
+    $(function(){
+        $('.works-type-list dd,.works-states dd').each(function () {
+            $(this).on('click',function () {
+                $(this).addClass('type-cur').siblings('dd').removeClass('type-cur');
+            })
+        })
+    });
+
+    $(function () {
+//        $('.search-tradeList-group').each(function () {
+//            $(this).children('input').click(function () {
+//                $(this).siblings('.trade-status-list').css('display','block');
+//            });
+//
+//            $(this).mouseleave(function () {
+//                $(this).children('.trade-status-list').css('display','none');
+//            })
+//        });
+
+
+        $('.trade-status-list li').each(function () {
+            $(this).click(function () {
+                $('.trade-status').val($(this).text());
+            })
+        })
+
+
+        //起始时间
+        $("#input3").shijian({
+            y:+10,//当前年份+10
+            Hour:false,//是否显示小时
+            Minute:false,//是否显分钟
+        });
+
+        //结束时间
+        $("#input4").shijian({
+            y:+10,//当前年份+10
+            Hour:false,//是否显示小时
+            Minute:false,//是否显分钟
+        });
+
+    })
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<foreach name="goods_rec" item="v">
+	<li class="fine">
+	<a href="{:Url('Mobile/Distribution/goodsInfos',array('id'=>$v[goods_id]))}">
+		<div class="fineImg"><img src="{$v.goods_thumb}" alt=""></div>
+		<div class="fineName">{$v.goods_name}</div>
+		<div class="fineMoeny">
+		<span class="moenys">￥{$v.shop_price}</span>
+		<if condition="$v.commission_price  neq 0">
+			<span class="gainMoneys">赚{$v.commission_price * $ratio['ratio']}</span>
+		<else/>
+			<span class="gainMoneys">赚{$v.distribution_price * $ratio['ratio']}</span>
+		</if>
+		</div>
+	</a>
+	</li>
+</foreach>

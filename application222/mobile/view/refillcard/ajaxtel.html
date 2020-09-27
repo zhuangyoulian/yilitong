@@ -1,0 +1,128 @@
+
+				<if condition="$tid eq 18  or $tid eq 19">
+					<div class="input_tel">
+						<input type="tel" name="phone" id="" value="" placeholder="请输入11位手机号码" class="tel"/>
+					</div>
+					<p class="danger">*请确认手机号信息，一经提交，无法撤回。</p>
+				<elseif condition="$tid eq 20">
+					<div class="input_tel">
+						<input type="text" name="phone" id="" value="" placeholder="请输入卡号(10010开头,共19位)" class="tel"/>
+					</div>
+					<div class="input_tel">
+						<input type="text" name="phone" id="" value="" placeholder="请再次确认卡号" class="cartnum"/>
+					</div>
+					<p class="danger">*请确认油卡信息，一经提交，无法撤回。（仅支持100倍数的面值在线充值）</p>
+				</if>		
+				<input type="hidden" name="pid" value="{$pid}"/>
+				<!-- <if condition="$tid eq 18  or $tid eq 19 or $tid eq 20"> -->
+				<if condition="$pid eq 7">
+				<div id="" class="mui-control-content mui-active kk">
+					<ul class="mui-table-view mui-grid-view" id="one">
+						<foreach name="$top_config_card" item="value" key="key">
+							<li onclick="ajax_tel(7,0,{$tid},{$value.id})" class="mui-table-view-cell mui-media mui-col-xs-4">
+								<if condition="$did eq $value.id"> 
+									<div class="gez active ">{$value.name}</div>
+									<input type="hidden" name="id" value="{$value.id}">
+									<input type="hidden" name="encoding" value="{$value.encoding}"/>
+								<else/>
+									<div class="gez">{$value.name}</div>
+								</if>
+							</li>
+						</foreach>
+					</ul>
+				</div>
+				<elseif condition="$pid eq 8">
+				<div id="" class="mui-control-content mui-active kk">
+					<ul class="mui-table-view mui-grid-view" id="one">
+						<foreach name="$top_config_card" item="value" key="key">
+							<li onclick="ajax_tel(8,0,{$tid},{$value.id})" class="mui-table-view-cell mui-media mui-col-xs-4">
+								<if condition="$did eq $value.id"> 
+									<div class="gez active ">{$value.name}</div>
+									<input type="hidden" name="id" value="{$value.id}">
+									<input type="hidden" name="encoding" value="{$value.encoding}"/>
+								<else/>
+									<div class="gez">{$value.name}</div>
+								</if>
+							</li>
+						</foreach>
+					</ul>
+				</div>
+				<elseif condition="$pid eq 9">
+					<div class="platform">
+						<p class="title_nav">平台选择</p>
+						<ul class="mui-table-view mui-grid-view" id="one">
+						<foreach name="$top_config" item="value" key="key">
+							<if condition="$key eq 1"> 
+						<foreach name="$value.list" item="valu" key="ke">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<div class="bgt <if condition='$cid eq $valu.id'> active </if>" onclick="ajax_tel(9,{$valu.id},0,0)"> 
+									<img src="{$valu.card_img}">
+									<!-- <input type="hidden" name="id" value="{$valu.id}"> -->
+								</div>
+							</li>
+						</foreach>
+							</if>
+						</foreach>
+						</ul>
+					</div>
+					<div class="fenge"></div>
+					<div class="platform">
+						<p class="title_nav">产品类型</p>
+						<ul class="mui-table-view mui-grid-view">
+							<foreach name="$specification" item="value" key="key">
+								<li class="mui-table-view-cell mui-media mui-col-xs-4">
+									<div class="bgt2 <if condition='$tid eq $value.id'> active </if>" onclick="ajax_tel(9,{$cid},{$value.id},0)">
+										<p>{$value.name}</p>
+									</div>
+								</li>
+							</foreach>
+						</ul>
+					</div>
+					<div class="platform">
+						<p class="title_nav">面额</p>
+						<ul class="mui-table-view mui-grid-view" id="two">
+							<foreach name="$top_config_card" item="value" key="key">
+								<li class="mui-table-view-cell mui-media mui-col-xs-4"> 
+									<if condition='$did eq $value.id'> 
+										<div class="bgt2 active" onclick="ajax_tel(9,{$cid},{$tid},{$value.id})">
+											<p>{$value.name}</p>
+											<p>{$value.price}元</p>
+											<input type="hidden" name="id" value="{$value.id}">
+											<input type="hidden" name="encoding" value="{$value.encoding}"/>
+										</div>
+									<else/>
+										<div class="bgt2" onclick="ajax_tel(9,{$cid},{$tid},{$value.id})">
+											<p>{$value.name}</p>
+											<p>{$value.price}元</p>
+										</div>
+									</if>
+								</li>
+							</foreach>
+						</ul>
+					</div>
+				</if>
+				<div class="fenge"></div>
+				<div class="mui-row duihy">
+					 <div class="mui-col-sm-5 mui-col-xs-12">
+						<div class="mui-input-row mui-radio mui-left">
+							<label>券码兑换</label>
+							<input name="radio1" type="radio" id="radio_code" checked="checked" value="1">
+						</div> 
+					</div>
+					<div class="mui-col-sm-7 mui-col-xs-12 duihuanma">
+						<input type="text" name="code" id="" value="" placeholder="请输入8位兑换码" class="duihm"/>
+					</div>
+				</div>
+				<div class="mui-row">
+					 <div class="mui-col-sm-10 mui-col-xs-12">
+						<div class="mui-input-row mui-radio mui-left">
+							<label>微信支付</label>
+							<input name="radio1" type="radio" id="radio_weixin" value="2">
+						</div> 
+					</div>
+					<div class="mui-col-sm-2 mui-col-xs-12">
+						<div class="mui-right">{$price}元</div>
+					</div>
+				</div>
+				
+				

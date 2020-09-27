@@ -1,0 +1,1200 @@
+<body>
+<div class="blackBox">
+<div class="tips">
+    <img class="jiantou" src="__MOBILE__/images/pic_arrow.png" >
+    <div class="closes">
+        <img src="__MOBILE__/images/pic_mascot.png" >
+        <img src="__MOBILE__/images/icon_text.png" >
+        <img src="__MOBILE__/images/icon_button.png" >
+    </div>
+</div>
+<!-- <img src="__MOBILE__/images/pic_guide.png" alt=""> -->
+</div>
+<include file="public/header" title="{$goods.goods_name}-{$config['shop_info_store_title']}"/>
+<title>商品详情</title>
+<link rel="stylesheet" href="__MOBILE__/css/mobile.css">
+<link rel="stylesheet" href="__MOBILE__/css/swiper.min.css">
+<style>
+
+    .tips{
+        position: relative;
+    }
+    .tips img{
+        position: absolute;
+    }
+    .jiantou{
+        right: 0.8rem;
+        top: 0.2rem;
+    }
+    .closes{
+        position: relative;
+        top: 2.8rem;
+        left: 20%;
+    }
+    .closes img:nth-child(2){
+        left: 3.2rem;
+    }.closes img:nth-child(3){
+        left: 3.5rem;
+        top: 1rem;
+    }   
+    /* 不包邮地区弹框 start */
+    .layui-m-anim-scale h3{
+        font-size: .6rem;
+    }
+    .layui-m-anim-scale .layui-m-layercont{
+        color: #444;
+        font-size: .58rem;
+        line-height: .7rem;
+    }
+    /* 不包邮地区弹框 start */
+
+    .classreturn .content .return{
+        width: .5rem;
+        height: auto;
+        margin-left: .3rem;
+    }
+    .classreturn .content .return a img{
+        display: block;
+        width: .5rem;
+        height: auto;
+    }
+
+    /* 轮播 s */
+    .slide-banner{
+        width: 100%;
+        height: 16rem;
+        position: relative;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide a img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    /* 轮播 e */
+    .act-type{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        padding: 0 .4rem;
+        background: rgba(0,0,0,.3);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .act-type-name{
+        float: left;
+        overflow: hidden;
+    }
+    .act-type-name dt,.act-type-name dd{
+        float: left;
+        margin-right: .4rem;
+        line-height: 2rem;
+        font-weight: normal;
+    }
+    .act-type-name dt{
+        font-size: .72rem;
+        color: #e6002d;
+    }
+    .act-type-name dd{
+        font-size: .62rem;
+        color: #fff;
+    }
+    .act-type-time{
+        float: right;
+    }
+    .myorder .order .fl span{
+        font-size: 0.597rem;
+        color: #333333;
+    }
+    .sel{
+        font-size: 0.597rem;
+        color: #444444;
+        font-weight: 500;
+    }
+    .myorder{
+        height: 2.048rem;
+        line-height: 2.048rem;  
+    }
+    .myorder .order .fr i{
+        margin-top: .7rem;
+    }
+    .cost_icon{
+        color:#333333 !important;
+    }
+    .supplier_promise li{       
+        font-size: 0.597rem !important; 
+    }
+    .stores-name{
+        font-size: 0.597rem !important; 
+    }
+    .sxp{
+        color: #f23057;
+        border-bottom:1px solid #f23057 !important;
+    }
+    .joins{
+        width: 3.28rem;text-align: center;font-size: 0.47rem;color: #555;
+        
+    }
+    .joins img{
+    width: 0.853rem;height: 0.853rem;margin-bottom: 0.2rem; 
+    }
+    .join{
+        width: 3.48rem;text-align: center;font-size: 0.47rem;color: #f23057;display: none;
+    }
+    .join img{
+    width: 0.853rem;height: 0.853rem;margin-bottom: 0.2rem; 
+    }
+    .goodsNames{
+        flex: 1;font-size: 0.64rem;color: #333;font-weight: 500;display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;line-height: 0.71rem;
+    }
+  .blackBox{ 
+    position: fixed;
+    z-index: 99999 !important;
+    top: 0;right: 0;bottom: 0;left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+  } 
+  .blackBox>img {
+    position: fixed;
+    top: 0.3rem;
+    right: 1rem;
+    width: 8rem;
+  }
+</style>
+
+<div class="he_sustain">
+    <div class="classreturn loginsignup detail">
+        <div class="content">
+            <div class="ds-in-bl return">
+                <if condition="$storeIndex eq -1">
+                    <a href="{:Url('Distribution/storeIndex')}">
+                <else/>
+                    <a href="javascript:history.back(-1)">
+                </if>
+                    <img src="__STATIC__/images/return.png" alt="返回">
+                    </a>
+            </div>
+            <div class="ds-in-bl search center">
+                <span class="sxp">商品</span>
+                <span>详情</span>
+                <span>评论</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="all-content" id="wrapper">
+    
+    <!--商品抢购 start-->
+    <div class="xq_details scroller">
+        <!-- 轮播 start -->
+        <div class="slide-banner">
+            <!-- Swiper start -->
+            <div class="swiper-container">
+                 <div class="swiper-wrapper">
+                    <foreach name="goods_images_list" item="pic">
+                        <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="{$pic.image_url}" alt="">
+                        </a>
+                        </div>
+                    </foreach>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- Swiper end -->
+        </div>
+        <!-- 轮播 end -->
+        <script src="__MOBILE__/js/swiper.min.js"></script>
+        <script>
+            //轮播
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        </script>
+
+        <div class="goods_info-container">
+            <div style="display: flex;flex-direction: row;padding: .6rem .5rem 0 .5rem">
+                <p class="goodsNames">{$goods.goods_name}</p>
+                <p style="border-left: 1px solid #c6c6c6;height: 1.024rem;margin: 0.2rem 0.68rem;"></p>
+                <!-- 暂停使用 -->
+                <!-- <div class="joins" <if condition="!$r"> style="display: block;" <else/>  style="display: none;" </if> onclick="collect_goods({$goods.goods_id})">
+                    <div><img src="__MOBILE__/images/icon_add.png" alt=""></div>
+                    <div>加入店铺</div>
+                </div>
+                <div class="join" <if condition="$r"> style="display: block;" <else/>  style="display: none;" </if>  onclick="delete_goods({$goods.goods_id})" >
+                    <div><img src="__MOBILE__/images/icon_added.png" alt=""></div>
+                    <div>已加入店铺</div>
+                </div> -->
+            </div>
+            <div class="goods_price clearfix" style="padding:0.4rem 0.5rem 0.6rem 0.5rem">
+                <span id="price" style="font-size: 0.768rem;font-weight: 500;color: #F23057;">¥{$goods.shop_price}</span>
+                
+                <!-- 分销中心进入时显示佣金 -->
+                <if condition="$storeIndex eq 1 && !empty($id)">
+                    <if condition="$goods.commission_price neq 0">
+                        <span style="font-size: 0.597rem;color: #ff4766;padding-left: 0.43rem;">赚{$goods.commission_price * $ratio.ratio}</span>
+                    <else/>
+                        <span style="font-size: 0.597rem;color: #ff4766;padding-left: 0.43rem;">赚{$goods.distribution_price * $ratio.ratio}</span>
+                    </if>
+                </if>
+
+                <!-- <dd>销量&nbsp;{$goods.sales_sum}</dd> -->
+            </div>
+        </div>
+
+        <div class="goods_info-container" style="margin-top:.4rem;">
+            <!-- 商品规格 start -->
+            <div class="goods_info_col">
+                <div class="myorder p choise_num">
+                    <div class="content30">
+                        <a href="javascript:void(0)" onclick="show_goods_spec_opt()">
+                            <div class="order">
+                                <div class="fl" style="overflow:hidden;width:96%;">
+                                    <span class="firde" style="width:20%;margin-right:.2rem;">已选</span>
+                                    <span class="sel" style="width:77%;white-space: nowrap;text-overflow:ellipsis;overflow:hidden;"></span>
+                                </div>
+                                <div class="fr" style="width:4%;">
+                                    <i class="Mright"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品规格 end -->
+
+            <!-- 商品参数 start -->
+            <div class="goods_info_col">
+                <div class="myorder p">
+                    <div class="content30">
+                        <a href="javascript:void(0)" onclick="show_goods_parameter()">
+                            <div class="order">
+                                <div class="fl" style="overflow:hidden;width:96%;">
+                                    <span>商品参数</span>
+                                </div>
+                                <div class="fr" style="width:4%;">
+                                    <i class="Mright"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品参数 start -->
+
+            <style>
+                .act-coupon{
+                    padding: 0 .4rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    color: #fff;
+                    margin-top: .25rem;
+                    border-radius: .1rem;
+                    background: #e6002d;
+                }
+            </style>
+
+            <!-- 服务 start -->
+            <div class="goods_info_col">
+                <div class="myorder p">
+                    <div class="content30">
+                        <a href="javascript:void(0)" onclick="show_goods_service()">
+                            <div class="order">
+                                <div class="fl" style="overflow:hidden;width:96%;">
+                                    <ul class="supplier_promise clearfix">
+                                        <li style="color:#444;">服务</li>
+                                        <li class="cost_icon">七天无理由退货</li>
+                                        <li class="cost_icon">正品保证</li>
+                                        <li class="cost_icon">商家包邮</li>
+                                    </ul>
+                                </div>
+                                <div class="fr" style="width:4%;">
+                                    <i class="Mright"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 服务 start -->
+        </div>
+
+        <div class="goods_info-container" style="margin-top:.4rem;">
+            <!-- 店铺 start -->
+            <div class="goods_info_col" style="border: none;">
+                <div class="myorder p">
+                    <div class="content30">
+                        <a href="javascript:void(0)">
+                            <div class="order">
+                                <div class="fl" style="overflow:hidden;width:96%;">
+                                    <a href="{:Url('Supplier/index',array('id'=>$goods['supplier_id']))}" class="stores">
+                                        <p class="stores-name">{$goods.supplier_name}</p>
+                                    </a>
+                                </div>
+                                <div class="fr" style="width:4%;">
+                                    <i class="Mright"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>  
+                </div>
+            </div>
+            <!-- 店铺 start -->
+        </div>
+        <div style="font-size:.597rem;color:#444;margin-left: 20px;margin-top:0.683rem;margin-bottom: 0.683rem;">商品详情</div> <!-- class="more" id="more" -->
+         <div class="spxq p">
+            {$goods.goods_content|htmlspecialchars_decode}
+        </div>
+    </div>
+    <!--商品-e-->
+
+    <!--详情-s-->
+    <div class="xq_details" style="display: none;">
+        <div class="spxq-ggcs">
+            <ul>
+                <li class="red">商品详情</li>
+                <li>规格参数</li>
+            </ul>
+        </div>
+        <div class="sg">
+            <div class="spxq p">
+                {$goods.goods_content|htmlspecialchars_decode}
+            </div>
+        </div>
+        <div class="sg" style="display: none;">
+            <div class="spxq p">
+                <table class="de_table" border="1" bordercolor="#cbcbcb" style="border-collapse:collapse;">
+                    <tr>
+                        <th colspan="2" style="line-height:.8rem;font-weight:normal;">
+                            {$goods.attribute|htmlspecialchars_decode}
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--详情-e-->
+
+    <!--评论列表-s-->
+    <div class="xq_details" style="display:none;">
+        <div class="tab-con-wrapper my_comment_list"></div>
+    </div>
+    <!--评论列表-e-->
+</div>
+
+    <!--底部按钮-s-->
+<style>
+    .podee .cart-concert-btm ul .collect_goods_ico{
+        text-align: center;
+        line-height: 2.1rem;
+        border-left:1px solid #efefef;
+    }
+    .podee .cart-concert-btm ul .collect_goods_ico img{
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .bottomNav{
+        display: flex;
+        flex-direction: row;
+        height: 2.39rem;
+        text-align: center;
+        width: 100%;
+        background-color: white;
+    }
+    .bottomNavLeft{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+    }
+    .bottomNavLeft p{
+        font-size: 0.43rem;
+        color: #808080;
+    }
+    .bottomNavRight{
+        flex: 1;
+        display: flex;
+        flex-direction: row;    
+    }
+    
+    .distributor{
+        margin-left: 0.64rem;
+    }
+    .shoppingCart{
+        margin: 0 1rem;
+    }
+    .bottomNavLeft p img{
+        width: 1.024rem;
+        height: 1.024rem;
+        margin-top: 0.43rem;
+        margin-bottom: 0.213rem;
+    }
+    
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    .baseNavLeft{
+        flex: 1;
+        font-size: 0.597rem;
+        background-color: #FFB03F;
+        color: white;
+        line-height: 2.39rem;
+    }
+    .baseNavRight{
+        flex: 1;
+        font-size: 0.597rem;
+        background-color: #F23057;
+        color: white;
+    }
+</style>
+<div class="podee">
+    <div class="bottomNav" style="position:fixed;left:0;bottom:0;">
+        <div class="bottomNavLeft">
+            <a href="{:Url('Mobile/Distribution/storeIndex')}">
+           <div class="distributor">
+             <p><img src="__MOBILE__/images/icon_mall_black.png" alt=""></p>
+             <p>分销商城</p>  
+           </div>
+           </a>
+            <div class="shoppingCart">
+             <a href="{:Url('Cart/cart')}">
+                <p><img src="__MOBILE__/images/icon_cart1.png" alt=""></p>
+                <p>购物车</p>
+            </a>    
+            </div>          
+            <if condition="$_SESSION['shop_id'] neq 0">
+                <div class="baseNav" onclick="shareGuide()" >
+                <p><img src="__MOBILE__/images/icon_share.png" alt=""></p>
+                    <p style="color: #f23057;">赚佣金</p>  
+                </div>   
+            <else/>
+                <a href="{:Url('Mobile/Distribution/apply')}">
+                <div class="baseNav" >
+                <p><img src="__MOBILE__/images/icon_share.png" alt=""></p>
+                    <p style="color: #f23057;">赚佣金</p>
+                </div> 
+                </a>
+            </if>
+
+
+        </div>
+        <!-- 分销中心进入时显示佣金 -->
+        <if condition="$storeIndex eq 1 ">
+            <div class="bottomNavRight">
+                <div class="baseNavLeft"  onClick="AjaxAddCart({$goods.goods_id},1,0);">加入购物车</div>     
+                    <div class="baseNavRight">
+                    <p style="margin-top: 0.512rem;margin-bottom: 0.256rem;"  onclick="AjaxAddCart({$goods.goods_id},1,1);">立即购买</p>
+                    <p style="font-size: 0.512rem;">赚佣金</p>  
+                </div>    
+            </div>
+        <else/>
+            <div class="bottomNavRight">
+                <div class="baseNavLeft"  onClick="AjaxAddCart({$goods.goods_id},1,0);">加入购物车</div>     
+                    <div class="baseNavRight">
+                    <p style="margin-top: 0.9rem;"  onclick="AjaxAddCart({$goods.goods_id},1,1);">立即购买</p>
+                </div>    
+            </div>
+        </if>
+    </div>
+</div>
+<!--底部按钮-e-->
+
+<!--点赞弹窗-s-->
+<div class="alert">
+    <img src="__STATIC__/images/hh.png"/>
+    <p>您已经赞过了！</p>
+</div>
+<!--点赞弹窗-e-->
+
+<!--选择规格属性的弹窗-s-->
+<style>
+    .plusshopcar-buy{
+        position:relative;
+        left:0;
+        bottom:0;
+        overflow:hidden;
+        width:100%;
+    }
+    .goods-spec-opt{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        background: rgba(0,0,0,.5);
+        display: none;
+    }
+</style>
+<!-- 加入购物车 选择规格属性的弹窗-start -->
+<div class="goods-spec-opt" id="goods-spec-opt">
+    <form name="buy_goods_form" method="post" id="buy_goods_form">
+        <!-- 佣金字段  -->
+        <input type="hidden" name="brokerage" value="1">
+        <div class="choose_shop_aready p" id="goods-spec-opt-info">
+            <!--商品信息-s-->
+            <div class="shop-top-under p" style="border-bottom:1px solid #f8f8f8;">
+                <div class="maleri30">
+                    <div class="shopprice">
+                        <div class="img_or fl"><img src="{$goods.original_img}" style="width:4rem;height:4rem;display:inline-block;"></div>
+                        <div class="fon_or fl">
+                            <h2 class="similar-product-text">{$goods.goods_name}</h2>
+                            <input type="hidden" id="goods_name" name="goods_id" value="{$goods.goods_id}">
+                            <div class="price_or" id="goods_price"><span>￥</span><span>{$goods.shop_price}</span></div>
+                            <div class="dqkc_or"><span>库存：</span><span id="store_count">{$goods.store_count}</span></div>
+                        </div>
+                        <div class="price_or fr">
+                            <i class="xxgro" onclick="hide_goods_spec_opt()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--商品信息-e-->
+
+            <div class="shop-top-under p" style="height:12rem;overflow-y: scroll;">
+                <div class="maleri30">
+                    <if condition="$filter_spec neq ''">
+                        <foreach item="spec" key="key" name="filter_spec">
+                            <div class="shulges p choicsel">
+                                <p>{$key}</p>
+                                <!-- 商品属性值 -->
+                                <foreach name="spec" item="v2" key="k2">
+                                    <div class="plus choic-sel">
+                                        <a  href="javascript:;"  onclick="switch_spec(this);" title="{$v2[item]}" <if condition="$k2 eq 0">class="hover"</if>>
+                                        <input type="radio" style="display:none;" name="goods_spec[{$key}]" value="{$v2[item_id]}" <if condition="$k2 eq 0 ">checked="checked"</if>/>{$v2[item]}
+                                        </a>
+                                    </div>
+                                </foreach>
+                                <!-- 商品属性值 -->
+                            </div>
+                        </foreach>
+                    </if>
+                    <div class="shulges p">
+                        <p>数量</p>
+                        <!--选择数量-->
+                        <div class="plus">
+                            <span class="mp_minous" onclick="altergoodsnum(-1)">-</span>
+                                    <span class="mp_mp">
+                            <input type="text" class="num" id="number" residuenum="{$goods.store_count}" name="goods_num" value="1" max="" onblur="altergoodsnum(0)">
+                                    </span>
+                            <span class="mp_plus" onclick="altergoodsnum(1)">+</span>
+                        </div>
+                        <script>
+                            $('#number').val(1);
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plusshopcar-buy p">
+                <a class="pb_plusshopcar button active_button" onClick="AjaxAddCart({$goods.goods_id},1,0);" href="javascript:void(0);">加入购物车</a>
+                <a class="pb_buy" href="javascript:void(0);"  onclick="AjaxAddCart({$goods.goods_id},1,1);">立即购买 </a>
+            </div>
+        </div>
+    </form>
+</div>
+<!--加入购物车 选择规格属性的弹窗-e-->
+
+<!-- 加入购物车弹出框 s -->
+<div id="tips-box">
+    <div class="tips-content">
+        <div class="tips-title">
+            <span>信息</span>
+            <i class="tips-close"><img src="__MOBILE__/images/close-icon.png" alt="关闭"></i>
+        </div>
+        <div class="tips-con">添加成功！</div>
+        <ul class="tips-buy-btn">
+            <li><a href="{:Url('Cart/cart')}">去购物车</a></li>
+            <li><a href="javascript:;" class="tips-close">再逛逛</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 加入购物车弹出框 e -->
+
+<!-- 商品参数 start -->
+<div class="goods_parameter" id="goods_parameter">
+    <div class="goods_parameter_info" id="goods_parameter_info">
+        <a href="javascript:void(0);" onclick="hide_goods_parameter()"><img src="__MOBILE__/images/xxgro.png" alt="关闭"></a>
+        <dl>
+            <dt>商品参数</dt>
+            <dd>
+                {$goods.attribute|htmlspecialchars_decode}
+            </dd>
+        </dl>
+    </div>
+</div>
+<!-- 商品参数 end -->
+
+<!-- 商品服务 start -->
+<div class="goods_service" id="goods_service">
+    <div class="goods_service_info" id="goods_service_info">
+        <a href="javascript:void(0);" onclick="hide_goods_service()"><img src="__MOBILE__/images/xxgro.png" alt="关闭"></a>
+        <dl class="goods_service_list">
+            <dt>服务说明</dt>
+            <dd>
+                <p>七天无理由退货</p>
+                <span>该商品支持无理由退货、商品签收起7个自然日内、退货退货邮费自行承担</span>
+            </dd>
+            <dd>
+                <p>正品保证</p>
+                <span>保质护航购物无忧</span>
+            </dd>
+            <dd>
+                <p>商品包邮</p>
+                <span>商品包邮，指卖家承诺给买家承担首次发货运费，港澳台、海外、国内部份商家发货包邮位置范围i青海人偏远地区除外</span>
+            </dd>
+        </dl>
+    </div>
+</div>
+<!-- 商品服务 end -->
+
+<!--添加购物车JS-->
+<script src="__STATIC__/mobile/js/mobile_common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="__STATIC__/mobile/js/mobile-location.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js "></script>
+<script>
+    var blackBox = document.querySelector(".blackBox");
+    function shareGuide(){
+        blackBox.style.display = 'block';
+    }
+    blackBox.onclick = function(){
+        blackBox.style.display = 'none';
+    }
+
+    //通过config接口注入权限验证配置
+     // alert(location.href.split('#')[0]);
+    wx.config({
+
+        //debug : true,
+        debug : false, 
+        appId: '<?php echo $signPackage["appId"];?>',// 
+        timestamp: '<?php echo $signPackage["timestamp"];?>',//生成签名的时间戳
+        nonceStr: '<?php echo $signPackage["nonceStr"];?>',//生成签名的随机串
+        signature: '<?php echo $signPackage["signature"];?>',
+
+      jsApiList : ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo']
+
+    });
+
+    wx.ready(function(){
+
+      var
+                s_title = '{$goods.goods_name}',  // 分享标题
+
+                s_link = 'https://www.yilitong.com/mobile/Distribution/phoneAuthfx/id/{$goods.goods_id}/referrer_id/{$_SESSION['user']['user_id']}',  // 分享链接
+
+                s_desc = '{$goods.goods_remark}',  //分享描述
+
+                s_imgUrl = 'http://www.yilitong.com/{$goods.goods_thumb}'; // 分享图标
+
+      //朋友圈
+
+      wx.onMenuShareTimeline({
+
+        title: s_title, // 分享标题
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+      //发送给好友
+
+      wx.onMenuShareAppMessage({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        type: '', // 分享类型,music、video或link，不填默认为link
+
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+
+        success: function () {},
+
+        cancel: function () {}
+
+      });
+
+      //QQ好友
+
+      wx.onMenuShareQQ({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+      //腾讯微博
+
+      wx.onMenuShareWeibo({
+
+        title: s_title, // 分享标题
+
+        desc: s_desc, // 分享描述
+
+        link: s_link, // 分享链接
+
+        imgUrl: s_imgUrl, // 分享图标
+
+        success: function () { },
+
+        cancel: function () { }
+
+      });
+
+    });
+
+</script>
+<script type="text/javascript">
+
+    //商品规格属性 show & hide
+    function show_goods_spec_opt(){
+        $('#goods-spec-opt').fadeIn(200);
+        $('#goods-spec-opt-info').stop().animate({bottom:0}, 300);
+    }
+    function hide_goods_spec_opt(){
+        $('#goods-spec-opt').fadeOut(200);
+        $('#goods-spec-opt-info').stop().animate({bottom:"-20rem"}, 300);
+    }
+    //商品参数 show & hide
+    function show_goods_parameter(){
+        $('#goods_parameter').fadeIn(200);
+        $('#goods_parameter_info').stop().animate({bottom:0}, 300);
+    }
+    function hide_goods_parameter(){
+        $('#goods_parameter').fadeOut(200);
+        $('#goods_parameter_info').stop().animate({bottom:"-13rem"}, 300);
+    }
+
+    //服务说明 show & hide
+    function show_goods_service(){
+        $('#goods_service').fadeIn(200);
+        $('#goods_service_info').stop().animate({bottom:0}, 300);
+    }
+    function hide_goods_service(){
+        $('#goods_service').fadeOut(200);
+        $('#goods_service_info').stop().animate({bottom:"-13rem"}, 300);
+    }
+
+
+
+    /**
+     * 点击加入商品至我的店铺
+     */
+    function collect_goods(goods_id){
+    
+        $.ajax({
+            type : "GET",
+            dataType: "json",
+            url:"/Mobile/Distribution/collect_goods/goods_id/"+goods_id,//+tab,
+            success: function(data){
+                // layer.open({content: data.msg});
+                if(data.status == '1'){
+                    $('.joins').hide();
+                    $('.join').show();
+                }else{
+                    alert(data.msg);
+                    location.href = "/Mobile/Distribution/apply.html";
+                }
+            }
+        });
+    }
+    /**
+     * 点击加入商品至我的店铺
+     */
+    function delete_goods(goods_id){
+    
+        $.ajax({
+            type : "GET",
+            dataType: "json",
+            url:"/Mobile/Distribution/delete_goods/goods_id/"+goods_id,//+tab,
+            success: function(data){
+                // layer.open({content: data.msg});
+                if(data.status == '1'){
+                    $('.joins').show();
+                    $('.join').hide();
+                    // location.href = "Mobile/Distribution/goodsInfos/id/"+goods_id;
+                }
+            }
+        });
+    }
+    //将选择的属性添加到已选
+    function sel(){
+        var residuenum = parseInt($('.num').attr('residuenum'));
+        var title ='';
+        $('.choicsel').find('a').each(function(i,o){   //获取已选择的属性，规格
+            if ($(o).hasClass('red')) {
+                title += $(o).attr('title')+'&nbsp;&nbsp;';
+            }
+        })
+        var num = $('.num').val();
+        if(num > residuenum ){
+            //layer.open({content:'当前商品最多可购买'+residuenum+'件',time:1000})
+            //alert('当前商品最多可购买'+residuenum+'件');
+            layer.open({content: '当前商品最多可购买'+residuenum+'件'});
+            num = residuenum;
+        }
+        var sel = title+'&nbsp;&nbsp;'+num+'件';
+        $('.sel').html(sel);
+    }
+
+    /**
+     * 加减数量
+     * n 点击一次要改变多少
+     * maxnum 允许的最大数量(库存)
+     * number ，input的id
+     */
+    function altergoodsnum(n){
+        var num = parseInt($('#number').val());
+        var maxnum = parseInt($('#number').attr('max'));
+        num += n;
+        num <= 0 ? num = 1 :  num;
+        if(num >= maxnum){
+            $(this).addClass('no-mins');
+            num = maxnum;
+        }
+        $('#store_count').text(maxnum-num); //更新库存数量
+        $('#number').val(num)
+    }
+    //页面加载后执行
+    $(document).ready(function(){
+        /**
+         * ajax请求购物车列表
+         */
+        var cart_cn = getCookie('cn');
+        if(cart_cn == ''){
+            $.ajax({
+                type : "GET",
+                url:"/Home/Cart/header_cart_list",//+tab,
+                success: function(data){
+                    cart_cn = getCookie('cn');
+                }
+            });
+        }
+        if(parseInt(cart_cn)  > 0){
+            $('#tp_cart_info').css('display','block');
+        }else{
+            $('#tp_cart_info').css('display','none');
+        }
+        $('#tp_cart_info').html(cart_cn);
+
+        /**
+         * 查看商品详情
+         */
+        $('.seedeadei').click(function(){
+            $('.xq_details').eq(0).hide();
+            $('.xq_details').eq(1).show();
+            $('body').animate({ scrollTop: 0 }, 0);
+            $('.detail').find('.center').find('span').eq(1).addClass('sxp');
+            $('.detail').find('.center').find('span').eq(0).removeClass('sxp');
+        })
+
+        /**
+         * 评论
+         */
+        $('.tbv').click(function(){
+            $('.xq_details').eq(0).hide();
+            $('.xq_details').eq(2).show();
+            $('body').animate({ scrollTop: 0 }, 0);
+            $('.detail').find('.center').find('span').eq(2).addClass('sxp');
+            $('.detail').find('.center').find('span').eq(0).removeClass('sxp');
+            $('.gizle').show();
+        })
+
+        /**
+         * 加载评论
+         */
+        commentType = 1; // 评论类型
+        ajaxComment(1,1);// ajax 加载评价列表
+
+        /**
+         * 加载更多评论
+         */
+        function ajaxComment(commentType,page){
+            $.ajax({
+                type : "GET",
+                url:"/Mobile/goods/ajaxComment/goods_id/{$goods['goods_id']}/commentType/"+commentType+"/p/"+page,//+tab,
+                success: function(data){
+                    $(".my_comment_list").empty().append(data);
+                }
+            });
+        }
+
+        //点赞
+        function hde(){
+            setTimeout(function(){
+                $('.alert').hide();
+            },1200)
+        }
+
+
+
+        /**
+         * 规格选择
+         */
+        $('.choic-sel a').click(function(){
+            //切换选择
+            $(this).addClass('red').parent().siblings().find('a').removeClass('red');
+        });
+        $('#buy_goods_form .choicsel').each(function() {
+            // 先默认每组的第一个单选按钮添加样式
+            $(this).find('a').first().addClass('red');
+            sel();
+        });
+
+        /**
+         * 顶部导航切换
+         */
+        $('.detail .search span').click(function(){
+            var oIndex = $(this).index();
+            $(this).addClass('sxp').siblings().removeClass('sxp');
+            $('.all-content .xq_details').eq(oIndex).css('display','block').siblings('.xq_details').css('display','none');
+            if(oIndex > 0){
+                $('.podee').css('display','none');
+            }else{
+                $('.podee').css('display','block');
+            }
+        });
+
+        //点击加载详情页
+        $('#more').click(function(){
+            $('.detail .search span').eq(1).addClass('sxp').siblings().removeClass('sxp');
+            $('.all-content .xq_details').css('display','none');
+            $('.all-content .xq_details').eq(1).css('display','block');
+        })
+
+
+
+        /**
+         * 内部导航切换
+         */
+        $('.spxq-ggcs ul li').click(function(){
+            $(this).addClass('red').siblings().removeClass('red');
+            var sg = $('.spxq-ggcs ul li').index(this);
+            $('.sg').eq(sg).show().siblings('.sg').hide();
+            var $commentType= $(this).children('span').attr('ctype');
+            //切换到评论按钮才加载评论列表
+            if($('.detail .search span').eq(2).hasClass('sxp')){
+                ajaxComment($commentType,1);// ajax 加载评价列表
+            }
+        });
+
+        /**
+         * 内部导航随鼠标滑动显示隐藏
+         */
+        var h1 = $('.detail').height();
+        var h2 = $('.detail').height() + $('.spxq-ggcs').height();
+        var ss = $(document).scrollTop();//上一次滚轮的高度
+        $(window).scroll(function(){
+            var s = $(document).scrollTop();////本次滚轮的高度
+            if(s< h1){
+                $('.spxq-ggcs').removeClass('po-fi');
+            }if(s > h1){
+                $('.spxq-ggcs').addClass('po-fi');
+            }if(s > h2){
+                $('.spxq-ggcs').addClass('gizle');
+                if(s > ss){
+                    $('.spxq-ggcs').removeClass('sabit');
+                }else{
+                    $('.spxq-ggcs').addClass('sabit');
+                }
+                ss = s;
+            }
+        });
+
+
+        //在已选栏中显示默认选择属性，数量
+        sel();
+
+        /**
+         * 更新商品价格
+         */
+        get_goods_price();
+
+    });
+    //完
+
+
+    function switch_spec(spec)
+    {
+        $(spec).siblings().removeClass('hover');
+        $(spec).addClass('hover');
+        $(spec).siblings().children('input').prop('checked',false);
+        $(spec).children('input').prop('checked',true);
+        //更新商品价格
+       var dd= $(spec).children('input').prop('checked',true).val();
+        // console.log($('input[type=radio]:checked').val());
+        if(dd==5454){
+            parseInt($("#number").val(100));
+        }
+
+        get_goods_price();
+    }
+
+    function get_goods_price()
+    {
+        var goods_price = {$goods.shop_price}; // 商品起始价
+        var store_count = {$goods.store_count}; // 商品起始库存
+        var spec_goods_price = {$spec_goods_price};  // 规格 对应 价格 库存表
+        // 优先显示抢购活动库存
+        <notempty name="goods['flash_sale']">
+             store_count = {$goods['flash_sale']['goods_num'] - $goods['flash_sale']['buy_num'] - 1};
+            var flash_sale_price = parseFloat("{$goods['flash_sale']['price']}");
+            (flash_sale_price > 0) && (goods_price = flash_sale_price);
+            spec_goods_price = null;
+        </notempty>
+        
+        // 如果有属性选择项
+        if(spec_goods_price != null && spec_goods_price !='')
+        {
+            goods_spec_arr = new Array();
+            $("input[name^='goods_spec']:checked").each(function(){
+                goods_spec_arr.push($(this).val());
+            });
+            var spec_key = goods_spec_arr.sort(sortNumber).join('_');  //排序后组合成 key
+            goods_price = spec_goods_price[spec_key]['price']; // 找到对应规格的价格
+            store_count = spec_goods_price[spec_key]['store_count']; // 找到对应规格的库存
+        }
+        var goods_num = parseInt($("#goods_num").val());
+        // 库存不足的情况
+        if(goods_num > store_count)
+        {
+            goods_num = store_count;
+            alert('库存仅剩 '+store_count+' 件');
+            $("#goods_num").val(goods_num);
+        }
+        $('#store_count').html(store_count);    //对应规格库存显示出来
+        $('#number').attr('max',store_count); //对应规格最大库存
+        $("#goods_price").html('<span>￥</span><span>'+goods_price+'</span>'); // 变动价格显示
+        $("#price").html('￥'+goods_price.toFixed(2)); // 变动价格显示
+
+    }
+    function sortNumber(a,b)
+    {
+        return a - b;
+    }
+    //运费
+    $(function(){
+        $('.remain').click(function(){
+            $('#balance').toggle(300);
+        })
+        $('#balance').on('click','a',function(){
+            $('#shipping_freight').text($(this).find('span').text());
+            $('#balance').toggle(300);
+        })
+    })
+    
+
+    function saveCookie (paraName){
+　　　　var url = document.location.toString();
+　　　　var arrObj = url.split("/");
+     if(arrObj[8] =="recode"){
+         var recodeObj = arrObj[9].split(".");
+         var Days = 30;
+         var exp = new Date();
+         exp.setTime(exp.getTime() + Days*24*60*60*1000);
+         document.cookie = "recode" + "="+ escape (recodeObj[0]) + ";expires=" + exp.toGMTString() + "; path=/";;
+     }
+
+　　　　if (arrObj.length > 1) {
+　　　　　　var arrPara = arrObj[1].split("&");
+　　　　　　var arr;
+　　　　　　for (var i = 0; i < arrPara.length; i++) {
+
+　　　　　　　　arr = arrPara[i].split("=");
+
+　　　　　　　　if (arr != null && arr[0] == paraName) {
+　　　　　　　　　　return arr[1];
+　　　　　　　　}
+　　　　　　}
+　　　　　　return "";
+　　　　}
+　　　　else {
+　　　　　　return "";
+　　　　}
+　　}
+
+
+    function myfun(){
+     saveCookie("recode");
+     $.ajax({
+        type : "GET",
+        url:"/Home/Api/click_count/goods_id/{$goods['goods_id']}",
+        success: function(data){
+
+        }
+     });
+    }/*用window.onload调用myfun()*/
+    window.onload=myfun;//不要括号
+
+
+</script>
+
+</body>
+</html>

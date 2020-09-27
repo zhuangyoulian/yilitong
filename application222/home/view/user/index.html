@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户中心-{$config['shop_info_store_title']}</title>
+    <meta http-equiv="keywords" content="{$config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$config['shop_info_store_desc']}" />
+    <link rel="stylesheet" href="__STATIC__/css/index.css" type="text/css">
+    <script src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    <script src="__STATIC__/js/slider.js"></script>
+
+</head>
+
+<body>
+<!--最顶部-->
+<include file="public/siteTopbar" />
+
+<!--------在线客服-------------->
+<include file="public/service" />
+<!--------在线客服-------------->
+
+
+<!--------用户中心 顶菜单-------------->
+<include file="public/userTopbar" />
+<!--------用户中心 顶菜单--------------->
+
+
+<div class="layout pa-to-10 fo-fa-ar">
+    <!--菜单-->
+    <include file="user/menu" />
+    <!--菜单-->
+
+    <div class="fr wi940">
+        <!-- 购买 展示 流程 start -->
+        <ul class="buy-flow-chart">
+            <li><a href="{:Url('/Home/User/order_list',array('type'=>'WAITPAY'))}">待付款</a></li>
+            <li><a href="{:Url('/Home/User/order_list',array('type'=>'WAITSEND'))}">待发货</a></li>
+            <li><a href="{:Url('/Home/User/order_list',array('type'=>'WAITRECEIVE'))}">待收货</a></li>
+            <li><a href="{:Url('/Home/User/order_list',array('type'=>'WAITCCOMMENT'))}">待评价</a></li>
+            <li><a href="{:url('/Home/User/back_goods_list')}">退货/换货</a></li>
+        </ul>
+        <!-- 购买 展示 流程 end -->
+
+        <!-- 收藏商品 start -->
+        <div class="myCollection">
+            <div class="he50 wddd">
+                <div class="fl ddd-h2">
+                    <h2><span>我的收藏</span></h2>
+                </div>
+            </div>
+            <div class="wddd-js ov-in">
+                <div class="flool-b layer wi940">
+                    <ul class="flool-cle">
+                        <if condition="empty($lists)"><!--没查询到数据-->
+                            <p style="text-align:center">暂无收藏任何商品</p>
+                        </if>
+                        <volist name="lists" id="list">
+                            <li class="sellers sellers-two wi25-BFB">
+                                <div class="best-two ma0-20-20-0">
+                                    <div class="he364 about-ced best-tans">
+                                        <div class="best_img best_img2 best_img3">
+                                            <a href=""><img src="{$list.original_img}" /></a>
+                                        </div>
+                                        <div class="intr-t intr-t3 pa0-20">{$list.goods_name}<span class="intr-b"></span></div>
+                                        <div class="price prices">
+                                            <span>¥</span><em>{$list.shop_price}</em>
+                                        </div>
+                                        <div class="add-join">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td align="center" class="joins-ri"><a href="{:Url('Home/Goods/goodsInfo',array('id'=>$list['goods_id']))}">去购买</a></td>
+                                                    <td align="center" class="joins-le"><a href="{:Url('Home/User/del_goods_collect',array('id'=>$list['collect_id']))}">取消</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 收藏商品 start -->
+
+        <!-- 关注店铺 start -->
+        <!--<div class="myCollection">-->
+            <!--<div class="he50 wddd">-->
+                <!--<div class="fl ddd-h2">-->
+                    <!--<h2><span>我关注的店铺</span></h2>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="wddd-js ov-in">-->
+                <!--<div class="flool-b layer wi940">-->
+                    <!--<ul class="flool-cle">-->
+                        <!--<if condition="empty($lists)">&lt;!&ndash;没查询到数据&ndash;&gt;-->
+                            <!--<p style="text-align:center">暂无关注店铺</p>-->
+                        <!--</if>-->
+                        <!--<volist name="lists" id="list">-->
+                            <!--<li class="sellers sellers-two wi25-BFB">-->
+                                <!--<div class="best-two ma0-20-20-0">-->
+                                    <!--<div class="he364 about-ced best-tans">-->
+                                        <!--<div class="best_img best_img2 best_img3">-->
+                                            <!--<a href=""><img src="{$list.original_img}" /></a>-->
+                                        <!--</div>-->
+                                        <!--<div class="intr-t intr-t3 pa0-20">{$list.goods_name}<span class="intr-b"></span></div>-->
+                                        <!--<div class="price prices">-->
+                                            <!--<span>¥</span><em>{$list.shop_price}</em>-->
+                                        <!--</div>-->
+                                        <!--<div class="add-join">-->
+                                            <!--<table width="100%" border="0" cellspacing="0" cellpadding="0">-->
+                                                <!--<tr>-->
+                                                    <!--<td align="center" class="joins-ri"><a href="{:Url('Home/Goods/goodsInfo',array('id'=>$list['goods_id']))}">去购买</a></td>-->
+                                                    <!--<td align="center" class="joins-le"><a href="{:Url('Home/User/del_goods_collect',array('id'=>$list['collect_id']))}">取消</a></td>-->
+                                                <!--</tr>-->
+                                            <!--</table>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        <!--</volist>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!-- 关注店铺 start -->
+
+    </div>
+
+    <!--<div class="fr wi940">-->
+        <!--<div class="myhome-welcome pa-to-20">-->
+            <!--<div class="fl myhome-tx">-->
+                <!--<div class="w-img"><img src="{$user.head_pic|default='__STATIC__/images/man001.png'}" alt=""></div>-->
+                <!--<div class="w-vip po-ab"><i class="w-v0"></i></div>-->
+            <!--</div>-->
+            <!--<div class="ov-hi ma-le-158">-->
+                <!--<h2 class="n-name">{$user.nickname}，欢迎您！</h2>-->
+                <!--<div class="w-info">-->
+
+                    <!--<span>-->
+                        <!--<if condition="$user['mobile_validated'] eq 1">-->
+                            <!--<span><a class="link-non-validated" href="">已验证手机</a></span>-->
+                            <!--<else/>-->
+                            <!--<a class="link-non-validated2" href="{:Url('Home/User/mobile_validate',array('step'=>1))}">未验证手机</a>-->
+                        <!--</if>-->
+                    <!--</span>-->
+                    <!--&lt;!&ndash;<span>-->
+                        <!--<if condition="$user['email_validated'] eq 1">-->
+                            <!--<span><a class="link-non-validated" href="">已验证邮箱</a></span>-->
+                            <!--<else/>-->
+                            <!--<a class="link-non-validated2" href="{:Url('Home/User/email_validate',array('step'=>1))}">未验证邮箱</a>-->
+                        <!--</if>-->
+                    <!--</span> &ndash;&gt;-->
+                    <!--&lt;!&ndash;<span><a class="link-non-validated" href="">未实名认证</a></span>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<span>站内信&nbsp;<em><a href="">0</a></em>&nbsp;张</span>&ndash;&gt;-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <!--<div class="clickshop">-->
+            	<!--<p>&#45;&#45; 欢迎光临一礼通商城 &#45;&#45;</p>-->
+                <!--<p style="margin-top:20px"><a href="/"><span>开始购物</span></a></p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<div class="he80"></div>
+
+<script src="__PUBLIC__/js/global.js"></script>
+<script src="__PUBLIC__/js/pc_common.js"></script>
+
+<script>
+    //购物车  开始
+    function get_cart_num(){
+        var cart_cn = getCookie('cn');
+        if(cart_cn == ''){
+            $.ajax({
+                type : "GET",
+                url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+                success: function(data){
+                    cart_cn = getCookie('cn');
+                    $('#cart_quantity').html(cart_cn);
+                }
+            });
+        }
+        $('#cart_quantity').html(cart_cn);
+    }
+    $(function(){
+        get_cart_num();
+    })
+
+    /**
+     * 鼠标移动端到头部购物车上面 就ajax 加载
+     */
+    // 鼠标是否移动到了上方
+    var header_cart_list_over = 0;
+    $("#header_cart_list > .micart > .myshopCar").hover(function(){
+        if(header_cart_list_over == 1)
+            return false;
+        header_cart_list_over = 1;
+        $.ajax({
+            type : "GET",
+            url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+            success: function(data){
+                $("#header_cart_list > .micart > .ris").html(data);
+                get_cart_num();
+            }
+        });
+    }).mouseout(function(){
+
+        (typeof(t) == "undefined") || clearTimeout(t);
+        t = setTimeout(function () {
+            header_cart_list_over = 0; /// 标识鼠标已经离开
+        }, 1000);
+    });
+    //购物车  结束
+
+    function delimg(file,t){
+        $.get(
+                "/index.php?m=Admin&c=Uploadify&a=delupload",{action:"del", filename:file},function(){}
+        );
+        $('#head_pic').val('');
+        $('#preview').attr('src','');
+        $(t).remove();
+    }
+    function add_img(str){
+        var head_pic = $('#head_pic').val();
+        $('#head_pic').val(str);
+        $('#preview').attr('src',str);
+
+
+        if(!head_pic){
+            $('#img_box').append('<button id="delimg" type="button" onclick="delimg('+"'"+str+"'"+',this)">删除图片</button>');
+        }else{
+            $('#delimg').attr('onclick','delimg('+"'"+str+"'"+',this)');
+        }
+
+    }
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var icon_wh=$(".icon_wh");
+        icon_wh.each(function(){
+            var thisObj=$(this);
+            thisObj.bind("mouseout",function(){
+                $(this).next().css("display","none");
+            });
+            thisObj.bind("mouseover",function(){
+                $(this).next().css("display","block");
+            });
+        });
+    });
+</script>
+<!--------footer-开始-------------->
+<include file="public/footer" />
+<!--------footer-结束-------------->
+</body>
+
+
+<script>
+    $(function () {
+        $("#h-s").mouseover(function () {
+            $('.ec-ta-x').css('left','124px');
+            $('.ec-ta-x').css('width','110px');
+            $(this).addClass("cullent");
+        });
+        $("#h-s").mouseout(function () {
+            $('.ec-ta-x').css('left','0px');
+            $('.ec-ta-x').css('width','124px');
+            $(this).removeClass("cullent");
+        });
+    });
+    $(function () {
+        $("#q-s").mouseover(function () {
+            $('.ec-ta-x').css('left','0px');
+            $(this).addClass("cullent");
+        });
+        $("#q-s").mouseout(function () {
+            $('.ec-ta-x').css('left','0px');
+        });
+    });
+
+</script>
+</html>

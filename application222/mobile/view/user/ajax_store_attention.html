@@ -1,0 +1,8 @@
+<foreach name="store_list" item="store">
+    <a href="{:Url('Supplier/index',array('id'=>$store[supplier_id]))}">
+		<li > <img src="{$store['logo']}"/>
+				<p >{$store['supplier_name']}</p>
+					
+		</li>
+	</a>
+ </foreach>		

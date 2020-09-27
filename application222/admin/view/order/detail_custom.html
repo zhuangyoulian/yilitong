@@ -1,0 +1,46 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;"> 
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back(-1);" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>商品定制</h3>
+        <h5>商品定制的信息与下载</h5>
+      </div>
+    </div>
+  </div>
+    <div class="ncap-form-default">
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_name">定制商品：</label>
+        </dt>
+        <dd class="opt">
+          {$custom.goods_name}
+          <p class="notic"></p>
+        </dd>
+      </dl>
+	  <dl class="row">
+        <dt class="tit">
+          <label for="ac_name">定制要求：</label>
+        </dt>
+        <dd class="opt">
+          {$custom.demand}
+          <p class="notic"></p>
+        </dd>
+      </dl>      
+	  <dl class="row">
+        <dt class="tit" colspan="2">
+          <label class="" for="s_sort">LOGO：</label>
+        </dt>
+        <dd class="opt">
+          <img src="{$custom.logoImages}" alt="">         
+        </dd>
+      </dl>  <div class="bot">
+        <a href="{$custom.logoImages}" download="一礼通平台商品定制logo" class="ncap-btn-big ncap-btn-green" id="submitBtn">
+           点击下载logo
+        </a>
+      </div>
+    </div>
+</div>
+</body>
+</html>

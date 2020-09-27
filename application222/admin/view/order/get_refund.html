@@ -1,0 +1,105 @@
+<include file="public/layout" />
+ 
+<style type="text/css">
+html, body {
+	overflow: visible;
+}
+</style>  
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title">
+      <div class="subject">
+        <h3>退换货操作</h3>
+        <h5>退款</h5>
+      </div>
+    </div>
+  </div>
+  <form class="form-horizontal" method="post" id="return_form"  name="return_form" action="{:Url('Admin/Order/return_info')}">
+    <div class="ncap-form-default">
+      <dl class="row">
+        <dt class="tit">
+          <label>订单编号</label>
+        </dt>
+        <dd class="opt">
+           <a href="{:Url('Admin/order/detail',array('order_id'=>$return_goods['order_id']))}">{$return_goods.order_sn}</a>
+        </dd>
+      </dl>
+      <dl class="row">
+        <dt class="tit">
+          <label for="cate_id">用户</label>
+        </dt>
+        <dd class="opt">
+         {$user.nickname}
+        </dd>
+      </dl>    
+	  <dl class="row">
+        <dt class="tit">
+          <label>申请日期</label> 
+        </dt>
+        <dd class="opt">
+          {$return_goods.addtime|date="Y-m-d H:i",###}
+        </dd>
+      </dl>        
+	  <dl class="row">
+        <dt class="tit">
+          <label >商品名称</label>
+        </dt>
+        <dd class="opt">
+           <a href="{:Url('Home/Goods/goodsInfo',array('id'=>$return_goods[goods_id]))}" target="_blank">{$goods[goods_name]}</a>
+        </dd>
+      </dl>   
+      <dl class="row">
+        <dt class="tit">
+          <label>退换货</label> 
+        </dt>
+        <dd class="opt">
+          <select  name="type"  class="form-control">
+               <option value="0" <if condition="$return_goods['type'] eq 1">selected="selected"</if>>退货</option>
+               <option value="1" <if condition="$return_goods['type'] eq 2">selected="selected"</if>>换货</option>
+          </select>
+         
+        </dd>
+      </dl>
+      <dl class="row">
+        <dt class="tit">
+          <label>退货描述</label> 
+        </dt>
+        <dd class="opt">
+          {$return_goods['reason']}
+        </dd>
+      </dl>
+      <dl class="row">
+        <dt class="tit">
+          <label>用户上传照片</label> 
+        </dt>
+        <dd class="opt">
+          <volist name="return_goods[imgs]" id="item">  
+	           <a href="{$item}" target="_blank"><img src="{$item}" width="85" height="85" /></a>&nbsp;&nbsp;&nbsp;                            
+	       </volist>
+        </dd>
+      </dl>
+	    <dl class="row">
+        <dt class="tit">
+          <label>退款金额</label> 
+        </dt>
+        <dd class="opt">
+          {$return_goods.total_amount}
+        </dd>
+      </dl>
+
+      <input type="hidden" name="id" value="{$id}">
+      <div class="bot">
+	   <if condition="$return_goods['status'] eq 3 || $return_goods['status'] eq 1 || $return_goods['status'] eq 2"> <!--还未处理-->
+	<!-- <a class="ncap-btn-big ncap-btn-green" onclick="ajax_submit_form('return_form','{:Url('Admin/order/get_refund',array('status'=>'6'))}');" >退款</a> -->
+	</if>
+	  </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

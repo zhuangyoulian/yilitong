@@ -1,0 +1,131 @@
+<include file="public/layout" />
+<script src="__ROOT__/public/static/js/layer/laydate/laydate.js"></script>
+<body style="background-color: #FFF; overflow: auto;"> 
+<div class="page">
+  <div class="fixed-bar">
+    <div class="item-title"><a class="back" href="javascript:history.back(-1);" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+      <div class="subject">
+        <h3>修改表单</h3>
+      </div>
+    </div>
+  </div>
+    <!--表单数据-->
+    <form class="form-horizontal" id="hengdasave" method="post">
+    <input type="hidden"  name="id" value="{$hengda.id}">
+    <div class="ncap-form-default">
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_name">楼栋名称：</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" class="input-txt" name="floorInput" value="{$hengda.floorInput}">
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl>
+	    <dl class="row">
+        <dt class="tit">
+          <label for="ac_name">房间号码：</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" class="input-txt" name="roomNum" value="{$hengda.roomNum}">
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl> 
+                 		 		       
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">客户姓名：</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" class="input-txt" name="customerName" value="{$hengda.customerName}">
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl>
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">联系号码：</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" class="input-txt" name="tel" value="{$hengda.tel}">
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl> 
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">预约送货时间:</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" id="deliveryTime" class="input-txt" name="deliveryTime" <if condition="!empty($hengda.deliveryTime)"> value="{$hengda.deliveryTime|date='Y-m-d H:i:s',###}" </if>>
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl> 
+      <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">预约安装时间:</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" id="installDate" class="input-txt" name="installDate" <if condition="!empty($hengda.deliveryTime)">  value="{$hengda.installDate|date='Y-m-d H:i:s',###}" </if>>
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl> 
+      <!-- <dl class="row">
+        <dt class="tit">
+          <label for="ac_sort">补货+安装时间:</label>
+        </dt>
+        <dd class="opt">
+          <input type="text" id="replenishmentTime" class="input-txt" name="replenishmentTime" value="{$hengda.replenishmentTime|date='Y-m-d H:i:s',###}">
+          <span  class="err" id="err_url" style="color:#F00; display:none;"></span>
+          <p class="notic"></p>
+        </dd>
+      </dl>  -->
+                              
+      <div class="bot"><a href="JavaScript:void(0);" class="ncap-btn-big ncap-btn-green">确认提交</a></div>
+    </div>
+  </form>
+</div>
+<script>
+$(document).ready(function(){
+    $('#deliveryTime').layDate();
+    $('#installDate').layDate();
+    $('#replenishmentTime').layDate();
+})
+
+$("div .bot").click(function(){
+  var value={
+    floorInput:$("input[name='floorInput']").val(),
+    roomNum:$("input[name='roomNum']").val(),
+    customerName:$("input[name='customerName']").val(),
+    tel:$("input[name='tel']").val(),
+    deliveryTime:$("input[name='deliveryTime']").val(),
+    installDate:$("input[name='installDate']").val(),
+    replenishmentTime:$("input[name='replenishmentTime']").val(),
+    id:$("input[name='id']").val(),
+  }
+  // console.log(value);
+  $.ajax({
+      type: "POST",
+      url: "{:Url('Admin/System/hengdasave')}",
+      // data: $('#hengdasave').serialize(),
+      data:value,
+      dataType: "json",
+      success: function (data) {
+          if (data.status == 1) {
+              layer.msg(data.msg, {icon: 1});
+              location.href = "javascript:history.back(-1);";
+              // location.href = "{:Url('Admin/System/hengda')}";
+          }
+      },
+      error: function () {
+          layer.alert("服务器繁忙, 请联系管理员!");
+      },
+  });
+})
+</script>
+</body>
+</html>

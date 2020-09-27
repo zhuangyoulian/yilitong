@@ -1,0 +1,165 @@
+<include file="public/layout" />
+<style>
+    td{height:40px;line-height:40px; padding-left:20px;}
+    .span_1{
+        float:left;
+        margin-left:0px;
+        height:130px;
+        line-height:130px;
+    }
+    .span_1 ul{list-style:none;padding:0px;}
+    .span_1 ul li{
+        border:1px solid #CCC;
+        height:40px;
+        padding:0px 10px;
+        margin-left:-1px;
+        margin-top:-1px;
+        line-height:40px;
+    }
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>提现管理 - 提现数据信息</h3>
+                <h5>用户申请提现数据信息</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="user_form" action="{:Url('Admin/business/bsWdrPayment')}" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="total_amount">提现申请总金额</label>
+                </dt>
+                <dd class="opt">
+                    <input id="total_amount"  name="total_amount" value="{$info.total_amount}" class="input-txt" type="text">
+					<input id="trading_id"  name="trading_id" value="{$info.trading_id}" class="input-txt" type="hidden">
+					
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label class="service_amout">手续费</label>
+                </dt>
+                <dd class="opt">
+                    <input id="service_amout" name="service_amout" value="{$info.service_amout}" class="input-txt" type="text">
+                    <span class="err"></span>+8% </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label class="commission_price">实际金额</label>
+                </dt>
+                <dd class="opt">
+                    <input id="actual_amount" name="actual_amount" value="{$info.actual_amount}" class="input-txt" type="text">
+                    <span class="err"></span>手续费后实际到账金额 = 申请提现总额 / 1.08</dd>
+            </dl>
+			
+			<dl class="row">
+                <dt class="tit">
+                    <label class="type">提现申请类型</label>
+                </dt>
+                <dd class="opt">
+				
+				 <if condition="($info[type] eq 1)">礼豆</if>   
+				 <if condition="($info[type] eq 2)">礼金</if>   
+				 <if condition="($info[type] eq 3)">销售奖</if>
+				 <if condition="($info[type] eq 4)">开发奖</if>  				   
+				  </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label class="payee">收款人</label>
+                </dt>
+                <dd class="opt">{$info.payee}</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="branch_name">支行名称</label>
+                </dt>
+                <dd class="opt">{$info.branch_name}</dd>
+            </dl>
+			
+			<dl class="row">
+                <dt class="tit">
+                    <label class="card_number">银行卡号</label>
+                </dt>
+                <dd class="opt">{$info.card_number}</dd>
+            </dl>
+			 <dl class="row">
+                <dt class="tit">
+                    <label class="add_time">提现申请时间</label>
+                </dt>
+                <dd class="opt">{$info.add_time|date='Y-m-d H:i:s',###}</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="supplier_portion">提现申请状态</label>
+                </dt>
+                <dd class="opt"><if $info.status eq 0>未审核<else>已审核</if></dd>
+            </dl>
+           
+			<if $info.examine_time>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="examine_time">审核时间</label>
+                </dt>
+                <dd class="opt">{$info.examine_time|date='Y-m-d H:i:s',###}</dd>
+            </dl>
+			</if>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="pay_status">提现付款状态</label>
+                </dt>
+                <dd class="opt"><if $info.pay_status eq 0>未付款<else>已付款</if></dd>
+            </dl>
+			
+			<if $pay_time>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="pay_time">支付时间</label>
+                </dt>
+                <dd class="opt">{$info.pay_time|date='Y-m-d H:i',###}</dd>
+            </dl>
+			</if>
+			<dl class="row">
+                <dt class="tit">
+                    <label>备注</label>
+                </dt>
+               <dd class="opt">{$info.remarks}</dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label class="transaction_id">支付凭证</label>
+                </dt>
+                <dd class="opt"><input name="transaction_id" id=" transaction_id" value="{$info.transaction_id}" class="input-txt" type="text"></dd>
+            </dl>
+			<div class="bot"><a href="{:Url('Admin/business/bsWithdrawals')}"  class="ncap-btn-big ncap-btn-green">返回上一页</a>
+            <if $info.pay_status neq 1><a href="JavaScript:void(0);" onclick="checkUserUpdate();" class="ncap-btn-big ncap-btn-green">确认付款</a></if></div>
+        </div>
+    </form>
+	<script type="text/javascript">
+	
+function img_call_back(fileurl_tmp)
+    {
+        $("#business_licence").val(fileurl_tmp);
+        $("#img_a1").attr('href', fileurl_tmp);
+        $("#img_i1").attr('onmouseover', "layer.tips('<img src="+fileurl_tmp+">',this,{tips: [1, '#fff']});");
+    }
+
+
+	
+ function checkUserUpdate(){
+
+        $('#user_form').submit();
+    }
+
+
+</script>
+</div>
+</body>
+</html>

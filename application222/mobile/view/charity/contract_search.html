@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子合同-搜索</title>
+    <link rel="stylesheet" href="__MOBILE__/css/contract/normalize.css">
+    <link rel="stylesheet" href="__MOBILE__/css/contract/search.css">
+    <script src="__MOBILE__/js/contract/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="hz_cont">
+        <div class="search_box">
+            <div class="box">
+                <input type="text" id="searchText" placeholder="搜索合同名称">
+                <img src="__MOBILE__/images/contract/icon_search@3x.png" alt="" class="icon_search">
+                <input type="hidden" class="return" id="submit" value="搜索" onClick="submitForm()">
+            </div>
+            <span><a href="contract_shouye" style="color: #777777;">取消</a></span>
+        </div>
+        <div class="hetonglist">
+            <!--ajax 返回 搜索结果--> 
+            <div id="tuijian" cellpadding="0" cellspacing="0" border="0"></div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+//搜索
+document.onkeydown = function (e) { // 回车提交表单
+// 兼容FF和IE和Opera
+    var theEvent = window.event || e;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    if (code == 13) {
+       submitForm();
+    }
+}
+function submitForm(){
+    if($.trim($('#searchText').val()) != ''){
+        keyword = $.trim($('#searchText').val());
+        $.ajax({
+            type: "POST",
+            url: "/index.php/Mobile/Charity/ajax_contract_search/keyword/"+keyword,
+            success: function (data) {
+                $("#tuijian").html('');
+                $("#tuijian").append(data);
+            }
+        });
+    }else{
+        alert('请输入搜索关键字');
+    }
+}
+</script>
+</html>

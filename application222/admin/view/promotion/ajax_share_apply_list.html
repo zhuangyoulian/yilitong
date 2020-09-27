@@ -1,0 +1,91 @@
+<table>
+ 	<tbody>
+     	<volist name="prom_count" id="list">
+        <tr>
+            <td class="sign">
+                <div style="width: 24px;"><i class="ico-check"></i></div>
+            </td>
+            <td align="left" class="">
+                <div style="text-align: center; width: 20px;">{$list.id}</div>
+            </td>
+            <td align="left" class="">
+                <div style="text-align: center; width: 100px;">{$list.nickname}</div>
+            </td>
+            <td align="left" class="">
+                <div style="text-align: center; width: 120px;">{$list.goods_name}</div>
+            </td>
+            <td align="left" class="">
+                <div style="text-align: center; width: 100px;">{$list[quantity]}件</div>
+            </td>
+            <td align="left"  class="">
+                <div style="text-align: center; width: 100px;">
+                  <if condition='$list[is_initiate] eq 1'>
+                    <span class="yes"><i class="fa fa-check-circle"></i>是</span>
+                  </if>
+                </div>
+            </td>  
+            <td align="left" class="">
+                <div style="text-align: center; width: 100px;">{$list.p_id}</div>
+            </td>
+            <td align="left"  class="">
+                <div style="text-align: center; width: 100px;">
+                  <if condition='$list[type] eq 1'>
+                    <span class="yes"><i class="fa fa-check-circle"></i>进行中</span>
+                  <elseif condition="$list[type] eq 2" />
+                    <span class="yes" ><i class="fa fa-check-circle"></i>已完成</span>
+                  <elseif condition="$list[type] eq 3" />
+                    <span class="no" ><i class="fa fa-ban"></i>已超时</span>
+                  <elseif condition="$list[type] eq 4" />
+                    <span class="no" ><i class="fa fa-ban"></i>已作废</span>
+                  </if>
+                </div>
+            </td>
+            <td align="left"  class="">
+                <div style="text-align: center; width: 100px;">
+                  <if condition='$list[is_apply] eq 0'>
+                    <span class="no"><i class="fa fa-ban"></i>否</span>
+                  <elseif condition="$list[is_apply] eq 1" />
+                    <span class="yes" ><i class="fa fa-ban"></i>申请中</span>
+                  <elseif condition="$list[is_apply] eq 2" />
+                    <span class="no" ><i class="fa fa-ban"></i>已退款</span>
+                  </if>
+                </div>
+            </td>    
+            <td align="left" class="">
+                <div style="text-align: center; width: 120px;">
+                    <if condition="$list.add_time">{$list.add_time|date='Y-m-d H:i',###}<else/> / </if>
+                </div>
+            </td>
+            <td align="left" class="">
+                <div style="text-align: center; width: 120px;">
+                    {$list.join_time|date='Y-m-d H:i',###}
+                </div>
+            </td>
+            <td align="left" class="handle">
+                <div style="text-align: center; width: 170px; max-width:170px;">
+                    <a class="btn red" href="javascript:void(0)" data-url="{:Url('Admin/Promotion/share_apply_list_del',array('id'=>$list['id']))}"  onclick="delfun(this)"><i class="fa fa-trash-o"></i>删除</a>
+                    <a class="btn red" href="{:Url('Admin/Order/detail',array('order_id'=>$list['order_id']))}"  ><i class="fa fa-file-text"></i>订单详情</a>
+                </div>
+            </td>
+            <td align="" class="" style="width: 100%;">
+                <div>&nbsp;</div>
+            </td>
+        </tr>
+    </volist>
+  </tbody>
+</table>
+<div class="row">
+    <div class="col-sm-6 text-left"></div>
+    <div class="col-sm-6 text-right">{$page}</div>
+</div>
+<script>
+    $(".pagination  a").click(function(){
+        var page = $(this).data('p');
+        console.log(page);
+        ajax_get_table('search-form2',page);
+    });
+
+    $('.ftitle>h5').empty().html("(共{$pager->totalRows}条记录)");
+    
+    
+</script>

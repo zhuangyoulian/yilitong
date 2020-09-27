@@ -1,0 +1,132 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>佣金管理 - 编辑佣金设置</h3>
+                <h5>网站系统佣金设置管理</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="handleposition" action="{:Url('Admin/sales/set')}" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="name"><em>*</em>等级名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="name" value="{$info.name}" id="name" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置业务等级名称</p>
+                </dd>
+            </dl>
+			<dl class="row">
+                <dt class="tit">
+                    <label for="top_ratio"><em>*</em>邀请/上级分成</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="top_ratio" value="{$info.top_ratio}" id="top_ratio" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置业务等级邀请/上级分成</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="ratio"><em>*</em>购买分成</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="ratio" value="{$info.ratio}" id="ratio" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置业务等级购买分成</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="bonus"><em>*</em>平台奖金分成</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="bonus" value="{$info.bonus}" id="bonus" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置平台奖金池的百分比</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="stockdater"><em>*</em>奖金结算周期</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="stockdater" value="{$info.stockdater}" id="stockdater" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">设置平台奖金发放周期，单位：月</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="proportion"><em>*</em>奖励金获得比例</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="proportion" value="{$info.proportion}" id="proportion" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">店主分享3个用户成为店主后产品订单的额外奖金比例</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="bonuss"><em>*</em>奖金池剩余金额</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="bonuss" value="{$bonuss}" id="bonuss" class="input-txt" disabled="disabled" >
+                    <span class="err"></span>
+                    <p class="notic">分销商城上线至今累计的奖金池剩余金额</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="closed"><em>*</em>已执行发放的奖金</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="closed" value="{$info.closed}" id="closed" class="input-txt" disabled="disabled" >
+                    <span class="err"></span>
+                    <p class="notic">分销商城上线至今已发放的奖金金额</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="last_time"><em>*</em>开始计算奖励金的时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="last_time" value="{$info.last_time|date='Y-m-d H:i',###}" id="last_time" class="input-txt" disabled="disabled" >
+                    <span class="err"></span>
+                    <p class="notic">计算这个时间至结算前的订单产生的奖励金</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="this_time"><em>*</em>本次开始结算时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="this_time" value="{$info.this_time|date='Y-m-d H:i',###}" id="this_time" class="input-txt" disabled="disabled" >
+                    <span class="err"></span>
+                    <p class="notic">奖励金本次开始的结算时间</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="next_time"><em>*</em>下次开始结算时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="next_time" value="{$info.next_time|date='Y-m-d H:i',###}" id="next_time" class="input-txt" disabled="disabled" >
+                    <span class="err"></span>
+                    <p class="notic">奖励金根据结算周期调整的下一次结算时间</p>
+                </dd>
+            </dl>
+            <div class="bot"><a href="JavaScript:void(0);" onclick="$('#handleposition').submit();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a></div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

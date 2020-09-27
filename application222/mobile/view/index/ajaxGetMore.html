@@ -1,0 +1,15 @@
+<foreach name="favourite_goods" item="v">
+    <li>
+        <a href="{:Url('Goods/goodsInfo',array('id'=>$v[goods_id]))}" title="{$v.goods_name}">
+            <img src="{$v[goods_thumb]}"/>
+            <span class="similar-product-text index-pro-name-h">{$v[goods_name]|getSubstr=0,20}</span>
+            <p><span>¥</span><span>
+            <if condition="$v['shop_price'] lt 0.5">
+                价格待定
+            <else/>
+                {$v[shop_price]}
+            </if>
+            </span></p>
+        </a>
+    </li>
+</foreach>
