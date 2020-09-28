@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:40:"./application/home/view/index\index.html";i:1587714007;s:42:"./application/home/view/public\header.html";i:1587523823;s:46:"./application/home/view/public\siteTopbar.html";i:1585208124;s:43:"./application/home/view/public\service.html";i:1539315244;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:40:"./application/home/view/index\index.html";i:1595995262;s:42:"./application/home/view/public\header.html";i:1594029927;s:46:"./application/home/view/public\siteTopbar.html";i:1597649658;s:43:"./application/home/view/public\service.html";i:1539315244;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +15,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
     })();
 </script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="/public/yilitong/css/style.css" type="text/css">
 <link rel="stylesheet" href="/public/yilitong/css/index.css" type="text/css">
 <link rel="stylesheet" href="/public/yilitong/css/procurement.css" type="text/css">
 <link rel="stylesheet" href="/public/yilitong/css/carousel.css">
 <link rel="stylesheet" href="/public/yilitong/css/famousBrand.css">
 
+<script src="/public/yilitong/js/jquery-3.4.1.min.js"></script>
 <script src="/public/yilitong/js/index.js"></script>
 <script src="/public/yilitong/js/axios.min.js"></script>
 <script src="/public/layui/layui.all.js"></script>
@@ -372,7 +372,7 @@
     <div class="layout">
         <div class="t1-l">
             <ul class="t1-l-ul">
-                <li class="t1font nologin" style="color:#8c8c8c">一礼通专业礼品网络交易采购平台，欢迎商家入驻，咨询采购端午礼品！</li>
+                <li class="t1font nologin" style="color:#8c8c8c">一礼通平台欢迎商家入驻，咨询采购中秋节礼品！</li>
 				<li class="t1img">&nbsp;</li> 
 				<li class="t1font nologin"><a href="<?php echo Url('Home/User/user_login'); ?>" rel="nofollow" style="color:red">个人登录</a></li>
 				<li class="t1img">&nbsp;</li> 
@@ -384,7 +384,7 @@
         </div>
         <div class="t1-r" style="width:90%;margin-left:10%;">
             <ul class="t1-r-ul islogin" style="display:none;float:left;width:55%;margin-left: -110px;" id="t1-r-ul">
-                <li class="t1font" style="color:#8c8c8c">一礼通专业礼品网络交易采购平台，欢迎商家入驻，咨询采购端午礼品！</li>
+                <li class="t1font" style="color:#8c8c8c">一礼通平台欢迎商家入驻，咨询采购中秋节礼品！</li>
                 <li class="t1font"> <a href="<?php echo Url('Home/User/index'); ?>" class="logon userinfo" rel="nofollow"></a></li>
                 <li class="t1img"></li>				
                 <li class="t1font font_t1"><a href="<?php echo Url('Home/User/order_list'); ?>" rel="nofollow">我的一礼通</a>
@@ -404,7 +404,7 @@
 				<li class="t1img"></li>						
             </ul>
             <ul class="t1-r-ul isSuplogin" id ="t1-r-ul1" style="display;float:left;margin-left: -110px;">
-                <li class="t1font" style="color:#8c8c8c">一礼通专业礼品网络交易采购平台，欢迎商家入驻，咨询采购端午礼品！</li>
+                <li class="t1font" style="color:#8c8c8c">一礼通平台欢迎商家入驻，咨询采购中秋节礼品！</li>
                 <li class="t1font"> <a href="<?php echo Url('Home/Business/BusinessIndex'); ?>" class="logon supinfo" rel="nofollow"></a></li>
                 <li class="t1img">&nbsp;</li>			
 				<li class="t1font"><a href="<?php echo Url('Home/Business/logout'); ?>" style="margin-left:15px;" rel="nofollow">安全退出</a></li>
@@ -414,8 +414,8 @@
             </ul>
 			<ul class="t1-r" id="tl-r" style="width:50%;float:right;">
 				<li>
-					<p class="contactImg">400-089-7879</p>
-					<p class="contactImg">18126402625</p>
+					<p class="contactImg"><?php echo $config['shop_info_phone']; ?></p>
+					<p class="contactImg"><?php echo $config['shop_info_mobile']; ?></p>
 				</li>
 				<li class="nologin t1">
 					<em style="color:#8c8c8c;padding:0 5px;">|</em>
@@ -651,16 +651,14 @@ var _hmt = _hmt || [];
 <!--全部商品-结束-->
 <div class="ongoods">
     <ul class="navlist">
-     
       <li id="li1"  class="homepage <?php if($action == 'index' || 'double_eleven'): ?> navCur <?php endif; ?> "  style="width:70px;margin-left:25px;margin-right:25px;text-align: center;"><a href="/"  style="color:#fff;">首页</a></li>
       <li  id="li2" style="width:100px;margin-left:25px;margin-right:25px;text-align: center;"><a href="<?php echo Url('home/Article/businessPurchase'); ?>" style="color:#fff;">名企直采</a></li>
       <li id="li3" style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Index/mall'); ?>" style="color:#fff;">旗舰商城</a></li>
-      <!-- <li id="li4"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Works/index'); ?>" style="color:#fff;">自主设计</a></li> -->
-      <li id="li5"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Business/BusinessIndex'); ?>" style="color:#fff;">商家入驻</a></li>
+      <li id="li4"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Works/index'); ?>" style="color:#fff;">自主设计</a></li>
+      <!-- <li id="li5"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Business/BusinessIndex'); ?>" style="color:#fff;">商家入驻</a></li> -->
       <li id="li6"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('/goodsList/1118'); ?>" style="color:#fff;">医用专区</a></li>
       <!-- <li id="li7"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Charity/donationlove'); ?>" style="color:#fff;">申请爱心捐赠</a></li> -->
-      <li id="li7"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Goods/goodsFestival_index'); ?>" style="color:#fff;">端午方案</a></li>
-    
+      <!-- <li id="li7"  style="width:100px;margin-left:25px;margin-right:25px; text-align: center;"><a href="<?php echo Url('Home/Goods/goodsFestival_index'); ?>" style="color:#fff;">端午方案</a></li> -->
     </ul>
 </div>
 </div>
@@ -695,14 +693,14 @@ var _hmt = _hmt || [];
         <div class="classdiv2">
             <div class="classdiv21">
                 <ul class="list_ul2" 　style="opacity:1;">
-                    <?php if(is_array($scenario_category_tree) || $scenario_category_tree instanceof \think\Collection): $_5ea7830e5fe7e = is_array($scenario_category_tree) ? array_slice($scenario_category_tree,0,9, true) : $scenario_category_tree->slice(0,9, true); if( count($_5ea7830e5fe7e)==0 ) : echo "" ;else: foreach($_5ea7830e5fe7e as $k=>$v): if($v[level] == 1): ?>
+                    <?php if(is_array($scenario_category_tree) || $scenario_category_tree instanceof \think\Collection): $_5f713b35a3398 = is_array($scenario_category_tree) ? array_slice($scenario_category_tree,0,9, true) : $scenario_category_tree->slice(0,9, true); if( count($_5f713b35a3398)==0 ) : echo "" ;else: foreach($_5f713b35a3398 as $k=>$v): if($v[level] == 1): ?>
                             <li class="list-li list-li_<?php echo $v['id']; ?>">
                                 <div class="list_a2">
                                     <h3>
                                         <a href="<?php echo Url('Home/Goods/scenarioList',array('id'=>$v[id])); ?>" class="title">
                                             <span style="font-size: 14px;float: left;width: 77px;margin-left: -30px;margin-top: 3px;" class="zt"><i class="list_ico2"></i><?php echo $v['name']; ?></span>
                                         </a>
-                                        <?php if(is_array($v[tmenu]) || $v[tmenu] instanceof \think\Collection): $_5ea7830e60266 = is_array($v[tmenu]) ? array_slice($v[tmenu],0,4, true) : $v[tmenu]->slice(0,4, true); if( count($_5ea7830e60266)==0 ) : echo "" ;else: foreach($_5ea7830e60266 as $k2=>$v2): if($v2[parent_id] == $v[id]): ?>
+                                        <?php if(is_array($v[tmenu]) || $v[tmenu] instanceof \think\Collection): $_5f713b35a3398 = is_array($v[tmenu]) ? array_slice($v[tmenu],0,4, true) : $v[tmenu]->slice(0,4, true); if( count($_5f713b35a3398)==0 ) : echo "" ;else: foreach($_5f713b35a3398 as $k2=>$v2): if($v2[parent_id] == $v[id]): ?>
                                                 <div style="display: flex;flex-direction: row;float:left;width:72px;">
                                                     <div style="flex:1; padding-bottom: 5px;" class="two"><a href="<?php echo Url('Home/Goods/scenarioList',array('id'=>$v2[id])); ?>" class="zt"><?php echo $v2['name']; ?></a></div>
                                                 </div>
@@ -731,7 +729,7 @@ var _hmt = _hmt || [];
             <!--    商品分类 -->
             <div class="classdiv22" style="display:none">
                 <ul class="list_ul"　style="opacity:1;">
-                    <?php if(is_array($goods_category_tree) || $goods_category_tree instanceof \think\Collection): $_5ea7830e5fe7e = is_array($goods_category_tree) ? array_slice($goods_category_tree,0,9, true) : $goods_category_tree->slice(0,9, true); if( count($_5ea7830e5fe7e)==0 ) : echo "" ;else: foreach($_5ea7830e5fe7e as $k=>$v): if($v[level] == 1): ?>
+                    <?php if(is_array($goods_category_tree) || $goods_category_tree instanceof \think\Collection): $_5f713b35a2fb0 = is_array($goods_category_tree) ? array_slice($goods_category_tree,0,9, true) : $goods_category_tree->slice(0,9, true); if( count($_5f713b35a2fb0)==0 ) : echo "" ;else: foreach($_5f713b35a2fb0 as $k=>$v): if($v[level] == 1): ?>
                             <li class="list-li list-li_<?php echo $v['id']; ?> ">
                                 <div class="list_a">
                                     <h3><a href="<?php echo Url('Home/Goods/goodsList',array('id'=>$v[id])); ?>" class="two"><i class="list_ico"></i><span class="ys zt"><?php echo $v['name']; ?></span></a></h3>
@@ -1459,10 +1457,11 @@ foreach($result as $key=>$v):
             <span><a rel="nofollow" href="javascript:void(0);">一礼通新品</a></span>
             <span> | </span>
             <span>开放平台</span>
-            <span> | </span><span><a href="/public/yilitong/images/yingyezizhi.png" rel="nofollow" target="_blank" >营业执照和网站资质</a></span>
-            <span> | </span>
+            <span> | </span><span><a href="/public/yilitong/images/yingyezizhi.png" rel="nofollow" target="_blank" >营业执照|食品许可证|第二类医疗机械备案凭证</a></span>
+            <span> | </span><span><a href="/public/yilitong/images/yaopingzhengshu.pdf" rel="nofollow" target="_blank" >《互联网药品信息服务资格证书》</a></span>
             <br>
-            <p>Copyright © 2017-2027 一礼通 (www.yilitong.com)-互联网生活应用平台 版权所有 保留一切权利 <a href="http://icp.chinaz.com/yilitong.com" rel="nofollow" target="_blank" >备案号:<?php echo $config['shop_info_record_no']; ?></a></p>
+         
+            <p>Copyright © 2017-2027 一礼通 (www.yilitong.com)-互联网生活应用平台 版权所有 保留一切权利 <a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank" >备案号:<?php echo $config['shop_info_record_no']; ?></a></p>
             <script type="text/javascript">
                 //数据专家统计数据
                 var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -1488,7 +1487,12 @@ foreach($result as $key=>$v):
                     <li>
                         <img src="/public/yilitong/images/zhifubao_cnnic.png">
                     </li>
+                   <li>
+                         <script id="ebsgovicon" src="https://szcert.ebs.org.cn/govicons.js?id=451b976b-ae2f-494f-a54d-d6230d676226&width=91&height=37&type=2" type="text/javascript" charset="utf-8"></script>
+                    </li>
+                 
                 </ul>
+            
             </div><br>
             <!-- <span>友情链接 </span><span>礼品公司 </span><span>北京礼品卡 </span><span>玉林批发网 </span><span>礼品网站 </span><span>仓库管理系统 </span><span>礼品册 </span><span>商务礼品 </span><span>节日礼品册 </span><span>礼品商城 </span><span>生日礼物 </span><span>礼品批发 </span><span>礼品采购 </span><span>广州礼品定制 </span>-->
             <div style="text-align: center;width:1200px;margin:0 auto;">
@@ -1588,7 +1592,16 @@ foreach($result as $key=>$v):
             },
             getData: function() {
                 var that = this;
-                var productUrl = baseUrl+"/home/GoodsAPI/var_json?token=8d0b6604701b9a30c2547ffb8ee6a3c1";
+                var cururl=window.location.href.substring(0,6);
+
+                if(cururl.indexOf('https')==-1){
+
+                    var productUrl = baseUrl+"/home/GoodsAPI/var_json?token=8d0b6604701b9a30c2547ffb8ee6a3c1";
+                }else{
+
+                    var productUrl = baseUrl2+"/home/GoodsAPI/var_json?token=8d0b6604701b9a30c2547ffb8ee6a3c1";
+                }
+
                 // productUrl = "http://api.douban.com/v2/movie/top250";
 
                 console.log("请求url:" + productUrl);
@@ -1687,7 +1700,16 @@ foreach($result as $key=>$v):
             },
             getData: function() {
                 var that = this;
-                var product1Url = baseUrl+"/home/GoodsAPI/popular_json?token=5fa3852b08951fcdc4d2e60f89a85bfe";
+                var cururl=window.location.href.substring(0,6);
+
+                if(cururl.indexOf('https')==-1){
+
+                    var product1Url = baseUrl+"/home/GoodsAPI/popular_json?token=5fa3852b08951fcdc4d2e60f89a85bfe";
+                }else{
+
+                    var product1Url = baseUrl2+"/home/GoodsAPI/popular_json?token=5fa3852b08951fcdc4d2e60f89a85bfe";
+                }
+
                 // product1Url = "http://api.douban.com/v2/movie/top250";
 
                 console.log("请求url:" + product1Url);

@@ -1,3 +1,3 @@
 <?php
-//000000604800a:1:{i:0;a:16:{s:5:"ad_id";i:178;s:3:"pid";i:2;s:10:"media_type";i:0;s:7:"ad_name";s:25:"平台首页热门广告1";s:7:"ad_link";s:43:"http://www.yilitong.com/goodsInfo/5898.html";s:7:"ad_code";s:65:"/public/upload/ad/2020/03-18/0eb67a9bdee00f3791b216123e9f08d9.jpg";s:10:"start_time";i:1514736000;s:8:"end_time";i:1893427200;s:11:"click_count";i:0;s:7:"enabled";i:1;s:7:"orderby";i:0;s:6:"target";i:0;s:7:"bgcolor";N;s:7:"cate_id";i:0;s:6:"act_id";i:0;s:11:"switch_time";N;}}
+//000000604800a:1:{i:0;a:16:{s:5:"ad_id";i:178;s:3:"pid";i:2;s:10:"media_type";i:0;s:7:"ad_name";s:25:"平台首页热门广告1";s:7:"ad_link";s:43:"http://www.yilitong.com/goodsInfo/5926.html";s:7:"ad_code";s:65:"/public/upload/ad/2020/06-15/a2407ff7decc9405731353309e758549.jpg";s:10:"start_time";i:1514736000;s:8:"end_time";i:1893427200;s:11:"click_count";i:0;s:7:"enabled";i:1;s:7:"orderby";i:0;s:6:"target";i:0;s:7:"bgcolor";N;s:7:"cate_id";i:0;s:6:"act_id";i:0;s:11:"switch_time";N;}}
 ?>
