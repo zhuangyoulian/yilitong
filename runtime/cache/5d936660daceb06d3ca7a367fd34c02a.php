@@ -1,3 +1,0 @@
-<?php
-//000000604800a:1:{i:0;a:16:{s:5:"ad_id";i:179;s:3:"pid";i:2;s:10:"media_type";i:1;s:7:"ad_name";s:25:"平台首页热门广告2";s:7:"ad_link";s:47:"http://www.yilitong.com/Home/Charity/index.html";s:7:"ad_code";s:65:"/public/upload/ad/2020/02-20/76d504e71d6b272880ca14560f8c1ebc.png";s:10:"start_time";i:1514736000;s:8:"end_time";i:1609430400;s:11:"click_count";i:0;s:7:"enabled";i:1;s:7:"orderby";i:0;s:6:"target";i:0;s:7:"bgcolor";N;s:7:"cate_id";i:0;s:6:"act_id";i:0;s:11:"switch_time";N;}}
-?>
